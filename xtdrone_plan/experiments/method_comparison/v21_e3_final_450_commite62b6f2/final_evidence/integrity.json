@@ -1,0 +1,41 @@
+{
+  "duplicates": [],
+  "incomplete": {},
+  "inconsistent_scenario_metadata": [],
+  "pairs_by_difficulty": {
+    "easy": 30,
+    "hard": 30,
+    "medium": 30
+  },
+  "pairs_by_family": {
+    "clutter_reach": 30,
+    "multi_passage": 30,
+    "passage_sweep": 30
+  },
+  "pairs_by_family_difficulty": {
+    "clutter_reach/easy": 10,
+    "clutter_reach/hard": 10,
+    "clutter_reach/medium": 10,
+    "multi_passage/easy": 10,
+    "multi_passage/hard": 10,
+    "multi_passage/medium": 10,
+    "passage_sweep/easy": 10,
+    "passage_sweep/hard": 10,
+    "passage_sweep/medium": 10
+  },
+  "passed": true,
+  "scenarios": 90,
+  "seeds": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "trial_rows": 450
+}

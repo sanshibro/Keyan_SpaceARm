@@ -1,0 +1,51 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Paired continuous-metric comparisons on the 54 scenarios completed by all five methods. Delta is Rolling-WB-V2.1 minus baseline; intervals are deterministic paired-bootstrap 95\% CIs. Bootstrap intervals estimate the paired median difference, whereas Holm-adjusted Wilcoxon tests concern signed ranks; their conclusions therefore need not coincide.}
+\label{tab:paired_continuous}
+\begin{tabular}{llrrrr}
+\toprule
+Metric & Baseline & Median delta & Bootstrap 95\% CI & Holm $p$ & Rank-biserial $r$ \\
+\midrule
+Task time (s) & Fixed & -20.802 & [-34.87, -16.22] & 1.56e-07 & -0.902 \\
+Task time (s) & AET-Seq. & 6.522 & [3.236, 8.418] & 0.136 & 0.313 \\
+Task time (s) & WB-RRT* & -63.832 & [-89.09, -49.436] & 5.77e-09 & -0.996 \\
+Task time (s) & Global-WB & -0.096 & [-9.048, 6.784] & 0.567 & -0.090 \\
+\addlinespace
+Planning time (s) & Fixed & 0.98826 & [0.65673, 1.1999] & 1.33e-07 & 0.907 \\
+Planning time (s) & AET-Seq. & -2.4246 & [-3.5631, -1.6315] & 1.35e-08 & -0.968 \\
+Planning time (s) & WB-RRT* & -6.4899 & [-8.0362, -6.033] & 5.2e-09 & -1.000 \\
+Planning time (s) & Global-WB & -3.6386 & [-4.396, -3.0541] & 5.33e-09 & -0.999 \\
+\addlinespace
+Body clearance (m) & Fixed & -0.060765 & [-0.06814, -0.053513] & 1.11e-08 & -0.976 \\
+Body clearance (m) & AET-Seq. & -0.061501 & [-0.065668, -0.055445] & 9.76e-09 & -0.980 \\
+Body clearance (m) & WB-RRT* & -0.05627 & [-0.064225, -0.051257] & 1.34e-08 & -0.969 \\
+Body clearance (m) & Global-WB & -0.053611 & [-0.060016, -0.040156] & 1.11e-08 & -0.976 \\
+\addlinespace
+Arm clearance (m) & Fixed & -0.011417 & [-0.041357, 0.001024] & 0.0834 & -0.401 \\
+Arm clearance (m) & AET-Seq. & 0.0061237 & [0.0010277, 0.010913] & 0.27 & 0.234 \\
+Arm clearance (m) & WB-RRT* & 0.0071404 & [0.0022911, 0.013445] & 0.0834 & 0.401 \\
+Arm clearance (m) & Global-WB & 0.0092893 & [0.0026718, 0.011139] & 0.0834 & 0.393 \\
+\addlinespace
+Tracking RMSE (m) & Fixed & 0.002726 & [0.0024354, 0.0030814] & 6.43e-08 & 0.927 \\
+Tracking RMSE (m) & AET-Seq. & -0.0048586 & [-0.0053028, -0.0040543] & 9.07e-09 & -0.982 \\
+Tracking RMSE (m) & WB-RRT* & 0.0046406 & [0.0039556, 0.0051117] & 5.77e-09 & 0.996 \\
+Tracking RMSE (m) & Global-WB & -0.0032019 & [-0.0039178, -0.0016047] & 0.000227 & -0.677 \\
+\addlinespace
+COM offset (m) & Fixed & 0.00012043 & [-2.4113e-16, 0.0014283] & 0.0469 & 0.437 \\
+COM offset (m) & AET-Seq. & 0.00012043 & [-3.6429e-16, 0.00029073] & 0.0834 & 0.401 \\
+COM offset (m) & WB-RRT* & 0.00012043 & [1.1276e-16, 0.0014283] & 0.042 & 0.448 \\
+COM offset (m) & Global-WB & 0.00018345 & [1.3878e-16, 0.00041693] & 0.00514 & 0.554 \\
+\addlinespace
+Jerk/m & Fixed & 0.039477 & [0.022848, 0.055821] & 2.69e-05 & 0.751 \\
+Jerk/m & AET-Seq. & -0.10342 & [-0.17075, -0.053367] & 1.19e-05 & -0.778 \\
+Jerk/m & WB-RRT* & 0.052586 & [0.040789, 0.061449] & 5.77e-09 & 0.996 \\
+Jerk/m & Global-WB & -0.087393 & [-0.13541, -0.02122] & 0.000105 & -0.705 \\
+\addlinespace
+Tip error (m) & Fixed & -0.0046738 & [-0.0087335, -0.0013555] & 0.000797 & -0.630 \\
+Tip error (m) & AET-Seq. & -0.0040073 & [-0.0055883, -0.00057319] & 0.0322 & -0.465 \\
+Tip error (m) & WB-RRT* & -0.0034918 & [-0.0062078, -0.0021082] & 0.0143 & -0.507 \\
+Tip error (m) & Global-WB & -0.0023662 & [-0.0045118, -0.00018715] & 0.0834 & -0.379 \\
+\bottomrule
+\end{tabular}
+\end{table*}

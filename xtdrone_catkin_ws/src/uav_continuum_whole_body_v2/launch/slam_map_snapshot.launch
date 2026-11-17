@@ -1,0 +1,38 @@
+<launch>
+  <arg name="mode" default="replay"/>
+  <arg name="snapshot_file" default="$(find uav_continuum_whole_body_v2)/generated/scenario_3c_frozen_slam_map.npz"/>
+  <arg name="registered_cloud_topic" default="/slam/registered_cloud"/>
+  <arg name="registered_free_ray_topic" default="/slam/registered_free_ray_endpoints"/>
+  <arg name="sensor_pose_topic" default="/slam/sensor_pose"/>
+  <arg name="localization_source" default="unspecified"/>
+  <arg name="resolution" default="0.05"/>
+  <arg name="formal_experiment_allowed" default="false"/>
+  <arg name="publish_rate_hz" default="1.0"/>
+  <arg name="publish_during_record" default="true"/>
+  <arg name="maximum_cloud_points" default="20000"/>
+  <arg name="minimum_cloud_interval_s" default="0.0"/>
+  <arg name="minimum_free_ray_interval_s" default="2.0"/>
+  <arg name="clearing_pose_topic" default="/slam/estimator_body_pose"/>
+  <arg name="footprint_clear_radius_xy" default="0.0"/>
+  <arg name="footprint_clear_half_height" default="0.0"/>
+
+  <node pkg="uav_continuum_whole_body_v2" type="slam_map_snapshot_node.py"
+        name="slam_map_snapshot" output="screen">
+    <param name="mode" value="$(arg mode)"/>
+    <param name="snapshot_file" value="$(arg snapshot_file)"/>
+    <param name="registered_cloud_topic" value="$(arg registered_cloud_topic)"/>
+    <param name="registered_free_ray_topic" value="$(arg registered_free_ray_topic)"/>
+    <param name="sensor_pose_topic" value="$(arg sensor_pose_topic)"/>
+    <param name="localization_source" value="$(arg localization_source)"/>
+    <param name="resolution" value="$(arg resolution)"/>
+    <param name="formal_experiment_allowed" value="$(arg formal_experiment_allowed)"/>
+    <param name="publish_rate_hz" value="$(arg publish_rate_hz)"/>
+    <param name="publish_during_record" value="$(arg publish_during_record)"/>
+    <param name="maximum_cloud_points" value="$(arg maximum_cloud_points)"/>
+    <param name="minimum_cloud_interval_s" value="$(arg minimum_cloud_interval_s)"/>
+    <param name="minimum_free_ray_interval_s" value="$(arg minimum_free_ray_interval_s)"/>
+    <param name="clearing_pose_topic" value="$(arg clearing_pose_topic)"/>
+    <param name="footprint_clear_radius_xy" value="$(arg footprint_clear_radius_xy)"/>
+    <param name="footprint_clear_half_height" value="$(arg footprint_clear_half_height)"/>
+  </node>
+</launch>

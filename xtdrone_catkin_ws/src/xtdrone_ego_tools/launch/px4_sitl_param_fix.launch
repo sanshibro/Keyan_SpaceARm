@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="namespace" default="/iris_0"/>
+  <arg name="profile" default="takeoff"/>
+  <node pkg="xtdrone_ego_tools"
+        type="set_px4_sitl_params.py"
+        name="set_px4_sitl_params"
+        output="screen">
+    <param name="namespace" value="$(arg namespace)"/>
+    <param name="profile" value="$(arg profile)"/>
+  </node>
+</launch>

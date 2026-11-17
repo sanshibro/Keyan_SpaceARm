@@ -1,0 +1,80 @@
+<launch>
+  <arg name="auto_execute" default="false"/>
+  <arg name="pose_topic" default="/iris_0/world_pose"/>
+  <arg name="spawn_gazebo_overlay" default="true"/>
+  <arg name="use_static_cloud" default="true"/>
+  <arg name="enable_rolling_goal" default="true"/>
+  <!-- The whole-body layer owns local refinement.  Use the deterministic
+       global topology as its default reference; prefer_real_ego remains an
+       explicit experimental ablation because UAV-only EGO segments can be
+       geometrically impossible for the deployed arm envelope. -->
+  <arg name="ego_reference_mode" default="from_global_path"/>
+  <arg name="ego_goal_keepalive_period" default="6.0"/>
+  <arg name="maximum_ego_start_gap" default="0.75"/>
+  <arg name="launch_rviz" default="true"/>
+  <arg name="publish_hold_when_disabled" default="false"/>
+  <arg name="require_px4_ready" default="true"/>
+  <arg name="planner_config" default="$(find uav_continuum_whole_body_v2)/config/planner_v2.yaml"/>
+  <arg name="phase_body_full_error" default="0.010"/>
+  <arg name="phase_arm_full_error" default="0.010"/>
+  <arg name="phase_body_clearance_reserve" default="0.03"/>
+  <arg name="phase_arm_clearance_reserve" default="0.045"/>
+  <arg name="phase_calibrated_full_speed_error" default="0.060"/>
+  <arg name="rolling_switch_max_advance" default="0.35"/>
+  <arg name="final_convergence_timeout" default="15.0"/>
+  <arg name="global_replan_movement_threshold" default="0.5"/>
+  <!-- Keep topology connectivity at 0.06 m; the higher clearance-cost target
+       in the scenario config centres the route without changing which
+       terminal reachability candidate remains connected. -->
+  <arg name="global_path_clearance" default="0.06"/>
+  <arg name="vehicle_body_clearance" default="0.06"/>
+  <arg name="reachability_search_period" default="3600.0"/>
+  <arg name="reachability_rate_hz" default="1.0"/>
+
+  <!-- Reuse the frozen V1 perception/global/EGO front end, but do not launch
+       its whole-body planner or either legacy executor. -->
+  <include file="$(find uav_continuum_opportunity_planner)/launch/ours_full_demo.launch">
+    <arg name="config" value="$(find uav_continuum_opportunity_planner)/config/scenario_3c_multi_passage_morphology.yaml"/>
+    <arg name="world_boxes_config" value="$(find uav_continuum_opportunity_planner)/config/indoor1_sdf_boxes.yaml"/>
+    <arg name="uav_pose_topic" value="$(arg pose_topic)"/>
+    <arg name="spawn_gazebo_overlay" value="$(arg spawn_gazebo_overlay)"/>
+    <arg name="use_static_cloud" value="$(arg use_static_cloud)"/>
+    <arg name="whole_body_use_static_cloud" value="false"/>
+    <arg name="append_global_tail" value="false"/>
+    <arg name="ego_reference_mode" value="$(arg ego_reference_mode)"/>
+    <arg name="enable_rolling_goal" value="$(arg enable_rolling_goal)"/>
+    <arg name="ego_goal_keepalive_period" value="$(arg ego_goal_keepalive_period)"/>
+    <arg name="maximum_ego_start_gap" value="$(arg maximum_ego_start_gap)"/>
+    <arg name="allow_global_path_fallback" value="true"/>
+    <arg name="global_replan_movement_threshold" value="$(arg global_replan_movement_threshold)"/>
+    <arg name="global_path_clearance" value="$(arg global_path_clearance)"/>
+    <arg name="vehicle_body_clearance" value="$(arg vehicle_body_clearance)"/>
+    <!-- body_keepout is an abstract UAV-center exclusion region in this
+         scenario; physical walls are still checked with the full body. -->
+    <arg name="reachability_keepout_uses_body_envelope" value="false"/>
+    <arg name="reachability_search_period" value="$(arg reachability_search_period)"/>
+    <arg name="reachability_rate_hz" value="$(arg reachability_rate_hz)"/>
+    <arg name="enable_v1_whole_body_planner" value="false"/>
+    <arg name="enable_plan_executor" value="false"/>
+    <arg name="enable_px4_executor" value="false"/>
+  </include>
+
+  <include file="$(find uav_continuum_whole_body_v2)/launch/scenario_3c_v2.launch">
+    <arg name="auto_execute" value="$(arg auto_execute)"/>
+    <arg name="pose_topic" value="$(arg pose_topic)"/>
+    <arg name="reference_topic" value="/planner/ego_reference_trajectory"/>
+    <arg name="publish_hold_when_disabled" value="$(arg publish_hold_when_disabled)"/>
+    <arg name="require_px4_ready" value="$(arg require_px4_ready)"/>
+    <arg name="planner_config" value="$(arg planner_config)"/>
+    <arg name="phase_body_full_error" value="$(arg phase_body_full_error)"/>
+    <arg name="phase_arm_full_error" value="$(arg phase_arm_full_error)"/>
+    <arg name="phase_body_clearance_reserve" value="$(arg phase_body_clearance_reserve)"/>
+    <arg name="phase_arm_clearance_reserve" value="$(arg phase_arm_clearance_reserve)"/>
+    <arg name="phase_calibrated_full_speed_error" value="$(arg phase_calibrated_full_speed_error)"/>
+    <arg name="rolling_switch_max_advance" value="$(arg rolling_switch_max_advance)"/>
+    <arg name="final_convergence_timeout" value="$(arg final_convergence_timeout)"/>
+  </include>
+
+  <node if="$(arg launch_rviz)" pkg="rviz" type="rviz" name="whole_body_v2_rviz"
+        args="-d $(find uav_continuum_whole_body_v2)/config/scenario_3c_v2.rviz" output="screen"/>
+</launch>

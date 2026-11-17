@@ -1,0 +1,641 @@
+boxes:
+- name: sdf_cafe_main_floor
+  center:
+  - -0.922
+  - -3.5459
+  - 0.0948
+  size:
+  - 9.38
+  - 22.63
+  - 0.19
+- name: sdf_cafe_wall_1
+  center:
+  - -5.552
+  - -2.2659
+  - 1.415
+  size:
+  - 0.12
+  - 23.16
+  - 2.83
+- name: sdf_cafe_wall_2
+  center:
+  - 3.718
+  - -3.1059
+  - 1.415
+  size:
+  - 0.12
+  - 21.48
+  - 2.83
+- name: sdf_cafe_wall_4
+  center:
+  - 1.568
+  - 6.1041
+  - 1.435
+  size:
+  - 0.12
+  - 3.05
+  - 2.87
+- name: sdf_cafe_wall_5
+  center:
+  - 2.633
+  - 7.6041
+  - 1.435
+  size:
+  - 2.13
+  - 0.12
+  - 2.87
+- name: sdf_cafe_wall_6
+  center:
+  - 0.093
+  - -13.7759
+  - 1.415
+  size:
+  - 7.36
+  - 0.15
+  - 2.83
+- name: sdf_cafe_wall_7
+  center:
+  - -5.142
+  - -13.7759
+  - 1.415
+  size:
+  - 0.93
+  - 0.15
+  - 2.83
+- name: sdf_cafe_wall_8
+  center:
+  - -4.132
+  - -13.7759
+  - 2.69
+  size:
+  - 1.09
+  - 0.15
+  - 0.28
+- name: sdf_cafe_coke
+  center:
+  - -4.907
+  - -2.5359
+  - 0.95
+  size:
+  - 1.03
+  - 1.03
+  - 1.52
+- name: sdf_cafe_room_Wall_0_Collision_0
+  center:
+  - -2.1482
+  - -8.2253
+  - 1.425
+  size:
+  - 2.3736
+  - 0.1515
+  - 2.85
+- name: sdf_cafe_room_Wall_0_Collision_1
+  center:
+  - 1.3518
+  - -8.223
+  - 0.25
+  size:
+  - 4.6266
+  - 0.153
+  - 0.5
+- name: sdf_cafe_room_Wall_0_Collision_2
+  center:
+  - 2.8518
+  - -8.222
+  - 1.675
+  size:
+  - 1.6266
+  - 0.1511
+  - 2.35
+- name: sdf_cafe_room_Wall_0_Collision_3
+  center:
+  - 0.5385
+  - -8.2235
+  - 2.575
+  size:
+  - 3.0001
+  - 0.1519
+  - 0.55
+- name: sdf_cafe_room_Wall_3_Collision_0
+  center:
+  - -3.2591
+  - -9.3939
+  - 1.425
+  size:
+  - 0.1518
+  - 2.4858
+  - 2.85
+- name: sdf_cafe_room_Wall_3_Collision_1
+  center:
+  - -3.2568
+  - -12.6259
+  - 1.425
+  size:
+  - 0.1516
+  - 2.1784
+  - 2.85
+- name: sdf_cafe_room_Wall_3_Collision_3
+  center:
+  - -3.2579
+  - -11.0867
+  - 2.425
+  size:
+  - 0.1507
+  - 0.9001
+  - 0.85
+- name: sdf_ceiling_collision
+  center:
+  - 0.0
+  - 0.0
+  - 5.0
+  size:
+  - 300.0
+  - 300.0
+  - 0.5
+- name: sdf_cafe_table_surface
+  center:
+  - 0.5478
+  - -10.5201
+  - 0.755
+  size:
+  - 0.913
+  - 0.913
+  - 0.05
+- name: sdf_cafe_table_column
+  center:
+  - 0.5478
+  - -10.5201
+  - 0.37
+  size:
+  - 0.05
+  - 0.05
+  - 0.74
+- name: sdf_cinder_block_wide_top
+  center:
+  - -3.1703
+  - -6.0893
+  - 0.1302
+  size:
+  - 0.3874
+  - 0.3874
+  - 0.05
+- name: sdf_cinder_block_wide_left
+  center:
+  - -3.1703
+  - -6.2727
+  - 0.0714
+  size:
+  - 0.3874
+  - 0.05
+  - 0.0921
+- name: sdf_cinder_block_wide_right
+  center:
+  - -3.1703
+  - -5.906
+  - 0.0714
+  size:
+  - 0.3874
+  - 0.05
+  - 0.0921
+- name: sdf_cinder_block_wide_middle
+  center:
+  - -3.1703
+  - -6.0893
+  - 0.0714
+  size:
+  - 0.3874
+  - 0.05
+  - 0.0921
+- name: sdf_cafe_table_0_surface
+  center:
+  - 0.5453
+  - -11.427
+  - 0.755
+  size:
+  - 0.913
+  - 0.913
+  - 0.05
+- name: sdf_cafe_table_0_column
+  center:
+  - 0.5453
+  - -11.427
+  - 0.37
+  size:
+  - 0.05
+  - 0.05
+  - 0.74
+- name: sdf_grey_tote_lid
+  center:
+  - -0.91
+  - -11.4977
+  - 0.2896
+  size:
+  - 0.6777
+  - 0.413
+  - 0.05
+- name: sdf_grey_tote_lid_lip_1
+  center:
+  - -0.91
+  - -11.2971
+  - 0.3048
+  size:
+  - 0.6507
+  - 0.05
+  - 0.05
+- name: sdf_grey_tote_lid_lip_2
+  center:
+  - -0.91
+  - -11.6983
+  - 0.3048
+  size:
+  - 0.6507
+  - 0.05
+  - 0.05
+- name: sdf_grey_tote_lid_lip_3
+  center:
+  - -0.5842
+  - -11.4977
+  - 0.3048
+  size:
+  - 0.05
+  - 0.312
+  - 0.05
+- name: sdf_grey_tote_lid_lip_4
+  center:
+  - -1.2359
+  - -11.4977
+  - 0.3048
+  size:
+  - 0.05
+  - 0.312
+  - 0.05
+- name: sdf_grey_tote_side_wall_1
+  center:
+  - -0.91
+  - -11.6777
+  - 0.1416
+  size:
+  - 0.584
+  - 0.0672
+  - 0.2856
+- name: sdf_grey_tote_side_wall_2
+  center:
+  - -0.91
+  - -11.3177
+  - 0.1416
+  size:
+  - 0.584
+  - 0.0672
+  - 0.2856
+- name: sdf_grey_tote_side_wall_3
+  center:
+  - -0.605
+  - -11.4977
+  - 0.1416
+  size:
+  - 0.0672
+  - 0.3305
+  - 0.2856
+- name: sdf_grey_tote_side_wall_4
+  center:
+  - -1.215
+  - -11.4977
+  - 0.1416
+  size:
+  - 0.0672
+  - 0.3305
+  - 0.2856
+- name: sdf_bookshelf_back
+  center:
+  - 2.489
+  - -2.2785
+  - 0.6
+  size:
+  - 0.9
+  - 0.05
+  - 1.2
+- name: sdf_bookshelf_left_side
+  center:
+  - 2.939
+  - -2.4785
+  - 0.6
+  size:
+  - 0.05
+  - 0.4
+  - 1.2
+- name: sdf_bookshelf_right_side
+  center:
+  - 2.039
+  - -2.4785
+  - 0.6
+  size:
+  - 0.05
+  - 0.4
+  - 1.2
+- name: sdf_bookshelf_bottom
+  center:
+  - 2.489
+  - -2.4785
+  - 0.03
+  size:
+  - 0.88
+  - 0.4
+  - 0.06
+- name: sdf_bookshelf_top
+  center:
+  - 2.489
+  - -2.4785
+  - 1.19
+  size:
+  - 0.88
+  - 0.4
+  - 0.05
+- name: sdf_bookshelf_low_shelf
+  center:
+  - 2.489
+  - -2.4785
+  - 0.43
+  size:
+  - 0.88
+  - 0.4
+  - 0.05
+- name: sdf_bookshelf_high_shelf
+  center:
+  - 2.489
+  - -2.4785
+  - 0.8
+  size:
+  - 0.88
+  - 0.4
+  - 0.05
+- name: sdf_bookshelf_clone_back
+  center:
+  - 3.2203
+  - -3.8634
+  - 0.871
+  size:
+  - 0.9
+  - 0.05
+  - 1.2
+- name: sdf_bookshelf_clone_left_side
+  center:
+  - 3.6703
+  - -4.0634
+  - 0.871
+  size:
+  - 0.05
+  - 0.4
+  - 1.2
+- name: sdf_bookshelf_clone_right_side
+  center:
+  - 2.7703
+  - -4.0634
+  - 0.871
+  size:
+  - 0.05
+  - 0.4
+  - 1.2
+- name: sdf_bookshelf_clone_bottom
+  center:
+  - 3.2203
+  - -4.0634
+  - 0.301
+  size:
+  - 0.88
+  - 0.4
+  - 0.06
+- name: sdf_bookshelf_clone_top
+  center:
+  - 3.2203
+  - -4.0634
+  - 1.461
+  size:
+  - 0.88
+  - 0.4
+  - 0.05
+- name: sdf_bookshelf_clone_low_shelf
+  center:
+  - 3.2203
+  - -4.0634
+  - 0.701
+  size:
+  - 0.88
+  - 0.4
+  - 0.05
+- name: sdf_bookshelf_clone_high_shelf
+  center:
+  - 3.2203
+  - -4.0634
+  - 1.071
+  size:
+  - 0.88
+  - 0.4
+  - 0.05
+- name: sdf_cabinet_cabinet_bottom_plate_geom_cabinet_back_plate
+  center:
+  - 3.4192
+  - -0.8071
+  - 0.51
+  size:
+  - 0.05
+  - 0.45
+  - 1.02
+- name: sdf_cabinet_cabinet_bottom_plate_geom_cabinet_left_plate
+  center:
+  - 3.1842
+  - -0.5721
+  - 0.51
+  size:
+  - 0.45
+  - 0.05
+  - 1.02
+- name: sdf_cabinet_cabinet_bottom_plate_geom_cabinet_middle_plate
+  center:
+  - 3.1842
+  - -0.8071
+  - 0.51
+  size:
+  - 0.45
+  - 0.45
+  - 0.05
+- name: sdf_cabinet_cabinet_bottom_plate_geom_cabinet_right_plate
+  center:
+  - 3.1842
+  - -1.0421
+  - 0.51
+  size:
+  - 0.45
+  - 0.05
+  - 1.02
+- name: sdf_cabinet_cabinet_bottom_plate_geom_cabinet_top_plate
+  center:
+  - 3.1842
+  - -0.8071
+  - 1.01
+  size:
+  - 0.45
+  - 0.45
+  - 0.05
+- name: sdf_Untitled_Wall_10_Collision
+  center:
+  - 1.5192
+  - 6.1399
+  - 1.25
+  size:
+  - 0.15
+  - 2.75
+  - 2.5
+- name: sdf_Untitled_Wall_4_Collision
+  center:
+  - 3.6547
+  - -0.2804
+  - 1.25
+  size:
+  - 0.1001
+  - 15.75
+  - 2.5
+- name: p1_lower_barrier
+  center:
+  - -0.92
+  - -1.85
+  - 0.49
+  size:
+  - 9.25
+  - 0.34
+  - 0.98
+- name: p1_ceiling_blocker
+  center:
+  - -0.92
+  - -1.85
+  - 3.235
+  size:
+  - 9.25
+  - 0.34
+  - 3.27
+- name: p2_lower_barrier
+  center:
+  - -0.92
+  - -5.8
+  - 0.55
+  size:
+  - 9.25
+  - 0.36
+  - 1.1
+- name: p2_ceiling_blocker
+  center:
+  - -0.92
+  - -5.8
+  - 3.295
+  size:
+  - 9.25
+  - 0.36
+  - 3.15
+- name: p3_lower_barrier
+  center:
+  - -0.92
+  - -9.45
+  - 0.59
+  size:
+  - 9.25
+  - 0.34
+  - 1.18
+- name: p3_ceiling_blocker
+  center:
+  - -0.92
+  - -9.45
+  - 3.325
+  size:
+  - 9.25
+  - 0.34
+  - 3.05
+- name: rear_task_table
+  center:
+  - 2.45
+  - -12.3
+  - 0.19
+  size:
+  - 1.0
+  - 0.58
+  - 0.22
+- name: rear_left_guard
+  center:
+  - 1.86
+  - -12.25
+  - 0.82
+  size:
+  - 0.08
+  - 0.72
+  - 0.86
+- name: rear_right_guard
+  center:
+  - 3.04
+  - -12.25
+  - 0.82
+  size:
+  - 0.08
+  - 0.72
+  - 0.86
+- name: rear_back_panel
+  center:
+  - 2.45
+  - -12.72
+  - 0.86
+  size:
+  - 1.24
+  - 0.08
+  - 0.92
+- name: rear_top_lip
+  center:
+  - 2.45
+  - -12.25
+  - 1.56
+  size:
+  - 1.24
+  - 0.74
+  - 0.08
+- name: rear_front_low_rail
+  center:
+  - 2.45
+  - -11.64
+  - 0.36
+  size:
+  - 1.3
+  - 0.08
+  - 0.1
+- name: rear_left_side_shelf
+  center:
+  - 1.72
+  - -12.25
+  - 0.56
+  size:
+  - 0.2
+  - 0.58
+  - 0.2
+- name: rear_right_side_shelf
+  center:
+  - 3.18
+  - -12.25
+  - 0.56
+  size:
+  - 0.2
+  - 0.58
+  - 0.2
+- name: rear_upper_cross_bar
+  center:
+  - 2.45
+  - -11.58
+  - 1.43
+  size:
+  - 1.1
+  - 0.06
+  - 0.06
+body_keepout_boxes:
+- name: rear_target_body_keepout
+  center:
+  - 2.45
+  - -12.25
+  - 1.02
+  size:
+  - 0.6
+  - 0.22
+  - 0.78

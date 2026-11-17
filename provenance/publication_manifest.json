@@ -1,0 +1,182 @@
+{
+  "algorithm_commit": "e62b6f22a20a9c2ba18d4041124427e1cfe5f59c",
+  "datasets": [
+    {
+      "name": "formal_450_raw",
+      "parts": [
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part001",
+          "sha256": "2b92c1dfd1ba827d0b740f92690896e9361899015097a65109c0e3feefc1e822"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part002",
+          "sha256": "061b229792be5dede6efc3ca172876fe4e3f80a2dc2356c4e3834c0ee0a072e7"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part003",
+          "sha256": "813ca03f4d799bc8a53b76c3dcbe8060ddf430419a8bf448e35540fabf16942d"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part004",
+          "sha256": "b47fdad068e5e096339ca747b8b396159fbad722d095810afd7ad48252328c38"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part005",
+          "sha256": "27a0bb4f4de4bfe8bf6b1faa9278b0b1e6dc778876a874bb0a59b70a3bfbf33b"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part006",
+          "sha256": "68365e332b9d685d98728ed08751c03df9fe6fbab06bb3f9d0deb2f38642b514"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part007",
+          "sha256": "78d85b0e0f0748c88f75ed07b152972a4ce6a3b31f483a2689dd55690087314f"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part008",
+          "sha256": "c76352fe31c1175b3e40d6ef1a6ce61b4523d8409fcac059cd5a361c9802a488"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part009",
+          "sha256": "0d7b678d0f92079964ced7921162caa4dd751393cf3dbe8e8e413edccc36e042"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part010",
+          "sha256": "f855a6ce5f081c105565aab957e009d89b2de376899ae5b8cb1edee5545e2114"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part011",
+          "sha256": "777ca6223f1343ba0952bea54f9d266a7ebb77bffd503aaf6c8985e6f8ed0169"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part012",
+          "sha256": "898445545277be459739b69b8eed407741b6aef5a763ad68ef87c85224cc795f"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part013",
+          "sha256": "d6fa0dddac9facac9cf75db3c2e9553a2510fe5a34237250e1159898ac303563"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part014",
+          "sha256": "4a2410a4c17c71d86924a326304a93c30f41fc3b5c1ca4dbf0ecad6e8c506adc"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part015",
+          "sha256": "f0a350850fb44f4cd83899c5a9cd73646d577a101aa45f9e12ec681798ad8c85"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part016",
+          "sha256": "0f03e46eb60c4f1339c08ab29789617375c2ad5f9070a2a21699111dd753e610"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part017",
+          "sha256": "cf8b86383c6c4afa83de5667ea0dc2c5d9bec173b70b6247d13cced5baedd846"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part018",
+          "sha256": "5fa254dfb2e7206b4d03a50166a6fcde5d2c616c8338ab02c7a9d0e9afdca181"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part019",
+          "sha256": "b84ea51ccf08bd440f1e4c0e7b21f16958073947eb4fd85ef5f8d52f34d7d2a6"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part020",
+          "sha256": "dad72e33becc15c36edb7aeecdb8777bd8a0d57b2b4207387c7a6bd539da56b0"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part021",
+          "sha256": "90cef84394bf01736670d57f9324354530a011f8a73bc78b15dce09f1bb8577a"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part022",
+          "sha256": "82d162dfadad129f0d17d1aee7b3cb1b8bcac9c68e720be9f2ea39fc74a14a39"
+        },
+        {
+          "bytes": 41943040,
+          "path": "datasets/formal_450_raw.tar.gz.part023",
+          "sha256": "959e5af91783816866ffb248977ad69cc36530aa5642b8b05d099980c36f55c6"
+        },
+        {
+          "bytes": 29148698,
+          "path": "datasets/formal_450_raw.tar.gz.part024",
+          "sha256": "8bb2cc0834f598f6d530916621bee53842438c35248d07db241f0feb5a2fa288"
+        }
+      ],
+      "uncompressed_bytes": 3455277970
+    },
+    {
+      "name": "handoff_15_pairs_raw",
+      "parts": [
+        {
+          "bytes": 25900285,
+          "path": "datasets/handoff_15_pairs_raw.tar.gz.part001",
+          "sha256": "17c089c69cf51b3c96cb6851e904cb2908cd3128eecfc030c2b785b34eba2641"
+        }
+      ],
+      "uncompressed_bytes": 79418862
+    },
+    {
+      "name": "dynamics_proxy_raw",
+      "parts": [
+        {
+          "bytes": 4618305,
+          "path": "datasets/dynamics_proxy_raw.tar.gz.part001",
+          "sha256": "faaf1d52dad68a2179097d03d18831672f9d8228e9e9d073f49682b7daec364a"
+        }
+      ],
+      "uncompressed_bytes": 15860802
+    },
+    {
+      "name": "sensing_code_models_data",
+      "parts": [
+        {
+          "bytes": 41943040,
+          "path": "datasets/sensing_code_models_data.tar.gz.part001",
+          "sha256": "72babc64f63b7b96615a0a3f6fbe3cff6f752cbb46517b2c4ecd3be280e938c4"
+        },
+        {
+          "bytes": 35487371,
+          "path": "datasets/sensing_code_models_data.tar.gz.part002",
+          "sha256": "424d82737ab997868512122dec82f3a32061e5923ad4651d29be8203047fd296"
+        }
+      ],
+      "uncompressed_bytes": 222759120
+    }
+  ],
+  "evidence_tool_commit": "d5682f9d927f449bb2290a36f750176a502d9507",
+  "excluded": [
+    "MuJoCo development",
+    "build/devel/install outputs",
+    "virtual environments",
+    "credentials",
+    "unrelated earlier pilot batches",
+    "third-party proprietary SDK binaries"
+  ],
+  "paper_zip_sha256": "54b1a6b570b53cb01f2c030dc6c815bb2f973c3384e0d1b428397fdf5bae3676",
+  "scope": "paper, frozen planning code, reports, figures, all formal raw records, paired handoff and dynamics evidence, available sensing sources",
+  "sensing_limit": "Exact Result PNG matches verified; mocap/four-channel acquisition and exact source CSV for these PNGs are not established by this export.",
+  "source_worktree_head": "d5682f9d927f449bb2290a36f750176a502d9507"
+}

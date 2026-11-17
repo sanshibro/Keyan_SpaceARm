@@ -1,0 +1,17 @@
+schema_version: 1
+frame_id: world
+name: scenario_3c_task
+# Task information is intentionally separated from obstacle truth. It is safe
+# for frozen_slam and online_slam planners to read this file.
+target: [2.45, -12.25, 0.82, 0.0]
+preferred_standoff: [2.52257657, -11.95891094, 1.09005635, -1.81514242]
+# This is a task boundary condition shared by every comparison method, not an
+# obstacle description. Later Clutter-Reach datasets may provide several
+# terminal candidates generated from the same SLAM map.
+terminal_shape_deg: [90.0, -180.0]
+# This legacy three-wall task is transit/reach regression, not a grasp claim.
+tip_tolerance_m: 0.08
+start_region:
+  minimum: [-0.5, -0.5, 0.75]
+  maximum: [0.5, 0.5, 1.8]
+task_time_limit: 600.0

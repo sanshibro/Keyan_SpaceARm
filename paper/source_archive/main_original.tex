@@ -1,0 +1,735 @@
+\documentclass[journal,twoside]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% ===== Packages retained/adapted from the senior template =====
+\let\labelindent\relax
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{url}
+\usepackage[noadjust]{cite}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage[noend]{algpseudocode}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{balance}
+\usepackage{siunitx}
+\usepackage[final]{microtype}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\allowdisplaybreaks
+
+\captionsetup[table]{labelformat=simple,labelsep=newline,textfont=sc}
+\captionsetup{font={scriptsize}}
+\captionsetup[figure]{labelfont={},textfont={}}
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\floatsep}{5pt plus 2pt minus 1pt}
+\setlength{\intextsep}{7pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{5pt plus 2pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{1pt}
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}
+\newcommand{\compactbody}{\fontsize{9.7}{11.2}\selectfont}
+\newcommand{\wrap}{\operatorname{wrap}}
+
+\hypersetup{
+  pdftitle={Visual--Strain Morphology Estimation and Rolling Whole-Body Planning for Aerial Continuum Manipulation in Confined Spaces}
+}
+
+\begin{document}
+
+\title{Visual--Strain Morphology Estimation and Rolling Whole-Body Planning for Aerial Continuum Manipulation in Confined Spaces}
+\author{Author Names Omitted for Anonymous Review}
+\maketitle
+
+% =============================================================
+% BILINGUAL RULE USED IN THIS FILE
+% Chinese source is kept immediately above the corresponding
+% English paragraph as comments beginning with "% CN:".
+% Therefore this file still compiles as a normal English IEEE paper.
+% =============================================================
+
+\begin{abstract}
+% CN: 空中连续体机械臂能够通过主动改变柔性臂形态适应狭窄通道和受限空间，但其形态变化同时影响工具端位置、整机碰撞包络和组合质心，使可靠形态感知与全身规划形成紧密耦合。针对末端视觉易受弱纹理、遮挡和成像质量退化影响，而表面应变传感能够连续反映结构弯曲但存在模型误差的问题，本文提出一种动作捕捉监督的视觉—应变形态估计方法。
+Aerial continuum manipulators can actively reshape their flexible arm to operate in narrow passages and confined spaces. However, arm morphology simultaneously affects the tool-tip pose, whole-body collision envelope, and combined center of mass, tightly coupling morphology perception with motion planning. To obtain reliable shape feedback under visual degradation, we develop a motion-capture-supervised visual--strain morphology estimator. The strain branch is trained offline using independent motion-capture labels, while the online visual branch converts base-motion-compensated ORB-SLAM3 observations into morphology measurements. Their uncertainties are fused adaptively to provide continuous estimates of the bending angle and bending-plane angle.
+
+% CN: 在此基础上，本文提出一种连续体形态感知的滚动全身联合规划框架，将无人机位置、偏航、连续体形态和分段时间统一优化。方法首先通过几何引导搜索获得具有明确通道拓扑的全身种子，再在有限计算预算内联合细化轨迹与时间；候选轨迹经独立密集验证后，进一步通过连续性感知接管和按需导数匹配桥接实现相邻滚动窗口之间的平滑切换。
+Building on this estimate, we propose a morphology-aware rolling whole-body planner that jointly optimizes UAV position, yaw, continuum morphology, and segment timing. A geometry-guided search first supplies a topology-consistent seed, which is then refined within a limited online computation budget. Candidate trajectories are independently validated for whole-body feasibility before execution, and a continuity-aware handoff mechanism with an optional derivative-matched bridge is used to switch safely between rolling windows.
+
+% CN: 在 PX4/Gazebo 闭环平台的 90 个配对场景中，所提方法完成 89/90 个任务，成功率为 98.9%，较最佳基线提高 23.3 个百分点；在 Hard 场景中成功率达到 96.7%，而最佳基线为 40.0%。规划时间 P95 为 3.70 s，且未发生规划 deadline miss。接管消融进一步表明，连续性感知接管将单位路径长度平移 Jerk 的配对中位数降低 72.8%。
+In 90 paired PX4/Gazebo closed-loop scenarios, the proposed Rolling-WB planner completes 89/90 tasks, corresponding to a 98.9\% success rate and a 23.3-percentage-point improvement over the best baseline. In hard scenarios, the success rate reaches 96.7\%, compared with 40.0\% for the best baseline. The planning-time P95 is 3.70~s with no planning deadline miss. A paired handoff ablation further shows a 72.8\% reduction in median translational jerk per unit path length relative to position-only switching. Staged visual-degradation tests additionally show that fusion weights migrate smoothly toward the strain branch when ORB observations deteriorate or fail.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Aerial continuum manipulator, visual--strain fusion, morphology estimation, ORB-SLAM3, whole-body planning, confined-space navigation, trajectory handoff.
+\end{IEEEkeywords}
+
+\compactbody
+
+\section{Introduction}
+
+% CN: 空中机械臂将多旋翼飞行器的空间机动能力与机械操作能力结合，为高空检测、狭窄区域探测和受限空间作业提供了新的系统形态。在开阔环境中，机械臂运动通常主要围绕工具端可达性展开；而当系统进入尺寸与整机尺度相当的受限空间时，机械臂本体的空间占据开始直接影响飞行器的运动可行域。对于安装于无人机下方的单段连续体机械臂，其形态可由总弯曲角 theta 和弯曲平面角 phi 连续调节。形态变化不仅改变工具端位置，还会同步重构机械臂的空间包络以及组合质心分布。因此，在受限空间中，连续体形态不再只是完成末端操作的局部变量，而成为影响整机运动可行性的全身规划自由度。
+\IEEEPARstart{A}{erial} manipulators combine the mobility of multirotor platforms with robotic manipulation, enabling inspection, exploration, and intervention in locations that are difficult to access from the ground. In open space, manipulator motion is often dominated by end-effector reachability. In confined environments whose dimensions become comparable to the robot itself, however, the arm's occupied volume directly constrains the feasible motion of the aerial platform. For the single-section continuum manipulator considered in this work, the morphology is continuously parameterized by the total bending angle $\theta$ and the bending-plane angle $\phi$. Varying these quantities changes not only the tool-tip pose but also the arm envelope and the combined center-of-mass distribution. Continuum morphology therefore becomes a whole-body planning variable rather than a purely local manipulation variable.
+
+% CN: 连续体形态的引入使受限空间中的运动问题同时具有感知与规划两层耦合。驱动指令并不能完全代表机械臂的实际弯曲状态，材料与结构非线性、负载变化以及装配误差都会造成名义形态与实际形态之间的偏差，而末端定位、碰撞检测和后续轨迹生成依赖的都是实际形态。与此同时，弯曲角和弯曲平面的变化还会改变机械臂空间包络及组合质心分布，并与无人机位置和偏航共同决定整机在环境中的实际占据。因此，可靠的形态反馈是受限空间全身规划的基础。
+This morphology introduces a coupled perception-and-planning problem. Actuation commands do not necessarily represent the arm's actual bending state because material and structural nonlinearities, load variations, and assembly errors can produce discrepancies between nominal and realized morphology. Yet end-effector localization, collision checking, and trajectory generation all depend on the realized shape. At the same time, changes in $\theta$ and $\phi$ modify the arm envelope and combined center of mass, while UAV position and yaw determine how the same local morphology occupies the world frame. Reliable morphology feedback is therefore a prerequisite for whole-body planning in confined spaces.
+
+% CN: 末端眼在手视觉能够提供连续体相对基座的外部几何观测，但其可靠性依赖环境纹理和有效视野，弱纹理、遮挡、曝光变化和快速运动均可能引起位姿估计退化甚至跟踪中断。表面应变传感不依赖外部视觉条件，可持续反映结构弯曲，其误差则更多来自传感器特性、安装差异和结构非理想响应。两类观测具有不同的误差来源和失效模式，因此适合进行互补融合。
+An end-eye camera provides external geometric observations of the continuum arm relative to its base, but its reliability depends on scene texture and field of view. Weak texture, occlusion, exposure changes, or rapid motion can degrade pose estimation and may eventually interrupt tracking. Surface strain sensing does not depend on external visibility and can continuously reflect structural bending, although its errors arise from sensor characteristics, installation variation, and non-ideal structural response. These distinct error sources and failure modes make the two sensing modalities complementary.
+
+% CN: 基于这一特点，本文采用动作捕捉监督的应变建模与在线视觉—应变融合方法。离线阶段利用独立动作捕捉标签建立四通道应变与连续体弯曲状态之间的映射；在线阶段将经过无人机基座运动补偿的 ORB-SLAM3 末端视觉观测与应变估计按当前观测质量进行融合。本文估计的对象是连续体相对基座的弯曲状态，无人机自身位姿仍由飞行状态估计链提供。
+Accordingly, we use motion-capture-supervised strain modeling together with online visual--strain fusion. Offline, independent motion-capture labels are used to learn the mapping from four strain channels to continuum bending state. Online, the strain estimate is fused with an ORB-SLAM3 end-eye observation after compensating for UAV base motion, with the relative contribution of each modality adapted to the current observation quality. The estimated quantity is the continuum morphology relative to the arm base; the UAV six-degree-of-freedom state remains supplied by the flight-state estimation chain.
+
+% CN: 获得形态反馈后，还需要解决如何利用这一自由度完成受限空间中的全身运动。将无人机轨迹与机械臂形态分开规划，可能产生飞行器路径局部可行但机械臂扫掠碰撞的结果；而直接进行长时域联合优化，又需要同时处理非凸障碍、多个可行弯曲方向以及有限在线计算预算。滚动重规划进一步带来新旧局部轨迹之间的接管连续性问题。针对这些挑战，本文进一步设计了连续体形态感知的滚动全身联合规划与连续接管机制。
+Reliable morphology feedback alone is insufficient for confined-space navigation. Planning the UAV trajectory first and adjusting arm morphology afterward can produce a locally feasible vehicle path whose swept arm volume collides with the environment. Conversely, direct long-horizon joint optimization must cope with nonconvex obstacles, multiple feasible bending directions, and limited online computation. Rolling replanning introduces an additional issue: two individually feasible local trajectories need not admit a smooth handoff. These observations motivate a morphology-aware rolling whole-body planner with independent feasibility validation and continuity-aware trajectory switching.
+
+The main contributions are summarized as follows:
+\begin{enumerate}
+    % CN: 贡献1：动作捕捉监督的视觉—应变形态估计。
+    \item We develop a motion-capture-supervised visual--strain morphology estimator in which the strain branch is trained from independent ground truth and the online visual branch is weighted according to ORB-SLAM3 observation quality. Inverse-variance fusion is used for the non-periodic bending angle, circular fusion is used for the bending-plane angle, and adaptive temporal filtering maintains continuity during visual degradation, failure, and recovery.
+
+    % CN: 贡献2：连续体形态感知的滚动全身联合规划。
+    \item We formulate morphology-aware rolling whole-body planning by jointly parameterizing UAV position, yaw, continuum morphology, and nonuniform B-spline segment durations. A geometry-guided seed and limited-budget local refinement are combined to handle the nonconvex whole-body feasible set online.
+
+    % CN: 贡献3：将轨迹自身可行性与滚动接管连续性显式分离。
+    \item We explicitly separate candidate-trajectory feasibility from rolling-window handoff feasibility. An optimizer-independent dense validator, phase-aware handoff gate, optional quintic derivative-matched bridge, and validated execution buffer prevent an unverified candidate from directly replacing the currently authorized trajectory.
+\end{enumerate}
+
+% TODO: Insert the final simplified Fig. 1 here.
+\begin{figure*}[t]
+    \centering
+    \fbox{\parbox[c][46mm][c]{0.94\textwidth}{\centering
+    Placeholder for Fig.~1: physical platform $\rightarrow$ visual--strain morphology estimation $\rightarrow$ rolling whole-body planning $\rightarrow$ validation/handoff $\rightarrow$ PX4 execution and feedback.}}
+    \caption{Closed-loop visual--strain morphology estimation and rolling whole-body planning framework for the aerial continuum manipulator.}
+    \label{fig:framework}
+\end{figure*}
+
+\section{Problem Formulation and System Modeling}
+% CN: 本节统一定义系统构型、连续体形态、PCC几何、全身包络、质心/飞行可行性代理以及后续滚动规划所求解的问题。这样第三节和第四节只需分别说明“如何估计形态”和“如何规划”，不再重复系统定义。
+This section defines the aerial continuum manipulator, its morphology-dependent whole-body geometry, and the constrained rolling-planning problem. These definitions are shared by the perception and planning modules developed in Secs.~III and IV.
+
+\subsection{Aerial Continuum Manipulator Configuration}
+% CN: 系统由多旋翼、垂直下挂的单段连续体机械臂、末端工具、末端D435以及四通道应变传感组成。D435通过末端支架固定，光轴朝下；四个应变片沿柔性段圆周近似正交布置。无人机位姿来自飞控状态估计链，本文视觉--应变模块只估计连续体相对基座的弯曲状态。
+The platform consists of a multirotor UAV carrying a single-section continuum manipulator vertically beneath the fuselage. A rigid distal tool is attached to the arm tip. An Intel RealSense D435 is mounted on the distal assembly with its optical axis directed downward, and four strain sensors are arranged approximately orthogonally around the continuum section. The UAV pose is supplied by the onboard flight-state estimator; the visual--strain estimator in Sec.~III estimates only the continuum morphology relative to the arm base.
+
+% CN: 定义世界坐标系W、无人机机体系U、连续体基座系B、工具系E和相机系C。U到B、C到E均为固定外参。
+We use the world frame $\{W\}$, UAV body frame $\{U\}$, continuum-base frame $\{B\}$, tool frame $\{E\}$, and camera frame $\{C\}$. The mounting transforms ${}^{U}\mathbf p_B$, ${}^{U}\mathbf R_B$, and ${}^{C}\mathbf R_E$ are fixed after calibration. The downward installation of the continuum arm is explicitly contained in ${}^{U}\mathbf R_B$.
+
+% CN: 单段连续体由总弯曲角theta和弯曲平面角phi描述。为避免theta趋近0时phi数值奇异，同时定义二维弯曲向量b。
+For the single-section arm, the morphology is parameterized by the total bending angle $\theta$ and bending-plane angle $\phi$. To avoid relying on the ill-defined bending-plane direction near the straight configuration, we also define a nonsingular bending vector
+\begin{equation}
+\begin{aligned}
+\mathbf q_a&=\begin{bmatrix}\theta&\phi\end{bmatrix}^{\!\mathrm T},\qquad
+\mathbf b=\theta\begin{bmatrix}\cos\phi&\sin\phi\end{bmatrix}^{\!\mathrm T},\\
+\theta&=\|\mathbf b\|_2,\qquad
+\phi=\operatorname{atan2}(b_y,b_x).
+\end{aligned}
+\label{eq:morphology_state}
+\end{equation}
+% CN: theta接近0时，phi对实际中心线几何影响趋于消失，因此后续形态差异和滚动接管优先使用b；在线输出仍保持(theta,phi)形式以便与机械臂接口和规划状态一致。
+When $\theta\rightarrow 0$, the bending-plane direction has vanishing influence on the arm centerline. We therefore use $\mathbf b$ for morphology differences and rolling-handoff comparisons near the straight configuration, while retaining $(\theta,\phi)$ as the physical state exposed to estimation and planning.
+
+\subsection{PCC Kinematics and World-Frame Geometry}
+% CN: 机械臂为单段常曲率结构，不允许S形或段内曲率反向。有效弧长La、曲率kappa=theta/La，弧长坐标s属于[0,La]。
+The flexible section is modeled as a single constant-curvature arc; no intra-section inflection or S-shaped bending is permitted. Let $L_a$ denote the effective arc length, $\kappa=\theta/L_a$ the curvature, and $s\in[0,L_a]$ the arc-length coordinate. The centerline and distal tangent in $\{B\}$ are
+\begin{equation}
+{}^{B}\mathbf r_c(s)=
+\begin{cases}
+\begin{bmatrix}
+\dfrac{1-\cos(\kappa s)}{\kappa}\cos\phi\\[1mm]
+\dfrac{1-\cos(\kappa s)}{\kappa}\sin\phi\\[1mm]
+\dfrac{\sin(\kappa s)}{\kappa}
+\end{bmatrix}, & |\theta|>\varepsilon_\theta,\\[5mm]
+\begin{bmatrix}0&0&s\end{bmatrix}^{\!\mathrm T}, & |\theta|\le\varepsilon_\theta,
+\end{cases}
+\label{eq:pcc_centerline}
+\end{equation}
+\begin{equation}
+{}^{B}\mathbf t_e=
+\begin{bmatrix}
+\sin\theta\cos\phi&
+\sin\theta\sin\phi&
+\cos\theta
+\end{bmatrix}^{\!\mathrm T}.
+\label{eq:pcc_tangent}
+\end{equation}
+% CN: 这里的PCC表达与真实单段柔性臂一致：给定theta和phi，整段中心线是一条单一圆弧，phi只决定该圆弧所在弯曲平面。
+For any fixed $(\theta,\phi)$, \eqref{eq:pcc_centerline} together with \eqref{eq:pcc_tangent} defines one circular-arc configuration: $\theta$ determines the bending magnitude and $\phi$ selects the bending plane.
+
+% CN: 规划层显式优化无人机位置pu和偏航psi，roll/pitch由底层姿态环稳定。规划状态把UAV运动与连续体形态放到同一个变量中。
+At the planning level, roll and pitch are stabilized by the low-level flight controller, while UAV position and yaw are optimized together with continuum morphology. We define
+\begin{equation}
+\begin{aligned}
+\mathbf x(t)&=
+\begin{bmatrix}
+\mathbf p_u^{\mathrm T}(t)&\psi(t)&\theta(t)&\phi(t)
+\end{bmatrix}^{\!\mathrm T},\\
+\mathbf p_u&=\begin{bmatrix}x_u&y_u&z_u\end{bmatrix}^{\!\mathrm T}.
+\end{aligned}
+\label{eq:planning_state}
+\end{equation}
+% CN: 周期角差用wrap处理；在轨迹参数化内部phi采用局部连续展开值，避免179度到-179度被错误插值成358度变化。
+Angular differences are evaluated using $\wrap(\alpha)=\operatorname{atan2}(\sin\alpha,\cos\alpha)$. During trajectory parameterization, $\phi$ is locally unwrapped and made continuous; wrapping is applied only to circular differences, bounds, and reported output.
+
+% CN: 将PCC中心线通过固定安装外参和UAV偏航变换到世界系。Lb是刚性基座长度，Le是末端工具段长度。
+Let $L_b$ denote the rigid base length and $L_e$ the distal tool offset. Using the fixed arm mounting transform, the continuum centerline and tool position in the world frame are
+\begin{align}
+{}^{W}\mathbf p_c(s;\mathbf x)
+&=\mathbf p_u+\mathbf R_z(\psi)\Big[{}^{U}\mathbf p_B \nonumber\\
+&\hspace{1.3cm}+{}^{U}\mathbf R_B
+\big(L_b\mathbf e_z+{}^{B}\mathbf r_c(s)\big)\Big],\label{eq:world_centerline}\\
+{}^{W}\mathbf p_e(\mathbf x)
+&=\mathbf p_u+\mathbf R_z(\psi)\Big[{}^{U}\mathbf p_B \nonumber\\
+&\hspace{0.45cm}+{}^{U}\mathbf R_B\big(L_b\mathbf e_z+{}^{B}\mathbf r_c(L_a)
++L_e{}^{B}\mathbf t_e\big)\Big].
+\label{eq:world_tool}
+\end{align}
+% CN: 因此，在同一UAV位置下改变theta或phi会重构整条机械臂中心线和工具端位置；同一形态在不同psi下又对应不同的世界系扫掠方向。这正是把形态作为全身规划变量的几何基础。
+Thus, changing $(\theta,\phi)$ at the same UAV position reshapes the complete arm centerline and tool pose, while changing $\psi$ rotates the same local morphology in the world frame. This morphology-dependent geometry is the basis of the whole-body planning formulation.
+
+\subsection{Whole-Body Collision and Flight-Feasibility Model}
+% CN: 碰撞模型不能只检查末端点。UAV包络Bu包含机身和旋翼；连续体部分用沿PCC中心线离散的胶囊体链近似，另外加入刚性基座和末端工具包络。
+Collision checking is performed on the whole aerial-manipulator body rather than only on the tool tip. Let $\mathcal B_u(\mathbf x)$ denote the UAV envelope including the fuselage and rotor safety region. The continuum manipulator is approximated by a chain of capsules sampled along the PCC centerline, together with the rigid base and distal-tool envelopes:
+\begin{equation}
+\begin{aligned}
+\mathcal B_a(\mathbf x)=&\;\mathcal B_b(\mathbf x)
+\cup\mathcal B_e(\mathbf x)\\
+&\cup\bigcup_{j=0}^{N_a-1}\operatorname{Capsule}\!\left(
+{}^{W}\mathbf p_c(s_j),{}^{W}\mathbf p_c(s_{j+1}),r_a\right).
+\end{aligned}
+\label{eq:arm_envelope}
+\end{equation}
+where $r_a$ is the physical arm-envelope radius. For an occupied obstacle set $\mathcal O_t$, the minimum clearances must satisfy
+\begin{equation}
+\begin{aligned}
+ d\!\left(\mathcal B_u(\mathbf x),\mathcal O_t\right)&\ge d_{u,\min},\\
+ d\!\left(\mathcal B_a(\mathbf x),\mathcal O_t\right)&\ge d_{a,\min}.
+\end{aligned}
+\label{eq:clearance_constraints}
+\end{equation}
+% CN: 建图、状态估计和闭环跟踪误差通过额外安全裕量处理，不重复塞进物理半径。本文使用密集数值距离查询，不声称连续时间解析无碰撞证明。
+Map uncertainty, state-estimation error, and closed-loop tracking error are absorbed by additional safety margins rather than by artificially enlarging the physical arm radius twice. The proposed validator uses dense numerical distance queries; it is not claimed as an analytic continuous-time collision certificate.
+
+% CN: 形态变化也会改变组合质心。柔性段视为沿弧长均匀分布，其质心由中心线积分得到；随后和UAV、基座、工具等质量一起构成整机组合质心。
+Morphology also changes the combined center of mass (CoM). Assuming a uniform mass distribution along the flexible section, its centroid and the complete-system CoM are
+\begin{align}
+\mathbf r_a(\mathbf x)
+&=\frac{1}{L_a}\int_0^{L_a}{}^{W}\mathbf p_c(s;\mathbf x)\,\mathrm ds,
+\label{eq:arm_com}\\
+\mathbf r_{\mathrm{com}}(\mathbf x)
+&=\frac{1}{m_\Sigma}\sum_j m_j\mathbf r_j,
+\label{eq:system_com}\\
+ d_{\mathrm{com}}
+&=\left\|\mathbf P_{xy}(\mathbf r_{\mathrm{com}}-\mathbf r_u)\right\|_2.
+\label{eq:com_offset}
+\end{align}
+Here $m_\Sigma$ is the total mass, $\mathbf r_u$ is the UAV reference point, and $\mathbf P_{xy}$ projects a vector onto the horizontal plane.
+
+% CN: 本文不做完整刚柔耦合动力学优化，而在低动态、准悬停任务中使用两个可在线计算的飞行负担代理：推力比rT和倾角gamma。
+The planner does not optimize a full rigid--flexible coupled dynamics model. Instead, for the low-dynamic and quasi-hover tasks considered in this work, we use two inexpensive flight-load proxies. With
+$\mathbf a_f=\ddot{\mathbf p}_u+g\mathbf e_z$, define
+\begin{equation}
+\begin{aligned}
+ r_T&=\frac{\|\mathbf a_f\|_2}{g},\\
+ \gamma&=\operatorname{atan2}\!\left(
+ \|\mathbf P_{xy}\mathbf a_f\|_2,
+ \mathbf e_z^{\mathrm T}\mathbf a_f\right).
+\end{aligned}
+\label{eq:flight_proxy}
+\end{equation}
+% CN: rT用于筛除明显接近推力边界的轨迹，gamma描述获得该平面加速度所需的倾斜量级。它们只是快速可行性筛选量，不等同于精确真实旋翼推力预测。
+The quantity $r_T$ is used to reject trajectories approaching the prescribed thrust-load bound, whereas $\gamma$ approximates the tilt required by the planned translational acceleration. They are screening quantities for the targeted quasi-hover regime rather than high-dynamic rotor-thrust predictors.
+
+\subsection{Rolling Whole-Body Planning Problem}
+% CN: 给定当前UAV状态、第二/三节得到的连续体形态估计、环境占据图和上层全局几何参考，规划器需要在线生成一个有限时域轨迹，同时优化UAV位置、偏航、theta、phi和分段时间。
+At rolling cycle $k$, the planner receives the current UAV state, the estimated continuum morphology $\hat{\mathbf q}_{a,k}$, the environment representation $\mathcal O_t$, and a global geometric reference $\Gamma_g$. It seeks a finite-horizon trajectory of the state in \eqref{eq:planning_state}, together with its timing variables, such that the resulting whole-body motion remains feasible and can be handed off from the currently validated trajectory.
+
+% CN: 将硬约束统一写成轨迹级可行集合Fsafe，包括机体/机械臂净空、COM、飞行代理、状态/速度/加速度/Jerk、偏航及形态变化边界。后面优化器和独立验证器使用同一组硬约束，但采用不同的采样/检查机制。
+For compactness, we collect the trajectory-level hard constraints into
+\begin{equation}
+\begin{aligned}
+\mathcal F_{\mathrm{safe}}=\{(\mathbf x,\dot{\mathbf x},\ddot{\mathbf x},\dddot{\mathbf p}_u):\;&
+ d_u\ge d_{u,\min},\; d_a\ge d_{a,\min},\\
+& d_{\mathrm{com}}\le d_{\mathrm{com}}^{\max},\\
+& r_T^{\min}\le r_T\le r_T^{\max},\;
+ \gamma\le\gamma^{\max},\\
+& g_{\mathrm{kin}}(\mathbf x,\dot{\mathbf x},\ddot{\mathbf x},\dddot{\mathbf p}_u)\le0\}.
+\end{aligned}
+\label{eq:safe_set}
+\end{equation}
+where $g_{\mathrm{kin}}$ groups position, velocity, acceleration, jerk, yaw-rate, morphology-rate, and morphology-acceleration bounds.
+
+% CN: 最终问题不是只求一条“几何无碰撞路径”，而是求能在在线预算内生成、通过独立验证、并且能从现有执行缓存连续接管的时间参数化全身轨迹。第四节再具体给出B样条参数化、种子、连续细化、验证和接管算法。
+The resulting planning objective is therefore not merely to find a collision-free geometric path. The online planner must generate a time-parameterized whole-body trajectory that (i) satisfies $\mathcal F_{\mathrm{safe}}$, (ii) is computable within the rolling online budget, (iii) passes an optimizer-independent dense validation, and (iv) can be continuously handed off from the currently authorized execution trajectory. The concrete B-spline parameterization, geometry-guided initialization, local refinement, validation, and handoff mechanisms are developed in Sec.~IV.
+
+
+\section{Visual--Strain Morphology Estimation}
+% CN: 本节建立滚动全身规划所需的连续体形态反馈。整体流程分为离线监督学习和在线自适应融合两个阶段。离线阶段使用动作捕捉系统提供的独立形态标签训练四通道应变估计器；在线阶段从 ORB-SLAM3 末端视觉位姿中扣除无人机基座运动，再依据当前视觉质量和两路观测方差完成融合和时间滤波。
+This section develops the continuum-morphology feedback required by the rolling whole-body planner. The pipeline contains an offline supervised stage and an online adaptive-fusion stage. Offline, independent motion-capture labels are used to train a four-channel strain estimator. Online, UAV base motion is removed from the end-eye ORB-SLAM3 pose, and the resulting visual morphology observation is fused with the strain estimate according to their current uncertainties.
+
+\subsection{MoCap-Supervised Strain Estimation}
+% CN: 四个应变传感器沿连续体圆周近似正交布置。式子仅用于说明四通道布置与二维弯曲状态之间的物理对应，不作为最终解析反演公式。
+The four strain sensors are arranged approximately orthogonally around the continuum section. Let the mounting angle of channel $i$ be $\alpha_i=\alpha_0+(i-1)\pi/2$. Under the constant-curvature and small cross-sectional strain approximation,
+\begin{equation}
+\begin{aligned}
+s_i &= s_i^0+c_i\kappa\cos(\phi-\alpha_i)+r_i+n_i,\\
+\mathbf d &=
+\begin{bmatrix}s_1-s_3\\s_2-s_4\end{bmatrix}
+\approx \mathbf A_s\mathbf b+\boldsymbol\epsilon_s,
+\qquad \kappa=\frac{\theta}{L_a}.
+\end{aligned}
+\label{eq:strain_physics}
+\end{equation}
+Here $s_i^0$ collects the zero offset and slow drift, $r_i$ groups unmodeled hysteresis, temperature, mounting asymmetry, and structural nonlinearity, and $n_i$ denotes measurement noise. Under an ideal symmetric arrangement, $\mathbf A_s\approx c_b\mathbf I$. Equation~\eqref{eq:strain_physics} is used only to expose the physical relation between the four-channel measurements and the two-dimensional bending state; the deployed estimator is learned from independent labels rather than obtained by direct analytic inversion.
+
+% CN: 动作捕捉系统同时跟踪连续体基座和末端工具刚体，利用工具轴近似末端切向构造真实形态标签。
+During offline calibration, motion capture simultaneously tracks rigid marker sets attached to the continuum base and the distal tool. Let $\{M\}$ be the mocap frame, with measured rotations ${}^{M}\mathbf R_B$ and ${}^{M}\mathbf R_R$, and let ${}^{R}\mathbf R_E$ be the fixed rotation from the distal marker frame to the tool frame. Under the single-section dominant-bending assumption and negligible torsion, the tool axis approximates the distal tangent, giving
+\begin{equation}
+\begin{aligned}
+{}^{B}\mathbf R_E^{M}
+&=({}^{M}\mathbf R_B)^{\mathrm T}{}^{M}\mathbf R_R{}^{R}\mathbf R_E,\\
+\mathbf t^{M}&={}^B\mathbf R_E^{M}\mathbf e_z,\\
+\theta^{M}&=\operatorname{atan2}\!\left(\sqrt{(t_x^M)^2+(t_y^M)^2},t_z^M\right),\\
+\phi^{M}&=\operatorname{atan2}(t_y^M,t_x^M).
+\end{aligned}
+\label{eq:mocap_label}
+\end{equation}
+Compared with command-derived labels, these measurements include realized actuation error, structural hysteresis, and load effects. They also avoid injecting ORB-SLAM3 error into the strain branch during training.
+
+% CN: 四通道信号按采集场次做零点校正和尺度归一化，训练损失对直臂附近的phi采用衰减权重。
+At the beginning of each acquisition session, the four channels are zero-corrected and scale-normalized. A physics-guided feature vector $\mathbf u_k$ is constructed from raw increments, opposite-channel differences, tension/compression responses, and saturation flags. Because the bending-plane angle becomes poorly observable as $\theta\rightarrow0$, the training loss attenuates the circular $\phi$ error near the straight configuration:
+\begin{equation}
+\begin{aligned}
+\omega^*=\arg\min_\omega\Bigg\{&
+\sum_{k\in\mathcal D_{tr}}(f_\omega^\theta(\mathbf u_k)-\theta_k^M)^2\\
+&+\lambda_\phi\sum_{k\in\mathcal D_{tr}}w_\phi(\theta_k^M)
+\wrap^2\!\big(f_\omega^\phi(\mathbf u_k)-\phi_k^M\big)\\
+&+\lambda\|\omega\|_2^2\Bigg\}.
+\end{aligned}
+\label{eq:strain_training}
+\end{equation}
+with
+\begin{equation}
+w_\phi(\theta)=\min\!\left(1,\frac{|\theta|}{\theta_\phi}\right)^2.
+\label{eq:phi_weight}
+\end{equation}
+Training, validation, and testing are split by complete acquisition sessions rather than by randomly shuffling adjacent samples. The nominal strain-observation variances are estimated from held-out validation residuals. Channel saturation, clear out-of-distribution values, or abnormal zero offsets increase the online strain variance so that the corresponding branch is automatically down-weighted.
+
+\subsection{End-Eye Visual Morphology Observation}
+% CN: 末端D435与工具端刚性连接且镜头朝下。由于UAV本体同时运动，必须显式扣除基座运动后才能从ORB位姿构造连续体形态观测。
+The downward-looking D435 is rigidly attached to the distal tool. Because the UAV itself moves during flight, the camera orientation relative to its ORB initialization frame cannot be interpreted directly as arm bending. Let ${}^{O}\mathbf R_C$ be the camera rotation in the ORB map frame, ${}^{W}\mathbf R_U$ the UAV attitude from the flight-state estimator, ${}^{O}\mathbf R_W$ the world-to-ORB alignment rotation, and ${}^{U}\mathbf R_B$ and ${}^{C}\mathbf R_E$ the fixed arm-base and camera-tool rotations. Then
+\begin{equation}
+\begin{aligned}
+{}^{O}\mathbf R_B&={}^O\mathbf R_W{}^W\mathbf R_U{}^U\mathbf R_B,\\
+{}^B\hat{\mathbf R}_E^v&=({}^{O}\mathbf R_B)^{\mathrm T}{}^{O}\mathbf R_C{}^{C}\mathbf R_E,\\
+\mathbf t^v&={}^B\hat{\mathbf R}_E^v\mathbf e_z.
+\end{aligned}
+\label{eq:visual_rotation}
+\end{equation}
+The visual morphology observation follows as
+\begin{equation}
+\begin{aligned}
+\hat\theta^v&=\operatorname{atan2}\!\left(
+\sqrt{(t_x^v)^2+(t_y^v)^2},t_z^v\right),\\
+\hat\phi^v&=\operatorname{atan2}(t_y^v,t_x^v).
+\end{aligned}
+\label{eq:visual_morphology}
+\end{equation}
+Thus the visual branch observes the tool orientation relative to the continuum base rather than the UAV attitude itself. If ORB-SLAM3 resets or relocalizes and thereby redefines its map frame, ${}^{O}\mathbf R_W$ is re-estimated and the visual information is set to zero until alignment is restored.
+
+% CN: ORB-SLAM3没有单一可直接解释为融合概率的置信度，因此根据跟踪状态、内点数、重投影误差和观测时效构造视觉质量，并映射成theta和phi的时变方差。
+ORB-SLAM3 does not provide a single confidence value that can be used directly as a fusion probability. We therefore construct a normalized quality score from the tracking state $\delta_k^{\mathrm{track}}$, inlier count $N_{in,k}$, reprojection error $e_{rep,k}$, and observation age $a_k^v$:
+\begin{equation}
+\begin{aligned}
+c_k^v=\delta_k^{\mathrm{track}}\Bigg[&
+\operatorname{clip}\!\left(\frac{N_{in,k}-N_{\min}}
+{N_{\mathrm{ref}}-N_{\min}},0,1\right)\\
+&\cdot\exp\!\left(-\frac{e_{rep,k}^2}{\sigma_e^2}\right)
+\exp\!\left(-\frac{a_k^v}{\tau_a}\right)\Bigg]^{1/3}.
+\end{aligned}
+\label{eq:visual_quality}
+\end{equation}
+For $q\in\{\theta,\phi\}$, the quality is mapped to information as
+\begin{equation}
+(\sigma_{v,k,q}^{2})^{-1}=
+\begin{cases}
+(c_k^v)^{\gamma_q}/\sigma_{v,0,q}^{2},&\delta_k^{\mathrm{track}}=1,\\
+0,&\delta_k^{\mathrm{track}}=0\ \text{or stale}.
+\end{cases}
+\label{eq:visual_variance}
+\end{equation}
+This construction produces a continuous decay of visual information as image quality degrades, rather than relying on a hard LOST/not-LOST switch alone.
+
+\subsection{Uncertainty-Aware Fusion and Temporal Filtering}
+% CN: theta为非周期变量，采用逆方差线性融合；phi为周期变量，采用圆周加权平均。
+The current implementation performs uncertainty-aware fusion directly in the angular domain. For the non-periodic bending angle, inverse-variance linear fusion is used. For the periodic bending-plane angle, the same information weights are applied on the unit circle:
+\begin{equation}
+\begin{aligned}
+w_{v,k}^{q}&=\frac{1/\sigma_{v,k,q}^{2}}
+{1/\sigma_{v,k,q}^{2}+1/\sigma_{s,k,q}^{2}},
+\qquad w_{s,k}^{q}=1-w_{v,k}^{q},\\
+\tilde\theta_k&=w_{v,k}^{\theta}\hat\theta_k^v
++w_{s,k}^{\theta}\hat\theta_k^s.
+\end{aligned}
+\label{eq:fusion_theta}
+\end{equation}
+\begin{equation}
+\tilde\phi_k=\operatorname{atan2}\!\left(
+\begin{array}{l}
+w_{v,k}^{\phi}\sin\hat\phi_k^v+w_{s,k}^{\phi}\sin\hat\phi_k^s,\\
+w_{v,k}^{\phi}\cos\hat\phi_k^v+w_{s,k}^{\phi}\cos\hat\phi_k^s
+\end{array}\right).
+\label{eq:fusion_phi}
+\end{equation}
+Consequently, normal visual tracking places more weight on ORB observations; exposure degradation, occlusion, or tracking failure increases the visual variance and gradually transfers authority to the strain branch. Complete visual failure naturally reduces the measurement fusion to strain-only operation.
+
+% CN: 融合结果进入自适应状态滤波，作用是抑制异步采样、单帧异常和视觉恢复瞬间波动，而不是重新学习应变到形态的映射。
+To suppress asynchronous sampling, isolated outliers, and transients when visual tracking recovers, the fused angles are passed to an adaptive state filter. Define $\mathbf z_k=[\theta_k,\phi_k,\dot\theta_k,\dot\phi_k]^{\mathrm T}$ and use a constant-velocity prediction,
+\begin{equation}
+\mathbf z_k^-=
+\begin{bmatrix}
+\mathbf I_2&\Delta t_k\mathbf I_2\\
+\mathbf 0&\mathbf I_2
+\end{bmatrix}\mathbf z_{k-1}^+ +\mathbf w_k,
+\label{eq:filter_predict}
+\end{equation}
+with circular innovation
+\begin{equation}
+\boldsymbol\nu_k=
+\begin{bmatrix}
+\tilde\theta_k-\theta_k^-\\
+\wrap(\tilde\phi_k-\phi_k^-)
+\end{bmatrix},
+\qquad
+\mathbf z_k^+=\mathbf z_k^-+\mathbf K_k\boldsymbol\nu_k.
+\label{eq:filter_update}
+\end{equation}
+The measurement covariance is updated from the current fused uncertainty. The filter provides temporal consistency and short-term propagation; it does not relearn the strain-to-morphology relation. Its output $\hat{\mathbf q}_{a,k}=[\hat\theta_k,\hat\phi_k]^{\mathrm T}$ is passed directly to the whole-body planner, while $\hat{\mathbf b}_k$ from \eqref{eq:morphology_state} is used whenever a nonsingular morphology difference is required.
+
+\section{Morphology-Aware Rolling Whole-Body Planning}
+\subsection{Framework Overview}
+% CN: 规划器在每个滚动窗口中使用当前UAV状态、融合形态估计、环境占据和上一条已验证轨迹，依次执行局部参考裁剪、几何引导种子、B样条连续细化、独立密集验证以及连续性感知接管。
+At each rolling cycle, the planner combines the current UAV state, fused morphology estimate, obstacle representation, global geometric reference, and the previously validated execution trajectory. The processing chain is: local-horizon extraction, geometry-guided seed generation, time-parameterized B-spline refinement, optimizer-independent dense validation, and continuity-aware handoff. Importantly, candidate generation and execution authorization are separated: a newly optimized trajectory is never issued before it has passed the independent validator and handoff logic.
+
+\subsection{Rolling B-Spline Whole-Body Optimization}
+% CN: 若已有上一条已验证轨迹，则根据当前执行相位和规划延迟预测实际接管边界；否则使用最新估计状态。随后在全局参考上定位当前进度并裁剪局部窗口。
+Let the global geometric reference be $\Gamma_g=\{\mathbf p^r(\ell),\psi^r(\ell)\}$. If a validated execution trajectory $\mathcal T_k^{\mathrm{val}}$ exists, its current phase $\tau_k$, phase rate $\alpha_k$, and the estimated planning latency $t_p$ are used to predict the state at the next possible handoff. Otherwise, the latest measured state is used:
+\begin{equation}
+\begin{aligned}
+\tau_k^p&=\operatorname{clip}(\tau_k+t_p\alpha_k,0,T_k^{\mathrm{val}}),\\
+\bar{\mathbf x}_k&=
+\begin{cases}
+\mathcal T_k^{\mathrm{val}}(\tau_k^p),&\text{validated buffer available},\\
+\hat{\mathbf x}_k,&\text{otherwise},
+\end{cases}\\
+\ell_k^*&=\arg\min_\ell\|\bar{\mathbf p}_{u,k}-\mathbf p^r(\ell)\|_2^2,\\
+\Gamma_k^h&=\operatorname{Crop}(\Gamma_g,\ell_k^*,\ell_k^*+L_h).
+\end{aligned}
+\label{eq:rolling_crop}
+\end{equation}
+The global reference specifies geometric topology and forward progression but is not executed directly. A monotonic progress mapping relates its arc-length coordinate to the local time parameter.
+
+% CN: 局部全身轨迹采用首端夹持三次非均匀B样条，同时优化控制状态和分段持续时间。
+The local whole-body trajectory is represented by a start-clamped cubic nonuniform B-spline. Let $\Delta=[\Delta t_0,\ldots,\Delta t_{N_s-1}]$ and $t_j=\sum_{r=0}^{j-1}\Delta t_r$. The knot vector is
+\begin{equation}
+\mathcal K=[0,0,0,0,t_1,\ldots,t_{N_s-1},T_g,T_g,T_g,T_g],
+\quad T_g=\sum_j\Delta t_j.
+\label{eq:knot_vector}
+\end{equation}
+The state trajectory is
+\begin{equation}
+\mathbf x_g(\sigma;\mathbf C,\Delta)=
+\sum_{i=0}^{N_c-1}N_{i,3}(\sigma;\mathcal K)\mathbf c_i,
+\label{eq:bspline_traj}
+\end{equation}
+with start conditions $\mathbf x_g(0)=\bar{\mathbf x}_k$ and $\dot{\mathbf x}_g(0)=\dot{\bar{\mathbf x}}_k$. The normal rolling cycle does not reset velocity to zero; start/stop handling is reserved for the beginning and end of the entire task.
+
+% CN: 优化目标同时考虑参考跟踪、平滑、净空排序、组合质心、总时间、时间跨度平滑和末端目标。硬约束统一来自Fsafe。
+The joint optimization is
+\begin{equation}
+\begin{aligned}
+\min_{\mathbf C,\Delta}\;J={}&w_{tr}J_{tr}+w_{sm}J_{sm}+w_{cl}J_{cl}
++w_{cp}J_{cp}\\
+&+w_TT_g+w_\Delta J_\Delta+w_eJ_e,
+\end{aligned}
+\label{eq:joint_objective}
+\end{equation}
+subject to $(\mathbf x,\dot{\mathbf x},\ddot{\mathbf x},\dddot{\mathbf p}_u)\in\mathcal F_{\mathrm{safe}}$ throughout $[0,T_g]$. Here $J_{tr}$ tracks the local geometric reference, $J_{sm}$ penalizes UAV jerk and excessively rapid morphology change, $J_{cl}$ supplies a smooth clearance-ranking signal outside the hard threshold, $J_{cp}$ discourages large CoM offset, $T_g$ prevents arbitrarily slow trajectories, $J_\Delta$ regularizes adjacent span durations, and $J_e$ is activated only when a manipulation target lies in the current window. The main soft feasibility terms are
+\begin{equation}
+\begin{aligned}
+J_{cl}&=\frac{1}{T_g}\int_0^{T_g}
+\left([d_{u,s}-d_u]_+^2+[d_{a,s}-d_a]_+^2\right)\mathrm dt,\\
+J_{cp}&=\frac{1}{T_g}\int_0^{T_g}
+\left(\frac{d_{\mathrm{com}}}{d_{\mathrm{com}}^{\max}}\right)^2\mathrm dt.
+\end{aligned}
+\label{eq:soft_terms}
+\end{equation}
+These terms rank candidates but do not certify safety; execution authorization is based on the independent validation described below.
+
+\subsection{Geometry-Guided Initialization and Local Refinement}
+% CN: 从单一直臂初值直接优化容易落入错误通道或错误弯曲方向，因此先在稀疏参考节点识别风险区间，并只在风险附近扩展局部位移和形态候选。
+Because the objective contains nonconvex obstacle distances, periodic angles, and continuum forward kinematics, optimizing directly from a single straight-arm initialization is prone to selecting an incorrect passage or bending direction. We first identify sparse reference nodes whose UAV/arm clearance or CoM margin is small, and expand local UAV displacements and morphology candidates only in these risk intervals. For a risk node $i$, a generic candidate set is
+\begin{equation}
+\mathcal C_i=
+\left\{(\mathbf p_i^r+\delta\mathbf p_m,\psi_i^r,\theta_n,\phi_l)\right\}.
+\label{eq:candidate_set}
+\end{equation}
+To avoid unnecessary bending-plane exploration, the current $\phi$ is preserved first. Multiple bending-plane candidates are opened only when the fixed-plane set cannot form a continuous feasible sequence or when the corresponding continuous trajectory is later rejected by validation.
+
+% CN: 候选序列通过束搜索连接，节点代价衡量参考偏离、净空和形态代价，边代价检查相邻变化和插值碰撞。
+Candidate sequences are connected by a beam-width-limited dynamic search. Let $J_i^{\mathrm{node}}$ measure reference deviation, clearance, and morphology cost, and let $J_i^{\mathrm{edge}}$ check geometric changes and interpolated collision between adjacent candidates. The cumulative score satisfies
+\begin{equation}
+D_i(c)=J_i^{\mathrm{node}}(c)+
+\min_{c'\in\mathcal B_{i-1}}
+\left[D_{i-1}(c')+J_i^{\mathrm{edge}}(c',c)\right].
+\label{eq:beam_search}
+\end{equation}
+Only a finite set of low-cost and morphology-diverse states is retained at each layer. Backtracking yields a topology-consistent geometric seed $\mathbf C^0$; span times $\Delta^0$ are initialized from path length and state-rate requirements. The seed selects a local feasible neighborhood but is never treated as an executable trajectory by itself.
+
+% CN: 为在在线预算内同时调整轨迹和时间，连续细化使用低维局部基变形，并显式保持首端一阶边界。
+To reduce the online decision dimension, continuous refinement uses a low-dimensional local basis around the geometric seed,
+\begin{equation}
+\begin{aligned}
+\mathbf C&=\mathbf C^0+\mathbf B\boldsymbol\Xi,\\
+\mathbf c_0&=\bar{\mathbf x}_k,\\
+\mathbf c_1&=\mathbf c_0+\frac{\Delta t_0}{3}\dot{\bar{\mathbf x}}_k,\\
+\mathbf z&=[\operatorname{vec}(\boldsymbol\Xi)^{\mathrm T},\Delta^{\mathrm T}]^{\mathrm T}.
+\end{aligned}
+\label{eq:local_basis}
+\end{equation}
+The degrees of freedom associated with the start boundary are frozen; whenever $\Delta t_0$ changes, $\mathbf c_1$ is reconstructed so that timing optimization does not violate the first-order handoff boundary.
+
+% CN: 碰撞距离对占据栅格和最近障碍切换通常不可导，因此使用投影坐标模式搜索，并通过罚函数给不可行候选排序；最终可执行性仍由独立验证决定。
+Obstacle distances on occupancy maps are generally nonsmooth because the nearest obstacle can change. We therefore use a projected coordinate pattern search,
+\begin{equation}
+\mathbf z_{j,\pm}^{(r)}=
+\Pi_{\mathcal Z}\!\left(\mathbf z^{(r)}\pm\rho_j^{(r)}\mathbf e_j\right),
+\label{eq:pattern_search}
+\end{equation}
+with temporary ranking function
+\begin{equation}
+\tilde J(\mathbf z)=J(\mathbf z)+
+\mu\sum_m[-s_m(\mathbf z)]_+^2,
+\label{eq:penalty_search}
+\end{equation}
+where $s_m(\mathbf z)\ge0$ denotes the safety margin of hard constraint $m$. The penalty is used only for search ordering; every candidate must still pass the independent validator before it can enter the execution buffer.
+
+\subsection{Independent Validation and Continuity-Aware Handoff}
+% CN: 优化配点不能同时充当最终安全结论，求解器之外对整条连续轨迹重新采样，并根据时间、平移、偏航和形态变化自适应细分。
+Optimization collocation points are not reused as the final safety certificate. The complete spline is regenerated outside the optimizer and adaptively subdivided. For adjacent samples $i$ and $i+1$, the number of subdivisions is
+\begin{equation}
+\begin{aligned}
+n_i=\Bigg\lceil\max\Bigg\{&
+ \frac{\Delta t_i}{\delta_t},
+ \frac{\|\Delta\mathbf p_i\|_2}{\delta_p},
+ \frac{|\wrap(\Delta\psi_i)|}{\delta_\psi},\\[-1mm]
+&\frac{|\Delta\theta_i|}{\delta_\theta},
+ \frac{|\wrap(\Delta\phi_i)|}{\delta_\phi}
+\Bigg\}\Bigg\rceil.
+\end{aligned}
+\label{eq:dense_validation}
+\end{equation}
+All added samples are re-evaluated using the whole-body geometry, CoM/flight proxies, and the hard constraints in $\mathcal F_{\mathrm{safe}}$. In the final implementation, recursive midpoint checking can additionally be used whenever the midpoint deviates excessively from endpoint interpolation or the local clearance changes rapidly. This reduces the risk of missing an interior spline extremum. A candidate becomes handoff-eligible only after the full validation succeeds.
+
+% CN: 接管比较使用无奇异弯曲向量，并在候选有限前向相位区间中寻找与当前已验证命令最匹配的接管相位。
+Feasibility of the new trajectory does not imply feasibility of switching to it. We therefore compare handoff states using the nonsingular vector $\mathbf q_h=[\mathbf p_u^{\mathrm T},\psi,\mathbf b^{\mathrm T}]^{\mathrm T}$. Over a finite forward candidate phase interval $\mathcal I_s$, a normalized mismatch vector $\mathbf e_h(\tau)$ combines position, yaw, bending-vector, linear-velocity, yaw-rate, and morphology-rate differences. The preferred phase is
+\begin{equation}
+\tau_s^*=\arg\min_{\tau\in\mathcal I_s}\|\mathbf e_h(\tau)\|_\infty.
+\label{eq:phase_match}
+\end{equation}
+The normalization scales are used only for phase ranking. Execution still requires an independent hard gate,
+\begin{equation}
+\operatorname{Gate}(\tau_s^*)=1
+\iff
+\begin{bmatrix}
+\|\Delta\mathbf p\|_2\\|\Delta\psi|\\\|\Delta\mathbf b\|_2\\
+\|\Delta\mathbf v\|_2\\|\Delta\dot\psi|\\\|\Delta\dot{\mathbf b}\|_2
+\end{bmatrix}
+\preceq
+\begin{bmatrix}
+\varepsilon_p\\\varepsilon_\psi\\\varepsilon_b\\
+\varepsilon_v\\\varepsilon_{\dot\psi}\\\varepsilon_{\dot b}
+\end{bmatrix}.
+\label{eq:handoff_gate}
+\end{equation}
+
+% CN: 若直接门控失败但候选本身可行，则构造有限时长五次桥接，匹配两端位置、速度和加速度；桥接必须再次通过完整验证。
+If the candidate is valid but the direct gate fails, a finite-duration quintic bridge is generated between the current validated command boundary and the selected candidate phase,
+\begin{equation}
+\mathbf h(t)=\sum_{r=0}^{5}\mathbf a_rt^r,
+\qquad t\in[0,T_{br}],
+\label{eq:quintic_bridge}
+\end{equation}
+with position, velocity, and acceleration matched at both ends. Boundary derivatives are taken from the currently issued validated command and the candidate command, rather than from noisy finite differences of raw measurements. The bridge guarantees derivative matching at the command layer but is not interpreted as a strict continuous-time $C^2$ proof for the complete physical UAV-flexible-arm closed loop. The generated bridge must pass the same independent validation as an ordinary candidate.
+
+% CN: 候选未获授权时继续执行旧的已验证轨迹，形成“旧轨迹持续执行—新候选后台生成—验证—接管—更新缓存”的闭环。
+For compactness, let $V_c=\operatorname{Valid}(\mathcal T_{k+1}^{\mathrm{cand}})$, $V_b=\operatorname{Valid}(\mathcal B_{br})$, and $G=\operatorname{Gate}(\tau_s^*)$. The validated execution cache is updated only after these checks:
+\begin{equation}
+\mathcal T_{k+1}^{\mathrm{val}}=
+\begin{cases}
+\mathcal T_{k+1}^{\mathrm{cand}}[\tau_s^*:T],&V_c\land G,\\
+\mathcal B_{br}\oplus\mathcal T_{k+1}^{\mathrm{cand}}[\tau_s^*:T],
+&V_c\land\neg G\land V_b,\\
+\mathcal T_k^{\mathrm{val}},&\text{otherwise}.
+\end{cases}
+\label{eq:validated_cache}
+\end{equation}
+During planning and validation, execution continues on the previous validated buffer. Hence the remaining authorized duration must satisfy
+\begin{equation}
+T_{\mathrm{val,remain}}>
+T_{\mathrm{plan}}+T_{\mathrm{validate}}+T_{\mathrm{switch}}+T_{\mathrm{margin}}.
+\label{eq:buffer_margin}
+\end{equation}
+If a new candidate is not authorized within this margin, the old trajectory remains active and the executor can enter a constrained deceleration or hold mode when needed.
+
+\section{Experimental Evaluation}
+\subsection{Experimental Setup and Statistical Protocol}
+% CN: 感知实验使用同步采集的四通道应变、动作捕捉、末端D435和ORB-SLAM3状态；规划实验在PX4/Gazebo闭环平台上进行。训练、验证和测试按完整采集场次划分。
+The evaluation contains separate morphology-estimation and rolling whole-body planning studies. The perception dataset synchronizes four-channel strain, motion capture, the distal D435 stream, and ORB-SLAM3 status. Acquisition sessions, rather than adjacent samples, are used as the train/validation/test split unit. The planning study is conducted in a PX4/Gazebo closed-loop environment with the same planner-to-controller execution chain used throughout all methods.
+
+% CN: 规划包含Passage-Sweep、Multi-Passage、Clutter-Reach三类场景，每类Easy/Medium/Hard，共90个配对场景。五种方法在相同场景上运行。
+The planner is evaluated on 90 paired scenarios drawn from three families: Passage-Sweep, Multi-Passage, and Clutter-Reach, each divided into Easy, Medium, and Hard conditions. Five methods are compared on the same scenario set: Fixed, AET-Seq., WB-RRT*, Global-WB, and the proposed Rolling-WB-V2.1. All methods use the same map, hard constraints, safety thresholds, terminal tolerances, low-level controller, and planning budget. For stochastic baselines, the final submission should explicitly report the fixed/repeated seed protocol; the present paired statistics correspond to the frozen experimental records supplied with this draft.
+
+% CN: 成功率用Wilson 95%区间和exact McNemar，连续指标只在五方法共同成功54场景上做配对推断，避免幸存者偏差。
+Task success is reported with Wilson 95\% confidence intervals and exact paired McNemar tests. Descriptive continuous metrics in the main comparison table use each method's own successful trials, whereas inferential continuous comparisons are restricted to the 54 scenarios completed by all five methods. Paired bootstrap median differences, Holm-corrected Wilcoxon signed-rank tests, and rank-biserial effect sizes are used there to reduce survivor-set bias.
+
+\subsection{Morphology Estimation Robustness Under Visual Degradation}
+% CN: 当前退化实验使用真实记录的ORB和应变测量并人为施加视觉退化，参考轨迹是构造参考，因此用于验证权重转移机制而不是绝对精度。
+The staged-degradation experiments use recorded ORB and strain measurements with controlled visual degradation injected offline. Their evaluation references are constructed from command-derived or normal-ORB-fitted trajectories; they are therefore used to test the fusion mechanism under degradation rather than to claim independent absolute ground-truth accuracy.
+
+For $\theta$, the adaptive fusion attains RMSE values of 1.29$^\circ$, 2.12$^\circ$, and 2.64$^\circ$ in normal vision, exposure degradation, and complete occlusion, respectively. During the emphasized exposure-degradation interval, the mean weights are approximately 0.126 for ORB and 0.874 for strain. After complete occlusion, the ORB-only RMSE rises to approximately 49.3$^\circ$, while the fused output remains at the strain-only error scale. For $\phi$, the corresponding circular RMSE values are 1.27$^\circ$, 2.50$^\circ$, and 3.60$^\circ$; during injected degradation, the mean weights are approximately 0.039 for ORB and 0.961 for strain, and the failed ORB branch reaches a circular RMSE of approximately 96.8$^\circ$.
+
+These results support the intended behavior--visual quality decreases, visual information is reduced, the strain branch gradually assumes greater weight, and complete visual failure degrades gracefully to strain-only operation. They do not replace an independent motion-capture frozen-test evaluation of absolute morphology accuracy. The latter remains a required final experiment for the submission version.
+
+\subsection{Whole-Body Planning Success and Computation}
+% CN: 主结果表记录90个配对场景上的成功率、任务时间、规划P95、deadline miss、净空、跟踪、Jerk和末端误差。
+\begin{table*}[t]
+\centering
+\caption{Closed-loop comparison over 90 paired scenarios (450 trials). Continuous metrics are reported on each method's own successful trials.}
+\label{tab:main_results}
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{lcccccccc}
+\toprule
+Method & Success (95\% CI) & Task med. & Plan P95 & Deadline & Body/Arm P05 & Track RMSE & Jerk/m & Tip \\
+ &  & (s) & (s) & miss (\%) & (m) & (m) &  & (m) \\
+\midrule
+Fixed & 61.1 [50.8,70.5] & 130.72 & 2.94 & 0.00 & 0.2324/0.1490 & 0.0214 & 0.0867 & 0.0176 \\
+AET-Seq. & 67.8 [57.6,76.5] & 98.06 & 10.44 & 0.00 & 0.2295/0.1436 & 0.0285 & 0.2734 & 0.0140 \\
+WB-RRT* & 75.6 [65.8,83.3] & 168.55 & 13.02 & 0.00 & 0.1793/0.1390 & 0.0195 & 0.0619 & 0.0155 \\
+Global-WB & 65.6 [55.3,74.6] & 99.68 & 10.39 & 2.25 & 0.2286/0.1434 & 0.0270 & 0.2574 & 0.0144 \\
+\textbf{Rolling-WB-V2.1} & \textbf{98.9 [94.0,99.8]} & 103.62 & \textbf{3.70} & \textbf{0.00} & 0.1827/0.1442 & 0.0240 & 0.1263 & \textbf{0.0129} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Rolling-WB-V2.1 completes 89 of 90 tasks, yielding a success rate of 98.9\% [94.0\%, 99.8\%]. The strongest baseline, WB-RRT*, completes 68 of 90 tasks, or 75.6\% [65.8\%, 83.3\%], corresponding to an absolute improvement of 23.3 percentage points. The difference is largest in the Hard subset, where the proposed method reaches 96.7\% while the strongest baseline reaches 40.0\%. By scenario family, the proposed method attains 100\% in Passage-Sweep and Multi-Passage and 96.7\% in Clutter-Reach. The single failure is retained as a no-path/gate failure rather than excluded from the statistics.
+
+\begin{table}[t]
+\centering
+\caption{Exact paired McNemar tests for task success.}
+\label{tab:mcnemar}
+\begin{tabular}{lrrc}
+\toprule
+Baseline & Ours only & Baseline only & $p$ \\
+\midrule
+Fixed & 34 & 0 & $1.16\times10^{-10}$ \\
+AET-Seq. & 28 & 0 & $7.45\times10^{-9}$ \\
+WB-RRT* & 21 & 0 & $9.54\times10^{-7}$ \\
+Global-WB & 30 & 0 & $1.86\times10^{-9}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+Exact McNemar tests confirm that the success-rate advantage is paired within the same scenario set. Against Fixed, AET-Seq., WB-RRT*, and Global-WB, the counts for ``ours succeeds/baseline fails'' are 34, 28, 21, and 30, respectively, with no reverse pairs. The resulting exact $p$ values are all below $10^{-6}$.
+
+The proposed method is not the fastest in every comparison. Its planning-time P95 is 3.70~s, longer than Fixed but substantially below AET-Seq., WB-RRT*, and Global-WB. No planning deadline miss is observed for Rolling-WB-V2.1, whereas Global-WB records a 2.25\% miss rate.
+
+\subsection{Execution Quality on Common Successful Scenarios}
+% CN: 连续指标的统计推断只在五种方法共同成功的54个场景上进行。
+To avoid comparing different survivor sets, continuous-performance inference is restricted to the 54 scenarios completed by all five methods. Relative to Fixed, the proposed planner increases median planning time by approximately 0.99~s; relative to AET-Seq., WB-RRT*, and Global-WB, it reduces median planning time by approximately 2.42~s, 6.49~s, and 3.64~s, respectively, with the latter differences remaining significant after Holm correction.
+
+The body clearance of Rolling-WB-V2.1 is systematically smaller than that of the baselines, with paired median differences of roughly 5.4--6.2~cm. This should not be interpreted as being ``safer''; instead, the method uses more of the narrow feasible space while all issued trajectories remain above the same hard acceptance threshold. Arm-clearance differences are smaller and not consistently significant after correction. Tracking RMSE and jerk exhibit a similar tradeoff: the proposed method is worse than Fixed and WB-RRT* on these two measures but better than AET-Seq. and Global-WB. The claimed advantage is therefore a joint improvement in difficult-scenario feasibility, online computability, feasible-space utilization, and tip accuracy, rather than dominance of every continuous quality metric.
+
+\subsection{Representative Rolling Execution and Morphology Necessity}
+% CN: 代表性Multi-Passage任务通过直臂反事实说明主动形态调节的必要性。
+A representative Multi-Passage execution is used to explain why active morphology is functionally necessary rather than merely an aesthetic trajectory variation. At three critical passages, the straight-arm counterfactual yields arm safety margins of approximately -4.7~cm, -3.3~cm, and -4.8~cm. Raising the UAV alone cannot satisfy the upper and lower spatial constraints simultaneously. Active bending is therefore required to recover whole-body geometric feasibility in this example. This counterfactual provides mechanism-level interpretation for the case study but does not replace the 90-scenario statistics.
+
+In the representative closed-loop run, the post-hoc minimum swept-body clearances for both the UAV and arm remain at 0.189~m, above their corresponding acceptance thresholds. Tracking error and CoM offset remain within their prescribed bounds. Each rolling window is planned and validated before the remaining authorized execution buffer is exhausted, consistent with \eqref{eq:buffer_margin}.
+
+\subsection{Handoff Continuity}
+% CN: 391次接管中339次直接门控通过，52次通过重新验证的五次桥接完成。
+Across the formal planning experiments, 391 rolling handoffs are observed: 339 satisfy the direct handoff gate and 52 require a revalidated quintic bridge. The mechanism most strongly reduces morphology discontinuity. The P95 bending-vector mismatch between raw candidates is 22.7983$^\circ$, whereas the P95 step between adjacent 50-ms issued commands is 1.2358$^\circ$. Position P95 decreases from 0.0549~m to 0.0306~m, and linear-acceleration P95 decreases from 0.0392~m/s$^2$ to 0.0249~m/s$^2$.
+
+\begin{table*}[t]
+\centering
+\caption{Command-continuity evidence over 391 rolling handoffs. Candidate gaps are evaluated before an optional derivative-matched bridge; issued-command steps are adjacent 50-ms closed-loop simulated commands and are not an analytic proof of strict physical-system $C^2$ continuity.}
+\label{tab:handoff_continuity}
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{llrrr|rrr}
+\toprule
+Metric & Unit & \multicolumn{3}{c|}{Pre-bridge candidate gap} & \multicolumn{3}{c}{Issued-command step} \\
+ & & Median & P95 & Max & Median & P95 & Max \\
+\midrule
+Position & m & 0.0156 & 0.0549 & 0.1276 & 0.0072 & 0.0306 & 0.0556 \\
+Yaw & deg & 0.0039 & 0.0969 & 3.7154 & 0.0014 & 0.0614 & 2.9191 \\
+Bending vector & deg & 0.3243 & 22.7983 & 30.9777 & 0.0423 & 1.2358 & 5.1915 \\
+Linear velocity & m/s & 0.0077 & 0.0193 & 0.0320 & 0.0039 & 0.0147 & 0.0413 \\
+Linear acceleration & m/s$^2$ & 0.0195 & 0.0392 & 0.0871 & 0.0064 & 0.0249 & 0.0652 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+A separate 15-scenario paired ablation compares position-only handoff with the continuity-aware scheme. Both variants complete 15/15 tasks, but continuity-aware handoff reduces median translational jerk per unit path length from 0.3985 to 0.1022, a 72.8\% decrease, with improvement in all 15 paired scenarios. This result directly supports the explicit phase matching, hard gate, and optional bridge: smooth local B-splines do not automatically guarantee smooth rolling-window transitions.
+
+\subsection{Flight-Feasibility Proxy and PX4 Response}
+% CN: 倾角代理与PX4目标/实际倾角对应较好，推力比代理只用于说明轨迹远离推力边界，不用于高动态精确推力预测。
+The tilt proxy exhibits a close correspondence with the PX4 target and realized attitude in three representative task families. The maximum realized tilt ranges from approximately 1.655$^\circ$ to 2.345$^\circ$, far below the 15$^\circ$ planning limit. The RMSE between realized and PX4 target tilt is 0.061$^\circ$--0.107$^\circ$, and their correlation coefficient ranges from 0.909 to 0.967. These values support the use of $\gamma$ as a low-dynamic flight-load screening metric for the quasi-hover tasks considered here.
+
+The thrust-ratio proxy requires a more limited interpretation. Across the representative tasks, $r_T^{\max}$ is only 1.0026--1.0058, indicating motion close to hover. The RMSE between the planning proxy and low-pass IMU specific-force/$g$ is approximately 0.0010--0.0011, but their temporal correlation is weak (-0.079 to 0.167). Moreover, IMU specific force is not a direct measurement of total rotor thrust. The present results therefore support only the conclusion that the planned motions remain far from the thrust boundary and impose low collective load; they do not validate high-dynamic thrust prediction.
+
+\subsection{Ablation Requirements for Final Submission}
+% CN: 当前已完成接管消融；种子和phi搜索消融仍需补充，不能虚构结果。
+The completed handoff ablation isolates the contribution of the continuity-aware switching module. Two further planner-level ablations are required before final submission but are not fabricated in this draft: (i) Full versus w/o Geometry-Guided Seed, to quantify the contribution of topology-aware initialization to Hard-scenario success and planning time; and (ii) Adaptive-$\phi$ versus Fixed-$\phi$, to test whether bending-plane search is necessary in scenarios requiring lateral morphology reconstruction. These experiments should be inserted here once frozen results are available.
+
+\section{Discussion}
+\subsection{Perception Scope and Remaining Accuracy Validation}
+% CN: 形态估计建立在单段主弯曲、无显著扭转、工具轴近似末端切向的假设上；theta趋零时phi物理可观测性下降。
+The morphology representation assumes a single dominant-bending section, negligible torsion, and a tool axis that approximates the distal tangent. These assumptions are appropriate for the single-section, two-coordinate continuum arm used here, where $(\theta,\phi)$ directly parameterize the commanded morphology. Significant axial twist, multi-section coupled bending, or nonuniform cross-sectional deformation would require an expanded state and a different mocap-label model. Near $\theta=0$, the physical influence and observability of $\phi$ vanish; this motivates the amplitude-weighted training loss and the use of $\mathbf b$ in handoff comparisons.
+
+The current staged-degradation experiments validate graceful weight transfer under controlled visual failure, but their constructed references do not establish independent absolute morphology accuracy. A frozen mocap test set remains necessary to report analytical-strain, learned-strain, ORB-only, static-mixture, and adaptive-fusion errors using $\theta$ RMSE/MAE/P95 and circular $\phi$ RMSE/MAE/P95.
+
+\subsection{Planning and Safety Claim Boundaries}
+% CN: 规划层只显式优化UAV位置和偏航，roll/pitch由底层飞控稳定，因此不是完整六自由度刚柔耦合动力学优化。
+The planner explicitly optimizes UAV position and yaw while relying on the low-level controller to stabilize roll and pitch. This model is appropriate for the low-dynamic, quasi-hover passage tasks studied here, but it is not equivalent to full six-degree-of-freedom rigid--flexible coupled dynamics optimization. Likewise, $r_T$ and $\gamma$ are computational proxies used to reject clearly high-load motions. The tilt proxy is supported by the present PX4 data, whereas the thrust proxy remains far from its bound and is not validated for high-dynamic flight.
+
+The collision validator uses occupancy-distance queries with dense numerical subdivision and safety margins; it is an engineering validation procedure rather than an analytic continuous-time collision proof. Similarly, the quintic bridge matches position, velocity, and acceleration at the command boundaries. The 50-ms command statistics support reduced discrete handoff discontinuity, but they should not be expanded into a claim of strict physical-system $C^2$ continuity including PX4 and flexible dynamics.
+
+\subsection{Performance Tradeoffs}
+% CN: 方法优势是困难非凸场景的全身可行率和在线可计算性，不是所有连续指标都最优。
+The proposed method does not dominate every continuous metric. Its main advantage is the substantially higher whole-body task success in difficult nonconvex scenarios while retaining online computability and bounded execution authorization. This comes with more aggressive use of the feasible corridor, producing smaller body clearance than several baselines, and with tracking RMSE and jerk that are not universally minimal. Because every issued trajectory must pass the same hard constraints and independent validation, the smaller clearance is better interpreted as feasible-space utilization rather than a monotonic change in safety.
+
+\section{Conclusion}
+% CN: 本文提出从视觉--应变形态估计到滚动全身规划的闭环框架，并在90个配对场景和391次接管中验证。
+This paper presented a closed-loop framework that turns continuum morphology into an explicitly sensed and planned degree of freedom for aerial manipulation in confined spaces. The perception module trains a four-channel strain estimator from independent motion-capture labels, converts base-motion-compensated ORB-SLAM3 observations into visual morphology measurements, and performs uncertainty-aware angular fusion followed by adaptive temporal filtering. The planning module jointly parameterizes UAV position, yaw, continuum morphology, and segment timing in a rolling nonuniform B-spline, using geometry-guided initialization, limited-budget refinement, optimizer-independent dense validation, and continuity-aware handoff with an optional quintic bridge.
+
+In 90 paired PX4/Gazebo closed-loop scenarios, the proposed method completes 89 tasks for a 98.9\% success rate, improving by 23.3 percentage points over the strongest baseline. The Hard-scenario success rate reaches 96.7\%, planning-time P95 is 3.70~s, and no planning deadline miss is observed. Across 391 rolling handoffs, explicit phase matching, gating, and derivative-matched bridging markedly reduce candidate-to-command discontinuities; a separate paired ablation reduces median translational jerk per unit path length by 72.8\%. The current results indicate that continuum morphology becomes practically useful for confined-space aerial manipulation only when it can be estimated reliably, incorporated into the whole-body geometry, jointly optimized within an online budget, independently validated, and handed off continuously between rolling windows.
+
+The remaining work before final submission is to add an independent mocap frozen-test table for absolute perception accuracy, the two planner-level attribution ablations, and a clearly documented repeated/fixed-seed protocol for stochastic baselines. Future work will extend the approach to hardware flight experiments and higher-fidelity rigid--flexible dynamic models in which morphology-estimation uncertainty, flexible dynamics, and flight control are treated jointly.
+
+\balance
+% No literature citations were invented in this draft. Insert the final verified bibliography before submission.
+% \bibliographystyle{IEEEtran}
+% \bibliography{references}
+\end{document}

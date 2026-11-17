@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- RViz 2D Nav Goal mode for XTDrone + EGO single UAV planning.
+       In the ours-full chain, bridge publishes EGO goals on /planner/ego_goal.
+       Note: upstream EGO fixes manual-goal z to 1.0 in waypointCallback. -->
+
+  <arg name="map_size_x" default="100"/>
+  <arg name="map_size_y" default="100"/>
+  <arg name="map_size_z" default="5"/>
+  <arg name="odom_topic" default="vins_estimator/odometry"/>
+  <arg name="drone_id" default="0"/>
+  <!-- Whole-body V2 needs EGO topology/reference generation but owns the
+       MAVROS setpoint stream itself.  Disable the trajectory server in that
+       pipeline so a planning-only EGO instance cannot seize control. -->
+  <arg name="enable_traj_server" default="true"/>
+  <arg name="goal_topic" default="/planner/ego_goal"/>
+  <!-- EGO can emit thousands of replanning lines in a rolling-goal run.
+       Keep them in roslaunch logs so terminal I/O does not contend with PX4
+       and the V2 optimizer on the simulation CPU. -->
+  <arg name="planner_output" default="log"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="iris_0_map_to_world_rviz_goal"
+        args="0.0 0.0 0 0.0 0.0 0.0 /map /world 40"/>
+  <node pkg="tf" type="static_transform_publisher" name="iris_0_world_to_ground_plane_rviz_goal"
+        args="0.0 0.0 0 0.0 0.0 0.0 /world /ground_plane 40"/>
+
+  <include file="$(find ego_planner)/launch/advanced_param_xtdrone.xml">
+    <arg name="drone_id" value="$(arg drone_id)"/>
+    <arg name="map_size_x_" value="$(arg map_size_x)"/>
+    <arg name="map_size_y_" value="$(arg map_size_y)"/>
+    <arg name="map_size_z_" value="$(arg map_size_z)"/>
+    <arg name="odometry_topic" value="$(arg odom_topic)"/>
+    <arg name="obj_num_set" value="1"/>
+
+    <arg name="camera_pose_topic" value="camera_pose"/>
+    <arg name="depth_topic" value="realsense/depth_camera/depth/image_raw"/>
+    <arg name="cloud_topic" value="pcl_render_node/points"/>
+    <arg name="goal_topic" value="$(arg goal_topic)"/>
+    <arg name="planner_output" value="$(arg planner_output)"/>
+
+    <arg name="cx" value="320.5"/>
+    <arg name="cy" value="240.5"/>
+    <arg name="fx" value="554.254691191187"/>
+    <arg name="fy" value="554.254691191187"/>
+
+    <arg name="max_vel" value="0.6"/>
+    <arg name="max_acc" value="1.0"/>
+    <arg name="planning_horizon" value="4.0"/>
+    <arg name="use_distinctive_trajs" value="true"/>
+    <arg name="flight_type" value="1"/>
+
+    <!-- Unused in manual target mode, but advanced_param_xtdrone requires them. -->
+    <arg name="point_num" value="1"/>
+    <arg name="point0_x" value="0"/>
+    <arg name="point0_y" value="0"/>
+    <arg name="point0_z" value="1.0"/>
+    <arg name="point1_x" value="0"/>
+    <arg name="point1_y" value="0"/>
+    <arg name="point1_z" value="1.0"/>
+    <arg name="point2_x" value="0"/>
+    <arg name="point2_y" value="0"/>
+    <arg name="point2_z" value="1.0"/>
+    <arg name="point3_x" value="0"/>
+    <arg name="point3_y" value="0"/>
+    <arg name="point3_z" value="1.0"/>
+    <arg name="point4_x" value="0"/>
+    <arg name="point4_y" value="0"/>
+    <arg name="point4_z" value="1.0"/>
+  </include>
+
+  <node if="$(arg enable_traj_server)" pkg="ego_planner" name="iris_$(arg drone_id)_traj_server" type="traj_server" output="screen">
+    <remap from="position_cmd" to="/xtdrone/iris_$(arg drone_id)/planning/pos_cmd"/>
+    <remap from="pose_cmd" to="/xtdrone/iris_$(arg drone_id)/cmd_pose_enu"/>
+    <remap from="~planning/bspline" to="/xtdrone/iris_$(arg drone_id)/planning/bspline"/>
+    <param name="traj_server/time_forward" value="1.0" type="double"/>
+  </node>
+</launch>

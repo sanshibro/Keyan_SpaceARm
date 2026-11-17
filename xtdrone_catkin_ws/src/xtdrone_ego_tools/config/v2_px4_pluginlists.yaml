@@ -1,0 +1,16 @@
+plugin_blacklist:
+# The whole-body experiments use OFFBOARD setpoints, never FCU missions.
+# Avoid concurrent MISSION_* pulls while PX4 1.13 receives its parameter
+# profile; all state, pose, command and setpoint plugins remain enabled.
+- waypoint
+- geofence
+- rallypoint
+# MAVROS default exclusions retained.
+- safety_area
+- image_pub
+- vibration
+- distance_sensor
+- rangefinder
+- wheel_odometry
+
+plugin_whitelist: []

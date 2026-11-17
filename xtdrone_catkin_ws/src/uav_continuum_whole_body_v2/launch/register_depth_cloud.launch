@@ -1,0 +1,30 @@
+<launch>
+  <arg name="depth_cloud_topic" default="/camera/depth/points"/>
+  <arg name="camera_pose_topic" default="/iris_0/camera_pose"/>
+  <arg name="pose_source" default="topic"/>
+  <arg name="registered_cloud_topic" default="/slam/registered_cloud"/>
+  <arg name="registered_pose_topic" default="/slam/sensor_pose"/>
+  <arg name="output_frame" default="world"/>
+  <arg name="maximum_pose_age_s" default="0.10"/>
+  <arg name="tf_lookup_timeout_s" default="0.10"/>
+  <arg name="maximum_points" default="30000"/>
+  <arg name="registered_free_ray_topic" default="/slam/registered_free_ray_endpoints"/>
+  <arg name="maximum_free_rays" default="120"/>
+  <arg name="free_ray_range_m" default="8.0"/>
+
+  <node pkg="uav_continuum_whole_body_v2" type="register_depth_cloud_node.py"
+        name="register_depth_cloud" output="screen">
+    <param name="depth_cloud_topic" value="$(arg depth_cloud_topic)"/>
+    <param name="camera_pose_topic" value="$(arg camera_pose_topic)"/>
+    <param name="pose_source" value="$(arg pose_source)"/>
+    <param name="registered_cloud_topic" value="$(arg registered_cloud_topic)"/>
+    <param name="registered_pose_topic" value="$(arg registered_pose_topic)"/>
+    <param name="output_frame" value="$(arg output_frame)"/>
+    <param name="maximum_pose_age_s" value="$(arg maximum_pose_age_s)"/>
+    <param name="tf_lookup_timeout_s" value="$(arg tf_lookup_timeout_s)"/>
+    <param name="maximum_points" value="$(arg maximum_points)"/>
+    <param name="registered_free_ray_topic" value="$(arg registered_free_ray_topic)"/>
+    <param name="maximum_free_rays" value="$(arg maximum_free_rays)"/>
+    <param name="free_ray_range_m" value="$(arg free_ray_range_m)"/>
+  </node>
+</launch>

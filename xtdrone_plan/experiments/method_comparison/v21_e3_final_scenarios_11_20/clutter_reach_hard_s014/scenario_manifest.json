@@ -1,0 +1,23 @@
+{
+  "bounds": {
+    "maximum": [
+      2.5,
+      1.0,
+      2.6
+    ],
+    "minimum": [
+      -2.5,
+      -9.5,
+      0.0
+    ]
+  },
+  "difficulty": "hard",
+  "family": "clutter_reach",
+  "metadata": {
+    "design_map_resolution_m": 0.05,
+    "difficulty_rule": "gap_schedule_frozen_before_pilot",
+    "generator": "parameterized_v3_oriented_walls"
+  },
+  "name": "clutter_reach_hard_s014",
+  "seed": 14
+}

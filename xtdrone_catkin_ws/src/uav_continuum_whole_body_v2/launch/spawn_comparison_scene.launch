@@ -1,0 +1,12 @@
+<launch>
+  <!-- This process is simulator setup, outside the planner namespace.  It is
+       the only online process allowed to read oracle_truth.yaml. -->
+  <arg name="oracle_file"/>
+  <arg name="model_prefix" default="paper_scene_"/>
+  <node pkg="uav_continuum_whole_body_v2"
+        type="spawn_comparison_scene_node.py"
+        name="experiment_simulator_truth_setup" output="screen">
+    <param name="oracle_file" value="$(arg oracle_file)"/>
+    <param name="model_prefix" value="$(arg model_prefix)"/>
+  </node>
+</launch>

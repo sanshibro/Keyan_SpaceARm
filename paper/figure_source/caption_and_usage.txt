@@ -1,0 +1,10 @@
+Overall framework of morphology-aware rolling whole-body planning. Simplified mechanical reconstruction from the supplied hardware photographs and assembly references. The underbody actuator supports one constant-curvature section; the distal D435 and gripper form a rigid assembly whose optical axis points in the grasp direction and rotates with the distal assembly. Four short surface-strain sensors are distributed circumferentially; only the visible sensors are depicted. Offline motion-capture supervision trains a fixed strain predictor. Online eye-in-hand visual observations are compensated for UAV base motion and fused with strain observations using tracking-dependent confidence. Local whole-body seeds are refined jointly in vehicle motion, morphology, and timing. Independent numerical validation and handoff authorization precede execution; rejected candidates trigger replanning. C1 denotes the direct-handoff tolerance gate, while quintic C2 bridges are revalidated before use. The planning benchmark used a second-order arm-response model through the common morphology-state interface; sensing was evaluated separately on recorded data. The diagram describes the architecture and does not assert an experimentally demonstrated end-to-end hardware loop.
+
+使用说明：
+PNG 为 3200 × 1480，可直接放入 Overleaf。PDF 为单页矢量图；SVG 保留可编辑文字与路径。建议跨双栏，width=\textwidth。图为依据素材重绘的机械示意，未标注未经确认的尺寸，不是实机实验照片。draw_framework_v2.py 可重新生成三种格式（同目录保留 draw_framework.py 作为绘图基础）（依赖 cairosvg）。
+
+本轮修正：底座与机体下表面直接贴合；相机使用侧视投影与光轴箭头，朝向夹爪前方；应变片缩短；PCC 表示单段恒曲率圆弧，属于运动学近似；整体采用参考图式的矩形淡色功能分区、衬线字体和细线数据流。
+
+安装面修正：机身与柔性臂底座采用一致的正视投影，机身下表面与底座上沿共用水平接触线；分区底色与边框适度加深。
+
+紧凑排版：实验验证边界和 PCC 释义移至本图注，图内保留算法与数据流；上移视觉单元，左下角布置 UAV 状态反馈并共享状态输入线，画布高度从 850 缩减为 740，字号保持不变。虚线形态接口不表示正式规划试验由视觉—应变结果驱动。PCC 为恒曲率圆弧近似，弯曲角为零时对应直臂。

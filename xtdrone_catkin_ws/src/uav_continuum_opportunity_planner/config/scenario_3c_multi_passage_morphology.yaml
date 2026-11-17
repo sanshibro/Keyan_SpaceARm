@@ -1,0 +1,174 @@
+frame_id: world
+
+scenario:
+  name: scenario_3c_multi_passage_morphology
+  description: >
+    Far-target indoor task with multiple vertical passages. The original
+    indoor1 static cloud provides walls/furniture, while these task boxes add
+    vertical window constraints and a rear reach-in target area.
+
+arm:
+  # Measured arm dimensions:
+  #   total height ~= 480 mm
+  #   rigid base  ~= 100 mm, fixed relative to the UAV
+  #   bendable continuum section ~= 220 mm
+  #   distal/tool section ~= 160 mm, follows the continuum tip tangent
+  # The kinematic/collision model samples all three parts:
+  #   base_offset_z + arc_length + gripper_length ~= 0.480 m
+  arc_length: 0.220
+  radius: 0.034
+  segment_count: 18
+  base_offset_z: 0.100
+  gripper_length: 0.160
+  mount_xyz: [0.0, 0.0, -0.03]
+  mount_rpy: [0.0, 3.1415926, 0.0]
+  theta_min_deg: 0.0
+  theta_max_deg: 120.0
+  theta_step_deg: 10.0
+  phi_min_deg: -180.0
+  phi_max_deg: 180.0
+  phi_step_deg: 20.0
+
+vehicle:
+  # Scenario 3c uses tight vertical windows. Use a realistic planning
+  # envelope instead of the earlier over-conservative 0.34 m radius.
+  body_radius: 0.28
+  body_height: 0.25
+  body_clearance: 0.03
+  arm_clearance: 0.025
+
+target:
+  name: rear_shelf_reach_target
+  # Placed in the rear-right free area of indoor1. The previous target
+  # [1.25, -12.05, 0.82] was too close to the original cafe_table_0 mesh, so
+  # all short-arm standoff poses were rejected by static_scene_cloud.
+  pose: [2.45, -12.25, 0.82, 0.0]
+
+reachability:
+  target_tolerance: 0.045
+  # The 48 cm arm should do the reach-in from outside the small box region.
+  # These standoffs make the UAV remain outside while the continuum/tool
+  # section supplies the lateral reach.
+  candidate_standoff_min: 0.26
+  candidate_standoff_max: 0.74
+  candidate_standoff_step: 0.04
+  candidate_angle_step_deg: 8.0
+  candidate_z_offsets: [0.14, 0.18, 0.26, 0.34, 0.42, 0.50, 0.58, 0.66, 0.74]
+  candidate_body_margin_target: 0.14
+  max_candidates_to_publish: 600
+  auto_execute: false
+  spawn_gazebo_overlay: false
+
+global_path:
+  start_policy: current_uav_pose
+  goal_policy: target_standoff_region
+  preferred_goal: [2.45, -11.88, 1.18, 0.0]
+  # Global is only a coarse topology / local waypoint layer. Use the UAV body
+  # envelope here; continuum-arm collision is handled by whole-body refinement.
+  include_arm_transit_envelope: false
+  resolution: 0.20
+  xy_resolution: 0.20
+  z_resolution: 0.05
+  z_min: 0.90
+  z_max: 2.05
+  xy_padding: 2.5
+  body_radius: 0.28
+  clearance: 0.03
+  max_expansions: 160000
+  heuristic_weight: 1.8
+  clearance_cost_target: 0.08
+  clearance_cost_weight: 3.0
+  candidate_cluster_resolution: 0.16
+  candidate_preselect_limit: 60
+  max_candidate_attempts: 16
+  max_successful_paths: 3
+
+morphology:
+  # Flight home shape: keep the continuum arm straight along the mount axis.
+  # This minimizes lateral center-of-mass offset and swept width. The arm is
+  # allowed to bend only when the whole-body collision/reach-in costs require it.
+  compact_theta_deg: 0.0
+  compact_phi_deg: 0.0
+  aligned_theta_deg: 0.0
+  max_delta_theta_deg: 15.0
+  max_delta_phi_deg: 25.0
+
+boxes:
+  # Passage 1: wall-to-wall vertical slot near the first half of the route.
+  # The boxes span almost from the left wall to the right wall of indoor1, so
+  # side gaps are not usable. The only practical passage is the vertical slot
+  # between the lower barrier and the ceiling-height upper blocker.
+  # Window: z = 0.98..1.60 m, y ~= -1.85 m. Body-only can pass, but the
+  # straight downward arm has almost no vertical slack, so whole-body
+  # morphology must bend or shift the arm for clearance.
+  - name: p1_lower_barrier
+    center: [-0.92, -1.85, 0.49]
+    size: [9.25, 0.34, 0.98]
+  - name: p1_ceiling_blocker
+    center: [-0.92, -1.85, 3.235]
+    size: [9.25, 0.34, 3.27]
+
+  # Passage 2: second wall-to-wall vertical slot. The slot is slightly higher
+  # than passage 1, forcing the planner to adapt altitude and morphology.
+  # Window: z = 1.10..1.72 m, y ~= -5.80 m.
+  - name: p2_lower_barrier
+    center: [-0.92, -5.80, 0.55]
+    size: [9.25, 0.36, 1.10]
+  - name: p2_ceiling_blocker
+    center: [-0.92, -5.80, 3.295]
+    size: [9.25, 0.36, 3.15]
+
+  # Passage 3: rear approach slot. This one is slightly lower and closer to
+  # the target region, so the planner must stay compact before reach-in.
+  # Window: z = 1.18..1.80 m, y ~= -9.45 m.
+  - name: p3_lower_barrier
+    center: [-0.92, -9.45, 0.59]
+    size: [9.25, 0.34, 1.18]
+  - name: p3_ceiling_blocker
+    center: [-0.92, -9.45, 3.325]
+    size: [9.25, 0.34, 3.05]
+
+  # Rear reach-in task area. The target is placed behind/around a shelf-like
+  # structure so the UAV body should stay outside the operation zone while the
+  # continuum arm reaches in from a standoff pose.
+  - name: rear_task_table
+    # Relaxed for demo run-through: this is a planner-only abstract reach-in
+    # support box, not a confirmed physical table in the Gazebo scene.
+    center: [2.45, -12.30, 0.19]
+    size: [1.00, 0.58, 0.22]
+  - name: rear_left_guard
+    center: [1.86, -12.25, 0.82]
+    size: [0.08, 0.72, 0.86]
+  - name: rear_right_guard
+    center: [3.04, -12.25, 0.82]
+    size: [0.08, 0.72, 0.86]
+  - name: rear_back_panel
+    center: [2.45, -12.72, 0.86]
+    size: [1.24, 0.08, 0.92]
+  - name: rear_top_lip
+    center: [2.45, -12.25, 1.56]
+    size: [1.24, 0.74, 0.08]
+  - name: rear_front_low_rail
+    # Relaxed for the dynamics-aware terminal approach: the previous rail top
+    # was within a few centimeters of the swept arm path.
+    center: [2.45, -11.64, 0.36]
+    size: [1.30, 0.08, 0.10]
+  - name: rear_left_side_shelf
+    center: [1.72, -12.25, 0.56]
+    size: [0.20, 0.58, 0.20]
+  - name: rear_right_side_shelf
+    center: [3.18, -12.25, 0.56]
+    size: [0.20, 0.58, 0.20]
+  - name: rear_upper_cross_bar
+    # Relaxed for the final standoff transition so the body can climb into the
+    # selected approach pose without scraping the upper cross bar.
+    center: [2.45, -11.58, 1.43]
+    size: [1.10, 0.06, 0.06]
+  - name: rear_safe_standoff_marker_box
+    center: [2.45, -11.36, 0.12]
+    size: [0.45, 0.16, 0.08]
+
+body_keepout_boxes:
+  - name: rear_target_body_keepout
+    center: [2.45, -12.25, 1.02]
+    size: [0.60, 0.22, 0.78]

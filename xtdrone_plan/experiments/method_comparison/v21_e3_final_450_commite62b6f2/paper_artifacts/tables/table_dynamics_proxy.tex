@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Dynamics-proxy correspondence in three closed-loop simulated PX4 tasks. Thrust errors compare $r_T$ with low-pass IMU/g in the quasi-hover regime; IMU specific force is a collective-load proxy, not direct motor thrust.}
+\label{tab:dynamics_proxy}
+\scriptsize
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Scenario & $r_T^{max}$ & LP IMU/g max & RMSE & MAE & $\rho_T$ & $\gamma^{max}$ & Target max & IMU max & Tilt RMSE & $\rho_\gamma$ \\
+ & & & & & & (deg) & (deg) & (deg) & (deg) & \\
+\midrule
+Clutter-Reach & 1.0058 & 1.0027 & 0.0011 & 0.0009 & -0.079 & 2.345 & 2.421 & 2.337 & 0.107 & 0.925 \\
+Multi-Passage & 1.0026 & 1.0029 & 0.0011 & 0.0009 & 0.167 & 1.717 & 1.740 & 1.740 & 0.077 & 0.909 \\
+Passage-Sweep & 1.0036 & 1.0023 & 0.0010 & 0.0008 & 0.116 & 1.655 & 1.668 & 1.664 & 0.061 & 0.967 \\
+\bottomrule
+\end{tabular}
+\end{table*}

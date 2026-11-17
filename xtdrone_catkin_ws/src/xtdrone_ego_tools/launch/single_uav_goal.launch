@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Parametric wrapper for XTDrone + EGO single UAV planning.
+       Use target_x/target_y/target_z from the roslaunch command line instead
+       of editing ego_planner/single_uav.launch. -->
+
+  <arg name="map_size_x" default="100"/>
+  <arg name="map_size_y" default="100"/>
+  <arg name="map_size_z" default="5"/>
+  <arg name="odom_topic" default="vins_estimator/odometry"/>
+
+  <arg name="target_x" default="0"/>
+  <arg name="target_y" default="-2"/>
+  <arg name="target_z" default="1.5"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="iris_0_map_to_world_goal"
+        args="0.0 0.0 0 0.0 0.0 0.0 /map /world 40"/>
+  <node pkg="tf" type="static_transform_publisher" name="iris_0_world_to_ground_plane_goal"
+        args="0.0 0.0 0 0.0 0.0 0.0 /world /ground_plane 40"/>
+
+  <include file="$(find ego_planner)/launch/run_in_xtdrone.launch">
+    <arg name="drone_id" value="0"/>
+
+    <arg name="target_x" value="$(arg target_x)"/>
+    <arg name="target_y" value="$(arg target_y)"/>
+    <arg name="target_z" value="$(arg target_z)"/>
+
+    <arg name="map_size_x" value="$(arg map_size_x)"/>
+    <arg name="map_size_y" value="$(arg map_size_y)"/>
+    <arg name="map_size_z" value="$(arg map_size_z)"/>
+    <arg name="odom_topic" value="$(arg odom_topic)"/>
+  </include>
+</launch>

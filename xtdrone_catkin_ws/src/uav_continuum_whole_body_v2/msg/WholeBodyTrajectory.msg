@@ -1,0 +1,15 @@
+std_msgs/Header header
+uint32 trajectory_id
+time planning_state_stamp
+time execution_start_time
+string method
+string validator_status
+float64 duration
+float64[] time_from_start
+geometry_msgs/Pose[] uav_poses
+geometry_msgs/Vector3[] linear_velocities
+float64[] yaw_rates
+float64[] theta_deg
+float64[] phi_deg
+float64[] theta_rate_deg_s
+float64[] phi_rate_deg_s

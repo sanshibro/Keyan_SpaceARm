@@ -1,0 +1,3006 @@
+{
+  "counts": {
+    "aet_sequential_minjerk": {
+      "passed": 61,
+      "total": 90
+    },
+    "fixed_morphology": {
+      "passed": 55,
+      "total": 90
+    },
+    "global_batch_wb": {
+      "passed": 59,
+      "total": 90
+    },
+    "informed_rrtstar_wb": {
+      "passed": 68,
+      "total": 90
+    },
+    "rolling_wb_v2": {
+      "passed": 89,
+      "total": 90
+    }
+  },
+  "map_hash_fields_per_scenario": {
+    "clutter_reach_easy_s011": [
+      "9bf0674b56ee88bae0d107b9f836e6fd5ed0181d8ece7d4533780197044392e3"
+    ],
+    "clutter_reach_easy_s012": [
+      "e1170585f9f38f52e4040debc5b9a00fb6f00561184cbc85d7c0de2d679d3be4"
+    ],
+    "clutter_reach_easy_s013": [
+      "102a099b9836b1ac84bfa405bc177611cd98509de35998683e29bf9669b749b2"
+    ],
+    "clutter_reach_easy_s014": [
+      "64b91ad4693618000e7dc39bb0985623045b25352ae2a3857e20445de01bdfff"
+    ],
+    "clutter_reach_easy_s015": [
+      "e14e7d7607cbb4b32c708ea03acea187f8e49e853c573668ee8bcf3eec214989"
+    ],
+    "clutter_reach_easy_s016": [
+      "fe1d0d5aeceeda4d8c9afddf80a881b26470d63084ff7c805dcb649a135fd666"
+    ],
+    "clutter_reach_easy_s017": [
+      "5e723b74d07f0e62a7b2d2ce8a456a588aa1ea593647e1c56e85164ff603f1db"
+    ],
+    "clutter_reach_easy_s018": [
+      "71303ec466cb74b429f56da693c6dfa04a82498cb33a93660cd73eb5c12d977b"
+    ],
+    "clutter_reach_easy_s019": [
+      "2d28b8b82d0662a9a2c94ee2bd7dc13a9f84abcccb5b80d0d433066fb2111639"
+    ],
+    "clutter_reach_easy_s020": [
+      "1d4920ef0d423ef69ab764604c178dd5fe1d5168f84ae638a64f1fb4ce3ce4ea"
+    ],
+    "clutter_reach_hard_s011": [
+      "5bbb020f692c67412d023b1b0e9dfab5ecaf42712dab502fceab3aea46a8dc8a"
+    ],
+    "clutter_reach_hard_s012": [
+      "d776e78f0b53702eb0946e002b2e2411b433b80b21f451dba18331cb10bdc134"
+    ],
+    "clutter_reach_hard_s013": [
+      "b2ac65e8732b03d27b6105581a2be2e3ae48252f7d9797ff2faf2a180cb513d6"
+    ],
+    "clutter_reach_hard_s014": [
+      "66e13c00fad2994a98694ddfe570555d147494c3885cbe89422beeee048a2e13"
+    ],
+    "clutter_reach_hard_s015": [
+      "d2791469e22fe87708d448dd74cdf652742beb4336a1426820c9b4323a1d01a7"
+    ],
+    "clutter_reach_hard_s016": [
+      "97bd07391c631b1cf8b113345d945331215c5ad69f17a30976c3ff58b3cfe43a"
+    ],
+    "clutter_reach_hard_s017": [
+      "352883ba02793f0ed0eb1b4e34ea97cbca9939fc61ac9e4525c99fdb06b716b5"
+    ],
+    "clutter_reach_hard_s018": [
+      "37f48c5144bc7f93e07d4552de71874eb64b8e1b46059534b41c08905080c1b2"
+    ],
+    "clutter_reach_hard_s019": [
+      "a84fd886c297d265a95d059545d8a40a2069d3263c261819417f5e90bd5339c3"
+    ],
+    "clutter_reach_hard_s020": [
+      "33856234ff53cefd13b8c496b7b7e4fe3b388731137ce38c987258184bd26575"
+    ],
+    "clutter_reach_medium_s011": [
+      "07ea5d18c300188c989cc277687dbe4b5dca7b9280dec0ea3b8663b5997feb1b"
+    ],
+    "clutter_reach_medium_s012": [
+      "040338dcb6d21600e88f06e3cf144be2dfc63ee756ebfb462c9f1eb12908898f"
+    ],
+    "clutter_reach_medium_s013": [
+      "50dd27ec6784a3a163b0394b1ef3fbf1da790c6f824935400706777e5bae9d9f"
+    ],
+    "clutter_reach_medium_s014": [
+      "44bceb69280532af342176741d6cca164a4592c053c774e0af2f7fbed6bab692"
+    ],
+    "clutter_reach_medium_s015": [
+      "0612f7cebc97df9a6798af8fd08a7c3b45c5bb32147071f242cc2c83ff80240d"
+    ],
+    "clutter_reach_medium_s016": [
+      "5f1c2c66ce99e0b43625b9afa9f3f8770f1191548f90815d956176b9c621d357"
+    ],
+    "clutter_reach_medium_s017": [
+      "359d9035c00558fbed42dcc07021a1fc57d0f3017cff2b43f475810d89bea7ef"
+    ],
+    "clutter_reach_medium_s018": [
+      "54bfe53521c391fbb8c0abd4b94047b40080822bd1cec6abe9d73735a696b830"
+    ],
+    "clutter_reach_medium_s019": [
+      "bd4739b6af909485f57db2c7650567221053353eee87eb1578a64d07113b84c9"
+    ],
+    "clutter_reach_medium_s020": [
+      "693c617cd3c2dfca34199a5892d6704207d243894aa42be51d15d10d0b30d76f"
+    ],
+    "multi_passage_easy_s011": [
+      "44564d90749930ae9198e311a512c779781517ebc198bfa88b00c411192a92b1"
+    ],
+    "multi_passage_easy_s012": [
+      "fc2d74d60571e1f73bf80bc13f94fb92145c975d7d06c31b5f881a4d92bc34d2"
+    ],
+    "multi_passage_easy_s013": [
+      "04badae0cb75ba3e1fa7fcf9ebad89d5667051b64e490e8c2c3cdc84100c5ed2"
+    ],
+    "multi_passage_easy_s014": [
+      "464b4b5c843279c92f62844f73804b5c544f74315d4711401a23072cfdfb24e0"
+    ],
+    "multi_passage_easy_s015": [
+      "544706cf2b7c883771010ee56e5a3b6dbc1ed8f20fcff50e521e437d6249304b"
+    ],
+    "multi_passage_easy_s016": [
+      "0f42ef2ff9aac0c39a17cd0516446e9b0703b015eb8dca28c606b66259fbcc52"
+    ],
+    "multi_passage_easy_s017": [
+      "a1af08512594beee5423636b49e5b802ff67da87f63124d8eba7d59d39b7b7b0"
+    ],
+    "multi_passage_easy_s018": [
+      "77573d800a3bb8f6fb5c7167af62c668c4a0f50a6558b89f871741033bb06d91"
+    ],
+    "multi_passage_easy_s019": [
+      "de58c594dc01790cda06243731c89c11138b674020aee0a8a59666b54ef5069b"
+    ],
+    "multi_passage_easy_s020": [
+      "aeae478f1ab80a8b3a5c845eaf016fe5adc9103a6da28cfe716d85ddc6834bf8"
+    ],
+    "multi_passage_hard_s011": [
+      "f9899ab0437a4e14d03d6497daa5aacb1d7b9fa44c1ae245dd681b9c7a78390b"
+    ],
+    "multi_passage_hard_s012": [
+      "45d1f34b2235ab3e6d63b123ee9df8931874fe7f5006a694a84dc77ec49da844"
+    ],
+    "multi_passage_hard_s013": [
+      "e19484ce37ad59a4709d8aa272da16149746e7713cbd1ce628f6b4ddb136e15a"
+    ],
+    "multi_passage_hard_s014": [
+      "a1cd60915714bde63bae9ded3e7091ae9289f31da4fb14757a4086ea36a90e95"
+    ],
+    "multi_passage_hard_s015": [
+      "84f51bfbb821419f76f73362950c62e0e556da20e2b951d1a9a6b1197deba5e9"
+    ],
+    "multi_passage_hard_s016": [
+      "cdac801b986d44c39e0195e7b50b4ed02af6afde4218d3de1a78c66345dd7253"
+    ],
+    "multi_passage_hard_s017": [
+      "dde0c5e61beecd630cd63e097b6311e02fb8d91bd4a2e060334052dedeb32359"
+    ],
+    "multi_passage_hard_s018": [
+      "2d2ebb52f2c5133d6803c6b8ca662b47c9364fcdbbcaa1c61c27fc9abb7ca4cd"
+    ],
+    "multi_passage_hard_s019": [
+      "ad33aaa4ea00989456f443f2f4bbac77b40b297c2a2132829ccd6ea590e6b007"
+    ],
+    "multi_passage_hard_s020": [
+      "a49686826636adfacd82411c500d5515de0a4b049fded6af746a5ad75a25bd29"
+    ],
+    "multi_passage_medium_s011": [
+      "ebd8cb62dab63fee423a515f96c0948b3ee173255e9e95ee58a562a7fec519e5"
+    ],
+    "multi_passage_medium_s012": [
+      "4d78ae2c28e2c3bdc5813e80a280bd13bf8dbad2bd4660d13dab091367dba3ea"
+    ],
+    "multi_passage_medium_s013": [
+      "e1ea97e116e4d676f3eb69ed14026e586d770ea47389f54f795f060a0214f0c4"
+    ],
+    "multi_passage_medium_s014": [
+      "ed1cb5d7c7c928cef0714976f0b27afad13460f58894614be0d4fd71c3f7eb9b"
+    ],
+    "multi_passage_medium_s015": [
+      "3150a0a7bfc500aedcd021c33708ddcbcb97fab5e79238c5dde535a61b254f70"
+    ],
+    "multi_passage_medium_s016": [
+      "3902dd58e50eaa95f2b1491acab731eb9df1c1c03b03e38fb9b9ed97f6bb042d"
+    ],
+    "multi_passage_medium_s017": [
+      "cb45c5d549feb851bffa10df40c21219b668f1334dc1673fa827c49b80d12da9"
+    ],
+    "multi_passage_medium_s018": [
+      "5949d7630f8fcbe6c4f7e5e2b54cd0a3adc48250c221973633c463f2e62b1365"
+    ],
+    "multi_passage_medium_s019": [
+      "79139b9bbb02c5d14a2c7fa4436161caae55f6a5d8c5ae73217dc13fd1c44ab5"
+    ],
+    "multi_passage_medium_s020": [
+      "b2ce818f322fac06775d097b08ef626813ce33b50242da1d62b6e86245704aed"
+    ],
+    "passage_sweep_easy_s011": [
+      "65676155521aae169ff2d77c395e6a9255339c4cc033c7ed7a3dd5ad92bf48d9"
+    ],
+    "passage_sweep_easy_s012": [
+      "02375cdbc71234aff73f23a57fc31033e658ab3db7faf567824492cb6f90e618"
+    ],
+    "passage_sweep_easy_s013": [
+      "f8efcb2610fb890cc78cf8e503a7f435c7c4a6525bcf785f865b3958c0bea954"
+    ],
+    "passage_sweep_easy_s014": [
+      "f23bc0e63d145eb079e6d7df3135a82da1c4ce4dbec2ebc0ea976c5743d44210"
+    ],
+    "passage_sweep_easy_s015": [
+      "2c2703d05a0c420d875effba910b2c21c3bee50316d13e8086eeb3d474bde9dd"
+    ],
+    "passage_sweep_easy_s016": [
+      "53bc071204e1c7026695bd1a17b8d83dd941fedf49abfaa90abb78202441db92"
+    ],
+    "passage_sweep_easy_s017": [
+      "197891db80d11e8ad8aa51a756a874b95ad10f5308494bfdba2151659fec35b7"
+    ],
+    "passage_sweep_easy_s018": [
+      "1ea6cfa4a5389467e79f9786d0932a5e70bdd3b07e411f3f4ee983da28c0c545"
+    ],
+    "passage_sweep_easy_s019": [
+      "2bf639459dd323e35cfbebc75a6e84cff1ec3ef70975e075880709924ce722bd"
+    ],
+    "passage_sweep_easy_s020": [
+      "72036b55fa529d7535612ed2d5ebf591ae06a6a2ba3708ba3cf3e42f1d60c014"
+    ],
+    "passage_sweep_hard_s011": [
+      "f5c6ac3743f27166630fc2495d805702b3d518b6c86cbfc82bcecde251c1ddcb"
+    ],
+    "passage_sweep_hard_s012": [
+      "5461b3e56a413d5f88ac5e47c83663b621dbb0c4b435cd28f7516d01b09bf3a9"
+    ],
+    "passage_sweep_hard_s013": [
+      "f2c04acb364dd2fa6d94ba1fba007547a2025e6bb8c5ead9cbcc1066c23668a4"
+    ],
+    "passage_sweep_hard_s014": [
+      "1c634a17bbf74b619d452a291d2c7685d041cd84bb19e2b84b5506a6ba4dea82"
+    ],
+    "passage_sweep_hard_s015": [
+      "a2c86fccd37ae79dab1c5fcd12ae61f460e87ca30a5049d23af0e74770b82d8c"
+    ],
+    "passage_sweep_hard_s016": [
+      "e1b648601d7b9a883fc73a463183b6f9cefefb06f8d9e5afd6b0f7e303c0f4d9"
+    ],
+    "passage_sweep_hard_s017": [
+      "536dc46407524a889a29a212db8c00fe5768d325b9177433f19bc0ffaba45203"
+    ],
+    "passage_sweep_hard_s018": [
+      "ca6788a9303e3e3b3c166bf70a0482c8520dd5120666e101c97ea019e72fdb7c"
+    ],
+    "passage_sweep_hard_s019": [
+      "197f8edfe44bc41591bc893df7484d83c892e26738adee0fc91e38817d16444e"
+    ],
+    "passage_sweep_hard_s020": [
+      "00380bf024f73ecb2565d362affe19042fe82c38d5fa8e73b7e99abb5e8b96e6"
+    ],
+    "passage_sweep_medium_s011": [
+      "2a8595ea8a9d4e3dd5603612dd38bbd651c7b70d67d3fab7e352b3da38414f67"
+    ],
+    "passage_sweep_medium_s012": [
+      "e0cedd01cae09dcc3cbc6123cef3f2a9ceb4cc7a50961e99bab6abe9e99c233e"
+    ],
+    "passage_sweep_medium_s013": [
+      "ceaa29ba6d62d3782b6264fe8b6850b561bb15f36882f9a2cebdca6fa398bb86"
+    ],
+    "passage_sweep_medium_s014": [
+      "98a42b2b2f1aa4f288a16a8dbbf419e7ae3d3e5ed5878068389052b6e0455760"
+    ],
+    "passage_sweep_medium_s015": [
+      "62aee42fc6c54c3dfe3b188e5da0c28c0690853d664df418d98f5dd1dcdf267f"
+    ],
+    "passage_sweep_medium_s016": [
+      "b24f12199667fbc45d952c61d239eb535bad1383caa59e9a1783afbe54eb24c8"
+    ],
+    "passage_sweep_medium_s017": [
+      "b31cdd3fa47e59caa11c224c215e4903ce513138f3897ffe35bdc94ae362bc30"
+    ],
+    "passage_sweep_medium_s018": [
+      "6cc93568fa676204b08de39726587a2f179a60dff88a8e2f8b8f0d8b93b9fd51"
+    ],
+    "passage_sweep_medium_s019": [
+      "07f8b8dafd9f2dd9b66daa5ee00decbac8ea0a550e90932c75c49d367221eac8"
+    ],
+    "passage_sweep_medium_s020": [
+      "3e2391e77b8c16de0e2d191d58b6eec8c53ca1a66b854e04de292316c08c71ad"
+    ]
+  },
+  "reported_commit_fields": [
+    "e62b6f22a20a9c2ba18d4041124427e1cfe5f59c"
+  ],
+  "retained_system_error_files": [
+    "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__rolling_wb_v2__20260802_161836_832253/trial_result.json"
+  ],
+  "rows": [
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s011__5dff5584fd51/closed_loop_runs/clutter_reach_easy_s011__aet_sequential_minjerk__20260802_155111_726678/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s011__5dff5584fd51/closed_loop_runs/clutter_reach_easy_s011__fixed_morphology__20260802_154748_713096/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s011__5dff5584fd51/closed_loop_runs/clutter_reach_easy_s011__global_batch_wb__20260802_154158_689019/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s011__5dff5584fd51/closed_loop_runs/clutter_reach_easy_s011__informed_rrtstar_wb__20260802_153748_672642/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s011__5dff5584fd51/closed_loop_runs/clutter_reach_easy_s011__rolling_wb_v2__20260802_154452_700969/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s012__596338074802/closed_loop_runs/clutter_reach_easy_s012__aet_sequential_minjerk__20260802_142754_406665/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s012__596338074802/closed_loop_runs/clutter_reach_easy_s012__fixed_morphology__20260802_142400_391644/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s012__596338074802/closed_loop_runs/clutter_reach_easy_s012__global_batch_wb__20260802_141725_365781/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s012__596338074802/closed_loop_runs/clutter_reach_easy_s012__informed_rrtstar_wb__20260802_143137_421004/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s012__596338074802/closed_loop_runs/clutter_reach_easy_s012__rolling_wb_v2__20260802_142052_379293/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s013__2dff104427fb/closed_loop_runs/clutter_reach_easy_s013__aet_sequential_minjerk__20260802_092214_3484165/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s013__2dff104427fb/closed_loop_runs/clutter_reach_easy_s013__fixed_morphology__20260802_091845_3470966/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s013__2dff104427fb/closed_loop_runs/clutter_reach_easy_s013__global_batch_wb__20260802_092915_3510619/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s013__2dff104427fb/closed_loop_runs/clutter_reach_easy_s013__informed_rrtstar_wb__20260802_092500_3494996/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s013__2dff104427fb/closed_loop_runs/clutter_reach_easy_s013__rolling_wb_v2__20260802_091540_3459056/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s014__9116ea60fc62/closed_loop_runs/clutter_reach_easy_s014__aet_sequential_minjerk__20260803_213519_2756716/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s014__9116ea60fc62/closed_loop_runs/clutter_reach_easy_s014__fixed_morphology__20260803_213152_2743823/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s014__9116ea60fc62/closed_loop_runs/clutter_reach_easy_s014__global_batch_wb__20260803_214238_2783995/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s014__9116ea60fc62/closed_loop_runs/clutter_reach_easy_s014__informed_rrtstar_wb__20260803_213826_2768613/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s014__9116ea60fc62/closed_loop_runs/clutter_reach_easy_s014__rolling_wb_v2__20260803_214539_2795600/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s015__bbb56ded5d0b/closed_loop_runs/clutter_reach_easy_s015__aet_sequential_minjerk__20260804_022901_3805397/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s015__bbb56ded5d0b/closed_loop_runs/clutter_reach_easy_s015__fixed_morphology__20260804_023552_3833687/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s015__bbb56ded5d0b/closed_loop_runs/clutter_reach_easy_s015__global_batch_wb__20260804_023130_3816384/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s015__bbb56ded5d0b/closed_loop_runs/clutter_reach_easy_s015__informed_rrtstar_wb__20260804_023013_3810807/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s015__bbb56ded5d0b/closed_loop_runs/clutter_reach_easy_s015__rolling_wb_v2__20260804_023242_3821810/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s016__40aa465b2b49/closed_loop_runs/clutter_reach_easy_s016__aet_sequential_minjerk__20260802_111932_3912218/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s016__40aa465b2b49/closed_loop_runs/clutter_reach_easy_s016__fixed_morphology__20260802_111605_3899019/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s016__40aa465b2b49/closed_loop_runs/clutter_reach_easy_s016__global_batch_wb__20260802_110934_3873547/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s016__40aa465b2b49/closed_loop_runs/clutter_reach_easy_s016__informed_rrtstar_wb__20260802_110514_3857609/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s016__40aa465b2b49/closed_loop_runs/clutter_reach_easy_s016__rolling_wb_v2__20260802_111300_3887039/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s017__1cb1cb56a02b/closed_loop_runs/clutter_reach_easy_s017__aet_sequential_minjerk__20260802_044018_2466714/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s017__1cb1cb56a02b/closed_loop_runs/clutter_reach_easy_s017__fixed_morphology__20260802_043657_2454118/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s017__1cb1cb56a02b/closed_loop_runs/clutter_reach_easy_s017__global_batch_wb__20260802_043024_2428731/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s017__1cb1cb56a02b/closed_loop_runs/clutter_reach_easy_s017__informed_rrtstar_wb__20260802_044315_2478127/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s017__1cb1cb56a02b/closed_loop_runs/clutter_reach_easy_s017__rolling_wb_v2__20260802_043347_2441952/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s018__289b2efe4fb6/closed_loop_runs/clutter_reach_easy_s018__aet_sequential_minjerk__20260802_080320_3196075/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s018__289b2efe4fb6/closed_loop_runs/clutter_reach_easy_s018__fixed_morphology__20260802_080212_3190678/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s018__289b2efe4fb6/closed_loop_runs/clutter_reach_easy_s018__global_batch_wb__20260802_080835_3216902/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s018__289b2efe4fb6/closed_loop_runs/clutter_reach_easy_s018__informed_rrtstar_wb__20260802_080428_3201557/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s018__289b2efe4fb6/closed_loop_runs/clutter_reach_easy_s018__rolling_wb_v2__20260802_075902_3178361/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s019__21fc1d70192c/closed_loop_runs/clutter_reach_easy_s019__aet_sequential_minjerk__20260802_061729_2806616/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s019__21fc1d70192c/closed_loop_runs/clutter_reach_easy_s019__fixed_morphology__20260802_061354_2793092/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s019__21fc1d70192c/closed_loop_runs/clutter_reach_easy_s019__global_batch_wb__20260802_062447_2834915/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s019__21fc1d70192c/closed_loop_runs/clutter_reach_easy_s019__informed_rrtstar_wb__20260802_062031_2818410/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s019__21fc1d70192c/closed_loop_runs/clutter_reach_easy_s019__rolling_wb_v2__20260802_062751_2846930/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s020__1149e194dba5/closed_loop_runs/clutter_reach_easy_s020__aet_sequential_minjerk__20260802_012528_1765933/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s020__1149e194dba5/closed_loop_runs/clutter_reach_easy_s020__fixed_morphology__20260802_014152_1828658/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s020__1149e194dba5/closed_loop_runs/clutter_reach_easy_s020__global_batch_wb__20260802_013258_1794040/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s020__1149e194dba5/closed_loop_runs/clutter_reach_easy_s020__informed_rrtstar_wb__20260802_012834_1777951/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s020__1149e194dba5/closed_loop_runs/clutter_reach_easy_s020__rolling_wb_v2__20260802_013604_1806022/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s011__6aefee502c7b/closed_loop_runs/clutter_reach_hard_s011__aet_sequential_minjerk__20260803_143727_1234982/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s011__6aefee502c7b/closed_loop_runs/clutter_reach_hard_s011__fixed_morphology__20260803_143336_1220248/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s011__6aefee502c7b/closed_loop_runs/clutter_reach_hard_s011__global_batch_wb__20260803_144544_1265696/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s011__6aefee502c7b/closed_loop_runs/clutter_reach_hard_s011__informed_rrtstar_wb__20260803_144030_1246782/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s011__6aefee502c7b/closed_loop_runs/clutter_reach_hard_s011__rolling_wb_v2__20260803_143024_1207599/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/closed_loop_runs/clutter_reach_hard_s012__aet_sequential_minjerk__20260803_163302_1662633/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/closed_loop_runs/clutter_reach_hard_s012__fixed_morphology__20260803_163150_1657059/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/closed_loop_runs/clutter_reach_hard_s012__global_batch_wb__20260803_164244_1697521/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/closed_loop_runs/clutter_reach_hard_s012__informed_rrtstar_wb__20260803_163633_1675979/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/closed_loop_runs/clutter_reach_hard_s012__rolling_wb_v2__20260803_164613_1710517/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s013__bac2fe366bf5/closed_loop_runs/clutter_reach_hard_s013__aet_sequential_minjerk__20260804_013500_3613343/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s013__bac2fe366bf5/closed_loop_runs/clutter_reach_hard_s013__fixed_morphology__20260804_014632_3657509/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s013__bac2fe366bf5/closed_loop_runs/clutter_reach_hard_s013__global_batch_wb__20260804_013947_3632082/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s013__bac2fe366bf5/closed_loop_runs/clutter_reach_hard_s013__informed_rrtstar_wb__20260804_013828_3626280/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s013__bac2fe366bf5/closed_loop_runs/clutter_reach_hard_s013__rolling_wb_v2__20260804_014314_3645080/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s014__c2a8a9ca6fe4/closed_loop_runs/clutter_reach_hard_s014__aet_sequential_minjerk__20260804_041601_4191130/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s014__c2a8a9ca6fe4/closed_loop_runs/clutter_reach_hard_s014__fixed_morphology__20260804_041205_4176704/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s014__c2a8a9ca6fe4/closed_loop_runs/clutter_reach_hard_s014__global_batch_wb__20260804_040532_4151981/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s014__c2a8a9ca6fe4/closed_loop_runs/clutter_reach_hard_s014__informed_rrtstar_wb__20260804_040014_4133257/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s014__c2a8a9ca6fe4/closed_loop_runs/clutter_reach_hard_s014__rolling_wb_v2__20260804_040849_4164326/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s015__04c8076ac599/closed_loop_runs/clutter_reach_hard_s015__aet_sequential_minjerk__20260802_002626_1554096/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s015__04c8076ac599/closed_loop_runs/clutter_reach_hard_s015__fixed_morphology__20260802_002515_1548582/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s015__04c8076ac599/closed_loop_runs/clutter_reach_hard_s015__global_batch_wb__20260802_002051_1530775/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s015__04c8076ac599/closed_loop_runs/clutter_reach_hard_s015__informed_rrtstar_wb__20260802_002739_1559752/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s015__04c8076ac599/closed_loop_runs/clutter_reach_hard_s015__rolling_wb_v2__20260802_002205_1536445/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s016__86182c39f9b1/closed_loop_runs/clutter_reach_hard_s016__aet_sequential_minjerk__20260803_193946_2341111/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s016__86182c39f9b1/closed_loop_runs/clutter_reach_hard_s016__fixed_morphology__20260803_193550_2326757/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s016__86182c39f9b1/closed_loop_runs/clutter_reach_hard_s016__global_batch_wb__20260803_194808_2371593/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s016__86182c39f9b1/closed_loop_runs/clutter_reach_hard_s016__informed_rrtstar_wb__20260803_194256_2353086/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s016__86182c39f9b1/closed_loop_runs/clutter_reach_hard_s016__rolling_wb_v2__20260803_193235_2314422/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s017__11b9abd88ff1/closed_loop_runs/clutter_reach_hard_s017__aet_sequential_minjerk__20260802_015949_1890491/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s017__11b9abd88ff1/closed_loop_runs/clutter_reach_hard_s017__fixed_morphology__20260802_015556_1876063/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s017__11b9abd88ff1/closed_loop_runs/clutter_reach_hard_s017__global_batch_wb__20260802_020822_1921783/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s017__11b9abd88ff1/closed_loop_runs/clutter_reach_hard_s017__informed_rrtstar_wb__20260802_020259_1902521/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s017__11b9abd88ff1/closed_loop_runs/clutter_reach_hard_s017__rolling_wb_v2__20260802_021130_1933810/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s018__f683444433dd/closed_loop_runs/clutter_reach_hard_s018__aet_sequential_minjerk__20260804_110857_625430/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s018__f683444433dd/closed_loop_runs/clutter_reach_hard_s018__fixed_morphology__20260804_111553_639692/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s018__f683444433dd/closed_loop_runs/clutter_reach_hard_s018__global_batch_wb__20260804_111108_630827/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s018__f683444433dd/closed_loop_runs/clutter_reach_hard_s018__informed_rrtstar_wb__20260804_111000_628154/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s018__f683444433dd/closed_loop_runs/clutter_reach_hard_s018__rolling_wb_v2__20260804_111211_633541/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "ORACLE_AUDIT_FAILURE",
+      "scenario": "clutter_reach_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s019__2597f8cbc2a0/closed_loop_runs/clutter_reach_hard_s019__aet_sequential_minjerk__20260802_071838_3033278/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s019__2597f8cbc2a0/closed_loop_runs/clutter_reach_hard_s019__fixed_morphology__20260802_071728_3027775/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s019__2597f8cbc2a0/closed_loop_runs/clutter_reach_hard_s019__global_batch_wb__20260802_070941_2998306/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s019__2597f8cbc2a0/closed_loop_runs/clutter_reach_hard_s019__informed_rrtstar_wb__20260802_070516_2982103/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s019__2597f8cbc2a0/closed_loop_runs/clutter_reach_hard_s019__rolling_wb_v2__20260802_071422_3015708/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s020__27215c8f9c47/closed_loop_runs/clutter_reach_hard_s020__aet_sequential_minjerk__20260802_074316_3122493/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s020__27215c8f9c47/closed_loop_runs/clutter_reach_hard_s020__fixed_morphology__20260802_074202_3116739/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s020__27215c8f9c47/closed_loop_runs/clutter_reach_hard_s020__global_batch_wb__20260802_073534_3091271/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s020__27215c8f9c47/closed_loop_runs/clutter_reach_hard_s020__informed_rrtstar_wb__20260802_074429_3128198/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s020__27215c8f9c47/closed_loop_runs/clutter_reach_hard_s020__rolling_wb_v2__20260802_073649_3097138/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s011__ce4d48b1f918/closed_loop_runs/clutter_reach_medium_s011__aet_sequential_minjerk__20260804_065624_300551/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s011__ce4d48b1f918/closed_loop_runs/clutter_reach_medium_s011__fixed_morphology__20260804_065248_295610/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s011__ce4d48b1f918/closed_loop_runs/clutter_reach_medium_s011__global_batch_wb__20260804_064702_286856/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s011__ce4d48b1f918/closed_loop_runs/clutter_reach_medium_s011__informed_rrtstar_wb__20260804_065924_305005/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s011__ce4d48b1f918/closed_loop_runs/clutter_reach_medium_s011__rolling_wb_v2__20260804_064959_291331/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s012__9ae81e7ab8a0/closed_loop_runs/clutter_reach_medium_s012__aet_sequential_minjerk__20260803_232550_3150535/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s012__9ae81e7ab8a0/closed_loop_runs/clutter_reach_medium_s012__fixed_morphology__20260803_232440_3145214/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s012__9ae81e7ab8a0/closed_loop_runs/clutter_reach_medium_s012__global_batch_wb__20260803_233234_3175431/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s012__9ae81e7ab8a0/closed_loop_runs/clutter_reach_medium_s012__informed_rrtstar_wb__20260803_232703_3156018/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s012__9ae81e7ab8a0/closed_loop_runs/clutter_reach_medium_s012__rolling_wb_v2__20260803_232128_3133212/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s013__da4e9111a004/closed_loop_runs/clutter_reach_medium_s013__aet_sequential_minjerk__20260804_073254_345724/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s013__da4e9111a004/closed_loop_runs/clutter_reach_medium_s013__fixed_morphology__20260804_072923_340814/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s013__da4e9111a004/closed_loop_runs/clutter_reach_medium_s013__global_batch_wb__20260804_074015_355916/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s013__da4e9111a004/closed_loop_runs/clutter_reach_medium_s013__informed_rrtstar_wb__20260804_073536_349928/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s013__da4e9111a004/closed_loop_runs/clutter_reach_medium_s013__rolling_wb_v2__20260804_074256_360121/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s014__7ae8f30a684c/closed_loop_runs/clutter_reach_medium_s014__aet_sequential_minjerk__20260803_160159_1550227/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s014__7ae8f30a684c/closed_loop_runs/clutter_reach_medium_s014__fixed_morphology__20260803_161647_1606180/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s014__7ae8f30a684c/closed_loop_runs/clutter_reach_medium_s014__global_batch_wb__20260803_161027_1581630/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s014__7ae8f30a684c/closed_loop_runs/clutter_reach_medium_s014__informed_rrtstar_wb__20260803_160509_1562444/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s014__7ae8f30a684c/closed_loop_runs/clutter_reach_medium_s014__rolling_wb_v2__20260803_161339_1593970/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s015__173688096539/closed_loop_runs/clutter_reach_medium_s015__aet_sequential_minjerk__20260802_030944_2142737/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s015__173688096539/closed_loop_runs/clutter_reach_medium_s015__fixed_morphology__20260802_030833_2137260/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s015__173688096539/closed_loop_runs/clutter_reach_medium_s015__global_batch_wb__20260802_030409_2119455/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "clutter_reach_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s015__173688096539/closed_loop_runs/clutter_reach_medium_s015__informed_rrtstar_wb__20260802_025951_2103722/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s015__173688096539/closed_loop_runs/clutter_reach_medium_s015__rolling_wb_v2__20260802_030520_2125006/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s016__2cb5998f9351/closed_loop_runs/clutter_reach_medium_s016__aet_sequential_minjerk__20260802_085434_3384987/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s016__2cb5998f9351/closed_loop_runs/clutter_reach_medium_s016__fixed_morphology__20260802_085030_3369899/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s016__2cb5998f9351/closed_loop_runs/clutter_reach_medium_s016__global_batch_wb__20260802_084408_3345218/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s016__2cb5998f9351/closed_loop_runs/clutter_reach_medium_s016__informed_rrtstar_wb__20260802_085746_3397395/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s016__2cb5998f9351/closed_loop_runs/clutter_reach_medium_s016__rolling_wb_v2__20260802_084721_3357614/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s017__f2cc01d855c8/closed_loop_runs/clutter_reach_medium_s017__aet_sequential_minjerk__20260804_095741_532926/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s017__f2cc01d855c8/closed_loop_runs/clutter_reach_medium_s017__fixed_morphology__20260804_095401_527624/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s017__f2cc01d855c8/closed_loop_runs/clutter_reach_medium_s017__global_batch_wb__20260804_100521_543604/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s017__f2cc01d855c8/closed_loop_runs/clutter_reach_medium_s017__informed_rrtstar_wb__20260804_100031_537365/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s017__f2cc01d855c8/closed_loop_runs/clutter_reach_medium_s017__rolling_wb_v2__20260804_095112_523238/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s018__c7bfa158c325/closed_loop_runs/clutter_reach_medium_s018__aet_sequential_minjerk__20260804_053409_194415/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s018__c7bfa158c325/closed_loop_runs/clutter_reach_medium_s018__fixed_morphology__20260804_052934_188373/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s018__c7bfa158c325/closed_loop_runs/clutter_reach_medium_s018__global_batch_wb__20260804_054306_206396/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s018__c7bfa158c325/closed_loop_runs/clutter_reach_medium_s018__informed_rrtstar_wb__20260804_053736_199455/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s018__c7bfa158c325/closed_loop_runs/clutter_reach_medium_s018__rolling_wb_v2__20260804_054629_211366/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s019__bdc27eba5f67/closed_loop_runs/clutter_reach_medium_s019__aet_sequential_minjerk__20260804_024751_3873584/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s019__bdc27eba5f67/closed_loop_runs/clutter_reach_medium_s019__fixed_morphology__20260804_030251_3929050/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s019__bdc27eba5f67/closed_loop_runs/clutter_reach_medium_s019__global_batch_wb__20260804_025627_3904765/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s019__bdc27eba5f67/closed_loop_runs/clutter_reach_medium_s019__informed_rrtstar_wb__20260804_025110_3886075/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s019__bdc27eba5f67/closed_loop_runs/clutter_reach_medium_s019__rolling_wb_v2__20260804_025941_3917004/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s020__1c59f72aa659/closed_loop_runs/clutter_reach_medium_s020__aet_sequential_minjerk__20260802_041628_2381744/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s020__1c59f72aa659/closed_loop_runs/clutter_reach_medium_s020__fixed_morphology__20260802_041236_2367348/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s020__1c59f72aa659/closed_loop_runs/clutter_reach_medium_s020__global_batch_wb__20260802_040620_2343164/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s020__1c59f72aa659/closed_loop_runs/clutter_reach_medium_s020__informed_rrtstar_wb__20260802_040105_2324298/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s020__1c59f72aa659/closed_loop_runs/clutter_reach_medium_s020__rolling_wb_v2__20260802_040924_2355026/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "clutter_reach_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s011__c566a885105a/closed_loop_runs/multi_passage_easy_s011__aet_sequential_minjerk__20260804_050920_163489/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s011__c566a885105a/closed_loop_runs/multi_passage_easy_s011__fixed_morphology__20260804_050547_158175/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s011__c566a885105a/closed_loop_runs/multi_passage_easy_s011__global_batch_wb__20260804_051625_174112/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s011__c566a885105a/closed_loop_runs/multi_passage_easy_s011__informed_rrtstar_wb__20260804_051216_168252/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s011__c566a885105a/closed_loop_runs/multi_passage_easy_s011__rolling_wb_v2__20260804_050220_152771/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s012__95da48371b61/closed_loop_runs/multi_passage_easy_s012__aet_sequential_minjerk__20260803_225401_3037271/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s012__95da48371b61/closed_loop_runs/multi_passage_easy_s012__fixed_morphology__20260803_224948_3021759/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s012__95da48371b61/closed_loop_runs/multi_passage_easy_s012__global_batch_wb__20260803_230333_3071781/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s012__95da48371b61/closed_loop_runs/multi_passage_easy_s012__informed_rrtstar_wb__20260803_225731_3050486/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s012__95da48371b61/closed_loop_runs/multi_passage_easy_s012__rolling_wb_v2__20260803_230705_3085025/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s013__e1f799053bf1/closed_loop_runs/multi_passage_easy_s013__aet_sequential_minjerk__20260804_081702_400838/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s013__e1f799053bf1/closed_loop_runs/multi_passage_easy_s013__fixed_morphology__20260804_083009_421266/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s013__e1f799053bf1/closed_loop_runs/multi_passage_easy_s013__global_batch_wb__20260804_082401_411372/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s013__e1f799053bf1/closed_loop_runs/multi_passage_easy_s013__informed_rrtstar_wb__20260804_081953_405536/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s013__e1f799053bf1/closed_loop_runs/multi_passage_easy_s013__rolling_wb_v2__20260804_082652_416072/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s014__bac644d6a319/closed_loop_runs/multi_passage_easy_s014__aet_sequential_minjerk__20260804_021438_3757700/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s014__bac644d6a319/closed_loop_runs/multi_passage_easy_s014__fixed_morphology__20260804_021047_3743333/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s014__bac644d6a319/closed_loop_runs/multi_passage_easy_s014__global_batch_wb__20260804_020324_3715450/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s014__bac644d6a319/closed_loop_runs/multi_passage_easy_s014__informed_rrtstar_wb__20260804_015900_3699429/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s014__bac644d6a319/closed_loop_runs/multi_passage_easy_s014__rolling_wb_v2__20260804_020653_3728628/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s015__13d80970c948/closed_loop_runs/multi_passage_easy_s015__aet_sequential_minjerk__20260802_023850_2031389/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s015__13d80970c948/closed_loop_runs/multi_passage_easy_s015__fixed_morphology__20260802_023429_2015200/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s015__13d80970c948/closed_loop_runs/multi_passage_easy_s015__global_batch_wb__20260802_022626_1983925/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s015__13d80970c948/closed_loop_runs/multi_passage_easy_s015__informed_rrtstar_wb__20260802_024338_2049125/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s015__13d80970c948/closed_loop_runs/multi_passage_easy_s015__rolling_wb_v2__20260802_023056_2000570/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s016__83bff398f6eb/closed_loop_runs/multi_passage_easy_s016__aet_sequential_minjerk__20260803_183944_2123279/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s016__83bff398f6eb/closed_loop_runs/multi_passage_easy_s016__fixed_morphology__20260803_183558_2108530/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s016__83bff398f6eb/closed_loop_runs/multi_passage_easy_s016__global_batch_wb__20260803_184721_2152907/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s016__83bff398f6eb/closed_loop_runs/multi_passage_easy_s016__informed_rrtstar_wb__20260803_184252_2135767/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s016__83bff398f6eb/closed_loop_runs/multi_passage_easy_s016__rolling_wb_v2__20260803_183229_2094590/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s017__b523ce4bcd1a/closed_loop_runs/multi_passage_easy_s017__aet_sequential_minjerk__20260804_010940_3524582/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s017__b523ce4bcd1a/closed_loop_runs/multi_passage_easy_s017__fixed_morphology__20260804_010547_3510149/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s017__b523ce4bcd1a/closed_loop_runs/multi_passage_easy_s017__global_batch_wb__20260804_011743_3554159/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s017__b523ce4bcd1a/closed_loop_runs/multi_passage_easy_s017__informed_rrtstar_wb__20260804_011310_3537697/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s017__b523ce4bcd1a/closed_loop_runs/multi_passage_easy_s017__rolling_wb_v2__20260804_011908_3560493/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s018__ca5c380ba547/closed_loop_runs/multi_passage_easy_s018__aet_sequential_minjerk__20260804_062011_251701/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s018__ca5c380ba547/closed_loop_runs/multi_passage_easy_s018__fixed_morphology__20260804_063315_272233/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s018__ca5c380ba547/closed_loop_runs/multi_passage_easy_s018__global_batch_wb__20260804_062712_262467/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s018__ca5c380ba547/closed_loop_runs/multi_passage_easy_s018__informed_rrtstar_wb__20260804_062304_256537/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s018__ca5c380ba547/closed_loop_runs/multi_passage_easy_s018__rolling_wb_v2__20260804_063003_267137/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s019__f6cc110ed04f/closed_loop_runs/multi_passage_easy_s019__aet_sequential_minjerk__20260804_114159_673634/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s019__f6cc110ed04f/closed_loop_runs/multi_passage_easy_s019__fixed_morphology__20260804_113822_668360/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s019__f6cc110ed04f/closed_loop_runs/multi_passage_easy_s019__global_batch_wb__20260804_113149_658317/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s019__f6cc110ed04f/closed_loop_runs/multi_passage_easy_s019__informed_rrtstar_wb__20260804_112725_652350/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s019__f6cc110ed04f/closed_loop_runs/multi_passage_easy_s019__rolling_wb_v2__20260804_113453_663043/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s020__f65951b117a4/closed_loop_runs/multi_passage_easy_s020__aet_sequential_minjerk__20260804_105140_605516/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s020__f65951b117a4/closed_loop_runs/multi_passage_easy_s020__fixed_morphology__20260804_104809_600260/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s020__f65951b117a4/closed_loop_runs/multi_passage_easy_s020__global_batch_wb__20260804_104045_589254/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s020__f65951b117a4/closed_loop_runs/multi_passage_easy_s020__informed_rrtstar_wb__20260804_105431_610142/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s020__f65951b117a4/closed_loop_runs/multi_passage_easy_s020__rolling_wb_v2__20260804_104341_593954/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__aet_sequential_minjerk__20260803_175214_1939952/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__fixed_morphology__20260803_175932_1972348/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__global_batch_wb__20260803_175444_1952123/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__informed_rrtstar_wb__20260803_175325_1945901/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s012__0f53b611e562/closed_loop_runs/multi_passage_hard_s012__aet_sequential_minjerk__20260802_011307_1724506/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s012__0f53b611e562/closed_loop_runs/multi_passage_hard_s012__fixed_morphology__20260802_011151_1718513/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s012__0f53b611e562/closed_loop_runs/multi_passage_hard_s012__global_batch_wb__20260802_010650_1698114/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s012__0f53b611e562/closed_loop_runs/multi_passage_hard_s012__informed_rrtstar_wb__20260802_010527_1691810/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s012__0f53b611e562/closed_loop_runs/multi_passage_hard_s012__rolling_wb_v2__20260802_010803_1703997/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s013__72fe82e68b24/closed_loop_runs/multi_passage_hard_s013__aet_sequential_minjerk__20260803_152608_1419446/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s013__72fe82e68b24/closed_loop_runs/multi_passage_hard_s013__fixed_morphology__20260803_152457_1413455/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s013__72fe82e68b24/closed_loop_runs/multi_passage_hard_s013__global_batch_wb__20260803_152020_1393546/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s013__72fe82e68b24/closed_loop_runs/multi_passage_hard_s013__informed_rrtstar_wb__20260803_152717_1425374/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s013__72fe82e68b24/closed_loop_runs/multi_passage_hard_s013__rolling_wb_v2__20260803_152129_1399466/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s014__6d81190fbf66/closed_loop_runs/multi_passage_hard_s014__aet_sequential_minjerk__20260803_150524_1337984/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s014__6d81190fbf66/closed_loop_runs/multi_passage_hard_s014__fixed_morphology__20260803_150411_1332124/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s014__6d81190fbf66/closed_loop_runs/multi_passage_hard_s014__global_batch_wb__20260803_150759_1350231/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s014__6d81190fbf66/closed_loop_runs/multi_passage_hard_s014__informed_rrtstar_wb__20260803_150638_1343983/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s014__6d81190fbf66/closed_loop_runs/multi_passage_hard_s014__rolling_wb_v2__20260803_150007_1316430/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s015__ab96d3ea7093/closed_loop_runs/multi_passage_hard_s015__aet_sequential_minjerk__20260804_002948_3380049/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s015__ab96d3ea7093/closed_loop_runs/multi_passage_hard_s015__fixed_morphology__20260804_002834_3374243/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s015__ab96d3ea7093/closed_loop_runs/multi_passage_hard_s015__global_batch_wb__20260804_003219_3391818/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s015__ab96d3ea7093/closed_loop_runs/multi_passage_hard_s015__informed_rrtstar_wb__20260804_003059_3385743/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s015__ab96d3ea7093/closed_loop_runs/multi_passage_hard_s015__rolling_wb_v2__20260804_003330_3397552/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s016__242db2347ae1/closed_loop_runs/multi_passage_hard_s016__aet_sequential_minjerk__20260802_064327_2900640/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s016__242db2347ae1/closed_loop_runs/multi_passage_hard_s016__fixed_morphology__20260802_065057_2932966/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s016__242db2347ae1/closed_loop_runs/multi_passage_hard_s016__global_batch_wb__20260802_064603_2912932/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s016__242db2347ae1/closed_loop_runs/multi_passage_hard_s016__informed_rrtstar_wb__20260802_064441_2906645/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s016__242db2347ae1/closed_loop_runs/multi_passage_hard_s016__rolling_wb_v2__20260802_064720_2919047/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s017__5a36845b3b0d/closed_loop_runs/multi_passage_hard_s017__aet_sequential_minjerk__20260802_145855_523187/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s017__5a36845b3b0d/closed_loop_runs/multi_passage_hard_s017__fixed_morphology__20260802_145746_517256/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s017__5a36845b3b0d/closed_loop_runs/multi_passage_hard_s017__global_batch_wb__20260802_145238_496255/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s017__5a36845b3b0d/closed_loop_runs/multi_passage_hard_s017__informed_rrtstar_wb__20260802_145117_489980/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s017__5a36845b3b0d/closed_loop_runs/multi_passage_hard_s017__rolling_wb_v2__20260802_145350_502185/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s018__be7c9d09f352/closed_loop_runs/multi_passage_hard_s018__aet_sequential_minjerk__20260804_032428_4006453/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s018__be7c9d09f352/closed_loop_runs/multi_passage_hard_s018__fixed_morphology__20260804_032314_4000537/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s018__be7c9d09f352/closed_loop_runs/multi_passage_hard_s018__global_batch_wb__20260804_031807_3979919/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s018__be7c9d09f352/closed_loop_runs/multi_passage_hard_s018__informed_rrtstar_wb__20260804_032539_4012286/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s018__be7c9d09f352/closed_loop_runs/multi_passage_hard_s018__rolling_wb_v2__20260804_031918_3985739/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s019__e659e9f8d55a/closed_loop_runs/multi_passage_hard_s019__aet_sequential_minjerk__20260804_084826_444621/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s019__e659e9f8d55a/closed_loop_runs/multi_passage_hard_s019__fixed_morphology__20260804_084725_441791/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s019__e659e9f8d55a/closed_loop_runs/multi_passage_hard_s019__global_batch_wb__20260804_085650_456398/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s019__e659e9f8d55a/closed_loop_runs/multi_passage_hard_s019__informed_rrtstar_wb__20260804_084928_447534/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s019__e659e9f8d55a/closed_loop_runs/multi_passage_hard_s019__rolling_wb_v2__20260804_084404_436596/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s020__8ad3da09c3cc/closed_loop_runs/multi_passage_hard_s020__aet_sequential_minjerk__20260803_202930_2515815/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s020__8ad3da09c3cc/closed_loop_runs/multi_passage_hard_s020__fixed_morphology__20260803_202817_2509942/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s020__8ad3da09c3cc/closed_loop_runs/multi_passage_hard_s020__global_batch_wb__20260803_203202_2527849/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s020__8ad3da09c3cc/closed_loop_runs/multi_passage_hard_s020__informed_rrtstar_wb__20260803_203040_2521591/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s020__8ad3da09c3cc/closed_loop_runs/multi_passage_hard_s020__rolling_wb_v2__20260803_203313_2533606/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s011__1d65567df47b/closed_loop_runs/multi_passage_medium_s011__aet_sequential_minjerk__20260802_050317_2546941/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s011__1d65567df47b/closed_loop_runs/multi_passage_medium_s011__fixed_morphology__20260802_045852_2530585/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s011__1d65567df47b/closed_loop_runs/multi_passage_medium_s011__global_batch_wb__20260802_051620_2593251/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s011__1d65567df47b/closed_loop_runs/multi_passage_medium_s011__informed_rrtstar_wb__20260802_050628_2559193/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s011__1d65567df47b/closed_loop_runs/multi_passage_medium_s011__rolling_wb_v2__20260802_051943_2606148/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s012__9f0c868ca3db/closed_loop_runs/multi_passage_medium_s012__aet_sequential_minjerk__20260803_234453_3216873/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s012__9f0c868ca3db/closed_loop_runs/multi_passage_medium_s012__fixed_morphology__20260803_235214_3248476/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s012__9f0c868ca3db/closed_loop_runs/multi_passage_medium_s012__global_batch_wb__20260803_234729_3229073/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s012__9f0c868ca3db/closed_loop_runs/multi_passage_medium_s012__informed_rrtstar_wb__20260803_234608_3222913/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s012__9f0c868ca3db/closed_loop_runs/multi_passage_medium_s012__rolling_wb_v2__20260803_234843_3235089/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s013__916b8e974c5c/closed_loop_runs/multi_passage_medium_s013__aet_sequential_minjerk__20260803_221140_2889706/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s013__916b8e974c5c/closed_loop_runs/multi_passage_medium_s013__fixed_morphology__20260803_221024_2883657/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s013__916b8e974c5c/closed_loop_runs/multi_passage_medium_s013__global_batch_wb__20260803_220522_2863212/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s013__916b8e974c5c/closed_loop_runs/multi_passage_medium_s013__informed_rrtstar_wb__20260803_220004_2844160/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s013__916b8e974c5c/closed_loop_runs/multi_passage_medium_s013__rolling_wb_v2__20260803_220636_2869180/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s014__36b39b438074/closed_loop_runs/multi_passage_medium_s014__aet_sequential_minjerk__20260802_101921_3692405/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s014__36b39b438074/closed_loop_runs/multi_passage_medium_s014__fixed_morphology__20260802_101410_3673083/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s014__36b39b438074/closed_loop_runs/multi_passage_medium_s014__global_batch_wb__20260802_100547_3641145/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s014__36b39b438074/closed_loop_runs/multi_passage_medium_s014__informed_rrtstar_wb__20260802_102409_3710340/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s014__36b39b438074/closed_loop_runs/multi_passage_medium_s014__rolling_wb_v2__20260802_101029_3658762/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s015__f331369fda8e/closed_loop_runs/multi_passage_medium_s015__aet_sequential_minjerk__20260804_102232_565979/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s015__f331369fda8e/closed_loop_runs/multi_passage_medium_s015__fixed_morphology__20260804_102132_563129/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s015__f331369fda8e/closed_loop_runs/multi_passage_medium_s015__global_batch_wb__20260804_102925_576313/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s015__f331369fda8e/closed_loop_runs/multi_passage_medium_s015__informed_rrtstar_wb__20260804_102330_568846/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s015__f331369fda8e/closed_loop_runs/multi_passage_medium_s015__rolling_wb_v2__20260804_101823_558043/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s016__80d8a5b81c3b/closed_loop_runs/multi_passage_medium_s016__aet_sequential_minjerk__20260803_181300_2021503/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s016__80d8a5b81c3b/closed_loop_runs/multi_passage_medium_s016__fixed_morphology__20260803_181147_2015574/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s016__80d8a5b81c3b/closed_loop_runs/multi_passage_medium_s016__global_batch_wb__20260803_181536_2034027/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s016__80d8a5b81c3b/closed_loop_runs/multi_passage_medium_s016__informed_rrtstar_wb__20260803_181415_2027690/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s016__80d8a5b81c3b/closed_loop_runs/multi_passage_medium_s016__rolling_wb_v2__20260803_181653_2040140/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s017__859054bfa5ce/closed_loop_runs/multi_passage_medium_s017__aet_sequential_minjerk__20260803_190130_2203225/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s017__859054bfa5ce/closed_loop_runs/multi_passage_medium_s017__fixed_morphology__20260803_191709_2263001/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s017__859054bfa5ce/closed_loop_runs/multi_passage_medium_s017__global_batch_wb__20260803_191000_2235799/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s017__859054bfa5ce/closed_loop_runs/multi_passage_medium_s017__informed_rrtstar_wb__20260803_190451_2216781/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s017__859054bfa5ce/closed_loop_runs/multi_passage_medium_s017__rolling_wb_v2__20260803_191326_2248956/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s018__4b95e85b3ab3/closed_loop_runs/multi_passage_medium_s018__aet_sequential_minjerk__20260802_131240_129124/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s018__4b95e85b3ab3/closed_loop_runs/multi_passage_medium_s018__fixed_morphology__20260802_130729_109991/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s018__4b95e85b3ab3/closed_loop_runs/multi_passage_medium_s018__global_batch_wb__20260802_125517_62076/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s018__4b95e85b3ab3/closed_loop_runs/multi_passage_medium_s018__informed_rrtstar_wb__20260802_124930_41072/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s018__4b95e85b3ab3/closed_loop_runs/multi_passage_medium_s018__rolling_wb_v2__20260802_130355_96106/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s019__c2f9f9c524f3/closed_loop_runs/multi_passage_medium_s019__aet_sequential_minjerk__20260804_044224_90631/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s019__c2f9f9c524f3/closed_loop_runs/multi_passage_medium_s019__fixed_morphology__20260804_043755_74295/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s019__c2f9f9c524f3/closed_loop_runs/multi_passage_medium_s019__global_batch_wb__20260804_043042_47030/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s019__c2f9f9c524f3/closed_loop_runs/multi_passage_medium_s019__informed_rrtstar_wb__20260804_044605_104439/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s019__c2f9f9c524f3/closed_loop_runs/multi_passage_medium_s019__rolling_wb_v2__20260804_043418_60544/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s020__7eb56a68e131/closed_loop_runs/multi_passage_medium_s020__aet_sequential_minjerk__20260803_172136_1839432/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s020__7eb56a68e131/closed_loop_runs/multi_passage_medium_s020__fixed_morphology__20260803_172024_1833476/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s020__7eb56a68e131/closed_loop_runs/multi_passage_medium_s020__global_batch_wb__20260803_172412_1851625/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s020__7eb56a68e131/closed_loop_runs/multi_passage_medium_s020__informed_rrtstar_wb__20260803_172249_1845344/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "multi_passage_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s020__7eb56a68e131/closed_loop_runs/multi_passage_medium_s020__rolling_wb_v2__20260803_171649_1819541/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "multi_passage_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s011__ea4e65053cbc/closed_loop_runs/passage_sweep_easy_s011__aet_sequential_minjerk__20260804_092656_493476/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s011__ea4e65053cbc/closed_loop_runs/passage_sweep_easy_s011__fixed_morphology__20260804_093830_510199/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s011__ea4e65053cbc/closed_loop_runs/passage_sweep_easy_s011__global_batch_wb__20260804_093320_502404/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s011__ea4e65053cbc/closed_loop_runs/passage_sweep_easy_s011__informed_rrtstar_wb__20260804_092901_496922/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s011__ea4e65053cbc/closed_loop_runs/passage_sweep_easy_s011__rolling_wb_v2__20260804_093549_506240/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s012__478488a4e55a/closed_loop_runs/passage_sweep_easy_s012__aet_sequential_minjerk__20260802_121316_4105022/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s012__478488a4e55a/closed_loop_runs/passage_sweep_easy_s012__fixed_morphology__20260802_121038_4094867/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s012__478488a4e55a/closed_loop_runs/passage_sweep_easy_s012__global_batch_wb__20260802_120533_4075132/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s012__478488a4e55a/closed_loop_runs/passage_sweep_easy_s012__informed_rrtstar_wb__20260802_120216_4062948/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s012__478488a4e55a/closed_loop_runs/passage_sweep_easy_s012__rolling_wb_v2__20260802_120811_4085311/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s013__8d54c7b5de7f/closed_loop_runs/passage_sweep_easy_s013__aet_sequential_minjerk__20260803_205346_2607732/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s013__8d54c7b5de7f/closed_loop_runs/passage_sweep_easy_s013__fixed_morphology__20260803_205111_2597332/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s013__8d54c7b5de7f/closed_loop_runs/passage_sweep_easy_s013__global_batch_wb__20260803_204615_2577375/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s013__8d54c7b5de7f/closed_loop_runs/passage_sweep_easy_s013__informed_rrtstar_wb__20260803_205558_2616847/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s013__8d54c7b5de7f/closed_loop_runs/passage_sweep_easy_s013__rolling_wb_v2__20260803_204850_2587771/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s014__2c2e34b82bd1/closed_loop_runs/passage_sweep_easy_s014__aet_sequential_minjerk__20260802_082359_3273193/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s014__2c2e34b82bd1/closed_loop_runs/passage_sweep_easy_s014__fixed_morphology__20260802_082257_3268423/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s014__2c2e34b82bd1/closed_loop_runs/passage_sweep_easy_s014__global_batch_wb__20260802_082923_3293988/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "EXECUTION_HANDOFF_ABORT",
+      "scenario": "passage_sweep_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s014__2c2e34b82bd1/closed_loop_runs/passage_sweep_easy_s014__informed_rrtstar_wb__20260802_082616_3282274/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s014__2c2e34b82bd1/closed_loop_runs/passage_sweep_easy_s014__rolling_wb_v2__20260802_082031_3258856/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s015__3b6c0d05c379/closed_loop_runs/passage_sweep_easy_s015__aet_sequential_minjerk__20260802_104134_3772512/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s015__3b6c0d05c379/closed_loop_runs/passage_sweep_easy_s015__fixed_morphology__20260802_103858_3761314/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s015__3b6c0d05c379/closed_loop_runs/passage_sweep_easy_s015__global_batch_wb__20260802_104700_3793392/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s015__3b6c0d05c379/closed_loop_runs/passage_sweep_easy_s015__informed_rrtstar_wb__20260802_104348_3781442/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s015__3b6c0d05c379/closed_loop_runs/passage_sweep_easy_s015__rolling_wb_v2__20260802_104944_3803963/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s016__c991470e84f9/closed_loop_runs/passage_sweep_easy_s016__aet_sequential_minjerk__20260804_055746_223481/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s016__c991470e84f9/closed_loop_runs/passage_sweep_easy_s016__fixed_morphology__20260804_060718_238000/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s016__c991470e84f9/closed_loop_runs/passage_sweep_easy_s016__global_batch_wb__20260804_060244_230914/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s016__c991470e84f9/closed_loop_runs/passage_sweep_easy_s016__informed_rrtstar_wb__20260804_055948_226829/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s016__c991470e84f9/closed_loop_runs/passage_sweep_easy_s016__rolling_wb_v2__20260804_060507_234580/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s017__f8d089ebf8a7/closed_loop_runs/passage_sweep_easy_s017__aet_sequential_minjerk__20260804_120405_701394/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s017__f8d089ebf8a7/closed_loop_runs/passage_sweep_easy_s017__fixed_morphology__20260804_120136_697722/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s017__f8d089ebf8a7/closed_loop_runs/passage_sweep_easy_s017__global_batch_wb__20260804_115635_690231/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s017__f8d089ebf8a7/closed_loop_runs/passage_sweep_easy_s017__informed_rrtstar_wb__20260804_115330_686028/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s017__f8d089ebf8a7/closed_loop_runs/passage_sweep_easy_s017__rolling_wb_v2__20260804_115925_694314/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s018__c1c95c2a2c58/closed_loop_runs/passage_sweep_easy_s018__aet_sequential_minjerk__20260804_034403_4077310/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s018__c1c95c2a2c58/closed_loop_runs/passage_sweep_easy_s018__fixed_morphology__20260804_034130_4067685/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s018__c1c95c2a2c58/closed_loop_runs/passage_sweep_easy_s018__global_batch_wb__20260804_033631_4048577/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s018__c1c95c2a2c58/closed_loop_runs/passage_sweep_easy_s018__informed_rrtstar_wb__20260804_034620_4086216/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s018__c1c95c2a2c58/closed_loop_runs/passage_sweep_easy_s018__rolling_wb_v2__20260804_033908_4058571/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s019__35f75f4eb5ad/closed_loop_runs/passage_sweep_easy_s019__aet_sequential_minjerk__20260802_094548_3570038/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s019__35f75f4eb5ad/closed_loop_runs/passage_sweep_easy_s019__fixed_morphology__20260802_094315_3560104/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s019__35f75f4eb5ad/closed_loop_runs/passage_sweep_easy_s019__global_batch_wb__20260802_095152_3593336/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s019__35f75f4eb5ad/closed_loop_runs/passage_sweep_easy_s019__informed_rrtstar_wb__20260802_094803_3579105/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s019__35f75f4eb5ad/closed_loop_runs/passage_sweep_easy_s019__rolling_wb_v2__20260802_094054_3550868/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s020__90330846cbfc/closed_loop_runs/passage_sweep_easy_s020__aet_sequential_minjerk__20260803_211036_2669483/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s020__90330846cbfc/closed_loop_runs/passage_sweep_easy_s020__fixed_morphology__20260803_210804_2659340/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s020__90330846cbfc/closed_loop_runs/passage_sweep_easy_s020__global_batch_wb__20260803_211559_2689871/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s020__90330846cbfc/closed_loop_runs/passage_sweep_easy_s020__informed_rrtstar_wb__20260803_211252_2678391/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s020__90330846cbfc/closed_loop_runs/passage_sweep_easy_s020__rolling_wb_v2__20260803_211839_2699966/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_easy_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s011__43b9d8c86279/closed_loop_runs/passage_sweep_hard_s011__aet_sequential_minjerk__20260802_114127_3990398/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s011__43b9d8c86279/closed_loop_runs/passage_sweep_hard_s011__fixed_morphology__20260802_113816_3978429/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s011__43b9d8c86279/closed_loop_runs/passage_sweep_hard_s011__global_batch_wb__20260802_113129_3953100/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s011__43b9d8c86279/closed_loop_runs/passage_sweep_hard_s011__informed_rrtstar_wb__20260802_114437_4002256/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s011__43b9d8c86279/closed_loop_runs/passage_sweep_hard_s011__rolling_wb_v2__20260802_113523_3967447/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s012__07b4823fb4de/closed_loop_runs/passage_sweep_hard_s012__aet_sequential_minjerk__20260802_004331_1615760/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s012__07b4823fb4de/closed_loop_runs/passage_sweep_hard_s012__fixed_morphology__20260802_004014_1603554/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s012__07b4823fb4de/closed_loop_runs/passage_sweep_hard_s012__global_batch_wb__20260802_005054_1642795/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s012__07b4823fb4de/closed_loop_runs/passage_sweep_hard_s012__informed_rrtstar_wb__20260802_004659_1628606/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s012__07b4823fb4de/closed_loop_runs/passage_sweep_hard_s012__rolling_wb_v2__20260802_003741_1593761/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s013__1ace3296e5f0/closed_loop_runs/passage_sweep_hard_s013__aet_sequential_minjerk__20260802_034415_2264517/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s013__1ace3296e5f0/closed_loop_runs/passage_sweep_hard_s013__fixed_morphology__20260802_034309_2259578/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s013__1ace3296e5f0/closed_loop_runs/passage_sweep_hard_s013__global_batch_wb__20260802_034631_2274574/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s013__1ace3296e5f0/closed_loop_runs/passage_sweep_hard_s013__informed_rrtstar_wb__20260802_034521_2269491/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s013__1ace3296e5f0/closed_loop_runs/passage_sweep_hard_s013__rolling_wb_v2__20260802_034736_2279509/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s014__fac54516e377/closed_loop_runs/passage_sweep_hard_s014__aet_sequential_minjerk__20260804_121423_712454/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s014__fac54516e377/closed_loop_runs/passage_sweep_hard_s014__fixed_morphology__20260804_122239_725697/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s014__fac54516e377/closed_loop_runs/passage_sweep_hard_s014__global_batch_wb__20260804_121853_719361/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s014__fac54516e377/closed_loop_runs/passage_sweep_hard_s014__informed_rrtstar_wb__20260804_121521_714759/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s014__fac54516e377/closed_loop_runs/passage_sweep_hard_s014__rolling_wb_v2__20260804_121951_721661/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s015__d9682ea6d444/closed_loop_runs/passage_sweep_hard_s015__aet_sequential_minjerk__20260804_071806_329223/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s015__d9682ea6d444/closed_loop_runs/passage_sweep_hard_s015__fixed_morphology__20260804_071709_327051/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s015__d9682ea6d444/closed_loop_runs/passage_sweep_hard_s015__global_batch_wb__20260804_071330_320866/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s015__d9682ea6d444/closed_loop_runs/passage_sweep_hard_s015__informed_rrtstar_wb__20260804_071225_318677/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s015__d9682ea6d444/closed_loop_runs/passage_sweep_hard_s015__rolling_wb_v2__20260804_071425_323096/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s016__4899363e6c8f/closed_loop_runs/passage_sweep_hard_s016__aet_sequential_minjerk__20260802_123005_4165956/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s016__4899363e6c8f/closed_loop_runs/passage_sweep_hard_s016__fixed_morphology__20260802_122902_4161107/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s016__4899363e6c8f/closed_loop_runs/passage_sweep_hard_s016__global_batch_wb__20260802_122434_4143351/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s016__4899363e6c8f/closed_loop_runs/passage_sweep_hard_s016__informed_rrtstar_wb__20260802_123108_4170856/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s016__4899363e6c8f/closed_loop_runs/passage_sweep_hard_s016__rolling_wb_v2__20260802_122538_4148279/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s017__7e56387a5b21/closed_loop_runs/passage_sweep_hard_s017__aet_sequential_minjerk__20260803_170218_1767512/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s017__7e56387a5b21/closed_loop_runs/passage_sweep_hard_s017__fixed_morphology__20260803_170114_1762519/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s017__7e56387a5b21/closed_loop_runs/passage_sweep_hard_s017__global_batch_wb__20260803_170433_1777735/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s017__7e56387a5b21/closed_loop_runs/passage_sweep_hard_s017__informed_rrtstar_wb__20260803_170323_1772579/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s017__7e56387a5b21/closed_loop_runs/passage_sweep_hard_s017__rolling_wb_v2__20260803_165841_1752316/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s018__b3eff051c1f2/closed_loop_runs/passage_sweep_hard_s018__aet_sequential_minjerk__20260804_004809_3447530/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s018__b3eff051c1f2/closed_loop_runs/passage_sweep_hard_s018__fixed_morphology__20260804_004705_3442696/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s018__b3eff051c1f2/closed_loop_runs/passage_sweep_hard_s018__global_batch_wb__20260804_005024_3457544/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s018__b3eff051c1f2/closed_loop_runs/passage_sweep_hard_s018__informed_rrtstar_wb__20260804_004913_3452415/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s018__b3eff051c1f2/closed_loop_runs/passage_sweep_hard_s018__rolling_wb_v2__20260804_005129_3462459/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s019__9f97751d1750/closed_loop_runs/passage_sweep_hard_s019__aet_sequential_minjerk__20260804_000243_3283829/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s019__9f97751d1750/closed_loop_runs/passage_sweep_hard_s019__fixed_morphology__20260804_001424_3327364/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s019__9f97751d1750/closed_loop_runs/passage_sweep_hard_s019__global_batch_wb__20260804_000859_3306927/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s019__9f97751d1750/closed_loop_runs/passage_sweep_hard_s019__informed_rrtstar_wb__20260804_000538_3294727/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s019__9f97751d1750/closed_loop_runs/passage_sweep_hard_s019__rolling_wb_v2__20260804_001154_3317802/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s020__52b164b34601/closed_loop_runs/passage_sweep_hard_s020__aet_sequential_minjerk__20260802_140246_313517/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s020__52b164b34601/closed_loop_runs/passage_sweep_hard_s020__fixed_morphology__20260802_140141_308509/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s020__52b164b34601/closed_loop_runs/passage_sweep_hard_s020__global_batch_wb__20260802_135735_291798/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s020__52b164b34601/closed_loop_runs/passage_sweep_hard_s020__informed_rrtstar_wb__20260802_135622_286463/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s020__52b164b34601/closed_loop_runs/passage_sweep_hard_s020__rolling_wb_v2__20260802_135840_296834/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_hard_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s011__4e4f1a13326b/closed_loop_runs/passage_sweep_medium_s011__aet_sequential_minjerk__20260802_134154_234734/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s011__4e4f1a13326b/closed_loop_runs/passage_sweep_medium_s011__fixed_morphology__20260802_133840_222623/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s011__4e4f1a13326b/closed_loop_runs/passage_sweep_medium_s011__global_batch_wb__20260802_133324_202262/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s011__4e4f1a13326b/closed_loop_runs/passage_sweep_medium_s011__informed_rrtstar_wb__20260802_132758_182841/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s011__4e4f1a13326b/closed_loop_runs/passage_sweep_medium_s011__rolling_wb_v2__20260802_133619_213349/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s011"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s012__73ed65834a2d/closed_loop_runs/passage_sweep_medium_s012__aet_sequential_minjerk__20260803_154512_1492504/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s012__73ed65834a2d/closed_loop_runs/passage_sweep_medium_s012__fixed_morphology__20260803_154228_1481681/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s012__73ed65834a2d/closed_loop_runs/passage_sweep_medium_s012__global_batch_wb__20260803_153738_1462174/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s012__73ed65834a2d/closed_loop_runs/passage_sweep_medium_s012__informed_rrtstar_wb__20260803_154739_1502345/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s012__73ed65834a2d/closed_loop_runs/passage_sweep_medium_s012__rolling_wb_v2__20260803_154005_1472009/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s012"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s013__da8265a22fea/closed_loop_runs/passage_sweep_medium_s013__aet_sequential_minjerk__20260804_075844_379232/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s013__da8265a22fea/closed_loop_runs/passage_sweep_medium_s013__fixed_morphology__20260804_075609_375451/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s013__da8265a22fea/closed_loop_runs/passage_sweep_medium_s013__global_batch_wb__20260804_080356_386850/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s013__da8265a22fea/closed_loop_runs/passage_sweep_medium_s013__informed_rrtstar_wb__20260804_080052_382687/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s013__da8265a22fea/closed_loop_runs/passage_sweep_medium_s013__rolling_wb_v2__20260804_075401_372068/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s013"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__aet_sequential_minjerk__20260802_160726_788331/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__fixed_morphology__20260802_160620_783106/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "EXECUTION_HANDOFF_ABORT",
+      "scenario": "passage_sweep_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__global_batch_wb__20260802_161538_820192/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__informed_rrtstar_wb__20260802_161036_800967/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__rolling_wb_v2__20260803_141639_1161814/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s014"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s015__1da406c4ccd1/closed_loop_runs/passage_sweep_medium_s015__aet_sequential_minjerk__20260802_053204_2648340/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s015__1da406c4ccd1/closed_loop_runs/passage_sweep_medium_s015__fixed_morphology__20260802_054526_2698107/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PLANNING_OR_LIVE_GATE_FAILURE",
+      "scenario": "passage_sweep_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s015__1da406c4ccd1/closed_loop_runs/passage_sweep_medium_s015__global_batch_wb__20260802_054013_2677990/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s015__1da406c4ccd1/closed_loop_runs/passage_sweep_medium_s015__informed_rrtstar_wb__20260802_053507_2659866/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s015__1da406c4ccd1/closed_loop_runs/passage_sweep_medium_s015__rolling_wb_v2__20260802_054255_2688332/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s015"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s016__91bd908cd2be/closed_loop_runs/passage_sweep_medium_s016__aet_sequential_minjerk__20260803_223515_2973218/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s016__91bd908cd2be/closed_loop_runs/passage_sweep_medium_s016__fixed_morphology__20260803_223203_2961423/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s016__91bd908cd2be/closed_loop_runs/passage_sweep_medium_s016__global_batch_wb__20260803_222631_2940606/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s016__91bd908cd2be/closed_loop_runs/passage_sweep_medium_s016__informed_rrtstar_wb__20260803_222213_2925306/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s016__91bd908cd2be/closed_loop_runs/passage_sweep_medium_s016__rolling_wb_v2__20260803_222939_2952278/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s016"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s017__19b8ab788b93/closed_loop_runs/passage_sweep_medium_s017__aet_sequential_minjerk__20260802_032755_2207696/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s017__19b8ab788b93/closed_loop_runs/passage_sweep_medium_s017__fixed_morphology__20260802_032512_2197442/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s017__19b8ab788b93/closed_loop_runs/passage_sweep_medium_s017__global_batch_wb__20260802_032006_2177707/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s017__19b8ab788b93/closed_loop_runs/passage_sweep_medium_s017__informed_rrtstar_wb__20260802_033031_2217706/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s017__19b8ab788b93/closed_loop_runs/passage_sweep_medium_s017__rolling_wb_v2__20260802_032229_2186999/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s017"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s018__5b5a6af20274/closed_loop_runs/passage_sweep_medium_s018__aet_sequential_minjerk__20260802_151623_591519/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s018__5b5a6af20274/closed_loop_runs/passage_sweep_medium_s018__fixed_morphology__20260802_151343_580660/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s018__5b5a6af20274/closed_loop_runs/passage_sweep_medium_s018__global_batch_wb__20260802_152202_614261/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s018__5b5a6af20274/closed_loop_runs/passage_sweep_medium_s018__informed_rrtstar_wb__20260802_151849_601604/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s018__5b5a6af20274/closed_loop_runs/passage_sweep_medium_s018__rolling_wb_v2__20260802_151124_571001/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s018"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s019__896971396165/closed_loop_runs/passage_sweep_medium_s019__aet_sequential_minjerk__20260803_200400_2425481/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s019__896971396165/closed_loop_runs/passage_sweep_medium_s019__fixed_morphology__20260803_200051_2413758/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s019__896971396165/closed_loop_runs/passage_sweep_medium_s019__global_batch_wb__20260803_201114_2451927/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s019__896971396165/closed_loop_runs/passage_sweep_medium_s019__informed_rrtstar_wb__20260803_200722_2437950/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s019__896971396165/closed_loop_runs/passage_sweep_medium_s019__rolling_wb_v2__20260803_201422_2463605/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s019"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s020__e845a629c2a8/closed_loop_runs/passage_sweep_medium_s020__aet_sequential_minjerk__20260804_090604_466973/trial_result.json",
+      "method": "aet_sequential_minjerk",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s020__e845a629c2a8/closed_loop_runs/passage_sweep_medium_s020__fixed_morphology__20260804_091610_482023/trial_result.json",
+      "method": "fixed_morphology",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s020__e845a629c2a8/closed_loop_runs/passage_sweep_medium_s020__global_batch_wb__20260804_091115_474581/trial_result.json",
+      "method": "global_batch_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s020__e845a629c2a8/closed_loop_runs/passage_sweep_medium_s020__informed_rrtstar_wb__20260804_090813_470423/trial_result.json",
+      "method": "informed_rrtstar_wb",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s020"
+    },
+    {
+      "file": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s020__e845a629c2a8/closed_loop_runs/passage_sweep_medium_s020__rolling_wb_v2__20260804_091359_478543/trial_result.json",
+      "method": "rolling_wb_v2",
+      "result": "PASS",
+      "scenario": "passage_sweep_medium_s020"
+    }
+  ],
+  "scenarios": 90,
+  "trials": 450
+}

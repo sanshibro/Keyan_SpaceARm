@@ -1,0 +1,10 @@
+{
+  "aggregate_returncode": 0,
+  "aggregate_stderr": "",
+  "aggregate_stdout": "{\n  \"complete_pairs\": 56,\n  \"duplicates\": [],\n  \"incomplete\": {},\n  \"paired_scenarios\": 56\n}\nTABLE=/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/progress_snapshots/trials_0280/main_table.csv\n",
+  "created_unix_time": 1785767938.3918579,
+  "main_table": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/progress_snapshots/trials_0280/main_table.csv",
+  "milestone": 280,
+  "system_error_files_seen": 1,
+  "valid_trial_count_at_snapshot": 280
+}

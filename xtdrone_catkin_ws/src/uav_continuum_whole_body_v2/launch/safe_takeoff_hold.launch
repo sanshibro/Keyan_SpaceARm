@@ -1,0 +1,23 @@
+<launch>
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.65"/>
+  <arg name="z_rate" default="0.08"/>
+  <!-- PX4 SITL can remain in its ground/takeoff dead band with only 0.20 m of
+       vertical position error (observed as a prolonged ground slide).  A
+       0.35 m lead crosses that dead band; the independent 0.08 m/s command
+       slew still prevents a height step. -->
+  <arg name="z_lead" default="0.35"/>
+  <arg name="abort_xy_error" default="0.50"/>
+  <arg name="abort_tilt_deg" default="35.0"/>
+  <node pkg="uav_continuum_whole_body_v2" type="safe_takeoff_hold_node.py"
+        name="safe_takeoff_hold_v2" output="screen">
+    <param name="x" value="$(arg x)"/>
+    <param name="y" value="$(arg y)"/>
+    <param name="z" value="$(arg z)"/>
+    <param name="z_rate" value="$(arg z_rate)"/>
+    <param name="z_lead" value="$(arg z_lead)"/>
+    <param name="abort_xy_error" value="$(arg abort_xy_error)"/>
+    <param name="abort_tilt_deg" value="$(arg abort_tilt_deg)"/>
+  </node>
+</launch>

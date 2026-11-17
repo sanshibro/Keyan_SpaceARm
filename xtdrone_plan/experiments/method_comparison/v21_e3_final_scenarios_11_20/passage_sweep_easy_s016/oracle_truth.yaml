@@ -1,0 +1,25 @@
+schema_version: 1
+frame_id: world
+name: passage_sweep_easy_s016
+boxes:
+- name: passage_lower
+  center:
+  - 0.0
+  - -3.0
+  - 0.38169873237460616
+  size:
+  - 6.0
+  - 0.18
+  - 0.7633974647492123
+  yaw_deg: 0.09265336560270443
+- name: passage_upper
+  center:
+  - 0.0
+  - -3.0
+  - 2.411698732374606
+  size:
+  - 6.0
+  - 0.18
+  - 1.1766025352507876
+  yaw_deg: 0.09265336560270443
+oracle_only: true

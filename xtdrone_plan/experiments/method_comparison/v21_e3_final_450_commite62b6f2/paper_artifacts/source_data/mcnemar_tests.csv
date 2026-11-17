@@ -1,0 +1,5 @@
+baseline,paired_trials,ours_only_success,baseline_only_success,exact_two_sided_p
+fixed_morphology,90,34,0,1.1641532182693481e-10
+aet_sequential_minjerk,90,28,0,7.450580596923827e-09
+informed_rrtstar_wb,90,21,0,9.5367431640625e-07
+global_batch_wb,90,30,0,1.862645149230957e-09

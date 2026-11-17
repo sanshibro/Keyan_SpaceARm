@@ -1,0 +1,17 @@
+<launch>
+  <arg name="auto_execute" default="false"/>
+  <arg name="launch_rviz" default="true"/>
+  <include file="$(find uav_continuum_whole_body_v2)/launch/scenario_3c_v2_full.launch">
+    <arg name="auto_execute" value="$(arg auto_execute)"/>
+    <arg name="launch_rviz" value="$(arg launch_rviz)"/>
+    <arg name="planner_config"
+         value="$(find uav_continuum_whole_body_v2)/config/planner_v2_realtime.yaml"/>
+    <arg name="phase_body_full_error" value="0.015"/>
+    <arg name="phase_arm_full_error" value="0.015"/>
+    <arg name="phase_body_clearance_reserve" value="0.015"/>
+    <arg name="phase_arm_clearance_reserve" value="0.020"/>
+    <arg name="phase_calibrated_full_speed_error" value="0.040"/>
+    <arg name="rolling_switch_max_advance" value="0.75"/>
+    <arg name="final_convergence_timeout" value="8.0"/>
+  </include>
+</launch>

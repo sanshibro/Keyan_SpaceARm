@@ -1,0 +1,235 @@
+{
+  "complete_pairs_by_family": {
+    "clutter_reach": 20,
+    "multi_passage": 16,
+    "passage_sweep": 20
+  },
+  "continuous_wilcoxon": [
+    {
+      "baseline": "fixed_morphology",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -21.411999999999992,
+      "metric": "task_time_s",
+      "paired_successes": 33,
+      "raw_p": null
+    },
+    {
+      "baseline": "fixed_morphology",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": 1.0848415212851252,
+      "metric": "planning_time_s",
+      "paired_successes": 33,
+      "raw_p": null
+    },
+    {
+      "baseline": "fixed_morphology",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.0602634978596297,
+      "metric": "body_clearance_m",
+      "paired_successes": 33,
+      "raw_p": null
+    },
+    {
+      "baseline": "fixed_morphology",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.009555182171400861,
+      "metric": "arm_clearance_m",
+      "paired_successes": 33,
+      "raw_p": null
+    },
+    {
+      "baseline": "fixed_morphology",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": 0.033458642967101965,
+      "metric": "jerk_energy",
+      "paired_successes": 33,
+      "raw_p": null
+    },
+    {
+      "baseline": "fixed_morphology",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.007896836083028607,
+      "metric": "tip_error_m",
+      "paired_successes": 33,
+      "raw_p": null
+    },
+    {
+      "baseline": "aet_sequential_minjerk",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": 4.7339999999999876,
+      "metric": "task_time_s",
+      "paired_successes": 38,
+      "raw_p": null
+    },
+    {
+      "baseline": "aet_sequential_minjerk",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -2.249245209660148,
+      "metric": "planning_time_s",
+      "paired_successes": 38,
+      "raw_p": null
+    },
+    {
+      "baseline": "aet_sequential_minjerk",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.059884017136310974,
+      "metric": "body_clearance_m",
+      "paired_successes": 38,
+      "raw_p": null
+    },
+    {
+      "baseline": "aet_sequential_minjerk",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": 0.0065810337713314015,
+      "metric": "arm_clearance_m",
+      "paired_successes": 38,
+      "raw_p": null
+    },
+    {
+      "baseline": "aet_sequential_minjerk",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.17074775768653397,
+      "metric": "jerk_energy",
+      "paired_successes": 38,
+      "raw_p": null
+    },
+    {
+      "baseline": "aet_sequential_minjerk",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.004509039987496652,
+      "metric": "tip_error_m",
+      "paired_successes": 38,
+      "raw_p": null
+    },
+    {
+      "baseline": "informed_rrtstar_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -66.34400000000001,
+      "metric": "task_time_s",
+      "paired_successes": 42,
+      "raw_p": null
+    },
+    {
+      "baseline": "informed_rrtstar_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -7.744201602167595,
+      "metric": "planning_time_s",
+      "paired_successes": 42,
+      "raw_p": null
+    },
+    {
+      "baseline": "informed_rrtstar_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.05558573640203501,
+      "metric": "body_clearance_m",
+      "paired_successes": 42,
+      "raw_p": null
+    },
+    {
+      "baseline": "informed_rrtstar_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": 0.0071404199206493435,
+      "metric": "arm_clearance_m",
+      "paired_successes": 42,
+      "raw_p": null
+    },
+    {
+      "baseline": "informed_rrtstar_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": 0.045891505257437605,
+      "metric": "jerk_energy",
+      "paired_successes": 42,
+      "raw_p": null
+    },
+    {
+      "baseline": "informed_rrtstar_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.004271290991906169,
+      "metric": "tip_error_m",
+      "paired_successes": 42,
+      "raw_p": null
+    },
+    {
+      "baseline": "global_batch_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -5.463999999999984,
+      "metric": "task_time_s",
+      "paired_successes": 37,
+      "raw_p": null
+    },
+    {
+      "baseline": "global_batch_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -3.4680731098917024,
+      "metric": "planning_time_s",
+      "paired_successes": 37,
+      "raw_p": null
+    },
+    {
+      "baseline": "global_batch_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.05550979281207913,
+      "metric": "body_clearance_m",
+      "paired_successes": 37,
+      "raw_p": null
+    },
+    {
+      "baseline": "global_batch_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": 0.009475114063775797,
+      "metric": "arm_clearance_m",
+      "paired_successes": 37,
+      "raw_p": null
+    },
+    {
+      "baseline": "global_batch_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.13727790167625673,
+      "metric": "jerk_energy",
+      "paired_successes": 37,
+      "raw_p": null
+    },
+    {
+      "baseline": "global_batch_wb",
+      "holm_p": null,
+      "median_delta_ours_minus_baseline": -0.002986803452047853,
+      "metric": "tip_error_m",
+      "paired_successes": 37,
+      "raw_p": null
+    }
+  ],
+  "inference_enabled": false,
+  "interpretation": "p-values are intentionally withheld until every scenario family has the pre-registered number of complete paired trials",
+  "minimum_complete_pairs_per_family": 30,
+  "study_level": "pilot",
+  "success_mcnemar": {
+    "aet_sequential_minjerk": {
+      "baseline_only_success": 0,
+      "discordant": 18,
+      "exact_two_sided_p": null,
+      "ours_only_success": 18,
+      "paired_trials": 56
+    },
+    "fixed_morphology": {
+      "baseline_only_success": 0,
+      "discordant": 23,
+      "exact_two_sided_p": null,
+      "ours_only_success": 23,
+      "paired_trials": 56
+    },
+    "global_batch_wb": {
+      "baseline_only_success": 0,
+      "discordant": 19,
+      "exact_two_sided_p": null,
+      "ours_only_success": 19,
+      "paired_trials": 56
+    },
+    "informed_rrtstar_wb": {
+      "baseline_only_success": 0,
+      "discordant": 14,
+      "exact_two_sided_p": null,
+      "ours_only_success": 14,
+      "paired_trials": 56
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# Preferred system dependency on Ubuntu 20.04 / ROS Noetic.
+python3-scipy>=1.3
+python3-numpy>=1.17
