@@ -1,0 +1,59 @@
+阶段 C：SUPER 平台、相机与 Qingyu SDK 几何核查
+2026-11-17；本轮完成后暂停，等待模型评审。
+
+1. 机身相机
+此前的下层外侧安装位置有误。现从用户提供的原生模块化总装中读取
+MID360、D435 和共用支架，以同一 MID360 光学罩为基准刚性配准到 SUPER。
+保留原生相机与雷达的相对安装关系，不缩放零件。
+相机中心在 UAV 坐标系约为 (51.024, 0.045, 64.350) mm。
+位置来源：revision/data/body_camera_registration.json。
+原生 CAD 相机在雷达前方、上层支架处。外观镜头正面与仿真光轴同时修正。
+
+2. 末端相机
+相机安装在 SDK 夹爪上侧，光轴与抓取方向一致，随末端刚性转动。
+两路 MuJoCo 相机均进行了不对称目标取景检查，红色目标在上、蓝色在左。
+该检查针对坐标与取景方向；传感器标定参数仍需实物标定。
+
+3. 臂体和夹爪
+直接运行 NUC 已安装的 Qingyu 可视化节点，在隔离 ROS master 中读取输出。
+SDK 的臂体可视化实际为 15 个直径 50 mm 的球形 Marker，臂长配置 280 mm。
+本轮外观按这些 Marker 构成，随积分后的离散臂体运动。
+物理模型仍为 8 元件离散近似，不能仅凭外观一致认定柔性动力学已标定。
+夹爪采用 SDK 完整原始 STL 表面，恢复三指几何；移除遮住原网格的可见代理方块。
+完整夹爪编译后的表面与原始源网格进行了数值几何对照。
+当前指爪运动仍是既有内滑近似，尚未核验真实连杆机构运动学。
+
+4. SDK 坐标修正
+隔离 API 到可视化节点的检查表明：SDK 的弯曲方位角从 +Y 轴顺时针计量。
+接口统一转换为 beta_sdk = wrap(pi/2 - phi_pcc)。
+只运行 API/可视化节点，未启动 MCU/真实硬件通信。
+已通过 7 条 SDK 传输校验、10 项模型与接口行为检查。
+
+5. 本轮积分结果
+固定机身与内部控制器悬停各运行 14 s；指令 0 -> 90 -> 118 -> 0 度。
+全过程调用 mj_step，初始化后没有覆盖 qpos 来播放目标姿态。
+固定机身最大总弯曲：115.55596177291704 度。
+悬停最大总弯曲：115.5557728378159 度。
+两次积分均为 0 接触步、0 次超过 120 度。
+悬停位置误差峰值：3.906987662804468 mm；采用仿真真值反馈。
+这不是 PX4/SITL 或真实飞行结果，也尚未计入论文穿门成功率统计。
+48 个形态的自碰撞审查中 18 个碰撞，须约束整条形态过渡，不能只检查端点。
+原始未修改工作区、此前失败测试和中间版本均保留。
+
+6. 本轮交付与复现
+revision/live/model_checkpoint.pdf：2 页模型与验证预览。
+revision/live/model_paper_page.pdf：论文第 13-15 页，含完整核查附录。
+revision/live/super_hover_review.mp4：H.264 编码的积分视频。
+paper/main.tex、paper/main.pdf：本轮论文源文件和完整 PDF。
+revision/data/super_backend/：模型 XML、逐时状态、原始动态量和运行清单。
+revision/data/qingyu_visual_probe/：SDK Marker、URDF/launch 配置快照。
+
+先依次执行三个几何准备脚本：
+python3 revision/scripts/prepare_super_metric.py
+python3 revision/scripts/prepare_custom_landing.py
+python3 revision/scripts/prepare_camera_registration.py
+随后使用现有 MuJoCo 依赖环境运行 test_platform_contract.py、verify_sdk_geometry.py、
+verify_camera_views.py 和 qualify_super_backend.py。
+Windows 预览脚本接受 --artifact-root，指向本地“滚动规划论文改进_20261117”目录。
+
+下一轮仅在用户确认后进行：完整滚动规划中的新包络接入、动力学辨识、飞控与感知链路。

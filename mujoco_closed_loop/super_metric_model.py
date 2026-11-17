@@ -7,6 +7,7 @@ development assumptions until physical identification and installation checks.
 from pathlib import Path
 import json
 import numpy as np
+import yaml
 from xml.etree.ElementTree import fromstring, SubElement as S, tostring
 from model import model_xml
 
@@ -90,29 +91,75 @@ def build_super_metric(fixed=True,segments=8):
             radius=r,half_height=(vz[1]-vz[0])/2,source_parts=['prop:quadrant%d'%i]))
     # Forward camera is explicitly part of the custom modification, separate
     # from upstream SUPER. Its bounding primitive remains provisional.
-    S(u,'geom',name='collision_body_camera',type='box',pos='.10 0 .035',size='.014 .045 .014',
+    camera_registration=json.loads((ROOT/'revision/data/body_camera_registration.json').read_text())
+    body_camera=np.array(camera_registration['body_camera_center'])
+    S(asset,'mesh',name='native_sensor_mount',file=str(ROOT/camera_registration['mounting_plate_file']))
+    S(u,'geom',name='visual_sensor_mount',type='mesh',mesh='native_sensor_mount',mass='0',
+        contype='0',conaffinity='0',rgba='.52 .58 .62 1',group='2')
+    S(u,'geom',name='collision_sensor_mount',type='mesh',mesh='native_sensor_mount',mass='0',rgba='.28 .48 .65 .13',group='3')
+    S(u,'geom',name='collision_body_camera',type='box',pos=fmt(body_camera),size='.014 .045 .014',
         mass='0',group='3',rgba='.28 .48 .65 .16')
-    # Supplied D435 CAD is in camera-link coordinates: long housing axis Y.
-    # Reuse it without scaling; retain separate conservative collision boxes.
+    # The archived D435 mesh has its front bezel at -Z, long axis Y and
+    # vertical housing axis X. Align this actual mesh face with the optical
+    # axis; using identity rotation made the body camera look downwards.
     ref=ROOT/'mujoco_closed_loop/vendor/reference_install'
     d435=json.loads((ref/'d435_manifest.json').read_text())
     tool=u.find(".//body[@name='tool']")
-    tool.find("geom[@name='d435']").set('rgba','0 0 0 0')
+    distal=tool.find("geom[@name='d435']")
+    distal.set('rgba','.28 .48 .65 .13');distal.set('group','3')
+    # -tool-X is above the tool in the reference forward-bent configuration.
+    # Keep this a rigid mount: it must rotate with the arm, not stay world-up.
+    distal.set('pos','-.058 0 .065')
+    S(tool,'geom',name='wrist_camera_support',type='box',pos='-.0425 0 .065',
+        size='.004 .012 .008',mass='0',rgba='.55 .61 .65 1',group='1')
     for p in d435['parts']:
         name='metric_'+p['mesh'];S(asset,'mesh',name=name,file=str(ref/'d435'/(p['mesh']+'.stl')))
-        S(u,'geom',name='visual_body_'+name,type='mesh',mesh=name,pos='.10 0 .035',
+        S(u,'geom',name='visual_body_'+name,type='mesh',mesh=name,pos=fmt(body_camera),xyaxes='0 0 1 0 1 0',
             rgba=p['rgba'],mass='0',contype='0',conaffinity='0',group='2')
-        S(tool,'geom',name='visual_wrist_'+name,type='mesh',mesh=name,pos='.045 0 .065',xyaxes='0 0 1 0 1 0',
+        S(tool,'geom',name='visual_wrist_'+name,type='mesh',mesh=name,pos='-.058 0 .065',xyaxes='-1 0 0 0 1 0',
             rgba=p['rgba'],mass='0',contype='0',conaffinity='0',group='2')
-    cam=u.find("camera[@name='navigation']");cam.set('pos','.115 0 .035')
-    cam=tool.find("camera[@name='wrist_rgbd']");cam.set('pos','.045 0 .079');cam.set('xyaxes','0 -1 0 -1 0 0')
-    # Separate SDK visual diameter (50 mm) from the existing 68 mm collision
-    # proxy; appearance is a discrete approximation, not a native continuum CAD.
+    cam=u.find("camera[@name='navigation']");cam.set('pos',fmt(body_camera+[.015,0,0]))
+    cam=tool.find("camera[@name='wrist_rgbd']");cam.set('pos','-.058 0 .079');cam.set('xyaxes','0 -1 0 -1 0 0')
+    # Match the complete SDK STL/URDF reference at zero finger travel. The
+    # earlier opaque bracket/pads were collision approximations that obscured
+    # the real housing and finger outlines. Hide them and replace their
+    # collisions by conservative convex hulls of the native components.
+    grip_dir=ROOT/'mujoco_closed_loop/vendor/qingyu_continuum_arm/meshes'
+    grip_offset=[.0000225,.0001,.0098]
+    old=tool.find("geom[@name='bracket']")
+    old.set('rgba','0 0 0 0');old.set('contype','0');old.set('conaffinity','0')
+    for n in ['housing','finger0','finger1','finger2']:
+        mesh_name='gripper_'+n
+        asset.find("mesh[@name='%s']"%mesh_name).set('file',str(grip_dir/(mesh_name+'.obj')))
+        parent=tool if n=='housing' else tool.find("body[@name='%s']"%n)
+        g=parent.find("geom[@mesh='%s']"%mesh_name)
+        g.set('name','visual_'+mesh_name);g.set('pos',fmt(grip_offset))
+        g.set('rgba','.27 .31 .34 1' if n=='housing' else '.27 .49 .57 1')
+        if n!='housing':
+            pad=parent.find("geom[@name='pad%s']"%n[-1]);pad.set('rgba','0 0 0 0');pad.set('contype','0');pad.set('conaffinity','0')
+        S(parent,'geom',name='collision_'+mesh_name,type='mesh',mesh=mesh_name,pos=fmt(grip_offset),
+            mass='0',group='3',rgba='.28 .48 .65 .13')
+    tool.find("site[@name='tip']").set('pos','0 0 .13685756')
+    # SDK RViz publishes 15 SPHERE markers of diameter 50 mm (verified from
+    # the installed binary on an isolated ROS master). Attach those samples to
+    # the integrated backbone. Physics stays an independent 8-element model.
+    sdk=yaml.safe_load((ROOT/'mujoco_closed_loop/vendor/qingyu_continuum_arm/config/continuum_arm_visualize.yaml').read_text())
+    count=int(sdk['resolution']);length=float(sdk['arc_length']);ds=length/segments
     for i in range(segments):
         body=u.find(".//body[@name='seg%d']"%i);g=body.find("geom[@name='arm%d']"%i)
         g.set('rgba','.28 .48 .65 .13');g.set('group','3')
-        S(body,'geom',name='arm_visual%d'%i,type='capsule',fromto=g.get('fromto'),size='.025',
-            mass='0',contype='0',conaffinity='0',group='2',rgba='.51 .58 .60 1')
+    for j in range(count):
+        arc=length*j/(count-1)
+        # The trapezoid chain starts with half an element fixed to the mount;
+        # each following interval runs from one joint centre to the next.
+        # Nearest-centre assignment would move the root marker by 3.4 mm.
+        if arc<ds/2:
+            body=u.find("body[@name='mount']");local_z=float(sdk['visual_base_offset_z'])+arc
+        else:
+            i=min(segments-1,int(np.floor(arc/ds-.5)));local_z=arc-(i+.5)*ds
+            body=u.find(".//body[@name='seg%d']"%i)
+        S(body,'geom',name='qingyu_rviz_backbone_%d'%j,type='sphere',pos=fmt([0,0,local_z]),
+            size=str(float(sdk['marker_scale'])/2),mass='0',contype='0',conaffinity='0',group='2',rgba='.16 .18 .19 1')
     mount=u.find("body[@name='mount']")
     for g in mount.findall('geom'):
         if g.get('type')=='cylinder':g.set('group','3');g.set('rgba','.28 .48 .65 .13')
@@ -125,7 +172,18 @@ def build_super_metric(fixed=True,segments=8):
         body_envelope_center_z_m=(landing['bounds_m'][0][2]+info['bounds_m'][1][2])/2,
         body_envelope_height_m=info['bounds_m'][1][2]-landing['bounds_m'][0][2],
         flexible_visual_diameter_m=.05,flexible_collision_diameter_m=.068,
-        camera_status='provisional custom body camera bounds',
+        camera_status='mesh front and optical axis aligned; metric extrinsics are development mounts',
+        camera_alignment=dict(mesh_front_axis=[0,0,-1],body_forward_axis=[1,0,0],body_registration=camera_registration,
+            wrist_forward_axis_tool=[0,0,1],wrist_center_tool=[-.058,0,.065],
+            source='D435 front-bezel STL and native CAD reference; rigid mounting'),
+        arm_visual=dict(source='installed Qingyu RViz MarkerArray',markers=count,
+            marker_type='SPHERE',diameter_m=float(sdk['marker_scale']),
+            motion_source='integrated element transforms; no qpos overwrite',
+            color='soft charcoal for figure legibility; geometry from SDK'),
+        gripper=dict(source='complete SDK STL shells, full resolution',
+            reference='SDK launch: Rz(pi) Rx(pi/2), visual_xyz=[.0021,.0708,-.023]',
+            collision='per-component convex hulls; old opaque boxes disabled',
+            actuation='existing inward-slide approximation, not verified linkage kinematics'),
         rotated_propeller_sweep_included=True,mass_identified=False)
     return tostring(root,encoding='unicode'),info
 

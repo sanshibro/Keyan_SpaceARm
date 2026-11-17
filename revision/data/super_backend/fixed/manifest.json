@@ -2,7 +2,7 @@
   "platform_id": "super_qingyu_metric_candidate_v1",
   "mode": "fixed",
   "sim_seconds": 13.99999999999768,
-  "wall_seconds": 9.463338887000646,
+  "wall_seconds": 10.203076632999,
   "physics": "mj_step; qpos initialized once, no pose replay during integration",
   "mass_kg": 2.2499999999999996,
   "mass_calibrated": false,
@@ -15,7 +15,7 @@
     "clearance_m": 0.001,
     "kind": "dense_sampled_self_collision; not continuous certification"
   },
-  "peak_total_curvature_deg": 115.38443313593807,
+  "peak_total_curvature_deg": 115.55596177291704,
   "above_120_steps": 0,
   "contact_steps": 0,
   "saturated_steps": 0,

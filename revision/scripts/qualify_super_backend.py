@@ -23,7 +23,7 @@ def save(p,image):cv2.imwrite(str(p),cv2.cvtColor(image,cv2.COLOR_RGB2BGR))
 
 def main(mode):
     out=ROOT/'revision/data/super_backend'/mode
-    if (out/'manifest.json').exists():
+    if (out/'manifest.json').exists() or (mode=='geometry' and (out/'model.xml').exists()):
         archived=out.with_name(mode+'_previous_'+time.strftime('%Y%m%d_%H%M%S'))
         if archived.exists():raise FileExistsError(str(archived))
         out.rename(archived)
@@ -38,6 +38,12 @@ def main(mode):
             cam.azimuth=az;cam.elevation=el
             for overlay in (False,True):
                 save(out/('%s_%s.png'%(name,'collision' if overlay else 'cad')),picture(r,cam,d,overlay))
+        tool=m.body('tool').id
+        cam.lookat[:]=d.xpos[tool]+d.xmat[tool].reshape(3,3)@np.array([0,0,.07])
+        cam.azimuth=125;cam.elevation=-20;m.vis.global_.fovy=.23
+        save(out/'distal_closeup.png',picture(r,cam,d))
+        cam.lookat[:]=[.025,0,1.55];cam.azimuth=130;cam.elevation=-10;m.vis.global_.fovy=.27
+        save(out/'body_camera_closeup.png',picture(r,cam,d))
         r.close();print('geometry ready',out,flush=True);return
     backend=MujocoArmBackend(m,d);controller=None
     from platform_self_collision import SelfCollisionOracle

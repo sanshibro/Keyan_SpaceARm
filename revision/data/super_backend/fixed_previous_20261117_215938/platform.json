@@ -1,0 +1,3370 @@
+{
+  "schema_version": 1,
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "target_confirmed": "SUPER airframe plus user continuum arm and modifications",
+  "upstream_url": "https://github.com/hku-mars/SUPER-Hardware",
+  "upstream_commit": "6dd5419735dc0d6fd975bfc66fe7c76c4ecda66a",
+  "source_assembly": "mujoco_closed_loop/vendor/SUPER-Hardware/SolidWorks/yunque.SLDASM",
+  "source_license": "MIT; original preserved in vendor/SUPER-Hardware/LICENSE",
+  "upstream_files_verified": [
+    {
+      "path": "3DPriting/battery_board.stl",
+      "match": true,
+      "sha256": "4690520089ea5e5b4d231b985a87d5bf3d02d251c385b6d02feafcfbfd4cf0f8"
+    },
+    {
+      "path": "CarbonFiber/3mm_bat_board.step",
+      "match": true,
+      "sha256": "bb8799ac4a277c7f260e2b0b524c1d05f51038470bfa69cdb322867e8c1a977c"
+    },
+    {
+      "path": "CarbonFiber/3mm_sec_board.step",
+      "match": true,
+      "sha256": "78cc6ad1b0924b99cd87d3bc76a27fb5f50c56c57a3414a3876b89fcb1823c31"
+    },
+    {
+      "path": "CarbonFiber/4mm-foot.STEP",
+      "match": true,
+      "sha256": "0be8bc1e4c7c8d2a3d125b2996093c1e6885a9bac07d78c9d554b215ea10d903"
+    },
+    {
+      "path": "CarbonFiber/5mm_main_board.STEP",
+      "match": true,
+      "sha256": "99d3bfd7f5ab195c6b0eade9391232b278d093d953a91718cf51e30092ed3558"
+    },
+    {
+      "path": "LICENSE",
+      "match": true,
+      "sha256": "c5bcd38439de9a4d889795181dc7c5a74b3f640119044bc4f2663393123ea5fb"
+    },
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "685565a1de065d41b2120037e7460c11f7309137bdeb3fbcb8f978cd660eb76b"
+    },
+    {
+      "path": "SolidWorks/30mm_alu_pillar.SLDPRT",
+      "match": true,
+      "sha256": "f6e622bfc7301af67e21c8d1a328c2dbb1d7865cc6a20f3c25232bc8341227f5"
+    },
+    {
+      "path": "SolidWorks/40mm_alu_pillar.SLDPRT",
+      "match": true,
+      "sha256": "e8d467302621f73e1834cabc2ecdceb167f780496b33077131d3ae5b12c31f39"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL.SLDPRT",
+      "match": true,
+      "sha256": "db1b2217ba75d89ccaa0ac61c597d95c368aa60b1591cdb45a47222cd78164f6"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL.stl",
+      "match": true,
+      "sha256": "05e8fa1426d2630aa4a021ed549ce0db5cdc91be71c5fccc8e7514f396e4646d"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL1.SLDPRT",
+      "match": true,
+      "sha256": "f2d327be90606f246def21c2608afc1c4145d5b4ae7793c41a065e1483266ac7"
+    },
+    {
+      "path": "SolidWorks/landing_board.SLDPRT",
+      "match": true,
+      "sha256": "4de42719bbbdf4dab788244f0468cda548290be3602fba2ca976c82f11e49730"
+    },
+    {
+      "path": "SolidWorks/yunque-F90_motor.SLDPRT",
+      "match": true,
+      "sha256": "772d201fe9fb62526287404b0f9f01d3195b6249513514f3189108a826e9bf63"
+    },
+    {
+      "path": "SolidWorks/yunque-LiDARboard.SLDPRT",
+      "match": true,
+      "sha256": "05355438882b51de2fec833c3852ecb33084551c8678d7e4c53a71c7785ce424"
+    },
+    {
+      "path": "SolidWorks/yunque-battery_board.SLDPRT",
+      "match": true,
+      "sha256": "b6ec71416d347aabe3dd2c58c9dc8e7fb56ea2aed7f9b4dcf7a824453c0099ec"
+    },
+    {
+      "path": "SolidWorks/yunque-dualsky-bat.SLDPRT",
+      "match": true,
+      "sha256": "3768ff3b0c05a8a9d564758b343fe955ca6297c236397c4d6df4879c92123ac2"
+    },
+    {
+      "path": "SolidWorks/yunque-foot-4mm.SLDPRT",
+      "match": true,
+      "sha256": "c1f42d2ab0c81dbe2684d6a505dd1386e22e875113153ce3a19944ee46453ee6"
+    },
+    {
+      "path": "SolidWorks/yunque-intel_nuc.SLDPRT",
+      "match": true,
+      "sha256": "797d096651e1d04b9c207757804ac9120236cc6393a3a04e34b63f4aa3e76a83"
+    },
+    {
+      "path": "SolidWorks/yunque-led-a.SLDPRT",
+      "match": true,
+      "sha256": "b0ad8e67a277707103cafe6771b14d934d65a713f5e2b1f0901ae01f84453108"
+    },
+    {
+      "path": "SolidWorks/yunque-led-b.SLDPRT",
+      "match": true,
+      "sha256": "0ac389ea94ebb71a88599bdf4162164439d7c4fc3bc69b885763f50b3ad6c90e"
+    },
+    {
+      "path": "SolidWorks/yunque-mainboard.SLDPRT",
+      "match": true,
+      "sha256": "388665b56e75bcbb6f5426663a74b4629c66d5474345fb245a42bdf50e454a28"
+    },
+    {
+      "path": "SolidWorks/yunque-mid360_LiDAR.SLDASM",
+      "match": true,
+      "sha256": "67ecbbb9ee2966bd98421c611a1d213c3f7a824ba5d4f63abb6a310677eae549"
+    },
+    {
+      "path": "SolidWorks/yunque-prop.SLDPRT",
+      "match": true,
+      "sha256": "b257426599a1a2d3a7dcdaf05e631891247ad168ddbe4f50321d2c29b5fda662"
+    },
+    {
+      "path": "SolidWorks/yunque.SLDASM",
+      "match": true,
+      "sha256": "ecf65f4d6ea6d6c8efa5434a9460103319faad4db7f4ec54886650df10d94794"
+    },
+    {
+      "path": "SolidWorks/yunque_bat_board.SLDPRT",
+      "match": true,
+      "sha256": "181ca179f1501555dd1c531a1f23ceaa339496d33adebe1fc683afedbf99d755"
+    },
+    {
+      "path": "misc/.DS_Store",
+      "match": true,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
+    {
+      "path": "misc/cover.JPG",
+      "match": true,
+      "sha256": "eecbf84d5b6e0812158ef651d85845e8c3e3f6831882cf4dd4eab92fd3c52c13"
+    },
+    {
+      "path": "misc/hardware_breakdown.png",
+      "match": true,
+      "sha256": "3b50a9ca9c1f0656c44fb03e4e46ea272185292b94a584fd16bc9c32a5735579"
+    },
+    {
+      "path": "misc/power_module.jpg",
+      "match": true,
+      "sha256": "988acc3c719f6dbda44d81aead14c7b1404ef73d8dc3633d85e2845526e57b64"
+    },
+    {
+      "path": "misc/sw.png",
+      "match": true,
+      "sha256": "e47a40a71a37ab8da7f70a6bd90c5a7af1b60bbcd9533b87a7cbc8327fd62855"
+    }
+  ],
+  "units": "m",
+  "frame": "U: right-handed; +X front (archived front LEDs), +Y left, +Z up",
+  "origin": "mean of four motor-axis AABB centres in the archived assembly",
+  "transform_from_display": {
+    "uniform_scale": 0.8333324653943814,
+    "origin_display_m": [
+      0.0002011500000000041,
+      -0.0020791499999999984,
+      -0.0227847
+    ]
+  },
+  "calibration": {
+    "method": "uniform in-plane carbon-board span match to official STEP",
+    "step_span_m": [
+      0.2259863805212306,
+      0.2259898987322333
+    ],
+    "display_span_m": [
+      0.2711861,
+      0.271186
+    ],
+    "per_axis_scale": [
+      0.8333258250376055,
+      0.8333391057511572
+    ],
+    "residual_span_m": [
+      1.8007724566504457e-06,
+      -1.8007717925982991e-06
+    ],
+    "physical_measurement": false,
+    "scope": "CAD/display registration; component geometry and actual build still require cross-checks"
+  },
+  "rotor_axis_extraction": {
+    "method": "peripheral motor vertices; four quadrant AABB axes",
+    "peripheral_threshold_display_m": 0.135593,
+    "selected_vertices": 12416,
+    "central_material_vertices_excluded": 2725
+  },
+  "source_sha256": "5ddc56bc0efa2089999d14889a32b01b76f7c8954027181cb0cd388c525d955c",
+  "parts": {
+    "Led_back": {
+      "file": "revision/generated/super_metric/Led_back.obj",
+      "source_sha256": "ed5fa143965f0035ffeac906e0fcc1dd7428c3a3f84c0ecf7cd843c4da0961c4",
+      "sha256": "b8a3c7cd3085e6fcd1506f9c54d605bed191114136b529d5724628cde10f52c8",
+      "bounds_min": [
+        -0.10199051877403659,
+        -0.10199068544052968,
+        0.022349976721877312
+      ],
+      "bounds_max": [
+        -0.06151797759398115,
+        0.10199085210702276,
+        0.025349973597297085
+      ],
+      "vertices": 132
+    },
+    "Led_front": {
+      "file": "revision/generated/super_metric/Led_front.obj",
+      "source_sha256": "03fe931a7ee587d2e67120edea6eb492e384caf989eb6dea7bb4df471a9c0323",
+      "sha256": "056880c82a636d927a51067ca71449f3278e533c60a20056a01c94a7c8e7535b",
+      "bounds_min": [
+        0.06151856092670692,
+        -0.10199068544052968,
+        0.022349976721877312
+      ],
+      "bounds_max": [
+        0.10199101877351585,
+        0.10199085210702276,
+        0.025349973597297085
+      ],
+      "vertices": 132
+    },
+    "Lidar": {
+      "file": "revision/generated/super_metric/Lidar.obj",
+      "source_sha256": "b9d18ed2b7678c84cdc1550416b4a953bdfd9e5e9ca2a702dae3ce024893feef",
+      "sha256": "9d3e443a6f0324e1b7ea0931a551e7c5a479a6d687d15bc11b20ab08af13c362",
+      "bounds_min": [
+        -0.039299667401636144,
+        -0.05361381915971543,
+        0.024538141109509876
+      ],
+      "bounds_max": [
+        0.032200258129201784,
+        0.032200008129462165,
+        0.120446957884475
+      ],
+      "vertices": 80428
+    },
+    "PCB": {
+      "file": "revision/generated/super_metric/PCB.obj",
+      "source_sha256": "251b71e0cddc4705653a5d15150c8cf76f0ab87bedd92db0bbfeda7fa34e2112",
+      "sha256": "db02f31c17609d057d75bf0267bbd1e66eaf3d953df7705b275bb34d23f64f0b",
+      "bounds_min": [
+        -0.05129965490331524,
+        -0.053999902090932646,
+        0.027446138080750113
+      ],
+      "bounds_max": [
+        0.05070023886095705,
+        0.05200007084047921,
+        0.05185311266020691
+      ],
+      "vertices": 471
+    },
+    "carbon": {
+      "file": "revision/generated/super_metric/carbon.obj",
+      "source_sha256": "bbb5859a5a6fac08d0e1796791dce2f6c74176d363cf6a19434401d32784f2b9",
+      "sha256": "f5de277523e9170a2161035d81ad0316573f1d662d0d29a0f488d2b3232dc45e",
+      "bounds_min": [
+        -0.11299384064710402,
+        -0.11299400731359709,
+        0.012349987137144735
+      ],
+      "bounds_max": [
+        0.11299434064658326,
+        0.11299409064684363,
+        0.0603499371438611
+      ],
+      "vertices": 96172
+    },
+    "green": {
+      "file": "revision/generated/super_metric/green.obj",
+      "source_sha256": "4a15866a5a8119ef00c850d6d5748c8f6953e79eb2206cb84c16fec859ba829f",
+      "sha256": "0a7f56286393539d82257972f5059f56be6608e5b0d5e14ba4551c46b5ad4a7f",
+      "bounds_min": [
+        0.02148010262787538,
+        -0.05430273510885696,
+        0.028212803948912943
+      ],
+      "bounds_max": [
+        0.042152747763406884,
+        -0.053642735796264614,
+        0.030367968370915894
+      ],
+      "vertices": 120
+    },
+    "lander": {
+      "file": "revision/generated/super_metric/lander.obj",
+      "source_sha256": "bb562431b57dd6c23daa6ea31dd2a1c00d5e24d59c1410e71cf59f63c4e24515",
+      "sha256": "49a319eeb0a2508c5a76d813f94e862448f26fb64a7dce9bbf2509a4000ae28a",
+      "bounds_min": [
+        -0.04749965886111686,
+        -0.04301233020146119,
+        -0.08188358138263807
+      ],
+      "bounds_max": [
+        0.04750024219384263,
+        0.04301249686795426,
+        -0.01591890008668925
+      ],
+      "vertices": 12416
+    },
+    "mars_logo": {
+      "file": "revision/generated/super_metric/mars_logo.obj",
+      "source_sha256": "4aa7ea116f3ca6f5c851bd3f0be8fb07a3662d25ef0bc54f4e026f5afe3c2f10",
+      "sha256": "0c77c79afab843ccf47e1683625f4dac268c3bd3c58063dbbe3eb6b20a4be6bc",
+      "bounds_min": [
+        0.03176392525032129,
+        -0.027939429233640314,
+        0.0643999329256778
+      ],
+      "bounds_max": [
+        0.03243717454911341,
+        0.027939595900133396,
+        0.08367807951361834
+      ],
+      "vertices": 10
+    },
+    "metal": {
+      "file": "revision/generated/super_metric/metal.obj",
+      "source_sha256": "71f98c5f15b1dbafea4b7ced6c4f020181fde39d16668f26ad3242b80c447f03",
+      "sha256": "d4b1f0de4b23679e8f41581bc46a2366e5a54b6c6cc1873665c4437ca0e5bc26",
+      "bounds_min": [
+        -0.043620746234445625,
+        -0.054249901830550964,
+        0.0211499779717094
+      ],
+      "bounds_max": [
+        0.043160413380561764,
+        -0.03639992042180331,
+        0.044521703629406766
+      ],
+      "vertices": 75130
+    },
+    "metal_lidar": {
+      "file": "revision/generated/super_metric/metal_lidar.obj",
+      "source_sha256": "7a07325870a0245dc82ee3241489d5e0c929fad51a20b093ad765589dfe2b744",
+      "sha256": "9057ecbc5ffe835214d2c7fb2cdf8cfb2bff17ccb88de51b4cecdb6dd0ae8bc2",
+      "bounds_min": [
+        -0.06038264544312784,
+        -0.060070229101851474,
+        -0.017649981617053
+      ],
+      "bounds_max": [
+        0.06038331210910015,
+        0.06007039576834455,
+        0.0998490626710894
+      ],
+      "vertices": 107294
+    },
+    "motor": {
+      "file": "revision/generated/super_metric/motor.obj",
+      "source_sha256": "a88f82afc9963f89eea7f8d1194c3f32e5686085b4f76bf98933fd009615bc6e",
+      "sha256": "c55c02657d11e76f9907f70f6ca95d257b08bf4d4b2954e192c3eb364b02e2fe",
+      "bounds_min": [
+        -0.11569458783420067,
+        -0.11569475450069375,
+        -0.017349981929511024
+      ],
+      "bounds_max": [
+        0.11569442116770759,
+        0.11569492116718684,
+        0.04008312491897666
+      ],
+      "vertices": 15141
+    },
+    "prop": {
+      "file": "revision/generated/super_metric/prop.obj",
+      "source_sha256": "bb2f78f20933d992c3c65ec0b0dd20dd3902226653d4696510a8a108a27bc52c",
+      "sha256": "dc809f75031908cb2f929547dc48c98b7dfef3b534301e9297049b2899955a9b",
+      "bounds_min": [
+        -0.17524860914036358,
+        -0.18878784503887264,
+        -0.013535569235661316
+      ],
+      "bounds_max": [
+        0.17089861367100492,
+        0.1887923450341858,
+        0.001083332205012698
+      ],
+      "vertices": 20500
+    },
+    "usb": {
+      "file": "revision/generated/super_metric/usb.obj",
+      "source_sha256": "1ab45314e38df2c22e57dc71f4fb4d722e83bd3b81650193249844f464ea82dc",
+      "sha256": "cf5c8c03d05e00ed08ca1b6425487ca46ab469681b6f9e8f8c4b1b15a72f3bcb",
+      "bounds_min": [
+        -0.026349680889407458,
+        -0.050659905569631965,
+        0.036823128314353845
+      ],
+      "bounds_max": [
+        -0.018349689221621397,
+        -0.04829374136739117,
+        0.03737296107502106
+      ],
+      "vertices": 95
+    },
+    "yellow": {
+      "file": "revision/generated/super_metric/yellow.obj",
+      "source_sha256": "33621a1445687cf244d93a2aa4972f3d091ef307f56fe93fabbd2ae9c381957d",
+      "sha256": "1ef8b66e3790fb3939830db48c37b199ae1fba8c082ce9f3d4db4285798c3ca8",
+      "bounds_min": [
+        0.01095736358760091,
+        -0.05430273510885696,
+        0.028235387258725132
+      ],
+      "bounds_max": [
+        0.031495175530231595,
+        -0.05373640236537494,
+        0.030317218423773374
+      ],
+      "vertices": 104
+    }
+  },
+  "rotors": [
+    {
+      "index": 0,
+      "axis_center_m": [
+        0.09899477189419034,
+        0.09899493856068343,
+        0.0
+      ],
+      "prop_radius_m": 0.08984864842572181,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": 0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    },
+    {
+      "index": 1,
+      "axis_center_m": [
+        -0.0989949802273067,
+        0.09899493856068343,
+        0.0
+      ],
+      "prop_radius_m": 0.08984879132230719,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": -0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    },
+    {
+      "index": 2,
+      "axis_center_m": [
+        -0.09899460522769726,
+        -0.0989951052271765,
+        0.0
+      ],
+      "prop_radius_m": 0.08984854091672491,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": 0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    },
+    {
+      "index": 3,
+      "axis_center_m": [
+        0.09899481356081362,
+        -0.09899477189419034,
+        0.0
+      ],
+      "prop_radius_m": 0.08984861614129716,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": -0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    }
+  ],
+  "bounds_m": [
+    [
+      -0.17524860914036358,
+      -0.18878784503887264,
+      -0.08188358138263807
+    ],
+    [
+      0.17089861367100492,
+      0.1887923450341858,
+      0.120446957884475
+    ]
+  ],
+  "prop_sweep_body_radius_m": 0.22984880550387193,
+  "flexible_arm": {
+    "geometry_source": "Qingyu visualization config",
+    "arc_length_m": 0.28,
+    "base_length_m": 0.0704,
+    "physical_length_verified": false
+  },
+  "dynamics": {
+    "calibrated": false,
+    "mass_source": "existing development approximation",
+    "rotor_max_N": 12.0,
+    "rotor_max_status": "provisional, not F90 thrust calibration"
+  },
+  "cad16": {
+    "identity": "different tube-frame/M2810 platform; retained as reference and modification asset source",
+    "do_not_use_as_SUPER_airframe": true
+  },
+  "runtime_geometry": {
+    "proxies": [
+      {
+        "name": "central_equipment",
+        "type": "box",
+        "center": [
+          3.333329861542056e-07,
+          8.333324653941876e-08,
+          0.051398488133711
+        ],
+        "half_size": [
+          0.060382978776113996,
+          0.060070312435098014,
+          0.06904846975076401
+        ],
+        "source_parts": [
+          "Lidar",
+          "PCB",
+          "green",
+          "mars_logo",
+          "metal",
+          "metal_lidar",
+          "usb",
+          "yellow"
+        ]
+      },
+      {
+        "name": "central_motor_material",
+        "type": "box",
+        "center": [
+          -0.018774105434999997,
+          0.004781786649999998,
+          0.0382830851
+        ],
+        "half_size": [
+          0.014999984364999998,
+          0.034799963749999996,
+          0.0018000398
+        ],
+        "source_parts": [
+          "motor:central"
+        ]
+      },
+      {
+        "name": "carbon",
+        "type": "convex_mesh",
+        "source_parts": [
+          "carbon"
+        ]
+      },
+      {
+        "name": "landing_151",
+        "source_parts": [
+          "G_F_E_R_S_U_L\u673a_\u8d77\u98de350\u811a\u67b6_\u6ed1\u6a47\u7ba1.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          2.6768162968731977e-09,
+          -0.15000000134555969,
+          -0.36203556548070165
+        ],
+        "half_size": [
+          0.15001014123311718,
+          0.010010100309961464,
+          0.010012006225218941
+        ],
+        "quat_wxyz": [
+          5.91067276135495e-07,
+          6.905171280002049e-06,
+          0.0018844110633983845,
+          0.9999982244718805
+        ]
+      },
+      {
+        "name": "landing_152",
+        "source_parts": [
+          "G_F_E_R_S_U_L\u673a_\u8d77\u98de350\u811a\u67b6_\u7f13\u51b2\u5957.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.12500000011712784,
+          0.1499999956179343,
+          -0.36203556572537504
+        ],
+        "half_size": [
+          0.025011326521819043,
+          0.01201000196857707,
+          0.012007081539261869
+        ],
+        "quat_wxyz": [
+          -1.6298559019197876e-11,
+          -5.528877197512216e-05,
+          -2.933438783312383e-07,
+          0.9999999984715329
+        ]
+      },
+      {
+        "name": "landing_153",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.08399999029268446,
+          -0.021785568771227014
+        ],
+        "half_size": [
+          0.0035098243726954695,
+          0.0035086248644932744,
+          0.0002606831153073962
+        ],
+        "quat_wxyz": [
+          7.879769648024281e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.7652271951732383e-05
+        ]
+      },
+      {
+        "name": "landing_154",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02299845509336443,
+          -0.08399910719813285,
+          -0.02803542950964354
+        ],
+        "half_size": [
+          0.00951047227571658,
+          0.002753903223085633,
+          0.0027598668016881843
+        ],
+        "quat_wxyz": [
+          -0.6790992452123004,
+          0.1967935519009494,
+          0.6792084343287539,
+          0.19690712485579406
+        ]
+      },
+      {
+        "name": "landing_155",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.08399999029268446,
+          -0.03228556886249663
+        ],
+        "half_size": [
+          0.0035098243726954695,
+          0.0035086248644932744,
+          0.0002606831153073965
+        ],
+        "quat_wxyz": [
+          7.879769648027733e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.765227195177256e-05
+        ]
+      },
+      {
+        "name": "landing_156",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.022999998299210206,
+          -0.08400000175945273,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819485206015334,
+          0.003088093074803912,
+          0.0012393616258508477
+        ],
+        "quat_wxyz": [
+          0.002724484272012828,
+          0.13226466758738878,
+          0.9912036072678669,
+          -0.003747510189110298
+        ]
+      },
+      {
+        "name": "landing_157",
+        "source_parts": [
+          "G_F_E_R_S_U_L\u673a_\u8d77\u98de350\u811a\u67b6_\u7f13\u51b2\u5957.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.12500000011712784,
+          -0.15000000140183345,
+          -0.3620355657253771
+        ],
+        "half_size": [
+          0.025011326521819043,
+          0.012010001968577086,
+          0.01200708153926187
+        ],
+        "quat_wxyz": [
+          5.5288771975122176e-05,
+          -1.629868353162699e-11,
+          0.9999999984715329,
+          2.933467022945687e-07
+        ]
+      },
+      {
+        "name": "landing_158",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.08399999019455662,
+          -0.0217855687710584
+        ],
+        "half_size": [
+          0.00350982410257872,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030137906e-05,
+          -0.70309763285423,
+          0.7110933195734274,
+          5.765342775606945e-05
+        ]
+      },
+      {
+        "name": "landing_159",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.056998452548867214,
+          -0.08399910972331714,
+          -0.028035429486168113
+        ],
+        "half_size": [
+          0.009510472367863286,
+          0.0027538962257595933,
+          0.0027598699229461963
+        ],
+        "quat_wxyz": [
+          -0.6790955303328764,
+          0.19680630694627202,
+          0.6792047514699054,
+          0.1969198918565185
+        ]
+      },
+      {
+        "name": "landing_160",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.08399999019455662,
+          -0.032285568862328015
+        ],
+        "half_size": [
+          0.003509824102578721,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030138867e-05,
+          -0.7030976328542301,
+          0.7110933195734274,
+          5.7653427756061365e-05
+        ]
+      },
+      {
+        "name": "landing_161",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700000001882646,
+          -0.08400000128816963,
+          -0.03373556907696694
+        ],
+        "half_size": [
+          0.0030819358700276945,
+          0.003088104930513138,
+          0.0012393616545924926
+        ],
+        "quat_wxyz": [
+          0.0027245247708209087,
+          0.1322722866089938,
+          0.9912025905417151,
+          -0.003747487610985321
+        ]
+      },
+      {
+        "name": "landing_162",
+        "source_parts": [
+          "G_F_E_R_S_U_L\u673a_\u8d77\u98de350\u811a\u67b6_\u7f13\u51b2\u5957.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.12499999988287216,
+          -0.15000000140183345,
+          -0.3620355657253771
+        ],
+        "half_size": [
+          0.02501133210939425,
+          0.012010001968577086,
+          0.012007081539128855
+        ],
+        "quat_wxyz": [
+          -1.6298696809773083e-11,
+          -5.528875695607808e-05,
+          -2.933467002684082e-07,
+          0.9999999984715336
+        ]
+      },
+      {
+        "name": "landing_163",
+        "source_parts": [
+          "G_F_E_R_S_U_L\u673a_\u8d77\u98de350\u811a\u67b6_\u7f13\u51b2\u5957.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.12499999988287216,
+          0.1499999956179343,
+          -0.36203556572537504
+        ],
+        "half_size": [
+          0.02501133210939425,
+          0.012010001968577069,
+          0.012007081539128855
+        ],
+        "quat_wxyz": [
+          5.5288756956078076e-05,
+          -1.6298520748583345e-11,
+          0.9999999984715336,
+          2.933438942074608e-07
+        ]
+      },
+      {
+        "name": "landing_164",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u5de6\u540e_\u6d3b\u52a8\u5939\u76d6.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.04523923606145224,
+          -0.09316345483218717,
+          -0.05744473747434088
+        ],
+        "half_size": [
+          0.019129597614924474,
+          0.014021270282362767,
+          0.006280332998787829
+        ],
+        "quat_wxyz": [
+          -0.05391980253628338,
+          0.06436380910492294,
+          0.7619349909290036,
+          0.6421876864048176
+        ]
+      },
+      {
+        "name": "landing_165",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u56db\u89d2\u5b89\u88c5\u5b54\u677f.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -1.171518680675998e-10,
+          -2.891940988763997e-09,
+          -0.025035569176117944
+        ],
+        "half_size": [
+          0.11417814581738252,
+          0.0653054285814496,
+          0.0030143206163129013
+        ],
+        "quat_wxyz": [
+          1.2103199558896532e-05,
+          0.7080226711681636,
+          -0.7061897029475384,
+          -2.0402902661456753e-05
+        ]
+      },
+      {
+        "name": "landing_166",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u652f\u817f\u9876\u7aef\u7f29\u77ed8mm.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.07071841953164996,
+          -0.12315855259550722,
+          -0.19391502565641994
+        ],
+        "half_size": [
+          0.1630436804357454,
+          0.00799884305538437,
+          0.007998843011590765
+        ],
+        "quat_wxyz": [
+          0.6861194463178458,
+          0.3450251494377393,
+          -0.5159684333525016,
+          0.3794394911230554
+        ]
+      },
+      {
+        "name": "landing_167",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u5de6\u540e_\u6cd5\u5170\u5939\u5ea7.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.04194094322430885,
+          -0.10019649236407345,
+          -0.040353350977074535
+        ],
+        "half_size": [
+          0.03243515539356431,
+          0.029746843587664634,
+          0.016109525896690492
+        ],
+        "quat_wxyz": [
+          0.20446749098969277,
+          -0.33129089404655343,
+          0.7843540243264928,
+          0.48293700745858215
+        ]
+      },
+      {
+        "name": "landing_168",
+        "source_parts": [
+          "G_F_E_R_S_U_L\u673a_\u8d77\u98de350\u811a\u67b6_\u6ed1\u6a47\u7ba1.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          2.6768163020048946e-09,
+          0.14999999567420738,
+          -0.362035565480702
+        ],
+        "half_size": [
+          0.1500101412331172,
+          0.01001010031178085,
+          0.010012006226935544
+        ],
+        "quat_wxyz": [
+          5.91067434272968e-07,
+          6.905171266480006e-06,
+          0.0018843881842913305,
+          0.9999982245149939
+        ]
+      },
+      {
+        "name": "landing_169",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.10599999007534733,
+          -0.0217855687710584
+        ],
+        "half_size": [
+          0.00350982410257872,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030137906e-05,
+          -0.70309763285423,
+          0.7110933195734274,
+          5.765342775606945e-05
+        ]
+      },
+      {
+        "name": "landing_170",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.056998452548867214,
+          -0.10599910960410786,
+          -0.028035429486168113
+        ],
+        "half_size": [
+          0.009510472367863286,
+          0.0027538962257595938,
+          0.0027598699229461963
+        ],
+        "quat_wxyz": [
+          -0.6790955303328764,
+          0.19680630694627202,
+          0.6792047514699054,
+          0.1969198918565185
+        ]
+      },
+      {
+        "name": "landing_171",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.10599999007534733,
+          -0.032285568862328015
+        ],
+        "half_size": [
+          0.003509824102578721,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030138867e-05,
+          -0.7030976328542301,
+          0.7110933195734274,
+          5.7653427756061365e-05
+        ]
+      },
+      {
+        "name": "landing_172",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700000001882646,
+          -0.10600000116896034,
+          -0.03373556907696694
+        ],
+        "half_size": [
+          0.0030819358700276945,
+          0.003088104930513138,
+          0.0012393616545924926
+        ],
+        "quat_wxyz": [
+          0.0027245247708209087,
+          0.1322722866089938,
+          0.9912025905417151,
+          -0.003747487610985321
+        ]
+      },
+      {
+        "name": "landing_173",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.10599999017347517,
+          -0.021785568771227014
+        ],
+        "half_size": [
+          0.00350982437269547,
+          0.0035086248644932744,
+          0.0002606831153073963
+        ],
+        "quat_wxyz": [
+          7.879769648024281e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.7652271951732383e-05
+        ]
+      },
+      {
+        "name": "landing_174",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02299845509336443,
+          -0.10599910707892356,
+          -0.02803542950964354
+        ],
+        "half_size": [
+          0.00951047227571658,
+          0.002753903223085633,
+          0.0027598668016881843
+        ],
+        "quat_wxyz": [
+          -0.6790992452123004,
+          0.1967935519009494,
+          0.6792084343287539,
+          0.19690712485579406
+        ]
+      },
+      {
+        "name": "landing_175",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.10599999017347517,
+          -0.03228556886249663
+        ],
+        "half_size": [
+          0.00350982437269547,
+          0.0035086248644932744,
+          0.0002606831153073965
+        ],
+        "quat_wxyz": [
+          7.879769648027733e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.765227195177256e-05
+        ]
+      },
+      {
+        "name": "landing_176",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.022999998299210206,
+          -0.10600000164024344,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819485206015334,
+          0.003088093074803912,
+          0.0012393616258508477
+        ],
+        "quat_wxyz": [
+          0.002724484272012828,
+          0.13226466758738878,
+          0.9912036072678669,
+          -0.003747510189110298
+        ]
+      },
+      {
+        "name": "landing_177",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.08399999020506152,
+          -0.021785568771024062
+        ],
+        "half_size": [
+          0.0035098234887291206,
+          0.0035086202538477398,
+          0.0002606831134095323
+        ],
+        "quat_wxyz": [
+          7.87960626188417e-05,
+          -0.7030921208746457,
+          0.7110987695328795,
+          5.765412188792779e-05
+        ]
+      },
+      {
+        "name": "landing_178",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.023001542410450954,
+          -0.0839991055147471,
+          -0.028035429504796497
+        ],
+        "half_size": [
+          0.009510472292705019,
+          0.00275390759139319,
+          0.0027598663130674237
+        ],
+        "quat_wxyz": [
+          -0.6791004870531937,
+          0.19678925465522662,
+          0.6792096832096184,
+          0.19690282875226867
+        ]
+      },
+      {
+        "name": "landing_179",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.08399999020506152,
+          -0.032285568862293675
+        ],
+        "half_size": [
+          0.0035098234887291206,
+          0.0035086202538477398,
+          0.0002606831134095322
+        ],
+        "quat_wxyz": [
+          7.879606261883009e-05,
+          -0.7030921208746455,
+          0.7110987695328798,
+          5.765412188790117e-05
+        ]
+      },
+      {
+        "name": "landing_180",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02300000179019676,
+          -0.08400000175945273,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.003081960223485319,
+          0.003088079151496748,
+          0.001239361654838057
+        ],
+        "quat_wxyz": [
+          0.0027244536464156167,
+          0.1322554788550747,
+          0.9912048333458665,
+          -0.0037475347812192437
+        ]
+      },
+      {
+        "name": "landing_181",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.030458682489403213,
+          -0.09923847610404461,
+          -0.05897531188539526
+        ],
+        "half_size": [
+          0.011512183739854322,
+          0.0027586259959552196,
+          0.00275581077688068
+        ],
+        "quat_wxyz": [
+          0.4897031845925341,
+          -0.5100100375447411,
+          -0.4215080339682056,
+          0.567812935660857
+        ]
+      },
+      {
+        "name": "landing_182",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.03045346693585235,
+          -0.10737310821269479,
+          -0.05760434105894769
+        ],
+        "half_size": [
+          0.0035098252319401895,
+          0.0035086250260617656,
+          0.0002606834706414664
+        ],
+        "quat_wxyz": [
+          0.45372180182425864,
+          -0.5371111787521927,
+          0.543227386148923,
+          0.45885958107746566
+        ]
+      },
+      {
+        "name": "landing_183",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.030453466955034845,
+          -0.09307761304433311,
+          -0.060031043438479086
+        ],
+        "half_size": [
+          0.0035098251675652055,
+          0.0035086250324196434,
+          0.00026068374899279866
+        ],
+        "quat_wxyz": [
+          0.45372163346504174,
+          -0.53711107797873,
+          0.543227565358808,
+          0.458859653350219
+        ]
+      },
+      {
+        "name": "landing_184",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.030452448735642526,
+          -0.09164806726528482,
+          -0.06027372504438813
+        ],
+        "half_size": [
+          0.0030819512885367213,
+          0.003088089714030972,
+          0.0012393660493887678
+        ],
+        "quat_wxyz": [
+          -0.08325859668610963,
+          0.10280571092735796,
+          0.7596872010402095,
+          0.6366901510580107
+        ]
+      },
+      {
+        "name": "landing_185",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u53f3\u540e_\u6d3b\u52a8\u5939\u76d6.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.045239786030108683,
+          0.10643902931771979,
+          -0.05519115537768945
+        ],
+        "half_size": [
+          0.019138264933010168,
+          0.014033522812334592,
+          0.0062798490362974526
+        ],
+        "quat_wxyz": [
+          -0.05409508484029992,
+          -0.06358813957680569,
+          0.760679550494306,
+          -0.6437366633655892
+        ]
+      },
+      {
+        "name": "landing_186",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.08399999027963023,
+          -0.02178556877138578
+        ],
+        "half_size": [
+          0.003509824936552415,
+          0.003508621703818101,
+          0.00026068311524461474
+        ],
+        "quat_wxyz": [
+          7.879799320094285e-05,
+          -0.7031051334264192,
+          0.7110859032610337,
+          5.76518290414626e-05
+        ]
+      },
+      {
+        "name": "landing_187",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05700154765454745,
+          -0.08399911224792643,
+          -0.028035429493999363
+        ],
+        "half_size": [
+          0.009510472339882281,
+          0.0027539140792088917,
+          0.002759864976849579
+        ],
+        "quat_wxyz": [
+          -0.6791038784762649,
+          0.19677751796752793,
+          0.6792130941505018,
+          0.1968910952672451
+        ]
+      },
+      {
+        "name": "landing_188",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.08399999027963023,
+          -0.0322855688626554
+        ],
+        "half_size": [
+          0.0035098249365524167,
+          0.003508621703818101,
+          0.00026068311524461533
+        ],
+        "quat_wxyz": [
+          7.879799320101408e-05,
+          -0.7031051334264194,
+          0.7110859032610335,
+          5.765182904151899e-05
+        ]
+      },
+      {
+        "name": "landing_189",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05700000363794075,
+          -0.08400000175945273,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819541873432893,
+          0.0030880900968227737,
+          0.001239361644025678
+        ],
+        "quat_wxyz": [
+          0.0027244905132965684,
+          0.13226343745128127,
+          0.9912037713902262,
+          -0.0037475120822033745
+        ]
+      },
+      {
+        "name": "landing_190",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.059970848924120745,
+          -0.0983367244474411,
+          -0.05366316826039811
+        ],
+        "half_size": [
+          0.011512183742305832,
+          0.0027586272086519014,
+          0.002755807568840645
+        ],
+        "quat_wxyz": [
+          0.4897066548486785,
+          -0.5100067079819143,
+          -0.4215041718770182,
+          0.5678158003266878
+        ]
+      },
+      {
+        "name": "landing_191",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05996563213211574,
+          -0.10647135437295195,
+          -0.05229219985957667
+        ],
+        "half_size": [
+          0.003509825785548646,
+          0.0035086231362059816,
+          0.000260685733342291
+        ],
+        "quat_wxyz": [
+          0.4537214999294423,
+          -0.5371108676385157,
+          0.5432277320067533,
+          0.4588598343123714
+        ]
+      },
+      {
+        "name": "landing_192",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.0599656322004322,
+          -0.09217586079141266,
+          -0.054718903532329596
+        ],
+        "half_size": [
+          0.0035098242944186305,
+          0.003508623112877369,
+          0.000260683906090954
+        ],
+        "quat_wxyz": [
+          0.4537214287882292,
+          -0.5371106281752618,
+          0.5432278318514884,
+          0.4588600667539884
+        ]
+      },
+      {
+        "name": "landing_193",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05996461584068305,
+          -0.09074631240996575,
+          -0.0549615844760476
+        ],
+        "half_size": [
+          0.003081951915282918,
+          0.0030880882142270095,
+          0.001239361307995981
+        ],
+        "quat_wxyz": [
+          -0.08325825353083517,
+          0.10280521535950168,
+          0.7596871521202317,
+          0.6366903343206438
+        ]
+      },
+      {
+        "name": "landing_194",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.10599999016042094,
+          -0.02178556877138578
+        ],
+        "half_size": [
+          0.003509824936552415,
+          0.003508621703818101,
+          0.00026068311524461474
+        ],
+        "quat_wxyz": [
+          7.879799320094285e-05,
+          -0.7031051334264192,
+          0.7110859032610337,
+          5.76518290414626e-05
+        ]
+      },
+      {
+        "name": "landing_195",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05700154765454745,
+          -0.10599911212871714,
+          -0.028035429493999363
+        ],
+        "half_size": [
+          0.009510472339882281,
+          0.002753914079208892,
+          0.002759864976849579
+        ],
+        "quat_wxyz": [
+          -0.6791038784762649,
+          0.19677751796752793,
+          0.6792130941505018,
+          0.1968910952672451
+        ]
+      },
+      {
+        "name": "landing_196",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.10599999016042094,
+          -0.0322855688626554
+        ],
+        "half_size": [
+          0.0035098249365524167,
+          0.003508621703818101,
+          0.00026068311524461533
+        ],
+        "quat_wxyz": [
+          7.879799320101408e-05,
+          -0.7031051334264194,
+          0.7110859032610335,
+          5.765182904151899e-05
+        ]
+      },
+      {
+        "name": "landing_197",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05700000363794075,
+          -0.10600000164024344,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819541873432893,
+          0.0030880900968227737,
+          0.001239361644025678
+        ],
+        "quat_wxyz": [
+          0.0027244905132965684,
+          0.13226343745128127,
+          0.9912037713902262,
+          -0.0037475120822033745
+        ]
+      },
+      {
+        "name": "landing_198",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u652f\u817f\u9876\u7aef\u7f29\u77ed8mm.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.07071842598382971,
+          -0.12315855222197958,
+          -0.1939150245797329
+        ],
+        "half_size": [
+          0.16304368057243585,
+          0.0079992302875718,
+          0.007999230114052042
+        ],
+        "quat_wxyz": [
+          0.6862789798639043,
+          0.3447077157841937,
+          0.5161439060724049,
+          -0.3792007656903175
+        ]
+      },
+      {
+        "name": "landing_199",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.030446214482525297,
+          -0.09923847606903125,
+          -0.05897531168722554
+        ],
+        "half_size": [
+          0.011512183745758273,
+          0.0027586265644307197,
+          0.0027558103433692424
+        ],
+        "quat_wxyz": [
+          0.4897043733110446,
+          -0.5100088855455919,
+          -0.42150670917918137,
+          0.5678139286258459
+        ]
+      },
+      {
+        "name": "landing_200",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.030451428974229745,
+          -0.10737310822674548,
+          -0.05760434114244029
+        ],
+        "half_size": [
+          0.0035098260588339925,
+          0.003508622128354137,
+          0.00026068346997366876
+        ],
+        "quat_wxyz": [
+          0.45372660506114576,
+          -0.5371168661395713,
+          0.5432217627313248,
+          0.4588548315787525
+        ]
+      },
+      {
+        "name": "landing_201",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.030451428954998323,
+          -0.09307761305794975,
+          -0.06003104352204813
+        ],
+        "half_size": [
+          0.0035098259944984335,
+          0.0035086221346989546,
+          0.0002606837478841326
+        ],
+        "quat_wxyz": [
+          0.4537264367093108,
+          -0.5371167653759876,
+          0.5432219419343528,
+          0.4588549038467155
+        ]
+      },
+      {
+        "name": "landing_202",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.03045244503226982,
+          -0.09164806744567862,
+          -0.06027372596975701
+        ],
+        "half_size": [
+          0.003081977421286235,
+          0.0030880626758089105,
+          0.001239366038997721
+        ],
+        "quat_wxyz": [
+          -0.08324711766517147,
+          0.10279199303025732,
+          0.7596890573794831,
+          0.636691651953425
+        ]
+      },
+      {
+        "name": "landing_203",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.10599999008585223,
+          -0.021785568771024062
+        ],
+        "half_size": [
+          0.00350982348872912,
+          0.0035086202538477398,
+          0.00026068311340953236
+        ],
+        "quat_wxyz": [
+          7.87960626188417e-05,
+          -0.7030921208746457,
+          0.7110987695328795,
+          5.765412188792779e-05
+        ]
+      },
+      {
+        "name": "landing_204",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.023001542410450954,
+          -0.10599910539553781,
+          -0.028035429504796497
+        ],
+        "half_size": [
+          0.009510472292705019,
+          0.00275390759139319,
+          0.0027598663130674237
+        ],
+        "quat_wxyz": [
+          -0.6791004870531937,
+          0.19678925465522662,
+          0.6792096832096184,
+          0.19690282875226867
+        ]
+      },
+      {
+        "name": "landing_205",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.10599999008585223,
+          -0.032285568862293675
+        ],
+        "half_size": [
+          0.00350982348872912,
+          0.0035086202538477398,
+          0.0002606831134095322
+        ],
+        "quat_wxyz": [
+          7.879606261883009e-05,
+          -0.7030921208746455,
+          0.7110987695328798,
+          5.765412188790117e-05
+        ]
+      },
+      {
+        "name": "landing_206",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02300000179019676,
+          -0.10600000164024344,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.003081960223485319,
+          0.003088079151496748,
+          0.001239361654838057
+        ],
+        "quat_wxyz": [
+          0.0027244536464156167,
+          0.1322554788550747,
+          0.9912048333458665,
+          -0.0037475347812192437
+        ]
+      },
+      {
+        "name": "landing_207",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u5de6\u524d_\u6d3b\u52a8\u5939\u76d6.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.04523433821361835,
+          -0.09316163236094209,
+          -0.05743830452393999
+        ],
+        "half_size": [
+          0.019021079331886476,
+          0.013876219760427955,
+          0.006271780879909484
+        ],
+        "quat_wxyz": [
+          0.05765083698546864,
+          -0.06874041759383592,
+          0.7613675329723979,
+          0.6420830286804228
+        ]
+      },
+      {
+        "name": "landing_208",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u53f3\u540e_\u6cd5\u5170\u5939\u5ea7.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.04168883837457333,
+          0.0954475380261419,
+          -0.045406817320537377
+        ],
+        "half_size": [
+          0.030128482352082445,
+          0.027694472247396663,
+          0.017590652880223042
+        ],
+        "quat_wxyz": [
+          0.23914710542960493,
+          -0.24677703840171042,
+          0.650605634441373,
+          0.6772164083330089
+        ]
+      },
+      {
+        "name": "landing_209",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u5de6\u524d_\u6cd5\u5170\u5939\u5ea7.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.042108421774228307,
+          -0.10014419689868422,
+          -0.040327699340244785
+        ],
+        "half_size": [
+          0.03234228270662455,
+          0.0296782398116032,
+          0.016353669039970327
+        ],
+        "quat_wxyz": [
+          -0.21277010092185025,
+          0.33526828835381245,
+          0.7823265148774012,
+          0.47988465603495783
+        ]
+      },
+      {
+        "name": "landing_210",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u652f\u817f\u9876\u7aef\u7f29\u77ed8mm.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.07071841821041189,
+          0.12315854861726888,
+          -0.19391502667480517
+        ],
+        "half_size": [
+          0.16304368039101774,
+          0.007994527505403075,
+          0.007994524855344727
+        ],
+        "quat_wxyz": [
+          0.6331828141460664,
+          -0.4346053062584242,
+          -0.45994152054425763,
+          -0.4457034320279858
+        ]
+      },
+      {
+        "name": "landing_211",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05995838166085723,
+          -0.09833672471604898,
+          -0.053663169861464376
+        ],
+        "half_size": [
+          0.011512183750154312,
+          0.002758627460231929,
+          0.0027558104269493704
+        ],
+        "quat_wxyz": [
+          0.48970416153607843,
+          -0.5100090887551533,
+          -0.42150694611419504,
+          0.5678137528616839
+        ]
+      },
+      {
+        "name": "landing_212",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.059963595714808304,
+          -0.10647135438278589,
+          -0.05229219991891383
+        ],
+        "half_size": [
+          0.003509826544841835,
+          0.0035086220342158123,
+          0.0002606857346871882
+        ],
+        "quat_wxyz": [
+          0.45372591057682315,
+          -0.537116088243836,
+          0.5432225701320528,
+          0.458855473019555
+        ]
+      },
+      {
+        "name": "landing_213",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.059963595646505496,
+          -0.0921758608016212,
+          -0.05471890359160703
+        ],
+        "half_size": [
+          0.003509825053753166,
+          0.003508622010918214,
+          0.0002606839070563115
+        ],
+        "quat_wxyz": [
+          0.45372583942782907,
+          -0.5371158487698141,
+          0.5432226699906876,
+          0.45885570547175575
+        ]
+      },
+      {
+        "name": "landing_214",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05996461200919853,
+          -0.09074631250016203,
+          -0.05496158493873017
+        ],
+        "half_size": [
+          0.0030819758659997054,
+          0.0030880628147705036,
+          0.001239361290856666
+        ],
+        "quat_wxyz": [
+          -0.08324761703302962,
+          0.10279250367121334,
+          0.7596888722481268,
+          0.6366917251148273
+        ]
+      },
+      {
+        "name": "landing_215",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101905964107,
+          0.10600001114538343,
+          -0.021785568771058167
+        ],
+        "half_size": [
+          0.0035098278409403513,
+          0.003508624606815745,
+          0.0002606831139905709
+        ],
+        "quat_wxyz": [
+          7.879657112629926e-05,
+          -0.7030977526972275,
+          0.7110932010779578,
+          5.7653375137281385e-05
+        ]
+      },
+      {
+        "name": "landing_216",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05699845423246271,
+          0.10600088916656959,
+          -0.028035429475611884
+        ],
+        "half_size": [
+          0.009510472395533471,
+          0.0027538763725572014,
+          0.002759872076230988
+        ],
+        "quat_wxyz": [
+          -0.6790850937486025,
+          0.19684231562110457,
+          0.6791943037264699,
+          0.19695592404111412
+        ]
+      },
+      {
+        "name": "landing_217",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101905964107,
+          0.10600001114538343,
+          -0.032285568862327786
+        ],
+        "half_size": [
+          0.003509827840940351,
+          0.003508624606815745,
+          0.0002606831139905707
+        ],
+        "quat_wxyz": [
+          7.879657112628264e-05,
+          -0.7030977526972274,
+          0.7110932010779581,
+          5.765337513726314e-05
+        ]
+      },
+      {
+        "name": "landing_218",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700000096130597,
+          0.10600000030890479,
+          -0.03373556908320942
+        ],
+        "half_size": [
+          0.003081967363953188,
+          0.0030880706931392383,
+          0.0012393617084100143
+        ],
+        "quat_wxyz": [
+          0.0027244551662212644,
+          0.1322533639265695,
+          0.9912051154560647,
+          -0.0037475549206251392
+        ]
+      },
+      {
+        "name": "landing_219",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.023001016597663203,
+          0.10600001104725952,
+          -0.021785568771226782
+        ],
+        "half_size": [
+          0.003509828111040931,
+          0.003508624877828539,
+          0.0002606831156448049
+        ],
+        "quat_wxyz": [
+          7.879766729871025e-05,
+          -0.7031001804206927,
+          0.7110908006433063,
+          5.765221934134536e-05
+        ]
+      },
+      {
+        "name": "landing_220",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.022998456776364303,
+          0.10600089169188101,
+          -0.028035429499087026
+        ],
+        "half_size": [
+          0.009510472303386763,
+          0.0027538833820645032,
+          0.0027598689659027024
+        ],
+        "quat_wxyz": [
+          -0.6790888099600848,
+          0.19682955851042602,
+          0.6791979879187222,
+          0.196943154973068
+        ]
+      },
+      {
+        "name": "landing_221",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.023001016597663203,
+          0.10600001104725952,
+          -0.032285568862496394
+        ],
+        "half_size": [
+          0.0035098281110409325,
+          0.003508624877828539,
+          0.00026068311564480455
+        ],
+        "quat_wxyz": [
+          7.879766729868334e-05,
+          -0.7031001804206929,
+          0.7110908006433063,
+          5.765221934131685e-05
+        ]
+      },
+      {
+        "name": "landing_222",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.022999999241604334,
+          0.10599999983765407,
+          -0.03373556907171915
+        ],
+        "half_size": [
+          0.0030819800094155354,
+          0.0030880588387623606,
+          0.0012393616796684416
+        ],
+        "quat_wxyz": [
+          0.0027244146743935897,
+          0.132245746873691,
+          0.9912061317715094,
+          -0.0037475774925324386
+        ]
+      },
+      {
+        "name": "landing_223",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101905450665,
+          0.08400001126447638,
+          -0.021785568771058327
+        ],
+        "half_size": [
+          0.0035098278431906905,
+          0.0035086246090731163,
+          0.00026068311392749943
+        ],
+        "quat_wxyz": [
+          7.879656632908786e-05,
+          -0.7030977729593882,
+          0.7110931810436231,
+          5.7653366374868464e-05
+        ]
+      },
+      {
+        "name": "landing_224",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05699845423246271,
+          0.08400088928577888,
+          -0.028035429475611884
+        ],
+        "half_size": [
+          0.009510472395533471,
+          0.0027538763725572014,
+          0.002759872076230988
+        ],
+        "quat_wxyz": [
+          -0.6790850937486025,
+          0.19684231562110457,
+          0.6791943037264699,
+          0.19695592404111412
+        ]
+      },
+      {
+        "name": "landing_225",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700101905450665,
+          0.08400001126447638,
+          -0.032285568862327946
+        ],
+        "half_size": [
+          0.003509827843190689,
+          0.0035086246090731163,
+          0.0002606831139274995
+        ],
+        "quat_wxyz": [
+          7.879656632909933e-05,
+          -0.7030977729593882,
+          0.7110931810436232,
+          5.7653366374870246e-05
+        ]
+      },
+      {
+        "name": "landing_226",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05700000096130597,
+          0.08400000042811408,
+          -0.03373556908320942
+        ],
+        "half_size": [
+          0.003081967363953188,
+          0.0030880706931392383,
+          0.0012393617084100143
+        ],
+        "quat_wxyz": [
+          0.0027244551662212644,
+          0.1322533639265695,
+          0.9912051154560647,
+          -0.0037475549206251392
+        ]
+      },
+      {
+        "name": "landing_227",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02300101659253245,
+          0.08400001116635304,
+          -0.02178556877122694
+        ],
+        "half_size": [
+          0.0035098281132882937,
+          0.0035086248800829333,
+          0.00026068311558173315
+        ],
+        "quat_wxyz": [
+          7.87976625002502e-05,
+          -0.703100200668258,
+          0.7110907806232664,
+          5.765221058050397e-05
+        ]
+      },
+      {
+        "name": "landing_228",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.022998456776364303,
+          0.0840008918110903,
+          -0.02803542949908703
+        ],
+        "half_size": [
+          0.009510472303386763,
+          0.0027538833820645032,
+          0.0027598689659027024
+        ],
+        "quat_wxyz": [
+          -0.6790888099600848,
+          0.19682955851042602,
+          0.6791979879187222,
+          0.196943154973068
+        ]
+      },
+      {
+        "name": "landing_229",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.02300101659253245,
+          0.08400001116635304,
+          -0.032285568862496554
+        ],
+        "half_size": [
+          0.0035098281132882945,
+          0.0035086248800829333,
+          0.0002606831155817332
+        ],
+        "quat_wxyz": [
+          7.879766250024151e-05,
+          -0.7031002006682581,
+          0.7110907806232664,
+          5.765221058051436e-05
+        ]
+      },
+      {
+        "name": "landing_230",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.022999999241604334,
+          0.08399999995686336,
+          -0.03373556907171915
+        ],
+        "half_size": [
+          0.0030819800094155354,
+          0.0030880588387623606,
+          0.0012393616796684416
+        ],
+        "quat_wxyz": [
+          0.0027244146743935897,
+          0.132245746873691,
+          0.9912061317715094,
+          -0.0037475774925324386
+        ]
+      },
+      {
+        "name": "landing_231",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897917991805,
+          0.08400001117940903,
+          -0.02178556877138571
+        ],
+        "half_size": [
+          0.003509828677106509,
+          0.0035086217193683964,
+          0.00026068311551895193
+        ],
+        "quat_wxyz": [
+          7.879795920619822e-05,
+          -0.7031052732630131,
+          0.7110857649938572,
+          5.765176769015313e-05
+        ]
+      },
+      {
+        "name": "landing_232",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05700154597055157,
+          0.08400088676063043,
+          -0.028035429483443307
+        ],
+        "half_size": [
+          0.00951047236755246,
+          0.00275389425381103,
+          0.0027598671546573196
+        ],
+        "quat_wxyz": [
+          -0.6790934448846726,
+          0.19681352202615604,
+          0.679202649401749,
+          0.19692712283475056
+        ]
+      },
+      {
+        "name": "landing_233",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897917991805,
+          0.08400001117940903,
+          -0.03228556886265533
+        ],
+        "half_size": [
+          0.003509828677106509,
+          0.0035086217193683964,
+          0.0002606831155189519
+        ],
+        "quat_wxyz": [
+          7.879795920618597e-05,
+          -0.703105273263013,
+          0.7110857649938572,
+          5.7651767690140286e-05
+        ]
+      },
+      {
+        "name": "landing_234",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.057000002695554594,
+          0.08399999995685868,
+          -0.0337355690717191
+        ],
+        "half_size": [
+          0.0030819856754507216,
+          0.003088055861066795,
+          0.0012393616978432164
+        ],
+        "quat_wxyz": [
+          0.0027244209166424026,
+          0.13224451700670428,
+          0.9912062958340638,
+          -0.003747579384994528
+        ]
+      },
+      {
+        "name": "landing_235",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.030446214387345048,
+          0.10120897277802259,
+          -0.058640814615881394
+        ],
+        "half_size": [
+          0.011512183575654677,
+          0.002758626893543469,
+          0.0027558104471306815
+        ],
+        "quat_wxyz": [
+          0.5681521424160283,
+          -0.4208593347451202,
+          -0.5105904456377794,
+          0.48926266999372203
+        ]
+      },
+      {
+        "name": "landing_236",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.030451428953880803,
+          0.09307761656524721,
+          -0.06003104570501124
+        ],
+        "half_size": [
+          0.0035098262797012936,
+          0.0035086221249413427,
+          0.0002606824739916438
+        ],
+        "quat_wxyz": [
+          0.4587668395432283,
+          0.5432961454854607,
+          -0.5372184546945621,
+          0.45360623581664467
+        ]
+      },
+      {
+        "name": "landing_237",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.030451428950889634,
+          0.10737310629640355,
+          -0.0576043392571367
+        ],
+        "half_size": [
+          0.0035098263637896514,
+          0.0035086221298386085,
+          0.0002606856480689658
+        ],
+        "quat_wxyz": [
+          0.4587668265575867,
+          0.5432963484100266,
+          -0.537218434470573,
+          0.45360602985365917
+        ]
+      },
+      {
+        "name": "landing_238",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.03045244503226982,
+          0.10880265840776453,
+          -0.05736168144461053
+        ],
+        "half_size": [
+          0.003081977105850667,
+          0.0030880594518909077,
+          0.0012393630997230027
+        ],
+        "quat_wxyz": [
+          -0.0992760048092362,
+          0.0874098106667697,
+          0.6424179677626409,
+          0.7548529357192926
+        ]
+      },
+      {
+        "name": "landing_239",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897917479413,
+          0.10600001106031542,
+          -0.02178556877138555
+        ],
+        "half_size": [
+          0.0035098286748649864,
+          0.003508621717119847,
+          0.0002606831155820233
+        ],
+        "quat_wxyz": [
+          7.879796400690196e-05,
+          -0.7031052530425438,
+          0.7110857849873911,
+          5.765177644791408e-05
+        ]
+      },
+      {
+        "name": "landing_240",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05700154597055157,
+          0.10600088664142114,
+          -0.028035429483443303
+        ],
+        "half_size": [
+          0.00951047236755246,
+          0.00275389425381103,
+          0.0027598671546573196
+        ],
+        "quat_wxyz": [
+          -0.6790934448846726,
+          0.19681352202615604,
+          0.679202649401749,
+          0.19692712283475056
+        ]
+      },
+      {
+        "name": "landing_241",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05699897917479413,
+          0.10600001106031542,
+          -0.03228556886265516
+        ],
+        "half_size": [
+          0.0035098286748649872,
+          0.003508621717119847,
+          0.00026068311558202306
+        ],
+        "quat_wxyz": [
+          7.879796400687141e-05,
+          -0.7031052530425437,
+          0.7110857849873912,
+          5.765177644788137e-05
+        ]
+      },
+      {
+        "name": "landing_242",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.057000002695554594,
+          0.10599999983764939,
+          -0.0337355690717191
+        ],
+        "half_size": [
+          0.0030819856754507216,
+          0.003088055861066795,
+          0.0012393616978432164
+        ],
+        "quat_wxyz": [
+          0.0027244209166424026,
+          0.13224451700670428,
+          0.9912062958340638,
+          -0.003747579384994528
+        ]
+      },
+      {
+        "name": "landing_243",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.03045868258458276,
+          0.10120897281036557,
+          -0.058640814814501986
+        ],
+        "half_size": [
+          0.011512183569750716,
+          0.0027586263250701077,
+          0.0027558108806379
+        ],
+        "quat_wxyz": [
+          0.568151163264491,
+          -0.4208606694338088,
+          -0.5105915855560356,
+          0.4892614693232091
+        ]
+      },
+      {
+        "name": "landing_244",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.030453466956228713,
+          0.09307761655095823,
+          -0.06003104562155733
+        ],
+        "half_size": [
+          0.003509825452790122,
+          0.00350862502264001,
+          0.00026068247465951854
+        ],
+        "quat_wxyz": [
+          0.4587715888140325,
+          0.543301769168272,
+          -0.5372127673242245,
+          0.4536014324707569
+        ]
+      },
+      {
+        "name": "landing_245",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.03045346695913554,
+          0.1073731062824379,
+          -0.05760433917362659
+        ],
+        "half_size": [
+          0.003509825536856567,
+          0.003508625027551757,
+          0.0002606856490651679
+        ],
+        "quat_wxyz": [
+          0.4587715757767114,
+          0.5433019720338178,
+          -0.5372127471575844,
+          0.4536012265579964
+        ]
+      },
+      {
+        "name": "landing_246",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.030452448735643622,
+          0.10880265827268312,
+          -0.05736168051155159
+        ],
+        "half_size": [
+          0.0030819509731526934,
+          0.0030880864901263786,
+          0.001239363110116428
+        ],
+        "quat_wxyz": [
+          -0.09928961771110026,
+          0.08742141393011184,
+          0.6424163888024756,
+          0.7548511453255071
+        ]
+      },
+      {
+        "name": "landing_247",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02299898148548553,
+          0.08400001125396948,
+          -0.021785568771023986
+        ],
+        "half_size": [
+          0.0035098272293821284,
+          0.0035086202694985286,
+          0.00026068311368386896
+        ],
+        "quat_wxyz": [
+          7.879602866182993e-05,
+          -0.7030922611631335,
+          0.7110986308239576,
+          5.765406048632175e-05
+        ]
+      },
+      {
+        "name": "landing_248",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02300154072782835,
+          0.08400089349460256,
+          -0.028035429494239865
+        ],
+        "half_size": [
+          0.009510472320375196,
+          0.0027538877550091242,
+          0.0027598684808822923
+        ],
+        "quat_wxyz": [
+          -0.6790900523538105,
+          0.19682526020927624,
+          0.6791992373526582,
+          0.19693885781434087
+        ]
+      },
+      {
+        "name": "landing_249",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02299898148548553,
+          0.08400001125396948,
+          -0.0322855688622936
+        ],
+        "half_size": [
+          0.0035098272293821275,
+          0.0035086202694985286,
+          0.0002606831136838691
+        ],
+        "quat_wxyz": [
+          7.879602866183116e-05,
+          -0.7030922611631334,
+          0.7110986308239577,
+          5.7654060486334285e-05
+        ]
+      },
+      {
+        "name": "landing_250",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.023000000847862186,
+          0.08399999995682843,
+          -0.03373556907171862
+        ],
+        "half_size": [
+          0.0030819917060317457,
+          0.0030880449170746587,
+          0.0012393617086556227
+        ],
+        "quat_wxyz": [
+          0.0027243840573978146,
+          0.13223656055577093,
+          0.9912073573488837,
+          -0.003747602077372006
+        ]
+      },
+      {
+        "name": "landing_251",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05997084921303583,
+          0.10030722127049078,
+          -0.05332867193561098
+        ],
+        "half_size": [
+          0.01151218358084888,
+          0.002758626649375585,
+          0.0027558075985430683
+        ],
+        "quat_wxyz": [
+          0.5681541860784303,
+          -0.4208565918570536,
+          -0.5105880748780437,
+          0.48926513029681085
+        ]
+      },
+      {
+        "name": "landing_252",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05996563215249394,
+          0.09217586294887725,
+          -0.05471890374839608
+        ],
+        "half_size": [
+          0.0035098254921179252,
+          0.0035086231201702264,
+          0.0002606814021793625
+        ],
+        "quat_wxyz": [
+          0.4587717445826762,
+          0.5433021267605166,
+          -0.5372125553223716,
+          0.4536010976993721
+        ]
+      },
+      {
+        "name": "landing_253",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05996563218420504,
+          0.10647135506851216,
+          -0.05229219909161788
+        ],
+        "half_size": [
+          0.0035098245165941532,
+          0.003508623087785903,
+          0.00026068477286624373
+        ],
+        "quat_wxyz": [
+          0.45877191947775453,
+          0.5433022639614723,
+          -0.537212355962768,
+          0.45360099258485714
+        ]
+      },
+      {
+        "name": "landing_254",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          -0.05996461599198175,
+          0.10790090348407545,
+          -0.05204954049664125
+        ],
+        "half_size": [
+          0.0030819546260234198,
+          0.0030880855966959565,
+          0.0012393633094121854
+        ],
+        "quat_wxyz": [
+          -0.09928815462132669,
+          0.08742030460531786,
+          0.6424170773084598,
+          0.7548508802916385
+        ]
+      },
+      {
+        "name": "landing_255",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u652f\u817f\u9876\u7aef\u7f29\u77ed8mm.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.07071841606080825,
+          0.12315854901649295,
+          -0.19391502699445898
+        ],
+        "half_size": [
+          0.16304368070557884,
+          0.007994848996022014,
+          0.007994844637401183
+        ],
+        "quat_wxyz": [
+          0.6333232284286502,
+          -0.43440066281576756,
+          0.46008553127975305,
+          0.44555477372031466
+        ]
+      },
+      {
+        "name": "landing_256",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u53f3\u524d_\u6cd5\u5170\u5939\u5ea7.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.04158022441595009,
+          0.09547609670816261,
+          -0.04536998711192668
+        ],
+        "half_size": [
+          0.030202580714977643,
+          0.027619319106945924,
+          0.01725713906951854
+        ],
+        "quat_wxyz": [
+          -0.24647830912969607,
+          0.24420527209100218,
+          0.6514729180404766,
+          0.6746816028849104
+        ]
+      },
+      {
+        "name": "landing_257",
+        "source_parts": [
+          "G_F_E_R_S_U\u4e0a\u7aef_\u53f3\u524d_\u6d3b\u52a8\u5939\u76d6.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.045234186990960906,
+          0.10643946046629267,
+          -0.05518933034981851
+        ],
+        "half_size": [
+          0.019037709254303297,
+          0.013899088025147367,
+          0.006281424089914702
+        ],
+        "quat_wxyz": [
+          0.059228827720284455,
+          0.06975881003799436,
+          0.7600901259511273,
+          -0.6433417869379877
+        ]
+      },
+      {
+        "name": "landing_258",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02299898148034403,
+          0.10600001113487666,
+          -0.021785568771023826
+        ],
+        "half_size": [
+          0.003509827227125587,
+          0.003508620267234954,
+          0.0002606831137469405
+        ],
+        "quat_wxyz": [
+          7.879603345667552e-05,
+          -0.7030922408728989,
+          0.7110986508857396,
+          5.7654069251875956e-05
+        ]
+      },
+      {
+        "name": "landing_259",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x16_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02300154072782835,
+          0.10600089337539327,
+          -0.028035429494239865
+        ],
+        "half_size": [
+          0.009510472320375196,
+          0.0027538877550091242,
+          0.002759868480882292
+        ],
+        "quat_wxyz": [
+          -0.6790900523538105,
+          0.19682526020927624,
+          0.6791992373526582,
+          0.19693885781434087
+        ]
+      },
+      {
+        "name": "landing_260",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02299898148034403,
+          0.10600001113487666,
+          -0.03228556886229344
+        ],
+        "half_size": [
+          0.003509827227125585,
+          0.003508620267234954,
+          0.00026068311374694025
+        ],
+        "quat_wxyz": [
+          7.879603345665164e-05,
+          -0.7030922408728986,
+          0.7110986508857399,
+          5.765406925184924e-05
+        ]
+      },
+      {
+        "name": "landing_261",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.02300000084786219,
+          0.10599999983761914,
+          -0.03373556907171862
+        ],
+        "half_size": [
+          0.0030819917060317457,
+          0.0030880449170746587,
+          0.0012393617086556225
+        ],
+        "quat_wxyz": [
+          0.0027243840573978146,
+          0.13223656055577093,
+          0.9912073573488837,
+          -0.003747602077372006
+        ]
+      },
+      {
+        "name": "landing_262",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3x20_\u5185\u516d\u89d2\u87ba\u6813.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05995838137197139,
+          0.10030722154528175,
+          -0.053328673535658684
+        ],
+        "half_size": [
+          0.011512183588697354,
+          0.002758626900979179,
+          0.002755810456683101
+        ],
+        "quat_wxyz": [
+          0.5681521263417949,
+          -0.4208593563772373,
+          -0.5105904673671772,
+          0.48926264737541764
+        ]
+      },
+      {
+        "name": "landing_263",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05996359569445024,
+          0.09217586295917538,
+          -0.05471890380765489
+        ],
+        "half_size": [
+          0.0035098262514041507,
+          0.003508622018202803,
+          0.000260681403524243
+        ],
+        "quat_wxyz": [
+          0.4587673854505933,
+          0.5432969631383082,
+          -0.5372177774315946,
+          0.45360550647338516
+        ]
+      },
+      {
+        "name": "landing_264",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u5e73\u57ab\u5708.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05996359566271725,
+          0.10647135507881073,
+          -0.052292199150879445
+        ],
+        "half_size": [
+          0.0035098252759302256,
+          0.003508621985879899,
+          0.0002606847742111243
+        ],
+        "quat_wxyz": [
+          0.4587675602985618,
+          0.5432971002841587,
+          -0.5372175781309757,
+          0.45360540140921957
+        ]
+      },
+      {
+        "name": "landing_265",
+        "source_parts": [
+          "G_F_E_R_S_U\u7d27\u56fa_M3_\u516d\u89d2\u87ba\u6bcd.SLDPRT"
+        ],
+        "type": "box",
+        "center": [
+          0.05996461185792011,
+          0.10790090355161594,
+          -0.0520495409631744
+        ],
+        "half_size": [
+          0.0030819785758263714,
+          0.003088060197473128,
+          0.0012393632922696267
+        ],
+        "quat_wxyz": [
+          -0.09927554099184259,
+          0.08740955253406739,
+          0.642418540367661,
+          0.754852539293904
+        ]
+      },
+      {
+        "name": "Led_front",
+        "type": "box",
+        "center": [
+          0.08175478985011139,
+          8.333324653941876e-08,
+          0.0238499751595872
+        ],
+        "half_size": [
+          0.020236228923404466,
+          0.10199076877377622,
+          0.0014999984377098863
+        ],
+        "source_parts": [
+          "Led_front"
+        ]
+      },
+      {
+        "name": "Led_back",
+        "type": "box",
+        "center": [
+          -0.08175424818400887,
+          8.333324653941876e-08,
+          0.0238499751595872
+        ],
+        "half_size": [
+          0.02023627059002772,
+          0.10199076877377622,
+          0.0014999984377098863
+        ],
+        "source_parts": [
+          "Led_back"
+        ]
+      },
+      {
+        "name": "rotor_sweep0",
+        "type": "cylinder",
+        "center": [
+          0.09899477189419034,
+          0.09899493856068343,
+          -0.006226118495
+        ],
+        "radius": 0.08984864842572181,
+        "half_height": 0.007309450705,
+        "source_parts": [
+          "prop:quadrant0"
+        ]
+      },
+      {
+        "name": "rotor_sweep1",
+        "type": "cylinder",
+        "center": [
+          -0.0989949802273067,
+          0.09899493856068343,
+          -0.006226118495
+        ],
+        "radius": 0.08984879132230719,
+        "half_height": 0.007309450705,
+        "source_parts": [
+          "prop:quadrant1"
+        ]
+      },
+      {
+        "name": "rotor_sweep2",
+        "type": "cylinder",
+        "center": [
+          -0.09899460522769726,
+          -0.0989951052271765,
+          -0.006226118495
+        ],
+        "radius": 0.08984854091672491,
+        "half_height": 0.007309450705,
+        "source_parts": [
+          "prop:quadrant2"
+        ]
+      },
+      {
+        "name": "rotor_sweep3",
+        "type": "cylinder",
+        "center": [
+          0.09899481356081362,
+          -0.09899477189419034,
+          -0.006226118495
+        ],
+        "radius": 0.08984861614129716,
+        "half_height": 0.007309450705,
+        "source_parts": [
+          "prop:quadrant3"
+        ]
+      }
+    ],
+    "mount_top_m": [
+      0,
+      0,
+      -0.03
+    ],
+    "mount_status": "candidate central adapter; mounting holes and load capacity require verification",
+    "landing_gear": "native long landing assembly; upstream short feet removed",
+    "landing_bounds_m": [
+      [
+        -0.1500000004896809,
+        -0.16200000336877812,
+        -0.37402988268252746
+      ],
+      [
+        0.1500000058433126,
+        0.1619999975848962,
+        -0.018535569158422815
+      ]
+    ],
+    "rigid_z_interval_m": [
+      -0.37402988268252746,
+      0.120446957884475
+    ],
+    "body_envelope_center_z_m": -0.12679146239902622,
+    "body_envelope_height_m": 0.4944768405670025,
+    "flexible_visual_diameter_m": 0.05,
+    "flexible_collision_diameter_m": 0.068,
+    "camera_status": "mesh front and optical axis aligned; metric extrinsics are development mounts",
+    "camera_alignment": {
+      "mesh_front_axis": [
+        0,
+        0,
+        -1
+      ],
+      "body_forward_axis": [
+        1,
+        0,
+        0
+      ],
+      "wrist_forward_axis_tool": [
+        0,
+        0,
+        1
+      ],
+      "wrist_center_tool": [
+        -0.045,
+        0,
+        0.065
+      ],
+      "source": "D435 front-bezel STL and native CAD reference; rigid mounting"
+    },
+    "arm_visual": {
+      "source": "installed Qingyu RViz MarkerArray",
+      "markers": 15,
+      "marker_type": "SPHERE",
+      "diameter_m": 0.05,
+      "motion_source": "integrated element transforms; no qpos overwrite",
+      "color": "soft charcoal for figure legibility; geometry from SDK"
+    },
+    "rotated_propeller_sweep_included": true,
+    "mass_identified": false
+  }
+}

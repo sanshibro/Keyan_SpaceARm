@@ -1,0 +1,2355 @@
+{
+  "source": "/opt/qingyu_api_ros1/lib/continuum_arm/continuum_arm_visualize",
+  "binary_sha256": "ced3ed25ddadd3e2ef8ca5f1073f17455455f503f97b991afd4cba5ae06839c9",
+  "topic": "/continuum_arm",
+  "kind": "visualization_msgs/MarkerArray",
+  "master": "http://127.0.0.1:11484/",
+  "nodes": [
+    "/continuum_arm_visualize",
+    "/paper_visual_probe",
+    "/rosout",
+    "/qingyu_api_bridge"
+  ],
+  "hardware_nodes_started": false,
+  "cases": [
+    {
+      "theta_deg": 0,
+      "phi_deg": 0,
+      "markers": [
+        {
+          "id": 0,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.07039999961853027
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 1,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.09039999544620514
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 2,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.1103999987244606
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 3,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.13040000200271606
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 4,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.15039999783039093
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 5,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.1703999936580658
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 6,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.19040000438690186
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 7,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.21040000021457672
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 8,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.2303999960422516
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 9,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.25040000677108765
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 10,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.2703999876976013
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 11,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.2903999984264374
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 12,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.31040000915527344
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 13,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.3304000198841095
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 14,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.35040000081062317
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        }
+      ],
+      "bridge_commands": []
+    },
+    {
+      "theta_deg": 90,
+      "phi_deg": 0,
+      "markers": [
+        {
+          "id": 0,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.07039999961853027
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 1,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0011208249488845468,
+            0.09035806357860565
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 2,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.004469189792871475,
+            0.11006513983011246
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 3,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.010002990253269672,
+            0.1292734146118164
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 4,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.01765265315771103,
+            0.14774131774902344
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 5,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.027321958914399147,
+            0.16523659229278564
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 6,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.03888930752873421,
+            0.18153926730155945
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 7,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.05220925435423851,
+            0.19644427299499512
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 8,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.06711427122354507,
+            0.20976422727108002
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 9,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.08341693878173828,
+            0.22133156657218933
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 10,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.10091222822666168,
+            0.2310008704662323
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 11,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.11938013881444931,
+            0.23865053057670593
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 12,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.13858839869499207,
+            0.24418435990810394
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 13,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.15829548239707947,
+            0.24753272533416748
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 14,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.17825353145599365,
+            0.24865353107452393
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        }
+      ],
+      "bridge_commands": []
+    },
+    {
+      "theta_deg": 90,
+      "phi_deg": 90,
+      "markers": [
+        {
+          "id": 0,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.07039999961853027
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 1,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0011208249488845468,
+            -4.899281327852556e-11,
+            0.09035806357860565
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 2,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.004469189792871475,
+            -1.9535449646834735e-10,
+            0.11006513983011246
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 3,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.010002990253269672,
+            -4.372446016365217e-10,
+            0.1292734146118164
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 4,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.01765265315771103,
+            -7.716219885267606e-10,
+            0.14774131774902344
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 5,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.027321958914399147,
+            -1.1942807853770887e-09,
+            0.16523659229278564
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 6,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.03888930752873421,
+            -1.699905660679235e-09,
+            0.18153926730155945
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 7,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.05220925435423851,
+            -2.2821389222826838e-09,
+            0.19644427299499512
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 8,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.06711427122354507,
+            -2.933657983206217e-09,
+            0.20976422727108002
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 9,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.08341693878173828,
+            -3.6462701746842185e-09,
+            0.22133156657218933
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 10,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.10091222822666168,
+            -4.411013776461914e-09,
+            0.2310008704662323
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 11,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.11938013881444931,
+            -5.21827159261079e-09,
+            0.23865053057670593
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 12,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.13858839869499207,
+            -6.05789152174907e-09,
+            0.24418435990810394
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 13,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.15829548239707947,
+            -6.919315342912569e-09,
+            0.24753272533416748
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 14,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.17825353145599365,
+            -7.791709499826993e-09,
+            0.24865353107452393
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        }
+      ],
+      "bridge_commands": []
+    },
+    {
+      "theta_deg": 90,
+      "phi_deg": 180,
+      "markers": [
+        {
+          "id": 0,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.07039999961853027
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 1,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -9.798562655705112e-11,
+            -0.0011208249488845468,
+            0.09035806357860565
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 2,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -3.907089929366947e-10,
+            -0.004469189792871475,
+            0.11006513983011246
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 3,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -8.744892032730434e-10,
+            -0.010002990253269672,
+            0.1292734146118164
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 4,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -1.5432439770535211e-09,
+            -0.01765265315771103,
+            0.14774131774902344
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 5,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -2.3885615707541774e-09,
+            -0.027321958914399147,
+            0.16523659229278564
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 6,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -3.39981132135847e-09,
+            -0.03888930752873421,
+            0.18153926730155945
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 7,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -4.5642778445653676e-09,
+            -0.05220925435423851,
+            0.19644427299499512
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 8,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -5.867315966412434e-09,
+            -0.06711427122354507,
+            0.20976422727108002
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 9,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -7.292540349368437e-09,
+            -0.08341693878173828,
+            0.22133156657218933
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 10,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -8.822027552923828e-09,
+            -0.10091222822666168,
+            0.2310008704662323
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 11,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -1.043654318522158e-08,
+            -0.11938013881444931,
+            0.23865053057670593
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 12,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -1.211578304349814e-08,
+            -0.13858839869499207,
+            0.24418435990810394
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 13,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -1.3838630685825137e-08,
+            -0.15829548239707947,
+            0.24753272533416748
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 14,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -1.5583418999653986e-08,
+            -0.17825353145599365,
+            0.24865353107452393
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        }
+      ],
+      "bridge_commands": []
+    },
+    {
+      "theta_deg": 90,
+      "phi_deg": -90,
+      "markers": [
+        {
+          "id": 0,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.0,
+            0.0,
+            0.07039999961853027
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 1,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.0011208249488845468,
+            -4.899281327852556e-11,
+            0.09035806357860565
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 2,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.004469189792871475,
+            -1.9535449646834735e-10,
+            0.11006513983011246
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 3,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.010002990253269672,
+            -4.372446016365217e-10,
+            0.1292734146118164
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 4,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.01765265315771103,
+            -7.716219885267606e-10,
+            0.14774131774902344
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 5,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.027321958914399147,
+            -1.1942807853770887e-09,
+            0.16523659229278564
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 6,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.03888930752873421,
+            -1.699905660679235e-09,
+            0.18153926730155945
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 7,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.05220925435423851,
+            -2.2821389222826838e-09,
+            0.19644427299499512
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 8,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.06711427122354507,
+            -2.933657983206217e-09,
+            0.20976422727108002
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 9,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.08341693878173828,
+            -3.6462701746842185e-09,
+            0.22133156657218933
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 10,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.10091222822666168,
+            -4.411013776461914e-09,
+            0.2310008704662323
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 11,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.11938013881444931,
+            -5.21827159261079e-09,
+            0.23865053057670593
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 12,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.13858839869499207,
+            -6.05789152174907e-09,
+            0.24418435990810394
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 13,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.15829548239707947,
+            -6.919315342912569e-09,
+            0.24753272533416748
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        },
+        {
+          "id": 14,
+          "ns": "continuum_backbone",
+          "type": 2,
+          "frame": "base_link",
+          "mesh": "",
+          "scale": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "color": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            -0.17825353145599365,
+            -7.791709499826993e-09,
+            0.24865353107452393
+          ],
+          "quaternion": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": []
+        }
+      ],
+      "bridge_commands": []
+    }
+  ],
+  "api_cases": [
+    {
+      "theta1_deg": 90,
+      "phi1_deg": 0,
+      "control_angles": [
+        90.0,
+        0.0
+      ],
+      "end_position": [
+        0.0,
+        0.17825353145599365,
+        0.24865353107452393
+      ]
+    },
+    {
+      "theta1_deg": 90,
+      "phi1_deg": 90,
+      "control_angles": [
+        90.0,
+        90.0
+      ],
+      "end_position": [
+        0.17825353145599365,
+        -7.791709499826993e-09,
+        0.24865353107452393
+      ]
+    },
+    {
+      "theta1_deg": 90,
+      "phi1_deg": 180,
+      "control_angles": [
+        90.0,
+        180.0
+      ],
+      "end_position": [
+        -1.5583418999653986e-08,
+        -0.17825353145599365,
+        0.24865353107452393
+      ]
+    },
+    {
+      "theta1_deg": 90,
+      "phi1_deg": -90,
+      "control_angles": [
+        90.0,
+        -90.0
+      ],
+      "end_position": [
+        -0.17825353145599365,
+        -7.791709499826993e-09,
+        0.24865353107452393
+      ]
+    }
+  ]
+}

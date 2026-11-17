@@ -1,0 +1,40 @@
+{
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "scope": "simulated camera-axis and image-orientation regression; synthetic known targets",
+  "cameras": [
+    {
+      "camera": "navigation",
+      "optical_forward_world": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "expected_forward_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "angular_error_deg": 0.0,
+      "red_top_pixels": 3218,
+      "blue_left_pixels": 1619,
+      "target_visible_and_upright": true
+    },
+    {
+      "camera": "wrist_rgbd",
+      "optical_forward_world": [
+        1.0000000000000004,
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ],
+      "expected_forward_world": [
+        1.0000000000000007,
+        1.2325513343267993e-16,
+        1.1102230246251565e-16
+      ],
+      "angular_error_deg": 0.0,
+      "red_top_pixels": 3338,
+      "blue_left_pixels": 1684,
+      "target_visible_and_upright": true
+    }
+  ]
+}

@@ -3332,7 +3332,116 @@
     "body_envelope_height_m": 0.4944768405670025,
     "flexible_visual_diameter_m": 0.05,
     "flexible_collision_diameter_m": 0.068,
-    "camera_status": "provisional custom body camera bounds",
+    "camera_status": "mesh front and optical axis aligned; metric extrinsics are development mounts",
+    "camera_alignment": {
+      "mesh_front_axis": [
+        0,
+        0,
+        -1
+      ],
+      "body_forward_axis": [
+        1,
+        0,
+        0
+      ],
+      "body_registration": {
+        "source": "native modular CAD components 98, 100, 102..136",
+        "source_manifest_sha256": "57f73e0ac6fc7bfd8fc9d4753d5a669f356e3f705c252d80a0e8c7e82675ca73",
+        "source_dome_center": [
+          0.0020359038423728576,
+          0.13435412406096908,
+          0.11965134751591
+        ],
+        "target_dome_center": [
+          2.9165000000122565e-07,
+          4.165000000097563e-08,
+          0.10969796915
+        ],
+        "source_camera_center": [
+          0.0020812778782081237,
+          0.0890059990811691,
+          0.1706753010312012
+        ],
+        "source_relative_camera": [
+          4.537403583526611e-05,
+          -0.04534812497979998,
+          0.05102395351529121
+        ],
+        "rotation": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "translation": [
+          -0.11965105586591,
+          -0.0020358621923728566,
+          -0.024656154910969078
+        ],
+        "body_camera_center": [
+          0.05102424516529121,
+          4.541568583526709e-05,
+          0.06434984417020002
+        ],
+        "placement": "preserve native camera-to-MID360 translation; rigid registration, unit scale",
+        "camera_half_size": [
+          0.012526046484708786,
+          0.04493940994143486,
+          0.01249998202547431
+        ],
+        "mounting_plate_file": "revision/generated/custom_camera/mid360_realsense_mount.obj",
+        "mount_source_sha256": "ffaf9da81401794b325372fb93183a2e3f1df8bec85ef5f63ab5492281b4013f",
+        "mount_bounds": [
+          [
+            -0.04749970787110562,
+            -0.06399996055648761,
+            0.05534987082059449
+          ],
+          [
+            0.047500290936801484,
+            0.06400004179789585,
+            0.07334987004573411
+          ]
+        ],
+        "mechanical_status": "native sensor mounting plate registered to SUPER; attachment holes require final integration check"
+      },
+      "wrist_forward_axis_tool": [
+        0,
+        0,
+        1
+      ],
+      "wrist_center_tool": [
+        -0.058,
+        0,
+        0.065
+      ],
+      "source": "D435 front-bezel STL and native CAD reference; rigid mounting"
+    },
+    "arm_visual": {
+      "source": "installed Qingyu RViz MarkerArray",
+      "markers": 15,
+      "marker_type": "SPHERE",
+      "diameter_m": 0.05,
+      "motion_source": "integrated element transforms; no qpos overwrite",
+      "color": "soft charcoal for figure legibility; geometry from SDK"
+    },
+    "gripper": {
+      "source": "complete SDK STL shells, full resolution",
+      "reference": "SDK launch: Rz(pi) Rx(pi/2), visual_xyz=[.0021,.0708,-.023]",
+      "collision": "per-component convex hulls; old opaque boxes disabled",
+      "actuation": "existing inward-slide approximation, not verified linkage kinematics"
+    },
     "rotated_propeller_sweep_included": true,
     "mass_identified": false
   }

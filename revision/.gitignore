@@ -10,3 +10,5 @@ archive/
 generated/
 
 data/qingyu_contract_probe/ros_logs/
+
+data/qingyu_visual_probe/ros_logs/

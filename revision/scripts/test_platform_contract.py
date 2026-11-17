@@ -21,7 +21,8 @@ class PlatformChecks(unittest.TestCase):
     def test_single_section_units_wrap_and_limits(self):
         c=ArmCommand(0,0.,math.radians(120),math.radians(450))
         f=c.qingyu_joint_fields()
-        self.assertAlmostEqual(f['theta1'],118);self.assertAlmostEqual(f['phi1'],90)
+        self.assertAlmostEqual(f['theta1'],118);self.assertAlmostEqual(f['phi1'],0)
+        self.assertAlmostEqual(ArmCommand(1,1.,math.pi/2,0.).qingyu_joint_fields()['phi1'],90.)
         for k in ('theta2','phi2','theta3','phi3'):self.assertEqual(f[k],0)
         self.assertEqual(ArmCommand(1,1.,0.,math.pi).normalized().phi_rad,0.)
         for a in (float('nan'),math.radians(121),-.1):
@@ -74,5 +75,58 @@ class PlatformChecks(unittest.TestCase):
         self.assertTrue(oracle.sequence([[0,math.pi],[math.radians(118),math.pi],[0,math.pi]])['accepted'])
         r=oracle.transition([math.pi/2,math.radians(179)],[math.pi/2,math.radians(-179)])
         self.assertTrue(r['accepted']);self.assertLess(r['checked'],8)
+
+    def test_camera_mesh_front_agrees_with_optical_axis(self):
+        from model import SimArmBridge
+        # The source front bezel (mesh 29) lies on -Z. MuJoCo includes a
+        # principal-axis mesh transform in geom_xmat; explicitly remove it.
+        for theta,phi in [(0.,0.),(math.pi/2,math.pi),(.7,.4)]:
+            SimArmBridge().set_kinematic_shape(self.model,self.data,theta,phi)
+            mujoco.mj_forward(self.model,self.data)
+            for camera,prefix,parent,expected in [('navigation','visual_body_','uav',[1,0,0]),('wrist_rgbd','visual_wrist_','tool',[0,0,1])]:
+                g=self.model.geom(prefix+'metric_d435_cad_29').id
+                mesh=int(self.model.geom_dataid[g]);mr=np.zeros(9)
+                mujoco.mju_quat2Mat(mr,self.model.mesh_quat[mesh])
+                mesh_front=self.data.geom_xmat[g].reshape(3,3)@mr.reshape(3,3).T@np.array([0.,0.,-1.])
+                c=self.model.camera(camera).id;optical=-self.data.cam_xmat[c].reshape(3,3)[:,2]
+                wanted=self.data.xmat[self.model.body(parent).id].reshape(3,3)@np.array(expected)
+                self.assertGreater(float(mesh_front@optical),.999999)
+                self.assertGreater(float(optical@wanted),.999999)
+        SimArmBridge().set_kinematic_shape(self.model,self.data,math.pi/2,math.pi)
+        mujoco.mj_forward(self.model,self.data)
+        tool=self.model.body('tool').id;cam=self.model.camera('wrist_rgbd').id
+        self.assertGreater(self.data.cam_xpos[cam,2]-self.data.xpos[tool,2],.04)
+        self.assertGreater(self.data.cam_xmat[cam].reshape(3,3)[2,1],.999)
+
+    def test_visual_backbone_matches_installed_rviz_primitives(self):
+        p=ROOT/'revision/data/qingyu_visual_probe/markers.json'
+        evidence=json.loads(p.read_text());markers=evidence['cases'][0]['markers']
+        self.assertEqual(len(markers),15)
+        for i,marker in enumerate(markers):
+            self.assertEqual(marker['type'],2) # ROS Marker.SPHERE
+            g=self.model.geom('qingyu_rviz_backbone_%d'%i).id
+            self.assertEqual(self.model.geom_type[g],int(mujoco.mjtGeom.mjGEOM_SPHERE))
+            self.assertAlmostEqual(self.model.geom_size[g,0]*2,marker['scale'][0])
+            self.assertEqual(self.model.geom_contype[g],0)
+        from model import SimArmBridge
+        mount=self.model.body('mount').id
+        for case in evidence['cases']:
+            SimArmBridge().set_kinematic_shape(self.model,self.data,math.radians(case['theta_deg']),math.radians(90-case['phi_deg']))
+            mujoco.mj_forward(self.model,self.data)
+            R=self.data.xmat[mount].reshape(3,3);origin=self.data.xpos[mount]
+            errors=[]
+            for i,marker in enumerate(case['markers']):
+                expected=origin+R@np.array(marker['position'])
+                actual=self.data.geom_xpos[self.model.geom('qingyu_rviz_backbone_%d'%i).id]
+                errors.append(np.linalg.norm(actual-expected))
+            self.assertLess(max(errors),.0023)
+
+    def test_body_camera_preserves_native_camera_lidar_registration(self):
+        p=ROOT/'revision/data/body_camera_registration.json';r=json.loads(p.read_text())
+        expected=np.array(r['target_dome_center'])+np.array(r['rotation'])@np.array(r['source_relative_camera'])
+        actual=np.array(self.info['runtime_geometry']['camera_alignment']['body_registration']['body_camera_center'])
+        self.assertTrue(np.allclose(actual,expected,atol=1e-9))
+        c=self.model.camera('navigation').id
+        self.assertTrue(np.allclose(self.model.cam_pos[c]-[.015,0,0],actual,atol=1e-9))
 
 if __name__=='__main__':unittest.main(verbosity=2)

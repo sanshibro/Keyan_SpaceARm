@@ -127,33 +127,43 @@
       "contacts": [
         {
           "a": "collision_landing_152",
-          "b": "bracket",
-          "distance_m": -0.011158958170726197
+          "b": "collision_gripper_housing",
+          "distance_m": -0.024864151954835174
+        },
+        {
+          "a": "collision_landing_168",
+          "b": "d435",
+          "distance_m": -0.004449847250350692
+        },
+        {
+          "a": "collision_landing_168",
+          "b": "collision_gripper_housing",
+          "distance_m": -0.03358124182827153
+        },
+        {
+          "a": "collision_landing_210",
+          "b": "collision_gripper_housing",
+          "distance_m": -0.002265636432368761
         },
         {
           "a": "collision_landing_152",
-          "b": "bracket",
-          "distance_m": -0.016188909825697536
+          "b": "collision_gripper_finger0",
+          "distance_m": -0.009020579461881765
         },
         {
           "a": "collision_landing_168",
-          "b": "bracket",
-          "distance_m": -0.009675486609575467
+          "b": "collision_gripper_finger0",
+          "distance_m": -0.029350627701806832
+        },
+        {
+          "a": "collision_landing_152",
+          "b": "collision_gripper_finger1",
+          "distance_m": -0.009197581978643317
         },
         {
           "a": "collision_landing_168",
-          "b": "bracket",
-          "distance_m": -0.014828786316803138
-        },
-        {
-          "a": "collision_landing_210",
-          "b": "bracket",
-          "distance_m": -0.00132758453223401
-        },
-        {
-          "a": "collision_landing_210",
-          "b": "bracket",
-          "distance_m": -0.00316017035071063
+          "b": "collision_gripper_finger1",
+          "distance_m": -0.009195275018952516
         }
       ]
     },
@@ -169,13 +179,8 @@
         },
         {
           "a": "collision_landing_168",
-          "b": "bracket",
-          "distance_m": -0.020578268247543573
-        },
-        {
-          "a": "collision_landing_168",
-          "b": "bracket",
-          "distance_m": -0.020577640135769456
+          "b": "collision_gripper_housing",
+          "distance_m": -0.03089888408137318
         }
       ]
     },
@@ -186,48 +191,38 @@
       "contacts": [
         {
           "a": "collision_landing_163",
-          "b": "bracket",
-          "distance_m": -0.011160336624665524
-        },
-        {
-          "a": "collision_landing_163",
-          "b": "bracket",
-          "distance_m": -0.016187545492391382
-        },
-        {
-          "a": "collision_landing_163",
-          "b": "d435",
-          "distance_m": -0.0014805398813320402
-        },
-        {
-          "a": "collision_landing_163",
-          "b": "d435",
-          "distance_m": -0.004158749275401262
+          "b": "collision_gripper_housing",
+          "distance_m": -0.024875992584920632
         },
         {
           "a": "collision_landing_168",
-          "b": "bracket",
-          "distance_m": -0.009676799796036528
-        },
-        {
-          "a": "collision_landing_168",
-          "b": "bracket",
-          "distance_m": -0.014830155967230063
-        },
-        {
-          "a": "collision_landing_168",
-          "b": "d435",
-          "distance_m": -0.012651696823238886
+          "b": "collision_gripper_housing",
+          "distance_m": -0.033616946295218754
         },
         {
           "a": "collision_landing_255",
-          "b": "bracket",
-          "distance_m": -0.0013268448190977668
+          "b": "collision_gripper_housing",
+          "distance_m": -0.0022485260645166575
         },
         {
-          "a": "collision_landing_255",
-          "b": "bracket",
-          "distance_m": -0.0031615620438080337
+          "a": "collision_landing_163",
+          "b": "collision_gripper_finger0",
+          "distance_m": -0.009229395217799951
+        },
+        {
+          "a": "collision_landing_168",
+          "b": "collision_gripper_finger0",
+          "distance_m": -0.009229322005827682
+        },
+        {
+          "a": "collision_landing_163",
+          "b": "collision_gripper_finger1",
+          "distance_m": -0.008996190012032232
+        },
+        {
+          "a": "collision_landing_168",
+          "b": "collision_gripper_finger1",
+          "distance_m": -0.02935397458408598
         }
       ]
     },
@@ -244,48 +239,33 @@
       "contacts": [
         {
           "a": "collision_landing_151",
-          "b": "bracket",
-          "distance_m": -0.00968236825279213
-        },
-        {
-          "a": "collision_landing_151",
-          "b": "bracket",
-          "distance_m": -0.014824891334453147
-        },
-        {
-          "a": "collision_landing_151",
-          "b": "d435",
-          "distance_m": -1.7369109597090954e-05
-        },
-        {
-          "a": "collision_landing_151",
-          "b": "d435",
-          "distance_m": -0.012641274892835291
+          "b": "collision_gripper_housing",
+          "distance_m": -0.040602645474859776
         },
         {
           "a": "collision_landing_162",
-          "b": "bracket",
-          "distance_m": -0.011160333900947079
-        },
-        {
-          "a": "collision_landing_162",
-          "b": "bracket",
-          "distance_m": -0.01618754457489074
-        },
-        {
-          "a": "collision_landing_162",
-          "b": "d435",
-          "distance_m": -0.0014805376268399468
-        },
-        {
-          "a": "collision_landing_162",
-          "b": "d435",
-          "distance_m": -0.004158752443932292
+          "b": "collision_gripper_housing",
+          "distance_m": -0.02550855965225549
         },
         {
           "a": "collision_landing_198",
-          "b": "bracket",
-          "distance_m": -0.0035036082703462485
+          "b": "collision_gripper_housing",
+          "distance_m": -0.024225836640941523
+        },
+        {
+          "a": "collision_landing_162",
+          "b": "collision_gripper_finger0",
+          "distance_m": -1.769082581196086e-05
+        },
+        {
+          "a": "collision_landing_151",
+          "b": "collision_gripper_finger2",
+          "distance_m": -0.023568915741875574
+        },
+        {
+          "a": "collision_landing_162",
+          "b": "collision_gripper_finger2",
+          "distance_m": -0.016030203580693347
         }
       ]
     },
@@ -301,13 +281,8 @@
         },
         {
           "a": "collision_landing_151",
-          "b": "bracket",
-          "distance_m": -0.020605850700879818
-        },
-        {
-          "a": "collision_landing_151",
-          "b": "bracket",
-          "distance_m": -0.020605282996946188
+          "b": "collision_gripper_housing",
+          "distance_m": -0.023853558471582933
         }
       ]
     },
@@ -318,28 +293,33 @@
       "contacts": [
         {
           "a": "collision_landing_151",
-          "b": "bracket",
-          "distance_m": -0.00968122921317306
+          "b": "d435",
+          "distance_m": -0.004439141360306881
         },
         {
           "a": "collision_landing_151",
-          "b": "bracket",
-          "distance_m": -0.014823787488132012
+          "b": "collision_gripper_housing",
+          "distance_m": -0.04065617676470807
         },
         {
           "a": "collision_landing_157",
-          "b": "bracket",
-          "distance_m": -0.011158955445704298
-        },
-        {
-          "a": "collision_landing_157",
-          "b": "bracket",
-          "distance_m": -0.016188908908580917
+          "b": "collision_gripper_housing",
+          "distance_m": -0.025410040352159415
         },
         {
           "a": "collision_landing_166",
-          "b": "bracket",
-          "distance_m": -0.0035028079298891736
+          "b": "collision_gripper_housing",
+          "distance_m": -0.02435302357354031
+        },
+        {
+          "a": "collision_landing_151",
+          "b": "collision_gripper_finger2",
+          "distance_m": -0.023537262766777752
+        },
+        {
+          "a": "collision_landing_157",
+          "b": "collision_gripper_finger2",
+          "distance_m": -0.0160414378361694
         }
       ]
     },

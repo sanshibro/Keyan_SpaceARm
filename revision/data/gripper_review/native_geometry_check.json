@@ -1,0 +1,12 @@
+{
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "source_sha256": "5ea0d7417e19e2097d885454e670f62ea7d81c633d4ffab83ba4edeaf11829b1",
+  "sdk_original_triangles": 148890,
+  "reference_vertices": 77370,
+  "compiled_vertices": 77369,
+  "max_bidirectional_vertex_distance_m": 9.033745320557345e-08,
+  "reference_pose": "zero finger slide, SDK URDF+TF transform",
+  "units": "m",
+  "passed": true,
+  "scope": "native surface and rigid installation; gripper actuation not calibrated"
+}

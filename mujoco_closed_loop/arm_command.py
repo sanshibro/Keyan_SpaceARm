@@ -28,7 +28,11 @@ class ArmCommand:
 
     def qingyu_joint_fields(self):
         c=self.normalized()
-        return dict(theta1=math.degrees(c.theta_rad),phi1=math.degrees(c.phi_rad),
+        # Installed SDK API -> RViz bridge forwards phi1 unchanged. Its bending
+        # plane is clockwise from +Y, whereas internal PCC uses CCW from +X:
+        # beta_sdk = pi/2 - phi_pcc. Verified on the isolated installed nodes.
+        beta=math.atan2(math.sin(math.pi/2-c.phi_rad),math.cos(math.pi/2-c.phi_rad)) if c.theta_rad>1e-10 else 0.
+        return dict(theta1=math.degrees(c.theta_rad),phi1=math.degrees(beta),
                     theta2=0.,phi2=0.,theta3=0.,phi3=0.,enable=c.enable)
 
 class MujocoArmBackend:

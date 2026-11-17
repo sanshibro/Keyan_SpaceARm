@@ -1,24 +1,22 @@
 {
   "branch": "feat/paper-mechanism-rolling-20261117",
-  "mode": "16版CAD外观评审 + 独立模型检查",
-  "stage": "统一模型与Qingyu接口",
-  "detail": "原生CAD素材已复制到NUC。CAD画面由Mitsuba渲染；动力学曲线来自独立MuJoCo固定机身试验。正在对齐平台尺寸、碰撞包络与SDK接口。",
+  "status": "awaiting_review",
+  "stage": "本轮模型修正完成，等待评审",
+  "mode": "SUPER机架 + Qingyu SDK臂体与夹爪",
+  "detail": "机身相机按原生总装相对MID360配准到上层前方；末端相机朝抓取方向。臂体采用SDK的15个球形Marker，夹爪采用完整原始网格。已修正SDK方位角转换。本轮暂停，不自动进入下一阶段。",
+  "updated": "2026-11-17T14:26:00.987689+00:00",
   "progress": 100,
-  "updated": "2026-11-17T12:35:56.373956+00:00",
-  "geometry": "cad16_scene_preview.png",
-  "geometry_caption": "原生16版CAD：90度构型、柔和彩色；外观与场景评审",
-  "rolling": "bending_envelope_check.png",
-  "rolling_caption": "MuJoCo固定机身试验：指令118度，峰值115.597度",
-  "items": [
-    "476个原生CAD部件已归档",
-    "SDK接口与反馈来源已审计",
-    "4项针对性检查、82项核心测试通过",
-    "完整飞行/感知任务尚未验收"
-  ],
+  "geometry": "super_platform_preview.png",
+  "geometry_caption": "本轮完整平台（MuJoCo几何渲染，90°弯臂）",
+  "rolling": "super_backend_checks.png",
+  "rolling_caption": "14秒积分检查与48个形态的自碰撞审查",
   "replay": null,
-  "commits": [
-    "d0503bd 导入最新论文",
-    "5be3079 冻结日志与机制图",
-    "8c9740b 形态限位与RRT修复"
-  ]
+  "items": [
+    "10项行为检查通过",
+    "7条SDK指令检查通过",
+    "最大总弯曲 115.556°",
+    "本次积分0碰撞、0次超过120°",
+    "原始工作区校验未变"
+  ],
+  "commits": []
 }

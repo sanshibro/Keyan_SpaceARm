@@ -1,0 +1,83 @@
+<launch>
+  <arg name="use_rviz" default="true"/>
+  <arg name="use_slider_gui" default="true"/>
+  <arg name="use_api_bridge" default="true"/>
+  <arg name="use_mcu_packet_sender" default="true"/>
+  <arg name="config_file" default="$(find continuum_arm)/config/continuum_arm_visualize.yaml"/>
+  <arg name="mcu_config_file" default="$(find continuum_arm)/config/mcu_packet_sender.yaml"/>
+  <arg name="rviz_config" default="$(find continuum_arm)/rviz/continuum_arm_visualize.rviz"/>
+  <arg name="robot_xacro" default="$(find continuum_arm)/urdf/continuum_arm.xacro"/>
+  <arg name="sec1_alpha_deg" default="0.0"/>
+  <arg name="sec1_beta_deg" default="0.0"/>
+  <arg name="gripper_offset_x" default="0.0"/>
+  <arg name="gripper_offset_y" default="0.0"/>
+  <arg name="gripper_offset_z" default="0.0"/>
+  <arg name="gripper_roll_deg" default="90.0"/>
+  <arg name="gripper_pitch_deg" default="0.0"/>
+  <arg name="gripper_yaw_deg" default="180.0"/>
+  <arg name="gripper_visual_xyz" default="0.0021 0.0708 -0.0230"/>
+  <arg name="gripper_visual_rpy" default="0 0 0"/>
+  <arg name="gripper_mesh_scale" default="0.001 0.001 0.001"/>
+
+  <param
+    name="robot_description"
+    command="$(find xacro)/xacro $(arg robot_xacro) gripper_visual_xyz:='$(arg gripper_visual_xyz)' gripper_visual_rpy:='$(arg gripper_visual_rpy)' gripper_mesh_scale:='$(arg gripper_mesh_scale)'"/>
+
+  <rosparam command="load" file="$(arg config_file)" ns="continuum_arm_visualize"/>
+
+  <node
+    pkg="continuum_arm"
+    type="continuum_arm_visualize"
+    name="continuum_arm_visualize"
+    output="screen">
+    <param name="resolution" value="15"/>
+    <param name="loop_hz" value="500.0"/>
+    <param name="arc_length" value="0.28"/>
+    <param name="sec1_alpha_deg" value="$(arg sec1_alpha_deg)"/>
+    <param name="sec1_beta_deg" value="$(arg sec1_beta_deg)"/>
+    <param name="gripper_offset_x" value="$(arg gripper_offset_x)"/>
+    <param name="gripper_offset_y" value="$(arg gripper_offset_y)"/>
+    <param name="gripper_offset_z" value="$(arg gripper_offset_z)"/>
+    <param name="gripper_roll_deg" value="$(arg gripper_roll_deg)"/>
+    <param name="gripper_pitch_deg" value="$(arg gripper_pitch_deg)"/>
+    <param name="gripper_yaw_deg" value="$(arg gripper_yaw_deg)"/>
+  </node>
+
+  <node
+    if="$(arg use_slider_gui)"
+    pkg="continuum_arm"
+    type="continuum_arm_slider_gui.py"
+    name="continuum_arm_slider_gui"
+    output="screen">
+    <param name="sec1_alpha_deg" value="$(arg sec1_alpha_deg)"/>
+    <param name="sec1_beta_deg" value="$(arg sec1_beta_deg)"/>
+    <param name="publish_rate_hz" value="100.0"/>
+  </node>
+
+  <node
+    if="$(arg use_api_bridge)"
+    pkg="continuum_arm"
+    type="qingyu_api_bridge"
+    name="qingyu_api_bridge"
+    output="screen">
+    <param name="joint_topic" value="/qingyu_api"/>
+    <param name="pose_topic" value="/qingyu_api_pose"/>
+  </node>
+
+  <node
+    if="$(arg use_mcu_packet_sender)"
+    pkg="continuum_arm"
+    type="mcu_packet_sender"
+    name="qingyu_api_node"
+    output="screen">
+    <rosparam command="load" file="$(arg mcu_config_file)"/>
+  </node>
+
+  <node
+    if="$(arg use_rviz)"
+    pkg="rviz"
+    type="rviz"
+    name="rviz"
+    args="-d $(arg rviz_config)"
+    output="screen"/>
+</launch>
