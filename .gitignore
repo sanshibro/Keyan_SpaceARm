@@ -12,3 +12,4 @@ install/
 *.blg
 *.fls
 *.fdb_latexmk
+!xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/*.log
