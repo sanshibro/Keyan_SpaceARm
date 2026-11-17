@@ -1,0 +1,5 @@
+live/status.json
+live/frame.png
+live/server.log
+live/server.pid
+*.tmp

@@ -1,0 +1,163 @@
+{
+  "base_commit": "258ec0a564457fe5ffaa20f7d829489053bf801b",
+  "paper_source": "Windows hardware and architecture revision 2026-11-17 15:28",
+  "formal_algorithm_commit": "e62b6f22a20a9c2ba18d4041124427e1cfe5f59c",
+  "files": [
+    {
+      "path": "paper/IEEEtran.bst",
+      "sha256": "7a8006197e9f7413d66639a2b2ec5c600ce0b7e0020a01e70135b4631ab63004"
+    },
+    {
+      "path": "paper/IEEEtran.cls",
+      "sha256": "65419311f0bbc0aece1da7ffeddd42736f09c250fedeaa6c7b4ebd062522c352"
+    },
+    {
+      "path": "paper/figures/fig00_overall_framework.pdf",
+      "sha256": "cc80f4a5b131d845470b0875c57d41dd7fd05f6e2a593a6140ad4a2d282509eb"
+    },
+    {
+      "path": "paper/figures/fig01_success_and_failure_overview.pdf",
+      "sha256": "42bba0a6cc893d145f48016667887e749b28e3a8fad9d003074e8c164d87e890"
+    },
+    {
+      "path": "paper/figures/fig02_execution_quality_distributions.pdf",
+      "sha256": "7e730980260ef3cdada3eea3f622c63c7b74e4193c73bf7392d67886b294093d"
+    },
+    {
+      "path": "paper/figures/fig03_paired_outcome_matrix.pdf",
+      "sha256": "a0277ffcb7d192dcd103857a856d893b1544fa93d3db20893f8123d726b07611"
+    },
+    {
+      "path": "paper/figures/fig04_measured_whole_body_trajectory.pdf",
+      "sha256": "152fc012f88feb0f543fae73355191607ca2a557be134559c06b0538157df218"
+    },
+    {
+      "path": "paper/figures/fig05_rolling_horizon_updates.pdf",
+      "sha256": "6628fa8c99f1f89de2e45d524f74f5d04b9606bf2e9ed31b382634395fb77d1c"
+    },
+    {
+      "path": "paper/figures/fig06_representative_execution_time_history.pdf",
+      "sha256": "8c6f7efe07e9a0f4b47141dad35b014384a231b8bb50f0205cc1452ddb3fbeeb"
+    },
+    {
+      "path": "paper/figures/fig07_handoff_continuity.pdf",
+      "sha256": "3a79b0c5bc925c49f6f6f7da3a8f05c0d9bcd966d1472c9309ad384114c355ba"
+    },
+    {
+      "path": "paper/figures/fig08_dynamics_proxy_validation.pdf",
+      "sha256": "6e578f8bed5d5b69f1f6a660b312187851eb4d35339b168a186fec38f4bda37a"
+    },
+    {
+      "path": "paper/figures/fig_sensor_phi_fusion.png",
+      "sha256": "5dbb4beb027d2998b19b38a791cf37a0e22219247c698aa2a09f61fd3e6b4fca"
+    },
+    {
+      "path": "paper/figures/fig_sensor_theta_fusion.png",
+      "sha256": "538d9408d5f049795e99c58da55ec723257afd51758c5527473fc9dd0d53ec87"
+    },
+    {
+      "path": "paper/figures/framework_revised.pdf",
+      "sha256": "e6b7ce27ee49234e4361725aaadba8305953848cb40ab30f389208e9ffd41844"
+    },
+    {
+      "path": "paper/figures/geometry_clean.pdf",
+      "sha256": "7a17bd52a1d4ffd0a7a664ab924f3cc7dbba8a637efb95ccaf6f86f3e3ae17d1"
+    },
+    {
+      "path": "paper/figures/geometry_revised.pdf",
+      "sha256": "7d31d379a78c346b5992254cfe8d9f48f46d52032f22f0c28e680d92fcbba6f4"
+    },
+    {
+      "path": "paper/figures/handoff_revised.pdf",
+      "sha256": "2d61373f015fc490c25d8b7d679696796f8bf9009fe903252af4056161246f93"
+    },
+    {
+      "path": "paper/figures/hardware_architecture_journal.pdf",
+      "sha256": "0d9402d6baa4af6861475b4cae144e451ff8318cb0fdc1406e5d841593d891b8"
+    },
+    {
+      "path": "paper/figures/hardware_architecture_v2.pdf",
+      "sha256": "a0bc5a8811d9aabd73ace15ff6a7634b660fca1d56b8c963d6ae34e4e3a9f2a9"
+    },
+    {
+      "path": "paper/figures/hardware_quantitative_slots.pdf",
+      "sha256": "8e90c2db21319720f4137ae3d714e750c797dcc08ef47264cfa54795f1fc4387"
+    },
+    {
+      "path": "paper/figures/hardware_sequence_raw.pdf",
+      "sha256": "05ab9e27d51b7049961dcb0218e2d29d877bfe914935ab071b98c35f752de366"
+    },
+    {
+      "path": "paper/figures/outcomes_revised.pdf",
+      "sha256": "a1d04814c316a90626aac1fb973fd992b5adceb59d02b059c756b4995b52d0e1"
+    },
+    {
+      "path": "paper/figures/overall_framework.pdf",
+      "sha256": "c195dbc8d06dae543d8d1d93efcafa07e69411d37ebb2142f69795883bf0d508"
+    },
+    {
+      "path": "paper/figures/overall_framework.png",
+      "sha256": "ca3d69e1ceaf6c139941daaeba8a952f9e1cf6d6c9a067ae3079ea06f20c775b"
+    },
+    {
+      "path": "paper/figures/overall_framework.svg",
+      "sha256": "5abf66f70fc02b956796ffa666a45e64fb326086282e2eab35738cce5d737fce"
+    },
+    {
+      "path": "paper/figures/passage_restored.pdf",
+      "sha256": "5385a1563d26162e92bb5f34555c057a98c7375696b9938f622c082b32e1f8f5"
+    },
+    {
+      "path": "paper/figures/quality_revised.pdf",
+      "sha256": "d9c9201e6e1fc9ca52e72b0c942d5e0fe96b7e9c0f238a5cb658b6a7b19c16b2"
+    },
+    {
+      "path": "paper/figures/rolling_clear.pdf",
+      "sha256": "e791caf3bc90ac5112720f9783007742f5595afe2d4773d695df3ca76acbb126"
+    },
+    {
+      "path": "paper/figures/rolling_revised.pdf",
+      "sha256": "f4223d4fdbcafab78480b9660da18953ffb4dcd789a6b8e9fa415bb0d6263f6c"
+    },
+    {
+      "path": "paper/figures/sensing_restored.png",
+      "sha256": "904344dc0090186beb538d3e7862e2bf8206432607d2aa6cd7a43588e61d3471"
+    },
+    {
+      "path": "paper/figures/sensing_revised.pdf",
+      "sha256": "e574f00c2e1e743314446a97d9fa46031f514076e6956ac2b283e1fe09c94015"
+    },
+    {
+      "path": "paper/figures/system_framework_journal.pdf",
+      "sha256": "8f8b8527f83ee54eb775244dce13555190da195bb28b0f1b34f1284ffc7cc8ba"
+    },
+    {
+      "path": "paper/figures/system_framework_v2.pdf",
+      "sha256": "887dd9355cb071a7972b8c03a6ed38e48b32b5a3c56efd04badc6ce9b0002757"
+    },
+    {
+      "path": "paper/hardware_architecture_section.tex",
+      "sha256": "1910c6bc63bd83875a2d6fb9b342619b40cae5ad9e5004aac035b5e7d4ae2547"
+    },
+    {
+      "path": "paper/hardware_section.tex",
+      "sha256": "77e3faf30cb643e0c4650d74202425ad0078098f36c80f41397e76de219aa362"
+    },
+    {
+      "path": "paper/main.pdf",
+      "sha256": "56a8eaa76c549475095341f3f81af40915b7a577e0797a24f0c80fff6fd97398"
+    },
+    {
+      "path": "paper/main.tex",
+      "sha256": "c5c7240d68c71262a5dd649125160de4849e2b5b901358ca4cf6aea48f4ffa7e"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "748d5fab18db932d57390ec3ef635c820151185feee6fc12e7167086eee34e81"
+    },
+    {
+      "path": "paper/supplementary.tex",
+      "sha256": "9ade7afae047c35cfdd3a74a1debdf8a76d6605d932545f15a3a396296a60a0a"
+    }
+  ]
+}
