@@ -1,0 +1,26 @@
+{
+  "artifact_eligible": true,
+  "complete_pairs_by_family": {
+    "clutter_reach": 28,
+    "multi_passage": 25,
+    "passage_sweep": 25
+  },
+  "controlled_factor_values": {
+    "baseline_registry_sha256": [
+      "0fc12b4457bb28bc7a15bd84a12fbc99689ee2d23e251be9a74ab01b7458f56d"
+    ],
+    "planner_config_sha256": [
+      "0808a14442972be6df3870e4446a4722a894e58ee3e85fe66427173e68b0386e"
+    ],
+    "survey_protocol": [
+      "task_endpoint_scan_survey_v6_explicit_flush"
+    ]
+  },
+  "controlled_factors_consistent": true,
+  "eligible": true,
+  "interpretation": "paper-grade artifacts; pilot only until statistical_claim_ready=true",
+  "manifest_count": 390,
+  "minimum_complete_pairs_per_family": 30,
+  "rule": "closed_loop + schema-v5 audited non-truth map + comparison-independent frozen survey manifest + clean relevant code",
+  "statistical_claim_ready": false
+}

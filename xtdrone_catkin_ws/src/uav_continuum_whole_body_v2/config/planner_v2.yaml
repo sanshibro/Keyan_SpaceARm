@@ -1,0 +1,98 @@
+planner_v2:
+  horizon_distance: 3.0
+  # A short preparation window is unsafe as a generic fallback inside a
+  # constrained passage: it can remove the lead distance needed for the arm
+  # morphology transition.  Keep true 3 m rolling whole-body planning as the
+  # default.  Recovery windows may only be re-enabled after an open-space
+  # eligibility proof is implemented.
+  enable_recovery_windows: false
+  recovery_after_failures: 2
+  recovery_horizon_distance: 0.84
+  knot_count: 8
+  nominal_speed: 0.08
+  replan_rate_hz: 1.0
+  # Search budget excludes the mandatory independent dense proof.  The robust
+  # The 12/7 cm closed-loop envelope needs one complete 80-iteration pass on
+  # the target CPU.  A 3.5 s search budget covered the measured ~3.3 s solve;
+  # the independent dense validation remains mandatory and outside this cap.
+  optimizer_time_budget: 3.5
+  # Leave wall-clock CPU headroom for PX4/Gazebo between optimization runs.
+  minimum_replan_wall_interval: 1.0
+  optimizer_max_iterations: 80
+  # At most one full dense proof is spent on a repaired invalid candidate in
+  # one online cycle. A later cycle may try a new seed while the active
+  # certified trajectory keeps flying.
+  repair_attempts: 3
+  optimization_basis_count: 3
+  seed_beam_width: 6
+  seed_pose_limit: 5
+  seed_shape_limit: 12
+  # Match the seven-point exact edge audit below.  Two endpoint samples can
+  # miss a continuum-arm sweep collision between otherwise safe knots.
+  seed_edge_max_samples: 7
+  dt_min: 0.30
+  dt_max: 12.00
+  collocation_per_span: 3
+  risk_collocation_per_span: 7
+  risk_margin: 0.12
+  transit_reference_shape_deg: [0.0, 0.0]
+  design_velocity_ratio: 0.94
+  theta_design_margin_deg: 2.0
+  dynamic_repair_reserve: 1.08
+  failure_slowdown_step: 0.88
+  failure_slowdown_levels: 2
+  commit_horizon: 0.35
+  execution_lead_time: 0.15
+  planning_latency_reserve: 10.0
+  # Above this error, abandon prediction and seed the next window from the
+  # measured whole-body state; the executor has its own harder abort limit.
+  maximum_tracking_error: 0.20
+  maximum_reference_start_gap: 0.75
+  # TASK_COMPLETE requires a continuous measured tool-tip dwell, not one sample.
+  terminal_actual_tip_tolerance: 0.08
+  terminal_precision_target: 0.03
+  terminal_convergence_dwell: 1.0
+  point_cloud_topic: /world/static_scene_cloud
+  point_cloud_inflation: 0.02
+  point_cloud_max_points: 100000
+  point_cloud_static_once: true
+  # Local KD-tree crop.  One metre exceeds the complete body/arm query reach
+  # plus every collision margin, so omitted points cannot affect acceptance.
+  point_cloud_local_padding: 1.0
+  output_dt: 0.05
+  validator:
+    translation_step: 0.03
+    theta_step_deg: 3.0
+    phi_step_deg: 5.0
+    time_step: 0.04
+  limits:
+    body_radius: 0.28
+    # Closed-loop allocation derived jointly from the open-space PX4 audit and
+    # passage morphology feasibility.  The body/arm retain 0.05/0.055 m over
+    # their 0.06/0.02 m runtime hard lines; the phase guard reserves another
+    # 0.03/0.02 m before reference progress can stop.
+    body_margin: 0.10
+    arm_margin: 0.070
+    com_max: 0.08
+    # Conservative closed-loop envelope for PX4 position+velocity setpoints.
+    # The larger dt_max keeps the 3 m horizon temporally feasible at this
+    # speed without relaxing acceleration, jerk, or swept-volume checks.
+    velocity_max: 0.12
+    acceleration_max: 1.00
+    jerk_max: 3.00
+    yaw_rate_max_deg: 45.0
+    yaw_acceleration_max_deg: 90.0
+    tilt_max_deg: 15.0
+    thrust_min_ratio: 0.50
+    thrust_max_ratio: 1.60
+    theta_rate_max_deg: 50.0
+    phi_rate_max_deg: 60.0
+    theta_acceleration_max_deg: 100.0
+    phi_acceleration_max_deg: 120.0
+    z_min: 0.75
+    z_max: 2.20
+  mass:
+    uav: 1.50
+    arm_base: 0.30
+    flexible: 0.25
+    tool: 0.20

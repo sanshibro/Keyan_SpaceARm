@@ -1,0 +1,441 @@
+<launch>
+  <arg name="config" default="$(find uav_continuum_opportunity_planner)/config/scenario_3c_multi_passage_morphology.yaml"/>
+  <arg name="world_boxes_config" default="$(find uav_continuum_opportunity_planner)/config/indoor1_sdf_boxes.yaml"/>
+  <arg name="use_world_boxes" default="true"/>
+  <arg name="uav_pose_topic" default="/iris_0/world_pose"/>
+  <arg name="spawn_gazebo_overlay" default="false"/>
+  <arg name="global_path_clearance" default="0.03"/>
+  <arg name="vehicle_body_clearance" default="0.03"/>
+  <arg name="reachability_keepout_uses_body_envelope" default="false"/>
+
+  <arg name="use_static_cloud" default="true"/>
+  <arg name="whole_body_use_static_cloud" default="true"/>
+  <arg name="whole_body_static_cloud_in_optimization" default="true"/>
+  <arg name="whole_body_static_cloud_in_validation" default="true"/>
+  <arg name="require_static_cloud" default="false"/>
+  <arg name="static_cloud_topic" default="/world/static_scene_cloud"/>
+  <arg name="static_cloud_resolution" default="0.1"/>
+  <arg name="static_cloud_inflation" default="0.05"/>
+  <arg name="static_cloud_search_radius" default="0.45"/>
+  <arg name="static_cloud_query_padding" default="0.05"/>
+  <arg name="static_cloud_max_points" default="250000"/>
+  <arg name="static_cloud_distance_field" default="true"/>
+  <arg name="static_cloud_distance_field_padding" default="0.75"/>
+  <arg name="static_cloud_distance_field_max_cells" default="8000000"/>
+  <arg name="static_cloud_distance_field_min" default="-1.8,-13.2,0.0"/>
+  <arg name="static_cloud_distance_field_max" default="3.4,7.8,2.3"/>
+
+  <arg name="ego_reference_mode" default="prefer_real_ego"/>
+  <arg name="ego_bspline_topic" default="/xtdrone/iris_0/planning/bspline"/>
+  <arg name="ego_odom_topic" default="/vins_estimator/odometry"/>
+  <arg name="ego_goal_topic" default="/planner/ego_goal"/>
+  <arg name="ego_goal_keepalive_period" default="0.0"/>
+  <arg name="maximum_ego_start_gap" default="0.0"/>
+  <arg name="ego_timeout" default="10.0"/>
+  <arg name="reuse_stale_ego_reference" default="true"/>
+  <arg name="ego_reference_valid_grace" default="2.0"/>
+  <arg name="stale_ego_reference_timeout" default="120.0"/>
+  <arg name="publish_selected_goal_to_ego" default="true"/>
+  <arg name="ego_goal_source" default="global_path_local"/>
+  <arg name="local_goal_lookahead" default="3.0"/>
+  <arg name="local_goal_min_lookahead" default="1.0"/>
+  <arg name="enable_rolling_goal" default="true"/>
+  <arg name="rolling_goal_stale_age" default="6.0"/>
+  <arg name="rolling_goal_advance" default="2.0"/>
+  <arg name="rolling_goal_max_ahead" default="6.0"/>
+  <arg name="min_reference_z" default="0.90"/>
+  <arg name="align_reference_z_to_global_path" default="true"/>
+  <arg name="global_path_z_margin" default="0.0"/>
+  <arg name="append_global_tail" default="true"/>
+  <arg name="allow_global_path_fallback" default="false"/>
+  <arg name="enable_whole_body_refinement" default="true"/>
+  <arg name="enable_v1_whole_body_planner" default="true"/>
+  <arg name="refine_lateral_step" default="0.16"/>
+  <arg name="refine_z_step" default="0.05"/>
+  <arg name="refine_yaw_step_deg" default="12.0"/>
+  <arg name="refine_clearance_target" default="0.08"/>
+  <arg name="refine_stride" default="4"/>
+  <arg name="refine_max_points" default="36"/>
+  <arg name="refine_compact_weight" default="0.018"/>
+  <arg name="refine_com_weight" default="2.4"/>
+  <arg name="refine_lateral_extent_weight" default="0.8"/>
+  <arg name="refine_clearance_weight" default="10.0"/>
+  <arg name="refine_min_arm_margin" default="0.03"/>
+  <arg name="morphology_home_hold_weight" default="0.08"/>
+  <arg name="morphology_activation_margin" default="0.08"/>
+  <arg name="morphology_activation_band" default="0.08"/>
+  <arg name="morphology_min_active_theta" default="35.0"/>
+  <arg name="passage_morphology_gate_enabled" default="true"/>
+  <arg name="passage_compact_arm_margin_buffer" default="0.015"/>
+  <arg name="passage_compact_body_margin_buffer" default="0.020"/>
+  <arg name="passage_compact_shape_weight" default="42.0"/>
+  <arg name="passage_transition_shape_weight" default="18.0"/>
+  <arg name="morphology_release_start_fraction" default="0.62"/>
+  <arg name="morphology_release_target_distance" default="3.2"/>
+  <arg name="morphology_q_ref_weight" default="0.018"/>
+  <arg name="morphology_stability_shape_weight" default="0.020"/>
+  <arg name="morphology_lateral_extent_weight" default="1.8"/>
+  <arg name="morphology_release_transition_weight" default="8.0"/>
+  <arg name="refine_shape_theta_stride" default="3"/>
+  <arg name="refine_shape_phi_stride" default="3"/>
+  <arg name="refine_time_budget" default="15.0"/>
+  <arg name="refine_wp_time_budget" default="0.8"/>
+  <arg name="refine_valid_candidate_target" default="80"/>
+  <arg name="refine_shape_candidates_per_pose" default="40"/>
+  <arg name="reach_search_time_budget" default="3.0"/>
+  <arg name="reach_search_max_states" default="800"/>
+  <arg name="enable_reference_safety_repair" default="true"/>
+  <arg name="enable_global_repair_fallback" default="false"/>
+  <arg name="failure_hold_time" default="60.0"/>
+  <arg name="refine_first_feasible" default="false"/>
+  <arg name="sequence_optimizer_enabled" default="true"/>
+  <arg name="robust_margin_enabled" default="true"/>
+  <arg name="local_repair_enabled" default="true"/>
+  <arg name="local_repair_max_attempts" default="5"/>
+  <arg name="edge_repair_enabled" default="true"/>
+  <arg name="edge_repair_max_pairs" default="8"/>
+  <arg name="edge_repair_max_ladders" default="8"/>
+  <arg name="edge_repair_candidates_per_knot" default="4"/>
+  <arg name="edge_repair_max_results" default="4"/>
+  <arg name="edge_repair_max_knots" default="2"/>
+  <arg name="edge_repair_time_budget" default="2.0"/>
+  <arg name="time_allocation_refine_enabled" default="true"/>
+  <arg name="swept_validation_enabled" default="true"/>
+  <arg name="m_uav" default="1.50"/>
+  <arg name="m_arm_total" default="0.75"/>
+  <arg name="m_arm_base" default="0.30"/>
+  <arg name="m_flexible_section" default="0.25"/>
+  <arg name="m_tool" default="0.20"/>
+  <arg name="preferred_com_offset" default="0.05"/>
+  <arg name="hard_com_limit" default="0.08"/>
+  <arg name="theta_dot_max_deg_s" default="50.0"/>
+  <arg name="phi_dot_max_deg_s" default="60.0"/>
+  <arg name="theta_acc_max_deg_s2" default="100.0"/>
+  <arg name="phi_acc_max_deg_s2" default="120.0"/>
+  <arg name="v_max" default="0.60"/>
+  <arg name="a_max" default="1.00"/>
+  <arg name="j_max" default="3.00"/>
+  <arg name="time_refine_max_scale" default="6.0"/>
+  <arg name="yaw_rate_max_deg" default="45.0"/>
+  <arg name="yaw_acc_max_deg" default="90.0"/>
+  <arg name="tilt_max_deg" default="15.0"/>
+  <arg name="required_body_margin" default="0.06"/>
+  <arg name="required_arm_margin" default="0.035"/>
+  <arg name="standoff_body_margin_target" default="0.14"/>
+  <arg name="standoff_arm_margin_target" default="0.10"/>
+  <arg name="standoff_approach_distance" default="0.75"/>
+  <arg name="standoff_approach_z_lift" default="0.18"/>
+  <arg name="standoff_candidate_score_count" default="160"/>
+  <arg name="standoff_approach_rerank_count" default="12"/>
+  <arg name="standoff_selection_time_budget" default="4.0"/>
+  <arg name="swept_repair_body_margin_buffer" default="0.035"/>
+  <arg name="swept_repair_arm_margin_buffer" default="0.020"/>
+  <arg name="edge_body_margin_target" default="0.08"/>
+  <arg name="edge_arm_margin_target" default="0.08"/>
+  <arg name="swept_translation_step" default="0.06"/>
+  <arg name="swept_theta_step_deg" default="8.0"/>
+  <arg name="swept_phi_step_deg" default="12.0"/>
+  <arg name="sequence_risk_body_margin" default="0.08"/>
+  <arg name="sequence_risk_arm_margin" default="0.08"/>
+  <arg name="sequence_transition_neighbors" default="12"/>
+  <arg name="sequence_beam_width" default="16"/>
+  <arg name="sequence_edge_eval_neighbors" default="2"/>
+  <arg name="sequence_edge_collision_lazy" default="true"/>
+  <arg name="sequence_refine_max_points" default="36"/>
+  <arg name="sequence_dp_candidates_per_wp" default="10"/>
+  <arg name="sequence_candidate_budget_fraction" default="0.65"/>
+  <arg name="sequence_dp_min_time_budget" default="6.0"/>
+  <arg name="sequence_candidates_per_wp" default="12"/>
+  <arg name="sequence_min_candidates_per_wp" default="4"/>
+  <arg name="sequence_max_pose_tests_per_wp" default="48"/>
+  <arg name="sequence_max_body_poses_per_wp" default="8"/>
+  <arg name="sequence_max_shape_tests_per_wp" default="220"/>
+  <arg name="marker_draw_all_arm_waypoints" default="true"/>
+  <arg name="marker_arm_visual_spacing" default="0.15"/>
+  <arg name="marker_arm_visual_theta_step" default="7.5"/>
+  <arg name="marker_arm_visual_phi_step" default="12.5"/>
+  <arg name="marker_waypoint_label_stride" default="1"/>
+  <arg name="freeze_plan_when_ready" default="true"/>
+  <arg name="input_wait_timeout" default="2.0"/>
+  <arg name="path_republish_period" default="0.5"/>
+  <arg name="global_replan_movement_threshold" default="0.0"/>
+  <arg name="reachability_search_period" default="20.0"/>
+  <arg name="reachability_rate_hz" default="5.0"/>
+  <arg name="reference_republish_period" default="0.5"/>
+  <arg name="enable_plan_executor" default="false"/>
+  <arg name="executor_execute_gazebo" default="false"/>
+  <arg name="executor_model_name" default="uav_plan_preview"/>
+  <arg name="executor_allow_real_model" default="false"/>
+  <arg name="executor_execute_arm" default="true"/>
+  <arg name="executor_auto_start" default="false"/>
+  <arg name="executor_publish_continuum_control" default="true"/>
+  <arg name="enable_px4_executor" default="false"/>
+  <arg name="px4_direct_to_standoff" default="false"/>
+  <arg name="px4_path_stride" default="8"/>
+  <arg name="px4_auto_offboard" default="false"/>
+  <arg name="px4_auto_arm" default="false"/>
+
+  <rosparam command="load" file="$(arg config)"/>
+  <param name="/global_path/clearance" value="$(arg global_path_clearance)"/>
+  <param name="/vehicle/body_clearance" value="$(arg vehicle_body_clearance)"/>
+  <rosparam if="$(arg use_world_boxes)" command="load" file="$(arg world_boxes_config)" ns="/world_boxes"/>
+  <param name="/reachability/auto_execute" value="false"/>
+  <param name="/reachability/spawn_gazebo_overlay" value="$(arg spawn_gazebo_overlay)"/>
+
+  <node if="$(arg spawn_gazebo_overlay)"
+        pkg="uav_continuum_opportunity_planner"
+        type="spawn_task_scene_node.py"
+        name="spawn_task_scene_node"
+        output="screen"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="arm_shape_sim_node.py"
+        name="arm_shape_sim_node"
+        output="screen"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="arm_kinematics_node.py"
+        name="arm_kinematics_node"
+        output="screen">
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+  </node>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="obstacle_geometry_node.py"
+        name="obstacle_geometry_node"
+        output="screen"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="reachability_node.py"
+        name="reachability_node"
+        output="screen">
+    <param name="search_period" value="$(arg reachability_search_period)"/>
+    <param name="rate_hz" value="$(arg reachability_rate_hz)"/>
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+    <param name="keepout_uses_body_envelope" value="$(arg reachability_keepout_uses_body_envelope)"/>
+    <param name="use_static_cloud" value="$(arg use_static_cloud)"/>
+    <param name="require_static_cloud" value="$(arg require_static_cloud)"/>
+    <param name="static_cloud_topic" value="$(arg static_cloud_topic)"/>
+    <param name="static_cloud_resolution" value="$(arg static_cloud_resolution)"/>
+    <param name="static_cloud_inflation" value="$(arg static_cloud_inflation)"/>
+    <param name="static_cloud_search_radius" value="$(arg static_cloud_search_radius)"/>
+    <param name="static_cloud_query_padding" value="$(arg static_cloud_query_padding)"/>
+    <param name="static_cloud_max_points" value="$(arg static_cloud_max_points)"/>
+    <param name="enable_whole_body_refinement" value="$(arg enable_whole_body_refinement)"/>
+    <param name="refine_lateral_step" value="$(arg refine_lateral_step)"/>
+    <param name="refine_z_step" value="$(arg refine_z_step)"/>
+    <param name="refine_yaw_step_deg" value="$(arg refine_yaw_step_deg)"/>
+    <param name="refine_clearance_target" value="$(arg refine_clearance_target)"/>
+    <param name="refine_stride" value="$(arg refine_stride)"/>
+    <param name="refine_max_points" value="$(arg refine_max_points)"/>
+  </node>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="opportunity_visualization_node.py"
+        name="opportunity_visualization_node"
+        output="screen"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="global_path_node.py"
+        name="global_path_node"
+        output="screen">
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+    <param name="use_static_cloud" value="$(arg use_static_cloud)"/>
+    <param name="require_static_cloud" value="$(arg require_static_cloud)"/>
+    <param name="static_cloud_topic" value="$(arg static_cloud_topic)"/>
+    <param name="static_cloud_resolution" value="$(arg static_cloud_resolution)"/>
+    <param name="static_cloud_inflation" value="$(arg static_cloud_inflation)"/>
+    <param name="static_cloud_search_radius" value="$(arg static_cloud_search_radius)"/>
+    <param name="static_cloud_query_padding" value="$(arg static_cloud_query_padding)"/>
+    <param name="static_cloud_max_points" value="$(arg static_cloud_max_points)"/>
+    <param name="path_republish_period" value="$(arg path_republish_period)"/>
+    <param name="replan_movement_threshold" value="$(arg global_replan_movement_threshold)"/>
+  </node>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="ego_reference_bridge_node.py"
+        name="ego_reference_bridge_node"
+        output="screen">
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+    <param name="mode" value="$(arg ego_reference_mode)"/>
+    <param name="ego_bspline_topic" value="$(arg ego_bspline_topic)"/>
+    <param name="ego_odom_topic" value="$(arg ego_odom_topic)"/>
+    <param name="ego_goal_topic" value="$(arg ego_goal_topic)"/>
+    <param name="goal_keepalive_period" value="$(arg ego_goal_keepalive_period)"/>
+    <param name="maximum_ego_start_gap" value="$(arg maximum_ego_start_gap)"/>
+    <param name="ego_timeout" value="$(arg ego_timeout)"/>
+    <param name="reuse_stale_ego_reference" value="$(arg reuse_stale_ego_reference)"/>
+    <param name="ego_reference_valid_grace" value="$(arg ego_reference_valid_grace)"/>
+    <param name="stale_ego_reference_timeout" value="$(arg stale_ego_reference_timeout)"/>
+    <param name="publish_selected_goal_to_ego" value="$(arg publish_selected_goal_to_ego)"/>
+    <param name="ego_goal_source" value="$(arg ego_goal_source)"/>
+    <param name="local_goal_lookahead" value="$(arg local_goal_lookahead)"/>
+    <param name="local_goal_min_lookahead" value="$(arg local_goal_min_lookahead)"/>
+    <param name="enable_rolling_goal" value="$(arg enable_rolling_goal)"/>
+    <param name="rolling_goal_stale_age" value="$(arg rolling_goal_stale_age)"/>
+    <param name="rolling_goal_advance" value="$(arg rolling_goal_advance)"/>
+    <param name="rolling_goal_max_ahead" value="$(arg rolling_goal_max_ahead)"/>
+    <param name="min_reference_z" value="$(arg min_reference_z)"/>
+    <param name="align_reference_z_to_global_path" value="$(arg align_reference_z_to_global_path)"/>
+    <param name="global_path_z_margin" value="$(arg global_path_z_margin)"/>
+    <param name="append_global_tail" value="$(arg append_global_tail)"/>
+    <param name="allow_global_path_fallback" value="$(arg allow_global_path_fallback)"/>
+    <param name="reference_republish_period" value="$(arg reference_republish_period)"/>
+  </node>
+
+  <node if="$(arg enable_v1_whole_body_planner)"
+        pkg="uav_continuum_opportunity_planner"
+        type="whole_body_planner_node.py"
+        name="whole_body_planner_node"
+        output="screen">
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+    <param name="use_static_cloud" value="$(arg whole_body_use_static_cloud)"/>
+    <param name="static_cloud_in_optimization" value="$(arg whole_body_static_cloud_in_optimization)"/>
+    <param name="static_cloud_in_validation" value="$(arg whole_body_static_cloud_in_validation)"/>
+    <param name="require_static_cloud" value="$(arg require_static_cloud)"/>
+    <param name="static_cloud_topic" value="$(arg static_cloud_topic)"/>
+    <param name="static_cloud_resolution" value="$(arg static_cloud_resolution)"/>
+    <param name="static_cloud_inflation" value="$(arg static_cloud_inflation)"/>
+    <param name="static_cloud_search_radius" value="$(arg static_cloud_search_radius)"/>
+    <param name="static_cloud_query_padding" value="$(arg static_cloud_query_padding)"/>
+    <param name="static_cloud_max_points" value="$(arg static_cloud_max_points)"/>
+    <param name="static_cloud_distance_field" value="$(arg static_cloud_distance_field)"/>
+    <param name="static_cloud_distance_field_padding" value="$(arg static_cloud_distance_field_padding)"/>
+    <param name="static_cloud_distance_field_max_cells" value="$(arg static_cloud_distance_field_max_cells)"/>
+    <param name="static_cloud_distance_field_min" value="$(arg static_cloud_distance_field_min)"/>
+    <param name="static_cloud_distance_field_max" value="$(arg static_cloud_distance_field_max)"/>
+    <param name="enable_whole_body_refinement" value="$(arg enable_whole_body_refinement)"/>
+    <param name="refine_lateral_step" value="$(arg refine_lateral_step)"/>
+    <param name="refine_z_step" value="$(arg refine_z_step)"/>
+    <param name="refine_yaw_step_deg" value="$(arg refine_yaw_step_deg)"/>
+    <param name="refine_clearance_target" value="$(arg refine_clearance_target)"/>
+    <param name="refine_stride" value="$(arg refine_stride)"/>
+    <param name="refine_max_points" value="$(arg refine_max_points)"/>
+    <param name="refine_compact_weight" value="$(arg refine_compact_weight)"/>
+    <param name="refine_com_weight" value="$(arg refine_com_weight)"/>
+    <param name="refine_lateral_extent_weight" value="$(arg refine_lateral_extent_weight)"/>
+    <param name="refine_clearance_weight" value="$(arg refine_clearance_weight)"/>
+    <param name="refine_min_arm_margin" value="$(arg refine_min_arm_margin)"/>
+    <param name="morphology_home_hold_weight" value="$(arg morphology_home_hold_weight)"/>
+    <param name="morphology_activation_margin" value="$(arg morphology_activation_margin)"/>
+    <param name="morphology_activation_band" value="$(arg morphology_activation_band)"/>
+    <param name="morphology_min_active_theta" value="$(arg morphology_min_active_theta)"/>
+    <param name="passage_morphology_gate_enabled" value="$(arg passage_morphology_gate_enabled)"/>
+    <param name="passage_compact_arm_margin_buffer" value="$(arg passage_compact_arm_margin_buffer)"/>
+    <param name="passage_compact_body_margin_buffer" value="$(arg passage_compact_body_margin_buffer)"/>
+    <param name="passage_compact_shape_weight" value="$(arg passage_compact_shape_weight)"/>
+    <param name="passage_transition_shape_weight" value="$(arg passage_transition_shape_weight)"/>
+    <param name="morphology_release_start_fraction" value="$(arg morphology_release_start_fraction)"/>
+    <param name="morphology_release_target_distance" value="$(arg morphology_release_target_distance)"/>
+    <param name="morphology_q_ref_weight" value="$(arg morphology_q_ref_weight)"/>
+    <param name="morphology_stability_shape_weight" value="$(arg morphology_stability_shape_weight)"/>
+    <param name="morphology_lateral_extent_weight" value="$(arg morphology_lateral_extent_weight)"/>
+    <param name="morphology_release_transition_weight" value="$(arg morphology_release_transition_weight)"/>
+    <param name="refine_shape_theta_stride" value="$(arg refine_shape_theta_stride)"/>
+    <param name="refine_shape_phi_stride" value="$(arg refine_shape_phi_stride)"/>
+    <param name="refine_time_budget" value="$(arg refine_time_budget)"/>
+    <param name="refine_wp_time_budget" value="$(arg refine_wp_time_budget)"/>
+    <param name="refine_valid_candidate_target" value="$(arg refine_valid_candidate_target)"/>
+    <param name="refine_shape_candidates_per_pose" value="$(arg refine_shape_candidates_per_pose)"/>
+    <param name="reach_search_time_budget" value="$(arg reach_search_time_budget)"/>
+    <param name="reach_search_max_states" value="$(arg reach_search_max_states)"/>
+    <param name="enable_reference_safety_repair" value="$(arg enable_reference_safety_repair)"/>
+    <param name="enable_global_repair_fallback" value="$(arg enable_global_repair_fallback)"/>
+    <param name="failure_hold_time" value="$(arg failure_hold_time)"/>
+    <param name="refine_first_feasible" value="$(arg refine_first_feasible)"/>
+    <param name="sequence_optimizer_enabled" value="$(arg sequence_optimizer_enabled)"/>
+    <param name="robust_margin_enabled" value="$(arg robust_margin_enabled)"/>
+    <param name="local_repair_enabled" value="$(arg local_repair_enabled)"/>
+    <param name="local_repair_max_attempts" value="$(arg local_repair_max_attempts)"/>
+    <param name="edge_repair_enabled" value="$(arg edge_repair_enabled)"/>
+    <param name="edge_repair_max_pairs" value="$(arg edge_repair_max_pairs)"/>
+    <param name="edge_repair_max_ladders" value="$(arg edge_repair_max_ladders)"/>
+    <param name="edge_repair_candidates_per_knot" value="$(arg edge_repair_candidates_per_knot)"/>
+    <param name="edge_repair_max_results" value="$(arg edge_repair_max_results)"/>
+    <param name="edge_repair_max_knots" value="$(arg edge_repair_max_knots)"/>
+    <param name="edge_repair_time_budget" value="$(arg edge_repair_time_budget)"/>
+    <param name="time_allocation_refine_enabled" value="$(arg time_allocation_refine_enabled)"/>
+    <param name="swept_validation_enabled" value="$(arg swept_validation_enabled)"/>
+    <param name="m_uav" value="$(arg m_uav)"/>
+    <param name="m_arm_total" value="$(arg m_arm_total)"/>
+    <param name="m_arm_base" value="$(arg m_arm_base)"/>
+    <param name="m_flexible_section" value="$(arg m_flexible_section)"/>
+    <param name="m_tool" value="$(arg m_tool)"/>
+    <param name="preferred_com_offset" value="$(arg preferred_com_offset)"/>
+    <param name="hard_com_limit" value="$(arg hard_com_limit)"/>
+    <param name="theta_dot_max_deg_s" value="$(arg theta_dot_max_deg_s)"/>
+    <param name="phi_dot_max_deg_s" value="$(arg phi_dot_max_deg_s)"/>
+    <param name="theta_acc_max_deg_s2" value="$(arg theta_acc_max_deg_s2)"/>
+    <param name="phi_acc_max_deg_s2" value="$(arg phi_acc_max_deg_s2)"/>
+    <param name="v_max" value="$(arg v_max)"/>
+    <param name="a_max" value="$(arg a_max)"/>
+    <param name="j_max" value="$(arg j_max)"/>
+    <param name="time_refine_max_scale" value="$(arg time_refine_max_scale)"/>
+    <param name="yaw_rate_max_deg" value="$(arg yaw_rate_max_deg)"/>
+    <param name="yaw_acc_max_deg" value="$(arg yaw_acc_max_deg)"/>
+    <param name="tilt_max_deg" value="$(arg tilt_max_deg)"/>
+    <param name="required_body_margin" value="$(arg required_body_margin)"/>
+    <param name="required_arm_margin" value="$(arg required_arm_margin)"/>
+    <param name="standoff_body_margin_target" value="$(arg standoff_body_margin_target)"/>
+    <param name="standoff_arm_margin_target" value="$(arg standoff_arm_margin_target)"/>
+    <param name="standoff_approach_distance" value="$(arg standoff_approach_distance)"/>
+    <param name="standoff_approach_z_lift" value="$(arg standoff_approach_z_lift)"/>
+    <param name="standoff_candidate_score_count" value="$(arg standoff_candidate_score_count)"/>
+    <param name="standoff_approach_rerank_count" value="$(arg standoff_approach_rerank_count)"/>
+    <param name="standoff_selection_time_budget" value="$(arg standoff_selection_time_budget)"/>
+    <param name="swept_repair_body_margin_buffer" value="$(arg swept_repair_body_margin_buffer)"/>
+    <param name="swept_repair_arm_margin_buffer" value="$(arg swept_repair_arm_margin_buffer)"/>
+    <param name="edge_body_margin_target" value="$(arg edge_body_margin_target)"/>
+    <param name="edge_arm_margin_target" value="$(arg edge_arm_margin_target)"/>
+    <param name="swept_translation_step" value="$(arg swept_translation_step)"/>
+    <param name="swept_theta_step_deg" value="$(arg swept_theta_step_deg)"/>
+    <param name="swept_phi_step_deg" value="$(arg swept_phi_step_deg)"/>
+    <param name="sequence_risk_body_margin" value="$(arg sequence_risk_body_margin)"/>
+    <param name="sequence_risk_arm_margin" value="$(arg sequence_risk_arm_margin)"/>
+    <param name="sequence_transition_neighbors" value="$(arg sequence_transition_neighbors)"/>
+    <param name="sequence_beam_width" value="$(arg sequence_beam_width)"/>
+    <param name="sequence_edge_eval_neighbors" value="$(arg sequence_edge_eval_neighbors)"/>
+    <param name="sequence_edge_collision_lazy" value="$(arg sequence_edge_collision_lazy)"/>
+    <param name="sequence_refine_max_points" value="$(arg sequence_refine_max_points)"/>
+    <param name="sequence_dp_candidates_per_wp" value="$(arg sequence_dp_candidates_per_wp)"/>
+    <param name="sequence_candidate_budget_fraction" value="$(arg sequence_candidate_budget_fraction)"/>
+    <param name="sequence_dp_min_time_budget" value="$(arg sequence_dp_min_time_budget)"/>
+    <param name="sequence_candidates_per_wp" value="$(arg sequence_candidates_per_wp)"/>
+    <param name="sequence_min_candidates_per_wp" value="$(arg sequence_min_candidates_per_wp)"/>
+    <param name="sequence_max_pose_tests_per_wp" value="$(arg sequence_max_pose_tests_per_wp)"/>
+    <param name="sequence_max_body_poses_per_wp" value="$(arg sequence_max_body_poses_per_wp)"/>
+    <param name="sequence_max_shape_tests_per_wp" value="$(arg sequence_max_shape_tests_per_wp)"/>
+    <param name="marker_draw_all_arm_waypoints" value="$(arg marker_draw_all_arm_waypoints)"/>
+    <param name="marker_arm_visual_spacing" value="$(arg marker_arm_visual_spacing)"/>
+    <param name="marker_arm_visual_theta_step" value="$(arg marker_arm_visual_theta_step)"/>
+    <param name="marker_arm_visual_phi_step" value="$(arg marker_arm_visual_phi_step)"/>
+    <param name="marker_waypoint_label_stride" value="$(arg marker_waypoint_label_stride)"/>
+    <param name="freeze_plan_when_ready" value="$(arg freeze_plan_when_ready)"/>
+    <param name="input_wait_timeout" value="$(arg input_wait_timeout)"/>
+  </node>
+
+  <node if="$(arg enable_plan_executor)"
+        pkg="uav_continuum_opportunity_planner"
+        type="plan_executor_node.py"
+        name="plan_executor_node"
+        output="screen">
+    <param name="execute_gazebo" value="$(arg executor_execute_gazebo)"/>
+    <param name="model_name" value="$(arg executor_model_name)"/>
+    <param name="allow_real_model" value="$(arg executor_allow_real_model)"/>
+    <param name="execute_arm" value="$(arg executor_execute_arm)"/>
+    <param name="auto_start" value="$(arg executor_auto_start)"/>
+    <param name="publish_continuum_control" value="$(arg executor_publish_continuum_control)"/>
+  </node>
+
+  <node if="$(arg enable_px4_executor)"
+        pkg="uav_continuum_opportunity_planner"
+        type="px4_waypoint_executor_node.py"
+        name="px4_waypoint_executor_node"
+        output="screen">
+    <param name="auto_offboard" value="$(arg px4_auto_offboard)"/>
+    <param name="auto_arm" value="$(arg px4_auto_arm)"/>
+    <param name="require_plan_ready" value="true"/>
+    <param name="direct_to_standoff" value="$(arg px4_direct_to_standoff)"/>
+    <param name="path_stride" value="$(arg px4_path_stride)"/>
+  </node>
+</launch>

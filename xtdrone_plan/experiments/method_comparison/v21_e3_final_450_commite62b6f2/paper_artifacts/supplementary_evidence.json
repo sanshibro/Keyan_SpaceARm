@@ -1,0 +1,146 @@
+{
+  "c1_count": 339,
+  "c2_count": 52,
+  "candidate_and_issued_statistics": {
+    "candidate_bending_gap_rad": {
+      "count": 391,
+      "max": 0.5406622919603397,
+      "median": 0.005660922453032846,
+      "p95": 0.3979047480910303
+    },
+    "candidate_bending_rate_gap_rad_s": {
+      "count": 391,
+      "max": 0.5596369450435583,
+      "median": 0.005149620146439618,
+      "p95": 0.40491766804038576
+    },
+    "candidate_linear_acceleration_gap_m_s2": {
+      "count": 391,
+      "max": 0.08706844863772532,
+      "median": 0.019547446615787126,
+      "p95": 0.03923982236743512
+    },
+    "candidate_linear_velocity_gap_m_s": {
+      "count": 391,
+      "max": 0.03196159592694111,
+      "median": 0.007708348928251215,
+      "p95": 0.01931994923085181
+    },
+    "candidate_position_gap_m": {
+      "count": 391,
+      "max": 0.12761848303868792,
+      "median": 0.015598098479639897,
+      "p95": 0.0549327227043625
+    },
+    "candidate_yaw_gap_rad": {
+      "count": 391,
+      "max": 0.06484563236115104,
+      "median": 6.756457183687559e-05,
+      "p95": 0.0016919263531789408
+    },
+    "issued_acceleration_step_m_s2": {
+      "count": 391,
+      "max": 0.06515226957595444,
+      "median": 0.00638047465920604,
+      "p95": 0.02487342049109366
+    },
+    "issued_bending_rate_step_deg_s": {
+      "count": 391,
+      "max": 7.541338318344479,
+      "median": 0.23513443554034552,
+      "p95": 1.887358959936833
+    },
+    "issued_bending_step_deg": {
+      "count": 391,
+      "max": 5.191542191777842,
+      "median": 0.04228697882759036,
+      "p95": 1.2358455635464258
+    },
+    "issued_position_step_m": {
+      "count": 391,
+      "max": 0.055621030912665625,
+      "median": 0.00724338247503885,
+      "p95": 0.03060754417029767
+    },
+    "issued_velocity_step_m_s": {
+      "count": 391,
+      "max": 0.04130291377722203,
+      "median": 0.003934818998985299,
+      "p95": 0.014666222651512443
+    },
+    "issued_yaw_step_rad": {
+      "count": 391,
+      "max": 0.05094795924011858,
+      "median": 2.5289682896056927e-05,
+      "p95": 0.0010717935469634066
+    }
+  },
+  "claim_boundary": "Dynamics quantities are conservative planning/collective-load proxies; no direct motor-thrust or complete dynamics-feasibility claim is made.",
+  "dynamics_runs": [
+    {
+      "imu_specific_force_lowpass_max": 1.0026963455997064,
+      "imu_specific_force_max": 1.007185754798703,
+      "imu_tilt_max_deg": 2.3366847667987347,
+      "planned_thrust_max": 1.0058458965399593,
+      "planned_tilt_max_deg": 2.3447004880721485,
+      "px4_target_tilt_max_deg": 2.4207241154791523,
+      "run_dir": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028",
+      "scenario": "Clutter-Reach",
+      "target_actual_spearman_rho": 0.9248773497319696,
+      "target_actual_tilt_rmse_deg": 0.10696485154389011,
+      "thrust_proxy_mae": 0.000930455848371982,
+      "thrust_proxy_rmse": 0.0011124088581531868,
+      "thrust_proxy_spearman_rho": -0.07877098127800616
+    },
+    {
+      "imu_specific_force_lowpass_max": 1.0028838361987504,
+      "imu_specific_force_max": 1.0081296908174626,
+      "imu_tilt_max_deg": 1.7396465112280923,
+      "planned_thrust_max": 1.0026252583741757,
+      "planned_tilt_max_deg": 1.7173153108577273,
+      "px4_target_tilt_max_deg": 1.7397167974368841,
+      "run_dir": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310",
+      "scenario": "Multi-Passage",
+      "target_actual_spearman_rho": 0.9091380210447588,
+      "target_actual_tilt_rmse_deg": 0.07666650520792956,
+      "thrust_proxy_mae": 0.0008775180552491235,
+      "thrust_proxy_rmse": 0.0010834560587434318,
+      "thrust_proxy_spearman_rho": 0.1673922286839941
+    },
+    {
+      "imu_specific_force_lowpass_max": 1.002332645623019,
+      "imu_specific_force_max": 1.0074126324264372,
+      "imu_tilt_max_deg": 1.664029155057656,
+      "planned_thrust_max": 1.0036219608464811,
+      "planned_tilt_max_deg": 1.6554138812240031,
+      "px4_target_tilt_max_deg": 1.6681736482764018,
+      "run_dir": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941",
+      "scenario": "Passage-Sweep",
+      "target_actual_spearman_rho": 0.966853921831452,
+      "target_actual_tilt_rmse_deg": 0.06051184893540561,
+      "thrust_proxy_mae": 0.0007944193525299203,
+      "thrust_proxy_rmse": 0.0010023739032860894,
+      "thrust_proxy_spearman_rho": 0.11608069503332942
+    }
+  ],
+  "handoff_count": 391,
+  "representative_handoff": {
+    "bridge_duration_s": 1.5,
+    "candidate_bending_gap_rad": 0.15661111404435202,
+    "candidate_bending_rate_gap_rad_s": 0.15738074861246024,
+    "candidate_linear_acceleration_gap_m_s2": 0.011840161971798048,
+    "candidate_linear_velocity_gap_m_s": 0.006631727280367115,
+    "candidate_position_gap_m": 0.03140325226485922,
+    "candidate_yaw_gap_rad": 0.0012486033633267724,
+    "handoff_mode": "C2",
+    "issued_acceleration_step_m_s2": 0.0008440312318684523,
+    "issued_bending_rate_step_deg_s": 1.8599311009901385,
+    "issued_bending_step_deg": 0.2191066742317389,
+    "issued_position_step_m": 0.0008035708382328641,
+    "issued_velocity_step_m_s": 0.0001155275075436582,
+    "issued_yaw_step_rad": 2.518934499629033e-05,
+    "run_dir": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222",
+    "switch_stamp": 90.488,
+    "trajectory_id": 3
+  }
+}

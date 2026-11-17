@@ -1,0 +1,56 @@
+{
+  "adapter": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/versioned_development/rolling_whole_body_v2/generate_v21_e3_paper_figures.py",
+  "audit_arm_clearance_min_m": 0.18866494777955242,
+  "audit_body_clearance_min_m": 0.18885154853371033,
+  "certified_buffer_remaining_after_validation_min_s": 13.5,
+  "common_success_pairs_for_figure_2": 54,
+  "complete_pairs": 90,
+  "e3_aggregate": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/aggregate_recomputed",
+  "e3_result_root": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2",
+  "generated_figures": [
+    "fig01_success_and_failure_overview.pdf",
+    "fig01_success_and_failure_overview.png",
+    "fig02_execution_quality_distributions.pdf",
+    "fig02_execution_quality_distributions.png",
+    "fig03_paired_outcome_matrix.pdf",
+    "fig03_paired_outcome_matrix.png",
+    "fig04_measured_whole_body_trajectory.pdf",
+    "fig04_measured_whole_body_trajectory.png",
+    "fig05_rolling_horizon_updates.pdf",
+    "fig05_rolling_horizon_updates.png",
+    "fig06_representative_execution_time_history.pdf",
+    "fig06_representative_execution_time_history.png",
+    "fig07_handoff_continuity.pdf",
+    "fig07_handoff_continuity.png",
+    "fig08_dynamics_proxy_validation.pdf",
+    "fig08_dynamics_proxy_validation.png"
+  ],
+  "generated_tables": [
+    "table_dynamics_proxy.tex",
+    "table_handoff_continuity.tex",
+    "table_main_results.tex",
+    "table_mcnemar.tex",
+    "table_paired_continuous.tex",
+    "table_success_breakdown.tex"
+  ],
+  "paired_trial_rows": 450,
+  "planning_deadline_s": 15.0,
+  "plotting_engine": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/schema6_formal_combined_commit4f80214/final_450/paper_artifacts/generate_sci_figures.py",
+  "plotting_engine_sha256": "4400e4ce3784fc1be6e317b7f64291fbf0c9979dcfad76feab7ae20ffbdfbc7a",
+  "recomputed_arm_clearance_min_m": 0.18866494777955242,
+  "recomputed_body_clearance_min_m": 0.18885154853371033,
+  "representative_planning_windows": 7,
+  "representative_run": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222",
+  "representative_samples": 1927,
+  "representative_scenario": "multi_passage_hard_s011",
+  "straight_arm_gate_clearance_m": [
+    -0.04746467538988472,
+    -0.03250926823742348,
+    -0.04836661520191296
+  ],
+  "straight_arm_robust_vertical_slack_m": [
+    -0.04302623792561877,
+    -0.02298981977061354,
+    -0.01963141963400683
+  ]
+}

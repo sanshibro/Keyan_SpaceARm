@@ -1,0 +1,80 @@
+frame_id: world
+
+arm:
+  arc_length: 0.28
+  radius: 0.025
+  segment_count: 18
+  base_offset_z: 0.0704
+  gripper_length: 0.05
+  mount_xyz: [0.0, 0.0, -0.03]
+  mount_rpy: [0.0, 3.1415926, 0.0]
+  theta_min_deg: 0.0
+  theta_max_deg: 90.0
+  theta_step_deg: 10.0
+  phi_min_deg: -180.0
+  phi_max_deg: 180.0
+  phi_step_deg: 20.0
+
+vehicle:
+  body_radius: 0.34
+  body_height: 0.25
+  body_clearance: 0.12
+  arm_clearance: 0.04
+
+target:
+  name: narrow_shelf_reach_target
+  pose: [0.0, 6.25, 0.55, 0.0]
+
+reachability:
+  target_tolerance: 0.12
+  candidate_standoff_min: 0.12
+  candidate_standoff_max: 0.24
+  candidate_standoff_step: 0.04
+  candidate_angle_step_deg: 30.0
+  candidate_z_offsets: [0.28, 0.32, 0.36]
+  max_candidates_to_publish: 100
+  auto_execute: false
+  spawn_gazebo_overlay: false
+
+boxes:
+  # Local room around the task. These boxes are both Gazebo overlay objects
+  # and planner obstacles, so RViz/Gazebo/planner geometry stay consistent.
+  - name: task_floor_patch
+    center: [0.0, 5.2, 0.03]
+    size: [5.2, 4.6, 0.06]
+  - name: front_wall
+    center: [0.0, 7.25, 1.25]
+    size: [5.2, 0.12, 2.5]
+  - name: back_wall
+    center: [0.0, 3.15, 1.25]
+    size: [5.2, 0.12, 2.5]
+  - name: left_wall
+    center: [-2.6, 5.2, 1.25]
+    size: [0.12, 4.2, 2.5]
+  - name: right_wall
+    center: [2.6, 5.2, 1.25]
+    size: [0.12, 4.2, 2.5]
+
+  # Narrow passage: UAV body should not enter the shelf gap, but the arm can
+  # reach through from a standoff pose.
+  - name: left_cabinet
+    center: [-0.78, 6.25, 0.85]
+    size: [0.42, 0.82, 1.7]
+  - name: right_cabinet
+    center: [0.78, 6.25, 0.85]
+    size: [0.42, 0.82, 1.7]
+  - name: top_lintel
+    center: [0.0, 6.25, 1.42]
+    size: [1.15, 0.82, 0.18]
+  - name: tabletop
+    center: [0.0, 6.25, 0.32]
+    size: [1.15, 0.82, 0.16]
+  - name: target_back_panel
+    center: [0.0, 6.54, 0.82]
+    size: [1.15, 0.08, 1.0]
+
+body_keepout_boxes:
+  - name: shelf_body_keepout
+    center: [0.0, 6.25, 0.90]
+    size: [0.55, 0.92, 1.5]
+

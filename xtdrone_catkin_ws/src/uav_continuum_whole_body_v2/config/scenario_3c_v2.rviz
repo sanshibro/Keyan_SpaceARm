@@ -1,0 +1,127 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+  - Class: rviz/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Grid
+      Enabled: true
+      Name: Ground Grid
+      Alpha: 0.35
+      Cell Size: 1
+      Plane: XY
+      Plane Cell Count: 30
+      Reference Frame: <Fixed Frame>
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /world/world_box_markers
+      Name: Known Indoor Geometry
+      Queue Size: 5
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /world/task_obstacle_markers
+      Name: Three-Wall Task Geometry
+      Queue Size: 5
+    - Class: rviz/Path
+      Enabled: true
+      Name: Global Topology (not executed)
+      Topic: /planner/global_path
+      Color: 80; 220; 80
+      Alpha: 0.65
+      Line Style: Lines
+      Line Width: 0.025
+      Buffer Length: 1
+    - Class: rviz/Path
+      Enabled: true
+      Name: EGO Local Reference
+      Topic: /planner/ego_reference_trajectory
+      Color: 255; 210; 40
+      Alpha: 0.90
+      Line Style: Lines
+      Line Width: 0.035
+      Buffer Length: 1
+    - Class: rviz/Path
+      Enabled: true
+      Name: V2 Accepted Local Whole-Body Path
+      Topic: /planner/v2/uav_path
+      Color: 20; 220; 255
+      Alpha: 1
+      Line Style: Lines
+      Line Width: 0.055
+      Buffer Length: 1
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /planner/v2/whole_body_markers
+      Name: V2 Planned UAV+Arm Ghost Shapes
+      Queue Size: 3
+    - Class: rviz/Path
+      Enabled: true
+      Name: V2 Actually Executed UAV History
+      Topic: /planner/v2/executed_path
+      Color: 255; 70; 70
+      Alpha: 1
+      Line Style: Lines
+      Line Width: 0.045
+      Buffer Length: 1
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /planner/v2/executed_whole_body_markers
+      Name: V2 Executed Arm Shape History
+      Queue Size: 3
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /arm/backbone_marker
+      Name: Current Arm Shape
+      Queue Size: 10
+    - Class: rviz/Pose
+      Enabled: true
+      Name: Current UAV World Pose
+      Topic: /iris_0/world_pose
+      Shape: Axes
+      Axes Length: 0.45
+      Axes Radius: 0.025
+      Queue Size: 10
+    - Class: rviz/PointCloud2
+      Enabled: false
+      Name: Shared Static Point Cloud
+      Topic: /world/static_scene_cloud
+      Style: Points
+      Size (Pixels): 2
+      Size (m): 0.02
+      Alpha: 0.30
+      Color Transformer: FlatColor
+      Color: 180; 180; 180
+      Position Transformer: XYZ
+      Queue Size: 2
+  Enabled: true
+  Global Options:
+    Background Color: 35; 35; 35
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: V2 Whole-Body Acceptance
+  Tools:
+    - Class: rviz/Interact
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 16
+      Focal Point:
+        X: 0
+        Y: -5.5
+        Z: 1.0
+      Pitch: 0.55
+      Yaw: 1.57
+      Near Clip Distance: 0.01
+      Target Frame: <Fixed Frame>
+Window Geometry:
+  Height: 900
+  Width: 1500
+  X: 40
+  Y: 30

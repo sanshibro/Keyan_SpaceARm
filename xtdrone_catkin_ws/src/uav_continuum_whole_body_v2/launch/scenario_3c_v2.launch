@@ -1,0 +1,128 @@
+<launch>
+  <arg name="auto_execute" default="false"/>
+  <arg name="pose_topic" default="/iris_0/world_pose"/>
+  <arg name="reference_topic" default="/planner/ego_reference_trajectory"/>
+  <arg name="setpoint_topic" default="/iris_0/mavros/setpoint_position/local"/>
+  <arg name="enable_logger" default="true"/>
+  <!-- With auto_execute=false an external OFFBOARD hold publisher owns the
+       setpoint stream.  Publishing a second hold here creates competing
+       commands and is therefore opt-in only. -->
+  <arg name="publish_hold_when_disabled" default="false"/>
+  <arg name="require_px4_ready" default="true"/>
+  <arg name="planner_config" default="$(find uav_continuum_whole_body_v2)/config/planner_v2.yaml"/>
+  <arg name="map_mode" default="regression_exact"/>
+  <arg name="map_snapshot_file" default="$(find uav_continuum_whole_body_v2)/generated/scenario_3c_frozen_slam_map.npz"/>
+  <arg name="task_file" default="$(find uav_continuum_whole_body_v2)/config/scenario_3c_task.yaml"/>
+  <arg name="oracle_file" default=""/>
+  <arg name="phase_body_full_error" default="0.010"/>
+  <arg name="phase_arm_full_error" default="0.010"/>
+  <arg name="phase_body_clearance_reserve" default="0.03"/>
+  <arg name="phase_arm_clearance_reserve" default="0.045"/>
+  <arg name="phase_calibrated_full_speed_error" default="0.060"/>
+  <arg name="rolling_switch_max_advance" default="0.35"/>
+  <arg name="final_convergence_timeout" default="15.0"/>
+  <arg name="enable_rolling_planner" default="true"/>
+  <arg name="method" default="rolling_wb_v2"/>
+  <arg name="experiment_class" default="engineering_regression"/>
+  <arg name="logger_output_dir" default="$(find uav_continuum_whole_body_v2)/../../../xtdrone_plan/experiments/v2_runs"/>
+  <arg name="run_name" default=""/>
+  <arg name="method_time_budget" default="0.0"/>
+
+  <rosparam command="load" file="$(arg planner_config)"/>
+
+  <node if="$(arg enable_rolling_planner)"
+        pkg="uav_continuum_whole_body_v2" type="rolling_whole_body_planner_node.py"
+        name="rolling_whole_body_planner_v2" output="screen" launch-prefix="nice -n 5">
+    <param name="pose_topic" value="$(arg pose_topic)"/>
+    <param name="reference_topic" value="$(arg reference_topic)"/>
+    <param name="planner_config" value="$(arg planner_config)"/>
+    <param name="map_mode" value="$(arg map_mode)"/>
+    <param name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
+    <param name="task_file" value="$(arg task_file)"/>
+    <param name="method_time_budget" value="$(arg method_time_budget)"/>
+  </node>
+
+  <node pkg="uav_continuum_whole_body_v2" type="whole_body_trajectory_executor_node.py"
+        name="whole_body_trajectory_executor_v2" output="screen">
+    <param name="auto_execute" value="$(arg auto_execute)"/>
+    <param name="map_mode" value="$(arg map_mode)"/>
+    <param name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
+    <param name="setpoint_topic" value="$(arg setpoint_topic)"/>
+    <param name="raw_setpoint_topic" value="/iris_0/mavros/setpoint_raw/local"/>
+    <param name="use_velocity_feedforward" value="true"/>
+    <param name="enable_tracking_tube" value="false"/>
+    <param name="enable_phase_guard" value="true"/>
+    <!-- Whole-body geometric tracking tube.  Its stop error is derived online
+         from certified desired clearance minus the measured hard line and a
+         stopping reserve.  The cap permits initial alignment in open space;
+         it contracts automatically in narrow passages. -->
+    <param name="phase_body_full_error" value="$(arg phase_body_full_error)"/>
+    <param name="phase_arm_full_error" value="$(arg phase_arm_full_error)"/>
+    <param name="phase_body_stop_error_max" value="0.10"/>
+    <param name="phase_arm_stop_error_max" value="0.10"/>
+    <param name="phase_body_clearance_reserve" value="$(arg phase_body_clearance_reserve)"/>
+    <!-- Includes the measured 0.025 m post-stop vertical settling envelope
+         from the controller-interface calibration, in addition to the hard
+         arm clearance.  This is controller-specific, not scene-specific. -->
+    <param name="phase_arm_clearance_reserve" value="$(arg phase_arm_clearance_reserve)"/>
+    <!-- XYZ feed-forward calibration P95 (0.0597 m), rounded conservatively. -->
+    <param name="phase_calibrated_full_speed_error" value="$(arg phase_calibrated_full_speed_error)"/>
+    <param name="rolling_switch_target_gap" value="0.10"/>
+    <!-- A validated trajectory suffix may be spliced to eliminate planning-
+         latency rollback, but never skip more than one geometric commit. -->
+    <param name="rolling_switch_max_advance" value="$(arg rolling_switch_max_advance)"/>
+    <!-- Reject a stale successor promptly and solve again while the previous
+         certified horizon still has ample executable reserve. -->
+    <param name="rolling_switch_wait_timeout" value="3.0"/>
+    <param name="world_pose_topic" value="$(arg pose_topic)"/>
+    <param name="publish_hold_when_disabled" value="$(arg publish_hold_when_disabled)"/>
+    <param name="require_px4_ready" value="$(arg require_px4_ready)"/>
+    <!-- Must exceed a worst-case V2 optimize+independent-validation cycle so
+         stop/go measured-state recovery can hand off without a false abort. -->
+    <param name="final_convergence_timeout" value="$(arg final_convergence_timeout)"/>
+    <param name="completion_tracking_tolerance" value="0.18"/>
+    <param name="pending_start_expiry" value="0.5"/>
+    <!-- Pre-enable inspection can make a certified first window stale.  The
+         executor holds measured pose and requests a fresh solve instead of
+         chasing an old trajectory whose start moved outside this gate. -->
+    <param name="maximum_start_gap" value="0.10"/>
+    <!-- /mavros/state is a 1 Hz health topic and may be delayed while the
+         planner saturates the target CPU.  Pose inputs retain the 2.5 s
+         default; only this low-rate health heartbeat gets a wider gate. -->
+    <param name="mavros_state_timeout" value="5.0"/>
+    <!-- The planner resets prediction at 0.20 m.  This slightly wider final
+         executor gate tolerates short switch transients; measured whole-body
+         clearance remains the higher-priority collision stop.  The old
+         implicit 0.45 m default was unsafe. -->
+    <param name="maximum_tracking_error" value="0.25"/>
+    <param name="tracking_error_hold" value="0.35"/>
+    <param name="first_tracking_grace" value="5.0"/>
+    <param name="transform_update_alpha" value="1.0"/>
+    <param name="actual_body_abort_clearance" value="0.06"/>
+    <param name="actual_arm_abort_clearance" value="0.02"/>
+    <param name="tracking_tube_body_reserve" value="0.03"/>
+    <param name="tracking_tube_arm_reserve" value="0.02"/>
+    <param name="tracking_tube_geometry_factor" value="1.10"/>
+    <param name="tracking_tube_reaction_time" value="0.25"/>
+    <param name="tracking_tube_braking_acceleration" value="0.03"/>
+    <param name="tracking_tube_max_command_step" value="0.0025"/>
+    <param name="recovery_body_clearance" value="0.11"/>
+    <param name="recovery_arm_clearance" value="0.06"/>
+  </node>
+
+  <node if="$(arg enable_logger)" pkg="uav_continuum_whole_body_v2"
+        type="whole_body_metrics_logger_node.py" name="whole_body_metrics_logger_v2" output="screen">
+    <param name="method" value="$(arg method)"/>
+    <param name="map_mode" value="$(arg map_mode)"/>
+    <param name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
+    <param name="task_file" value="$(arg task_file)"/>
+    <param name="oracle_file" value="$(arg oracle_file)"/>
+    <param name="planner_config" value="$(arg planner_config)"/>
+    <param name="experiment_class" value="$(arg experiment_class)"/>
+    <param name="output_dir" value="$(arg logger_output_dir)"/>
+    <param name="run_name" value="$(arg run_name)"/>
+  </node>
+
+  <node pkg="uav_continuum_whole_body_v2" type="whole_body_visualization_node.py"
+        name="whole_body_visualization_v2" output="screen"/>
+</launch>

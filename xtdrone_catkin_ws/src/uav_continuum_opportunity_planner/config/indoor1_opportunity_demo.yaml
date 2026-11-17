@@ -1,0 +1,53 @@
+frame_id: world
+
+arm:
+  arc_length: 1.0
+  radius: 0.025
+  segment_count: 18
+  base_offset_z: 0.0704
+  gripper_length: 0.05
+  mount_xyz: [0.0, 0.0, -0.03]
+  mount_rpy: [0.0, 3.1415926, 0.0]
+  theta_min_deg: 0.0
+  theta_max_deg: 120.0
+  theta_step_deg: 10.0
+  phi_min_deg: -180.0
+  phi_max_deg: 180.0
+  phi_step_deg: 20.0
+
+vehicle:
+  body_radius: 0.34
+  body_height: 0.25
+  body_clearance: 0.12
+  arm_clearance: 0.04
+
+target:
+  name: tabletop_reach_target
+  pose: [-3.5, 6.3, 0.55, 0.0]
+
+reachability:
+  target_tolerance: 0.20
+  candidate_standoff_min: 0.55
+  candidate_standoff_max: 1.15
+  candidate_standoff_step: 0.10
+  candidate_angle_step_deg: 30.0
+  candidate_z_offsets: [0.55, 0.65, 0.75]
+  max_candidates_to_publish: 80
+  auto_execute: false
+  spawn_gazebo_overlay: false
+
+boxes:
+  - name: opportunity_table
+    center: [-3.5, 6.3, 0.14]
+    size: [0.7, 0.7, 0.28]
+  - name: left_guard
+    center: [-4.3, 6.3, 0.48]
+    size: [0.05, 0.55, 0.7]
+  - name: right_guard
+    center: [-2.7, 6.3, 0.48]
+    size: [0.05, 0.55, 0.7]
+
+body_keepout_boxes:
+  - name: target_body_keepout
+    center: [-3.5, 6.3, 0.82]
+    size: [0.22, 0.22, 0.8]

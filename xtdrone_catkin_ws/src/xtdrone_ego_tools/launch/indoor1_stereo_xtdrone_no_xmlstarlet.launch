@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/indoor1.world"/>
+  <arg name="gui" default="true"/>
+  <arg name="paused" default="false"/>
+  <arg name="x" default="0"/>
+  <arg name="y" default="7.5"/>
+  <arg name="z" default="1"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="world_name" value="$(arg world)"/>
+    <arg name="paused" value="$(arg paused)"/>
+  </include>
+
+  <group ns="iris_0">
+    <arg name="ID" value="0"/>
+    <arg name="fcu_url" default="udp://:24540@localhost:34580"/>
+
+    <env name="PX4_SIM_MODEL" value="iris"/>
+    <env name="PX4_ESTIMATOR" value="ekf2"/>
+    <param name="/model_description" textfile="$(find px4)/Tools/sitl_gazebo/models/iris_stereo_camera/iris_stereo_camera.sdf"/>
+
+    <node name="sitl_0" pkg="px4" type="px4" output="screen"
+          args="$(find px4)/ROMFS/px4fmu_common -s etc/init.d-posix/rcS -i 0 -w sitl_iris_0 -d"/>
+
+    <node name="iris_0_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-sdf -param /model_description -model iris_0 -x $(arg x) -y $(arg y) -z $(arg z) -R 0 -P 0 -Y 0"/>
+
+    <include file="$(find mavros)/launch/px4.launch">
+      <arg name="fcu_url" value="$(arg fcu_url)"/>
+      <arg name="gcs_url" value=""/>
+      <arg name="tgt_system" value="1"/>
+      <arg name="tgt_component" value="1"/>
+    </include>
+  </group>
+</launch>

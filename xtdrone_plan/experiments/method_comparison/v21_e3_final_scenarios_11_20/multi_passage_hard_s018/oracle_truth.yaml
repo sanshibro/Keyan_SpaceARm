@@ -1,0 +1,65 @@
+schema_version: 1
+frame_id: world
+name: multi_passage_hard_s018
+boxes:
+- name: passage_1_lower
+  center:
+  - 0.0
+  - -2.4
+  - 0.4469617721674818
+  size:
+  - 6.0
+  - 0.24
+  - 0.8939235443349636
+  yaw_deg: -12.485594116313791
+- name: passage_1_upper
+  center:
+  - 0.0
+  - -2.4
+  - 2.3770981065108527
+  size:
+  - 6.0
+  - 0.24
+  - 1.2458037869782943
+  yaw_deg: -12.485594116313791
+- name: passage_2_lower
+  center:
+  - 0.0
+  - -4.8
+  - 0.40514430467129037
+  size:
+  - 6.0
+  - 0.24
+  - 0.8102886093425807
+  yaw_deg: 10.000545144424043
+- name: passage_2_upper
+  center:
+  - 0.0
+  - -4.8
+  - 2.343950131388155
+  size:
+  - 6.0
+  - 0.24
+  - 1.3120997372236896
+  yaw_deg: 10.000545144424043
+- name: passage_3_lower
+  center:
+  - 0.0
+  - -7.2
+  - 0.4421894402953763
+  size:
+  - 6.0
+  - 0.24
+  - 0.8843788805907526
+  yaw_deg: -18.97212630958468
+- name: passage_3_upper
+  center:
+  - 0.0
+  - -7.2
+  - 2.3843868265022756
+  size:
+  - 6.0
+  - 0.24
+  - 1.2312263469954492
+  yaw_deg: -18.97212630958468
+oracle_only: true

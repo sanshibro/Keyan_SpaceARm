@@ -1,0 +1,31 @@
+<launch>
+  <arg name="world" default="/home/uav/桌面/XTDrone_test/XTDrone/sitl_config/worlds/indoor1.world"/>
+  <arg name="frame_id" default="world"/>
+  <arg name="resolution" default="0.08"/>
+  <arg name="max_axis_samples" default="60"/>
+  <arg name="mesh_mode" default="vertices"/>
+  <arg name="max_mesh_points" default="20000"/>
+  <arg name="include_visuals" default="true"/>
+  <arg name="include_collisions" default="true"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="export_gazebo_scene_cloud.py"
+        name="static_scene_cloud_node"
+        output="screen">
+    <param name="world" value="$(arg world)"/>
+    <param name="frame_id" value="$(arg frame_id)"/>
+    <param name="resolution" value="$(arg resolution)"/>
+    <param name="max_axis_samples" value="$(arg max_axis_samples)"/>
+    <param name="mesh_mode" value="$(arg mesh_mode)"/>
+    <param name="max_mesh_points" value="$(arg max_mesh_points)"/>
+    <param name="include_visuals" value="$(arg include_visuals)"/>
+    <param name="include_collisions" value="$(arg include_collisions)"/>
+    <rosparam param="exclude_models">
+      - ground_plane
+    </rosparam>
+    <rosparam param="extra_model_paths">
+      - /home/uav/.gazebo/models
+      - /home/uav/桌面/XTDrone_test/XTDrone/sitl_config/models
+    </rosparam>
+  </node>
+</launch>

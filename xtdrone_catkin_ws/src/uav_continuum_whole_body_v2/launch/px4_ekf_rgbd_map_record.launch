@@ -1,0 +1,124 @@
+<launch>
+  <!-- Frozen-map acquisition with sensor depth and a non-truth onboard state
+       estimate. This isolates map sensing from planner comparisons, but is
+       deliberately not labelled standalone SLAM localization. -->
+  <arg name="depth_cloud_topic" default="/camera/depth/points"/>
+  <arg name="world_frame" default="world"/>
+  <arg name="initial_x" default="0.0"/>
+  <arg name="initial_y" default="0.0"/>
+  <arg name="initial_z" default="0.05"/>
+  <arg name="initial_yaw" default="0.0"/>
+  <arg name="resolution" default="0.05"/>
+  <arg name="snapshot_file" default="/tmp/v2_recorded_sensor_map.npz"/>
+  <arg name="footprint_clear_radius_xy" default="0.28"/>
+  <arg name="footprint_clear_half_height" default="0.125"/>
+  <arg name="enable_front_sensor" default="true"/>
+  <arg name="enable_down_sensor" default="true"/>
+  <arg name="down_maximum_points" default="20000"/>
+  <arg name="snapshot_sensor_pose_topic" default="/slam/sensor_pose"/>
+  <arg name="snapshot_clearing_pose_topic" default="/slam/estimator_body_pose"/>
+
+  <node pkg="uav_continuum_whole_body_v2"
+        type="anchored_estimator_camera_pose_node.py"
+        name="anchored_estimator_camera_pose" output="screen"
+        if="$(arg enable_front_sensor)">
+    <param name="world_frame" value="$(arg world_frame)"/>
+    <param name="initial_x" value="$(arg initial_x)"/>
+    <param name="initial_y" value="$(arg initial_y)"/>
+    <param name="initial_z" value="$(arg initial_z)"/>
+    <param name="initial_yaw" value="$(arg initial_yaw)"/>
+  </node>
+
+  <!-- Independent onboard-state registration for the downward RGB-D sensor.
+       Optical +Z is body -Z; no Gazebo pose or analytic obstacle is used. -->
+  <node pkg="uav_continuum_whole_body_v2"
+        type="anchored_estimator_camera_pose_node.py"
+        name="anchored_estimator_down_camera_pose" output="screen"
+        if="$(arg enable_down_sensor)">
+    <param name="world_frame" value="$(arg world_frame)"/>
+    <param name="initial_x" value="$(arg initial_x)"/>
+    <param name="initial_y" value="$(arg initial_y)"/>
+    <param name="initial_z" value="$(arg initial_z)"/>
+    <param name="initial_yaw" value="$(arg initial_yaw)"/>
+    <param name="camera_x" value="0.0"/>
+    <param name="camera_y" value="0.0"/>
+    <param name="camera_z" value="-0.05"/>
+    <param name="camera_roll" value="-3.141592653589793"/>
+    <param name="camera_pitch" value="0.0"/>
+    <param name="camera_yaw" value="-1.5707963267948966"/>
+    <param name="output_topic" value="/slam/estimator_down_camera_pose"/>
+    <param name="body_output_topic" value="/slam/down_estimator_body_pose"/>
+    <param name="status_topic" value="/slam/down_localization_status"/>
+  </node>
+
+  <include file="$(find uav_continuum_whole_body_v2)/launch/register_depth_cloud.launch"
+           if="$(arg enable_front_sensor)">
+    <arg name="depth_cloud_topic" value="$(arg depth_cloud_topic)"/>
+    <arg name="camera_pose_topic" value="/slam/estimator_camera_pose"/>
+    <arg name="pose_source" value="topic"/>
+    <arg name="output_frame" value="$(arg world_frame)"/>
+    <arg name="maximum_pose_age_s" value="0.15"/>
+    <!-- Dense angular sampling is required to certify 0.05 m free voxels at
+         the far end of the corridor. This cost is paid once during frozen
+         map acquisition, not by any compared planner. -->
+    <!-- 160x120 depth images contain 19200 angular rays.  A limit below
+         that count makes the integer grid sampler jump to every second row
+         and column, which can leave isolated unknown voxels in an otherwise
+         observed terminal envelope.  Full pixels are retained only during
+         the one-time independent mapping survey. -->
+    <arg name="maximum_points" value="20000"/>
+    <!-- No-return pixels also certify free space.  A 120-ray grid is too
+         sparse for a 5 cm map; 1200 preserves sub-voxel angular spacing over
+         the near whole-body envelope without integrating all far rays. -->
+    <arg name="maximum_free_rays" value="1200"/>
+  </include>
+
+  <node pkg="uav_continuum_whole_body_v2" type="register_depth_cloud_node.py"
+        name="register_down_depth_cloud" output="screen"
+        if="$(arg enable_down_sensor)">
+    <param name="depth_cloud_topic" value="/iris_0/camera_down/depth/points"/>
+    <param name="camera_pose_topic" value="/slam/estimator_down_camera_pose"/>
+    <param name="pose_source" value="topic"/>
+    <param name="registered_cloud_topic" value="/slam/registered_down_cloud"/>
+    <param name="registered_pose_topic" value="/slam/down_sensor_pose"/>
+    <param name="registered_free_ray_topic" value="/slam/registered_down_free_ray_endpoints"/>
+    <param name="output_frame" value="$(arg world_frame)"/>
+    <param name="maximum_pose_age_s" value="0.15"/>
+    <!-- Retain the complete angular grid so the terminal arm envelope has no
+         sampling stripes. This is offline map acquisition, not planner CPU. -->
+    <param name="maximum_points" value="$(arg down_maximum_points)"/>
+    <param name="maximum_free_rays" value="0"/>
+    <param name="free_ray_range_m" value="8.0"/>
+  </node>
+
+  <include file="$(find uav_continuum_whole_body_v2)/launch/slam_map_snapshot.launch">
+    <arg name="mode" value="record"/>
+    <arg name="snapshot_file" value="$(arg snapshot_file)"/>
+    <arg name="localization_source" value="px4_ekf_sensor_fusion"/>
+    <arg name="resolution" value="$(arg resolution)"/>
+    <arg name="formal_experiment_allowed" value="false"/>
+    <!-- A million-voxel compressed checkpoint can monopolize the Python ROS
+         service thread. Keep the first periodic recovery checkpoint beyond a
+         normal survey and explicitly flush once after the final scan. -->
+    <arg name="publish_rate_hz" value="0.001"/>
+    <arg name="publish_during_record" value="false"/>
+    <arg name="maximum_cloud_points" value="20000"/>
+    <!-- The frozen survey is limited to 0.10 m/s, hence successive accepted
+         maps are separated by at most one 0.05 m voxel. -->
+    <arg name="minimum_cloud_interval_s" value="0.50"/>
+    <arg name="sensor_pose_topic" value="$(arg snapshot_sensor_pose_topic)"/>
+    <!-- Clear only the measured 0.28 m x 0.25 m physical body. The mapper
+         conservatively rasterizes cells intersecting this cylinder; the
+         0.10 m planning margin is never added here. -->
+    <arg name="clearing_pose_topic" value="$(arg snapshot_clearing_pose_topic)"/>
+    <arg name="footprint_clear_radius_xy" value="$(arg footprint_clear_radius_xy)"/>
+    <arg name="footprint_clear_half_height" value="$(arg footprint_clear_half_height)"/>
+  </include>
+
+  <rosparam param="/slam_map_snapshot/registered_cloud_topics">
+    [/slam/registered_cloud, /slam/registered_down_cloud]
+  </rosparam>
+  <rosparam param="/slam_map_snapshot/registered_free_ray_topics">
+    [/slam/registered_free_ray_endpoints, /slam/registered_down_free_ray_endpoints]
+  </rosparam>
+</launch>

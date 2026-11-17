@@ -1,0 +1,28 @@
+schema_version: 1
+frame_id: world
+name: passage_sweep_easy_s011
+family: passage_sweep
+difficulty: easy
+seed: 11
+start_state:
+- 0.0
+- 0.0
+- 1.3
+- -1.5707963267948966
+- 0.0
+- 0.0
+target:
+- -1.8373152424721447e-17
+- -5.800056349920868
+- 1.0299436500791321
+- 0.0
+preferred_standoff:
+- 0.0
+- -5.5
+- 1.3
+- -1.5707963267948966
+terminal_shape_deg:
+- 90.0
+- -180.0
+tip_tolerance_m: 0.08
+task_time_limit: 600.0

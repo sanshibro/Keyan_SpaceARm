@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.reproduction/
+build/
+devel/
+install/
+.venv/
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk

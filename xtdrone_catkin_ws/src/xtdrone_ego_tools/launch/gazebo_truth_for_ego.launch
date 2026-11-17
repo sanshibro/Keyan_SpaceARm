@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Simulation-only odometry bridge for getting XTDrone EGO planning running
+       with the stable iris_depth_camera model. It reads Gazebo model state and
+       publishes odom/camera_pose topics; it does not move the Gazebo model. -->
+
+  <arg name="model_name" default="iris_0"/>
+  <arg name="frame_id" default="world"/>
+  <arg name="use_initial_pose_as_origin" default="true"/>
+  <arg name="camera_offset_x" default="0.1"/>
+  <arg name="camera_offset_y" default="0.0"/>
+  <arg name="camera_offset_z" default="0.035"/>
+
+  <node pkg="xtdrone_ego_tools"
+        type="gazebo_truth_bridge.py"
+        name="gazebo_truth_bridge"
+        output="screen">
+    <param name="model_name" value="$(arg model_name)"/>
+    <param name="frame_id" value="$(arg frame_id)"/>
+    <param name="use_initial_pose_as_origin" value="$(arg use_initial_pose_as_origin)"/>
+    <param name="camera_offset_x" value="$(arg camera_offset_x)"/>
+    <param name="camera_offset_y" value="$(arg camera_offset_y)"/>
+    <param name="camera_offset_z" value="$(arg camera_offset_z)"/>
+    <rosparam param="odom_topics">
+      - /vins_estimator/odometry
+      - /xtdrone/iris_0/vins_estimator/odometry
+    </rosparam>
+    <rosparam param="pose_topics">
+      - /iris_0/camera_pose
+    </rosparam>
+  </node>
+</launch>

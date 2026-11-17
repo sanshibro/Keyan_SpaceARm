@@ -1,0 +1,30 @@
+{
+  "accepted": true,
+  "count": 15,
+  "deadline_miss_total": 0,
+  "handoff": {
+    "direct_c1": 56,
+    "validated_c2_bridge": 12
+  },
+  "jerk": {
+    "frozen_median": 0.3985420052673334,
+    "improved_pairs": 15,
+    "paired_reduction_median": 0.727837519208926,
+    "paired_reduction_p05": 0.2333834835781671,
+    "v21_median": 0.10221316748812866,
+    "v21_p95": 0.2712553313038036
+  },
+  "planning_s": {
+    "call_count": 83,
+    "max": 5.204169782009558,
+    "p50": 2.306257590011228,
+    "p95": 3.8007330117965465
+  },
+  "safety": {
+    "arm_clearance_min": 0.1396800124327559,
+    "body_clearance_min": 0.18884759110590787,
+    "tracking_rmse_max": 0.027073819977502623
+  },
+  "schema": "v21_e2_rate_boundary_v1",
+  "success": 15
+}

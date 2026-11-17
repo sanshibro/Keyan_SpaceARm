@@ -1,0 +1,121 @@
+<launch>
+  <arg name="config" default="$(find uav_continuum_opportunity_planner)/config/indoor1_opportunity_demo.yaml"/>
+  <arg name="world_boxes_config" default="$(find uav_continuum_opportunity_planner)/config/indoor1_sdf_boxes.yaml"/>
+  <arg name="use_world_boxes" default="true"/>
+  <arg name="uav_pose_topic" default="/iris_0/world_pose"/>
+  <arg name="auto_execute" default="false"/>
+  <arg name="spawn_gazebo_overlay" default="false"/>
+  <arg name="enable_joint_planner" default="true"/>
+  <arg name="use_static_cloud" default="false"/>
+  <arg name="require_static_cloud" default="false"/>
+  <arg name="static_cloud_topic" default="/world/static_scene_cloud"/>
+  <arg name="static_cloud_resolution" default="0.1"/>
+  <arg name="static_cloud_inflation" default="0.1"/>
+  <arg name="static_cloud_search_radius" default="0.35"/>
+  <arg name="static_cloud_max_points" default="250000"/>
+  <arg name="global_search_resolution" default="0.35"/>
+  <arg name="global_search_xy_padding" default="6.0"/>
+  <arg name="global_search_z_min" default="0.85"/>
+  <arg name="global_search_z_max" default="2.0"/>
+  <arg name="global_search_max_expansions" default="25000"/>
+  <arg name="enable_plan_executor" default="true"/>
+  <arg name="execute_gazebo" default="false"/>
+  <arg name="execute_arm" default="true"/>
+  <arg name="auto_start_executor" default="false"/>
+  <arg name="enable_px4_executor" default="false"/>
+  <arg name="px4_auto_offboard" default="false"/>
+  <arg name="px4_auto_arm" default="false"/>
+  <arg name="px4_require_plan_ready" default="true"/>
+
+  <rosparam command="load" file="$(arg config)"/>
+  <rosparam if="$(arg use_world_boxes)" command="load" file="$(arg world_boxes_config)" ns="/world_boxes"/>
+  <param name="/reachability/auto_execute" value="$(arg auto_execute)"/>
+  <param name="/reachability/spawn_gazebo_overlay" value="$(arg spawn_gazebo_overlay)"/>
+
+  <node if="$(arg spawn_gazebo_overlay)"
+        pkg="uav_continuum_opportunity_planner"
+        type="spawn_task_scene_node.py"
+        name="spawn_task_scene_node"
+        output="screen"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="arm_shape_sim_node.py"
+        name="arm_shape_sim_node"
+        output="screen"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="arm_kinematics_node.py"
+        name="arm_kinematics_node"
+        output="screen">
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+  </node>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="obstacle_geometry_node.py"
+        name="obstacle_geometry_node"
+        output="screen"/>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="reachability_node.py"
+        name="reachability_node"
+        output="screen">
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+    <param name="use_static_cloud" value="$(arg use_static_cloud)"/>
+    <param name="require_static_cloud" value="$(arg require_static_cloud)"/>
+    <param name="static_cloud_topic" value="$(arg static_cloud_topic)"/>
+    <param name="static_cloud_resolution" value="$(arg static_cloud_resolution)"/>
+    <param name="static_cloud_inflation" value="$(arg static_cloud_inflation)"/>
+    <param name="static_cloud_search_radius" value="$(arg static_cloud_search_radius)"/>
+    <param name="static_cloud_max_points" value="$(arg static_cloud_max_points)"/>
+    <param name="global_search_resolution" value="$(arg global_search_resolution)"/>
+    <param name="global_search_xy_padding" value="$(arg global_search_xy_padding)"/>
+    <param name="global_search_z_min" value="$(arg global_search_z_min)"/>
+    <param name="global_search_z_max" value="$(arg global_search_z_max)"/>
+    <param name="global_search_max_expansions" value="$(arg global_search_max_expansions)"/>
+  </node>
+
+  <node pkg="uav_continuum_opportunity_planner"
+        type="opportunity_visualization_node.py"
+        name="opportunity_visualization_node"
+        output="screen"/>
+
+  <node if="$(arg enable_joint_planner)"
+        pkg="uav_continuum_opportunity_planner"
+        type="joint_planner_node.py"
+        name="joint_planner_node"
+        output="screen">
+    <param name="uav_pose_topic" value="$(arg uav_pose_topic)"/>
+    <param name="use_static_cloud" value="$(arg use_static_cloud)"/>
+    <param name="require_static_cloud" value="$(arg require_static_cloud)"/>
+    <param name="static_cloud_topic" value="$(arg static_cloud_topic)"/>
+    <param name="static_cloud_resolution" value="$(arg static_cloud_resolution)"/>
+    <param name="static_cloud_inflation" value="$(arg static_cloud_inflation)"/>
+    <param name="static_cloud_search_radius" value="$(arg static_cloud_search_radius)"/>
+    <param name="static_cloud_max_points" value="$(arg static_cloud_max_points)"/>
+    <param name="global_search_resolution" value="$(arg global_search_resolution)"/>
+    <param name="global_search_xy_padding" value="$(arg global_search_xy_padding)"/>
+    <param name="global_search_z_min" value="$(arg global_search_z_min)"/>
+    <param name="global_search_z_max" value="$(arg global_search_z_max)"/>
+    <param name="global_search_max_expansions" value="$(arg global_search_max_expansions)"/>
+  </node>
+
+  <node if="$(arg enable_plan_executor)"
+        pkg="uav_continuum_opportunity_planner"
+        type="plan_executor_node.py"
+        name="plan_executor_node"
+        output="screen">
+    <param name="execute_gazebo" value="$(arg execute_gazebo)"/>
+    <param name="execute_arm" value="$(arg execute_arm)"/>
+    <param name="auto_start" value="$(arg auto_start_executor)"/>
+  </node>
+
+  <node if="$(arg enable_px4_executor)"
+        pkg="uav_continuum_opportunity_planner"
+        type="px4_waypoint_executor_node.py"
+        name="px4_waypoint_executor_node"
+        output="screen">
+    <param name="auto_offboard" value="$(arg px4_auto_offboard)"/>
+    <param name="auto_arm" value="$(arg px4_auto_arm)"/>
+    <param name="require_plan_ready" value="$(arg px4_require_plan_ready)"/>
+  </node>
+</launch>

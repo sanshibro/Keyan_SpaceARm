@@ -1,0 +1,876 @@
+{
+  "artifact_sha256": {
+    "aggregate_recomputed/completeness.json": "466e2ba6e3bb43c0bdbb043b9e218eedff7711d20d50fb97ce9a062964b3a2ff",
+    "aggregate_recomputed/main_table.csv": "676cb48049448ae0d6efe446b781f5d1ec40f3a07e40ad378c6f59aa9d420072",
+    "aggregate_recomputed/main_table.md": "8599b76ad746f22a2b891b517bd0bade4005526b0a48c8e2e365f2b7ddf3281b",
+    "aggregate_recomputed/paired_statistics.json": "12a81e3fb69e78d0694c5127383def5c20b03d8c01ee7f5b8feb3f18ee3d0c31",
+    "aggregate_recomputed/paired_trials.csv": "650929d15bc1297ffd803de8d402520f8fdf9b672f042d96e9ce0f2f366955fe",
+    "aggregate_recomputed/paper_eligibility.json": "080142a40171bc0a7bdd4ea88987662d1602f531416cf65b42aa456eb2145429",
+    "aggregate_recomputed/summary.json": "4efd90cfb49af621d54d62edcee7846be6e4a58754248fdb4bb28c2d158fe921",
+    "final_evidence/E3_final_evidence_report_cn.md": "e7b13414f4161443e8db7923efcceecc59149ace4547bff0d238f02ea930e6b9",
+    "final_evidence/common_success_statistics.json": "52d104e374b43654cebdca0de48e592dbd4f5d0dda3e33a486886415656a256e",
+    "final_evidence/descriptive_statistics.json": "4d6eeb435a66d76bd10c1cc9de21ae76e58d3be7957dda6800f430bf371fe1d8",
+    "final_evidence/failure_taxonomy.csv": "74ca954c660000cbdbdc7c8d9e2b40c955639aac1521a339aa170a9f9b41869f",
+    "final_evidence/failure_taxonomy.json": "adc859880599932f020b169fba11141e4b7dae802fd2e84be312197ba6d50374",
+    "final_evidence/friedman.csv": "6b193194317ed6cbc6f049561fb83d388016654b0f385e917f308fba37356e98",
+    "final_evidence/integrity.json": "98fad12c603ae894e1c113509341d25adeb70b0bd2f66e935927708de087486c",
+    "final_evidence/success_overall.csv": "c6d388d4a2b05dad3dcc58e6a7786052a988f8fdd89965629147e2e8e5b863b3",
+    "final_evidence/success_statistics.json": "41eb2fa80e1481670db2a4ff848cf19c81bf7201008f488ea9f44f2718060acf",
+    "final_evidence/v21_execution_audit.json": "88690a3dcca10673a3e0daf51e9b921c439bb8ed5aaa85310b4f958513d77730",
+    "final_evidence/wilcoxon_holm.csv": "ac7c4afa1cefa03d5034a2a9c50b315ff5f6b583a875343afbc9943565db59a0",
+    "paper_artifacts/POSTPROCESS_EVIDENCE_REPORT_CN.md": "9f47e06536f75e8b76e0fc9946eecaf61cd7a1a015cc36e45beeef17e9588fdb",
+    "paper_artifacts/README.md": "5c796687cba491fa3b8a161078433d05cae8c8649dd140727fe1d95b7631ff6e",
+    "paper_artifacts/figures/fig01_success_and_failure_overview.pdf": "42bba0a6cc893d145f48016667887e749b28e3a8fad9d003074e8c164d87e890",
+    "paper_artifacts/figures/fig01_success_and_failure_overview.png": "1a37cd4286ee3d1eac4cb20e950186f17ea711d41ec991fdd0948b0e75f08aa3",
+    "paper_artifacts/figures/fig02_execution_quality_distributions.pdf": "7e730980260ef3cdada3eea3f622c63c7b74e4193c73bf7392d67886b294093d",
+    "paper_artifacts/figures/fig02_execution_quality_distributions.png": "609d985cf509a7953ead25c77e6b74a54252260ce397562deb5988b8d08b95d1",
+    "paper_artifacts/figures/fig03_paired_outcome_matrix.pdf": "a0277ffcb7d192dcd103857a856d893b1544fa93d3db20893f8123d726b07611",
+    "paper_artifacts/figures/fig03_paired_outcome_matrix.png": "e586f7555a26000de747421831b84163ec2b9563b798298063f351c9b7d49d90",
+    "paper_artifacts/figures/fig04_measured_whole_body_trajectory.pdf": "152fc012f88feb0f543fae73355191607ca2a557be134559c06b0538157df218",
+    "paper_artifacts/figures/fig04_measured_whole_body_trajectory.png": "45d70b4239bda9ae5d5298a70cff050296d6b0f2d3e0bdeab209469ac243d222",
+    "paper_artifacts/figures/fig05_rolling_horizon_updates.pdf": "6628fa8c99f1f89de2e45d524f74f5d04b9606bf2e9ed31b382634395fb77d1c",
+    "paper_artifacts/figures/fig05_rolling_horizon_updates.png": "525d4c89ed7068d5303154b4c97b20353dfa789d21f260a40abcd0e2559724a9",
+    "paper_artifacts/figures/fig06_representative_execution_time_history.pdf": "8c6f7efe07e9a0f4b47141dad35b014384a231b8bb50f0205cc1452ddb3fbeeb",
+    "paper_artifacts/figures/fig06_representative_execution_time_history.png": "10cd0d522df20ec2116458dc71f0bfb9737fda3ad5bbf796c3b0e04ca5293208",
+    "paper_artifacts/figures/fig07_handoff_continuity.pdf": "3a79b0c5bc925c49f6f6f7da3a8f05c0d9bcd966d1472c9309ad384114c355ba",
+    "paper_artifacts/figures/fig07_handoff_continuity.png": "246714cca39e79faaccdf489eac6750f217e7ba5c7beda6da3913527f750e4aa",
+    "paper_artifacts/figures/fig08_dynamics_proxy_validation.pdf": "6e578f8bed5d5b69f1f6a660b312187851eb4d35339b168a186fec38f4bda37a",
+    "paper_artifacts/figures/fig08_dynamics_proxy_validation.png": "aab3f315518c23efa2803470d1b573065375d2872a7e3389439cc59650c81a36",
+    "paper_artifacts/generation_report.json": "002d57fbbe924be217748d7da13ba4342c69bde2c60da1af78ab7cf9adea693d",
+    "paper_artifacts/source_data/common_success_execution_metrics.csv": "5f356d7365766e041e223b6a96e3d204795b8d57fb3986e7cce130a86094354d",
+    "paper_artifacts/source_data/dynamics_proxy_summary.csv": "a69cf24eb7a47316ea95a9c934baebc1a9d1061c4bfebc6c5a25a06ab3d4148b",
+    "paper_artifacts/source_data/handoff_continuity_samples.csv": "409994584900aab6d4e53c750bd5ce641b18cb409a121a210ab131b9a03f706c",
+    "paper_artifacts/source_data/main_results.csv": "14cdf3bcb969819c1543ace58553e33e035c12cce454ab70c8451bc0109c7592",
+    "paper_artifacts/source_data/mcnemar_tests.csv": "d1a2a4eebf92e04d14f15a158252329af139c0f47f99dfe202f91a939151f84e",
+    "paper_artifacts/source_data/passage_vertical_feasibility.csv": "06ca177bd583fa5f7c357655d010e45b5a512aa363ed8b07dbf0fce55f0a88f1",
+    "paper_artifacts/source_data/representative_measured_timeline.csv": "85da90c4513c1805c51a30224a3134e1510c6db40a9562cd1addc6f541a04e5f",
+    "paper_artifacts/source_data/rolling_window_latency.csv": "96e5e6338da2a6260795f61cc7fd421f1ddf61ce0ea2d7477098c707b773adf0",
+    "paper_artifacts/source_data/straight_arm_gate_counterfactual.csv": "2d033ff30f2b41d958067e886ee49cf5190540ea81f87576b64449b9410d61d5",
+    "paper_artifacts/source_data/success_breakdown.csv": "7f8521d7e3456e5041b0f2f4807c9b13a897d6c117aa2d8c1aa672e9a69c47e1",
+    "paper_artifacts/supplementary_evidence.json": "651d4f5744572c7637a8693a36ab7734eaae2e82a647fbc2449a169ccf64491a",
+    "paper_artifacts/tables/table_dynamics_proxy.tex": "c60c6e312208d8b4c688ea35a3b99e5b39a9579fd21fe36f56d1f7231a67da3b",
+    "paper_artifacts/tables/table_handoff_continuity.tex": "47787907dd9a0605ff355042796031e599d6010e6cd3cffbe2b09093cd4e258a",
+    "paper_artifacts/tables/table_main_results.tex": "bd92428178ec090a543b0e894dfaf4c7086b3f4f6c806e6e04c6b0aaa796ddf1",
+    "paper_artifacts/tables/table_mcnemar.tex": "940aebb1ae8098af6ab29ce1b3c1ade08ecd96da2c37c8607361ece492d3f998",
+    "paper_artifacts/tables/table_paired_continuous.tex": "1a0a7ea1cc333185c42b0d72e9e9127efd62f0fc8f6b3fe9b735c62bb8449943",
+    "paper_artifacts/tables/table_success_breakdown.tex": "422432574bdc324dec8958136500db2a6d16c7419140c73aa1ab671792d57259"
+  },
+  "batch_progress": {
+    "complete_pairs": 90,
+    "completed": [
+      "clutter_reach_hard_s015",
+      "passage_sweep_hard_s012",
+      "multi_passage_hard_s012",
+      "clutter_reach_easy_s020",
+      "clutter_reach_hard_s017",
+      "multi_passage_easy_s015",
+      "clutter_reach_medium_s015",
+      "passage_sweep_medium_s017",
+      "passage_sweep_hard_s013",
+      "clutter_reach_medium_s020",
+      "clutter_reach_easy_s017",
+      "multi_passage_medium_s011",
+      "passage_sweep_medium_s015",
+      "clutter_reach_easy_s019",
+      "multi_passage_hard_s016",
+      "clutter_reach_hard_s019",
+      "clutter_reach_hard_s020",
+      "clutter_reach_easy_s018",
+      "passage_sweep_easy_s014",
+      "clutter_reach_medium_s016",
+      "clutter_reach_easy_s013",
+      "passage_sweep_easy_s019",
+      "multi_passage_medium_s014",
+      "passage_sweep_easy_s015",
+      "clutter_reach_easy_s016",
+      "passage_sweep_hard_s011",
+      "passage_sweep_easy_s012",
+      "passage_sweep_hard_s016",
+      "multi_passage_medium_s018",
+      "passage_sweep_medium_s011",
+      "passage_sweep_hard_s020",
+      "clutter_reach_easy_s012",
+      "multi_passage_hard_s017",
+      "passage_sweep_medium_s018",
+      "clutter_reach_easy_s011",
+      "passage_sweep_medium_s014",
+      "clutter_reach_hard_s011",
+      "multi_passage_hard_s014",
+      "multi_passage_hard_s013",
+      "passage_sweep_medium_s012",
+      "clutter_reach_medium_s014",
+      "clutter_reach_hard_s012",
+      "passage_sweep_hard_s017",
+      "multi_passage_medium_s020",
+      "multi_passage_hard_s011",
+      "multi_passage_medium_s016",
+      "multi_passage_easy_s016",
+      "multi_passage_medium_s017",
+      "clutter_reach_hard_s016",
+      "passage_sweep_medium_s019",
+      "multi_passage_hard_s020",
+      "passage_sweep_easy_s013",
+      "passage_sweep_easy_s020",
+      "clutter_reach_easy_s014",
+      "multi_passage_medium_s013",
+      "passage_sweep_medium_s016",
+      "multi_passage_easy_s012",
+      "clutter_reach_medium_s012",
+      "multi_passage_medium_s012",
+      "passage_sweep_hard_s019",
+      "multi_passage_hard_s015",
+      "passage_sweep_hard_s018",
+      "multi_passage_easy_s017",
+      "clutter_reach_hard_s013",
+      "multi_passage_easy_s014",
+      "clutter_reach_easy_s015",
+      "clutter_reach_medium_s019",
+      "multi_passage_hard_s018",
+      "passage_sweep_easy_s018",
+      "clutter_reach_hard_s014",
+      "multi_passage_medium_s019",
+      "multi_passage_easy_s011",
+      "clutter_reach_medium_s018",
+      "passage_sweep_easy_s016",
+      "multi_passage_easy_s018",
+      "clutter_reach_medium_s011",
+      "passage_sweep_hard_s015",
+      "clutter_reach_medium_s013",
+      "passage_sweep_medium_s013",
+      "multi_passage_easy_s013",
+      "multi_passage_hard_s019",
+      "passage_sweep_medium_s020",
+      "passage_sweep_easy_s011",
+      "clutter_reach_medium_s017",
+      "multi_passage_medium_s015",
+      "multi_passage_easy_s020",
+      "clutter_reach_hard_s018",
+      "multi_passage_easy_s019",
+      "passage_sweep_easy_s017",
+      "passage_sweep_hard_s014"
+    ],
+    "completed_count": 90,
+    "main_table": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/aggregate/main_table.csv",
+    "resume_policy": "skip_complete_pairs_from_frozen_manifest_v1",
+    "scenario_count": 90,
+    "state": "COMPLETE",
+    "statistical_claim_ready": true,
+    "valid_trial_count": 450
+  },
+  "complete_pairs": 90,
+  "completeness": {
+    "complete_pairs": 90,
+    "duplicates": [],
+    "incomplete": {},
+    "paired_scenarios": 90
+  },
+  "figures": [
+    "paper_artifacts/figures/fig01_success_and_failure_overview.pdf",
+    "paper_artifacts/figures/fig01_success_and_failure_overview.png",
+    "paper_artifacts/figures/fig02_execution_quality_distributions.pdf",
+    "paper_artifacts/figures/fig02_execution_quality_distributions.png",
+    "paper_artifacts/figures/fig03_paired_outcome_matrix.pdf",
+    "paper_artifacts/figures/fig03_paired_outcome_matrix.png",
+    "paper_artifacts/figures/fig04_measured_whole_body_trajectory.pdf",
+    "paper_artifacts/figures/fig04_measured_whole_body_trajectory.png",
+    "paper_artifacts/figures/fig05_rolling_horizon_updates.pdf",
+    "paper_artifacts/figures/fig05_rolling_horizon_updates.png",
+    "paper_artifacts/figures/fig06_representative_execution_time_history.pdf",
+    "paper_artifacts/figures/fig06_representative_execution_time_history.png",
+    "paper_artifacts/figures/fig07_handoff_continuity.pdf",
+    "paper_artifacts/figures/fig07_handoff_continuity.png",
+    "paper_artifacts/figures/fig08_dynamics_proxy_validation.pdf",
+    "paper_artifacts/figures/fig08_dynamics_proxy_validation.png"
+  ],
+  "formal_results": 450,
+  "frozen_algorithm_commit": "e62b6f22a20a9c2ba18d4041124427e1cfe5f59c",
+  "fusion_oom_recoveries": {
+    "count": 18,
+    "failures": [],
+    "passed": true,
+    "records": [
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_easy_s011__5dff5584fd51/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 17,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "9bf0674b56ee88bae0d107b9f836e6fd5ed0181d8ece7d4533780197044392e3",
+          "candidate_map_hash": "bbf2ad2530b6a07bd49d034eaa3f610252fd6a81e8e6bdd1937a8351da20fcce",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_easy_s011",
+          "unix_time": 1785656068.3881216
+        },
+        "scenario": "clutter_reach_easy_s011"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_easy_s012__596338074802/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 14,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "e1170585f9f38f52e4040debc5b9a00fb6f00561184cbc85d7c0de2d679d3be4",
+          "candidate_map_hash": "1c532eba57c038e06a41f959fb5c4d64522537cc7ace7793fa8d13d24e2beeec",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_easy_s012",
+          "unix_time": 1785651252.0017464
+        },
+        "scenario": "clutter_reach_easy_s012"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_easy_s013__2dff104427fb/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 7,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "102a099b9836b1ac84bfa405bc177611cd98509de35998683e29bf9669b749b2",
+          "candidate_map_hash": "2205d3898964dbbfe7e097d77e61f6c7017f661e16de845ed1bbf8c4e88eb54f",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_easy_s013",
+          "unix_time": 1785633204.193191
+        },
+        "scenario": "clutter_reach_easy_s013"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_easy_s016__40aa465b2b49/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 8,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "fe1d0d5aeceeda4d8c9afddf80a881b26470d63084ff7c805dcb649a135fd666",
+          "candidate_map_hash": "cb74161219db140a6c57955b2647a8024693c31943f5c92b72b4cc7d90c25c88",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_easy_s016",
+          "unix_time": 1785639754.1241314
+        },
+        "scenario": "clutter_reach_easy_s016"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_easy_s018__289b2efe4fb6/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 4,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "71303ec466cb74b429f56da693c6dfa04a82498cb33a93660cd73eb5c12d977b",
+          "candidate_map_hash": "9b16f6cfb3678ba280927533a8e27140c53c3d119bb9b1304cc820db01852b4b",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_easy_s018",
+          "unix_time": 1785628625.2810805
+        },
+        "scenario": "clutter_reach_easy_s018"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_easy_s019__21fc1d70192c/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 0,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "2d28b8b82d0662a9a2c94ee2bd7dc13a9f84abcccb5b80d0d433066fb2111639",
+          "candidate_map_hash": "66b7830766ca0a9f09087343bc2bff563d0ed9ab627bc4206a87914c8bf910c1",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_easy_s019",
+          "supervision": "manual_before_resilient_supervisor_activation",
+          "unix_time": 1785622280.9010155
+        },
+        "scenario": "clutter_reach_easy_s019"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_hard_s019__2597f8cbc2a0/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 2,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "a84fd886c297d265a95d059545d8a40a2069d3263c261819417f5e90bd5339c3",
+          "candidate_map_hash": "7207139dc2b68125d8eb30191a59ec91144761d73a404feaf38e831c9a2de6d4",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_hard_s019",
+          "unix_time": 1785625410.5202415
+        },
+        "scenario": "clutter_reach_hard_s019"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_hard_s020__27215c8f9c47/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 3,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "33856234ff53cefd13b8c496b7b7e4fe3b388731137ce38c987258184bd26575",
+          "candidate_map_hash": "25290ba6603512952022dc7212f6def0fbb791f47a2fe4eb60d648e3144f292b",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_hard_s020",
+          "unix_time": 1785627220.9574966
+        },
+        "scenario": "clutter_reach_hard_s020"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "clutter_reach_medium_s016__2cb5998f9351/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 6,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "5f1c2c66ce99e0b43625b9afa9f3f8770f1191548f90815d956176b9c621d357",
+          "candidate_map_hash": "b162ec8f27afd1ac022a1a93ee0aacbed3c55ebe3efcfe264cb6ffe0ddc9682f",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "clutter_reach_medium_s016",
+          "unix_time": 1785631316.1590118
+        },
+        "scenario": "clutter_reach_medium_s016"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "multi_passage_hard_s016__242db2347ae1/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 1,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "cdac801b986d44c39e0195e7b50b4ed02af6afde4218d3de1a78c66345dd7253",
+          "candidate_map_hash": "a4a1f8ce1a437981e77bdf1afa7f7f3756abf6e55d7c7d4b4469ee4f6c64e7b4",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "multi_passage_hard_s016",
+          "unix_time": 1785624106.9089015
+        },
+        "scenario": "multi_passage_hard_s016"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "multi_passage_hard_s017__5a36845b3b0d/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 15,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "dde0c5e61beecd630cd63e097b6311e02fb8d91bd4a2e060334052dedeb32359",
+          "candidate_map_hash": "525f5b4e2ca954742d4fde440f203eebc92493ad8a31d35665bce484babe3bb0",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "multi_passage_hard_s017",
+          "unix_time": 1785653268.6237283
+        },
+        "scenario": "multi_passage_hard_s017"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "multi_passage_medium_s018__4b95e85b3ab3/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 10,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "5949d7630f8fcbe6c4f7e5e2b54cd0a3adc48250c221973633c463f2e62b1365",
+          "candidate_map_hash": "5b5d7a6533fee8d3f398f4249beaaf362c466c44f614d71ec888377004ce440e",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "multi_passage_medium_s018",
+          "unix_time": 1785645986.058325
+        },
+        "scenario": "multi_passage_medium_s018"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "passage_sweep_easy_s012__478488a4e55a/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 9,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "02375cdbc71234aff73f23a57fc31033e658ab3db7faf567824492cb6f90e618",
+          "candidate_map_hash": "ad0986fa29541f999f7b61b0d760d0217547ec6f48e316e7444a96d707382545",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "passage_sweep_easy_s012",
+          "unix_time": 1785643164.907735
+        },
+        "scenario": "passage_sweep_easy_s012"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "passage_sweep_easy_s014__2c2e34b82bd1/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 5,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "f23bc0e63d145eb079e6d7df3135a82da1c4ce4dbec2ebc0ea976c5743d44210",
+          "candidate_map_hash": "255883e736877641c83e536e599187ef19cc98136a8717ac28d3a0bc3301e83b",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "passage_sweep_easy_s014",
+          "unix_time": 1785629906.0883267
+        },
+        "scenario": "passage_sweep_easy_s014"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "passage_sweep_hard_s020__52b164b34601/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 13,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "00380bf024f73ecb2565d362affe19042fe82c38d5fa8e73b7e99abb5e8b96e6",
+          "candidate_map_hash": "84bab7b5bdaf98eebc3c2a022c055d2435f028ba60b42ed63fc4e189695f44e7",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "passage_sweep_hard_s020",
+          "unix_time": 1785649996.625268
+        },
+        "scenario": "passage_sweep_hard_s020"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "passage_sweep_medium_s011__4e4f1a13326b/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 12,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "2a8595ea8a9d4e3dd5603612dd38bbd651c7b70d67d3fab7e352b3da38414f67",
+          "candidate_map_hash": "0e54e4d3b8e7f9fc17cbfeb41062ede866015d40a251b2f6b44f7e94496084b4",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "passage_sweep_medium_s011",
+          "unix_time": 1785648290.4164963
+        },
+        "scenario": "passage_sweep_medium_s011"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "passage_sweep_medium_s014__63c57ad61e9f/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 18,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "98a42b2b2f1aa4f288a16a8dbbf419e7ae3d3e5ed5878068389052b6e0455760",
+          "candidate_map_hash": "60866c4e7765b064003f100ff4974b3cee0d34e5a55055ed5d695e8a5aefad53",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "passage_sweep_medium_s014",
+          "unix_time": 1785657778.718473
+        },
+        "scenario": "passage_sweep_medium_s014"
+      },
+      {
+        "checks": {
+          "audit_passed": true,
+          "audited_hash": true,
+          "candidate_hash": true,
+          "cause": true,
+          "record_audit_passed": true,
+          "recovery": true,
+          "reference_equivalence_hash": true,
+          "scenario": true,
+          "schema_v5": true
+        },
+        "path": "passage_sweep_medium_s018__5b5a6af20274/fusion_oom_recovery.json",
+        "record": {
+          "attempt": 16,
+          "audit_passed": true,
+          "audit_schema_version": 5,
+          "audited_map_hash": "6cc93568fa676204b08de39726587a2f179a60dff88a8e2f8b8f0d8b93b9fd51",
+          "candidate_map_hash": "905825e0f9cae327f9dd8b2d309188229268343020b179a11844c864434e6b5b",
+          "cause": "kernel_oom_exit_137_in_frozen_27_offset_union",
+          "equivalence_validation_reference_hash": "dc937cfbd9c0afc900419ff4ce634a52e96ae99c22f5cf212c65b481c11900e4",
+          "recovery": "semantics_equivalent_one_voxel_halo_precrop_then_identical_union",
+          "scenario": "passage_sweep_medium_s018",
+          "unix_time": 1785654489.9112375
+        },
+        "scenario": "passage_sweep_medium_s018"
+      }
+    ]
+  },
+  "manifest_integrity": {
+    "commits": [
+      "e62b6f22a20a9c2ba18d4041124427e1cfe5f59c"
+    ],
+    "controlled_factor_values": {
+      "baseline_registry_sha256": [
+        "0fc12b4457bb28bc7a15bd84a12fbc99689ee2d23e251be9a74ab01b7458f56d"
+      ],
+      "planner_config_sha256": [
+        "0808a14442972be6df3870e4446a4722a894e58ee3e85fe66427173e68b0386e"
+      ],
+      "survey_protocol": [
+        "task_endpoint_scan_survey_v6_explicit_flush"
+      ]
+    },
+    "dirty_manifests": [],
+    "inconsistent_map_hashes_within_scenario": {},
+    "manifest_count": 450
+  },
+  "official_recomputed_paired_tables_equal": true,
+  "paper_eligibility": {
+    "artifact_eligible": true,
+    "complete_pairs_by_family": {
+      "clutter_reach": 30,
+      "multi_passage": 30,
+      "passage_sweep": 30
+    },
+    "controlled_factor_values": {
+      "baseline_registry_sha256": [
+        "0fc12b4457bb28bc7a15bd84a12fbc99689ee2d23e251be9a74ab01b7458f56d"
+      ],
+      "planner_config_sha256": [
+        "0808a14442972be6df3870e4446a4722a894e58ee3e85fe66427173e68b0386e"
+      ],
+      "survey_protocol": [
+        "task_endpoint_scan_survey_v6_explicit_flush"
+      ]
+    },
+    "controlled_factors_consistent": true,
+    "eligible": true,
+    "interpretation": "paper-grade artifacts; pilot only until statistical_claim_ready=true",
+    "manifest_count": 450,
+    "minimum_complete_pairs_per_family": 30,
+    "rule": "closed_loop + schema-v5 audited non-truth map + comparison-independent frozen survey manifest + clean relevant code",
+    "statistical_claim_ready": true
+  },
+  "passed": true,
+  "pipeline_system_events_retained": [
+    {
+      "line": 26824,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/resilient_supervisor.log",
+      "text": "Timed out: MAVROS"
+    },
+    {
+      "line": 26825,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/resilient_supervisor.log",
+      "text": "METHOD_COMPARISON_RESULT=SYSTEM_ERROR"
+    },
+    {
+      "line": 43762,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/resilient_supervisor.log",
+      "text": "Timed out: ROS master"
+    },
+    {
+      "line": 43763,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/resilient_supervisor.log",
+      "text": "METHOD_COMPARISON_RESULT=SYSTEM_ERROR"
+    },
+    {
+      "line": 44824,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/resilient_supervisor.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s016__242db2347ae1/front_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 743,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s018__4b95e85b3ab3/pipeline.log",
+      "text": "Timed out: MAVROS"
+    },
+    {
+      "line": 744,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s018__4b95e85b3ab3/pipeline.log",
+      "text": "METHOD_COMPARISON_RESULT=SYSTEM_ERROR"
+    },
+    {
+      "line": 1437,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s020__1149e194dba5/pipeline.log",
+      "text": "Timed out: MAVROS"
+    },
+    {
+      "line": 1438,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s020__1149e194dba5/pipeline.log",
+      "text": "METHOD_COMPARISON_RESULT=SYSTEM_ERROR"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s016__40aa465b2b49/front_survey/logs/survey.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_easy_s016__c991470e84f9/front_survey/logs/survey.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/down_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 9,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/down_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s012__7e513c46c68d/front_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s020__27215c8f9c47/down_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_medium_s012__9ae81e7ab8a0/down_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s013__72fe82e68b24/front_survey/logs/survey.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_hard_s011__43b9d8c86279/down_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 1188,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/pipeline.log",
+      "text": "Timed out: ROS master"
+    },
+    {
+      "line": 1189,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/pipeline.log",
+      "text": "METHOD_COMPARISON_RESULT=SYSTEM_ERROR"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_easy_s017__b523ce4bcd1a/front_survey/logs/survey.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_easy_s013__2dff104427fb/front_survey/logs/survey.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s017__11b9abd88ff1/down_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 3,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s016__80d8a5b81c3b/front_survey/logs/recorder.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s019__2597f8cbc2a0/down_survey/logs/survey.log",
+      "text": "Traceback (most recent call last):"
+    },
+    {
+      "line": 2,
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/front_survey/logs/survey.log",
+      "text": "Traceback (most recent call last):"
+    }
+  ],
+  "system_error_trial_files_retained": [
+    "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__rolling_wb_v2__20260802_161836_832253/trial_result.json"
+  ],
+  "tables": [
+    "paper_artifacts/tables/table_dynamics_proxy.tex",
+    "paper_artifacts/tables/table_handoff_continuity.tex",
+    "paper_artifacts/tables/table_main_results.tex",
+    "paper_artifacts/tables/table_mcnemar.tex",
+    "paper_artifacts/tables/table_paired_continuous.tex",
+    "paper_artifacts/tables/table_success_breakdown.tex"
+  ]
+}

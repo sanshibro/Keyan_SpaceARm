@@ -1,0 +1,105 @@
+schema_version: 2
+
+# This registry is part of the experiment manifest.  "adapted_reimplementation"
+# is intentionally explicit: these entries must not be described as an exact
+# execution of an author's released binary in a paper.
+methods:
+  fixed_morphology:
+    class: engineering_lower_bound
+    implementation: native
+    fixed_shape_deg: [90.0, -180.0]
+    precondition_before_task_timer: true
+    per_scene_shape_tuning: false
+    planner: common_slam_reference
+    arm_policy: fixed_for_entire_task
+
+  aet_sequential_minjerk:
+    class: continuum_aerial_manipulator_reference
+    implementation: structural_adaptation_not_author_code
+    paper: A dexterous and compliant aerial continuum manipulator for cluttered and constrained environments
+    venue: Nature Communications 16, 889 (2025)
+    doi: 10.1038/s41467-024-55157-2
+    source_url: https://github.com/arclab-hku/AET/tree/master/code_availability
+    retained_features:
+      - quintic minimum-jerk end-effector progression
+      - waypoint minimum-jerk timing followed by configuration decomposition
+    adaptations:
+      - one-section PCC state used by this platform
+      - common SLAM-derived waypoint reference
+      - collision-constrained configuration decomposition on the fixed UAV reference
+      - common dynamics and swept-volume validator
+    excluded_v2_features:
+      - risk-segment initializer
+      - rolling horizon
+      - repair candidates
+
+  informed_rrtstar_wb:
+    class: sampling_based_whole_body
+    implementation: adapted_reimplementation
+    paper: A Sampling-Based Approach to UAV Manipulator Path Planning
+    venue: SIMULTECH 2024
+    doi: 10.5220/0012761700003758
+    retained_features:
+      - RRT-star search in coupled UAV-manipulator configuration space
+      - rewiring and collision-checked local steering
+      - improvement search after the first feasible path
+    adaptations:
+      - rigid arm joints replaced by continuum theta/phi coordinates
+      - common SLAM map and exact continuum swept geometry
+      - common trajectory smoothing and dynamics validator
+      - reference-guided morphology sampling and informed incumbent bound
+    excluded_v2_features:
+      - risk-segment initializer
+      - rolling horizon
+      - repair candidates
+
+  global_batch_wb:
+    class: optimization_based_whole_body
+    implementation: structural_adaptation_not_author_code
+    paper: Whole-Body Integrated Motion Planning for Aerial Manipulators
+    venue: IEEE Transactions on Robotics 41 (2025), 6661-6679
+    doi: 10.1109/TRO.2025.3626619
+    source_url: https://github.com/SYSU-HILAB/am-planner
+    retained_features:
+      - batch coupled UAV-manipulator trajectory optimization
+      - configuration-dependent collision geometry
+      - kinematic dynamic and waypoint constraints
+    adaptations:
+      - delta-arm state replaced by one-section continuum theta/phi coordinates
+      - varying ellipsoid replaced by exact continuum backbone swept geometry
+      - common SLAM reference and limits
+      - validated full-horizon incumbent retained under the deadline
+    excluded_v2_features:
+      - risk-segment initializer
+      - rolling horizon
+      - repair candidates
+    paper_claim_rule: Global-Batch-WB inspired by integrated planning; never exact AM-Planner reproduction
+
+  rolling_wb_v2:
+    class: proposed
+    implementation: native
+    planner: rolling joint UAV-continuum-time optimization
+    required_features:
+      - finite rolling horizon
+      - risk-aware whole-body seed
+      - swept-volume validation before execution
+      - deadline-aware repair and safe buffering
+
+fairness:
+  common_inputs:
+    - map snapshot hash
+    - task and paired random seed
+    - UAV and continuum geometry
+    - dynamics and actuator limits
+    - collision margins
+    - trajectory validator
+  timing:
+    report_wall_clock: true
+    include_failed_attempts: true
+    fixed_morphology_setup_excluded_but_reported_separately: true
+    main_budget_seconds: 15
+    supplemental_strong_baseline_budget_seconds: 60
+  formal_requirements:
+    map_truth_derived: false
+    tracked_worktree_clean: true
+    same_trial_manifest_for_all_methods: true

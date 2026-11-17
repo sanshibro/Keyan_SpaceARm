@@ -1,0 +1,84 @@
+<launch>
+  <arg name="method" default="rolling_wb_v2"/>
+  <arg name="map_mode" default="frozen_slam"/>
+  <arg name="map_snapshot_file"/>
+  <arg name="task_file" default="$(find uav_continuum_whole_body_v2)/config/scenario_3c_task.yaml"/>
+  <arg name="oracle_file" default=""/>
+  <arg name="reference_topic" default="/planner/experiment/reference"/>
+  <arg name="pose_topic" default="/iris_0/world_pose"/>
+  <arg name="auto_execute" default="false"/>
+  <arg name="planner_config" default="$(find uav_continuum_whole_body_v2)/config/planner_v2_realtime.yaml"/>
+  <arg name="registered_cloud_topic" default="/slam/registered_cloud"/>
+  <arg name="sensor_pose_topic" default="/slam/sensor_pose"/>
+  <arg name="localization_source" default="slam"/>
+  <arg name="method_time_budget" default="10.0"/>
+  <arg name="random_seed" default="0"/>
+  <arg name="reference_time_budget" default="30.0"/>
+  <arg name="enable_arm_simulator" default="true"/>
+  <arg name="experiment_class" default="closed_loop_method_comparison_pilot"/>
+  <arg name="logger_output_dir" default="$(find uav_continuum_whole_body_v2)/../../../xtdrone_plan/experiments/method_comparison/closed_loop"/>
+  <arg name="run_name" default=""/>
+
+  <!-- Simulation-only arm plant shared by every method.  Replace these topics
+       with the real continuum controller/state estimator for hardware runs. -->
+  <node if="$(arg enable_arm_simulator)"
+        pkg="uav_continuum_opportunity_planner" type="arm_shape_sim_node.py"
+        name="comparison_arm_shape_sim" output="screen"/>
+  <node if="$(arg enable_arm_simulator)"
+        pkg="uav_continuum_opportunity_planner" type="arm_kinematics_node.py"
+        name="comparison_arm_kinematics" output="screen">
+    <param name="uav_pose_topic" value="$(arg pose_topic)"/>
+  </node>
+
+  <!-- A paper-mode launch never starts the legacy known-box front end. The
+       experiment reference generator must consume the same map snapshot. -->
+  <include if="$(eval arg('map_mode') == 'online_slam')"
+           file="$(find uav_continuum_whole_body_v2)/launch/slam_map_snapshot.launch">
+    <arg name="mode" value="record"/>
+    <arg name="snapshot_file" value="$(arg map_snapshot_file)"/>
+    <arg name="registered_cloud_topic" value="$(arg registered_cloud_topic)"/>
+    <arg name="sensor_pose_topic" value="$(arg sensor_pose_topic)"/>
+    <arg name="localization_source" value="$(arg localization_source)"/>
+  </include>
+
+  <node pkg="uav_continuum_whole_body_v2" type="slam_reference_planner_node.py"
+        name="slam_reference_planner" output="screen">
+    <param name="map_mode" value="$(arg map_mode)"/>
+    <param name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
+    <param name="task_file" value="$(arg task_file)"/>
+    <param name="pose_topic" value="$(arg pose_topic)"/>
+    <param name="planning_time_budget" value="$(arg reference_time_budget)"/>
+  </node>
+
+  <node unless="$(eval arg('method') == 'rolling_wb_v2')"
+        pkg="uav_continuum_whole_body_v2" type="comparison_method_planner_node.py"
+        name="comparison_method_planner" output="screen">
+    <param name="method" value="$(arg method)"/>
+    <param name="map_mode" value="$(arg map_mode)"/>
+    <param name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
+    <param name="task_file" value="$(arg task_file)"/>
+    <param name="reference_topic" value="$(arg reference_topic)"/>
+    <param name="pose_topic" value="$(arg pose_topic)"/>
+    <param name="planner_config" value="$(arg planner_config)"/>
+    <param name="method_time_budget" value="$(arg method_time_budget)"/>
+    <param name="random_seed" value="$(arg random_seed)"/>
+  </node>
+
+  <include file="$(find uav_continuum_whole_body_v2)/launch/scenario_3c_v2.launch">
+    <arg name="auto_execute" value="$(arg auto_execute)"/>
+    <arg name="pose_topic" value="$(arg pose_topic)"/>
+    <arg name="reference_topic" value="$(arg reference_topic)"/>
+    <arg name="planner_config" value="$(arg planner_config)"/>
+    <arg name="map_mode" value="$(arg map_mode)"/>
+    <arg name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
+    <arg name="task_file" value="$(arg task_file)"/>
+    <arg name="oracle_file" value="$(arg oracle_file)"/>
+    <arg name="enable_rolling_planner"
+         value="$(eval arg('method') == 'rolling_wb_v2')"/>
+    <arg name="method" value="$(arg method)"/>
+    <arg name="experiment_class" value="$(arg experiment_class)"/>
+    <arg name="logger_output_dir" value="$(arg logger_output_dir)"/>
+    <arg name="run_name" value="$(arg run_name)"/>
+    <arg name="method_time_budget" value="$(arg method_time_budget)"/>
+  </include>
+</launch>

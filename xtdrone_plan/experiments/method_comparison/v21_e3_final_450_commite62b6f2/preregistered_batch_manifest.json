@@ -1,0 +1,1468 @@
+{
+  "commit": "e62b6f22a20a9c2ba18d4041124427e1cfe5f59c",
+  "complete_pairs_required_by_family": 30,
+  "experiment_class": "schema_v6_closed_loop_method_comparison_batch",
+  "method_order_policy": "balanced_family_difficulty_seed_latin_rotation_v1",
+  "method_time_budget_s": 15.0,
+  "methods": [
+    "fixed_morphology",
+    "aet_sequential_minjerk",
+    "informed_rrtstar_wb",
+    "global_batch_wb",
+    "rolling_wb_v2"
+  ],
+  "pairs_by_family": {
+    "clutter_reach": 30,
+    "multi_passage": 30,
+    "passage_sweep": 30
+  },
+  "preflight_timeout_s": 60,
+  "require_statistical_ready": true,
+  "scenario_count": 90,
+  "scenario_order_policy": "task_sha256_sort_v1",
+  "scenario_root": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20",
+  "scenarios": [
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "clutter_reach_hard_s015",
+      "oracle_sha256": "03dd61e8daff326bb3823bdc94f9bd082b9e58baf901768db630de49acc5d4db",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s015",
+      "seed": 15,
+      "task_sha256": "04c8076ac5995463f2d2b693e2f2894720263c8bc18691b19116d1d46505113e"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "passage_sweep_hard_s012",
+      "oracle_sha256": "52af42235341ea5425afbb5bbd4bba20dcafa1f836d1efd750cfad90f735c9a1",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s012",
+      "seed": 12,
+      "task_sha256": "07b4823fb4de9c2e1e85d9e9ba6df990bb6c98f40d329fc64e52bf6fcecacceb"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "multi_passage_hard_s012",
+      "oracle_sha256": "255f4a7feaeb38c36c091f8b95d3dedef23d98821885959206dbab816c8e3918",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s012",
+      "seed": 12,
+      "task_sha256": "0f53b611e56236f1c09191401f6ece5ff4a269bb39c190e8931568d67bff1e3a"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "clutter_reach_easy_s020",
+      "oracle_sha256": "b2b5d0ad90df12ee6c2b878b9a2ca8de63a7e4e32829d0249c133242ae61582b",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s020",
+      "seed": 20,
+      "task_sha256": "1149e194dba56f5eb06d6a8493724454a195a66f5d6f5a58207efeee6e1f4e62"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "clutter_reach_hard_s017",
+      "oracle_sha256": "e89a1f0a2237e39d0c0cab6150395da1d070bfc00eaadc4e581f1caa6b9adb23",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s017",
+      "seed": 17,
+      "task_sha256": "11b9abd88ff1615a1602c722dff0b2748a78bc319d90927a499624a09c38c0cb"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "multi_passage_easy_s015",
+      "oracle_sha256": "6a4ed30c0ec877d39bede6b261f351963b55480e41930bc2edfc7203c592752f",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s015",
+      "seed": 15,
+      "task_sha256": "13d80970c9483a55e168158e99c8df94cad132afa23053308e3dde74ba063a6a"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "clutter_reach_medium_s015",
+      "oracle_sha256": "25b70d91f9f4a55b77e57ffac702c3f79644bdcc2a6a833feebb5ae7bcfcd06f",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s015",
+      "seed": 15,
+      "task_sha256": "1736880965396a549977ec7a5956420241d643711d4a3ba806835c0924f826d7"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "passage_sweep_medium_s017",
+      "oracle_sha256": "288c15f0ec7f924f479e309907de6360b2728f66a710d58b3dd79a942149e710",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s017",
+      "seed": 17,
+      "task_sha256": "19b8ab788b93451dd075004c1dc42576e0be3b41b7c9121ce2d99130f7bb9d17"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "passage_sweep_hard_s013",
+      "oracle_sha256": "5a3f59cfbd403f10e9bae82a80515fd582ddd8763157849d0f804bb6814cbfe0",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s013",
+      "seed": 13,
+      "task_sha256": "1ace3296e5f0540adc36b53acfadd9e22a87144a0955b8d1512756a40005f03c"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "clutter_reach_medium_s020",
+      "oracle_sha256": "8c77f3c9c0b46b5c85085a267636aa85500a23e0251d865cadc9a9c55df64e05",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s020",
+      "seed": 20,
+      "task_sha256": "1c59f72aa6596744c6f2966b8f2b4ae6470aefbabef0e5c4d669ed9e647fd3c8"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "clutter_reach_easy_s017",
+      "oracle_sha256": "e2edac880996379dfa4331b4c69c30974943cb8723aa136f2ce2d098dece28aa",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s017",
+      "seed": 17,
+      "task_sha256": "1cb1cb56a02b0977c9607d6e5d07d2866218b157bfe6dfbfe3be65979e3348ad"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "multi_passage_medium_s011",
+      "oracle_sha256": "ff3ce9f381b8cfa4d3002fa015b7c3852db1dc5fcef1b8e0e3ba7f18d7972779",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s011",
+      "seed": 11,
+      "task_sha256": "1d65567df47b1a944960c40f47ac877a10cfee03d5969e67d3be1ecebf1eee02"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "passage_sweep_medium_s015",
+      "oracle_sha256": "d9203945361b7b27c51bfd1ec9ad9c7cd6ae5725c796f7bcd66f7de4c1c256af",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s015",
+      "seed": 15,
+      "task_sha256": "1da406c4ccd16a2fd0352c19e4b55370f6196b1966060aaee3f52fe01b0a41d3"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "clutter_reach_easy_s019",
+      "oracle_sha256": "5d53e3c33aa31395c73d56a551904aaef9b274f6013341668c57f3c410af4660",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s019",
+      "seed": 19,
+      "task_sha256": "21fc1d70192cf86ffd1d5774d6b896bf07daabaf1529848355e19c402d304a16"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "multi_passage_hard_s016",
+      "oracle_sha256": "8dacf32bcc2debad369c39b8ac23b0648556ae75d594484ca05e45495f4e8031",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s016",
+      "seed": 16,
+      "task_sha256": "242db2347ae1f736c9d4177cc98330a2aaaf59ee279e9153b735b8c8665e6930"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "clutter_reach_hard_s019",
+      "oracle_sha256": "00a9a79d69687348681fa6a43ce98b6613725d4def0c78df3ae0051ce3d6cf3b",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s019",
+      "seed": 19,
+      "task_sha256": "2597f8cbc2a0019e09a774f94f1f52d90bec7d44684fbf268a0b66ad36641763"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "clutter_reach_hard_s020",
+      "oracle_sha256": "abb88b0d9ddc15a569474528bd5add09a72a5c337b25e66f38a14f0db7abed87",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s020",
+      "seed": 20,
+      "task_sha256": "27215c8f9c47090ec9da50fe355b61461471bf735a82d7b096fa5548a00b6427"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "clutter_reach_easy_s018",
+      "oracle_sha256": "292bcf9238e6d14a07c4b654c21fde7f128c0a3e98c9fc41ba2a0e313188f810",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s018",
+      "seed": 18,
+      "task_sha256": "289b2efe4fb69a58f691309b8943fefa8b9e140367916bf51e54d8f91ebc1aea"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "passage_sweep_easy_s014",
+      "oracle_sha256": "2a06b8a2ba9fe287ad75dae4322d3418c2c87680f24bd3a6c9153f34c2fc67f2",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s014",
+      "seed": 14,
+      "task_sha256": "2c2e34b82bd1c7c637f6203ccdefaf6473dd54fa681bd9a11143e9c328318050"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "clutter_reach_medium_s016",
+      "oracle_sha256": "1860ab73c1f8dbf5889a0f796bdbb3f6be6a10afb25c5d20fbc94cf5fde09b63",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s016",
+      "seed": 16,
+      "task_sha256": "2cb5998f9351f1f893d0c18b64ae54ed0de6736a4a3739e723a3882f5e854906"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "clutter_reach_easy_s013",
+      "oracle_sha256": "208e08d8dc77964ab5a0be475f0bfda28764796fece791005e6f9e5c2ac7f866",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s013",
+      "seed": 13,
+      "task_sha256": "2dff104427fb3c594afcf280145b7ef4eca3226e340bfabcd432fd0951251fcb"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "passage_sweep_easy_s019",
+      "oracle_sha256": "bf92d60b5694ed4013ba24c4cb33081bdb9e2c2121d6727eb354a3c195845f45",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s019",
+      "seed": 19,
+      "task_sha256": "35f75f4eb5adf34dfb3a963865320eea2f1389bbfa564c5be7a1a9c45692f617"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "multi_passage_medium_s014",
+      "oracle_sha256": "6c35ab7d5d7f2d14588d666553a362d524de51e2980001b4d0328c6dbd10f034",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s014",
+      "seed": 14,
+      "task_sha256": "36b39b438074c50b881edbb2961a6e8e19452eb3ae8db1378146cd9ab200c3cd"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "passage_sweep_easy_s015",
+      "oracle_sha256": "17777653a2026bb388b1fc7530c2ac781cfbb13af9f58d90fe0f311d2281092d",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s015",
+      "seed": 15,
+      "task_sha256": "3b6c0d05c379a37659970814c0c9377e5231ac08c21f4b270d28f3c4d32483d8"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "clutter_reach_easy_s016",
+      "oracle_sha256": "2658c739262b5f6cfbc076a751f7af748d0e4be5b1fcaa6ac16fa956fd19df6d",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s016",
+      "seed": 16,
+      "task_sha256": "40aa465b2b498c507de6bd08a43ff213ac0de53a06ea9938f9e41fef21c04646"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "passage_sweep_hard_s011",
+      "oracle_sha256": "23fe321f1a2a19ea84c0c88e6c7aec4b5a6f318673dd64ef6ce85d1c46ae0e93",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s011",
+      "seed": 11,
+      "task_sha256": "43b9d8c86279f88133162dd8ac2c0c9c508deea08ad33e7d8b5adb40d1b81a58"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "passage_sweep_easy_s012",
+      "oracle_sha256": "0a0442c71b82738a3bf2d8ae536c5f4eccb45f4f00ca968bc4cc6ca3c5af41f3",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s012",
+      "seed": 12,
+      "task_sha256": "478488a4e55aec281b31aad0212d544e7a7a14da37ba22b2c5be0710c30aff93"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "passage_sweep_hard_s016",
+      "oracle_sha256": "a08d8a18c75f368f58b0a0549db9dab0270dfdbd5b1807007885d85c9517e734",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s016",
+      "seed": 16,
+      "task_sha256": "4899363e6c8ffad8824d8b88589c534a97065dd6985512d6ac16c5b29375ad1c"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "multi_passage_medium_s018",
+      "oracle_sha256": "488ec10ff908ae084929fc908fbc828f9d859d5cb69ea715b377646966a7c1f2",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s018",
+      "seed": 18,
+      "task_sha256": "4b95e85b3ab3bec69cc18b18e1f0a0e7abdd5a2306ed92e0d9cfb4505c30cda0"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "passage_sweep_medium_s011",
+      "oracle_sha256": "ad6a4867266f6a4341b35df42d4b4f7fd551a3e4ceec6a311bcc29dfa395e1ee",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s011",
+      "seed": 11,
+      "task_sha256": "4e4f1a13326b1163db7d504be7a6f113cd8aac76cc37faa5dde7e0b45ab5fff9"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "passage_sweep_hard_s020",
+      "oracle_sha256": "cb4a46e808a4cc293cf49cd3a91c2ece86c7435b66c97ac033cdb2c7c85ce16d",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s020",
+      "seed": 20,
+      "task_sha256": "52b164b34601c3ba0c65dff156bb6c24f599c3b57500602123cb55954aa8e2f2"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "clutter_reach_easy_s012",
+      "oracle_sha256": "6ba533b86e5d64801d89ce21c931cd2649f74631d9c81a22817feb93193a3a59",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s012",
+      "seed": 12,
+      "task_sha256": "5963380748022e3d896571b14c110d973e469e6eb06af6675560fae4a6cf290b"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "multi_passage_hard_s017",
+      "oracle_sha256": "a3cf338588b7d992e31d1107ef322baa27a927d00728d372be18562d700d0187",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s017",
+      "seed": 17,
+      "task_sha256": "5a36845b3b0df1c8a7e0902c10bedcf16657ba5869ce3aebf060fd01eb73091b"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "passage_sweep_medium_s018",
+      "oracle_sha256": "6ee2443d8f4610c772ec656eda0cc8224efafe0aebfe2cf7352366a4084e743f",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s018",
+      "seed": 18,
+      "task_sha256": "5b5a6af20274aab319872a4e5a568ccb804b973112d0d927af69034f9ac9e130"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "clutter_reach_easy_s011",
+      "oracle_sha256": "fd13b4019b85cf674ade7fca16df5e1f8e6e0ed77c85b97c7888d082fd85c677",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s011",
+      "seed": 11,
+      "task_sha256": "5dff5584fd514f1d04da76826254210f5b15cb720e8fb829c9c3142878bb789c"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "passage_sweep_medium_s014",
+      "oracle_sha256": "b072c8246d77e671a46461503bf0d76b4ad72de881c1b6dc269be23b7ce10076",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s014",
+      "seed": 14,
+      "task_sha256": "63c57ad61e9fdf08835ef027790cb1c5b4b86a6a5cdfcd2dd42001d686e2b74d"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "clutter_reach_hard_s011",
+      "oracle_sha256": "27de5971a1fbfc4b16be4ec1d8c2f6995181fcb3c39a9cd9203c614035d9bd46",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s011",
+      "seed": 11,
+      "task_sha256": "6aefee502c7b02377d6dec3c075fa2c965d38dae3382fd16554cdd02369f4e51"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "multi_passage_hard_s014",
+      "oracle_sha256": "cc9e26665384f1d880131f1902efdc0825ca3baf6b0445a7493e14ab54a67f75",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s014",
+      "seed": 14,
+      "task_sha256": "6d81190fbf6653a4cfc8f70bc1f2e3fa7fb66acbad4a20ef9ac3201332ff592f"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "multi_passage_hard_s013",
+      "oracle_sha256": "18acd18a7f02fa8957e75cc5802d43593b492313b3b19ee0cb1020dd5a9be881",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s013",
+      "seed": 13,
+      "task_sha256": "72fe82e68b24ba193f58cb20fa9861b33df0b819adb8d0d448c19cfb2c73c21b"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "passage_sweep_medium_s012",
+      "oracle_sha256": "a5f7ea93556bfcd834878a3f150e69fbc36f2fdedacb46743fefe21184cebb37",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s012",
+      "seed": 12,
+      "task_sha256": "73ed65834a2d1032e0b4f6b4f66789ce6e2f5452da195b08d3da526ad99c7a12"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "clutter_reach_medium_s014",
+      "oracle_sha256": "cdb9125b80e61dcbee927cdbb12db81e802b9a841d6dc39e0f1e0d72ea6f31f1",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s014",
+      "seed": 14,
+      "task_sha256": "7ae8f30a684c18066437fcfa977eb8e546bf14de3c65014beb89c21f066ed82b"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "clutter_reach_hard_s012",
+      "oracle_sha256": "1db8c11b126c3d61ba75a6594de3d7e099ef8b9e4d4c72c18857aa804242be76",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s012",
+      "seed": 12,
+      "task_sha256": "7e513c46c68dee4615dee93bda7f2c1416490daa823f53f82e1159fdd01b20fe"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "passage_sweep_hard_s017",
+      "oracle_sha256": "ec1f9ab48206d8c903cf6aeaa1b5694f1345f798433055412246a37098152d01",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s017",
+      "seed": 17,
+      "task_sha256": "7e56387a5b214b51dfabaf3d5455a283fcc68687b6e99f40a0b09d1a378ced95"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "multi_passage_medium_s020",
+      "oracle_sha256": "ce5a35d88c3a0e8f76961ebcca370404eacf070aa026daffa648d9ff27265baa",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s020",
+      "seed": 20,
+      "task_sha256": "7eb56a68e1317b5202918173d85ae307031189ed7e8bab87488a7bdea6eb8b96"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "multi_passage_hard_s011",
+      "oracle_sha256": "8418e0d512c73a25f9b20ce288bb174ca5c6518f8854569a2550db7e3d5c72d8",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s011",
+      "seed": 11,
+      "task_sha256": "8068b348650764aa8670368ad8ced31f7ad57e1eafe5b21bc6f5f96d55caeb07"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "multi_passage_medium_s016",
+      "oracle_sha256": "b66a4e8e5b946f06a1c89f686af310a49d89e248ce49ab4059f60f01b1619016",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s016",
+      "seed": 16,
+      "task_sha256": "80d8a5b81c3b52f5ac29c72ea85eb7db4094b21f83fae2a4382f58faec258ad0"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "multi_passage_easy_s016",
+      "oracle_sha256": "89ebdf08b395278068aaef62fa1c0d397b0bc0a84a84b71f8b8ff35c07205ade",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s016",
+      "seed": 16,
+      "task_sha256": "83bff398f6ebd13c68d981c3969dfa74ba9b0abac710262d2d1a48007071f114"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "multi_passage_medium_s017",
+      "oracle_sha256": "5b3e5b2eba458e9dcefb0979da6fd7f488fe6fe0d59fb4bbc0316398b88d3fd7",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s017",
+      "seed": 17,
+      "task_sha256": "859054bfa5ce55867cf6e161dfd611a68e4411b8e45e58698c019d8217235c4c"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "clutter_reach_hard_s016",
+      "oracle_sha256": "f26eabc11e9135c3df7c585a3ec6a95c75246db921be64b3f021242f04f251dd",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s016",
+      "seed": 16,
+      "task_sha256": "86182c39f9b10f83b2b8fff790df8562f9cd941edc327b76f68b1ff901ac61ff"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "passage_sweep_medium_s019",
+      "oracle_sha256": "74c4655f8e110af5052e4d20c5656f8190a320bd81099654a1374e3ce2540827",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s019",
+      "seed": 19,
+      "task_sha256": "8969713961653f2f2bd2c79449f845efc80def96f9bd85205bf3d51676624b98"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "multi_passage_hard_s020",
+      "oracle_sha256": "a686f927c5edc913b50ae6571a6af4b46126bc2e52b26111035ee8039d4b7cd0",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s020",
+      "seed": 20,
+      "task_sha256": "8ad3da09c3cc66668fc77b0b400d28cb39de4716e78cc20f016bf1cd121f5d81"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "passage_sweep_easy_s013",
+      "oracle_sha256": "c32e3613a7912070ff9e0b9e41cb44249ec7755267ad330e460e14c42181f7f2",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s013",
+      "seed": 13,
+      "task_sha256": "8d54c7b5de7fd7f6b8be9299252d2d2c30cb8e56af6ec4ff2b3c4e6a70dd886f"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "passage_sweep_easy_s020",
+      "oracle_sha256": "41d66f3d4e477f4f50def6986176ee8876e36b90c9d5929a87b3aee48bbfd129",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s020",
+      "seed": 20,
+      "task_sha256": "90330846cbfc63a42e3aeeb0e8f13c79716ecf7b1869cb0da32eac5ec85d3399"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "clutter_reach_easy_s014",
+      "oracle_sha256": "9d80936a2d0de3939af8561aa4b1db10542cc8082ec7864b1ae91f61c6a91e0d",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s014",
+      "seed": 14,
+      "task_sha256": "9116ea60fc622b455fe5b5ff04a66028a6c8ad180086f39b85b0165bf5ae9ff2"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "multi_passage_medium_s013",
+      "oracle_sha256": "75612faa76121ae032c7477fead9132f4d3ea2afddf4c755a0d2e489f2565672",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s013",
+      "seed": 13,
+      "task_sha256": "916b8e974c5c691527a1cf3f3d96cb69e7a5ba601c6f3779f50b0226ef2f443c"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "passage_sweep_medium_s016",
+      "oracle_sha256": "90cab45a4b99704df6bd63bdf414b1f91997f63ba143c722349f80d580e4e1e0",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s016",
+      "seed": 16,
+      "task_sha256": "91bd908cd2be2265768530656cfac22adeb476879fdf8cccda1d9e74984b8de5"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "multi_passage_easy_s012",
+      "oracle_sha256": "5fde30e8ff22924b5a700747dc97fc68f1f928b5e74bb4e8b97edbf18b325c7f",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s012",
+      "seed": 12,
+      "task_sha256": "95da48371b616d46df828b07080a4fd304a48ffd743abefa2e2fae268c1c2923"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "clutter_reach_medium_s012",
+      "oracle_sha256": "52544b2ee6df0fd6c674511374a6865cf1a3c85e5a9ceed8bcad3049cbf64721",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s012",
+      "seed": 12,
+      "task_sha256": "9ae81e7ab8a0ba02032da92801be36d66013e321e01c4efbc6585ced82d87c6f"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "multi_passage_medium_s012",
+      "oracle_sha256": "caeb723b8f77e18b77e43fc765573c4c236481e90dd02ad6bb6c2ff2ba3d60cb",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s012",
+      "seed": 12,
+      "task_sha256": "9f0c868ca3db4637085264d565e90dc73936fb865f2a554f030680a6a0987f37"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "passage_sweep_hard_s019",
+      "oracle_sha256": "cb3d3ac7a7d9205135671757e3c51fb372a7b3966d5bee428a0d572ce7ab03d3",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s019",
+      "seed": 19,
+      "task_sha256": "9f97751d175042571b1bf6243734240b587c8cf460a414c748bdaa0293753f91"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "multi_passage_hard_s015",
+      "oracle_sha256": "a90ad6e976cab50e383f1e5999a1b5348450f114bdca5641c5e8aa6d6cfda353",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s015",
+      "seed": 15,
+      "task_sha256": "ab96d3ea70930a2a5f88f7c03255238f83b15cd451356e3a89a5ed1dc4d55f74"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "passage_sweep_hard_s018",
+      "oracle_sha256": "f70fa9d6bdb4491db868a4db1e3b79db8b2f4a82c52c080689937aa5f0e639d5",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s018",
+      "seed": 18,
+      "task_sha256": "b3eff051c1f2f41d770ac546eede687a09ff83b305b187a0ea3655f21bad7102"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "multi_passage_easy_s017",
+      "oracle_sha256": "ce56c5bfe6b05d1b11de81e68d0ce3f66aae522ea817642fbd1fa96c9c61da17",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s017",
+      "seed": 17,
+      "task_sha256": "b523ce4bcd1ac96a4d2c341636b3156e67ad21bd75bd6efc8e6a316f27a4bc1b"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "clutter_reach_hard_s013",
+      "oracle_sha256": "63fa0c7901ea832b963ef39d7116c4dbfab0f530bd939a1bc0708a1c4048f3c9",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s013",
+      "seed": 13,
+      "task_sha256": "bac2fe366bf592a81ee643c4249c9d3bbef54461e458a04e204d327b64204969"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "multi_passage_easy_s014",
+      "oracle_sha256": "1bbd1c02ecb934e85218e593845935a04b445bfaedfec0e9d93b2a723f2d726b",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s014",
+      "seed": 14,
+      "task_sha256": "bac644d6a3190f939ac15b0931af0539ac5dc89dc51154bfb881ce4b6a3b35fd"
+    },
+    {
+      "difficulty": "easy",
+      "family": "clutter_reach",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "clutter_reach_easy_s015",
+      "oracle_sha256": "a305ce88af3c498919feb27c487895961b22fab78794fa83b783977812ffebea",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_easy_s015",
+      "seed": 15,
+      "task_sha256": "bbb56ded5d0b2b4fe64671ad5a60708d3e4b1764cc1ea6860f90ef578f67e7d6"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "clutter_reach_medium_s019",
+      "oracle_sha256": "f773fdf23e4ca9013a1b79aa5af95e645c26372d167e0e40dd986b05d7a67779",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s019",
+      "seed": 19,
+      "task_sha256": "bdc27eba5f6735eeebd7e216ffcb48e360facd78f03695e5a184615e65e8f826"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "multi_passage_hard_s018",
+      "oracle_sha256": "dc2dc589005e8a7893b8c2968c2dfee47b12480b30eb374c5601df76c25680bf",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s018",
+      "seed": 18,
+      "task_sha256": "be7c9d09f3525a586d2a3b70e37e4f53e8d8ca35f4719d4bb8928240d5253417"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "passage_sweep_easy_s018",
+      "oracle_sha256": "e95f80a68d8c38f8cca7f70ee2b52a3d0e9910adc41e9f507094c725771ca0ad",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s018",
+      "seed": 18,
+      "task_sha256": "c1c95c2a2c585d5dc4ffc4d8de4a5bdeb1a22d3447b38386d71473b5245128d6"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "clutter_reach_hard_s014",
+      "oracle_sha256": "0a64187c59ecc56f5bcffa8a38ae38109f5cebed8509fb26c649f8f5fd060796",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s014",
+      "seed": 14,
+      "task_sha256": "c2a8a9ca6fe4dba2a1ed04cbf37c9587ca49c342d416ac8ca573f662cc1419eb"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "multi_passage_medium_s019",
+      "oracle_sha256": "6dc0c59ec9ead7d70bc61d716ed431ce50c6e156592dd00f0f14b28162c97d16",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s019",
+      "seed": 19,
+      "task_sha256": "c2f9f9c524f38eb3229a3f7b2cd637d9215b552607d71e506911ddc3779177be"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "multi_passage_easy_s011",
+      "oracle_sha256": "bbd082047bd2d6b438bd8f00491204325e2f68bbffcb7fc577e27f5a38816070",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s011",
+      "seed": 11,
+      "task_sha256": "c566a885105af412b3ae1530984036cbcb4d60d3fe54f3ac4b5d43fce13cb7ec"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "clutter_reach_medium_s018",
+      "oracle_sha256": "d68a0ee0f12eb3cab08aae6d5ab5c256d7157120dd1fa4f14219281c4e72b31c",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s018",
+      "seed": 18,
+      "task_sha256": "c7bfa158c3250207a9be9a1e484be11e251322cbe388bf46b7800d78fa387ebd"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "passage_sweep_easy_s016",
+      "oracle_sha256": "08a5ac7d4ea4510e7ed7b7fb8265d6844943a9421c26d334218763db26b1c86d",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s016",
+      "seed": 16,
+      "task_sha256": "c991470e84f989a3b0684e535577313c8ca5bc58900266a9086fee6076f68ed2"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "multi_passage_easy_s018",
+      "oracle_sha256": "f0d3c46927b28acf246bae66a0bebe47edd156975ec9321c54da3b5a28b6a836",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s018",
+      "seed": 18,
+      "task_sha256": "ca5c380ba547945276b76521199da3f9b042f9deba1a28a5a161eb060f97fbe0"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "clutter_reach_medium_s011",
+      "oracle_sha256": "6e52e77b5831d6589a6654478ae8e96b26254b0b274d64f6f7117d428c9b39c1",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s011",
+      "seed": 11,
+      "task_sha256": "ce4d48b1f9186a4b41045e78e33cbbd61a8893bcfdaa39950e4a4935f271bcc9"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "passage_sweep_hard_s015",
+      "oracle_sha256": "a166ad9ef985e4ba73da4d7640a0a43c7003a878476d998112090a56b68a0991",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s015",
+      "seed": 15,
+      "task_sha256": "d9682ea6d444b0331b9b3835f0fe2b2f58976c95eb39a9bbe6c2defa3d98f289"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2"
+      ],
+      "name": "clutter_reach_medium_s013",
+      "oracle_sha256": "41cc03c023e6f05eab5c20b210d5d211e979807fbc481794a3c155d51af04abc",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s013",
+      "seed": 13,
+      "task_sha256": "da4e9111a0049b4858187aed34d4a5ae1ecfd98442211f4458c41008781e5eec"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "passage_sweep_medium_s013",
+      "oracle_sha256": "2b22a9ee0320eddae6b79996fc8b679374d53abde4189f5d0b351a8249fdd008",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s013",
+      "seed": 13,
+      "task_sha256": "da8265a22fea26b800c40adaa55ad51fb3331d4c839481994b6fac1d105914c1"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "multi_passage_easy_s013",
+      "oracle_sha256": "6f7aa8b0e586bf390ee5fac9f79a91e792f9b6bdce60b385b3422c6c35e93849",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s013",
+      "seed": 13,
+      "task_sha256": "e1f799053bf135cb1b87dc3bbbb923f434a4635a3bc4a0dcc08f731d1eb65cd8"
+    },
+    {
+      "difficulty": "hard",
+      "family": "multi_passage",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "multi_passage_hard_s019",
+      "oracle_sha256": "f71b74b7c0c8ec609ead9e43e3d33062611c145dafa0a7654ce0834298192c1b",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s019",
+      "seed": 19,
+      "task_sha256": "e659e9f8d55acfd5bc8a7f5c4d2c154586f2cc0e12dd1c59512c383528ed2c31"
+    },
+    {
+      "difficulty": "medium",
+      "family": "passage_sweep",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "passage_sweep_medium_s020",
+      "oracle_sha256": "5db490049bcc6a20b767ea40238a06730c5302a51f3fa0b1515e616ff1d7782d",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_medium_s020",
+      "seed": 20,
+      "task_sha256": "e845a629c2a8c8a81fd04b08aa9f7457c7c8891ae20e25c86a83def019d94521"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "passage_sweep_easy_s011",
+      "oracle_sha256": "4b302ec2180d21bc00cc18ffb3b395c6f4847407355c4524f1513c1e32b319dc",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s011",
+      "seed": 11,
+      "task_sha256": "ea4e65053cbc5710b1ec15af041f50e7f5ca0f2da377b4f94976f38f6b15c13d"
+    },
+    {
+      "difficulty": "medium",
+      "family": "clutter_reach",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "clutter_reach_medium_s017",
+      "oracle_sha256": "05feb6aeda04dbb897bee2eb2cc07e6efaa592294a0e87551235544b7c07d2f6",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_medium_s017",
+      "seed": 17,
+      "task_sha256": "f2cc01d855c83f3274715563ba82769e0ba4fb28c116aae5212ef5e736adb9a3"
+    },
+    {
+      "difficulty": "medium",
+      "family": "multi_passage",
+      "method_order": [
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb"
+      ],
+      "name": "multi_passage_medium_s015",
+      "oracle_sha256": "806823143cbdb0aecb2c8b0790a173c0084ea5d53e9d6985ac9e4299cc96b5dc",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_medium_s015",
+      "seed": 15,
+      "task_sha256": "f331369fda8e3e8bbfaf35546bb2a4a9fb12d7fc475fb67ba13ddb4880321810"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb"
+      ],
+      "name": "multi_passage_easy_s020",
+      "oracle_sha256": "8e35dc8eaf80150d4e886ec00ddcb898b7402b20d9ec02ca6455737aaa6e4d11",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s020",
+      "seed": 20,
+      "task_sha256": "f65951b117a4f0a179a43c3cdbc23ad71e1236db878b37694ab9346fcf01672c"
+    },
+    {
+      "difficulty": "hard",
+      "family": "clutter_reach",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "clutter_reach_hard_s018",
+      "oracle_sha256": "69cdebcac98df65bda4373014e193c30bd212037833c2034a01aa5db6ec54cca",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/clutter_reach_hard_s018",
+      "seed": 18,
+      "task_sha256": "f683444433dd20c73d72e2771a27c53c509295ee6512eb27267691644e20d6d2"
+    },
+    {
+      "difficulty": "easy",
+      "family": "multi_passage",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "multi_passage_easy_s019",
+      "oracle_sha256": "28ac6a5a84c7adf620a2c27328b856c3200cc20241f05f1b6ad767bb2331af91",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_easy_s019",
+      "seed": 19,
+      "task_sha256": "f6cc110ed04f3e6ef34777b079ecf19a02197f1cc5de4ab233168149a5e21272"
+    },
+    {
+      "difficulty": "easy",
+      "family": "passage_sweep",
+      "method_order": [
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology",
+        "aet_sequential_minjerk"
+      ],
+      "name": "passage_sweep_easy_s017",
+      "oracle_sha256": "b4e08ceff42300cdcac687e0ea81a5b4b32252b97f12253cce6985a7627b7cdc",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_easy_s017",
+      "seed": 17,
+      "task_sha256": "f8d089ebf8a7c17e08a5c8400787caf743ae85b76f7eb57f1f75a79ed557079f"
+    },
+    {
+      "difficulty": "hard",
+      "family": "passage_sweep",
+      "method_order": [
+        "aet_sequential_minjerk",
+        "informed_rrtstar_wb",
+        "global_batch_wb",
+        "rolling_wb_v2",
+        "fixed_morphology"
+      ],
+      "name": "passage_sweep_hard_s014",
+      "oracle_sha256": "7b5205234f974e840adedaf1c7aafce966b097fac4ce187f9d2dfd985ad96402",
+      "scenario_dir": "/home/uav/\u684c\u9762/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/passage_sweep_hard_s014",
+      "seed": 14,
+      "task_sha256": "fac54516e377eb1204a43e821c7f7a0d8f0949aac0adbdf24650403cd587e380"
+    }
+  ],
+  "schema_version": 1,
+  "task_timeout_s": 600
+}

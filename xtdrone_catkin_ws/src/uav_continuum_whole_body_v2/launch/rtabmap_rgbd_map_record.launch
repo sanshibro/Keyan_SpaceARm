@@ -1,0 +1,81 @@
+<launch>
+  <!-- Sensor-only map recorder. Gazebo geometry and truth pose are not inputs. -->
+  <arg name="rgb_topic" default="/camera/rgb/image_raw"/>
+  <arg name="depth_topic" default="/camera/depth/image_raw"/>
+  <arg name="depth_cloud_topic" default="/camera/depth/points"/>
+  <arg name="rgb_camera_info_topic" default="/camera/rgb/camera_info"/>
+  <arg name="depth_camera_info_topic" default="/camera/depth/camera_info"/>
+  <arg name="world_frame" default="world"/>
+  <arg name="body_frame" default="base_link"/>
+  <arg name="camera_frame" default="camera_link"/>
+  <!-- The known task start anchors the otherwise arbitrary SLAM map gauge.
+       This is a permitted task input, not a stream of Gazebo truth poses. -->
+  <arg name="initial_x" default="0.0"/>
+  <arg name="initial_y" default="0.0"/>
+  <arg name="initial_z" default="1.3"/>
+  <arg name="initial_yaw" default="0.0"/>
+  <arg name="resolution" default="0.05"/>
+  <arg name="snapshot_file" default="/tmp/v2_recorded_slam_map.npz"/>
+  <arg name="database_path" default="/tmp/v2_rtabmap.db"/>
+  <arg name="delete_database_on_start" default="true"/>
+  <!-- Gazebo comparison passages can legitimately contain large low-texture
+       surfaces.  Use the RGB-D sensor's geometry for odometry instead of
+       silently depending on simulator texture.  RGB is still available to
+       the RTAB-Map graph for place recognition. -->
+  <arg name="odom_args" default="--Odom/Strategy 0 --OdomF2M/ScanMaxSize 5000 --Icp/Strategy 0 --Icp/DownsamplingStep 4 --Icp/VoxelSize 0.10 --Icp/MaxCorrespondenceDistance 0.30 --Icp/MaxTranslation 0.50 --Icp/PointToPlane false --Odom/ScanKeyFrameThr 0.70"/>
+
+  <!-- Gazebo's OpenNI cloud is labelled camera_link but follows optical axes:
+       z forward, x right, y down. This calibrated fixed transform maps it to
+       the UAV body convention x forward, y left, z up. -->
+  <node pkg="tf" type="static_transform_publisher" name="body_to_depth_optical"
+        args="0.1 0 0.035 -1.57079632679 0 -1.57079632679 $(arg body_frame) $(arg camera_frame) 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="anchor_slam_at_known_start"
+        args="$(arg initial_x) $(arg initial_y) $(arg initial_z) $(arg initial_yaw) 0 0 $(arg world_frame) slam_map 100"/>
+
+  <include file="$(find rtabmap_launch)/launch/rtabmap.launch">
+    <arg name="use_sim_time" value="true"/>
+    <arg name="frame_id" value="$(arg body_frame)"/>
+    <arg name="map_frame_id" value="slam_map"/>
+    <arg name="vo_frame_id" value="slam_odom"/>
+    <arg name="odom_topic" value="/rtabmap/odom"/>
+    <arg name="rgb_topic" value="$(arg rgb_topic)"/>
+    <arg name="depth_topic" value="$(arg depth_topic)"/>
+    <arg name="camera_info_topic" value="$(arg rgb_camera_info_topic)"/>
+    <arg name="depth_camera_info_topic" value="$(arg depth_camera_info_topic)"/>
+    <arg name="visual_odometry" value="false"/>
+    <arg name="icp_odometry" value="true"/>
+    <arg name="subscribe_scan_cloud" value="true"/>
+    <arg name="scan_cloud_topic" value="$(arg depth_cloud_topic)"/>
+    <arg name="scan_cloud_max_points" value="2000"/>
+    <arg name="odom_max_rate" value="5.0"/>
+    <arg name="approx_sync" value="true"/>
+    <arg name="topic_queue_size" value="30"/>
+    <arg name="queue_size" value="30"/>
+    <arg name="rtabmap_viz" value="false"/>
+    <arg name="rviz" value="false"/>
+    <arg name="database_path" value="$(arg database_path)"/>
+    <arg name="odom_args" value="$(arg odom_args)"/>
+    <arg if="$(arg delete_database_on_start)" name="args" value="--delete_db_on_start"/>
+    <arg unless="$(arg delete_database_on_start)" name="args" value=""/>
+    <arg name="output" value="log"/>
+  </include>
+
+  <include file="$(find uav_continuum_whole_body_v2)/launch/register_depth_cloud.launch">
+    <arg name="depth_cloud_topic" value="$(arg depth_cloud_topic)"/>
+    <arg name="pose_source" value="tf"/>
+    <arg name="output_frame" value="$(arg world_frame)"/>
+    <arg name="maximum_pose_age_s" value="0.10"/>
+    <arg name="tf_lookup_timeout_s" value="0.20"/>
+    <arg name="maximum_points" value="12000"/>
+  </include>
+
+  <include file="$(find uav_continuum_whole_body_v2)/launch/slam_map_snapshot.launch">
+    <arg name="mode" value="record"/>
+    <arg name="snapshot_file" value="$(arg snapshot_file)"/>
+    <arg name="localization_source" value="rtabmap_rgbd_slam"/>
+    <arg name="resolution" value="$(arg resolution)"/>
+    <arg name="formal_experiment_allowed" value="false"/>
+    <arg name="maximum_cloud_points" value="6000"/>
+    <arg name="minimum_cloud_interval_s" value="0.50"/>
+  </include>
+</launch>

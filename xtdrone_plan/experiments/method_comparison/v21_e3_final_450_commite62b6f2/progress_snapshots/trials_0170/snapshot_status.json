@@ -1,0 +1,13 @@
+{
+  "aggregate_returncode": 0,
+  "aggregate_stderr": "",
+  "aggregate_stdout": "{\n  \"complete_pairs\": 34,\n  \"duplicates\": [],\n  \"incomplete\": {},\n  \"paired_scenarios\": 34\n}\nTABLE=/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/progress_snapshots/trials_0170/main_table.csv\n",
+  "created_unix_time": 1785655463.653168,
+  "main_table": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/progress_snapshots/trials_0170/main_table.csv",
+  "milestone": 170,
+  "reconstructed_from_original_trial_mtimes": true,
+  "reconstructed_unix_time": 1785661683.985765,
+  "repair_reason": "resume_monitor_attempted_to_overwrite_immutable_snapshots",
+  "system_error_files_seen": 0,
+  "valid_trial_count_at_snapshot": 170
+}

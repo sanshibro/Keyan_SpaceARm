@@ -1,0 +1,17 @@
+method,category,count
+fixed_morphology,EXECUTION_HANDOFF_ABORT,1
+fixed_morphology,NONE,55
+fixed_morphology,VALIDATION_REJECT,34
+aet_sequential_minjerk,NONE,61
+aet_sequential_minjerk,PLANNING_OR_LIVE_GATE_FAILURE,28
+aet_sequential_minjerk,VALIDATION_REJECT,1
+informed_rrtstar_wb,NONE,68
+informed_rrtstar_wb,NO_PATH,18
+informed_rrtstar_wb,PLANNING_OR_LIVE_GATE_FAILURE,1
+informed_rrtstar_wb,VALIDATION_REJECT,3
+global_batch_wb,EXECUTION_HANDOFF_ABORT,1
+global_batch_wb,NONE,59
+global_batch_wb,PLANNING_OR_LIVE_GATE_FAILURE,28
+global_batch_wb,PLAN_TIMEOUT,2
+rolling_wb_v2,NONE,89
+rolling_wb_v2,repeated_planning_rejection,1

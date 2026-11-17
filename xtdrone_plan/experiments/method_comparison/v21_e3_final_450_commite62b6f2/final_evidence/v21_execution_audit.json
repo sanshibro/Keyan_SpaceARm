@@ -1,0 +1,89 @@
+{
+  "acceptance_reports": 90,
+  "candidate_switch_gap_statistics": {
+    "bending_gap_rad": {
+      "count": 391,
+      "max": 0.5406622919603397,
+      "median": 0.005660922453032846,
+      "p95": 0.3979047480910303
+    },
+    "bending_rate_gap_rad_s": {
+      "count": 391,
+      "max": 0.5596369450435583,
+      "median": 0.005149620146439618,
+      "p95": 0.40491766804038576
+    },
+    "linear_acceleration_gap_m_s2": {
+      "count": 391,
+      "max": 0.08706844863772532,
+      "median": 0.019547446615787126,
+      "p95": 0.03923982236743512
+    },
+    "linear_velocity_gap_m_s": {
+      "count": 391,
+      "max": 0.03196159592694111,
+      "median": 0.007708348928251215,
+      "p95": 0.01931994923085181
+    },
+    "position_gap_m": {
+      "count": 391,
+      "max": 0.12761848303868792,
+      "median": 0.015598098479639897,
+      "p95": 0.0549327227043625
+    },
+    "yaw_gap_rad": {
+      "count": 391,
+      "max": 0.06484563236115104,
+      "median": 6.756457183687559e-05,
+      "p95": 0.0016919263531789408
+    },
+    "yaw_rate_gap_rad_s": {
+      "count": 391,
+      "max": 0.07414087952815296,
+      "median": 0.00015169636797518322,
+      "p95": 0.002347103889412277
+    }
+  },
+  "com_offset_p95_m": 0.02756894140160658,
+  "deadline_misses": 0,
+  "direct_c1": 339,
+  "failed_reports": [
+    {
+      "failures": [
+        "repeated_planning_rejection"
+      ],
+      "path": "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/clutter_reach_hard_s018__f683444433dd/closed_loop_runs/clutter_reach_hard_s018__rolling_wb_v2__20260804_111211_633541/acceptance_report.json"
+    }
+  ],
+  "gravity_torque_p95_nm": 0.6085154590869613,
+  "jerk_energy": {
+    "median": 0.12629803335524026,
+    "p95": 0.25264519206405833
+  },
+  "maximum_continuous_hold_s": {
+    "max": 4.575999999999993,
+    "median": 1.0480000000000018,
+    "p95": 2.0765999999999973
+  },
+  "measured_arm_clearance_min_m": 0.12204372788043058,
+  "measured_body_clearance_min_m": 0.16856887182804614,
+  "missing_switch_diagnostics": 0,
+  "passed_reports": 89,
+  "planning_attempts": 494,
+  "planning_time_s": {
+    "count": 494,
+    "max": 8.778917865012772,
+    "median": 2.2557092729912256,
+    "p95": 3.697255346580641
+  },
+  "switch_jerk_fraction": {
+    "median": 0.07852436389399106,
+    "p95": 0.24720479518721836
+  },
+  "switches": 391,
+  "system_error_artifacts_retained": [
+    "/home/uav/桌面/uav_arm_1/xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/passage_sweep_medium_s014__63c57ad61e9f/closed_loop_runs/passage_sweep_medium_s014__rolling_wb_v2__20260802_161836_832253/trial_result.json"
+  ],
+  "tracking_rmse_p95_m": 0.0263633857198505,
+  "validated_c2_bridge": 52
+}

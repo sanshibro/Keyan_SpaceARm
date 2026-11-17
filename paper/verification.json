@@ -1,0 +1,21 @@
+{
+  "pcc_max_equivalence_error_m": 1.2074205635423559e-14,
+  "pcc_zero_limit_m": [
+    0,
+    0,
+    0.22
+  ],
+  "circular_wrap_test_degrees": 180.0,
+  "quintic_boundary_max_residual": 4.274358644806853e-15,
+  "mcnemar_two_sided_p": {
+    "34": 1.1641532182693481e-10,
+    "28": 7.450580596923828e-09,
+    "21": 9.5367431640625e-07,
+    "30": 1.862645149230957e-09
+  },
+  "bibliography_entries_and_cited_keys": 20,
+  "original_assets_identical": true,
+  "main_pages": 12,
+  "supplementary_pages": 6,
+  "scope": "Mathematical expression and artifact checks only; no planner-code audit or raw-data rerun."
+}

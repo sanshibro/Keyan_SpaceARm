@@ -1,0 +1,361 @@
+{
+  "by_difficulty": {
+    "easy": {
+      "aet_sequential_minjerk": {
+        "rate": 0.9333333333333333,
+        "success": 28,
+        "trials": 30,
+        "wilson95": [
+          0.7867654163738308,
+          0.9815229762087295
+        ]
+      },
+      "fixed_morphology": {
+        "rate": 0.9,
+        "success": 27,
+        "trials": 30,
+        "wilson95": [
+          0.7437891742081593,
+          0.9654001112526658
+        ]
+      },
+      "global_batch_wb": {
+        "rate": 0.8666666666666667,
+        "success": 26,
+        "trials": 30,
+        "wilson95": [
+          0.703186733179637,
+          0.9469034451594526
+        ]
+      },
+      "informed_rrtstar_wb": {
+        "rate": 0.9666666666666667,
+        "success": 29,
+        "trials": 30,
+        "wilson95": [
+          0.8332960900859082,
+          0.9940914096183874
+        ]
+      },
+      "rolling_wb_v2": {
+        "rate": 1.0,
+        "success": 30,
+        "trials": 30,
+        "wilson95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ]
+      }
+    },
+    "hard": {
+      "aet_sequential_minjerk": {
+        "rate": 0.3333333333333333,
+        "success": 10,
+        "trials": 30,
+        "wilson95": [
+          0.19230498083676134,
+          0.5121994835545616
+        ]
+      },
+      "fixed_morphology": {
+        "rate": 0.23333333333333334,
+        "success": 7,
+        "trials": 30,
+        "wilson95": [
+          0.11792388144489496,
+          0.40928326158122164
+        ]
+      },
+      "global_batch_wb": {
+        "rate": 0.3333333333333333,
+        "success": 10,
+        "trials": 30,
+        "wilson95": [
+          0.19230498083676134,
+          0.5121994835545616
+        ]
+      },
+      "informed_rrtstar_wb": {
+        "rate": 0.4,
+        "success": 12,
+        "trials": 30,
+        "wilson95": [
+          0.24590628116801852,
+          0.5767963974667752
+        ]
+      },
+      "rolling_wb_v2": {
+        "rate": 0.9666666666666667,
+        "success": 29,
+        "trials": 30,
+        "wilson95": [
+          0.8332960900859082,
+          0.9940914096183874
+        ]
+      }
+    },
+    "medium": {
+      "aet_sequential_minjerk": {
+        "rate": 0.7666666666666667,
+        "success": 23,
+        "trials": 30,
+        "wilson95": [
+          0.5907167384187784,
+          0.8820761185551049
+        ]
+      },
+      "fixed_morphology": {
+        "rate": 0.7,
+        "success": 21,
+        "trials": 30,
+        "wilson95": [
+          0.5212421254128504,
+          0.8333525173175619
+        ]
+      },
+      "global_batch_wb": {
+        "rate": 0.7666666666666667,
+        "success": 23,
+        "trials": 30,
+        "wilson95": [
+          0.5907167384187784,
+          0.8820761185551049
+        ]
+      },
+      "informed_rrtstar_wb": {
+        "rate": 0.9,
+        "success": 27,
+        "trials": 30,
+        "wilson95": [
+          0.7437891742081593,
+          0.9654001112526658
+        ]
+      },
+      "rolling_wb_v2": {
+        "rate": 1.0,
+        "success": 30,
+        "trials": 30,
+        "wilson95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ]
+      }
+    }
+  },
+  "by_family": {
+    "clutter_reach": {
+      "aet_sequential_minjerk": {
+        "rate": 0.7666666666666667,
+        "success": 23,
+        "trials": 30,
+        "wilson95": [
+          0.5907167384187784,
+          0.8820761185551049
+        ]
+      },
+      "fixed_morphology": {
+        "rate": 0.6666666666666666,
+        "success": 20,
+        "trials": 30,
+        "wilson95": [
+          0.4878005164454384,
+          0.8076950191632386
+        ]
+      },
+      "global_batch_wb": {
+        "rate": 0.7666666666666667,
+        "success": 23,
+        "trials": 30,
+        "wilson95": [
+          0.5907167384187784,
+          0.8820761185551049
+        ]
+      },
+      "informed_rrtstar_wb": {
+        "rate": 0.8333333333333334,
+        "success": 25,
+        "trials": 30,
+        "wilson95": [
+          0.6643564949358398,
+          0.9266345762815145
+        ]
+      },
+      "rolling_wb_v2": {
+        "rate": 0.9666666666666667,
+        "success": 29,
+        "trials": 30,
+        "wilson95": [
+          0.8332960900859082,
+          0.9940914096183874
+        ]
+      }
+    },
+    "multi_passage": {
+      "aet_sequential_minjerk": {
+        "rate": 0.5,
+        "success": 15,
+        "trials": 30,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ]
+      },
+      "fixed_morphology": {
+        "rate": 0.5,
+        "success": 15,
+        "trials": 30,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ]
+      },
+      "global_batch_wb": {
+        "rate": 0.4666666666666667,
+        "success": 14,
+        "trials": 30,
+        "wilson95": [
+          0.30232388907699753,
+          0.638577003801267
+        ]
+      },
+      "informed_rrtstar_wb": {
+        "rate": 0.6,
+        "success": 18,
+        "trials": 30,
+        "wilson95": [
+          0.42320360253322475,
+          0.7540937188319815
+        ]
+      },
+      "rolling_wb_v2": {
+        "rate": 1.0,
+        "success": 30,
+        "trials": 30,
+        "wilson95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ]
+      }
+    },
+    "passage_sweep": {
+      "aet_sequential_minjerk": {
+        "rate": 0.7666666666666667,
+        "success": 23,
+        "trials": 30,
+        "wilson95": [
+          0.5907167384187784,
+          0.8820761185551049
+        ]
+      },
+      "fixed_morphology": {
+        "rate": 0.6666666666666666,
+        "success": 20,
+        "trials": 30,
+        "wilson95": [
+          0.4878005164454384,
+          0.8076950191632386
+        ]
+      },
+      "global_batch_wb": {
+        "rate": 0.7333333333333333,
+        "success": 22,
+        "trials": 30,
+        "wilson95": [
+          0.555520383048111,
+          0.8581733668040368
+        ]
+      },
+      "informed_rrtstar_wb": {
+        "rate": 0.8333333333333334,
+        "success": 25,
+        "trials": 30,
+        "wilson95": [
+          0.6643564949358398,
+          0.9266345762815145
+        ]
+      },
+      "rolling_wb_v2": {
+        "rate": 1.0,
+        "success": 30,
+        "trials": 30,
+        "wilson95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ]
+      }
+    }
+  },
+  "mcnemar": {
+    "aet_sequential_minjerk": {
+      "baseline_only": 0,
+      "discordant": 28,
+      "exact_two_sided_p": 7.450580596923827e-09,
+      "ours_only": 28
+    },
+    "fixed_morphology": {
+      "baseline_only": 0,
+      "discordant": 34,
+      "exact_two_sided_p": 1.1641532182693481e-10,
+      "ours_only": 34
+    },
+    "global_batch_wb": {
+      "baseline_only": 0,
+      "discordant": 30,
+      "exact_two_sided_p": 1.862645149230957e-09,
+      "ours_only": 30
+    },
+    "informed_rrtstar_wb": {
+      "baseline_only": 0,
+      "discordant": 21,
+      "exact_two_sided_p": 9.5367431640625e-07,
+      "ours_only": 21
+    }
+  },
+  "overall": {
+    "aet_sequential_minjerk": {
+      "rate": 0.6777777777777778,
+      "success": 61,
+      "trials": 90,
+      "wilson95": [
+        0.5756683783279567,
+        0.7653322881380605
+      ]
+    },
+    "fixed_morphology": {
+      "rate": 0.6111111111111112,
+      "success": 55,
+      "trials": 90,
+      "wilson95": [
+        0.5078245886506263,
+        0.7053008278906345
+      ]
+    },
+    "global_batch_wb": {
+      "rate": 0.6555555555555556,
+      "success": 59,
+      "trials": 90,
+      "wilson95": [
+        0.5528347234071513,
+        0.7455408597506137
+      ]
+    },
+    "informed_rrtstar_wb": {
+      "rate": 0.7555555555555555,
+      "success": 68,
+      "trials": 90,
+      "wilson95": [
+        0.6575162887069911,
+        0.8326721693379086
+      ]
+    },
+    "rolling_wb_v2": {
+      "rate": 0.9888888888888889,
+      "success": 89,
+      "trials": 90,
+      "wilson95": [
+        0.9397159168824657,
+        0.9980359158990818
+      ]
+    }
+  }
+}

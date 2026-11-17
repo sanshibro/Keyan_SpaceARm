@@ -1,0 +1,37 @@
+schema_version: 1
+frame_id: world
+name: scenario_3c_unified
+description: >
+  Single authoritative manifest for the historical indoor1 base world and the
+  three physical passage overlays. The generator derives planner/evaluator box
+  geometry and the Gazebo overlay from this file.
+base_world_boxes_file: ../../uav_continuum_opportunity_planner/config/indoor1_sdf_boxes.yaml
+target: [2.45, -12.25, 0.82, 0.0]
+preferred_standoff: [2.45, -11.88, 1.18, 0.0]
+map_bounds:
+  minimum: [-5.7, -13.6, 0.0]
+  maximum: [3.8, 1.0, 2.3]
+  resolution: 0.12
+sensor_model:
+  planner_input: fused_esdf
+  static_source: generated_exact_geometry
+  online_source: /world/static_scene_cloud
+  fusion: conservative_minimum
+task_boxes:
+  - {name: p1_lower_barrier, center: [-0.92, -1.85, 0.49], size: [9.25, 0.34, 0.98]}
+  - {name: p1_ceiling_blocker, center: [-0.92, -1.85, 3.235], size: [9.25, 0.34, 3.27]}
+  - {name: p2_lower_barrier, center: [-0.92, -5.80, 0.55], size: [9.25, 0.36, 1.10]}
+  - {name: p2_ceiling_blocker, center: [-0.92, -5.80, 3.295], size: [9.25, 0.36, 3.15]}
+  - {name: p3_lower_barrier, center: [-0.92, -9.45, 0.59], size: [9.25, 0.34, 1.18]}
+  - {name: p3_ceiling_blocker, center: [-0.92, -9.45, 3.325], size: [9.25, 0.34, 3.05]}
+  - {name: rear_task_table, center: [2.45, -12.30, 0.19], size: [1.00, 0.58, 0.22]}
+  - {name: rear_left_guard, center: [1.86, -12.25, 0.82], size: [0.08, 0.72, 0.86]}
+  - {name: rear_right_guard, center: [3.04, -12.25, 0.82], size: [0.08, 0.72, 0.86]}
+  - {name: rear_back_panel, center: [2.45, -12.72, 0.86], size: [1.24, 0.08, 0.92]}
+  - {name: rear_top_lip, center: [2.45, -12.25, 1.56], size: [1.24, 0.74, 0.08]}
+  - {name: rear_front_low_rail, center: [2.45, -11.64, 0.36], size: [1.30, 0.08, 0.10]}
+  - {name: rear_left_side_shelf, center: [1.72, -12.25, 0.56], size: [0.20, 0.58, 0.20]}
+  - {name: rear_right_side_shelf, center: [3.18, -12.25, 0.56], size: [0.20, 0.58, 0.20]}
+  - {name: rear_upper_cross_bar, center: [2.45, -11.58, 1.43], size: [1.10, 0.06, 0.06]}
+body_keepout_boxes:
+  - {name: rear_target_body_keepout, center: [2.45, -12.25, 1.02], size: [0.60, 0.22, 0.78]}

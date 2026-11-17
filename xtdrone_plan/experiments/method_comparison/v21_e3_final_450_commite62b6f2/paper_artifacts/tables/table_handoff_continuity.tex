@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Command-continuity evidence over all 391 rolling handoffs. Candidate gaps are evaluated before an optional C2 bridge; issued-command steps are adjacent 50-ms closed-loop simulated commands and are not claimed as an analytic proof of strict $C^2$ continuity.}
+\label{tab:handoff_continuity}
+\begin{tabular}{llrrr|rrr}
+\toprule
+Metric & Unit & \multicolumn{3}{c|}{Pre-bridge candidate gap} & \multicolumn{3}{c}{Issued-command step} \\
+ & & Median & P95 & Max & Median & P95 & Max \\
+\midrule
+Position & m & 0.0156 & 0.0549 & 0.1276 & 0.0072 & 0.0306 & 0.0556 \\
+Yaw & deg & 0.0039 & 0.0969 & 3.7154 & 0.0014 & 0.0614 & 2.9191 \\
+Bending vector & deg & 0.3243 & 22.7983 & 30.9777 & 0.0423 & 1.2358 & 5.1915 \\
+Linear velocity & m/s & 0.0077 & 0.0193 & 0.0320 & 0.0039 & 0.0147 & 0.0413 \\
+Linear acceleration & m/s$^2$ & 0.0195 & 0.0392 & 0.0871 & 0.0064 & 0.0249 & 0.0652 \\
+\bottomrule
+\end{tabular}
+\end{table*}

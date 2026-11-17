@@ -1,0 +1,319 @@
+{
+  "format": "concatenated gzip-compressed tar",
+  "members": [
+    {
+      "bytes": 4664,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/dynamics_proxy_audit.json",
+      "sha256": "be475d21d9d7f0765e859c6fad5691c0fddee868595ea7f4b30e3d32bce5f1e2"
+    },
+    {
+      "bytes": 6433,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/acceptance_report.json",
+      "sha256": "743d8341912bda83e20776609f7519560ebb72e0b74556622071fa900fa097e6"
+    },
+    {
+      "bytes": 675346,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/command_kinematics.jsonl",
+      "sha256": "d1e75b7ba3d429ffab5f210615757c23b53a752971b18a0cce0268a68b6f5e0b"
+    },
+    {
+      "bytes": 961114,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/commands.jsonl",
+      "sha256": "04813026a7b2319c8dddedaa247c9195a103b1d714328eb816e37d2c12a72b7b"
+    },
+    {
+      "bytes": 234577,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/events.jsonl",
+      "sha256": "248bfdf7d861a47e629a3b941513ebad5f78b4833470ab28b50c0af150bb28a6"
+    },
+    {
+      "bytes": 2669675,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/flight_dynamics.jsonl",
+      "sha256": "11c1ca2a65503e53b84c8767a93a1d3041d956b4b1c06c501ce5f3193d97fe7d"
+    },
+    {
+      "bytes": 5744,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/manifest.json",
+      "sha256": "ed02738eb7751fb785a4ccd3bf3ac4b6e197fe461c076c11f8aede7ab42e62b6"
+    },
+    {
+      "bytes": 467081,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/tracking.jsonl",
+      "sha256": "0f031d269020f316e8d7231dc8538c23c43c145b48336bc35a469c7713a5db73"
+    },
+    {
+      "bytes": 505,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000001.json",
+      "sha256": "5bee2f2d29ddb04ab999a161481ff17bbafa63e9bf5a68a603a1bc98d59aac94"
+    },
+    {
+      "bytes": 22585,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000001.npz",
+      "sha256": "7b4285ecfd5b876d537d64a732fc55ea9f6b37f2e4edc41b85ce7f1e809a4b56"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000002.json",
+      "sha256": "5de590ff5a1f4afe6cd57e74e2489fab19c841a3710e0585d4565294c762194e"
+    },
+    {
+      "bytes": 38783,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000002.npz",
+      "sha256": "1208807a26a1375d4eb4fe0900b8673ebd88821d1b612bcf4372939cccdecef3"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000003.json",
+      "sha256": "f7d659259a67ad0bd87aadf52ff2b655ccd19f8741fd9ae5151cc01756584ee3"
+    },
+    {
+      "bytes": 42233,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000003.npz",
+      "sha256": "a96dba0a8bee023a387d2330fc9f00ebf21d52bd8b597f2dfb1a1f9416810cd4"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000004.json",
+      "sha256": "b7716bbacf6a68e24ba9a29124380296a34326071e468b2349e58791507bcef3"
+    },
+    {
+      "bytes": 43784,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000004.npz",
+      "sha256": "5a61c5d0fca31696232b79248e35181b4cfe1e8f0f82802fdc3bc60a5f1a7792"
+    },
+    {
+      "bytes": 494,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000005.json",
+      "sha256": "1ff728620b157c814673cc7924ec5718cae1677249675f284e083ef51555a0a5"
+    },
+    {
+      "bytes": 41996,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000005.npz",
+      "sha256": "01e245e494e9c65c1c7768a803d526b2b96a8e58355ffaf5c475258db3429c30"
+    },
+    {
+      "bytes": 505,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000006.json",
+      "sha256": "d5346ef4391d0cd86b4a0f9bdbbc73153efb1f07b548852332fccf31e91b8034"
+    },
+    {
+      "bytes": 50843,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trajectory_000006.npz",
+      "sha256": "15e99dc3a85f9fe1cf58eae1f59c975252a9c4b962e98ebf19c498da66bd8c6d"
+    },
+    {
+      "bytes": 94,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/clutter_reach_easy_s001__rolling_wb_v2__20260801_231449_1305028/trial_result.json",
+      "sha256": "ef9ff338b7914f6e421d06cd7405250e3de2faa17a907424306272499c819d49"
+    },
+    {
+      "bytes": 6704,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/acceptance_report.json",
+      "sha256": "056d534410604b2748cead13482985a869a97f2ef5aa82a494470c47ce06c011"
+    },
+    {
+      "bytes": 823826,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/command_kinematics.jsonl",
+      "sha256": "dcf621e66ae162586e0e9ea0169afa2416a41e10e662351126a6f3cbd47ae3a4"
+    },
+    {
+      "bytes": 1166429,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/commands.jsonl",
+      "sha256": "1ceb6ae4e3cfbba2b9d16875c7e47b6354c569312c1c8b6eabe16469a528cbc2"
+    },
+    {
+      "bytes": 280486,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/events.jsonl",
+      "sha256": "d2adaa780cb6a4096d2581a41fbcab8758802e2c0030c3ee10baf254e53b226b"
+    },
+    {
+      "bytes": 3127939,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/flight_dynamics.jsonl",
+      "sha256": "3e3b3e7506d69191e02b0e16235f0386249c77becc88e5a2da584f891bb75714"
+    },
+    {
+      "bytes": 6081,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/manifest.json",
+      "sha256": "318e212becf439cad7881f554e71d7ba374a6ac0b3d7343487bd88fa1799d59e"
+    },
+    {
+      "bytes": 577958,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/tracking.jsonl",
+      "sha256": "da6b4177585de7fb7658c1e7d0253ff77df8176197300c5ffceb4b26e0dd7b39"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000001.json",
+      "sha256": "901ebfcdd93c6b9902040695f27458f61245e7910ab8b62b771ea927aaef37c4"
+    },
+    {
+      "bytes": 37313,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000001.npz",
+      "sha256": "b0197f4773352d384072f6727e6cf7a5a061b49656dd4c7d6771a3d216f29ded"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000002.json",
+      "sha256": "658e8c9deb3e78b523a4f0330d670794854a7209d94c8482cc4214ce53af138f"
+    },
+    {
+      "bytes": 51473,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000002.npz",
+      "sha256": "89149c17ae0f3c74c56d21b4630ac44bf8ee47f668aadf211f28521ca815a61c"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000003.json",
+      "sha256": "ec627d57e3d8681d95c36fe6772f88b040574aab682c37d1489a1fb8dec9810b"
+    },
+    {
+      "bytes": 43506,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000003.npz",
+      "sha256": "80edc5261c5ff4522335c70eabbab6156052715e8d07a02176fcc75bb5203bae"
+    },
+    {
+      "bytes": 494,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000004.json",
+      "sha256": "27bda5884ea02582ec31e2f0453447de318cefdcbf6cc753f7234b5a2b2e6260"
+    },
+    {
+      "bytes": 45789,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000004.npz",
+      "sha256": "92884b59ddac07c2afd30def84e766aef2e92cfe21c089b9d78b51829c86d333"
+    },
+    {
+      "bytes": 494,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000005.json",
+      "sha256": "a1e19cca22a92ba51414eefadc1dd99387640f2fe336c455d5fd8de88d787c4c"
+    },
+    {
+      "bytes": 39213,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000005.npz",
+      "sha256": "58026553fb66b210a8ce5536ca70b80350819a222cbcebc560c814e56151ec6f"
+    },
+    {
+      "bytes": 494,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000006.json",
+      "sha256": "ac0233354084802df84a5c3b391ca0ce5354422f049b48fa63b47d1d9794bdba"
+    },
+    {
+      "bytes": 46490,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000006.npz",
+      "sha256": "0f8336f40e86b4c73d481674c55dc140f722c281b5b880661a7c16605060e03c"
+    },
+    {
+      "bytes": 496,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000007.json",
+      "sha256": "43e8ba73b89e00191abcf1de1477c2e081d6e7708bb14d70f89825566de4d93d"
+    },
+    {
+      "bytes": 60107,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trajectory_000007.npz",
+      "sha256": "96cc9a8dfbc1cd5863bb7056004eabcc4fce5a00e3c539f56fd4f1fb54024c07"
+    },
+    {
+      "bytes": 94,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/multi_passage_hard_s008__rolling_wb_v2__20260801_231937_1322310/trial_result.json",
+      "sha256": "9b3ff8b1079a2d1a06240ed2f9ff88c8abdc4471e26d7016b180ab2044f71326"
+    },
+    {
+      "bytes": 6122,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/acceptance_report.json",
+      "sha256": "c33472a3c9b97199125eb1e81f7295a05fc937f38e059bd1384669f5f59432f7"
+    },
+    {
+      "bytes": 549791,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/command_kinematics.jsonl",
+      "sha256": "c53377a867fd83762826f648adddd161c69299a35530583d61bf491918f596f1"
+    },
+    {
+      "bytes": 838060,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/commands.jsonl",
+      "sha256": "892c1c57c1194d985d3b980f010f3220f971262b3291d73c13a96d10e439d346"
+    },
+    {
+      "bytes": 198542,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/events.jsonl",
+      "sha256": "1e15f870d9ebb92d4d716f8f1ce70469dd1c76d8d6174acbdd309861f8b8240e"
+    },
+    {
+      "bytes": 2030116,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/flight_dynamics.jsonl",
+      "sha256": "104bfcc641584ba35082dc66505166d3125d25af263392e3db74b693c2b3eb61"
+    },
+    {
+      "bytes": 5743,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/manifest.json",
+      "sha256": "5af96e0076ad3dd9d85917cc4a9a9e2d47c8b6e40e1b363d6dd32d8ce08efe25"
+    },
+    {
+      "bytes": 419055,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/tracking.jsonl",
+      "sha256": "06aa5a0b9e4b0a01ff9243a22fc6d95ed003b9c4e5d35d115e45ed296bbc6c19"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000001.json",
+      "sha256": "0e6f6d39330c1c7f82b6268c77d25d3b138ba27a19df4f832511db743569d844"
+    },
+    {
+      "bytes": 38992,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000001.npz",
+      "sha256": "421ea9e33ac8ae96289182147f16c4f0e8e245e8adc48276c59544b6c2b7cd5a"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000002.json",
+      "sha256": "c846f540d57183b8890c852ba0ae4b332c95775d0422bdac5d900306df3c3d57"
+    },
+    {
+      "bytes": 40590,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000002.npz",
+      "sha256": "2d0cdefe5dcd8cf9100716bf36b605c91aa7024e490dad1f3293a6686fc0abd5"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000003.json",
+      "sha256": "fb17b90854dd76253162a26a14dc1056c9e8acabd874c491db1e1d9e55f92e5c"
+    },
+    {
+      "bytes": 52401,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000003.npz",
+      "sha256": "9c7b0fa50a28a240605071493ae5e53bdc3b1e2d94bb4079734d3c9badc99989"
+    },
+    {
+      "bytes": 492,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000004.json",
+      "sha256": "1d8dc27df14544c15f18d2d6d02ef8f3b2be6ede3361b0c27d935e534857a45b"
+    },
+    {
+      "bytes": 49297,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000004.npz",
+      "sha256": "695572b055404d367b4edf2456d6b84290bbe5ecf9b0c37209ea43ab3cd27e66"
+    },
+    {
+      "bytes": 508,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000005.json",
+      "sha256": "b579f9122df37649e0c5e2dab1f9b4c4d5c611faee0ea00deeb1deb40f5360c9"
+    },
+    {
+      "bytes": 44727,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trajectory_000005.npz",
+      "sha256": "03bbac49c50aff581d295146ac4dda14ef20620703bc5397e0b7def177605744"
+    },
+    {
+      "bytes": 96,
+      "path": "xtdrone_plan/experiments/method_comparison/v21_dynamics_evidence_commitd9e01a2/passage_sweep_medium_s008__rolling_wb_v2__20260801_231131_1292941/trial_result.json",
+      "sha256": "ae187f2249ef338718035c5b89d9e58bc9fde6daf418e62b825b4d61a5cb2e1e"
+    }
+  ],
+  "name": "dynamics_proxy_raw",
+  "parts": [
+    {
+      "bytes": 4618305,
+      "path": "datasets/dynamics_proxy_raw.tar.gz.part001",
+      "sha256": "faaf1d52dad68a2179097d03d18831672f9d8228e9e9d073f49682b7daec364a"
+    }
+  ],
+  "uncompressed_bytes": 15860802
+}

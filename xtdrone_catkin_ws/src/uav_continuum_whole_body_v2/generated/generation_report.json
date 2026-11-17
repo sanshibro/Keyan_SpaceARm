@@ -1,0 +1,9 @@
+{
+  "manifest": "/home/uav/桌面/uav_arm_1/xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/config/scenario_3c_unified.yaml",
+  "base_boxes": 55,
+  "task_boxes": 15,
+  "combined_boxes": 70,
+  "boxes": "/home/uav/桌面/uav_arm_1/xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/generated/scenario_3c_unified_boxes.yaml",
+  "sdf": "/home/uav/桌面/uav_arm_1/xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/generated/scenario_3c_unified_overlay.sdf",
+  "esdf": "/home/uav/桌面/uav_arm_1/xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/generated/scenario_3c_unified_esdf.npz"
+}

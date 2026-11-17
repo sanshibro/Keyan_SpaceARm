@@ -1,0 +1,28 @@
+{
+  "aet_sequential_minjerk": {
+    "NONE": 61,
+    "PLANNING_OR_LIVE_GATE_FAILURE": 28,
+    "VALIDATION_REJECT": 1
+  },
+  "fixed_morphology": {
+    "EXECUTION_HANDOFF_ABORT": 1,
+    "NONE": 55,
+    "VALIDATION_REJECT": 34
+  },
+  "global_batch_wb": {
+    "EXECUTION_HANDOFF_ABORT": 1,
+    "NONE": 59,
+    "PLANNING_OR_LIVE_GATE_FAILURE": 28,
+    "PLAN_TIMEOUT": 2
+  },
+  "informed_rrtstar_wb": {
+    "NONE": 68,
+    "NO_PATH": 18,
+    "PLANNING_OR_LIVE_GATE_FAILURE": 1,
+    "VALIDATION_REJECT": 3
+  },
+  "rolling_wb_v2": {
+    "NONE": 89,
+    "repeated_planning_rejection": 1
+  }
+}

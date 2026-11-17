@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Native XTDrone/PX4 loop for EGO planner:
+       EGO -> /xtdrone/iris_0/cmd_pose_enu -> XTDrone communication -> MAVROS -> PX4 -> Gazebo.
+       This is intentionally not the previous Gazebo set_model_state proxy. -->
+
+  <arg name="world" default="/home/uav/桌面/XTDrone_test/XTDrone/sitl_config/worlds/indoor1.world"/>
+  <arg name="sdf_file" default="/home/uav/桌面/XTDrone_test/XTDrone/sitl_config/models/iris_realsense_camera/iris_realsense_camera.sdf"/>
+  <arg name="gui" default="true"/>
+  <arg name="debug" default="false"/>
+  <arg name="verbose" default="false"/>
+  <arg name="paused" default="false"/>
+
+  <arg name="x" default="0"/>
+  <arg name="y" default="7.5"/>
+  <arg name="z" default="1"/>
+  <arg name="R" default="0"/>
+  <arg name="P" default="0"/>
+  <arg name="Y" default="0"/>
+
+  <arg name="vehicle" default="iris"/>
+  <arg name="model_name" default="iris_0"/>
+  <arg name="ID" default="0"/>
+  <arg name="mavlink_tcp_port" default="4560"/>
+  <arg name="mavlink_udp_port" default="14560"/>
+  <arg name="fcu_url" default="udp://:14540@localhost:14580"/>
+  <arg name="interactive" default="true"/>
+
+  <env name="GAZEBO_MODEL_PATH"
+       value="/home/uav/桌面/uav_arm_1/xtdrone_gazebo_models/public_models:/home/uav/桌面/XTDrone_test/XTDrone/sitl_config/models:/home/uav/PX4-Autopilot/Tools/sitl_gazebo/models:/home/uav/桌面/uav_arm_1/PX4-SITL_gazebo-classic/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <env name="GAZEBO_RESOURCE_PATH"
+       value="/home/uav/桌面/XTDrone_test/XTDrone/sitl_config:$(optenv GAZEBO_RESOURCE_PATH)"/>
+  <env name="GAZEBO_PLUGIN_PATH"
+       value="/home/uav/PX4-Autopilot/build/px4_sitl_default/build_gazebo:$(optenv GAZEBO_PLUGIN_PATH)"/>
+  <env name="LD_LIBRARY_PATH"
+       value="/home/uav/PX4-Autopilot/build/px4_sitl_default/build_gazebo:$(optenv LD_LIBRARY_PATH)"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="world_name" value="$(arg world)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+    <arg name="paused" value="$(arg paused)"/>
+  </include>
+
+  <group ns="iris_0">
+    <env name="PX4_SIM_MODEL" value="$(arg vehicle)"/>
+    <env name="PX4_ESTIMATOR" value="ekf2"/>
+
+    <arg name="cmd"
+         default="xmlstarlet ed -u '//plugin[@name=&quot;mavlink_interface&quot;]/mavlink_udp_port' -v $(arg mavlink_udp_port) -u '//plugin[@name=&quot;mavlink_interface&quot;]/mavlink_tcp_port' -v $(arg mavlink_tcp_port) $(arg sdf_file)"/>
+    <param command="$(arg cmd)" name="/iris_0/model_description"/>
+
+    <arg unless="$(arg interactive)" name="px4_command_arg1" value=""/>
+    <arg if="$(arg interactive)" name="px4_command_arg1" value="-d"/>
+    <node name="sitl_$(arg ID)"
+          pkg="px4"
+          type="px4"
+          output="screen"
+          args="$(find px4)/ROMFS/px4fmu_common -s etc/init.d-posix/rcS -i $(arg ID) -w sitl_$(arg vehicle)_$(arg ID) $(arg px4_command_arg1)"/>
+
+    <node name="spawn_$(arg model_name)"
+          pkg="gazebo_ros"
+          type="spawn_model"
+          output="screen"
+          args="-sdf -param /iris_0/model_description -model $(arg model_name) -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg R) -P $(arg P) -Y $(arg Y)"/>
+
+    <include file="$(find mavros)/launch/px4.launch">
+      <arg name="fcu_url" value="$(arg fcu_url)"/>
+      <arg name="gcs_url" value=""/>
+      <arg name="tgt_system" value="1"/>
+      <arg name="tgt_component" value="1"/>
+    </include>
+  </group>
+</launch>

@@ -1,0 +1,42 @@
+[
+  {
+    "panel": 0,
+    "source_path_index": 73,
+    "vertices": 6
+  },
+  {
+    "panel": 0,
+    "source_path_index": 76,
+    "vertices": 18
+  },
+  {
+    "panel": 0,
+    "source_path_index": 78,
+    "vertices": 21
+  },
+  {
+    "panel": 0,
+    "source_path_index": 80,
+    "vertices": 99
+  },
+  {
+    "panel": 1,
+    "source_path_index": 116,
+    "vertices": 28
+  },
+  {
+    "panel": 1,
+    "source_path_index": 119,
+    "vertices": 36
+  },
+  {
+    "panel": 1,
+    "source_path_index": 121,
+    "vertices": 39
+  },
+  {
+    "panel": 1,
+    "source_path_index": 123,
+    "vertices": 152
+  }
+]
