@@ -4,7 +4,7 @@
   "stage": "本轮模型修正完成，等待评审",
   "mode": "SUPER机架 + Qingyu SDK臂体与夹爪",
   "detail": "机身相机按原生总装相对MID360配准到上层前方；末端相机朝抓取方向。臂体采用SDK的15个球形Marker，夹爪采用完整原始网格。已修正SDK方位角转换。本轮暂停，不自动进入下一阶段。",
-  "updated": "2026-11-17T14:26:00.987689+00:00",
+  "updated": "2026-11-17T14:35:09.072515+00:00",
   "progress": 100,
   "geometry": "super_platform_preview.png",
   "geometry_caption": "本轮完整平台（MuJoCo几何渲染，90°弯臂）",
@@ -18,5 +18,8 @@
     "本次积分0碰撞、0次超过120°",
     "原始工作区校验未变"
   ],
-  "commits": []
+  "commits": [
+    "2dbbf2a: native camera mounts and Qingyu SDK geometry",
+    "1327b59: SUPER registration and command checks"
+  ]
 }
