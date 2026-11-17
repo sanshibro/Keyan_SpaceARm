@@ -47,7 +47,9 @@ from uav_continuum_whole_body_v2.optimizer import WholeBodyOptimizer
 from uav_continuum_whole_body_v2.reference_planner import (
     ReferencePlanningError, VoxelAStarReferencePlanner,
 )
-from uav_continuum_whole_body_v2.seed_planner import WholeBodySeedPlanner
+from uav_continuum_whole_body_v2.seed_planner import (
+    WholeBodySeedPlanner, reference_only_seed,
+)
 from uav_continuum_whole_body_v2.survey_protocol import certify_survey_snapshot
 from uav_continuum_whole_body_v2.trajectory import SplineTrajectory
 from uav_continuum_whole_body_v2.types import (
@@ -1169,6 +1171,39 @@ class CoreTests(unittest.TestCase):
         ).plan(reference, reference[0], terminal_state=terminal)
         self.assertEqual(seed.diagnostics["shape_mode"], "theta_phi")
         self.assertAlmostEqual(wrap_angle(seed.states[-1, PHI] - terminal[PHI]), 0.0)
+
+    def test_fixed_phi_ablation_overrides_terminal_bending_plane(self):
+        reference = np.zeros((12, 6))
+        reference[:, 1] = np.linspace(0.0, -1.0, len(reference))
+        reference[:, 2] = 1.30
+        reference[0, PHI] = np.deg2rad(25.0)
+        terminal = reference[-1].copy()
+        terminal[THETA] = np.deg2rad(90.0)
+        terminal[PHI] = -np.pi
+        seed = WholeBodySeedPlanner(
+            HybridDistanceWorld(BoxWorld([])), self.arm, self.mass,
+            self.limits, self.config,
+        ).plan(
+            reference, reference[0], terminal_state=terminal,
+            _force_phi_locked=True,
+        )
+        self.assertEqual(seed.diagnostics["shape_mode"], "theta_only_fixed_phi")
+        np.testing.assert_allclose(seed.states[:, PHI], reference[0, PHI], atol=1e-12)
+
+    def test_reference_only_seed_ablation_has_no_geometric_risk_guidance(self):
+        reference = np.zeros((18, 6))
+        reference[:, 1] = np.linspace(0.0, -2.0, len(reference))
+        reference[:, 2] = 1.30
+        terminal = reference[-1].copy()
+        terminal[THETA] = np.deg2rad(60.0)
+        seed = reference_only_seed(
+            reference, reference[0], self.config.knot_count,
+            terminal_state=terminal,
+        )
+        self.assertEqual(seed.diagnostics["seed_strategy"], "reference_only_ablation")
+        self.assertEqual(seed.risk_knots, [])
+        self.assertEqual(seed.risk_spans, [])
+        np.testing.assert_allclose(seed.states[-1], terminal)
 
     def test_optimizer_removes_locked_phi_coordinates(self):
         optimizer = WholeBodyOptimizer(

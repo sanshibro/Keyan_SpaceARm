@@ -1,0 +1,7 @@
+# Tested core packages in the original Python 3.8 environment.
+mujoco==3.2.3
+numpy==1.24.4
+scipy==1.10.1
+PyYAML>=5.3,<7
+# Original OpenCV: Ubuntu python3-opencv 4.2.0 with cv2.aruco.
+# ROS1 Noetic dependencies are installed separately, not through pip.

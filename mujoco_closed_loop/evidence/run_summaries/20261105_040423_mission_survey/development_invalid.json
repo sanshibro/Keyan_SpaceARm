@@ -1,0 +1,5 @@
+{
+  "reason": "Pitch sweep lidar generation used an unrotated world-Z offset while registration used the calibrated body-fixed offset; up to26.2mm mount mismatch.",
+  "candidate_authorized_for_execution": false,
+  "status": "development_diagnostic_only_corrected_rerun_pending"
+}

@@ -1,0 +1,28 @@
+{
+  "stage": "fixed_shape_and_extrinsic_audit",
+  "full_task_accepted": false,
+  "feedback": "truth_development",
+  "cases": 40,
+  "max_centerline_error_m": 0.007595061582342982,
+  "max_bend_error_deg": 3.9970276256207704,
+  "max_camera_extrinsic_error": 3.018547277239031e-15,
+  "gripper_command_positions": [
+    [
+      -0.00012460667934755833,
+      4.537009774495453e-05,
+      0.00012975309015770295
+    ],
+    [
+      0.02382487678896649,
+      0.02403244775760452,
+      0.024092794345107357
+    ],
+    [
+      -0.00012460667970497905,
+      4.537009794491152e-05,
+      0.0001297530907304
+    ]
+  ],
+  "wall_seconds": 3.0171445820014924,
+  "passed": true
+}

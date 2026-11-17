@@ -1,0 +1,23 @@
+{
+  "status": "deadline_hold",
+  "kind": "hold",
+  "waypoint": null,
+  "information": {
+    "reason": "frontier_selection_deadline"
+  },
+  "selection_wall_s": 8.11820016799902,
+  "requested_state": [
+    -0.6162592328631291,
+    -2.4272387117632683,
+    1.498568704180447,
+    1.570843230822498,
+    0.001644484872258348,
+    0.6660801741912711
+  ],
+  "result_position": [
+    -0.6238964166259013,
+    -2.4522473157798195,
+    1.4987307368997596
+  ],
+  "position_drift_m": 0.026149246744125103
+}

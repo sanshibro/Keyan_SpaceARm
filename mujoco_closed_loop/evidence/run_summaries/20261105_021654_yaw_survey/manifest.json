@@ -1,0 +1,25 @@
+{
+  "self_volume_updates": 90,
+  "max_wrist_position_error_m": 0.056027332297043014,
+  "registration": "visual_orientation_plus_PCC_position_prior_not_independent_wrist_translation",
+  "stage": "physical_yaw_fixture_multicamera_survey_only",
+  "full_task_accepted": false,
+  "sim_seconds": 24.00000000000635,
+  "wall_seconds": 147.54597297400323,
+  "rgbd_integrations": 245,
+  "lidar_scans": 48,
+  "contacts": 0,
+  "planner": {
+    "map_hash": "6800d6aa83298ae3f0ccf209b948a614a3816794ec22af3fdccaef23ab76fcc7",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 1.1522216279603703,
+      "arm": 0.8920939845959455
+    },
+    "status": "planning_failed_hold",
+    "error": "ReferencePlanningError: reference map preparation timeout",
+    "elapsed": 13.0949261450005
+  },
+  "candidate_accepted": false
+}

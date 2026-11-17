@@ -1,0 +1,18 @@
+{
+  "stage": "finished",
+  "worker_wall_s": 8.466729597996164,
+  "diagnostics": {
+    "map_hash": "04157ed80708d057433095eceefd6ac20c398655873030a695e2609abd8731bc",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 0.3348940712438233,
+      "arm": 0.3315053459536973
+    },
+    "reference_candidate_observed_voxels": 106174,
+    "full_observed_voxels": 106174,
+    "status": "planning_failed_hold",
+    "error": "ReferencePlanningError: reference planning timeout",
+    "elapsed": 7.709876255001291
+  }
+}

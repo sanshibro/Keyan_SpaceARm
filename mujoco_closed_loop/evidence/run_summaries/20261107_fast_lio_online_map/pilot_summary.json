@@ -1,0 +1,19 @@
+{
+  "seconds_requested": 15.0,
+  "imu_messages": 3000,
+  "lidar_messages": 149,
+  "odometry_messages": 144,
+  "registered_cloud_messages": 144,
+  "registered_points_total": 54732,
+  "map_integrated_scans": 29,
+  "map_integrated_hits": 5504,
+  "map_occupied_voxels": 1358,
+  "map_observed_voxels": 25124,
+  "map_hash": "c7f5f9b24dbb709b1c9f7d69d11a074220c74c3ca39a26c7b2748d9754cf1aa1",
+  "status": "odometry_received",
+  "truth_usage": "evaluation_only",
+  "point_acquisition": "instantaneous_at_scan_end",
+  "displacement_rms_m": 0.04426736933658861,
+  "displacement_max_m": 0.09362470190376898,
+  "displacement_final_m": 0.01581860254403758
+}

@@ -1,0 +1,14 @@
+{
+  "goal": [
+    -0.6,
+    0.0,
+    1.5
+  ],
+  "loaded": false,
+  "planning_reserve_m": 0.04,
+  "planning_body_margin_m": 0.14,
+  "planning_arm_margin_m": 0.11000000000000001,
+  "hard_body_margin_m": 0.1,
+  "hard_arm_margin_m": 0.07,
+  "map_hash": "aa6c92313fc62ef9db006f74ecef118ee9e0e03f9312a28289841d46ec28ba75"
+}

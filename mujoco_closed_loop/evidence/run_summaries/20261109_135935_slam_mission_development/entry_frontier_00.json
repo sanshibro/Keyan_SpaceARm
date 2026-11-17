@@ -1,0 +1,26 @@
+{
+  "status": "ready",
+  "kind": "hold",
+  "waypoint": null,
+  "information": {
+    "reason": "no_known_whole_body_frontier",
+    "distance_to_goal_m": 1.1805354796703862
+  },
+  "map_hash": "acf23448b4890aac442ab1ec6d57d95ed24eb72791f2a149b9f25884a8e2399e",
+  "worker_wall_s": 2.142725394995068,
+  "selection_wall_s": 3.094223204010632,
+  "requested_state": [
+    -0.6050334730424536,
+    -1.1805229813602611,
+    1.4979571123378783,
+    -0.0007609762102459896,
+    0.010444599839259664,
+    -2.197219521975321
+  ],
+  "result_position": [
+    -0.6028526983709153,
+    -1.1820880796392934,
+    1.4981547278473224
+  ],
+  "position_drift_m": 0.002691535376068042
+}

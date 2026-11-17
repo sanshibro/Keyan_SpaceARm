@@ -1,0 +1,29 @@
+{
+  "method": "signed MuJoCo geom distance; gate center plus lateral samples for straight arm; ±0.35 m longitudinal sweep for 90° bent arm",
+  "results": [
+    {
+      "gate": "gap_1",
+      "width_m": 0.72,
+      "height_m": 0.59,
+      "straight_best_margin_m": -0.0227,
+      "bent_90deg_sweep_margin_m": 0.0365,
+      "bent_uav_height_m": 1.31
+    },
+    {
+      "gate": "gap_2",
+      "width_m": 0.68,
+      "height_m": 0.56,
+      "straight_best_margin_m": -0.027,
+      "bent_90deg_sweep_margin_m": 0.0215,
+      "bent_uav_height_m": 1.335
+    },
+    {
+      "gate": "gap_3",
+      "width_m": 0.7,
+      "height_m": 0.57,
+      "straight_best_margin_m": -0.0227,
+      "bent_90deg_sweep_margin_m": 0.0265,
+      "bent_uav_height_m": 1.3
+    }
+  ]
+}

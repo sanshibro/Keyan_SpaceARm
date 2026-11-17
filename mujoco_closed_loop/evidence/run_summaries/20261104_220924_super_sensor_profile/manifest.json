@@ -1,0 +1,22 @@
+{
+  "stage": "static_sensor_profile_development_only",
+  "full_task_accepted": false,
+  "official_config": "vendor/SUPER/mars_uav_sim/perfect_drone_sim/config/dense.yaml",
+  "not_mid360": true,
+  "beam_count": 46080,
+  "hit_count": 21859,
+  "self_occluded": 3107,
+  "wall_seconds": 56.65321830600078,
+  "planner": {
+    "map_hash": "530adfbffb69223007a540eca5ed9653d6f40195f1fbf1aa04d385356b5fbb43",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": -0.05,
+      "arm": -0.084
+    },
+    "status": "start_unverified_or_blocked_hold",
+    "elapsed": 0.1385269429993059
+  },
+  "candidate_accepted": false
+}

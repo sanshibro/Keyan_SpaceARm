@@ -1,0 +1,18 @@
+{
+  "stage": "finished",
+  "worker_wall_s": 3.5419450940098614,
+  "diagnostics": {
+    "map_hash": "46d3c6efce908be25c8cff9f14201425c62ff57aac4e70cccc2b2c26162cae49",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 0.24070517671292163,
+      "arm": 0.27271420662205437
+    },
+    "reference_candidate_observed_voxels": 48700,
+    "full_observed_voxels": 181675,
+    "status": "planning_failed_hold",
+    "error": "ReferencePlanningError: terminal continuous bridge became invalid",
+    "elapsed": 2.054732256976422
+  }
+}

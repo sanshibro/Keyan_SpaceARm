@@ -40,7 +40,9 @@ from uav_continuum_whole_body_v2.mapping import (
 )
 from uav_continuum_whole_body_v2.msg import WholeBodyTrajectory
 from uav_continuum_whole_body_v2.optimizer import WholeBodyOptimizer
-from uav_continuum_whole_body_v2.seed_planner import WholeBodySeedPlanner
+from uav_continuum_whole_body_v2.seed_planner import (
+    WholeBodySeedPlanner, reference_only_seed,
+)
 from uav_continuum_whole_body_v2.types import ArmModel
 from uav_continuum_whole_body_v2.validator import SweptVolumeValidator
 
@@ -58,6 +60,9 @@ class RollingWholeBodyPlannerNode:
     def __init__(self):
         config_path = Path(rospy.get_param("~planner_config", str(PACKAGE / "config" / "planner_v2.yaml")))
         raw, self.config, self.limits, self.mass = load_planner_configuration(config_path)
+        self.ablation_variant = str(rospy.get_param("~ablation_variant", "full"))
+        if self.ablation_variant not in ("full", "no_seed", "fixed_phi"):
+            raise ValueError("unknown ablation_variant %r" % self.ablation_variant)
         self.arm = ArmModel()
         self.map_mode = validate_map_mode(rospy.get_param("~map_mode", "regression_exact"))
         if self.map_mode == "regression_exact":
@@ -661,6 +666,8 @@ class RollingWholeBodyPlannerNode:
                 if np.linalg.norm(horizon[-1, :3] - goal) <= 0.45:
                     terminal_active = True
                     terminal_shape = np.radians(np.asarray(selected_shape_deg, dtype=float))
+                    if self.ablation_variant == "fixed_phi":
+                        terminal_shape[1] = current[5]
                     # The global/EGO layer only supplies terminal topology.
                     # Once its local horizon reaches the selected standoff,
                     # make that certified reachability candidate the exact
@@ -762,10 +769,17 @@ class RollingWholeBodyPlannerNode:
                 body_world=body_planning_world, center_keepout_world=local_keepout,
             )
             stage_started = time.monotonic()
-            seed = seed_planner.plan(
-                horizon, current,
-                terminal_state=horizon[-1] if terminal_active else None,
-            )
+            if self.ablation_variant == "no_seed":
+                seed = reference_only_seed(
+                    horizon, current, cycle_config.knot_count,
+                    terminal_state=horizon[-1] if terminal_active else None,
+                )
+            else:
+                seed = seed_planner.plan(
+                    horizon, current,
+                    terminal_state=horizon[-1] if terminal_active else None,
+                    _force_phi_locked=self.ablation_variant == "fixed_phi",
+                )
             if terminal_shape is not None:
                 seed.diagnostics["terminal_shape"] = terminal_shape.tolist()
                 seed.diagnostics["terminal_position_tolerance"] = 0.06
@@ -781,8 +795,10 @@ class RollingWholeBodyPlannerNode:
             result.diagnostics["truth_geometry_access"] = (
                 self.map_mode == "regression_exact"
             )
+            result.diagnostics["ablation_variant"] = self.ablation_variant
             optimize_elapsed = time.monotonic() - optimize_started
-            if (not result.success and not terminal_active
+            if (self.ablation_variant == "full"
+                    and not result.success and not terminal_active
                     and result.validation.failure_reason == "arm_collision"
                     and seed.diagnostics.get("shape_mode") == "theta_only_fixed_phi"):
                 # Active-set fallback: a point-wise fixed-plane screen is only

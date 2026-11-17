@@ -119,6 +119,10 @@ class WholeBodyMetricsLoggerNode:
             "experiment_class": str(rospy.get_param(
                 "~experiment_class", "engineering_regression"
             )),
+            "ablation_variant": str(rospy.get_param("~ablation_variant", "full")),
+            "switch_continuity_mode": str(rospy.get_param(
+                "~switch_continuity_mode", "whole_body_bridge"
+            )),
         }
         (self.output / "manifest.json").write_text(
             json.dumps(manifest, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8"

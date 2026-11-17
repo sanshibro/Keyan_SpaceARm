@@ -1,0 +1,31 @@
+{
+  "goal": [
+    -0.6029951177524113,
+    -1.152577382914613,
+    1.5020743761633597
+  ],
+  "goal_shape": null,
+  "loaded": false,
+  "planning_reserve_m": 0.03,
+  "planning_body_margin_m": 0.13,
+  "planning_arm_margin_m": 0.1,
+  "hard_body_margin_m": 0.1,
+  "hard_arm_margin_m": 0.07,
+  "map_hash": "4c030a81188ee482e72a7bb3a6355879a5c303fbccf6a25dddc984f62f0e2e48",
+  "planning_map_hash": "3b3c43a1b7d5f4678da599087c899f437da7566897280a31264666ea3f129273",
+  "map_scope": "conservative_local_observed_crop_full_map_runtime_and_validation",
+  "local_xy_bounds_m": [
+    [
+      -2.603125048411873,
+      -3.2025771331155806
+    ],
+    [
+      1.3970048822475887,
+      0.8474226170853869
+    ]
+  ],
+  "local_z_bounds_m": [
+    -1.0,
+    3.0
+  ]
+}

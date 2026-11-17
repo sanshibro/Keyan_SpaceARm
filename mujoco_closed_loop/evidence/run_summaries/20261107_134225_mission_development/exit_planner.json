@@ -1,0 +1,15 @@
+{
+  "map_hash": "a22c4a9197cdc03917b4edc90cd477f3bce66245bd6e19d3124233656cc96985",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.25811231059724976,
+    "arm": 0.12316474600765184
+  },
+  "reference_candidate_observed_voxels": 129394,
+  "full_observed_voxels": 380690,
+  "status": "planning_failed_hold",
+  "error": "ReferencePlanningError: task goal is not inside observed body-clear space",
+  "elapsed": 2.9079384969954845,
+  "worker_total_wall_s": 4.2618292729894165
+}

@@ -1,0 +1,21 @@
+{
+  "stage": "asynchronous_sensor_feedback_flight",
+  "full_task_accepted": false,
+  "initialization": "known_spawn_and_initial_camera_alignment",
+  "navigation": "RGBD_ORB_PnP_plus_noisy_simulated_gyro_accelerometer",
+  "arm_feedback": "wrist_RGBD_with_estimated_UAV_compensation",
+  "com_feedforward": "V2_PCC_mass_model_from_visual_shape_not_truth",
+  "sensor_process": true,
+  "sim_seconds": 11.999999999998789,
+  "wall_seconds": 15.052030308000212,
+  "realtime_factor": 0.7972346424004171,
+  "position_rms_m": 0.26529757761308753,
+  "max_nav_error_m": 0.21868103512317796,
+  "max_tilt_deg": 0.9566109842820734,
+  "contacts": 0,
+  "saturated_steps": 0,
+  "skipped_sensor_snapshots": 88,
+  "visual_corrections": 150,
+  "rejected_corrections": 0,
+  "passed": false
+}

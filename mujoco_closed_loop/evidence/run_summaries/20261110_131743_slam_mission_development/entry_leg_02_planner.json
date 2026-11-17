@@ -1,0 +1,12 @@
+{
+  "map_hash": "faec26d474b8820b345b6de380c28d6cbb255db793a521b9ffde8fc80072ba43",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.19135746222820532,
+    "arm": 0.09996432423061305
+  },
+  "status": "start_unverified_or_blocked_hold",
+  "elapsed": 0.00787852899520658,
+  "worker_total_wall_s": 0.4464154370070901
+}

@@ -82,7 +82,12 @@ def world_arm_sections(state, model):
 
 def world_arm_points(state, model):
     sections = world_arm_sections(state, model)
-    return np.vstack(sections)
+    points = np.vstack(sections)
+    if len(getattr(model, 'extra_tool_points', ())):
+        # Existing terminal objectives use [-1] as the PCC tool tip.
+        extra = world_extra_tool_points_batch(np.asarray(state).reshape(1, 6), model)[0]
+        points = np.vstack((sections[0], sections[1], extra, sections[2]))
+    return points
 
 
 def world_arm_sections_batch(states, model):
@@ -151,8 +156,28 @@ def world_arm_sections_batch(states, model):
     return transform(base), transform(flexible), transform(tool)
 
 
+def world_extra_tool_points_batch(states, model):
+    states = np.asarray(states, dtype=float).reshape((-1, 6))
+    local = np.asarray(model.extra_tool_points, dtype=float).reshape((-1, 3))
+    roots = world_arm_sections_batch(states, model)[1][:, -1, :]
+    output = []
+    for state, root in zip(states, roots):
+        theta, phi = state[4:6]
+        axis = np.array([-np.sin(phi), np.cos(phi), 0.])
+        x, y, z = axis
+        cross = np.array([[0., -z, y], [z, 0., -x], [-y, x, 0.]])
+        bend = np.eye(3) + np.sin(theta)*cross + (1.-np.cos(theta))*(cross@cross)
+        rotation = rotation_matrix_rpy(0., 0., state[3]) @ rotation_matrix_rpy(*model.mount_rpy) @ bend
+        output.append(local @ rotation.T + root)
+    return np.asarray(output)
+
+
 def world_arm_points_batch(states, model):
-    return np.concatenate(world_arm_sections_batch(states, model), axis=1)
+    sections = world_arm_sections_batch(states, model)
+    points = np.concatenate(sections, axis=1)
+    if len(getattr(model, 'extra_tool_points', ())):
+        points = np.concatenate((sections[0], sections[1], world_extra_tool_points_batch(states, model), sections[2]), axis=1)
+    return points
 
 
 def world_body_points(state, limits, azimuth_samples=16, vertical_samples=3):

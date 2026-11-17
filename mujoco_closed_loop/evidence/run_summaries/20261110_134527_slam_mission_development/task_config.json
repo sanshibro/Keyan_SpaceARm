@@ -1,0 +1,50 @@
+{
+  "seed": 0,
+  "mission_map": null,
+  "online_map_connected": true,
+  "target_shift_y": 0.0,
+  "gap_count": 3,
+  "navigation_route": [
+    [
+      -0.65,
+      -2.12,
+      1.55
+    ],
+    [
+      -0.65,
+      -1.0599999999999998,
+      1.35
+    ],
+    [
+      0.3,
+      -0.77,
+      1.55
+    ],
+    [
+      0.3,
+      0.29000000000000004,
+      1.4
+    ],
+    [
+      -0.45,
+      0.6300000000000001,
+      1.55
+    ],
+    [
+      -0.45,
+      1.6900000000000002,
+      1.3599999999999999
+    ],
+    [
+      0.0,
+      2.35,
+      1.5
+    ]
+  ],
+  "starts_in_known_hover": true,
+  "localization_mode": "fast_lio_external",
+  "navigation_camera_profile": "approved_stage1",
+  "super_visual": true,
+  "underbody_survey_camera": false,
+  "target_realtime_factor": 0.5
+}

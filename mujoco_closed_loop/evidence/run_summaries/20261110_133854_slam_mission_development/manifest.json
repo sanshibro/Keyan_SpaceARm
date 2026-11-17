@@ -1,0 +1,111 @@
+{
+  "stage": "three_gap_online_slam_development",
+  "full_task_accepted": false,
+  "initialization": "known_spawn_and_initial_camera_alignment",
+  "navigation": "FAST_LIO_lidar_IMU",
+  "arm_feedback": "wrist_RGBD_with_estimated_UAV_compensation_and_segment_strain",
+  "com_feedforward": "V2_PCC_mass_model_from_visual_shape_not_truth",
+  "sensor_process": true,
+  "sim_seconds": 65.78399999995005,
+  "wall_seconds": 300.7788524259813,
+  "realtime_factor": 0.21871218494704125,
+  "position_rms_m": 0.025651620158899904,
+  "max_nav_error_m": 0.028891174842371442,
+  "max_tilt_deg": 0.8032916985335938,
+  "contacts": 0,
+  "saturated_steps": 0,
+  "skipped_sensor_snapshots": 100,
+  "visual_corrections": 0,
+  "rejected_corrections": 0,
+  "max_bend_error_deg": 5.657958018490775,
+  "achieved_visual_hz": 18.484737930209825,
+  "dropout_invalid_frames": 5,
+  "end_reason": "stop_requested",
+  "interrupted": true,
+  "initialization_limitation": "Known initial hover; online FAST-LIO and first-hit LiDAR map; three-gap development scene",
+  "approach_started": null,
+  "descent_started": null,
+  "close_started": null,
+  "target_observations": 0,
+  "body_d435_coarse_observations": 0,
+  "contact_confirmed": false,
+  "grip_lost": false,
+  "confirmation_time": null,
+  "final_min_object_lift_m": -0.00036718184245987384,
+  "final_min_object_carry_m": 0.0,
+  "final_min_touched_fingers": 0,
+  "binding_used": false,
+  "passed": false,
+  "initialization_wall_seconds": 5.565642404020764,
+  "end_to_end_wall_seconds": 315.77474696401623,
+  "target_realtime_factor": 0.5,
+  "control_sim_hz": 1000,
+  "physics_wall_gap_p95_ms": 8.109933807281775,
+  "physics_wall_gap_max_ms": 1066.0032059822697,
+  "perception_packets": 1216,
+  "accepted_shape_observations": 1173,
+  "achieved_shape_hz": 17.831083546164578,
+  "strain_fallback_steps": 113,
+  "shape_fallback_source": "simulated_jointpos_strain",
+  "hover_zupt_steps": 16163,
+  "arm_bias_final_rad": [
+    -0.0167697193018936,
+    0.006304378158214907
+  ],
+  "seed": 0,
+  "target_shift_y": 0.0,
+  "gap_count": 3,
+  "entry_route_index": 0,
+  "entry_route_goals": [
+    [
+      -0.65,
+      -2.12,
+      1.55
+    ],
+    [
+      -0.65,
+      -1.0599999999999998,
+      1.35
+    ],
+    [
+      0.3,
+      -0.77,
+      1.55
+    ],
+    [
+      0.3,
+      0.29000000000000004,
+      1.4
+    ],
+    [
+      -0.45,
+      0.6300000000000001,
+      1.55
+    ],
+    [
+      -0.45,
+      1.6900000000000002,
+      1.3599999999999999
+    ],
+    [
+      0.0,
+      2.35,
+      1.5
+    ]
+  ],
+  "exit_route_index": 0,
+  "exit_route_goals": [],
+  "navigation_completed": false,
+  "exit_completed": false,
+  "online_map_connected": true,
+  "slam_stats": {
+    "imu_messages": 13157,
+    "lidar_messages": 657,
+    "odom_messages": 654,
+    "map_scans": 131,
+    "map_hits": 86920,
+    "footprint_prior_cells": 286
+  },
+  "online_entry_legs": 2,
+  "online_entry_planning_retries": 0
+}

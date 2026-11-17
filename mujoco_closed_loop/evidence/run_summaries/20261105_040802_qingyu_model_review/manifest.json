@@ -1,0 +1,44 @@
+{
+  "stage": "fixed_base_model_review_only",
+  "full_task_accepted": false,
+  "source": "Qingyu SDK CAD/config with numerical flexible-body dynamics",
+  "mass_kg": 2.2499999999999996,
+  "cases": [
+    {
+      "theta_deg": 0,
+      "phi_deg": 0,
+      "sim_time": 3.4999999999997256,
+      "contacts": 0
+    },
+    {
+      "theta_deg": 60,
+      "phi_deg": 0,
+      "sim_time": 7.000000000000672,
+      "contacts": 0
+    },
+    {
+      "theta_deg": 120,
+      "phi_deg": 0,
+      "sim_time": 10.49999999999962,
+      "contacts": 0
+    },
+    {
+      "theta_deg": 0,
+      "phi_deg": 45,
+      "sim_time": 13.99999999999768,
+      "contacts": 0
+    },
+    {
+      "theta_deg": 60,
+      "phi_deg": 45,
+      "sim_time": 17.499999999998405,
+      "contacts": 0
+    },
+    {
+      "theta_deg": 120,
+      "phi_deg": 45,
+      "sim_time": 21.000000000002682,
+      "contacts": 0
+    }
+  ]
+}

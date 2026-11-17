@@ -1,0 +1,12 @@
+{
+  "stage": "fixed_base_endpoint_scan_only",
+  "passed": true,
+  "full_task_accepted": false,
+  "feedback": "truth_development",
+  "mujoco": "3.2.3",
+  "mass": 2.2499999999999996,
+  "wall_seconds": 1.3398078939999323,
+  "sim_seconds": 47.99999999997883,
+  "model_sha256": "c60bca5fce4b6ae021f6f12b601943ed5a656522d7987e109fba07d181c12f33",
+  "max_endpoint_error_m": 0.0077574210677208285
+}

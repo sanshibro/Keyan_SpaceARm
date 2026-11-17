@@ -79,6 +79,7 @@ catkin_install_python(PROGRAMS
   scripts/audit_v21_existing_runs.py
   scripts/summarize_v21_e2.py
   scripts/analyze_v21_dynamics.py
+  scripts/analyze_core_ablation.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

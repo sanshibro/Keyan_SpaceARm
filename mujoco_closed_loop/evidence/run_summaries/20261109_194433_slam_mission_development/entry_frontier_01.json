@@ -1,0 +1,26 @@
+{
+  "status": "ready",
+  "kind": "hold",
+  "waypoint": null,
+  "information": {
+    "reason": "frontier_state_drift_reject",
+    "drift_m": 0.06723792692790814
+  },
+  "map_hash": "3eb8653c10f43efcf2770862413b48d2fbabfd1d0a620f9bd8c46d2cd0962046",
+  "worker_wall_s": 3.387861303999671,
+  "selection_wall_s": 4.204541764003807,
+  "requested_state": [
+    -0.618941013532321,
+    -2.4545584515930208,
+    1.4968609209714685,
+    1.5707421072296919,
+    0.0031457243971058442,
+    2.3308758087721877
+  ],
+  "result_position": [
+    -0.6011076052367597,
+    -2.518896586972083,
+    1.5048304066557492
+  ],
+  "position_drift_m": 0.06723792692790814
+}

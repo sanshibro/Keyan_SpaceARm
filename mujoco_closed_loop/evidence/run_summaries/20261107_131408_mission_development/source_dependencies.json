@@ -1,0 +1,162 @@
+{
+  "source_files_sha256": {
+    "arm_survey_audit.py": "1d650f407f4d65df9daa5b4d606493c9b7f7d7e793598b99b85d56f7a758d6a9",
+    "async_planner.py": "9a375e337a021a331a3574a9c247d00e6b872ba0c8ef5f5fa9a277aed6e771ae",
+    "async_planner_audit.py": "40a06e9117c94e9eba02a294e3517413979c57e0ca6bbc4d18c071f51e649523",
+    "audit_fiducials.py": "654b16e9673857fe45d89e77cd1f5064605c6b35ac9edc24945ff64648869a3b",
+    "audit_target_geometry.py": "a2abf276df34a35c83cca2652dcd8968610921fe0279d8473a5be0468c5e9a4b",
+    "batched_mapper.py": "df3d2fb6886f6033c84a357e7694171df6c53aea7f3daf5b783d8d85c1dc1027",
+    "check_discretization.py": "41e0258ec47af7471fe1c8e819297ec0be18e2d45fb376f040163077f259c86c",
+    "check_frames.py": "af16b311e885f9bcf2a5482bd7802fd994b99239d90a29710e1339a206151465",
+    "check_online_mapping.py": "04747dfcbc0615dd2ac8558ee7e25b986e58cf43b21163d57feafc6df9803ef4",
+    "check_rgbd_visibility.py": "4cbdf2e77501c5e9930111da6b7a78ca9aab02e15cd42e25fcb04f437f170ea8",
+    "check_sensor_occlusion.py": "d64e618868656db46d376241fba4d703234b02a957333b9c68460da5bf1f2ce2",
+    "check_tool_envelope.py": "e81240c844262b283e7db6880efea53f03826b7df56781d2d853447f764cd7c5",
+    "check_trajectory_identity.py": "6ad24e3de30f8d9ef687922e803826902625d7b2dbc9ac179489afd8ece72ff1",
+    "convert_d435.py": "639b11eef918edf6f6a0244bc60318720440ed04c895bbfe7ad28c39cc49444f",
+    "convert_super_assembly.py": "7572acd5510a5519cd2dc426aa0ea337ea93fd03b26fcbfdcad93899e4cf5564",
+    "depth_mapping.py": "d16758f7a2bb357249101b2d7dbddf27839dca6bc0a10fe5c338072f682fdd8a",
+    "estimated_self_mask.py": "bc0d59c9a4411ca8c8b5f0c6ad99571e8780ba86bc1810b48005c7dccf42ae9e",
+    "estimation.py": "6d1cf65ce00bcf5a73f0654e647ddd5c4946484a89da493fa27085e160826958",
+    "evidence.py": "9fd25b1a29285784a7bdd9d3ab5e045328a989c0869fc5f98a2cb8c192cd8cf2",
+    "fast_lio_bridge.py": "04c692cb404e348c769cb313c846ade911ffddb3cb95611fd3485da3558b52fc",
+    "fiducials.py": "5d47d33e91646a692124b3fcbc8e5e07a1be6ea4ef98beda1a7956c2e0cbf88c",
+    "flight_feedback.py": "26f48bda3854cdaaa92d4467dcfc513e5006595924fab53bb2ab76bb80bec36f",
+    "free_grasp_development.py": "c8245e9569e4b4fc573561fcff69d72b6aca85ff8bf95623a412d8f6c2af23d1",
+    "grasp_bench.py": "58fce94b4472d4f91419a0495a77e977737b3ecde0f4c35d2e53897b3b3983aa",
+    "gripper.py": "584e8e04b286d913cd9baf146963bb6941afdc2046df3f308945261367d2f2ae",
+    "hover.py": "2c89746bbb03370627bb84a4657e1a780089d56ab7a94465b05b2c3587556899",
+    "live_dashboard.py": "b59b58b6ac62ae314f62696d8a7841bb74d143241d2f559fca5ebf3d3e23fc17",
+    "map_coverage_audit.py": "55427243f006004a3d7178150eefe8c60c402ca48f7d5221a9862ed28c1f2ba8",
+    "mass_compensation.py": "b40aef5533d0a5e8bbc762c55c87f1d298aec535e777b10aebff6948e7861efd",
+    "mission_navigation.py": "f81807d81850a96c0990de27926e169a04db531482e1f9cbbb445082eba56f85",
+    "mission_scene.py": "bb51ff8fc15fc1fccf139fbdd0c40050ede45e1bb3121b61b7d97226b25d350d",
+    "model.py": "e4d391381b9d822e741b691587ca20251f041fbced7137b047616706c3f5862c",
+    "navigation_development.py": "af80d18efe4050754cdcf94145ed9f9796faa85d6b9b4839c948ec6fac73aac0",
+    "online_mapping.py": "83887774b2185fd9bb93c3500c965a634b7e6c1c2aea69b4fd0c2e7a330f8e83",
+    "perception_audit.py": "e6a1090549596a54d9dd4663d22856a123a9cc143770ca641a23a9f8dafca5d4",
+    "planner_adapter.py": "5a19d694aa89e0ffdc214d35888a92c52c9a5b41fcfd8a2b66083f0c6cd163e6",
+    "planner_audit.py": "00754df8d277a9625860a7a934d8828cd9c9ef723103529c1b04196468499735",
+    "prepare_gripper.py": "4be5c00c50619a1e3266075653c0ffac8c275b48ff8ed210d76d35f8bae05fd2",
+    "prepare_mesh.py": "a503bbe4a2b196202a5f5f4e910f0e580575fe4d99da310266e964a61ac1f9a6",
+    "prepare_render_lod.py": "d4c5a32124236042e0281088088fa1b175bbb11219abf99a2ad6ae3c4983b4b5",
+    "prepare_super.py": "718c63da57b3ba7facec915ee0e40b3f4a17a20e970b255ef70493e53b09ac73",
+    "preview.py": "755ac783ef3432f43cd169dfe321340c97a7d00223418011ff5159fb9ad67429",
+    "preview_qingyu.py": "9e6fa82369608263b129cfdbb10cf5598120a10116f0d07f072c1e3822f3f7ff",
+    "preview_super_parts.py": "9acbace8290ab2c7c2c823b596eb87f7a5a53edf55848ff66b7a4aa48cf9b6c2",
+    "qingyu_model.py": "a7851b7b4a2860d6d61d082d17434484024d11e701b126d0dd7a97b8fc63b866",
+    "record_bench.py": "dc0c4a3765ace8e4e93e5a3612817b67782d6fdc4950f3e0188067ac4af00542",
+    "record_mission.py": "8172c726118b9b2a1bd5170c0a0c029ad9908db5fea651e89fcf1e065d4d950b",
+    "robot_volume_prior.py": "286c3f503e68083b8a92c1b4dc9076b6043f6565b2d37f0997a36846926e52bf",
+    "scan.py": "0f126e4e54b4892b2f90cedbc260db538cd0b703b793a3e4044c2c8f59261f2e",
+    "scene.py": "42cdb5f36d620c179bd9d681dc2804e88b838c2a9f7ac2bab209fd28d7c7709e",
+    "self_prior_audit.py": "237c4cc3eedef95405b5cab5938a997dfb4d8b0aec56727cfa9fe9fb4ecca98e",
+    "self_space.py": "649e07156f764111ad690739d4242a5b8d538217d79c3e5727002ebca2496d65",
+    "sensor_flight.py": "b45b5d239cbd7e73958cd62d08b6780221f6c41bb12886a04386a3ecb5ae2159",
+    "sensor_worker.py": "6911ed253dca2d7aa82c214201bcd8d404a7a6a30deadd91e6342f428824254c",
+    "sensors.py": "55d434e020b46ce6d753a127e2d8c8680aca89cc21db0d3c60b70bfb78824e49",
+    "shape_audit.py": "4bad26b1a0fe87239c7d69c6aac920ce93dec98b3e0abc719f932c3ec5abe2c3",
+    "shared_preview.py": "09b9dd77bd0d4858b80931cef44fecaa0cacab1f4ef019e2fa630a544a766612",
+    "stage1_aperture_audit.py": "fc926fe1deeda80a3b46a92b0ab96a63c86d5e564427131d244f105a2a2be315",
+    "stage1_preview.py": "e7537bc9a3e31064e474304dcc6bbe97fc46b5a051b8c2dc7ad45d42f841a170",
+    "stage1_scene.py": "6938911e71f8d532a2251a922c05e3dda727b2f6f8ff217f0488217160131d12",
+    "super_sensor_profile_audit.py": "f7d668c213db44171b4f70177b7fea5792f5a49c351b874a39148ef74a2694c1",
+    "tool_envelope.py": "44a35f1ab4d2bc335ad0b0de109e4365de241cce40a8f7d9c9a092b66c510ea7",
+    "trajectory_tools.py": "99cb82410963794c78310a2a34604449a051dfd61a0a493abd15ee613e7525ad",
+    "visual_grasp_development.py": "310dbed84181c338a84824ddf3b8dcbc2f547f5f60f6428bc1c8be44fded590b",
+    "visual_odometry.py": "727ba0cd2ad567cd74291d13ad359cb5b22087974c8c889ebaa9078961ebcc12",
+    "yaw_survey_audit.py": "9dd4776751f12469e3093b239343b78c9b04ee16c30044b56f69085a94c75238"
+  },
+  "reused_v2_files_sha256": {
+    "__init__.py": "7cacad6d69e3203a50f4d889b489d7bcb347dea15c68dbf1e490a3b7fdf491c4",
+    "comparison_methods.py": "32296f0e0c55e714ead06b5e0657ba302c2797cb62b70adfb7b10f901f81357b",
+    "configuration.py": "c5aa2625bbd010f611634607c9ad77a68c96d464095868c5f05bc3a4ee33940a",
+    "dependencies.py": "cbe25067fcb0c9b9bef1abc208402b1de10d6e5ea527ad16308fe328fe6a5d1f",
+    "environment.py": "036e98a0826f9277f383c0fb505d1099fbaed42397a4b3c361261b28326704a2",
+    "execution.py": "fbb063e0b249ef273d013a728d97e211ca16af9761ca051da8fc69d1ccb090d3",
+    "experiment_metrics.py": "24fb0fddc7936ac28a13ecefe1cd3ab50c4aefb788145406acd7718ae0e0c8a1",
+    "experiment_scenarios.py": "b4746596ecde5aec133512570be93eb49baa9007edc59ab256104bfecb92b7fb",
+    "geometry.py": "ef89eb9b2c7ef8e38b653be0f76c4ad78e1401c8403622f58f4cc4240d1d0194",
+    "horizon.py": "c86be08c3b74e9e5843af394a2cb4364e6f06aa384dc30088af2ba00a2306edd",
+    "map_audit.py": "5466f26a59dffdf0b675035c8e5b1de79939e41d4ec8c22f38b12e200326b9b7",
+    "mapping.py": "1731b8006e4f7727127b359221c668f6473d8fd0dfb10b0f6e5c5c9e6c951baf",
+    "optimizer.py": "cddf047c7f2e27172a0e25278ace9a0f72883ffb753e1f67b83b6cdf9acc98f5",
+    "reference_planner.py": "d9bb71c6b3222b1267adffbf89a7281ebb7bc855ccffcf60e3d7751177a2a679",
+    "seed_planner.py": "d68ceae4f757862a509fb9404b84dd00f7b0f172d328dd3b5e59ac50af7fcf5a",
+    "survey_protocol.py": "5668a54cdd26f4d8f8794d236093921552483ee5aa1cdddeb46957291d05484e",
+    "trajectory.py": "122af23f88c4b1a1052912ff778fd89740ad16c467e3b8591661c68274d88e52",
+    "types.py": "68dce28e6396ebbe8264226c1d21cf73331d0dec6a7e4b46edc6c2ac839c26e1",
+    "validator.py": "3501db8b6c2314f3601088c91d64281aa4534c676e6501aea135a63a00135c9b",
+    "planner_v2_realtime.yaml": "0808a14442972be6df3870e4446a4722a894e58ee3e85fe66427173e68b0386e"
+  },
+  "installed_dependencies": {
+    "absl_py-2.3.1.dist-info": {
+      "Name": "absl-py",
+      "Version": "2.3.1"
+    },
+    "etils-1.3.0.dist-info": {
+      "Name": "etils",
+      "Version": "1.3.0"
+    },
+    "glfw-2.11.0.dist-info": {
+      "Name": "glfw",
+      "Version": "2.11.0",
+      "License": "MIT"
+    },
+    "gmsh-4.11.1.dist-info": {
+      "Name": "gmsh",
+      "Version": "4.11.1",
+      "License": "GPLv2+"
+    },
+    "importlib_resources-6.4.5.dist-info": {
+      "Name": "importlib_resources",
+      "Version": "6.4.5"
+    },
+    "mujoco-3.2.3.dist-info": {
+      "Name": "mujoco",
+      "Version": "3.2.3",
+      "License": "Apache License 2.0"
+    },
+    "numpy-1.24.4.dist-info": {
+      "Name": "numpy",
+      "Version": "1.24.4",
+      "License": "BSD-3-Clause"
+    },
+    "pyopengl-3.1.10.dist-info": {
+      "Name": "PyOpenGL",
+      "Version": "3.1.10"
+    },
+    "scipy-1.10.1.dist-info": {
+      "Name": "scipy",
+      "Version": "1.10.1",
+      "License": "Copyright (c) 2001-2002 Enthought, Inc. 2003-2022, SciPy Developers."
+    },
+    "typing_extensions-4.13.2.dist-info": {
+      "Name": "typing_extensions",
+      "Version": "4.13.2"
+    },
+    "zipp-3.20.2.dist-info": {
+      "Name": "zipp",
+      "Version": "3.20.2"
+    }
+  },
+  "base_git_head": "d5682f9d927f449bb2290a36f750176a502d9507",
+  "scope": "local source snapshot; vendor CAD provenance in vendor/qingyu_continuum_arm",
+  "runtime": {
+    "python": "3.8.10",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.29",
+    "logical_cpu_count": 8,
+    "versions": {
+      "mujoco": "3.2.3",
+      "numpy": "1.24.4",
+      "scipy": "1.10.1",
+      "cv2": "4.2.0",
+      "yaml": "5.3.1"
+    },
+    "thread_settings": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  }
+}

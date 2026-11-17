@@ -1,0 +1,37 @@
+{
+  "A01Base_visual": {
+    "original_triangles": 178950,
+    "lod_triangles": 85351,
+    "max_vertex_error_m": 0.0006394678909469125,
+    "source_sha256": "968601d680a7eac59007ba74c9fe7e734e615f9baa3e53d602e08fc346ebc1e0",
+    "output_sha256": "5957bd61ef5732951671d9fa9b83f8f591a2927a669baff1989a30d5bca2c4b9"
+  },
+  "gripper_housing": {
+    "original_triangles": 126843,
+    "lod_triangles": 51884,
+    "max_vertex_error_m": 0.00045828942667576575,
+    "source_sha256": "264bac816ed15ad31b14de8342447dd4ee4b7f88ccbabf4130910c26c023cb1b",
+    "output_sha256": "4344418a360a14c883dd19417b0e1f5911743e338e254aa92acb66a59f70d3b5"
+  },
+  "gripper_finger0": {
+    "original_triangles": 7349,
+    "lod_triangles": 2971,
+    "max_vertex_error_m": 0.0003766036301570625,
+    "source_sha256": "27a98f18ba58237e3035e5809c4cedad3933a6766abb0250007459fa3026b112",
+    "output_sha256": "f007ab0f30c99c271b54c675953fc7e91d312a3b7d12844e6fa00e8818b616ea"
+  },
+  "gripper_finger1": {
+    "original_triangles": 7349,
+    "lod_triangles": 2962,
+    "max_vertex_error_m": 0.0003697344037128864,
+    "source_sha256": "1d5fab93605a9e88db196a4c5b33376039cc22c72dae15167d1ba34d0bb9cd41",
+    "output_sha256": "63e2b80db84c4cec043eb1526597d0cbe9f56266ab547a0efd06569e9f160e53"
+  },
+  "gripper_finger2": {
+    "original_triangles": 7349,
+    "lod_triangles": 2964,
+    "max_vertex_error_m": 0.0003606787918091557,
+    "source_sha256": "9199067965f05ab1590d47df0d9bae65864b18cb8bd261e3ca75a069052b6848",
+    "output_sha256": "eae94cf6726ab302ad2076f1067b932b47cc630c82558da8ab840bdebae6a6bf"
+  }
+}

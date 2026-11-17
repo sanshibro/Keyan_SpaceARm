@@ -1,0 +1,60 @@
+{
+  "status": "ready",
+  "kind": "frontier",
+  "waypoint": [
+    -0.6152755077757559,
+    -1.112412912460985,
+    1.5091827219023484
+  ],
+  "information": {
+    "distance_m": 0.03,
+    "clearance": {
+      "body": 0.2734366310524588,
+      "arm": 0.24413660504550425
+    },
+    "validation": {
+      "feasible": true,
+      "status": "safe",
+      "metrics": {
+        "duration": 7.2,
+        "validation_samples": 183.0,
+        "body_clearance_min": 0.27343663105245886,
+        "arm_clearance_min": 0.24413660504550425,
+        "com_offset_max": 2.482534153247273e-16,
+        "gravity_torque_max": 5.479573509755044e-15,
+        "velocity_max": 0.0050000000000000175,
+        "acceleration_max": 0.007812500000000026,
+        "jerk_max": 0.02000000000000008,
+        "yaw_rate_max": 0.0,
+        "theta_rate_max": 0.0,
+        "phi_rate_max": 0.0,
+        "tilt_max": 0.0007963591830864102,
+        "thrust_ratio_min": 0.9999937439850365,
+        "thrust_ratio_max": 1.0000068901947423,
+        "body_obstacle_min": "slam_occupied",
+        "arm_obstacle_min": "slam_occupied",
+        "terminal_tip_error": -1.0
+      },
+      "failure_index": -1,
+      "failure_time": -1.0,
+      "failure_reason": "none"
+    }
+  },
+  "map_hash": "ec870aba06465c0898f08d6794d822db6b0592c9e702ada299eaf0114829bd28",
+  "worker_wall_s": 2.147018974996172,
+  "selection_wall_s": 3.063722074002726,
+  "requested_state": [
+    -0.6156874109637196,
+    -1.1424090626185528,
+    1.509430333469917,
+    2.9104311073220904e-05,
+    0.0020965989845855163,
+    -1.5528995374507746
+  ],
+  "result_position": [
+    -0.6173392821941842,
+    -1.1575800698933596,
+    1.509680656762064
+  ],
+  "position_drift_m": 0.01526272590479397
+}

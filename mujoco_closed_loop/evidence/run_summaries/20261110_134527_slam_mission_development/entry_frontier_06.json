@@ -1,0 +1,26 @@
+{
+  "status": "ready",
+  "kind": "hold",
+  "waypoint": null,
+  "information": {
+    "reason": "start_unverified_or_blocked",
+    "distance_to_goal_m": 0.4639616064422768
+  },
+  "map_hash": "dec5d472c2465312e7b442e46172761e0e97cb6e740edc2fa0489d912c6baa41",
+  "worker_wall_s": 0.4967991200101096,
+  "selection_wall_s": 1.2258034839760512,
+  "requested_state": [
+    -0.6452701517582268,
+    -1.5232059708239598,
+    1.3239571625750821,
+    -1.2771939579873976e-06,
+    1.0251369572291054,
+    -1.5704832837026363
+  ],
+  "result_position": [
+    -0.6454096312327263,
+    -1.522477932790084,
+    1.3235735855025208
+  ],
+  "position_drift_m": 0.0008346408048803074
+}

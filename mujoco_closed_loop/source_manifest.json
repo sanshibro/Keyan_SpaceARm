@@ -1,0 +1,12 @@
+{
+  "source_head": "d5682f9d927f449bb2290a36f750176a502d9507",
+  "files": {
+    "mujoco素材/用来参考.mp4": "4602293346160633d27b5917293572f692f064597a95d53ed5d5488b70ab1a7f",
+    "mujoco素材/结项报告—空中柔性机械臂多传感器融合状态估计与控制(1).docx": "95048298a9c7f12ac5185f5d3ed7ae34ac1d094c221b77ce69f4b7a5dab42f59",
+    "mujoco素材/结项报告—空中柔性机械臂多传感器融合状态估计与控制+-+副本.docx": "77a6e1d706dabad97daf36de93e1ec1da8e730b0743c347eba7c4787ff19c9d4",
+    "mujoco素材/实验图片.jpeg": "6caa6db784428f9eca390fb5138ef260398b2cf698639435be5037ba7f3bb766",
+    "/opt/qingyu_api_ros1/share/qingyu_api_sdk/USAGE.md": "8585c67ea12d5a5220dd5439aaab394405b3c9dbf1ec7fa1fc2118aa30def5e9",
+    "/opt/qingyu_api_ros1/share/qingyu_api_sdk/README.md": "7aa2bd7cc2fa5c8b57100a863ab74504d6b5da84aa12be0a0e1afea60b8220b3",
+    "/opt/qingyu_api_ros1/include/qingyu_api_sdk/client.hpp": "5f3021f236f2755009194139da54bf5eaf356e037e00e59f23b56130e32622ed"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "start": [
+    -0.64,
+    -2.57,
+    1.65
+  ],
+  "pregrasp": [
+    0.0,
+    2.35,
+    1.5
+  ],
+  "exit": [
+    -0.64,
+    -2.57,
+    1.55
+  ],
+  "door_y": -1.4,
+  "opening_x": [
+    -1.15,
+    -0.05
+  ],
+  "opening_z": [
+    1.1,
+    1.95
+  ],
+  "target_shift_y": 0.0,
+  "start_yaw": 0.0,
+  "gap_count": 3,
+  "target_y": 2.35,
+  "texture_seed": 8
+}

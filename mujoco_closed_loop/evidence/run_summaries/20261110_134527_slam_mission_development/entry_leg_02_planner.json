@@ -1,0 +1,98 @@
+{
+  "map_hash": "245d8296bfd336c5258dfc8524fab4f7b15d130a1628761d891e822758740d2a",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.3354227370454652,
+    "arm": 0.5438819266043299
+  },
+  "status": "validated_short_direct_bridge",
+  "success": true,
+  "elapsed": 0.40035489402362145,
+  "validation": {
+    "feasible": true,
+    "status": "safe",
+    "metrics": {
+      "duration": 2.175,
+      "validation_samples": 58.0,
+      "body_clearance_min": 0.08434701100727925,
+      "arm_clearance_min": 0.31076103468096083,
+      "com_offset_max": 4.577566798522237e-16,
+      "gravity_torque_max": 1.010383431603821e-14,
+      "velocity_max": 0.1666666666666667,
+      "acceleration_max": 0.46291215909337174,
+      "jerk_max": 2.1113491083327762,
+      "yaw_rate_max": 0.0,
+      "theta_rate_max": 0.0,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.04648834026897062,
+      "thrust_ratio_min": 0.9923082031589554,
+      "thrust_ratio_max": 1.0098748117172438,
+      "body_obstacle_min": "slam_occupied",
+      "arm_obstacle_min": "slam_occupied",
+      "terminal_tip_error": -1.0
+    },
+    "failure_index": -1,
+    "failure_time": -1.0,
+    "failure_reason": "none"
+  },
+  "reference": {
+    "search": "V2_dense_validated_direct_bridge"
+  },
+  "optimizer": {
+    "backend": "V2_spline_direct_bridge"
+  },
+  "worker_total_wall_s": 0.9192070059943944,
+  "takeover_gaps": {
+    "position_gap_m": 0.0037411135090266935,
+    "yaw_gap_rad": 4.573268617669157e-05,
+    "bending_gap_rad": 0.008495490003250741,
+    "linear_velocity_gap_m_s": 0.004650477076280298,
+    "yaw_rate_gap_rad_s": 0.0003094742092060042,
+    "bending_rate_gap_rad_s": 0.0027091573267985676,
+    "old_bending_vector_rad": [
+      -0.001477158080297154,
+      -0.008366083576031625
+    ],
+    "new_bending_vector_rad": [
+      0.0,
+      0.0
+    ],
+    "old_bending_rate_rad_s": [
+      0.00010926916676560111,
+      -0.002706952838625142
+    ],
+    "new_bending_rate_rad_s": [
+      0.0,
+      0.0
+    ]
+  },
+  "takeover_violations": {},
+  "full_sensor_map_validation": {
+    "feasible": true,
+    "status": "safe",
+    "metrics": {
+      "duration": 2.175,
+      "validation_samples": 58.0,
+      "body_clearance_min": 0.08434701100727791,
+      "arm_clearance_min": 0.31076103468095984,
+      "com_offset_max": 4.577566798522237e-16,
+      "gravity_torque_max": 1.010383431603821e-14,
+      "velocity_max": 0.16666666666666774,
+      "acceleration_max": 0.46291215909337513,
+      "jerk_max": 2.1113491083327935,
+      "yaw_rate_max": 1.7748000854670305e-20,
+      "theta_rate_max": 0.0,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.04648834026897047,
+      "thrust_ratio_min": 0.9923082031589551,
+      "thrust_ratio_max": 1.0098748117172434,
+      "body_obstacle_min": "slam_occupied",
+      "arm_obstacle_min": "slam_occupied",
+      "terminal_tip_error": -1.0
+    },
+    "failure_index": -1,
+    "failure_time": -1.0,
+    "failure_reason": "none"
+  }
+}

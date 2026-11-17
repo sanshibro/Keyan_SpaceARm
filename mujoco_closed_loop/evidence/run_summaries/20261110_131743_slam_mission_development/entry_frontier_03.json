@@ -1,0 +1,26 @@
+{
+  "status": "ready",
+  "kind": "hold",
+  "waypoint": null,
+  "information": {
+    "reason": "frontier_search_budget_exhausted",
+    "distance_to_goal_m": 0.6299660913450799
+  },
+  "map_hash": "5d63f5c7fb0ec4ce443adab7f2a3d3279ec7b94fff1e2ac2ef6efc676194fe03",
+  "worker_wall_s": 12.899728159973165,
+  "selection_wall_s": 13.81246433101478,
+  "requested_state": [
+    -0.6020795243423965,
+    -1.6799606560802418,
+    1.5015885887001224,
+    2.3233212764610078e-05,
+    0.01034722291276632,
+    -1.3309165028523686
+  ],
+  "result_position": [
+    -0.6007965892397754,
+    -1.683808963235269,
+    1.5029804412880474
+  ],
+  "position_drift_m": 0.004288664601421427
+}

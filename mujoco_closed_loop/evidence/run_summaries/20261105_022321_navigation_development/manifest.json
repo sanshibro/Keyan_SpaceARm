@@ -1,0 +1,21 @@
+{
+  "stage": "free_flight_V21_takeover_frozen_sensor_map_development",
+  "full_task_accepted": false,
+  "map_hash": "1824f261adab631283a9a8ae784208bb92870299e352994acba445bcd060d5b5",
+  "planning_physics_steps": 8470,
+  "planner": {
+    "status": "deadline_hold"
+  },
+  "accepted_at": null,
+  "status": "deadline_hold",
+  "finished_at": null,
+  "sim_seconds": 11.470999999999082,
+  "wall_seconds": 18.943506310002704,
+  "realtime_factor": 0.6055373177637168,
+  "contacts": 0,
+  "saturated_steps": 0,
+  "interrupted": false,
+  "max_nav_error_m": 0.003565987511078207,
+  "position_rms_m": 0.002362115297809338,
+  "passed": false
+}

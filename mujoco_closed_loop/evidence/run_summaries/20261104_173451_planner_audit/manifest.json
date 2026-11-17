@@ -1,0 +1,19 @@
+{
+  "stage": "V21_map_planner_adapter_only",
+  "full_task_accepted": false,
+  "map_source": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_medium_s011__1d65567df47b/audited_frozen_map.npz",
+  "mode": "historical_frozen_map_regression_not_online_MuJoCo",
+  "candidate_accepted": false,
+  "diagnostics": {
+    "map_hash": "ebd8cb62dab63fee423a515f96c0948b3ee173255e9e95ee58a562a7fec519e5",
+    "profile_arm_length": 0.22,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 1.9309253977474008,
+      "arm": 2.1489625304876165
+    },
+    "status": "planning_failed_hold",
+    "error": "ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.",
+    "elapsed": 2.7587086059998
+  }
+}

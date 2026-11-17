@@ -1,0 +1,71 @@
+Multi thread started 
+p_pre->lidar_type 2
+~~~~/home/uav/桌面/uav_arm_1/mujoco_closed_loop/ros_ws/src/fast_lio/ file opened
+[WARN] [1794028130.064398754]: No point, skip this scan!
+
+[WARN] [1794028148.122859977]: catch sig 2
+[INFO] [1794028130.062180668]: IMU Initial Done
+Rebuild thread terminated normally
+... logging to /home/uav/.ros/log/50190276-da69-11f1-8da9-cdefef383940/roslaunch-uav-2241155.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/uav/桌面/uav_arm_1/mujoco_closed_loop/ros_ws/launch/mujoco_fast_lio.launch
+[1mstarted roslaunch server http://127.0.0.1:43565/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /common/imu_topic: /imu/data
+ * /common/lid_topic: /velodyne_points
+ * /common/time_offset_lidar_to_imu: 0.0
+ * /common/time_sync_en: False
+ * /cube_side_length: 100.0
+ * /feature_extract_enable: False
+ * /filter_size_map: 0.15
+ * /filter_size_surf: 0.15
+ * /mapping/acc_cov: 0.01
+ * /mapping/b_acc_cov: 0.0001
+ * /mapping/b_gyr_cov: 0.0001
+ * /mapping/det_range: 6.0
+ * /mapping/extrinsic_R: [1.0, 0.0, 0.0, 0...
+ * /mapping/extrinsic_T: [0.0, 0.0, 0.1]
+ * /mapping/extrinsic_est_en: False
+ * /mapping/fov_degree: 360
+ * /mapping/gyr_cov: 0.001
+ * /max_iteration: 3
+ * /pcd_save/interval: -1
+ * /pcd_save/pcd_save_en: False
+ * /point_filter_num: 2
+ * /preprocess/blind: 0.15
+ * /preprocess/lidar_type: 2
+ * /preprocess/scan_line: 16
+ * /preprocess/scan_rate: 10
+ * /preprocess/timestamp_unit: 0
+ * /publish/dense_publish_en: True
+ * /publish/path_en: False
+ * /publish/scan_bodyframe_pub_en: False
+ * /publish/scan_publish_en: True
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /runtime_pos_log_enable: False
+
+NODES
+  /
+    laserMapping (fast_lio/fastlio_mapping)
+
+auto-starting new master
+[1mprocess[master]: started with pid [2241184][0m
+[1mROS_MASTER_URI=http://127.0.0.1:11327/[0m
+]2;/home/uav/桌面/uav_arm_1/mujoco_closed_loop/ros_ws/launch/mujoco_fast_lio.launch http://127.0.0.1:11327/
+[1msetting /run_id to 50190276-da69-11f1-8da9-cdefef383940[0m
+[1mprocess[rosout-1]: started with pid [2241196][0m
+started core service [/rosout]
+[1mprocess[laserMapping-2]: started with pid [2241203][0m
+[laserMapping-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

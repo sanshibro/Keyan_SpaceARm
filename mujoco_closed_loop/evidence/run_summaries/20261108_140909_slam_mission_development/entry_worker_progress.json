@@ -1,0 +1,15 @@
+{
+  "stage": "finished",
+  "worker_wall_s": 2.0180062529980205,
+  "diagnostics": {
+    "map_hash": "33ff56678520187d67d434cfde668ff0d04dcc892ee951301da2fac9069c2679",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": -0.05,
+      "arm": 0.3511954661675073
+    },
+    "status": "start_unverified_or_blocked_hold",
+    "elapsed": 0.044553278014063835
+  }
+}

@@ -70,6 +70,13 @@ class WholeBodyTrajectoryExecutorNode:
         self.rolling_switch_wait_timeout = max(
             1.0, float(rospy.get_param("~rolling_switch_wait_timeout", 15.0))
         )
+        self.switch_continuity_mode = str(rospy.get_param(
+            "~switch_continuity_mode", "whole_body_bridge"
+        ))
+        if self.switch_continuity_mode not in ("whole_body_bridge", "position_only"):
+            raise ValueError(
+                "switch_continuity_mode must be whole_body_bridge or position_only"
+            )
         # Objective normalization is separate from the explicit C0/C1 hard
         # gate below. A low minimax score selects a candidate phase; it does
         # not by itself authorize a discontinuous handoff.
@@ -120,7 +127,7 @@ class WholeBodyTrajectoryExecutorNode:
             raise ValueError("whole-body switch gate limits must be finite and positive")
         self.enable_switch_bridge = bool(rospy.get_param(
             "~enable_switch_bridge", True
-        ))
+        )) and self.switch_continuity_mode == "whole_body_bridge"
         self.switch_bridge_duration = max(
             0.4, float(rospy.get_param("~switch_bridge_duration", 1.5))
         )
@@ -1222,7 +1229,8 @@ class WholeBodyTrajectoryExecutorNode:
         gate_violations = {}
         switch_bridge = None
         switch_bridge_report = {"enabled": False, "status": "UNAVAILABLE"}
-        if (self.last_commanded_switch_state is not None
+        if (self.switch_continuity_mode == "whole_body_bridge"
+                and self.last_commanded_switch_state is not None
                 and self.last_commanded_switch_rate is not None
                 and self.last_commanded_switch_acceleration is not None):
             pending_states = []
@@ -1289,8 +1297,14 @@ class WholeBodyTrajectoryExecutorNode:
                 (desired_position, measured_position), self.rolling_switch_max_advance,
             )
             continuity.update({
-                "switch_match_mode": "position_fallback",
-                "switch_continuity_diagnostics_unavailable": True,
+                "switch_match_mode": (
+                    "position_only_ablation"
+                    if self.switch_continuity_mode == "position_only"
+                    else "position_fallback"
+                ),
+                "switch_continuity_diagnostics_unavailable": (
+                    self.switch_continuity_mode != "position_only"
+                ),
             })
         switch_gap = max(matched_gaps)
         raw_gate_violations = dict(gate_violations)
@@ -1303,7 +1317,8 @@ class WholeBodyTrajectoryExecutorNode:
                 "enabled": self.enable_switch_bridge,
                 "status": "NOT_REQUIRED_DIRECT_C1",
             }
-        elif self.last_commanded_switch_acceleration is not None:
+        elif (self.switch_continuity_mode == "whole_body_bridge"
+              and self.last_commanded_switch_acceleration is not None):
             switch_bridge, switch_bridge_report = self._prepare_switch_bridge(
                 self.pending, matched_elapsed, preserved_phase_rate,
                 pending_accelerations,

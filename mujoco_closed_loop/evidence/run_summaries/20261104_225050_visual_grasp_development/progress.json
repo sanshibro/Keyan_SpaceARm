@@ -1,0 +1,1 @@
+{"sim_time": 89.00100000006091, "phase": "DESCENT", "nav_age": 0.1390000000006637, "shape_age": 0.1390000000006637, "target_seen": true, "confirmed": false, "lost": false, "estimated_position": [-0.04571413683717565, -1.6876804482684264, 1.6806707282415065], "relative_error": [-2.3387946248957063, 0.8789108728172252, -0.07978059207465771], "descent_progress": 0.0}

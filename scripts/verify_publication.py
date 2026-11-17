@@ -28,7 +28,7 @@ def main():
         entries = []
         for path in sorted(ROOT.rglob("*")):
             relative = path.relative_to(ROOT)
-            if (path.is_file() and path != index and ".git" not in relative.parts
+            if (path.is_file() and not path.is_symlink() and path != index and ".git" not in relative.parts
                     and "__pycache__" not in relative.parts and ".reproduction" not in relative.parts):
                 entries.append(sha256(path) + "  " + str(relative))
         index.write_text("\n".join(entries) + "\n", encoding="utf-8")

@@ -80,6 +80,12 @@ def main():
     parser.add_argument("--seeds", nargs="+", type=int)
     parser.add_argument("--map-name", default="development_map.npz")
     parser.add_argument("--method-time-budget", type=float, default=10.0)
+    parser.add_argument("--result-method-label")
+    parser.add_argument("--ablation-variant", choices=("full", "no_seed", "fixed_phi"),
+                        default="full")
+    parser.add_argument("--switch-continuity",
+                        choices=("whole_body_bridge", "position_only"),
+                        default="whole_body_bridge")
     parser.add_argument("--preflight-timeout", type=int, default=300)
     parser.add_argument("--task-timeout", type=int, default=900)
     parser.add_argument("--limit", type=int, default=0)
@@ -88,6 +94,10 @@ def main():
     args = parser.parse_args()
 
     methods = list(dict.fromkeys(args.methods))
+    if (args.result_method_label or args.ablation_variant != "full"
+            or args.switch_continuity != "whole_body_bridge"):
+        if methods != ["rolling_wb_v2"]:
+            raise SystemExit("ablation controls require --methods rolling_wb_v2")
     scenarios = []
     for task_path in sorted(args.scenario_root.rglob("task.yaml")):
         task = yaml.safe_load(task_path.read_text(encoding="utf-8")) or {}
@@ -115,6 +125,9 @@ def main():
         "scenario_root": str(args.scenario_root.resolve()),
         "scenario_count": len(scenarios),
         "methods": methods,
+        "result_method_label": args.result_method_label,
+        "ablation_variant": args.ablation_variant,
+        "switch_continuity_mode": args.switch_continuity,
         "method_time_budget_s": args.method_time_budget,
         "preflight_timeout_s": args.preflight_timeout,
         "task_timeout_s": args.task_timeout,
@@ -135,24 +148,25 @@ def main():
         scenario_name = str(task.get("name", scenario_dir.name))
         map_path = scenario_dir / args.map_name
         for method in method_order(scenario_name, methods):
+            result_method = args.result_method_label or method
             index += 1
             previous = [
-                item for item in existing.get((scenario_name, method), [])
+                item for item in existing.get((scenario_name, result_method), [])
                 if item.get("result") != "SYSTEM_ERROR"
             ]
             if previous:
                 completed += 1
                 results.append({
-                    "scenario": scenario_name, "method": method,
+                    "scenario": scenario_name, "method": result_method,
                     "status": "SKIPPED_EXISTING", "existing": previous,
                 })
                 print("[%d/%d] SKIP %s %s" % (
-                    index, scheduled, scenario_name, method
+                    index, scheduled, scenario_name, result_method
                 ), flush=True)
                 continue
             if not map_path.is_file():
                 failure = {
-                    "scenario": scenario_name, "method": method,
+                    "scenario": scenario_name, "method": result_method,
                     "reason": "MAP_NOT_READY", "map": str(map_path),
                 }
                 infrastructure_failures.append(failure)
@@ -164,6 +178,9 @@ def main():
             command = [
                 str(PACKAGE / "scripts" / "run_method_comparison_closed_loop.sh"),
                 "--method", method,
+                "--result-method-label", result_method,
+                "--ablation-variant", args.ablation_variant,
+                "--switch-continuity", args.switch_continuity,
                 "--scenario-dir", str(scenario_dir),
                 "--map", str(map_path),
                 "--method-time-budget", str(args.method_time_budget),
@@ -175,9 +192,9 @@ def main():
                 command.append("--formal")
             if args.gazebo_gui:
                 command.append("--gazebo-gui")
-            log_path = log_root / (scenario_name + "__" + method + ".log")
+            log_path = log_root / (scenario_name + "__" + result_method + ".log")
             print("[%d/%d] RUN %s %s" % (
-                index, scheduled, scenario_name, method
+                index, scheduled, scenario_name, result_method
             ), flush=True)
             with log_path.open("w", encoding="utf-8") as log:
                 process = subprocess.run(
@@ -185,13 +202,13 @@ def main():
                 )
             after = [
                 item for item in load_existing(args.output_root).get(
-                    (scenario_name, method), []
+                    (scenario_name, result_method), []
                 ) if item.get("result") != "SYSTEM_ERROR"
             ]
             if after:
                 completed += 1
                 item = {
-                    "scenario": scenario_name, "method": method,
+                    "scenario": scenario_name, "method": result_method,
                     "status": after[-1]["result"], "returncode": process.returncode,
                     "run_dir": after[-1]["run_dir"], "log": str(log_path),
                 }
@@ -200,7 +217,7 @@ def main():
                 ), flush=True)
             else:
                 item = {
-                    "scenario": scenario_name, "method": method,
+                    "scenario": scenario_name, "method": result_method,
                     "status": "INFRASTRUCTURE_INCOMPLETE",
                     "returncode": process.returncode, "log": str(log_path),
                 }

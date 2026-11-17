@@ -1,0 +1,18 @@
+{
+  "stage": "V21_map_planner_adapter_only",
+  "full_task_accepted": false,
+  "map_source": "mujoco_closed_loop/runs/20261104_173056_perception_audit/sensor_map.npz",
+  "mode": "MuJoCo_sensor_map",
+  "candidate_accepted": false,
+  "diagnostics": {
+    "map_hash": "57377d1836516966b4e61c2d10f2f61732fec5accc6c888f48c1952814752189",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": -0.08,
+      "arm": -0.114
+    },
+    "status": "start_unverified_or_blocked_hold",
+    "elapsed": 0.0020010240000374324
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "stage": "fixture_rgbd_odometry_audit",
+  "full_task_accepted": false,
+  "initialization": "known_initial_camera_poses_only_from_simulator",
+  "feedback": "subsequent_poses_from_RGBD_ORB_depth_PnP",
+  "frames": 60,
+  "valid_visible_fraction": 1.0,
+  "max_nav_error_m": 0.026446854536546386,
+  "max_bend_error_deg": 159.14946029713866,
+  "injected_dropout_rejected": true,
+  "target_detected_frames": 56,
+  "sim_seconds": 6.000000000000338,
+  "wall_seconds": 5.083010814999852,
+  "passed": false
+}

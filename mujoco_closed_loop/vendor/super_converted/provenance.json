@@ -1,0 +1,97 @@
+{
+  "source": "https://github.com/hku-mars/SUPER-Hardware",
+  "commit": "6dd5419735dc0d6fd975bfc66fe7c76c4ecda66a",
+  "license": "MIT; original retained in vendor/SUPER-Hardware/LICENSE",
+  "converter": "gmsh 4.11.1",
+  "units": "source mm; output m",
+  "parts": {
+    "main_board": {
+      "source": "CarbonFiber/5mm_main_board.STEP",
+      "source_sha256": "99d3bfd7f5ab195c6b0eade9391232b278d093d953a91718cf51e30092ed3558",
+      "output_sha256": "c84e70818cbc245279869f45cb52e69be47fcd2806752fd40d378caeb0a0eddd",
+      "volume_m3": 7.675264692956051e-05,
+      "centroid_m": [
+        -0.00043232334934156775,
+        0.002498532118431734,
+        4.391604413320348e-18
+      ],
+      "bbox_min_m": [
+        -0.1129931902606153,
+        0.0,
+        -0.11299494936611665
+      ],
+      "bbox_max_m": [
+        0.1129931902606153,
+        0.005,
+        0.11299494936611665
+      ],
+      "triangles": 18240
+    },
+    "second_board": {
+      "source": "CarbonFiber/3mm_sec_board.step",
+      "source_sha256": "78cc6ad1b0924b99cd87d3bc76a27fb5f50c56c57a3414a3876b89fcb1823c31",
+      "output_sha256": "3f2b97dfac49404ec32c1e6e1e85e0f43f36b5c2cd8ac57386770ea7fad9cb6e",
+      "volume_m3": 2.697264903188529e-05,
+      "centroid_m": [
+        5.90209518835771e-17,
+        0.001499999999999996,
+        9.17160782353254e-17
+      ],
+      "bbox_min_m": [
+        -0.0655,
+        0.0,
+        -0.062499999999999986
+      ],
+      "bbox_max_m": [
+        0.06549999999999997,
+        0.003,
+        0.06250000000000001
+      ],
+      "triangles": 9086
+    },
+    "battery_board": {
+      "source": "CarbonFiber/3mm_bat_board.step",
+      "source_sha256": "bb8799ac4a277c7f260e2b0b524c1d05f51038470bfa69cdb322867e8c1a977c",
+      "output_sha256": "b42245cdad842e8ce6f20b7b6b28ffa8597d6661e8bd8b9c4938a78bc663a645",
+      "volume_m3": 7.5446340279461295e-06,
+      "centroid_m": [
+        -1.9769962404838497e-17,
+        0.001,
+        -9.402786997423188e-18
+      ],
+      "bbox_min_m": [
+        -0.05250000000000001,
+        0.0,
+        -0.028000000000000004
+      ],
+      "bbox_max_m": [
+        0.05249999999999999,
+        0.002,
+        0.027999999999999994
+      ],
+      "triangles": 2326
+    },
+    "foot": {
+      "source": "CarbonFiber/4mm-foot.STEP",
+      "source_sha256": "0be8bc1e4c7c8d2a3d125b2996093c1e6885a9bac07d78c9d554b215ea10d903",
+      "output_sha256": "684506df2100bb6fe28c6806cafcce55d80bb5f148717b5396274f8fe0994936",
+      "volume_m3": 5.7374952882876435e-06,
+      "centroid_m": [
+        0.00013492344980301773,
+        -0.016042241849109528,
+        0.002
+      ],
+      "bbox_min_m": [
+        -0.0375641922306219,
+        -0.061,
+        0.0
+      ],
+      "bbox_max_m": [
+        0.037548999983634146,
+        0.0040000000000000166,
+        0.004
+      ],
+      "triangles": 1078
+    }
+  }
+}

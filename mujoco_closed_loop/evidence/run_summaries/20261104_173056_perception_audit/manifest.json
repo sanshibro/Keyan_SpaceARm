@@ -1,0 +1,21 @@
+{
+  "stage": "fixture_rgbd_odometry_audit",
+  "full_task_accepted": false,
+  "initialization": "known_initial_camera_poses_only_from_simulator",
+  "feedback": "subsequent_poses_from_RGBD_ORB_depth_PnP",
+  "frames": 60,
+  "valid_visible_fraction": 1.0,
+  "max_nav_error_m": 0.018574824197188783,
+  "max_bend_error_deg": 0.805820261708224,
+  "injected_dropout_rejected": true,
+  "target_detected_frames": 56,
+  "max_target_surface_error_m": 0.008967908880860685,
+  "lidar_scans": 12,
+  "occupied_voxels": 2931,
+  "observed_voxels": 36124,
+  "sim_seconds": 6.000000000000338,
+  "wall_seconds": 8.116260838000017,
+  "acceptance_scope": "RGBD_odometry_and_compensated_shape_only_not_target_or_task",
+  "target_surface_30mm_passed": true,
+  "passed": true
+}

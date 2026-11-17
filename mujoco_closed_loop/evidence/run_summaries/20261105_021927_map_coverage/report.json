@@ -1,0 +1,18 @@
+{
+  "body": {
+    "samples": 51,
+    "unknown_samples": 0,
+    "unknown_points_world": [],
+    "unknown_min_elevation_deg": null,
+    "unknown_max_elevation_deg": null,
+    "below_lidar_minus30deg": 0
+  },
+  "arm": {
+    "samples": 568,
+    "unknown_samples": 0,
+    "unknown_points_world": [],
+    "unknown_min_elevation_deg": null,
+    "unknown_max_elevation_deg": null,
+    "below_lidar_minus30deg": 0
+  }
+}

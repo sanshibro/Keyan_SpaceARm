@@ -1,0 +1,32 @@
+[
+  {
+    "body_x": -0.6,
+    "body_z": 1.5,
+    "detected": true,
+    "error_m": 7.892730048315858e-05
+  },
+  {
+    "body_x": -0.3,
+    "body_z": 1.55,
+    "detected": false,
+    "error_m": null
+  },
+  {
+    "body_x": -0.1,
+    "body_z": 1.55,
+    "detected": false,
+    "error_m": null
+  },
+  {
+    "body_x": 0,
+    "body_z": 1.55,
+    "detected": true,
+    "error_m": 5.418853297157902e-05
+  },
+  {
+    "body_x": 0,
+    "body_z": 1.5064,
+    "detected": true,
+    "error_m": 5.2459286480081506e-05
+  }
+]

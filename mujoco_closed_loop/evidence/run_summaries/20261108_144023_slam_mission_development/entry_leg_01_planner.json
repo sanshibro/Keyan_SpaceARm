@@ -1,0 +1,75 @@
+{
+  "map_hash": "60ead8ab84340c6ea5bf4ad6cfdf9cbe4d30836f0a4a8df013dd5b1f15f13980",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.23689516435351388,
+    "arm": 0.23588989435140625
+  },
+  "status": "validated_short_direct_bridge",
+  "success": true,
+  "elapsed": 0.5173516090144403,
+  "validation": {
+    "feasible": true,
+    "status": "safe",
+    "metrics": {
+      "duration": 4.2,
+      "validation_samples": 108.0,
+      "body_clearance_min": 0.20763070548775275,
+      "arm_clearance_min": 0.18491670142852026,
+      "com_offset_max": 0.0005102150410303207,
+      "gravity_torque_max": 0.011261721493141754,
+      "velocity_max": 0.019999999999999973,
+      "acceleration_max": 0.03125000000000001,
+      "jerk_max": 0.08000000000000018,
+      "yaw_rate_max": 0.0,
+      "theta_rate_max": 0.006661589415565703,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.0031855148039514132,
+      "thrust_ratio_min": 0.9999999982178004,
+      "thrust_ratio_max": 1.000005265339915,
+      "body_obstacle_min": "slam_occupied",
+      "arm_obstacle_min": "slam_occupied",
+      "terminal_tip_error": -1.0
+    },
+    "failure_index": -1,
+    "failure_time": -1.0,
+    "failure_reason": "none"
+  },
+  "reference": {
+    "search": "V2_dense_validated_direct_bridge"
+  },
+  "optimizer": {
+    "backend": "V2_spline_direct_bridge"
+  },
+  "takeover_gaps": {
+    "position_gap_m": 0.0,
+    "yaw_gap_rad": 0.0,
+    "bending_gap_rad": 0.0,
+    "linear_velocity_gap_m_s": 0.0639434739232954,
+    "yaw_rate_gap_rad_s": 6.177671097147738e-05,
+    "bending_rate_gap_rad_s": 0.0,
+    "old_bending_vector_rad": [
+      -0.009912302615619066,
+      -0.017353305700372607
+    ],
+    "new_bending_vector_rad": [
+      -0.009912302615619066,
+      -0.017353305700372607
+    ],
+    "old_bending_rate_rad_s": [
+      0.0,
+      -0.0
+    ],
+    "new_bending_rate_rad_s": [
+      0.0,
+      0.0
+    ]
+  },
+  "takeover_violations": {
+    "linear_velocity_gap_m_s": {
+      "value": 0.0639434739232954,
+      "limit": 0.03
+    }
+  }
+}

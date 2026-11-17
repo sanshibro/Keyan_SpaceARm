@@ -15,6 +15,30 @@ class SeedPlan:
     diagnostics: dict = field(default_factory=dict)
 
 
+def reference_only_seed(reference_states, current_state, knot_count,
+                        terminal_state=None, fixed_phi=None):
+    """Build the deliberately unguided seed used only by the seed ablation."""
+    states = resample_states(reference_states, knot_count)
+    states[0] = np.asarray(current_state, dtype=float)
+    if terminal_state is not None:
+        states[-1] = np.asarray(terminal_state, dtype=float)
+    if fixed_phi is not None:
+        states[:, PHI] = float(fixed_phi)
+    states[:, YAW] = np.unwrap(states[:, YAW])
+    states[:, PHI] = np.unwrap(states[:, PHI])
+    return SeedPlan(
+        states=states,
+        risk_knots=[],
+        risk_spans=[],
+        diagnostics={
+            "seed_strategy": "reference_only_ablation",
+            "shape_mode": "fixed_phi_ablation" if fixed_phi is not None else "reference_shape",
+            "expanded": 0,
+            "raw_risk_knots": [],
+        },
+    )
+
+
 class WholeBodySeedPlanner:
     """Beam-search a collision-aware whole-body seed over the complete horizon."""
 
@@ -328,7 +352,7 @@ class WholeBodySeedPlanner:
         return conditioned
 
     def plan(self, reference_states, current_state=None, terminal_state=None,
-             _force_phi_unlocked=False):
+             _force_phi_unlocked=False, _force_phi_locked=False):
         # A planner instance is reused across rolling windows, but the local
         # obstacle set can change.  Cache only within one deterministic search.
         self._clearance_cache = {}
@@ -346,9 +370,11 @@ class WholeBodySeedPlanner:
             for neighbor in (index - 2, index - 1, index, index + 1, index + 2)
             if 0 < neighbor < len(reference)
         ))
-        phi_locked = False
+        if _force_phi_locked and _force_phi_unlocked:
+            raise ValueError("phi cannot be forced locked and unlocked simultaneously")
+        phi_locked = bool(_force_phi_locked)
         fixed_phi_slack = -float("inf")
-        if (self.config.adaptive_phi and terminal_state is None
+        if (not phi_locked and self.config.adaptive_phi and terminal_state is None
                 and not _force_phi_unlocked):
             phi_locked, fixed_phi_slack = self._fixed_phi_feasible(
                 reference, risk_knots, reference[0, [THETA, PHI]]
@@ -386,6 +412,8 @@ class WholeBodySeedPlanner:
             # it must not replace the terminal pose/shape with a cheaper grid
             # state (previously 75 deg instead of the required 90 deg).
             states[-1] = np.asarray(terminal_state, dtype=float)
+            if phi_locked:
+                states[-1, PHI] = reference[0, PHI]
         states = self._condition_shape_rates(states)
         states[:, YAW] = np.unwrap(states[:, YAW])
         states[:, PHI] = np.unwrap(states[:, PHI])

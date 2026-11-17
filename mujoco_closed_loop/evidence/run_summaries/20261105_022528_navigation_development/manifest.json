@@ -1,0 +1,30 @@
+{
+  "stage": "free_flight_V21_takeover_frozen_sensor_map_development",
+  "full_task_accepted": false,
+  "map_hash": "1824f261adab631283a9a8ae784208bb92870299e352994acba445bcd060d5b5",
+  "planning_physics_steps": 1040,
+  "planner": {
+    "map_hash": "1824f261adab631283a9a8ae784208bb92870299e352994acba445bcd060d5b5",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": -0.05,
+      "arm": 0.8922044534919306
+    },
+    "status": "start_unverified_or_blocked_hold",
+    "elapsed": 0.08946476299752248,
+    "worker_total_wall_s": 0.917530432001513
+  },
+  "accepted_at": null,
+  "status": "start_unverified_or_blocked_hold",
+  "finished_at": null,
+  "sim_seconds": 8.001000000001005,
+  "wall_seconds": 11.07963564700185,
+  "realtime_factor": 0.7221356599543123,
+  "contacts": 0,
+  "saturated_steps": 0,
+  "interrupted": false,
+  "max_nav_error_m": 0.0037072313544316,
+  "position_rms_m": 0.0033407531213637746,
+  "passed": false
+}

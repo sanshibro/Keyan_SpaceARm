@@ -1,0 +1,17 @@
+{
+  "stage": "free_hover_truth_development",
+  "mode": "moving",
+  "full_task_accepted": false,
+  "feedback": "mujoco_truth_development",
+  "controller": "custom_geometric_rotor_controller_not_PX4",
+  "mass_kg": 2.2499999999999996,
+  "sim_seconds": 30.00000000001368,
+  "wall_seconds": 10.073127355999986,
+  "position_rms_m": 0.0004417811904828176,
+  "position_max_m": 0.0012797289370823485,
+  "max_tilt_deg": 0.05454143065637346,
+  "contact_steps": 0,
+  "saturated_steps": 0,
+  "model_sha256": "31642006bd155cb919caa43d7066c8484cc1e959a9a328e4969ae39191d50335",
+  "passed": true
+}

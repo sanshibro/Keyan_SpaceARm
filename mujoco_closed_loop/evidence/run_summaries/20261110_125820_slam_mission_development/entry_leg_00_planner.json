@@ -1,0 +1,148 @@
+{
+  "map_hash": "d907e5c716c081e55dea8246415b38355bdc37130545b20c6b90bc77d4e9747b",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.5758675968545724,
+    "arm": 0.7877710491197052
+  },
+  "reference_candidate_observed_voxels": 78795,
+  "full_observed_voxels": 86345,
+  "heading_reference": "hold_initial",
+  "reference": {
+    "search": "certified_continuous_body_bridge",
+    "expanded": 0,
+    "terminal_reached": true,
+    "certified_terminal_shortcut": true
+  },
+  "reference_states": [
+    [
+      -0.6285476913294606,
+      -2.482354686417918,
+      1.5718343740094056,
+      1.2438587081159356e-05,
+      0.01817497978125694,
+      1.271546539605338
+    ],
+    [
+      -0.6183604635984271,
+      -1.9739170759005567,
+      1.5479955245664,
+      1.2438587081159356e-05,
+      0.0,
+      1.271546539605338
+    ]
+  ],
+  "seed": {
+    "seed_cost": 0.038407573934448554,
+    "expanded": 96,
+    "raw_risk_knots": [],
+    "control_body_clearance_min": 0.2615744714238479,
+    "control_arm_clearance_min": 0.4161964425095962,
+    "control_theta_max_deg": 1.0413496342016266,
+    "control_z_max": 1.5718343740094056,
+    "edge_body_clearance_min": 0.2615744714238479,
+    "edge_arm_clearance_min": 0.4161964425095962,
+    "unsafe_edges": [],
+    "shape_mode": "theta_only_fixed_phi",
+    "fixed_phi_deg": 72.85425017385025,
+    "fixed_phi_screen_slack": -Infinity,
+    "terminal_shape": [
+      0.0,
+      1.271546539605338
+    ]
+  },
+  "status": "start_or_rate_mismatch_hold_requires_validated_bridge",
+  "success": true,
+  "elapsed": 3.441468356002588,
+  "optimizer": {
+    "solver_message": "None",
+    "backend": "projected_coordinate_pattern_anytime",
+    "seed": {
+      "seed_cost": 0.038407573934448554,
+      "expanded": 96,
+      "raw_risk_knots": [],
+      "control_body_clearance_min": 0.2615744714238479,
+      "control_arm_clearance_min": 0.4161964425095962,
+      "control_theta_max_deg": 1.0413496342016266,
+      "control_z_max": 1.5718343740094056,
+      "edge_body_clearance_min": 0.2615744714238479,
+      "edge_arm_clearance_min": 0.4161964425095962,
+      "unsafe_edges": [],
+      "shape_mode": "theta_only_fixed_phi",
+      "fixed_phi_deg": 72.85425017385025,
+      "fixed_phi_screen_slack": -Infinity,
+      "terminal_shape": [
+        0.0,
+        1.271546539605338
+      ]
+    },
+    "repair": "none",
+    "repair_attempts_run": 0,
+    "repair_attempt_labels": [],
+    "repair_attempt_results": [],
+    "candidate_collocation_min": 0.0,
+    "candidate_validation_skipped": false,
+    "solver_time_budget_s": 0.8,
+    "wall_time_budget_s": 13.535519625991583,
+    "validation_reserve_s": 0.15
+  },
+  "validation": {
+    "feasible": true,
+    "status": "safe",
+    "metrics": {
+      "duration": 6.654622486495076,
+      "validation_samples": 174.0,
+      "body_clearance_min": 0.26111382508168685,
+      "arm_clearance_min": 0.4161964425095962,
+      "com_offset_max": 0.0004640140647656847,
+      "gravity_torque_max": 0.010241950444540576,
+      "velocity_max": 0.13479376533571652,
+      "acceleration_max": 0.26080524860259435,
+      "jerk_max": 0.8812836179082458,
+      "yaw_rate_max": 0.0,
+      "theta_rate_max": 0.024986736757929298,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.026583327304510528,
+      "thrust_ratio_min": 0.9991081102688784,
+      "thrust_ratio_max": 1.0015923454622497,
+      "body_obstacle_min": "slam_occupied",
+      "arm_obstacle_min": "slam_occupied",
+      "terminal_tip_error": -1.0
+    },
+    "failure_index": -1,
+    "failure_time": -1.0,
+    "failure_reason": "none"
+  },
+  "worker_total_wall_s": 3.875715291011147,
+  "takeover_gaps": {
+    "position_gap_m": 0.04454274854049326,
+    "yaw_gap_rad": 7.670538185156062e-05,
+    "bending_gap_rad": 0.00852523655095654,
+    "linear_velocity_gap_m_s": 0.03594404065188017,
+    "yaw_rate_gap_rad_s": 5.8575934329242366e-05,
+    "bending_rate_gap_rad_s": 0.0062859569459930145,
+    "old_bending_vector_rad": [
+      -0.0014548071254924747,
+      0.022492154556082774
+    ],
+    "new_bending_vector_rad": [
+      0.005358046159667371,
+      0.01736724593595577
+    ],
+    "old_bending_rate_rad_s": [
+      -0.0021851997678748445,
+      0.005893908440191241
+    ],
+    "new_bending_rate_rad_s": [
+      -0.0,
+      0.0
+    ]
+  },
+  "takeover_violations": {
+    "linear_velocity_gap_m_s": {
+      "value": 0.03594404065188017,
+      "limit": 0.03
+    }
+  }
+}

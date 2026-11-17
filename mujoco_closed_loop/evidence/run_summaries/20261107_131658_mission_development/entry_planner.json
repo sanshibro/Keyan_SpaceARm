@@ -1,0 +1,145 @@
+{
+  "map_hash": "07ff2ff228bb7cbb085c3f0865e19990942fc18c7d8362012260c53f9cf00b8e",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.3338603966593626,
+    "arm": 0.3266060270612937
+  },
+  "reference_candidate_observed_voxels": 108772,
+  "full_observed_voxels": 2537067,
+  "heading_reference": "hold_initial",
+  "reference": {
+    "search": "certified_continuous_body_bridge",
+    "expanded": 0,
+    "terminal_reached": true,
+    "certified_terminal_shortcut": true
+  },
+  "reference_states": [
+    [
+      -0.6001626871228817,
+      -1.2025447350084648,
+      1.500436703964406,
+      -6.2519335955210636e-06,
+      0.0,
+      0.0
+    ],
+    [
+      -0.6,
+      0.0,
+      1.5,
+      -6.2519335955210636e-06,
+      0.0,
+      0.0
+    ]
+  ],
+  "seed": {
+    "seed_cost": 68.05304191597705,
+    "expanded": 222,
+    "raw_risk_knots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "control_body_clearance_min": 0.157169510446018,
+    "control_arm_clearance_min": 0.11625106087109596,
+    "control_theta_max_deg": 117.99999999999999,
+    "control_z_max": 1.5802495451225178,
+    "edge_body_clearance_min": 0.15656531663379025,
+    "edge_arm_clearance_min": 0.10684651401843567,
+    "unsafe_edges": [],
+    "shape_mode": "theta_only_fixed_phi",
+    "fixed_phi_deg": 0.0,
+    "fixed_phi_screen_slack": -Infinity,
+    "terminal_shape": [
+      0.0,
+      0.0
+    ]
+  },
+  "status": "rejected_time_budget",
+  "success": false,
+  "elapsed": 11.007581995014334,
+  "optimizer": {
+    "solver_message": "None",
+    "backend": "projected_coordinate_pattern_anytime",
+    "seed": {
+      "seed_cost": 68.05304191597705,
+      "expanded": 222,
+      "raw_risk_knots": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "control_body_clearance_min": 0.157169510446018,
+      "control_arm_clearance_min": 0.11625106087109596,
+      "control_theta_max_deg": 117.99999999999999,
+      "control_z_max": 1.5802495451225178,
+      "edge_body_clearance_min": 0.15656531663379025,
+      "edge_arm_clearance_min": 0.10684651401843567,
+      "unsafe_edges": [],
+      "shape_mode": "theta_only_fixed_phi",
+      "fixed_phi_deg": 0.0,
+      "fixed_phi_screen_slack": -Infinity,
+      "terminal_shape": [
+        0.0,
+        0.0
+      ]
+    },
+    "repair": "none",
+    "repair_attempts_run": 1,
+    "repair_attempt_labels": [
+      "whole_body_shift_+0.000_+0.060_+0.000"
+    ],
+    "repair_attempt_results": [
+      {
+        "label": "whole_body_shift_+0.000_+0.060_+0.000",
+        "feasible": false,
+        "failure_reason": "arm_collision",
+        "metrics": {
+          "body_clearance_min": 0.1912470765430545,
+          "arm_clearance_min": 0.09997011041518153,
+          "velocity_max": 0.11693910841071678,
+          "theta_rate_max": 0.6493492425136356,
+          "phi_rate_max": 0.0
+        }
+      }
+    ],
+    "candidate_collocation_min": -0.014353589977438783,
+    "candidate_validation_skipped": true,
+    "solver_time_budget_s": 0.8,
+    "wall_time_budget_s": 9.653925027989317,
+    "validation_reserve_s": 0.15
+  },
+  "validation": {
+    "feasible": false,
+    "status": "unsafe",
+    "metrics": {
+      "duration": 25.5,
+      "validation_samples": 644.0,
+      "body_clearance_min": -0.05,
+      "arm_clearance_min": 0.10665064250548764,
+      "com_offset_max": 0.03337459074255288,
+      "gravity_torque_max": 0.7366606541649986,
+      "velocity_max": 0.09517495680435244,
+      "acceleration_max": 0.15776178784417316,
+      "jerk_max": 0.43632454185888053,
+      "yaw_rate_max": 0.0,
+      "theta_rate_max": 0.6936639064918242,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.01608022248511744,
+      "thrust_ratio_min": 0.9996547382709801,
+      "thrust_ratio_max": 1.0003454650398798,
+      "body_obstacle_min": "slam_unknown",
+      "arm_obstacle_min": "slam_occupied",
+      "terminal_tip_error": -1.0
+    },
+    "failure_index": 113,
+    "failure_time": 4.48,
+    "failure_reason": "body_collision"
+  },
+  "worker_total_wall_s": 18.62655211999663
+}

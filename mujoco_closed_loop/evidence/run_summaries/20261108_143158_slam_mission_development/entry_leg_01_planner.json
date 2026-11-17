@@ -1,0 +1,80 @@
+{
+  "map_hash": "ec205fe7c6873846e10b639b1dea3904b7e51442b89015d9954bf7a9d395f4ac",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.21214277482659066,
+    "arm": 0.2565995540793272
+  },
+  "status": "start_or_rate_mismatch_hold_requires_validated_bridge",
+  "success": true,
+  "elapsed": 0.5786823649541475,
+  "validation": {
+    "feasible": true,
+    "status": "safe",
+    "metrics": {
+      "duration": 4.2,
+      "validation_samples": 108.0,
+      "body_clearance_min": 0.1964637573974291,
+      "arm_clearance_min": 0.22720881765294756,
+      "com_offset_max": 2.482534153247273e-16,
+      "gravity_torque_max": 5.479573509755044e-15,
+      "velocity_max": 0.013333333333333358,
+      "acceleration_max": 0.02083333333333341,
+      "jerk_max": 0.05333333333333362,
+      "yaw_rate_max": 0.0,
+      "theta_rate_max": 0.0,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.002123679154896079,
+      "thrust_ratio_min": 0.9999927997697061,
+      "thrust_ratio_max": 1.0000117101666361,
+      "body_obstacle_min": "slam_occupied",
+      "arm_obstacle_min": "slam_occupied",
+      "terminal_tip_error": -1.0
+    },
+    "failure_index": -1,
+    "failure_time": -1.0,
+    "failure_reason": "none"
+  },
+  "reference": {
+    "search": "V2_dense_validated_direct_bridge"
+  },
+  "optimizer": {
+    "backend": "V2_spline_direct_bridge"
+  },
+  "worker_total_wall_s": 2.117232335964218,
+  "takeover_gaps": {
+    "position_gap_m": 0.06699456542098722,
+    "yaw_gap_rad": 0.00018971290546154762,
+    "bending_gap_rad": 0.06118539675053577,
+    "linear_velocity_gap_m_s": 0.022216980669716065,
+    "yaw_rate_gap_rad_s": 0.0005649651494469715,
+    "bending_rate_gap_rad_s": 0.027598439158893033,
+    "old_bending_vector_rad": [
+      0.031178284565052724,
+      -0.05264567738286846
+    ],
+    "new_bending_vector_rad": [
+      0.0,
+      0.0
+    ],
+    "old_bending_rate_rad_s": [
+      0.015058561020364025,
+      -0.023128198892328245
+    ],
+    "new_bending_rate_rad_s": [
+      0.0,
+      0.0
+    ]
+  },
+  "takeover_violations": {
+    "position_gap_m": {
+      "value": 0.06699456542098722,
+      "limit": 0.05
+    },
+    "bending_gap_rad": {
+      "value": 0.06118539675053577,
+      "limit": 0.05235987755982989
+    }
+  }
+}

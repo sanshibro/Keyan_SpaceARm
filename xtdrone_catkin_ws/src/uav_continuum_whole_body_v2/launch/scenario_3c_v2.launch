@@ -23,6 +23,9 @@
   <arg name="final_convergence_timeout" default="15.0"/>
   <arg name="enable_rolling_planner" default="true"/>
   <arg name="method" default="rolling_wb_v2"/>
+  <arg name="result_method_label" default="$(arg method)"/>
+  <arg name="ablation_variant" default="full"/>
+  <arg name="switch_continuity_mode" default="whole_body_bridge"/>
   <arg name="experiment_class" default="engineering_regression"/>
   <arg name="logger_output_dir" default="$(find uav_continuum_whole_body_v2)/../../../xtdrone_plan/experiments/v2_runs"/>
   <arg name="run_name" default=""/>
@@ -40,6 +43,7 @@
     <param name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
     <param name="task_file" value="$(arg task_file)"/>
     <param name="method_time_budget" value="$(arg method_time_budget)"/>
+    <param name="ablation_variant" value="$(arg ablation_variant)"/>
   </node>
 
   <node pkg="uav_continuum_whole_body_v2" type="whole_body_trajectory_executor_node.py"
@@ -74,6 +78,7 @@
     <!-- Reject a stale successor promptly and solve again while the previous
          certified horizon still has ample executable reserve. -->
     <param name="rolling_switch_wait_timeout" value="3.0"/>
+    <param name="switch_continuity_mode" value="$(arg switch_continuity_mode)"/>
     <param name="world_pose_topic" value="$(arg pose_topic)"/>
     <param name="publish_hold_when_disabled" value="$(arg publish_hold_when_disabled)"/>
     <param name="require_px4_ready" value="$(arg require_px4_ready)"/>
@@ -112,13 +117,15 @@
 
   <node if="$(arg enable_logger)" pkg="uav_continuum_whole_body_v2"
         type="whole_body_metrics_logger_node.py" name="whole_body_metrics_logger_v2" output="screen">
-    <param name="method" value="$(arg method)"/>
+    <param name="method" value="$(arg result_method_label)"/>
     <param name="map_mode" value="$(arg map_mode)"/>
     <param name="map_snapshot_file" value="$(arg map_snapshot_file)"/>
     <param name="task_file" value="$(arg task_file)"/>
     <param name="oracle_file" value="$(arg oracle_file)"/>
     <param name="planner_config" value="$(arg planner_config)"/>
     <param name="experiment_class" value="$(arg experiment_class)"/>
+    <param name="ablation_variant" value="$(arg ablation_variant)"/>
+    <param name="switch_continuity_mode" value="$(arg switch_continuity_mode)"/>
     <param name="output_dir" value="$(arg logger_output_dir)"/>
     <param name="run_name" value="$(arg run_name)"/>
   </node>

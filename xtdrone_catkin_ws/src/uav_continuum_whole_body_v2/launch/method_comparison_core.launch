@@ -1,5 +1,8 @@
 <launch>
   <arg name="method" default="rolling_wb_v2"/>
+  <arg name="result_method_label" default="$(arg method)"/>
+  <arg name="ablation_variant" default="full"/>
+  <arg name="switch_continuity_mode" default="whole_body_bridge"/>
   <arg name="map_mode" default="frozen_slam"/>
   <arg name="map_snapshot_file"/>
   <arg name="task_file" default="$(find uav_continuum_whole_body_v2)/config/scenario_3c_task.yaml"/>
@@ -76,6 +79,9 @@
     <arg name="enable_rolling_planner"
          value="$(eval arg('method') == 'rolling_wb_v2')"/>
     <arg name="method" value="$(arg method)"/>
+    <arg name="result_method_label" value="$(arg result_method_label)"/>
+    <arg name="ablation_variant" value="$(arg ablation_variant)"/>
+    <arg name="switch_continuity_mode" value="$(arg switch_continuity_mode)"/>
     <arg name="experiment_class" value="$(arg experiment_class)"/>
     <arg name="logger_output_dir" value="$(arg logger_output_dir)"/>
     <arg name="run_name" value="$(arg run_name)"/>

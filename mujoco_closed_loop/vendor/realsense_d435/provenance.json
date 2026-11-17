@@ -1,0 +1,19 @@
+{
+  "source": "/opt/ros/noetic/share/realsense2_description/meshes/d435.dae",
+  "source_sha256": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78",
+  "package": "ROS realsense2_description",
+  "license": "Apache-2.0 (installed package.xml)",
+  "geometry": "all 18 Collada geometries; original metre-scale coordinates",
+  "outputs": {
+    "body": {
+      "sha256": "ac3e91c849cc90a17bc6305eea846fb467137c46a2750bcfda61964e295a8f5a",
+      "vertices": 193273,
+      "triangles": 200489
+    },
+    "details": {
+      "sha256": "176f340daabf14a182d5b0f81d9db8fb930951e0cf03cf6ab61a75dd71130ce4",
+      "vertices": 31595,
+      "triangles": 30697
+    }
+  }
+}

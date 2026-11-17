@@ -5,6 +5,8 @@ build/
 devel/
 install/
 .venv/
+.mujoco_deps/
+mujoco_closed_loop/ros_ws/src/CMakeLists.txt
 *.aux
 *.log
 *.out

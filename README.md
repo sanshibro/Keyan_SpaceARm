@@ -1,8 +1,14 @@
 # Keyan_SpaceARm — Morphology-Aware Rolling Whole-Body Planning
 
+## MuJoCo development branch
+
+当前分支 `mujoco-development` 增加截至 2026-11-10 的 MuJoCo 开发快照。入口与安装说明见 [MUJOCO_PUBLICATION_CN.md](MUJOCO_PUBLICATION_CN.md)，代码在 [mujoco_closed_loop/](mujoco_closed_loop/)。完整在线三墙穿越—抓取—退出尚未通过验收，不能将其等同于论文中的450次PX4/Gazebo试验。
+
+**论文冻结复现请切换 `main`。** 本分支的 `uav_continuum_whole_body_v2` 是当前 MuJoCo 所用的工作树快照（含工具碰撞包络扩展），不是 `e62b6f2` 的逐字副本。以下历史论文说明中的冻结代码与测试结论对应 `main`；数据和论文文件原样保留。
+
 This export accompanies the supplied manuscript **Morphology-Aware Rolling Whole-Body Planning for Aerial Continuum Manipulation in Confined Spaces**. It preserves the manuscript/layout package, the frozen PX4/Gazebo planner implementation, the formal paired results, raw records, figure sources, and available sensing code/data.
 
-此目录只对应论文使用的历史实验。2026年11月的MuJoCo开发工作没有混入。
+历史论文产物与新增 MuJoCo 开发证据分开保存。
 
 ## Contents and versions
 

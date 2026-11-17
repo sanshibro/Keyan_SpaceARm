@@ -1,0 +1,43 @@
+{
+  "kind": "frontier",
+  "waypoint": [
+    -0.6382163773112723,
+    -1.067197814566525,
+    1.4965587130602656
+  ],
+  "information": {
+    "distance_m": 0.05,
+    "clearance": {
+      "body": 0.20960311434763462,
+      "arm": 0.28720223977049786
+    },
+    "validation": {
+      "feasible": true,
+      "status": "safe",
+      "metrics": {
+        "duration": 7.2,
+        "validation_samples": 183.0,
+        "body_clearance_min": 0.20530439647303583,
+        "arm_clearance_min": 0.28720223977049786,
+        "com_offset_max": 2.482534153247273e-16,
+        "gravity_torque_max": 5.479573509755044e-15,
+        "velocity_max": 0.008333333333333347,
+        "acceleration_max": 0.013020833333333284,
+        "jerk_max": 0.033333333333333194,
+        "yaw_rate_max": 0.0,
+        "theta_rate_max": 0.0,
+        "phi_rate_max": 0.0,
+        "tilt_max": 0.0013273000786876987,
+        "thrust_ratio_min": 0.9999966036041169,
+        "thrust_ratio_max": 1.0000051581076044,
+        "body_obstacle_min": "slam_occupied",
+        "arm_obstacle_min": "slam_occupied",
+        "terminal_tip_error": -1.0
+      },
+      "failure_index": -1,
+      "failure_time": -1.0,
+      "failure_reason": "none"
+    }
+  },
+  "map_hash": "effb8ab8d2fc666af0d4f83b4daae58e90a4d6e67ef1581cc4da915914aed427"
+}

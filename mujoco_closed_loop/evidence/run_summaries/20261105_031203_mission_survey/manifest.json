@@ -1,0 +1,188 @@
+{
+  "fixture_pose_constraint": true,
+  "arm_sweep": true,
+  "self_volume_updates": 51,
+  "max_wrist_position_error_m": 0.007546444341378399,
+  "registration": "visual_orientation_plus_PCC_position_prior_not_independent_wrist_translation",
+  "stage": "physical_yaw_fixture_multicamera_survey_only",
+  "full_task_accepted": false,
+  "sim_seconds": 24.00000000000635,
+  "wall_seconds": 102.59158844200283,
+  "rgbd_integrations": 198,
+  "lidar_scans": 48,
+  "contacts": 0,
+  "planner": {
+    "map_hash": "3519ced1834ab8608e8cca50b938042e9884b4991758d40599265a20877af63d",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 0.33159871647388794,
+      "arm": 0.3240959619153505
+    },
+    "reference_candidate_observed_voxels": 106174,
+    "full_observed_voxels": 1933295,
+    "heading_reference": "hold_initial",
+    "reference": {
+      "expanded": 24,
+      "elapsed": 0.017273808000027202,
+      "preparation_elapsed": 1.3199944099978893,
+      "total_elapsed": 1.3372691959957592,
+      "path_points_raw": 25,
+      "path_points_simplified": 4,
+      "map_hash": "04157ed80708d057433095eceefd6ac20c398655873030a695e2609abd8731bc",
+      "terminal_reached": true,
+      "continuous_goal_bridge": false,
+      "reference_kind": "terminal",
+      "search": "weighted_astar",
+      "heuristic_weight": 1.5,
+      "requested_goal_distance": 0.0,
+      "requested_start_distance": 0.0,
+      "certified_terminal_shortcut": true
+    },
+    "reference_states": [
+      [
+        -0.6,
+        -1.2,
+        1.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.6,
+        0.0,
+        1.5,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "seed": {
+      "seed_cost": 28.704164639356367,
+      "expanded": 444,
+      "raw_risk_knots": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "control_body_clearance_min": 0.15954709474913975,
+      "control_arm_clearance_min": 0.12250368126029518,
+      "control_theta_max_deg": 117.99999999999999,
+      "control_z_max": 1.58,
+      "edge_body_clearance_min": 0.15173143245841303,
+      "edge_arm_clearance_min": 0.08459435739737563,
+      "unsafe_edges": [],
+      "shape_mode": "theta_phi",
+      "fixed_phi_deg": null,
+      "fixed_phi_screen_slack": 7.919899578313905e-05
+    },
+    "status": "rejected_time_budget",
+    "success": false,
+    "elapsed": 13.717291038999974,
+    "optimizer": {
+      "solver_message": "None",
+      "backend": "projected_coordinate_pattern_anytime",
+      "seed": {
+        "seed_cost": 28.704164639356367,
+        "expanded": 444,
+        "raw_risk_knots": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "control_body_clearance_min": 0.15954709474913975,
+        "control_arm_clearance_min": 0.12250368126029518,
+        "control_theta_max_deg": 117.99999999999999,
+        "control_z_max": 1.58,
+        "edge_body_clearance_min": 0.15173143245841303,
+        "edge_arm_clearance_min": 0.08459435739737563,
+        "unsafe_edges": [],
+        "shape_mode": "theta_phi",
+        "fixed_phi_deg": null,
+        "fixed_phi_screen_slack": 7.919899578313905e-05
+      },
+      "repair": "none",
+      "repair_attempts_run": 3,
+      "repair_attempt_labels": [
+        "whole_body_shift_+0.000_+0.060_+0.000",
+        "whole_body_shift_+0.060_+0.000_+0.000",
+        "whole_body_shift_+0.000_+0.000_-0.060"
+      ],
+      "repair_attempt_results": [
+        {
+          "label": "whole_body_shift_+0.000_+0.060_+0.000",
+          "feasible": false,
+          "failure_reason": "arm_collision",
+          "metrics": {
+            "body_clearance_min": 0.17298612923544548,
+            "arm_clearance_min": 0.06988328851625393,
+            "velocity_max": 0.12312728233306335,
+            "theta_rate_max": 0.38005383634047335,
+            "phi_rate_max": 0.027986240379429296
+          }
+        },
+        {
+          "label": "whole_body_shift_+0.060_+0.000_+0.000",
+          "feasible": false,
+          "failure_reason": "body_collision",
+          "metrics": {
+            "body_clearance_min": -0.05,
+            "arm_clearance_min": 0.10755451370485433,
+            "velocity_max": 0.11497626895106577,
+            "theta_rate_max": 0.38005383634047335,
+            "phi_rate_max": 0.037964448714018904
+          }
+        },
+        {
+          "label": "whole_body_shift_+0.000_+0.000_-0.060",
+          "feasible": false,
+          "failure_reason": "arm_collision",
+          "metrics": {
+            "body_clearance_min": 0.13589789349800724,
+            "arm_clearance_min": 0.06945191853633485,
+            "velocity_max": 0.10243956665105165,
+            "theta_rate_max": 0.38005383634047335,
+            "phi_rate_max": 0.04189607971541969
+          }
+        }
+      ],
+      "candidate_collocation_min": -0.008247545621082583,
+      "candidate_validation_skipped": true,
+      "solver_time_budget_s": 0.8,
+      "wall_time_budget_s": 10.003270459994383,
+      "validation_reserve_s": 0.15
+    },
+    "validation": {
+      "feasible": false,
+      "status": "unsafe",
+      "metrics": {
+        "duration": 26.472,
+        "validation_samples": 669.0,
+        "body_clearance_min": -0.05,
+        "arm_clearance_min": 0.08485993201821777,
+        "com_offset_max": 0.0333483901981493,
+        "gravity_torque_max": 0.7360823426486505,
+        "velocity_max": 0.1054164629180477,
+        "acceleration_max": 0.18010082151223064,
+        "jerk_max": 0.5200544363347872,
+        "yaw_rate_max": 0.0,
+        "theta_rate_max": 0.4095783165929943,
+        "phi_rate_max": 0.11653969098055068,
+        "tilt_max": 0.018356817335495032,
+        "thrust_ratio_min": 0.9996807861233172,
+        "thrust_ratio_max": 1.0003195301907903,
+        "body_obstacle_min": "slam_unknown",
+        "arm_obstacle_min": "slam_occupied",
+        "terminal_tip_error": -1.0
+      },
+      "failure_index": 108,
+      "failure_time": 4.28,
+      "failure_reason": "body_collision"
+    }
+  },
+  "candidate_accepted": false
+}

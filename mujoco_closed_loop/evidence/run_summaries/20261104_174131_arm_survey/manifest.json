@@ -1,0 +1,21 @@
+{
+  "stage": "fixed_base_mounted_camera_survey_only",
+  "full_task_accepted": false,
+  "sim_seconds": 17.999999999999016,
+  "wall_seconds": 91.33027711499926,
+  "rgbd_integrations": 253,
+  "lidar_scans": 36,
+  "contacts": 0,
+  "planner": {
+    "map_hash": "fe6315b62b38d2e225b29f9853a723b7b88cd12ea9db7ff678fddddc112ff6c0",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": -0.05,
+      "arm": -0.084
+    },
+    "status": "start_unverified_or_blocked_hold",
+    "elapsed": 0.0041088600000875886
+  },
+  "candidate_accepted": false
+}

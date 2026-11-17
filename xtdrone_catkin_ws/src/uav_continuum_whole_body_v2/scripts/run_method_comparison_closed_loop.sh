@@ -9,6 +9,9 @@ PROJECT_ROOT="$(cd "$WORKSPACE/.." && pwd)"
 XTDRONE_DIR="/home/uav/桌面/XTDrone_test/XTDrone"
 
 METHOD=""
+RESULT_METHOD_LABEL=""
+ABLATION_VARIANT="full"
+SWITCH_CONTINUITY_MODE="whole_body_bridge"
 SCENARIO_DIR=""
 MAP_FILE=""
 FORMAL=false
@@ -36,6 +39,9 @@ Options:
   --formal                 Enforce audited non-truth map and clean relevant code.
   --gazebo-gui             Show Gazebo GUI.
   --method-time-budget S   Backend budget per planning attempt (default 10).
+  --result-method-label N  Label stored in the experiment manifest.
+  --ablation-variant N     full, no_seed, or fixed_phi.
+  --switch-continuity N    whole_body_bridge or position_only.
   --preflight-timeout S    Live planning gate timeout (default 300).
   --task-timeout S         Whole-task timeout (default 900).
   --output-root DIR        Closed-loop run root.
@@ -54,6 +60,9 @@ EOF
 while (($#)); do
   case "$1" in
     --method) shift; METHOD="${1:-}" ;;
+    --result-method-label) shift; RESULT_METHOD_LABEL="${1:-}" ;;
+    --ablation-variant) shift; ABLATION_VARIANT="${1:-}" ;;
+    --switch-continuity) shift; SWITCH_CONTINUITY_MODE="${1:-}" ;;
     --scenario-dir) shift; SCENARIO_DIR="${1:-}" ;;
     --map) shift; MAP_FILE="${1:-}" ;;
     --formal) FORMAL=true ;;
@@ -80,6 +89,21 @@ case "$METHOD" in
   fixed_morphology|aet_sequential_minjerk|informed_rrtstar_wb|global_batch_wb|rolling_wb_v2) ;;
   *) echo "Unknown method: $METHOD" >&2; exit 2 ;;
 esac
+[[ -n "$RESULT_METHOD_LABEL" ]] || RESULT_METHOD_LABEL="$METHOD"
+case "$ABLATION_VARIANT" in
+  full|no_seed|fixed_phi) ;;
+  *) echo "Unknown ablation variant: $ABLATION_VARIANT" >&2; exit 2 ;;
+esac
+case "$SWITCH_CONTINUITY_MODE" in
+  whole_body_bridge|position_only) ;;
+  *) echo "Unknown switch continuity mode: $SWITCH_CONTINUITY_MODE" >&2; exit 2 ;;
+esac
+if [[ "$METHOD" != rolling_wb_v2 ]] && {
+  [[ "$ABLATION_VARIANT" != full ]] || [[ "$SWITCH_CONTINUITY_MODE" != whole_body_bridge ]];
+}; then
+  echo "Ablation controls are valid only for rolling_wb_v2" >&2
+  exit 2
+fi
 case "$MAP_LOCALIZATION_BACKEND" in
   px4_ekf|rtabmap_icp) ;;
   *) echo "Unknown map localization backend: $MAP_LOCALIZATION_BACKEND" >&2; exit 2 ;;
@@ -169,7 +193,7 @@ for process in rosmaster gzserver px4 rviz; do
 done
 
 STAMP="$(date +%Y%m%d_%H%M%S)"
-RUN_NAME="${SCENARIO_NAME}__${METHOD}__${STAMP}_$$"
+RUN_NAME="${SCENARIO_NAME}__${RESULT_METHOD_LABEL}__${STAMP}_$$"
 mkdir -p "$OUTPUT_ROOT"
 LOG_ROOT="/tmp/method_comparison_${RUN_NAME}"
 mkdir -p "$LOG_ROOT"
@@ -185,7 +209,7 @@ cleanup() {
   fi
   if [[ -n "$RUN_DIR" && -d "$RUN_DIR" ]]; then
     printf '{"result":"%s","exit_code":%d,"method":"%s","scenario":"%s"}\n' \
-      "$RESULT" "$code" "$METHOD" "$SCENARIO_NAME" > "$RUN_DIR/trial_result.json"
+      "$RESULT" "$code" "$RESULT_METHOD_LABEL" "$SCENARIO_NAME" > "$RUN_DIR/trial_result.json"
   fi
   echo "METHOD_COMPARISON_RESULT=$RESULT"
   echo "RUN_DIR=$RUN_DIR"
@@ -318,6 +342,8 @@ if [[ -n "$RECORD_SLAM_MAP" ]]; then
 fi
 start_launch method roslaunch uav_continuum_whole_body_v2 method_comparison_core.launch \
   method:="$METHOD" map_mode:=frozen_slam map_snapshot_file:="$MAP_FILE" \
+  result_method_label:="$RESULT_METHOD_LABEL" ablation_variant:="$ABLATION_VARIANT" \
+  switch_continuity_mode:="$SWITCH_CONTINUITY_MODE" \
   task_file:="$TASK_FILE" auto_execute:=false method_time_budget:="$METHOD_TIME_BUDGET" \
   random_seed:="$RANDOM_SEED" \
   oracle_file:="$ORACLE_FILE" \

@@ -1,0 +1,12 @@
+{
+  "source": "/opt/qingyu_api_ros1/share/continuum_arm",
+  "license_declared_in_package": "MIT",
+  "upstream_commit": "unknown_installed_binary_distribution",
+  "files": {
+    "package.xml": "5680ed687104f7b4349abaaaa1df7be616504e6bbfe9417a4b03386dcf10b943",
+    "config/continuum_arm_visualize.yaml": "d05b98a661671ced1497f198527c2bbd6d3827c9a6937e3050e8f9976d94f5f9",
+    "meshes/A01Base.STL": "1e71147f6dcc60aef3cdfc36dc06f96f0d2b5406ec79bebfb6f0bacec03d99a0",
+    "meshes/gripper.STEP.stl": "5ea0d7417e19e2097d885454e670f62ea7d81c633d4ffab83ba4edeaf11829b1",
+    "urdf/continuum_arm.xacro": "ed12237c5ce14a4a030e82fbd1a0966f8e2251c1a7c79ec1630b621d5c18f5a2"
+  }
+}

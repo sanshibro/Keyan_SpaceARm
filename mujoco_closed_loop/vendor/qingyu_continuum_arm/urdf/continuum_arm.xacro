@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot name="continuum_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:arg name="gripper_visual_xyz" default="0 0 0"/>
+  <xacro:arg name="gripper_visual_rpy" default="0 0 0"/>
+  <xacro:arg name="gripper_mesh_scale" default="0.001 0.001 0.001"/>
+  <xacro:arg name="visual_base_offset_z" default="0.0704"/>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 $(arg visual_base_offset_z)" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://continuum_arm/meshes/A01Base.STL"
+              scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="base_black">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="gripper">
+    <visual>
+      <origin xyz="$(arg gripper_visual_xyz)" rpy="$(arg gripper_visual_rpy)"/>
+      <geometry>
+        <mesh filename="package://continuum_arm/meshes/gripper.STEP.stl"
+              scale="$(arg gripper_mesh_scale)"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_link_to_gripper" type="fixed">
+    <parent link="base_link"/>
+    <child link="gripper"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+</robot>

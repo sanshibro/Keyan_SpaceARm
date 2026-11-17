@@ -1,0 +1,38 @@
+{
+  "safe": true,
+  "current_clearance": {
+    "body": 0.2862911015584862,
+    "arm": 0.24893717372888705
+  },
+  "validation": {
+    "feasible": true,
+    "status": "safe",
+    "metrics": {
+      "duration": 2.175,
+      "validation_samples": 58.0,
+      "body_clearance_min": 0.22565404140077455,
+      "arm_clearance_min": 0.141549879807588,
+      "com_offset_max": 2.482534153247273e-16,
+      "gravity_torque_max": 5.479573509755044e-15,
+      "velocity_max": 0.07092310554739671,
+      "acceleration_max": 0.1969870075113143,
+      "jerk_max": 0.898460613946121,
+      "yaw_rate_max": 2.8590524043982835e-20,
+      "theta_rate_max": 0.0,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.02007130311846298,
+      "thrust_ratio_min": 0.9991564540900025,
+      "thrust_ratio_max": 1.0012380270184174,
+      "body_obstacle_min": "slam_occupied",
+      "arm_obstacle_min": "slam_occupied",
+      "terminal_tip_error": -1.0
+    },
+    "failure_index": -1,
+    "failure_time": -1.0,
+    "failure_reason": "none"
+  },
+  "map_hash": "655a6630ec69a04c3adfdb5616e0dee57491c7bf2d2b1fdb98c1c6c7c0c8a8a8",
+  "map_stamp": 31.40000000000009,
+  "audit_wall_s": 2.2150614369893447,
+  "sim_time": 31.674000000015727
+}

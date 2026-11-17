@@ -1,0 +1,9 @@
+{
+  "kind": "hold",
+  "waypoint": null,
+  "information": {
+    "reason": "no_known_whole_body_frontier",
+    "distance_to_goal_m": 0.8967975089117446
+  },
+  "map_hash": "f8d800cba73784968926ff2824f1c7e8057bd9fda0fe15bd4f4fd4676cda1650"
+}

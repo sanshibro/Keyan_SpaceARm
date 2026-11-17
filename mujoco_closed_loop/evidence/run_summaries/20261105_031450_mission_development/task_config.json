@@ -1,0 +1,7 @@
+{
+  "seed": 0,
+  "mission_map": "mujoco_closed_loop/runs/20261105_031203_mission_survey/sensor_map.npz",
+  "online_map_connected": false,
+  "target_shift_y": 0.0,
+  "starts_in_known_hover": true
+}

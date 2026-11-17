@@ -120,7 +120,9 @@ class SweptVolumeValidator:
                 (tilt <= self.limits.tilt_max, "tilt_limit"),
                 (self.limits.thrust_min_ratio <= thrust_ratio <= self.limits.thrust_max_ratio, "thrust_limit"),
                 (self.limits.z_min <= current[2] <= self.limits.z_max, "altitude_limit"),
-                (self.arm.theta_min <= current[THETA] <= self.arm.theta_max, "theta_position_limit"),
+                # Spline reconstruction can differ by a few ulps at a knot
+                # lying exactly on a hard limit; this tolerance is 1e-10 rad.
+                (self.arm.theta_min-1e-10 <= current[THETA] <= self.arm.theta_max+1e-10, "theta_position_limit"),
             )
             if failure is None:
                 for passed, reason in checks:

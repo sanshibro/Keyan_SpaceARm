@@ -1,0 +1,17 @@
+{
+  "stage": "driven_fixture_contact_grasp_only",
+  "full_task_accepted": false,
+  "feedback": "truth_development",
+  "fixture": "actuated_xz_test_fixture_not_free_flight",
+  "binding_used": false,
+  "contacts_frames": 9565,
+  "unexpected_contact_count": 0,
+  "max_lift_m": 0.10007220977690778,
+  "max_carry_m": 0.5111041023505649,
+  "final_min_lift_m": 0.09961896791868585,
+  "final_min_carry_m": 0.4981351684526009,
+  "final_min_distinct_fingers": 3,
+  "object_mass_kg": 0.04,
+  "model_sha256": "fbcd4ec3e0a5e6d44c1235ee3af04350efe2fd4d212c9ce6372f63870c2d53a9",
+  "passed": true
+}

@@ -1,0 +1,46 @@
+{
+  "method": "preflight scene geometry; V2.1 body/arm envelopes and margins plus MuJoCo contact sweep",
+  "runtime_planner_uses_scene_truth": false,
+  "results": [
+    {
+      "gap": 1,
+      "opening_width_m": 0.9000000000000001,
+      "opening_height_m": 0.7,
+      "straight_best_residual_m": -0.07,
+      "straight_best_height_m": 1.6749999999999983,
+      "straight_physical_safe_heights_m": [],
+      "bent_height_m": 1.35,
+      "bent_theta_deg": 110.0,
+      "bent_phi_deg": 90.0,
+      "bent_min_residual_m": 0.04999999999999986,
+      "physical_contact_count": 0
+    },
+    {
+      "gap": 2,
+      "opening_width_m": 0.9,
+      "opening_height_m": 0.7,
+      "straight_best_residual_m": -0.06999999999999998,
+      "straight_best_height_m": 1.724999999999998,
+      "straight_physical_safe_heights_m": [],
+      "bent_height_m": 1.4,
+      "bent_theta_deg": 110.0,
+      "bent_phi_deg": 90.0,
+      "bent_min_residual_m": 0.04999999999999997,
+      "physical_contact_count": 0
+    },
+    {
+      "gap": 3,
+      "opening_width_m": 0.9,
+      "opening_height_m": 0.7,
+      "straight_best_residual_m": -0.07,
+      "straight_best_height_m": 1.6749999999999983,
+      "straight_physical_safe_heights_m": [],
+      "bent_height_m": 1.3599999999999999,
+      "bent_theta_deg": 110.0,
+      "bent_phi_deg": 90.0,
+      "bent_min_residual_m": 0.04999999999999997,
+      "physical_contact_count": 0
+    }
+  ],
+  "passed": true
+}

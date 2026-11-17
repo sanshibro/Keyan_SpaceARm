@@ -1,0 +1,121 @@
+{
+  "stage": "finished",
+  "worker_wall_s": 2.8312379590061028,
+  "diagnostics": {
+    "map_hash": "c71556676b2a33ccbab1da27ee1b8eeaa8dcece655270844ae85110cabad6dd1",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 0.591660553689303,
+      "arm": 0.7853399580930612
+    },
+    "reference_candidate_observed_voxels": 73304,
+    "full_observed_voxels": 78825,
+    "heading_reference": "hold_initial",
+    "reference": {
+      "search": "certified_continuous_body_bridge",
+      "expanded": 0,
+      "terminal_reached": true,
+      "certified_terminal_shortcut": true
+    },
+    "reference_states": [
+      [
+        -0.6283006774798094,
+        -2.4479320532064883,
+        1.6269765737504434,
+        -2.8327051571176378e-05,
+        0.0,
+        0.0
+      ],
+      [
+        -0.6499994681452037,
+        -2.1200089028359295,
+        1.5500019801497866,
+        -2.8327051571176378e-05,
+        0.0,
+        0.0
+      ]
+    ],
+    "seed": {
+      "seed_cost": 0.016275645446468433,
+      "expanded": 7,
+      "raw_risk_knots": [],
+      "control_body_clearance_min": 0.34280664742610834,
+      "control_arm_clearance_min": 0.5554771414906429,
+      "control_theta_max_deg": 0.0,
+      "control_z_max": 1.6269765737504434,
+      "edge_body_clearance_min": 0.34280664742610834,
+      "edge_arm_clearance_min": 0.5554771414906429,
+      "unsafe_edges": [],
+      "shape_mode": "theta_only_fixed_phi",
+      "fixed_phi_deg": 0.0,
+      "fixed_phi_screen_slack": -Infinity,
+      "terminal_shape": [
+        0.0,
+        0.0
+      ]
+    },
+    "status": "validated_time_budget",
+    "success": true,
+    "elapsed": 2.4207635509956162,
+    "optimizer": {
+      "solver_message": "None",
+      "backend": "projected_coordinate_pattern_anytime",
+      "seed": {
+        "seed_cost": 0.016275645446468433,
+        "expanded": 7,
+        "raw_risk_knots": [],
+        "control_body_clearance_min": 0.34280664742610834,
+        "control_arm_clearance_min": 0.5554771414906429,
+        "control_theta_max_deg": 0.0,
+        "control_z_max": 1.6269765737504434,
+        "edge_body_clearance_min": 0.34280664742610834,
+        "edge_arm_clearance_min": 0.5554771414906429,
+        "unsafe_edges": [],
+        "shape_mode": "theta_only_fixed_phi",
+        "fixed_phi_deg": 0.0,
+        "fixed_phi_screen_slack": -Infinity,
+        "terminal_shape": [
+          0.0,
+          0.0
+        ]
+      },
+      "repair": "none",
+      "repair_attempts_run": 0,
+      "repair_attempt_labels": [],
+      "repair_attempt_results": [],
+      "candidate_collocation_min": 0.0,
+      "candidate_validation_skipped": false,
+      "solver_time_budget_s": 0.8,
+      "wall_time_budget_s": 13.883006127987755,
+      "validation_reserve_s": 0.15
+    },
+    "validation": {
+      "feasible": true,
+      "status": "safe",
+      "metrics": {
+        "duration": 4.816440745033827,
+        "validation_samples": 128.0,
+        "body_clearance_min": 0.3340123213591388,
+        "arm_clearance_min": 0.5554771414906424,
+        "com_offset_max": 4.577566798522237e-16,
+        "gravity_torque_max": 1.010383431603821e-14,
+        "velocity_max": 0.11698162124728641,
+        "acceleration_max": 0.2441784779373603,
+        "jerk_max": 0.9071479365485745,
+        "yaw_rate_max": 0.0,
+        "theta_rate_max": 0.0,
+        "phi_rate_max": 0.0,
+        "tilt_max": 0.024368414618280005,
+        "thrust_ratio_min": 0.9946189673434853,
+        "thrust_ratio_max": 1.005962428524091,
+        "body_obstacle_min": "slam_occupied",
+        "arm_obstacle_min": "slam_occupied",
+        "terminal_tip_error": -1.0
+      },
+      "failure_index": -1,
+      "failure_time": -1.0,
+      "failure_reason": "none"
+    }
+  }
+}

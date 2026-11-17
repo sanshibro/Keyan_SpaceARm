@@ -1,0 +1,99 @@
+planner_v2:
+  # Independent real-time research profile.  The validated V2 baseline remains
+  # in planner_v2.yaml for reproducible comparison.
+  horizon_distance: 3.0
+  enable_recovery_windows: false
+  recovery_after_failures: 2
+  recovery_horizon_distance: 0.84
+  knot_count: 8
+  nominal_speed: 0.20
+  replan_rate_hz: 2.0
+  minimum_replan_wall_interval: 0.20
+  optimizer_time_budget: 0.80
+  optimizer_max_iterations: 28
+  optimization_basis_count: 2
+  # At most one candidate for each signed Cartesian axis is densely proven.
+  # This bounded six-direction fallback avoids relying on a sparse proxy to
+  # identify the only safe side of an unseen passage.
+  repair_attempts: 6
+  repair_axis_only: true
+  # Sparse proxy checks need reserve for the continuous cubic curve.  The
+  # unchanged dense validator below remains the final acceptance authority.
+  repair_proxy_reserve: 0.020
+  # Full morphology fallback retains the validated baseline diversity.  The
+  # fixed-phi fast path is still capped separately below.
+  seed_beam_width: 6
+  # Keep both vertical alternatives.  The fifth candidate is the downward
+  # offset needed when a ceiling, rather than a side wall, limits the body.
+  seed_pose_limit: 5
+  seed_shape_limit: 12
+  seed_edge_max_samples: 5
+  adaptive_phi: true
+  adaptive_phi_clearance_reserve: 0.004
+  locked_phi_candidate_limit: 6
+  # Transit references are neutral.  The measured shape is preserved only at
+  # the first state; collision/COM/rate costs then decide when to bend and
+  # when it is dynamically preferable to return toward the straight arm.
+  transit_reference_shape_deg: [0.0, 0.0]
+  # Optimization limits stay inside the unchanged independent hard proof.
+  design_velocity_ratio: 0.94
+  theta_design_margin_deg: 2.0
+  dynamic_repair_reserve: 1.08
+  failure_slowdown_step: 0.88
+  failure_slowdown_levels: 2
+  dt_min: 0.25
+  # 5.5 s clipped every attempted time-scale repair at the third passage.
+  # The extra range is generic temporal feasibility reserve, not a wall rule.
+  dt_max: 6.50
+  collocation_per_span: 3
+  risk_collocation_per_span: 5
+  risk_margin: 0.10
+  commit_horizon: 0.75
+  execution_lead_time: 0.15
+  # Successor windows are anchored at the state expected after one complete
+  # plan-and-validate cycle.  Five seconds covers the measured E1 P95 (<4.3 s)
+  # and avoids producing an already-stale whole-body boundary.
+  planning_latency_reserve: 5.0
+  maximum_tracking_error: 0.20
+  maximum_reference_start_gap: 0.75
+  terminal_actual_tip_tolerance: 0.08
+  # Shared internal target for every method. The task tolerance remains the
+  # hard acceptance ceiling; this avoids accepting a lucky threshold crossing.
+  terminal_precision_target: 0.03
+  terminal_convergence_dwell: 1.0
+  point_cloud_topic: /world/static_scene_cloud
+  point_cloud_inflation: 0.02
+  point_cloud_max_points: 100000
+  point_cloud_static_once: true
+  point_cloud_local_padding: 1.0
+  output_dt: 0.05
+  validator:
+    # Acceptance proof density is unchanged from the safe baseline.
+    translation_step: 0.03
+    theta_step_deg: 3.0
+    phi_step_deg: 5.0
+    time_step: 0.04
+  limits:
+    body_radius: 0.28
+    body_margin: 0.10
+    arm_margin: 0.070
+    com_max: 0.08
+    velocity_max: 0.25
+    acceleration_max: 1.00
+    jerk_max: 3.00
+    yaw_rate_max_deg: 45.0
+    yaw_acceleration_max_deg: 90.0
+    tilt_max_deg: 15.0
+    thrust_min_ratio: 0.50
+    thrust_max_ratio: 1.60
+    theta_rate_max_deg: 50.0
+    phi_rate_max_deg: 60.0
+    theta_acceleration_max_deg: 100.0
+    phi_acceleration_max_deg: 120.0
+    z_min: 0.75
+    z_max: 2.20
+  mass:
+    uav: 1.50
+    arm_base: 0.30
+    flexible: 0.25
+    tool: 0.20

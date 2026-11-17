@@ -19,6 +19,8 @@ class ArmModel:
     mount_rpy: tuple = (0.0, np.pi, 0.0)
     theta_min: float = 0.0
     theta_max: float = np.deg2rad(120.0)
+    # Optional end-tool sample cloud; appended to preserve positional arguments.
+    extra_tool_points: tuple = ()
 
 
 @dataclass

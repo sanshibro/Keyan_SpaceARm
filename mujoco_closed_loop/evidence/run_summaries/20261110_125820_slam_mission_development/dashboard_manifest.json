@@ -1,0 +1,10 @@
+{
+  "mode": "online_observer_and_actual_control_consumed_sensor_previews",
+  "frames": 137,
+  "first_sim_stamp": 0.6010000000000004,
+  "last_sim_stamp": 27.801000000010994,
+  "video_fps": 5,
+  "mission_view": "mission_view.mp4",
+  "observer_truth_is_display_only": true,
+  "display_enabled": true
+}

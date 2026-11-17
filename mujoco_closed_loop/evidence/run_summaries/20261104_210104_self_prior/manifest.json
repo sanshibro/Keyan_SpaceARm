@@ -1,0 +1,23 @@
+{
+  "stage": "rigid_self_prior_only",
+  "full_task_accepted": false,
+  "prior": {
+    "kind": "initial_calibrated_rigid_self_interior_only",
+    "erosion_m": 0.005,
+    "cells_added": 16,
+    "obstacle_conflicts": 0,
+    "external_space_added": false
+  },
+  "candidate_accepted": false,
+  "planner": {
+    "map_hash": "d7da63266a073d21905b278482fc3040241abecfb8a85d08219ab40c0628529b",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": -0.05,
+      "arm": -0.084
+    },
+    "status": "start_unverified_or_blocked_hold",
+    "elapsed": 0.006328146000669221
+  }
+}

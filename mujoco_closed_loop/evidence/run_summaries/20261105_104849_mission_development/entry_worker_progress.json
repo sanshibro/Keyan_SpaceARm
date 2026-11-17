@@ -1,0 +1,51 @@
+{
+  "stage": "reference_ready",
+  "worker_wall_s": 5.408724152002833,
+  "diagnostics": {
+    "map_hash": "aa6c92313fc62ef9db006f74ecef118ee9e0e03f9312a28289841d46ec28ba75",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 0.3317515004629694,
+      "arm": 0.3263893181341698
+    },
+    "reference_candidate_observed_voxels": 108772,
+    "full_observed_voxels": 108772,
+    "heading_reference": "hold_initial",
+    "reference": {
+      "expanded": 25,
+      "elapsed": 0.032100868003908545,
+      "preparation_elapsed": 3.6028135230008047,
+      "total_elapsed": 3.634918342999299,
+      "path_points_raw": 26,
+      "path_points_simplified": 3,
+      "map_hash": "559ed8fa392894ace2908ad9f85e57b0d14b3386df595531e444fa8bd4728e0a",
+      "terminal_reached": true,
+      "continuous_goal_bridge": false,
+      "reference_kind": "terminal",
+      "search": "weighted_astar",
+      "heuristic_weight": 1.5,
+      "requested_goal_distance": 0.0,
+      "requested_start_distance": 0.0,
+      "certified_terminal_shortcut": true
+    },
+    "reference_states": [
+      [
+        -0.5998710566762077,
+        -1.2006525395138883,
+        1.499424565679587,
+        -3.169648462908632e-06,
+        0.0109248217542365,
+        -2.0588985325226994
+      ],
+      [
+        -0.6,
+        0.0,
+        1.5,
+        -3.169648462908632e-06,
+        0.0,
+        -2.0588985325226994
+      ]
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "full_task_accepted": false,
+  "tracking_reserve_m": 0.04,
+  "candidate_accepted": false,
+  "planner": {
+    "map_hash": "8a45965652835a3546175c9573ee8f08c1d671675626ac26aa6812bb1d671a9e",
+    "profile_arm_length": 0.28,
+    "unknown_is_occupied": true,
+    "initial_clearance": {
+      "body": 0.31506508017015933,
+      "arm": 0.3240959619153505
+    },
+    "reference_candidate_observed_voxels": 108668,
+    "full_observed_voxels": 1830703,
+    "status": "planning_failed_hold",
+    "error": "ReferencePlanningError: reference planning timeout",
+    "elapsed": 7.051649533997988
+  }
+}

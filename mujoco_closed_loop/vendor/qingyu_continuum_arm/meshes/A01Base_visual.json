@@ -1,0 +1,8 @@
+{
+  "source_sha256": "1e71147f6dcc60aef3cdfc36dc06f96f0d2b5406ec79bebfb6f0bacec03d99a0",
+  "original_faces": 483920,
+  "visual_faces": 178950,
+  "cluster_mm": 0.3,
+  "max_vertex_displacement_mm": 0.2997622050167544,
+  "output_sha256": "968601d680a7eac59007ba74c9fe7e734e615f9baa3e53d602e08fc346ebc1e0"
+}

@@ -1,0 +1,11 @@
+{
+  "sim_time": 35.800000000007266,
+  "route_index": 0,
+  "stage_position_estimate": [
+    -0.6305012792927928,
+    -2.1350580102275374,
+    1.5493999882627645
+  ],
+  "scan_until_sim_time": 43.800000000007266,
+  "reason": "before_aperture_joint_planning"
+}

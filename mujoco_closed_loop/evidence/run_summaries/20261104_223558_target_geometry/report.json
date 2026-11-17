@@ -1,0 +1,32 @@
+[
+  {
+    "body_x": -0.6,
+    "body_z": 1.5,
+    "detected": true,
+    "error_m": 5.2993816377987095e-05
+  },
+  {
+    "body_x": -0.3,
+    "body_z": 1.55,
+    "detected": true,
+    "error_m": 5.4943088142261236e-05
+  },
+  {
+    "body_x": -0.1,
+    "body_z": 1.55,
+    "detected": true,
+    "error_m": 5.635070332304346e-05
+  },
+  {
+    "body_x": 0,
+    "body_z": 1.55,
+    "detected": true,
+    "error_m": 5.570164446837107e-05
+  },
+  {
+    "body_x": 0,
+    "body_z": 1.5064,
+    "detected": true,
+    "error_m": 5.429933593946009e-05
+  }
+]

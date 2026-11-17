@@ -1,0 +1,9 @@
+{
+  "seconds_requested": 15.0,
+  "imu_messages": 3000,
+  "lidar_messages": 149,
+  "odometry_messages": 144,
+  "status": "odometry_received",
+  "truth_usage": "evaluation_only",
+  "point_acquisition": "instantaneous_at_scan_end"
+}
