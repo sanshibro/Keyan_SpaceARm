@@ -3,3 +3,4 @@ live/frame.png
 live/server.log
 live/server.pid
 *.tmp
+live/usage.json

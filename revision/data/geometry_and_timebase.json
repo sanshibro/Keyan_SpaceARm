@@ -1,0 +1,141 @@
+{
+  "run_name": "multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222",
+  "algorithm_commit": "e62b6f22a20a9c2ba18d4041124427e1cfe5f59c",
+  "task_start_stamp": 60.988,
+  "task_finish_stamp": 185.948,
+  "duration_s": 124.96000000000001,
+  "arm": {
+    "arc_length": 0.22,
+    "radius": 0.034,
+    "segment_count": 18,
+    "base_offset_z": 0.1,
+    "gripper_length": 0.16,
+    "mount_xyz": [
+      0.0,
+      0.0,
+      -0.03
+    ],
+    "mount_rpy": [
+      0.0,
+      3.141592653589793,
+      0.0
+    ],
+    "theta_min": 0.0,
+    "theta_max": 2.0943951023931953
+  },
+  "limits": {
+    "body_radius": 0.28,
+    "body_height": 0.25,
+    "body_margin": 0.1,
+    "arm_margin": 0.07,
+    "com_max": 0.08,
+    "torque_max": null,
+    "velocity_max": 0.6,
+    "acceleration_max": 1.0,
+    "jerk_max": 3.0,
+    "yaw_rate_max": 0.7853981633974483,
+    "yaw_acceleration_max": 1.5707963267948966,
+    "tilt_max": 0.2617993877991494,
+    "thrust_min_ratio": 0.5,
+    "thrust_max_ratio": 1.6,
+    "theta_rate_max": 0.8726646259971648,
+    "phi_rate_max": 1.0471975511965976,
+    "theta_acceleration_max": 1.7453292519943295,
+    "phi_acceleration_max": 2.0943951023931953,
+    "z_min": 0.75,
+    "z_max": 2.2
+  },
+  "tracking": {
+    "raw_valid": 1927,
+    "unique": 1927,
+    "duplicate_policy": "last sample at identical stamp",
+    "max_gap_s": 0.103999999999985
+  },
+  "command": {
+    "raw_valid": 4976,
+    "unique": 4973,
+    "duplicate_policy": "last sample at identical stamp",
+    "max_gap_s": 0.3439999999999941
+  },
+  "timebase": "ROS/simulation stamp for execution; total_planning_time is wall-clock duration, shown only by window index",
+  "clearance_definition": "Frozen yaw-based sampled body envelope and PCC/base/tool centerline minus arm radius; post-hoc oracle geometry. Not exact CAD surface distance.",
+  "gate_sample_rule": "nearest recorded UAV world-y to gate center; not an interpolated crossing",
+  "command_association": "Last issued command at or before measurement stamp, maximum age 0.15 s; no smoothing or time shifting.",
+  "nominal_reserve_definition": "Previous trajectory metadata start + duration - successor SAFE stamp; not phase-governor corrected physical buffer countdown.",
+  "body_min_m": 0.18885154853371033,
+  "arm_min_m": 0.18866494777955242,
+  "gate_count": 3,
+  "window_count": 7,
+  "verified_published_numbers": true,
+  "valid_command_association_fraction": 0.9968863518422418,
+  "inputs": [
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/manifest.json",
+      "sha256": "7fe9f1b1491852be2e10f9fb6a4ae37ec53a471330a27346f2ec7cd9072b0e0f"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/tracking.jsonl",
+      "sha256": "6d0017ae777125de406861fa3835831bcb48cb826b4cb179f9790e27c49e7a01"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/commands.jsonl",
+      "sha256": "9af2a59c98e80d9c1524a6a24b4c22fd760136cdd6a06e1ce3f58379062f7cf6"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/events.jsonl",
+      "sha256": "aaaf4c6f1448d5707526738d63f7404c765901e2947e05b2c8a203c39fffbb4d"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_scenarios_11_20/multi_passage_hard_s011/oracle_truth.yaml",
+      "sha256": "8418e0d512c73a25f9b20ce288bb174ca5c6518f8854569a2550db7e3d5c72d8"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trajectory_000004.json",
+      "sha256": "1e6a450e5a927c6716c15f7b5bfd2c0b48ebf0670efa8915bf7ab1235125f0c0"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trajectory_000007.json",
+      "sha256": "9d3e3e663254a1dffa65bac63ac53e04157d2299eabd132daad3305ecf0cd0c3"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trajectory_000003.json",
+      "sha256": "52e6a97d73b2748a6de02d9528eba6b05a8fda52f2ff58e97e316cebffc0ccd2"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trajectory_000001.json",
+      "sha256": "c3c1f0cff0b19708fe36eb7bbd80e00b7e8f5b16b3c7b500e1181ade8c0c315f"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trajectory_000006.json",
+      "sha256": "8eda5b9e595743206398bc40de7f029b3d16f9feeb1e08de3dc4cd8cbe89d4e1"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trajectory_000005.json",
+      "sha256": "33d31319e7cddf8dd62b6c72b1cc0319b3a17a849b75c6386667463b69b1d5ed"
+    },
+    {
+      "path": "xtdrone_plan/experiments/method_comparison/v21_e3_final_450_commite62b6f2/multi_passage_hard_s011__8068b3486507/closed_loop_runs/multi_passage_hard_s011__rolling_wb_v2__20260803_175558_1958222/trajectory_000002.json",
+      "sha256": "026cce78c589c74c692a22eb0c34ffcfc17f7b91b6871bb75ad09435efc43eb9"
+    },
+    {
+      "path": "revision/frozen_geometry/uav_continuum_whole_body_v2/__init__.py",
+      "sha256": "7cacad6d69e3203a50f4d889b489d7bcb347dea15c68dbf1e490a3b7fdf491c4"
+    },
+    {
+      "path": "revision/frozen_geometry/uav_continuum_whole_body_v2/dependencies.py",
+      "sha256": "cbe25067fcb0c9b9bef1abc208402b1de10d6e5ea527ad16308fe328fe6a5d1f"
+    },
+    {
+      "path": "revision/frozen_geometry/uav_continuum_whole_body_v2/geometry.py",
+      "sha256": "a62e608955e0154558b0733c4bc518c90ab47e80a63da3caf8606d09b69a4c91"
+    },
+    {
+      "path": "revision/frozen_geometry/uav_continuum_whole_body_v2/environment.py",
+      "sha256": "036e98a0826f9277f383c0fb505d1099fbaed42397a4b3c361261b28326704a2"
+    },
+    {
+      "path": "revision/frozen_geometry/uav_continuum_whole_body_v2/types.py",
+      "sha256": "171b216c83a2cfaac2d367f2dc59451224d5582e16a7d3b67f71afae65a7077b"
+    }
+  ]
+}
