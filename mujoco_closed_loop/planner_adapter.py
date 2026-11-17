@@ -8,6 +8,7 @@ LIB=ROOT.parent/'xtdrone_catkin_ws/src/uav_continuum_whole_body_v2'
 sys.path.insert(0,str(LIB/'src'))
 from tool_envelope import collision_samples
 from qingyu_model import ARC_LENGTH, BASE_LENGTH
+from shape_limits import PLAN_THETA_MAX
 from uav_continuum_whole_body_v2.configuration import load_planner_configuration
 from uav_continuum_whole_body_v2.types import ArmModel
 from uav_continuum_whole_body_v2.reference_planner import VoxelAStarReferencePlanner,path_states
@@ -44,6 +45,10 @@ class V21Adapter:
         self.hard_limits=replace(self.limits)
         self.limits=replace(self.limits,body_margin=self.limits.body_margin+tracking_reserve,arm_margin=self.limits.arm_margin+tracking_reserve)
         self.arm=ArmModel(arc_length=ARC_LENGTH if profile=='qingyu' else .22,base_offset_z=BASE_LENGTH if profile=='qingyu' else .10,extra_tool_points=collision_samples(loaded=loaded,approved_stage1=approved_stage1) if profile=='qingyu' else ())
+        # New runs reserve 2 degrees below the physical 120-degree envelope.
+        # The arm bound is also used by the independent dense validator.
+        self.arm=replace(self.arm,theta_max=PLAN_THETA_MAX)
+        self.config=replace(self.config,theta_design_margin=0.)
         if loaded:self.mass.tool+=.04
         self.validator=SweptVolumeValidator(self.world,self.arm,self.mass,self.limits,self.config)
     def clearance(self,state):

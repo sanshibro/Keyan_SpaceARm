@@ -4,6 +4,7 @@ import json
 import math
 from pathlib import Path
 import yaml
+from shape_limits import bounded_command
 from gripper import add_gripper
 from qingyu_model import ARC_LENGTH, BASE_LENGTH
 
@@ -149,16 +150,22 @@ class SimArmBridge:
     This is not a complete SDK bridge. The legacy enable=False path commands
     a neutral shape; it does not implement hardware torque disable.
     """
-    def __init__(self,segments=8): self.segments=segments
+    def __init__(self,segments=8):
+        self.segments=segments
+        self.last_requested_theta=0.;self.last_commanded_theta=0.;self.command_limit_events=0
     def set_kinematic_shape(self,model,data,theta,phi):
         """Internal estimator/CAD model only; never call on live physics."""
-        command=self.move_joints(theta,phi)
+        command=self.move_joints(theta,phi,_kinematic=True)
         for i in range(self.segments):
             for j,name in enumerate(('bx','by')):
                 data.qpos[model.jnt_qposadr[model.joint(f'{name}{i}').id]]=command[2*i+j]
-    def move_joints(self,theta,phi,enable=True):
+    def move_joints(self,theta,phi,enable=True,_kinematic=False):
         import numpy as np
-        if not all(math.isfinite(v) for v in (theta,phi)) or not 0<=theta<=math.radians(120):
-            raise ValueError('Invalid single-segment shape')
+        requested=float(theta)
+        theta,phi=bounded_command(theta,phi,kinematic=_kinematic)
+        if not _kinematic:
+            self.last_requested_theta=requested
+            self.last_commanded_theta=theta if enable else 0.
+            self.command_limit_events+=int(theta < requested-1e-12)
         if not enable:return np.zeros(2*self.segments)
         return np.tile([theta*math.cos(phi)/self.segments,theta*math.sin(phi)/self.segments],self.segments)

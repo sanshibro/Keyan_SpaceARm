@@ -364,7 +364,10 @@ class InformedRrtStarWholeBodyMethod:
 
     @staticmethod
     def _metric(first, second):
-        delta = np.asarray(first) - np.asarray(second)
+        delta = np.asarray(first, dtype=float) - np.asarray(second, dtype=float)
+        # Match the shortest-angle interpolation used by steering and edges.
+        for coordinate in (YAW, PHI):
+            delta[coordinate] = math.atan2(math.sin(delta[coordinate]),math.cos(delta[coordinate]))
         return float(np.linalg.norm(np.asarray([
             delta[0], delta[1], delta[2], 0.25 * delta[YAW],
             0.30 * delta[THETA], 0.15 * delta[PHI],
@@ -398,6 +401,8 @@ class InformedRrtStarWholeBodyMethod:
     def _edge_feasible(cls, problem, first, second):
         translation = np.linalg.norm(np.asarray(second[:3]) - np.asarray(first[:3]))
         shape = max(
+            abs(math.atan2(math.sin(second[YAW] - first[YAW]),
+                           math.cos(second[YAW] - first[YAW]))) / np.deg2rad(5.0),
             abs(second[THETA] - first[THETA]) / np.deg2rad(8.0),
             abs(math.atan2(math.sin(second[PHI] - first[PHI]),
                            math.cos(second[PHI] - first[PHI]))) / np.deg2rad(12.0),
@@ -422,6 +427,9 @@ class InformedRrtStarWholeBodyMethod:
             np.abs(second_states[:, THETA] - first_states[:, THETA]) / np.deg2rad(8.0),
             np.abs(phi_delta) / np.deg2rad(12.0),
         )
+        yaw_delta = np.arctan2(np.sin(second_states[:, YAW]-first_states[:, YAW]),
+                               np.cos(second_states[:, YAW]-first_states[:, YAW]))
+        shape = np.maximum(shape, np.abs(yaw_delta)/np.deg2rad(5.0))
         sample_count = max(2, int(np.ceil(np.max(np.maximum(
             translation / 0.06, shape
         )))) + 1)

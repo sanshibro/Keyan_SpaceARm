@@ -1,0 +1,2 @@
+{'endpoint': {'max_endpoint_error_m': 0.03176490418079979, 'max_bending_error_deg': 13.505717534799308}, 'trapezoid': {'max_endpoint_error_m': 0.002136199832705353, 'max_bending_error_deg': 1.0885078212259747}}
+PASS: same8 numerical bending pairs, substantially smaller PCC position and artificial-torsion error
