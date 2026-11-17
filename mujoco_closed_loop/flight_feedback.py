@@ -60,6 +60,13 @@ class InertialVisualState:
         return True
 
 class RotorController:
+    @classmethod
+    def from_model(cls, model):
+        from super_metric_model import allocation_matrix
+        controller = cls(mass=float(model.body_mass.sum()))
+        controller.inv = np.linalg.inv(allocation_matrix(model))
+        return controller
+
     def __init__(self,mass=2.25):
         self.mass=mass;self.integral=np.zeros(3);self.velocity_integral=np.zeros(3)
         self.position_gain=2.;self.velocity_gain=2.2;self.integral_gain=.15

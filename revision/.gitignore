@@ -6,3 +6,7 @@ live/server.pid
 live/usage.json
 render_assets/
 archive/
+
+generated/
+
+data/qingyu_contract_probe/ros_logs/

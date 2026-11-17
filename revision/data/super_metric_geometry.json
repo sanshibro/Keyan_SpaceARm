@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "target_confirmed": "SUPER airframe plus user continuum arm and modifications",
+  "upstream_url": "https://github.com/hku-mars/SUPER-Hardware",
+  "upstream_commit": "6dd5419735dc0d6fd975bfc66fe7c76c4ecda66a",
+  "source_assembly": "mujoco_closed_loop/vendor/SUPER-Hardware/SolidWorks/yunque.SLDASM",
+  "source_license": "MIT; original preserved in vendor/SUPER-Hardware/LICENSE",
+  "upstream_files_verified": [
+    {
+      "path": "3DPriting/battery_board.stl",
+      "match": true,
+      "sha256": "4690520089ea5e5b4d231b985a87d5bf3d02d251c385b6d02feafcfbfd4cf0f8"
+    },
+    {
+      "path": "CarbonFiber/3mm_bat_board.step",
+      "match": true,
+      "sha256": "bb8799ac4a277c7f260e2b0b524c1d05f51038470bfa69cdb322867e8c1a977c"
+    },
+    {
+      "path": "CarbonFiber/3mm_sec_board.step",
+      "match": true,
+      "sha256": "78cc6ad1b0924b99cd87d3bc76a27fb5f50c56c57a3414a3876b89fcb1823c31"
+    },
+    {
+      "path": "CarbonFiber/4mm-foot.STEP",
+      "match": true,
+      "sha256": "0be8bc1e4c7c8d2a3d125b2996093c1e6885a9bac07d78c9d554b215ea10d903"
+    },
+    {
+      "path": "CarbonFiber/5mm_main_board.STEP",
+      "match": true,
+      "sha256": "99d3bfd7f5ab195c6b0eade9391232b278d093d953a91718cf51e30092ed3558"
+    },
+    {
+      "path": "LICENSE",
+      "match": true,
+      "sha256": "c5bcd38439de9a4d889795181dc7c5a74b3f640119044bc4f2663393123ea5fb"
+    },
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "685565a1de065d41b2120037e7460c11f7309137bdeb3fbcb8f978cd660eb76b"
+    },
+    {
+      "path": "SolidWorks/30mm_alu_pillar.SLDPRT",
+      "match": true,
+      "sha256": "f6e622bfc7301af67e21c8d1a328c2dbb1d7865cc6a20f3c25232bc8341227f5"
+    },
+    {
+      "path": "SolidWorks/40mm_alu_pillar.SLDPRT",
+      "match": true,
+      "sha256": "e8d467302621f73e1834cabc2ecdceb167f780496b33077131d3ae5b12c31f39"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL.SLDPRT",
+      "match": true,
+      "sha256": "db1b2217ba75d89ccaa0ac61c597d95c368aa60b1591cdb45a47222cd78164f6"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL.stl",
+      "match": true,
+      "sha256": "05e8fa1426d2630aa4a021ed549ce0db5cdc91be71c5fccc8e7514f396e4646d"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL1.SLDPRT",
+      "match": true,
+      "sha256": "f2d327be90606f246def21c2608afc1c4145d5b4ae7793c41a065e1483266ac7"
+    },
+    {
+      "path": "SolidWorks/landing_board.SLDPRT",
+      "match": true,
+      "sha256": "4de42719bbbdf4dab788244f0468cda548290be3602fba2ca976c82f11e49730"
+    },
+    {
+      "path": "SolidWorks/yunque-F90_motor.SLDPRT",
+      "match": true,
+      "sha256": "772d201fe9fb62526287404b0f9f01d3195b6249513514f3189108a826e9bf63"
+    },
+    {
+      "path": "SolidWorks/yunque-LiDARboard.SLDPRT",
+      "match": true,
+      "sha256": "05355438882b51de2fec833c3852ecb33084551c8678d7e4c53a71c7785ce424"
+    },
+    {
+      "path": "SolidWorks/yunque-battery_board.SLDPRT",
+      "match": true,
+      "sha256": "b6ec71416d347aabe3dd2c58c9dc8e7fb56ea2aed7f9b4dcf7a824453c0099ec"
+    },
+    {
+      "path": "SolidWorks/yunque-dualsky-bat.SLDPRT",
+      "match": true,
+      "sha256": "3768ff3b0c05a8a9d564758b343fe955ca6297c236397c4d6df4879c92123ac2"
+    },
+    {
+      "path": "SolidWorks/yunque-foot-4mm.SLDPRT",
+      "match": true,
+      "sha256": "c1f42d2ab0c81dbe2684d6a505dd1386e22e875113153ce3a19944ee46453ee6"
+    },
+    {
+      "path": "SolidWorks/yunque-intel_nuc.SLDPRT",
+      "match": true,
+      "sha256": "797d096651e1d04b9c207757804ac9120236cc6393a3a04e34b63f4aa3e76a83"
+    },
+    {
+      "path": "SolidWorks/yunque-led-a.SLDPRT",
+      "match": true,
+      "sha256": "b0ad8e67a277707103cafe6771b14d934d65a713f5e2b1f0901ae01f84453108"
+    },
+    {
+      "path": "SolidWorks/yunque-led-b.SLDPRT",
+      "match": true,
+      "sha256": "0ac389ea94ebb71a88599bdf4162164439d7c4fc3bc69b885763f50b3ad6c90e"
+    },
+    {
+      "path": "SolidWorks/yunque-mainboard.SLDPRT",
+      "match": true,
+      "sha256": "388665b56e75bcbb6f5426663a74b4629c66d5474345fb245a42bdf50e454a28"
+    },
+    {
+      "path": "SolidWorks/yunque-mid360_LiDAR.SLDASM",
+      "match": true,
+      "sha256": "67ecbbb9ee2966bd98421c611a1d213c3f7a824ba5d4f63abb6a310677eae549"
+    },
+    {
+      "path": "SolidWorks/yunque-prop.SLDPRT",
+      "match": true,
+      "sha256": "b257426599a1a2d3a7dcdaf05e631891247ad168ddbe4f50321d2c29b5fda662"
+    },
+    {
+      "path": "SolidWorks/yunque.SLDASM",
+      "match": true,
+      "sha256": "ecf65f4d6ea6d6c8efa5434a9460103319faad4db7f4ec54886650df10d94794"
+    },
+    {
+      "path": "SolidWorks/yunque_bat_board.SLDPRT",
+      "match": true,
+      "sha256": "181ca179f1501555dd1c531a1f23ceaa339496d33adebe1fc683afedbf99d755"
+    },
+    {
+      "path": "misc/.DS_Store",
+      "match": true,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
+    {
+      "path": "misc/cover.JPG",
+      "match": true,
+      "sha256": "eecbf84d5b6e0812158ef651d85845e8c3e3f6831882cf4dd4eab92fd3c52c13"
+    },
+    {
+      "path": "misc/hardware_breakdown.png",
+      "match": true,
+      "sha256": "3b50a9ca9c1f0656c44fb03e4e46ea272185292b94a584fd16bc9c32a5735579"
+    },
+    {
+      "path": "misc/power_module.jpg",
+      "match": true,
+      "sha256": "988acc3c719f6dbda44d81aead14c7b1404ef73d8dc3633d85e2845526e57b64"
+    },
+    {
+      "path": "misc/sw.png",
+      "match": true,
+      "sha256": "e47a40a71a37ab8da7f70a6bd90c5a7af1b60bbcd9533b87a7cbc8327fd62855"
+    }
+  ],
+  "units": "m",
+  "frame": "U: right-handed; +X front (archived front LEDs), +Y left, +Z up",
+  "origin": "mean of four motor-axis AABB centres in the archived assembly",
+  "transform_from_display": {
+    "uniform_scale": 0.8333324653943814,
+    "origin_display_m": [
+      0.0002011500000000041,
+      -0.0020791499999999984,
+      -0.0227847
+    ]
+  },
+  "calibration": {
+    "method": "uniform in-plane carbon-board span match to official STEP",
+    "step_span_m": [
+      0.2259863805212306,
+      0.2259898987322333
+    ],
+    "display_span_m": [
+      0.2711861,
+      0.271186
+    ],
+    "per_axis_scale": [
+      0.8333258250376055,
+      0.8333391057511572
+    ],
+    "residual_span_m": [
+      1.8007724566504457e-06,
+      -1.8007717925982991e-06
+    ],
+    "physical_measurement": false,
+    "scope": "CAD/display registration; component geometry and actual build still require cross-checks"
+  },
+  "rotor_axis_extraction": {
+    "method": "peripheral motor vertices; four quadrant AABB axes",
+    "peripheral_threshold_display_m": 0.135593,
+    "selected_vertices": 12416,
+    "central_material_vertices_excluded": 2725
+  },
+  "source_sha256": "5ddc56bc0efa2089999d14889a32b01b76f7c8954027181cb0cd388c525d955c",
+  "parts": {
+    "Led_back": {
+      "file": "revision/generated/super_metric/Led_back.obj",
+      "source_sha256": "ed5fa143965f0035ffeac906e0fcc1dd7428c3a3f84c0ecf7cd843c4da0961c4",
+      "sha256": "b8a3c7cd3085e6fcd1506f9c54d605bed191114136b529d5724628cde10f52c8",
+      "bounds_min": [
+        -0.10199051877403659,
+        -0.10199068544052968,
+        0.022349976721877312
+      ],
+      "bounds_max": [
+        -0.06151797759398115,
+        0.10199085210702276,
+        0.025349973597297085
+      ],
+      "vertices": 132
+    },
+    "Led_front": {
+      "file": "revision/generated/super_metric/Led_front.obj",
+      "source_sha256": "03fe931a7ee587d2e67120edea6eb492e384caf989eb6dea7bb4df471a9c0323",
+      "sha256": "056880c82a636d927a51067ca71449f3278e533c60a20056a01c94a7c8e7535b",
+      "bounds_min": [
+        0.06151856092670692,
+        -0.10199068544052968,
+        0.022349976721877312
+      ],
+      "bounds_max": [
+        0.10199101877351585,
+        0.10199085210702276,
+        0.025349973597297085
+      ],
+      "vertices": 132
+    },
+    "Lidar": {
+      "file": "revision/generated/super_metric/Lidar.obj",
+      "source_sha256": "b9d18ed2b7678c84cdc1550416b4a953bdfd9e5e9ca2a702dae3ce024893feef",
+      "sha256": "9d3e443a6f0324e1b7ea0931a551e7c5a479a6d687d15bc11b20ab08af13c362",
+      "bounds_min": [
+        -0.039299667401636144,
+        -0.05361381915971543,
+        0.024538141109509876
+      ],
+      "bounds_max": [
+        0.032200258129201784,
+        0.032200008129462165,
+        0.120446957884475
+      ],
+      "vertices": 80428
+    },
+    "PCB": {
+      "file": "revision/generated/super_metric/PCB.obj",
+      "source_sha256": "251b71e0cddc4705653a5d15150c8cf76f0ab87bedd92db0bbfeda7fa34e2112",
+      "sha256": "db02f31c17609d057d75bf0267bbd1e66eaf3d953df7705b275bb34d23f64f0b",
+      "bounds_min": [
+        -0.05129965490331524,
+        -0.053999902090932646,
+        0.027446138080750113
+      ],
+      "bounds_max": [
+        0.05070023886095705,
+        0.05200007084047921,
+        0.05185311266020691
+      ],
+      "vertices": 471
+    },
+    "carbon": {
+      "file": "revision/generated/super_metric/carbon.obj",
+      "source_sha256": "bbb5859a5a6fac08d0e1796791dce2f6c74176d363cf6a19434401d32784f2b9",
+      "sha256": "f5de277523e9170a2161035d81ad0316573f1d662d0d29a0f488d2b3232dc45e",
+      "bounds_min": [
+        -0.11299384064710402,
+        -0.11299400731359709,
+        0.012349987137144735
+      ],
+      "bounds_max": [
+        0.11299434064658326,
+        0.11299409064684363,
+        0.0603499371438611
+      ],
+      "vertices": 96172
+    },
+    "green": {
+      "file": "revision/generated/super_metric/green.obj",
+      "source_sha256": "4a15866a5a8119ef00c850d6d5748c8f6953e79eb2206cb84c16fec859ba829f",
+      "sha256": "0a7f56286393539d82257972f5059f56be6608e5b0d5e14ba4551c46b5ad4a7f",
+      "bounds_min": [
+        0.02148010262787538,
+        -0.05430273510885696,
+        0.028212803948912943
+      ],
+      "bounds_max": [
+        0.042152747763406884,
+        -0.053642735796264614,
+        0.030367968370915894
+      ],
+      "vertices": 120
+    },
+    "lander": {
+      "file": "revision/generated/super_metric/lander.obj",
+      "source_sha256": "bb562431b57dd6c23daa6ea31dd2a1c00d5e24d59c1410e71cf59f63c4e24515",
+      "sha256": "49a319eeb0a2508c5a76d813f94e862448f26fb64a7dce9bbf2509a4000ae28a",
+      "bounds_min": [
+        -0.04749965886111686,
+        -0.04301233020146119,
+        -0.08188358138263807
+      ],
+      "bounds_max": [
+        0.04750024219384263,
+        0.04301249686795426,
+        -0.01591890008668925
+      ],
+      "vertices": 12416
+    },
+    "mars_logo": {
+      "file": "revision/generated/super_metric/mars_logo.obj",
+      "source_sha256": "4aa7ea116f3ca6f5c851bd3f0be8fb07a3662d25ef0bc54f4e026f5afe3c2f10",
+      "sha256": "0c77c79afab843ccf47e1683625f4dac268c3bd3c58063dbbe3eb6b20a4be6bc",
+      "bounds_min": [
+        0.03176392525032129,
+        -0.027939429233640314,
+        0.0643999329256778
+      ],
+      "bounds_max": [
+        0.03243717454911341,
+        0.027939595900133396,
+        0.08367807951361834
+      ],
+      "vertices": 10
+    },
+    "metal": {
+      "file": "revision/generated/super_metric/metal.obj",
+      "source_sha256": "71f98c5f15b1dbafea4b7ced6c4f020181fde39d16668f26ad3242b80c447f03",
+      "sha256": "d4b1f0de4b23679e8f41581bc46a2366e5a54b6c6cc1873665c4437ca0e5bc26",
+      "bounds_min": [
+        -0.043620746234445625,
+        -0.054249901830550964,
+        0.0211499779717094
+      ],
+      "bounds_max": [
+        0.043160413380561764,
+        -0.03639992042180331,
+        0.044521703629406766
+      ],
+      "vertices": 75130
+    },
+    "metal_lidar": {
+      "file": "revision/generated/super_metric/metal_lidar.obj",
+      "source_sha256": "7a07325870a0245dc82ee3241489d5e0c929fad51a20b093ad765589dfe2b744",
+      "sha256": "9057ecbc5ffe835214d2c7fb2cdf8cfb2bff17ccb88de51b4cecdb6dd0ae8bc2",
+      "bounds_min": [
+        -0.06038264544312784,
+        -0.060070229101851474,
+        -0.017649981617053
+      ],
+      "bounds_max": [
+        0.06038331210910015,
+        0.06007039576834455,
+        0.0998490626710894
+      ],
+      "vertices": 107294
+    },
+    "motor": {
+      "file": "revision/generated/super_metric/motor.obj",
+      "source_sha256": "a88f82afc9963f89eea7f8d1194c3f32e5686085b4f76bf98933fd009615bc6e",
+      "sha256": "c55c02657d11e76f9907f70f6ca95d257b08bf4d4b2954e192c3eb364b02e2fe",
+      "bounds_min": [
+        -0.11569458783420067,
+        -0.11569475450069375,
+        -0.017349981929511024
+      ],
+      "bounds_max": [
+        0.11569442116770759,
+        0.11569492116718684,
+        0.04008312491897666
+      ],
+      "vertices": 15141
+    },
+    "prop": {
+      "file": "revision/generated/super_metric/prop.obj",
+      "source_sha256": "bb2f78f20933d992c3c65ec0b0dd20dd3902226653d4696510a8a108a27bc52c",
+      "sha256": "dc809f75031908cb2f929547dc48c98b7dfef3b534301e9297049b2899955a9b",
+      "bounds_min": [
+        -0.17524860914036358,
+        -0.18878784503887264,
+        -0.013535569235661316
+      ],
+      "bounds_max": [
+        0.17089861367100492,
+        0.1887923450341858,
+        0.001083332205012698
+      ],
+      "vertices": 20500
+    },
+    "usb": {
+      "file": "revision/generated/super_metric/usb.obj",
+      "source_sha256": "1ab45314e38df2c22e57dc71f4fb4d722e83bd3b81650193249844f464ea82dc",
+      "sha256": "cf5c8c03d05e00ed08ca1b6425487ca46ab469681b6f9e8f8c4b1b15a72f3bcb",
+      "bounds_min": [
+        -0.026349680889407458,
+        -0.050659905569631965,
+        0.036823128314353845
+      ],
+      "bounds_max": [
+        -0.018349689221621397,
+        -0.04829374136739117,
+        0.03737296107502106
+      ],
+      "vertices": 95
+    },
+    "yellow": {
+      "file": "revision/generated/super_metric/yellow.obj",
+      "source_sha256": "33621a1445687cf244d93a2aa4972f3d091ef307f56fe93fabbd2ae9c381957d",
+      "sha256": "1ef8b66e3790fb3939830db48c37b199ae1fba8c082ce9f3d4db4285798c3ca8",
+      "bounds_min": [
+        0.01095736358760091,
+        -0.05430273510885696,
+        0.028235387258725132
+      ],
+      "bounds_max": [
+        0.031495175530231595,
+        -0.05373640236537494,
+        0.030317218423773374
+      ],
+      "vertices": 104
+    }
+  },
+  "rotors": [
+    {
+      "index": 0,
+      "axis_center_m": [
+        0.09899477189419034,
+        0.09899493856068343,
+        0.0
+      ],
+      "prop_radius_m": 0.08984864842572181,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": 0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    },
+    {
+      "index": 1,
+      "axis_center_m": [
+        -0.0989949802273067,
+        0.09899493856068343,
+        0.0
+      ],
+      "prop_radius_m": 0.08984879132230719,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": -0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    },
+    {
+      "index": 2,
+      "axis_center_m": [
+        -0.09899460522769726,
+        -0.0989951052271765,
+        0.0
+      ],
+      "prop_radius_m": 0.08984854091672491,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": 0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    },
+    {
+      "index": 3,
+      "axis_center_m": [
+        0.09899481356081362,
+        -0.09899477189419034,
+        0.0
+      ],
+      "prop_radius_m": 0.08984861614129716,
+      "prop_z_interval_m": [
+        -0.0135355692,
+        0.00108333221
+      ],
+      "yaw_torque_per_thrust_m": -0.02,
+      "yaw_torque_status": "legacy provisional coefficient and spin ordering; requires verification"
+    }
+  ],
+  "bounds_m": [
+    [
+      -0.17524860914036358,
+      -0.18878784503887264,
+      -0.08188358138263807
+    ],
+    [
+      0.17089861367100492,
+      0.1887923450341858,
+      0.120446957884475
+    ]
+  ],
+  "prop_sweep_body_radius_m": 0.22984880550387193,
+  "flexible_arm": {
+    "geometry_source": "Qingyu visualization config",
+    "arc_length_m": 0.28,
+    "base_length_m": 0.0704,
+    "physical_length_verified": false
+  },
+  "dynamics": {
+    "calibrated": false,
+    "mass_source": "existing development approximation",
+    "rotor_max_N": 12.0,
+    "rotor_max_status": "provisional, not F90 thrust calibration"
+  },
+  "cad16": {
+    "identity": "different tube-frame/M2810 platform; retained as reference and modification asset source",
+    "do_not_use_as_SUPER_airframe": true
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "sha": "6dd5419735dc0d6fd975bfc66fe7c76c4ecda66a",
+  "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/trees/6dd5419735dc0d6fd975bfc66fe7c76c4ecda66a",
+  "tree": [
+    {
+      "path": "3DPriting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8e4209efb28f3f1c258dc9aab027110f4789cab",
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/trees/e8e4209efb28f3f1c258dc9aab027110f4789cab"
+    },
+    {
+      "path": "3DPriting/battery_board.stl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e5d1eb8a1aebe680de67ccb5ce6c82ccb726272",
+      "size": 2766884,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/4e5d1eb8a1aebe680de67ccb5ce6c82ccb726272"
+    },
+    {
+      "path": "CarbonFiber",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea243be7dcdfd1240bde7d2b1f16f11859a58a85",
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/trees/ea243be7dcdfd1240bde7d2b1f16f11859a58a85"
+    },
+    {
+      "path": "CarbonFiber/3mm_bat_board.step",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b6aefb68f98186b57c60b68ed4872c883caed3",
+      "size": 74255,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/d9b6aefb68f98186b57c60b68ed4872c883caed3"
+    },
+    {
+      "path": "CarbonFiber/3mm_sec_board.step",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00f2007b04331b6ba6ed54ece5c28f8203690302",
+      "size": 280376,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/00f2007b04331b6ba6ed54ece5c28f8203690302"
+    },
+    {
+      "path": "CarbonFiber/4mm-foot.STEP",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73bd8dd9ddc6d306c330e710959bfb4b1c1f8ed7",
+      "size": 62493,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/73bd8dd9ddc6d306c330e710959bfb4b1c1f8ed7"
+    },
+    {
+      "path": "CarbonFiber/5mm_main_board.STEP",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff8cfa167681947f151415958b9725a77e19c32",
+      "size": 1159875,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/5ff8cfa167681947f151415958b9725a77e19c32"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "823231c86488460fb23d3b91004c686ff1c4f695",
+      "size": 1069,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/823231c86488460fb23d3b91004c686ff1c4f695"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "019d6b279959ff4204ec273a9dcb570429a248c4",
+      "size": 6028,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/019d6b279959ff4204ec273a9dcb570429a248c4"
+    },
+    {
+      "path": "SolidWorks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79fb2795df43ea38086125912f5d80b9c83c72dd",
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/trees/79fb2795df43ea38086125912f5d80b9c83c72dd"
+    },
+    {
+      "path": "SolidWorks/30mm_alu_pillar.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5c63381d3d4195cb0af47ed60d2b4bf30993ea7",
+      "size": 154948,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/e5c63381d3d4195cb0af47ed60d2b4bf30993ea7"
+    },
+    {
+      "path": "SolidWorks/40mm_alu_pillar.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39cd146f964b8365cdb981b1ed0945604c18e920",
+      "size": 132514,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/39cd146f964b8365cdb981b1ed0945604c18e920"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2221db8a7a097752699b415f5734e53e283099a7",
+      "size": 4024757,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/2221db8a7a097752699b415f5734e53e283099a7"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL.stl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba1eb706034fdf7b5f4d6a736707522ff9e2408f",
+      "size": 2761384,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/ba1eb706034fdf7b5f4d6a736707522ff9e2408f"
+    },
+    {
+      "path": "SolidWorks/battery_board-STL1.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8554f2b1dbb496d0f664818d826c95cf44fa9a3",
+      "size": 4151850,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/b8554f2b1dbb496d0f664818d826c95cf44fa9a3"
+    },
+    {
+      "path": "SolidWorks/landing_board.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5bdde806ab0ccced652389292b2448e1c07508f",
+      "size": 1511002,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/c5bdde806ab0ccced652389292b2448e1c07508f"
+    },
+    {
+      "path": "SolidWorks/yunque-F90_motor.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f68d93142fa4eace8e1d45d116edfeb5770078cd",
+      "size": 214691,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/f68d93142fa4eace8e1d45d116edfeb5770078cd"
+    },
+    {
+      "path": "SolidWorks/yunque-LiDARboard.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c63b6772dd8ee6fdad00764ee2f1f470c367bc0f",
+      "size": 460302,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/c63b6772dd8ee6fdad00764ee2f1f470c367bc0f"
+    },
+    {
+      "path": "SolidWorks/yunque-battery_board.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560fe7bac001208d941959ceac715e2ee392c9f4",
+      "size": 1605347,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/560fe7bac001208d941959ceac715e2ee392c9f4"
+    },
+    {
+      "path": "SolidWorks/yunque-dualsky-bat.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a0c651cf193e757a2130712d2cc609282a8bb0a",
+      "size": 139462,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/3a0c651cf193e757a2130712d2cc609282a8bb0a"
+    },
+    {
+      "path": "SolidWorks/yunque-foot-4mm.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8468a53e184830ebf8b9d8bbad7f8cea0556d0d4",
+      "size": 87491,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/8468a53e184830ebf8b9d8bbad7f8cea0556d0d4"
+    },
+    {
+      "path": "SolidWorks/yunque-intel_nuc.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d491caa2cf547e46876ca8f16fdc778a126e3f1",
+      "size": 230424,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/8d491caa2cf547e46876ca8f16fdc778a126e3f1"
+    },
+    {
+      "path": "SolidWorks/yunque-led-a.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57326a883fa851d2b42d76459633a2d2fd4249f3",
+      "size": 63030,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/57326a883fa851d2b42d76459633a2d2fd4249f3"
+    },
+    {
+      "path": "SolidWorks/yunque-led-b.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7908032108ce8ed993076e75b8d0560b9c4b1d77",
+      "size": 63296,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/7908032108ce8ed993076e75b8d0560b9c4b1d77"
+    },
+    {
+      "path": "SolidWorks/yunque-mainboard.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7b15cedbdcdfd2a23c8bac69a63076b342c435e",
+      "size": 741007,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/e7b15cedbdcdfd2a23c8bac69a63076b342c435e"
+    },
+    {
+      "path": "SolidWorks/yunque-mid360_LiDAR.SLDASM",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09e1608ebc40c61925009d81c7c16c6074de040c",
+      "size": 9571608,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/09e1608ebc40c61925009d81c7c16c6074de040c"
+    },
+    {
+      "path": "SolidWorks/yunque-prop.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23aa646dd14a2d53516673f70e042e8a076f3d1d",
+      "size": 71208,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/23aa646dd14a2d53516673f70e042e8a076f3d1d"
+    },
+    {
+      "path": "SolidWorks/yunque.SLDASM",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f31dd4c7df2f7763824cdbfa7787ced844c5d027",
+      "size": 11455281,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/f31dd4c7df2f7763824cdbfa7787ced844c5d027"
+    },
+    {
+      "path": "SolidWorks/yunque_bat_board.SLDPRT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dfa39a0fdeca9ff3e5400ef1c6b489b29cabf44",
+      "size": 324671,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/2dfa39a0fdeca9ff3e5400ef1c6b489b29cabf44"
+    },
+    {
+      "path": "misc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c756880057966969b01263f8ea24447bd70409e",
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/trees/2c756880057966969b01263f8ea24447bd70409e"
+    },
+    {
+      "path": "misc/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "misc/cover.JPG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e183138b5bc240eb63d03df48cc0fd07f63e9e8",
+      "size": 519163,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/9e183138b5bc240eb63d03df48cc0fd07f63e9e8"
+    },
+    {
+      "path": "misc/hardware_breakdown.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3785dc6a446607f471264f3541a6f467d29851b4",
+      "size": 617584,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/3785dc6a446607f471264f3541a6f467d29851b4"
+    },
+    {
+      "path": "misc/power_module.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6e3e3d4a45c6f9950f66dd286d43d4436b07c42",
+      "size": 371296,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/d6e3e3d4a45c6f9950f66dd286d43d4436b07c42"
+    },
+    {
+      "path": "misc/sw.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b15623c8891298f6d2513dc6298ff629a069ecaf",
+      "size": 301457,
+      "url": "https://api.github.com/repos/hku-mars/SUPER-Hardware/git/blobs/b15623c8891298f6d2513dc6298ff629a069ecaf"
+    }
+  ],
+  "truncated": false
+}

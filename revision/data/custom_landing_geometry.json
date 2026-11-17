@@ -1,0 +1,3555 @@
+{
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "source": "user native 16-series long landing assembly; components 151..265",
+  "selection_reason": "long landing gear visible in user flight photographs",
+  "source_sha256": "57f73e0ac6fc7bfd8fc9d4753d5a669f356e3f705c252d80a0e8c7e82675ca73",
+  "transform": {
+    "rotation": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "translation_m": [
+      -0.1196513475159098,
+      -0.002035903842372802,
+      -0.020041592849458622
+    ],
+    "uniform_scale": 1.0
+  },
+  "registration": "highest landing-assembly component 5 mm below lowest rotor sweep; centres aligned",
+  "mounting_holes_and_load_capacity_verified": false,
+  "short_SUPER_feet_replaced": true,
+  "plate_top_z_m": -0.02203556899324639,
+  "bounds_m": [
+    [
+      -0.1500000004896809,
+      -0.16200000336877812,
+      -0.37402988268252746
+    ],
+    [
+      0.1500000058433126,
+      0.1619999975848962,
+      -0.018535569158422815
+    ]
+  ],
+  "parts": [
+    {
+      "index": 151,
+      "source_part": "G_F_E_R_S_U_L机_起飞350脚架_滑橇管.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_151.obj",
+      "source_sha256": "9ef7fd4df482b21e2a8cd525bb0e10c39df805937bb44b44860c88cf0457eb68",
+      "sha256": "3224236a481124ec07e8896dd374bc37d98e7f70d9259e74f4c82b62a9cfa5ba",
+      "color": [
+        0.0722718537,
+        0.0722718537,
+        0.0722718537
+      ],
+      "material_role": "carbon",
+      "collision": {
+        "type": "box",
+        "center": [
+          2.6768162968731977e-09,
+          -0.15000000134555969,
+          -0.36203556548070165
+        ],
+        "half_size": [
+          0.15001014123311718,
+          0.010010100309961464,
+          0.010012006225218941
+        ],
+        "quat_wxyz": [
+          5.91067276135495e-07,
+          6.905171280002049e-06,
+          0.0018844110633983845,
+          0.9999982244718805
+        ]
+      },
+      "vertices": 840,
+      "faces": 280
+    },
+    {
+      "index": 152,
+      "source_part": "G_F_E_R_S_U_L机_起飞350脚架_缓冲套.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_152.obj",
+      "source_sha256": "0ccdf2c19852389f4af81ea571eec0e7e7ea249de9d72e6dae8e5f6ad2c1a7c2",
+      "sha256": "e76360769ffd413fc7d7664f8cd51b2f6e05d6cfad299eba586a73241562937a",
+      "color": "#181f26",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.12500000011712784,
+          0.1499999956179343,
+          -0.36203556572537504
+        ],
+        "half_size": [
+          0.025011326521819043,
+          0.01201000196857707,
+          0.012007081539261869
+        ],
+        "quat_wxyz": [
+          -1.6298559019197876e-11,
+          -5.528877197512216e-05,
+          -2.933438783312383e-07,
+          0.9999999984715329
+        ]
+      },
+      "vertices": 1176,
+      "faces": 392
+    },
+    {
+      "index": 153,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_153.obj",
+      "source_sha256": "2acee5be3f8f9e6825592f2c220ac91a52a39a4f04a8b673769607fb6f4a810b",
+      "sha256": "03f627a4cddc2499c924093b35a00c9ca4eface74fea67b7b8602adbea43e316",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.08399999029268446,
+          -0.021785568771227014
+        ],
+        "half_size": [
+          0.0035098243726954695,
+          0.0035086248644932744,
+          0.0002606831153073962
+        ],
+        "quat_wxyz": [
+          7.879769648024281e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.7652271951732383e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 154,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_154.obj",
+      "source_sha256": "cf354e8a4562ad865cd736901172b125b5dc1194367590f94cac92192cff9794",
+      "sha256": "98646d72619270545bdff1652248934806bb9ef226d595cc27259310d1ecb1f5",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02299845509336443,
+          -0.08399910719813285,
+          -0.02803542950964354
+        ],
+        "half_size": [
+          0.00951047227571658,
+          0.002753903223085633,
+          0.0027598668016881843
+        ],
+        "quat_wxyz": [
+          -0.6790992452123004,
+          0.1967935519009494,
+          0.6792084343287539,
+          0.19690712485579406
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 155,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_155.obj",
+      "source_sha256": "ec60a24a80b6c46ddfbcb14d92b7e2dcacb8c96a5f2201dc29ade57c213ef9c1",
+      "sha256": "c5291d078eb342f8c9181075326baa11496645a1c45693a327aceceb2c5322e9",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.08399999029268446,
+          -0.03228556886249663
+        ],
+        "half_size": [
+          0.0035098243726954695,
+          0.0035086248644932744,
+          0.0002606831153073965
+        ],
+        "quat_wxyz": [
+          7.879769648027733e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.765227195177256e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 156,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_156.obj",
+      "source_sha256": "75de3046b66a9cabef212947b688264fec389b342d88899791104ac5ef932b84",
+      "sha256": "19a0d916ea5364be9c86b8ac36860f9edf5bc4f72ab823ac500a9ca90eec3a7a",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.022999998299210206,
+          -0.08400000175945273,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819485206015334,
+          0.003088093074803912,
+          0.0012393616258508477
+        ],
+        "quat_wxyz": [
+          0.002724484272012828,
+          0.13226466758738878,
+          0.9912036072678669,
+          -0.003747510189110298
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 157,
+      "source_part": "G_F_E_R_S_U_L机_起飞350脚架_缓冲套.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_157.obj",
+      "source_sha256": "bf52d702f5bcf8f0436881c62f122cd095a0d5e21611907987f45460d7b6954e",
+      "sha256": "35a645952aa6744193e76791b1125dfaa2e5dffcc2f386089b71e0cd2c244b4f",
+      "color": "#181f26",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.12500000011712784,
+          -0.15000000140183345,
+          -0.3620355657253771
+        ],
+        "half_size": [
+          0.025011326521819043,
+          0.012010001968577086,
+          0.01200708153926187
+        ],
+        "quat_wxyz": [
+          5.5288771975122176e-05,
+          -1.629868353162699e-11,
+          0.9999999984715329,
+          2.933467022945687e-07
+        ]
+      },
+      "vertices": 1176,
+      "faces": 392
+    },
+    {
+      "index": 158,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_158.obj",
+      "source_sha256": "3379cd738f39c03ab068d98e1560e531c4aa57aabbed5d53e1bd0580b248b2b3",
+      "sha256": "c5f36bbf357f495be7dee960c0b9e284312a385feb7c3f5cc978991d7699a0e3",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.08399999019455662,
+          -0.0217855687710584
+        ],
+        "half_size": [
+          0.00350982410257872,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030137906e-05,
+          -0.70309763285423,
+          0.7110933195734274,
+          5.765342775606945e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 159,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_159.obj",
+      "source_sha256": "decf61ed4fcd2bbb40d25c59911ca3a6f7538242753e725db7023c8970934830",
+      "sha256": "9999ff3e5d231cc8e52b2938256db8f161c19a7528f8f3d318b25d2927a4a170",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.056998452548867214,
+          -0.08399910972331714,
+          -0.028035429486168113
+        ],
+        "half_size": [
+          0.009510472367863286,
+          0.0027538962257595933,
+          0.0027598699229461963
+        ],
+        "quat_wxyz": [
+          -0.6790955303328764,
+          0.19680630694627202,
+          0.6792047514699054,
+          0.1969198918565185
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 160,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_160.obj",
+      "source_sha256": "6cc95a2abb6d2ed37a24bacd4a6a319e162c13674052ef9c2df3958cb10b8ca3",
+      "sha256": "41fd3f07df93880aaab09c14fb28d3ebea7e1b72e2bd2d5696107ae214f3d26c",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.08399999019455662,
+          -0.032285568862328015
+        ],
+        "half_size": [
+          0.003509824102578721,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030138867e-05,
+          -0.7030976328542301,
+          0.7110933195734274,
+          5.7653427756061365e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 161,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_161.obj",
+      "source_sha256": "19c63dd00a6ff968056b9e5b9b4ba24c6eb193e35c57cc403202b878b3373f8e",
+      "sha256": "b05ccdddb65e6511205ce6432bb99f0b360af5af0adfcef31425bec298451bc9",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700000001882646,
+          -0.08400000128816963,
+          -0.03373556907696694
+        ],
+        "half_size": [
+          0.0030819358700276945,
+          0.003088104930513138,
+          0.0012393616545924926
+        ],
+        "quat_wxyz": [
+          0.0027245247708209087,
+          0.1322722866089938,
+          0.9912025905417151,
+          -0.003747487610985321
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 162,
+      "source_part": "G_F_E_R_S_U_L机_起飞350脚架_缓冲套.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_162.obj",
+      "source_sha256": "ea16da24492ab76536c355682d8eecc2e9d83c6c0b3f7f6734cc8b8c98f3cffb",
+      "sha256": "b636552e89eea96e23a29368dfafd009d527d59745092de4964973946f392546",
+      "color": "#181f26",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.12499999988287216,
+          -0.15000000140183345,
+          -0.3620355657253771
+        ],
+        "half_size": [
+          0.02501133210939425,
+          0.012010001968577086,
+          0.012007081539128855
+        ],
+        "quat_wxyz": [
+          -1.6298696809773083e-11,
+          -5.528875695607808e-05,
+          -2.933467002684082e-07,
+          0.9999999984715336
+        ]
+      },
+      "vertices": 1176,
+      "faces": 392
+    },
+    {
+      "index": 163,
+      "source_part": "G_F_E_R_S_U_L机_起飞350脚架_缓冲套.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_163.obj",
+      "source_sha256": "490a8f79838cb89fbd4617e795765743752080f9668c7bdc518425649245b8c4",
+      "sha256": "8a77065ee2b3206b00eb54295b1380628f770279044fd14c4b790fabbab378e4",
+      "color": "#181f26",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.12499999988287216,
+          0.1499999956179343,
+          -0.36203556572537504
+        ],
+        "half_size": [
+          0.02501133210939425,
+          0.012010001968577069,
+          0.012007081539128855
+        ],
+        "quat_wxyz": [
+          5.5288756956078076e-05,
+          -1.6298520748583345e-11,
+          0.9999999984715336,
+          2.933438942074608e-07
+        ]
+      },
+      "vertices": 1176,
+      "faces": 392
+    },
+    {
+      "index": 164,
+      "source_part": "G_F_E_R_S_U上端_左后_活动夹盖.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_164.obj",
+      "source_sha256": "95c5af3222208955ce4d5cc2ceecb6450459c7d3b8dd9fb1bdf40fb3aa21db8d",
+      "sha256": "2d78845a8bb6292c5562d66d8d20cc96cc9a82c455578286ec41e0e00f5f468d",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.04523923606145224,
+          -0.09316345483218717,
+          -0.05744473747434088
+        ],
+        "half_size": [
+          0.019129597614924474,
+          0.014021270282362767,
+          0.006280332998787829
+        ],
+        "quat_wxyz": [
+          -0.05391980253628338,
+          0.06436380910492294,
+          0.7619349909290036,
+          0.6421876864048176
+        ]
+      },
+      "vertices": 1356,
+      "faces": 452
+    },
+    {
+      "index": 165,
+      "source_part": "G_F_E_R_S_U上端_四角安装孔板.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_165.obj",
+      "source_sha256": "f0a774596fc1dc6eebca22693cd3768b268ad5e316d0308710321604659674eb",
+      "sha256": "53bfbfef7ecce08d4c04bad4744ed9582867531b059ab9df5f17818b3ba78d92",
+      "color": "#333333",
+      "material_role": "plate",
+      "collision": {
+        "type": "box",
+        "center": [
+          -1.171518680675998e-10,
+          -2.891940988763997e-09,
+          -0.025035569176117944
+        ],
+        "half_size": [
+          0.11417814581738252,
+          0.0653054285814496,
+          0.0030143206163129013
+        ],
+        "quat_wxyz": [
+          1.2103199558896532e-05,
+          0.7080226711681636,
+          -0.7061897029475384,
+          -2.0402902661456753e-05
+        ]
+      },
+      "vertices": 16176,
+      "faces": 5392
+    },
+    {
+      "index": 166,
+      "source_part": "G_F_E_R_S_U上端_支腿顶端缩短8mm.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_166.obj",
+      "source_sha256": "ec09ab0c006646a326642e6ffe8d40b3277d162d0f1d107f7e404685e8d52e92",
+      "sha256": "3e1e0a2dcac0540fb892fb8001a385a3e4480d611fd9895d67ce428a54489bf8",
+      "color": [
+        0.0176419541,
+        0.0251868591,
+        0.0343398079
+      ],
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.07071841953164996,
+          -0.12315855259550722,
+          -0.19391502565641994
+        ],
+        "half_size": [
+          0.1630436804357454,
+          0.00799884305538437,
+          0.007998843011590765
+        ],
+        "quat_wxyz": [
+          0.6861194463178458,
+          0.3450251494377393,
+          -0.5159684333525016,
+          0.3794394911230554
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 167,
+      "source_part": "G_F_E_R_S_U上端_左后_法兰夹座.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_167.obj",
+      "source_sha256": "2c1fd21cfdbb266f7e0394d11fb11687a3d39405afc23abfa29cf0348da45f3f",
+      "sha256": "897c7b3e6b2141047a2afe4d8e5a57c1b7854fec298f429b80b94d52173be728",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.04194094322430885,
+          -0.10019649236407345,
+          -0.040353350977074535
+        ],
+        "half_size": [
+          0.03243515539356431,
+          0.029746843587664634,
+          0.016109525896690492
+        ],
+        "quat_wxyz": [
+          0.20446749098969277,
+          -0.33129089404655343,
+          0.7843540243264928,
+          0.48293700745858215
+        ]
+      },
+      "vertices": 3054,
+      "faces": 1018
+    },
+    {
+      "index": 168,
+      "source_part": "G_F_E_R_S_U_L机_起飞350脚架_滑橇管.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_168.obj",
+      "source_sha256": "3cc4ae29adf997fc711ee06a69a366ba201dd41548cb366009da1b05c0350c7f",
+      "sha256": "e2834b496c17c16eb28d08197f34d20d618b7da409780c2e5fb1783039c4eaa1",
+      "color": [
+        0.0722718537,
+        0.0722718537,
+        0.0722718537
+      ],
+      "material_role": "carbon",
+      "collision": {
+        "type": "box",
+        "center": [
+          2.6768163020048946e-09,
+          0.14999999567420738,
+          -0.362035565480702
+        ],
+        "half_size": [
+          0.1500101412331172,
+          0.01001010031178085,
+          0.010012006226935544
+        ],
+        "quat_wxyz": [
+          5.91067434272968e-07,
+          6.905171266480006e-06,
+          0.0018843881842913305,
+          0.9999982245149939
+        ]
+      },
+      "vertices": 840,
+      "faces": 280
+    },
+    {
+      "index": 169,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_169.obj",
+      "source_sha256": "1f04af39bba33a751ca3be1651aacf171f7bf0d3eb40aa6b9843c520c3202a2f",
+      "sha256": "51ae96e22f6209b054f6f6a76d4da4a2cf992e5a9100be08ef8869982d81558b",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.10599999007534733,
+          -0.0217855687710584
+        ],
+        "half_size": [
+          0.00350982410257872,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030137906e-05,
+          -0.70309763285423,
+          0.7110933195734274,
+          5.765342775606945e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 170,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_170.obj",
+      "source_sha256": "9f9e8a4df8729e0ae1b82cb791b9bd81e1d6cb2601f12bd69322fc1fc80f3289",
+      "sha256": "24f0dd9b82215d9193baa8689a4f8c211e8df0763d710e9ffa95603d13da3c94",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.056998452548867214,
+          -0.10599910960410786,
+          -0.028035429486168113
+        ],
+        "half_size": [
+          0.009510472367863286,
+          0.0027538962257595938,
+          0.0027598699229461963
+        ],
+        "quat_wxyz": [
+          -0.6790955303328764,
+          0.19680630694627202,
+          0.6792047514699054,
+          0.1969198918565185
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 171,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_171.obj",
+      "source_sha256": "5bbda1434a0e7ac69caa32ab3fc72185f985505556eafbb24ca68ab2f3cef1ba",
+      "sha256": "228998d135a2a419d3a3a43cded28f02b8b038c332b666a500e88a0eb4cab979",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101913213,
+          -0.10599999007534733,
+          -0.032285568862328015
+        ],
+        "half_size": [
+          0.003509824102578721,
+          0.0035086245934640176,
+          0.0002606831136531628
+        ],
+        "quat_wxyz": [
+          7.879660030138867e-05,
+          -0.7030976328542301,
+          0.7110933195734274,
+          5.7653427756061365e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 172,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_172.obj",
+      "source_sha256": "2eefa56d262c9c6873189b2ebe803f627d91cc8dc493761c69ac154db67d85a2",
+      "sha256": "7afe357ee7f185380eaff589a8bbc30a7f0fa8af39ba582e9c3a4af7c1ede1f4",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700000001882646,
+          -0.10600000116896034,
+          -0.03373556907696694
+        ],
+        "half_size": [
+          0.0030819358700276945,
+          0.003088104930513138,
+          0.0012393616545924926
+        ],
+        "quat_wxyz": [
+          0.0027245247708209087,
+          0.1322722866089938,
+          0.9912025905417151,
+          -0.003747487610985321
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 173,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_173.obj",
+      "source_sha256": "f98883f6ccf8fe6fb59d7e9a38ae5e00de9eefd52fb815feac9756504752fee7",
+      "sha256": "f57f9e95b6c9f6692aea910c18512a7bd873a1b774f8884364c25bf78ba1d785",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.10599999017347517,
+          -0.021785568771227014
+        ],
+        "half_size": [
+          0.00350982437269547,
+          0.0035086248644932744,
+          0.0002606831153073963
+        ],
+        "quat_wxyz": [
+          7.879769648024281e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.7652271951732383e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 174,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_174.obj",
+      "source_sha256": "f0f2b36fc477851dd932edbccbabc67f30d09629c71d2e94335cf1b31cfa79e7",
+      "sha256": "b66827c89a8e9f769aa38210fbeaaf4235df90b726f75b2560c36a3dde80bf86",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02299845509336443,
+          -0.10599910707892356,
+          -0.02803542950964354
+        ],
+        "half_size": [
+          0.00951047227571658,
+          0.002753903223085633,
+          0.0027598668016881843
+        ],
+        "quat_wxyz": [
+          -0.6790992452123004,
+          0.1967935519009494,
+          0.6792084343287539,
+          0.19690712485579406
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 175,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_175.obj",
+      "source_sha256": "0f58faad7095e0acf2391d55f717f1a8598f9c395d526a88c562077b07c3491f",
+      "sha256": "8ec19c4077007f89cd4790c6e96f8934cb156a63094fef0e91889eb9447ad9d8",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02300101667010763,
+          -0.10599999017347517,
+          -0.03228556886249663
+        ],
+        "half_size": [
+          0.00350982437269547,
+          0.0035086248644932744,
+          0.0002606831153073965
+        ],
+        "quat_wxyz": [
+          7.879769648027733e-05,
+          -0.7031000606536372,
+          0.7110909190644965,
+          5.765227195177256e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 176,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_176.obj",
+      "source_sha256": "a72b583cd7abe6bd43d8fa949350ce6c051bbaaa11079e81981712fe36890d84",
+      "sha256": "bc3e18481a8d8b6d7c12d6736a33b895ca646a5346df87b201c268491b00c707",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.022999998299210206,
+          -0.10600000164024344,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819485206015334,
+          0.003088093074803912,
+          0.0012393616258508477
+        ],
+        "quat_wxyz": [
+          0.002724484272012828,
+          0.13226466758738878,
+          0.9912036072678669,
+          -0.003747510189110298
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 177,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_177.obj",
+      "source_sha256": "5b455576f789749d5763747cfa6cbe80bf16be775d49af53e4beb0dfce739acc",
+      "sha256": "2ef655605dccba0f3db4aa5a90ef409c41b9fc98f5390af937dcceb599f2c1a4",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.08399999020506152,
+          -0.021785568771024062
+        ],
+        "half_size": [
+          0.0035098234887291206,
+          0.0035086202538477398,
+          0.0002606831134095323
+        ],
+        "quat_wxyz": [
+          7.87960626188417e-05,
+          -0.7030921208746457,
+          0.7110987695328795,
+          5.765412188792779e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 178,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_178.obj",
+      "source_sha256": "921d232bc1679f2827670360dd70eb30018f6094fd565e111b642309e29270e2",
+      "sha256": "e123f459259ee13e3eb44ca425e53066754f61be4b1e1ab0cb58702243fc9157",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.023001542410450954,
+          -0.0839991055147471,
+          -0.028035429504796497
+        ],
+        "half_size": [
+          0.009510472292705019,
+          0.00275390759139319,
+          0.0027598663130674237
+        ],
+        "quat_wxyz": [
+          -0.6791004870531937,
+          0.19678925465522662,
+          0.6792096832096184,
+          0.19690282875226867
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 179,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_179.obj",
+      "source_sha256": "0f63605d3f7d66895c621e5c50d19629206d7b4501be0a3ed343ed9003bd6856",
+      "sha256": "1aa5b1dede4e28879ecc99f69bb38504aaf68dcf2379aed8b1db5a2533392e80",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.08399999020506152,
+          -0.032285568862293675
+        ],
+        "half_size": [
+          0.0035098234887291206,
+          0.0035086202538477398,
+          0.0002606831134095322
+        ],
+        "quat_wxyz": [
+          7.879606261883009e-05,
+          -0.7030921208746455,
+          0.7110987695328798,
+          5.765412188790117e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 180,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_180.obj",
+      "source_sha256": "b3d61b3f3f822052fcba55ad002af88f1608d764efaa7707ccc41c2f3cf1a473",
+      "sha256": "e4caf6bad8290afba701fe6fb7d1d19937b5a4b420d5ee0b1afb3655122d055e",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02300000179019676,
+          -0.08400000175945273,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.003081960223485319,
+          0.003088079151496748,
+          0.001239361654838057
+        ],
+        "quat_wxyz": [
+          0.0027244536464156167,
+          0.1322554788550747,
+          0.9912048333458665,
+          -0.0037475347812192437
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 181,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_181.obj",
+      "source_sha256": "f5d2a9336f207b0b83c2650b108ce3572a5c696b3459a42b49dc899a669dd356",
+      "sha256": "70a52cd9797653024189796d7102956539eaa5cd9a3f7193a404823475fb0c95",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.030458682489403213,
+          -0.09923847610404461,
+          -0.05897531188539526
+        ],
+        "half_size": [
+          0.011512183739854322,
+          0.0027586259959552196,
+          0.00275581077688068
+        ],
+        "quat_wxyz": [
+          0.4897031845925341,
+          -0.5100100375447411,
+          -0.4215080339682056,
+          0.567812935660857
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 182,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_182.obj",
+      "source_sha256": "755dcda8b03d27158d67634d3099540b38e9c2d9a518a1e3bb9a919e69f0ebea",
+      "sha256": "090c9977c0ce2f9ca65f7ee08edcff7c80aecee6fc9c8cdc89df373f75729f27",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.03045346693585235,
+          -0.10737310821269479,
+          -0.05760434105894769
+        ],
+        "half_size": [
+          0.0035098252319401895,
+          0.0035086250260617656,
+          0.0002606834706414664
+        ],
+        "quat_wxyz": [
+          0.45372180182425864,
+          -0.5371111787521927,
+          0.543227386148923,
+          0.45885958107746566
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 183,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_183.obj",
+      "source_sha256": "9a37be5ea9c32b8ab2984b2799b3e9b93872f474a9b6018eb0f854fc2bfaeed7",
+      "sha256": "e59fe46290e23de92d138d8377f0f48e46ee70a8b6bd54eb314de8bb9e6aa6f1",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.030453466955034845,
+          -0.09307761304433311,
+          -0.060031043438479086
+        ],
+        "half_size": [
+          0.0035098251675652055,
+          0.0035086250324196434,
+          0.00026068374899279866
+        ],
+        "quat_wxyz": [
+          0.45372163346504174,
+          -0.53711107797873,
+          0.543227565358808,
+          0.458859653350219
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 184,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_184.obj",
+      "source_sha256": "d08725795f36fbabb39d67e2e4aef7851bab0a51355d3db61b11a200be8344bd",
+      "sha256": "466fc5315f1f97584ee0ff660868f9f7fefb50c9661863fe1673ffa24a32860e",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.030452448735642526,
+          -0.09164806726528482,
+          -0.06027372504438813
+        ],
+        "half_size": [
+          0.0030819512885367213,
+          0.003088089714030972,
+          0.0012393660493887678
+        ],
+        "quat_wxyz": [
+          -0.08325859668610963,
+          0.10280571092735796,
+          0.7596872010402095,
+          0.6366901510580107
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 185,
+      "source_part": "G_F_E_R_S_U上端_右后_活动夹盖.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_185.obj",
+      "source_sha256": "67766cc04a3b259e4f3f04c175c0c7c37e4ed71793791acbe6986720218d5b04",
+      "sha256": "530320904cbcc3c39e1a567f32fb3c0787cd3db284d78e466f38a69248efb6a0",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.045239786030108683,
+          0.10643902931771979,
+          -0.05519115537768945
+        ],
+        "half_size": [
+          0.019138264933010168,
+          0.014033522812334592,
+          0.0062798490362974526
+        ],
+        "quat_wxyz": [
+          -0.05409508484029992,
+          -0.06358813957680569,
+          0.760679550494306,
+          -0.6437366633655892
+        ]
+      },
+      "vertices": 1356,
+      "faces": 452
+    },
+    {
+      "index": 186,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_186.obj",
+      "source_sha256": "00cc10cb2082591c7da99eab5206e9319c2c8fffb6ea04239fa6f2e94724ec19",
+      "sha256": "d1070ad9f3fe8b325b549150bcd067d6cd056486d08e7666f1cb40569425d76f",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.08399999027963023,
+          -0.02178556877138578
+        ],
+        "half_size": [
+          0.003509824936552415,
+          0.003508621703818101,
+          0.00026068311524461474
+        ],
+        "quat_wxyz": [
+          7.879799320094285e-05,
+          -0.7031051334264192,
+          0.7110859032610337,
+          5.76518290414626e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 187,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_187.obj",
+      "source_sha256": "928e149ecd8bd1f76089e76cd3136d7b3ab9b2da7ec840393e8cb0b289b2ab5a",
+      "sha256": "85eb6adec56718c6075bad60420891618af2a141f332b83b0dc6546e9f6ad928",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05700154765454745,
+          -0.08399911224792643,
+          -0.028035429493999363
+        ],
+        "half_size": [
+          0.009510472339882281,
+          0.0027539140792088917,
+          0.002759864976849579
+        ],
+        "quat_wxyz": [
+          -0.6791038784762649,
+          0.19677751796752793,
+          0.6792130941505018,
+          0.1968910952672451
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 188,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_188.obj",
+      "source_sha256": "e6c912983879a5d57631ec57cf75043bee85f53dfdc35b1b623d727f3e16c8f6",
+      "sha256": "5b9d050e620a990c6884383066e9329edaeffa91a3220003d91719ac1ce94baf",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.08399999027963023,
+          -0.0322855688626554
+        ],
+        "half_size": [
+          0.0035098249365524167,
+          0.003508621703818101,
+          0.00026068311524461533
+        ],
+        "quat_wxyz": [
+          7.879799320101408e-05,
+          -0.7031051334264194,
+          0.7110859032610335,
+          5.765182904151899e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 189,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_189.obj",
+      "source_sha256": "d13790cdec90e653b545a9d2053d43eb136a5510c4db7545523c405ce39f785e",
+      "sha256": "fc40ae5b88d28ceb0fded14bed89928d27051bf8fcbec026460ef2a1bccaceae",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05700000363794075,
+          -0.08400000175945273,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819541873432893,
+          0.0030880900968227737,
+          0.001239361644025678
+        ],
+        "quat_wxyz": [
+          0.0027244905132965684,
+          0.13226343745128127,
+          0.9912037713902262,
+          -0.0037475120822033745
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 190,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_190.obj",
+      "source_sha256": "b32d61ad945cb193353e1d3373e107e997528d5bbc91d18126a2c51b3b769275",
+      "sha256": "4404fb2a50d1576ed0e5de71f0590af375e1a98587f9518a8b63364e21d9a670",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.059970848924120745,
+          -0.0983367244474411,
+          -0.05366316826039811
+        ],
+        "half_size": [
+          0.011512183742305832,
+          0.0027586272086519014,
+          0.002755807568840645
+        ],
+        "quat_wxyz": [
+          0.4897066548486785,
+          -0.5100067079819143,
+          -0.4215041718770182,
+          0.5678158003266878
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 191,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_191.obj",
+      "source_sha256": "58cd0c000d6fe9e2f46786de4b8a6b2186fe1eb7e2bea48ea7cab2a89d90d85d",
+      "sha256": "1144d9a6d6828e043bbf3b92430cbc21409ca9a6344c59ead86a47cf31a89b07",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05996563213211574,
+          -0.10647135437295195,
+          -0.05229219985957667
+        ],
+        "half_size": [
+          0.003509825785548646,
+          0.0035086231362059816,
+          0.000260685733342291
+        ],
+        "quat_wxyz": [
+          0.4537214999294423,
+          -0.5371108676385157,
+          0.5432277320067533,
+          0.4588598343123714
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 192,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_192.obj",
+      "source_sha256": "4ddfd53f16ced28a836f0f0d8dff1f848c9a00cbc9ba21cf5a43a58b4ce819c8",
+      "sha256": "21f239838b54449e6c41f10b1dffc9942e9392ee53ab56d57251cea96c6d6700",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.0599656322004322,
+          -0.09217586079141266,
+          -0.054718903532329596
+        ],
+        "half_size": [
+          0.0035098242944186305,
+          0.003508623112877369,
+          0.000260683906090954
+        ],
+        "quat_wxyz": [
+          0.4537214287882292,
+          -0.5371106281752618,
+          0.5432278318514884,
+          0.4588600667539884
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 193,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_193.obj",
+      "source_sha256": "cd15057ee493114152e3d2e587be6ba09cef944e315c500745fc3549a69f4826",
+      "sha256": "6099cf63e39993e631c558e12b441d42c04b17ae4322ca9059b802d07665e6c0",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05996461584068305,
+          -0.09074631240996575,
+          -0.0549615844760476
+        ],
+        "half_size": [
+          0.003081951915282918,
+          0.0030880882142270095,
+          0.001239361307995981
+        ],
+        "quat_wxyz": [
+          -0.08325825353083517,
+          0.10280521535950168,
+          0.7596871521202317,
+          0.6366903343206438
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 194,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_194.obj",
+      "source_sha256": "d8a548bbf4c0439076e9ef8c00a6cc0d879a96678ee9194bd3eb85adea4df100",
+      "sha256": "23d7f2618c0855de4bc188bfbd326611090643cc0fa84a5b7b3ebf1649629133",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.10599999016042094,
+          -0.02178556877138578
+        ],
+        "half_size": [
+          0.003509824936552415,
+          0.003508621703818101,
+          0.00026068311524461474
+        ],
+        "quat_wxyz": [
+          7.879799320094285e-05,
+          -0.7031051334264192,
+          0.7110859032610337,
+          5.76518290414626e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 195,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_195.obj",
+      "source_sha256": "a37b743c6db6f7570beb4a76fa955463d1257590929c199dc44af8ef9dec6cb4",
+      "sha256": "a1988f6252c07cdf62d7c42e7a9824efd15e1142870ece94a4af3a4ed9d9e3a4",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05700154765454745,
+          -0.10599911212871714,
+          -0.028035429493999363
+        ],
+        "half_size": [
+          0.009510472339882281,
+          0.002753914079208892,
+          0.002759864976849579
+        ],
+        "quat_wxyz": [
+          -0.6791038784762649,
+          0.19677751796752793,
+          0.6792130941505018,
+          0.1968910952672451
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 196,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_196.obj",
+      "source_sha256": "13a697864d178bdae47ad4b696347345a17b2c0502505788bba1a74648fd3b61",
+      "sha256": "bf1f7028a20aba73fa79b404ed1a93a96b76f38cbb5882ab303eb4d4873255d2",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897910244088,
+          -0.10599999016042094,
+          -0.0322855688626554
+        ],
+        "half_size": [
+          0.0035098249365524167,
+          0.003508621703818101,
+          0.00026068311524461533
+        ],
+        "quat_wxyz": [
+          7.879799320101408e-05,
+          -0.7031051334264194,
+          0.7110859032610335,
+          5.765182904151899e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 197,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_197.obj",
+      "source_sha256": "7cd6515122e6fd6e42cf582f9d5cecc957cd78ec2831dda8227fc705d3c10326",
+      "sha256": "e2eda82f437236a5354122822907a171121028c6018e225c1fb192e25085b0cd",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05700000363794075,
+          -0.10600000164024344,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.0030819541873432893,
+          0.0030880900968227737,
+          0.001239361644025678
+        ],
+        "quat_wxyz": [
+          0.0027244905132965684,
+          0.13226343745128127,
+          0.9912037713902262,
+          -0.0037475120822033745
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 198,
+      "source_part": "G_F_E_R_S_U上端_支腿顶端缩短8mm.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_198.obj",
+      "source_sha256": "10e390ca73a166284b1e77e56e7f50b91dad1a8f8cf3dcc7d3bc80a033f5cbac",
+      "sha256": "4de3a41dad604e579d4af757f3ba4d92abf7ad5dd53a1463142f44b25e73b524",
+      "color": [
+        0.0176419541,
+        0.0251868591,
+        0.0343398079
+      ],
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.07071842598382971,
+          -0.12315855222197958,
+          -0.1939150245797329
+        ],
+        "half_size": [
+          0.16304368057243585,
+          0.0079992302875718,
+          0.007999230114052042
+        ],
+        "quat_wxyz": [
+          0.6862789798639043,
+          0.3447077157841937,
+          0.5161439060724049,
+          -0.3792007656903175
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 199,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_199.obj",
+      "source_sha256": "d1637925ce6ddf4d8dceaea426324f3208837b94a66b3010e1090a3ce8526e8e",
+      "sha256": "3bb6a974c4e59b94537f3e12900790320b716722118da4557bd8c1029f5c1a04",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.030446214482525297,
+          -0.09923847606903125,
+          -0.05897531168722554
+        ],
+        "half_size": [
+          0.011512183745758273,
+          0.0027586265644307197,
+          0.0027558103433692424
+        ],
+        "quat_wxyz": [
+          0.4897043733110446,
+          -0.5100088855455919,
+          -0.42150670917918137,
+          0.5678139286258459
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 200,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_200.obj",
+      "source_sha256": "45dbf0a1d531de27732bc896b08f00b7045bc56c57bd6f3c66a5d00ce495780c",
+      "sha256": "87d45cb06913823afc93c97b91255e2652d2c79b93297eb8cabb40614cabd1bb",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.030451428974229745,
+          -0.10737310822674548,
+          -0.05760434114244029
+        ],
+        "half_size": [
+          0.0035098260588339925,
+          0.003508622128354137,
+          0.00026068346997366876
+        ],
+        "quat_wxyz": [
+          0.45372660506114576,
+          -0.5371168661395713,
+          0.5432217627313248,
+          0.4588548315787525
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 201,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_201.obj",
+      "source_sha256": "69c8ce581468cc636098e38a4cf439cb21fa839d34f1e55c39b27384c1cc4077",
+      "sha256": "de5884192cd6da779c272161e23b21cde2501e94f75a0d2e21e46fac582ac8b7",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.030451428954998323,
+          -0.09307761305794975,
+          -0.06003104352204813
+        ],
+        "half_size": [
+          0.0035098259944984335,
+          0.0035086221346989546,
+          0.0002606837478841326
+        ],
+        "quat_wxyz": [
+          0.4537264367093108,
+          -0.5371167653759876,
+          0.5432219419343528,
+          0.4588549038467155
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 202,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_202.obj",
+      "source_sha256": "d20b29afeb5a48d3bd4ca490853f67c0f65d548f30b1f4072b4ab0c15e2bd22a",
+      "sha256": "3b96a78e8e50ef473cacb540f59168424d75d6649fb4cad3a40340935ebba9a6",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.03045244503226982,
+          -0.09164806744567862,
+          -0.06027372596975701
+        ],
+        "half_size": [
+          0.003081977421286235,
+          0.0030880626758089105,
+          0.001239366038997721
+        ],
+        "quat_wxyz": [
+          -0.08324711766517147,
+          0.10279199303025732,
+          0.7596890573794831,
+          0.636691651953425
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 203,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_203.obj",
+      "source_sha256": "376f98522f95dcff34dd78d4a490174b8e7375b605b54c8aa46d3474914f5a17",
+      "sha256": "081db88f71eaff9916d316cd8971e9d109020f1e1c4bab85ab44c23ac776644d",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.10599999008585223,
+          -0.021785568771024062
+        ],
+        "half_size": [
+          0.00350982348872912,
+          0.0035086202538477398,
+          0.00026068311340953236
+        ],
+        "quat_wxyz": [
+          7.87960626188417e-05,
+          -0.7030921208746457,
+          0.7110987695328795,
+          5.765412188792779e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 204,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_204.obj",
+      "source_sha256": "5f9c323eca019826989b1ee9ba94696e78897b5c3aa5e9f52fb3de670d59b6b4",
+      "sha256": "0dc032fe919a866d0098ac0d845275e102331239722b79b4597711df0bf2f7be",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.023001542410450954,
+          -0.10599910539553781,
+          -0.028035429504796497
+        ],
+        "half_size": [
+          0.009510472292705019,
+          0.00275390759139319,
+          0.0027598663130674237
+        ],
+        "quat_wxyz": [
+          -0.6791004870531937,
+          0.19678925465522662,
+          0.6792096832096184,
+          0.19690282875226867
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 205,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_205.obj",
+      "source_sha256": "5b109a6cd2ff10c17cd1e236146eaaf0c260165204333d2c3f96ccf3196f1f57",
+      "sha256": "f9a64dbe903a7a9a1765e374fa940fa193da569e8825310510e40be8ec930c30",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.022998981407758242,
+          -0.10599999008585223,
+          -0.032285568862293675
+        ],
+        "half_size": [
+          0.00350982348872912,
+          0.0035086202538477398,
+          0.0002606831134095322
+        ],
+        "quat_wxyz": [
+          7.879606261883009e-05,
+          -0.7030921208746455,
+          0.7110987695328798,
+          5.765412188790117e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 206,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_206.obj",
+      "source_sha256": "83014f1d8289f39f7b86960340b6fad7f9ebb265f1f527846a69d0eefb17971c",
+      "sha256": "b5fdba29aa8dc81064fc1221a93af307b6859256cdcde60e55dab393a52c9f9e",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02300000179019676,
+          -0.10600000164024344,
+          -0.033735569065476825
+        ],
+        "half_size": [
+          0.003081960223485319,
+          0.003088079151496748,
+          0.001239361654838057
+        ],
+        "quat_wxyz": [
+          0.0027244536464156167,
+          0.1322554788550747,
+          0.9912048333458665,
+          -0.0037475347812192437
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 207,
+      "source_part": "G_F_E_R_S_U上端_左前_活动夹盖.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_207.obj",
+      "source_sha256": "c485554e6ac991261e41e4acb6ef73b7e62f6409b892a2a3cf96efda33198c02",
+      "sha256": "f65fa8cc8c9ed3d79c122865cfa057cd517f9e3f23f3b2e76c782d6d1bbe9c5d",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.04523433821361835,
+          -0.09316163236094209,
+          -0.05743830452393999
+        ],
+        "half_size": [
+          0.019021079331886476,
+          0.013876219760427955,
+          0.006271780879909484
+        ],
+        "quat_wxyz": [
+          0.05765083698546864,
+          -0.06874041759383592,
+          0.7613675329723979,
+          0.6420830286804228
+        ]
+      },
+      "vertices": 1356,
+      "faces": 452
+    },
+    {
+      "index": 208,
+      "source_part": "G_F_E_R_S_U上端_右后_法兰夹座.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_208.obj",
+      "source_sha256": "f3e16a199abd932f305f545aac7a8197e4bef796459ccd8e16b60f223cf010d6",
+      "sha256": "a931a979b77fb4e63d5def6c6a89af764bfbdab14edb001a7210455d08967b59",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.04168883837457333,
+          0.0954475380261419,
+          -0.045406817320537377
+        ],
+        "half_size": [
+          0.030128482352082445,
+          0.027694472247396663,
+          0.017590652880223042
+        ],
+        "quat_wxyz": [
+          0.23914710542960493,
+          -0.24677703840171042,
+          0.650605634441373,
+          0.6772164083330089
+        ]
+      },
+      "vertices": 3054,
+      "faces": 1018
+    },
+    {
+      "index": 209,
+      "source_part": "G_F_E_R_S_U上端_左前_法兰夹座.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_209.obj",
+      "source_sha256": "29e125f0483e685aba32224b037c6800426103b6860d14ad9c140ff0fcbddd7b",
+      "sha256": "4f27239c96330663bead26ec1afe91cc48285709dad98886b49f152134ff326f",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.042108421774228307,
+          -0.10014419689868422,
+          -0.040327699340244785
+        ],
+        "half_size": [
+          0.03234228270662455,
+          0.0296782398116032,
+          0.016353669039970327
+        ],
+        "quat_wxyz": [
+          -0.21277010092185025,
+          0.33526828835381245,
+          0.7823265148774012,
+          0.47988465603495783
+        ]
+      },
+      "vertices": 3054,
+      "faces": 1018
+    },
+    {
+      "index": 210,
+      "source_part": "G_F_E_R_S_U上端_支腿顶端缩短8mm.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_210.obj",
+      "source_sha256": "16b73b5520b879dcdbceedc0ef4c5e12036bbca87a7eca1df9ca27a5ca7188bb",
+      "sha256": "91ba1f3463bc084fc62bf02cfa5ab4a82d5bca668718e59de1282549411246e4",
+      "color": [
+        0.0176419541,
+        0.0251868591,
+        0.0343398079
+      ],
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.07071841821041189,
+          0.12315854861726888,
+          -0.19391502667480517
+        ],
+        "half_size": [
+          0.16304368039101774,
+          0.007994527505403075,
+          0.007994524855344727
+        ],
+        "quat_wxyz": [
+          0.6331828141460664,
+          -0.4346053062584242,
+          -0.45994152054425763,
+          -0.4457034320279858
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 211,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_211.obj",
+      "source_sha256": "2408c2837165ddcfe79eb404447a4ed4b0aab0333146e9e70bf59a95cba23351",
+      "sha256": "3788c8788d5d65b20ded91d888dcab232eb1e4a07050328a249d7fdec7224a9e",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05995838166085723,
+          -0.09833672471604898,
+          -0.053663169861464376
+        ],
+        "half_size": [
+          0.011512183750154312,
+          0.002758627460231929,
+          0.0027558104269493704
+        ],
+        "quat_wxyz": [
+          0.48970416153607843,
+          -0.5100090887551533,
+          -0.42150694611419504,
+          0.5678137528616839
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 212,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_212.obj",
+      "source_sha256": "020eff9643ebf01e79f0a00262237b6a274064463250ba601dde84151e40150b",
+      "sha256": "1b979736f4fcdb1606c00681fbc7d39347114b9586be92e7aea129ba78f9e7f2",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.059963595714808304,
+          -0.10647135438278589,
+          -0.05229219991891383
+        ],
+        "half_size": [
+          0.003509826544841835,
+          0.0035086220342158123,
+          0.0002606857346871882
+        ],
+        "quat_wxyz": [
+          0.45372591057682315,
+          -0.537116088243836,
+          0.5432225701320528,
+          0.458855473019555
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 213,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_213.obj",
+      "source_sha256": "88dba5173531bf1b63e05ca2a6a95c7d3e782916fa0493b712fcf6c7851b6d04",
+      "sha256": "a42dd19e902168a1714d5a12457d794ed603169b7e537c21c771eca2c1e95448",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.059963595646505496,
+          -0.0921758608016212,
+          -0.05471890359160703
+        ],
+        "half_size": [
+          0.003509825053753166,
+          0.003508622010918214,
+          0.0002606839070563115
+        ],
+        "quat_wxyz": [
+          0.45372583942782907,
+          -0.5371158487698141,
+          0.5432226699906876,
+          0.45885570547175575
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 214,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_214.obj",
+      "source_sha256": "3383df9d0de5f0eb92cba97f922a3af26da0f301725f45b9abd943717d273e47",
+      "sha256": "41adf122c64744ada9380429baf1dd04d99ab0e498bb31c939d5c18dc288f5cf",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05996461200919853,
+          -0.09074631250016203,
+          -0.05496158493873017
+        ],
+        "half_size": [
+          0.0030819758659997054,
+          0.0030880628147705036,
+          0.001239361290856666
+        ],
+        "quat_wxyz": [
+          -0.08324761703302962,
+          0.10279250367121334,
+          0.7596888722481268,
+          0.6366917251148273
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 215,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_215.obj",
+      "source_sha256": "796fe7096b438f9fe518ba28c598a615d6ac74820deeb0657707e8b213603fbb",
+      "sha256": "46637dd17f483133c27ba44fee6caf319d1bad54641e9d8186924c7a403c43d8",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101905964107,
+          0.10600001114538343,
+          -0.021785568771058167
+        ],
+        "half_size": [
+          0.0035098278409403513,
+          0.003508624606815745,
+          0.0002606831139905709
+        ],
+        "quat_wxyz": [
+          7.879657112629926e-05,
+          -0.7030977526972275,
+          0.7110932010779578,
+          5.7653375137281385e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 216,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_216.obj",
+      "source_sha256": "03a6cc10c4029982e377d50f6b80d5acb4e07f19296d73261ac412fee05c97db",
+      "sha256": "185daa1a11a84df5a32d7d69d94e2b613f8c4fa24cdfbb57c8d0f5e50812c94d",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05699845423246271,
+          0.10600088916656959,
+          -0.028035429475611884
+        ],
+        "half_size": [
+          0.009510472395533471,
+          0.0027538763725572014,
+          0.002759872076230988
+        ],
+        "quat_wxyz": [
+          -0.6790850937486025,
+          0.19684231562110457,
+          0.6791943037264699,
+          0.19695592404111412
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 217,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_217.obj",
+      "source_sha256": "ddf1f0fd0a28aa061879d60d7100832556f64c66e3da5e2581efc79579291735",
+      "sha256": "8702ab49c937369c4c5dd074d8fa3d42ccacefa1dae6de0605f582eca037cdd2",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101905964107,
+          0.10600001114538343,
+          -0.032285568862327786
+        ],
+        "half_size": [
+          0.003509827840940351,
+          0.003508624606815745,
+          0.0002606831139905707
+        ],
+        "quat_wxyz": [
+          7.879657112628264e-05,
+          -0.7030977526972274,
+          0.7110932010779581,
+          5.765337513726314e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 218,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_218.obj",
+      "source_sha256": "de599714333d3c86bd11d3eb57155e5d889323d08e128a29aed5d5ed77f30c02",
+      "sha256": "4c2eb2696de6721cbc68f51a75a79734e2cb6825199abbe9e927ea5b2145a6a4",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700000096130597,
+          0.10600000030890479,
+          -0.03373556908320942
+        ],
+        "half_size": [
+          0.003081967363953188,
+          0.0030880706931392383,
+          0.0012393617084100143
+        ],
+        "quat_wxyz": [
+          0.0027244551662212644,
+          0.1322533639265695,
+          0.9912051154560647,
+          -0.0037475549206251392
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 219,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_219.obj",
+      "source_sha256": "30588d510fd244fdfa039b84f1806a723edff00bbc51c32ce0ea800a8d23046a",
+      "sha256": "b6f6ae0c08fad3eb96d7bc5748bbb4001bc50d1c33ba31f6a4c09c2f1e3fbf2e",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.023001016597663203,
+          0.10600001104725952,
+          -0.021785568771226782
+        ],
+        "half_size": [
+          0.003509828111040931,
+          0.003508624877828539,
+          0.0002606831156448049
+        ],
+        "quat_wxyz": [
+          7.879766729871025e-05,
+          -0.7031001804206927,
+          0.7110908006433063,
+          5.765221934134536e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 220,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_220.obj",
+      "source_sha256": "da59c4bb6c26961af5d2a2490628e122126cd2e6b0a12f482ececa27aa16c8a0",
+      "sha256": "f90e43f8189587500ef3af8474a20f329442470be0f75b2b6d030c19f4bddb68",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.022998456776364303,
+          0.10600089169188101,
+          -0.028035429499087026
+        ],
+        "half_size": [
+          0.009510472303386763,
+          0.0027538833820645032,
+          0.0027598689659027024
+        ],
+        "quat_wxyz": [
+          -0.6790888099600848,
+          0.19682955851042602,
+          0.6791979879187222,
+          0.196943154973068
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 221,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_221.obj",
+      "source_sha256": "f7953d82afa67690c54c6b593edc7163729ae3b5194268eeb6a3847db2a5c8fd",
+      "sha256": "1c8010c2c0ba0dcc4febfb1153a54a2bcb4922d7e3d31fd8eb20880c3c912c10",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.023001016597663203,
+          0.10600001104725952,
+          -0.032285568862496394
+        ],
+        "half_size": [
+          0.0035098281110409325,
+          0.003508624877828539,
+          0.00026068311564480455
+        ],
+        "quat_wxyz": [
+          7.879766729868334e-05,
+          -0.7031001804206929,
+          0.7110908006433063,
+          5.765221934131685e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 222,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_222.obj",
+      "source_sha256": "a647a10761ac45fd48a0ae4baf3e5d87e1183f30d9fd468d7ad31a6bc1067857",
+      "sha256": "575a222dbd9ab4ae71a4fe7e29d5fd89596c8d4161296c7d1efe9360ce239f12",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.022999999241604334,
+          0.10599999983765407,
+          -0.03373556907171915
+        ],
+        "half_size": [
+          0.0030819800094155354,
+          0.0030880588387623606,
+          0.0012393616796684416
+        ],
+        "quat_wxyz": [
+          0.0027244146743935897,
+          0.132245746873691,
+          0.9912061317715094,
+          -0.0037475774925324386
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 223,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_223.obj",
+      "source_sha256": "c618d9082e25a44405c756f308ab92e5affdd4836fbb4093adeffda8885842a1",
+      "sha256": "7861a35cde2096bfffebcb39071c5561b51c55d9edc3af2ba8af8feb545d66af",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101905450665,
+          0.08400001126447638,
+          -0.021785568771058327
+        ],
+        "half_size": [
+          0.0035098278431906905,
+          0.0035086246090731163,
+          0.00026068311392749943
+        ],
+        "quat_wxyz": [
+          7.879656632908786e-05,
+          -0.7030977729593882,
+          0.7110931810436231,
+          5.7653366374868464e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 224,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_224.obj",
+      "source_sha256": "c625b37a2ace7338c5f1d5c092f63ce1319873e9d5610e4920ccd96a7a8d8499",
+      "sha256": "c6ad70ffaf8041e39ddaa870fcc6829534d629586da8e0d9c9689d6ffb078b7c",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05699845423246271,
+          0.08400088928577888,
+          -0.028035429475611884
+        ],
+        "half_size": [
+          0.009510472395533471,
+          0.0027538763725572014,
+          0.002759872076230988
+        ],
+        "quat_wxyz": [
+          -0.6790850937486025,
+          0.19684231562110457,
+          0.6791943037264699,
+          0.19695592404111412
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 225,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_225.obj",
+      "source_sha256": "a2b7174ac0e6c9e3bdc05f3cdf531ed62ec030c67e66455d2de6748cbe58ac23",
+      "sha256": "cba852aea919781dd167c956cb23d99ce3740b4642e5490188bf856c91209f40",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700101905450665,
+          0.08400001126447638,
+          -0.032285568862327946
+        ],
+        "half_size": [
+          0.003509827843190689,
+          0.0035086246090731163,
+          0.0002606831139274995
+        ],
+        "quat_wxyz": [
+          7.879656632909933e-05,
+          -0.7030977729593882,
+          0.7110931810436232,
+          5.7653366374870246e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 226,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_226.obj",
+      "source_sha256": "ef93e48803eb24d475c6c5a9864ff9341ac1a09cf4d0d5bf93ea184fbd357194",
+      "sha256": "0fd1783e88b0ff4229c4631157a2de839cb9b469aa6f7707be3c1286c6052f92",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05700000096130597,
+          0.08400000042811408,
+          -0.03373556908320942
+        ],
+        "half_size": [
+          0.003081967363953188,
+          0.0030880706931392383,
+          0.0012393617084100143
+        ],
+        "quat_wxyz": [
+          0.0027244551662212644,
+          0.1322533639265695,
+          0.9912051154560647,
+          -0.0037475549206251392
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 227,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_227.obj",
+      "source_sha256": "0c5a791e651f19264f06b6be6cbfff9c1e9773999dbbe6cee8c92aeeaa6643a4",
+      "sha256": "6b564b57a08bcd200b937e66d9f9e1d0ff79b8dcf63209ec4943c1d87eaaf438",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02300101659253245,
+          0.08400001116635304,
+          -0.02178556877122694
+        ],
+        "half_size": [
+          0.0035098281132882937,
+          0.0035086248800829333,
+          0.00026068311558173315
+        ],
+        "quat_wxyz": [
+          7.87976625002502e-05,
+          -0.703100200668258,
+          0.7110907806232664,
+          5.765221058050397e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 228,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_228.obj",
+      "source_sha256": "9eb2d059d2000e1017d99a5e6df4f75a3d907a45b41fb408d23cbad3789b652d",
+      "sha256": "13b057b245d7674c50f9231e4a6e9ed0ce2b40e3df7423d662b70153a878af6f",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.022998456776364303,
+          0.0840008918110903,
+          -0.02803542949908703
+        ],
+        "half_size": [
+          0.009510472303386763,
+          0.0027538833820645032,
+          0.0027598689659027024
+        ],
+        "quat_wxyz": [
+          -0.6790888099600848,
+          0.19682955851042602,
+          0.6791979879187222,
+          0.196943154973068
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 229,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_229.obj",
+      "source_sha256": "7286587596cbb64d0392070ec73673d4293266ee094ef37ac210472df6a9e8d2",
+      "sha256": "15bd00e8454b024c0f0bcf66ed3735963e80181c6e5710f44bd10315db99609b",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.02300101659253245,
+          0.08400001116635304,
+          -0.032285568862496554
+        ],
+        "half_size": [
+          0.0035098281132882945,
+          0.0035086248800829333,
+          0.0002606831155817332
+        ],
+        "quat_wxyz": [
+          7.879766250024151e-05,
+          -0.7031002006682581,
+          0.7110907806232664,
+          5.765221058051436e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 230,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_230.obj",
+      "source_sha256": "1f3a257ad822b6cf868628a012100900fe3118f5f455cc6b28bc297f7e16d189",
+      "sha256": "97d9d9ea4b7512d1781f2888af423856ac5cad31254816d5d1439adc57607ad7",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.022999999241604334,
+          0.08399999995686336,
+          -0.03373556907171915
+        ],
+        "half_size": [
+          0.0030819800094155354,
+          0.0030880588387623606,
+          0.0012393616796684416
+        ],
+        "quat_wxyz": [
+          0.0027244146743935897,
+          0.132245746873691,
+          0.9912061317715094,
+          -0.0037475774925324386
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 231,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_231.obj",
+      "source_sha256": "c807647f27856eb0c5c0b9840ba8fa36e6c90ff1ce25aac0ee60c78ea435a85a",
+      "sha256": "b8590d57c88c378f0e58201748f2b30760957c09056197ac6c9e419713f98e59",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897917991805,
+          0.08400001117940903,
+          -0.02178556877138571
+        ],
+        "half_size": [
+          0.003509828677106509,
+          0.0035086217193683964,
+          0.00026068311551895193
+        ],
+        "quat_wxyz": [
+          7.879795920619822e-05,
+          -0.7031052732630131,
+          0.7110857649938572,
+          5.765176769015313e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 232,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_232.obj",
+      "source_sha256": "4e75bf0e880328b040d5859a50ac4ada49dcda86d254b38b333dc5c9000d572e",
+      "sha256": "2b806d74833430b5aafe47b881e966581e4e6c0b225effb47db3fbb6ec85d02c",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05700154597055157,
+          0.08400088676063043,
+          -0.028035429483443307
+        ],
+        "half_size": [
+          0.00951047236755246,
+          0.00275389425381103,
+          0.0027598671546573196
+        ],
+        "quat_wxyz": [
+          -0.6790934448846726,
+          0.19681352202615604,
+          0.679202649401749,
+          0.19692712283475056
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 233,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_233.obj",
+      "source_sha256": "84c7b86bb5cc999343a0abcd98755e35d0d3794f183bd09b0e7d90cfc7d47ed4",
+      "sha256": "5119d13966d4c3352802443b5ae304c19f6452df88c67cd112f8bfe4bd02b2e0",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897917991805,
+          0.08400001117940903,
+          -0.03228556886265533
+        ],
+        "half_size": [
+          0.003509828677106509,
+          0.0035086217193683964,
+          0.0002606831155189519
+        ],
+        "quat_wxyz": [
+          7.879795920618597e-05,
+          -0.703105273263013,
+          0.7110857649938572,
+          5.7651767690140286e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 234,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_234.obj",
+      "source_sha256": "936ee923d8171eb9a2696a0a0844d8e855bdf2a7690b1a19e25b029500a2b87d",
+      "sha256": "f13bfcd8022b2b1dde7e3920e80414b39c02936208310d8035a59b90fe2f324a",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.057000002695554594,
+          0.08399999995685868,
+          -0.0337355690717191
+        ],
+        "half_size": [
+          0.0030819856754507216,
+          0.003088055861066795,
+          0.0012393616978432164
+        ],
+        "quat_wxyz": [
+          0.0027244209166424026,
+          0.13224451700670428,
+          0.9912062958340638,
+          -0.003747579384994528
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 235,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_235.obj",
+      "source_sha256": "3c2676f7e3034d55ed3e9cf762d7d00774633ec2edc3ec83921dcc55bac051ac",
+      "sha256": "85d446867e26c5b5a98ce68568e12027c3996f1da0725cb4785c25c402f7d607",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.030446214387345048,
+          0.10120897277802259,
+          -0.058640814615881394
+        ],
+        "half_size": [
+          0.011512183575654677,
+          0.002758626893543469,
+          0.0027558104471306815
+        ],
+        "quat_wxyz": [
+          0.5681521424160283,
+          -0.4208593347451202,
+          -0.5105904456377794,
+          0.48926266999372203
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 236,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_236.obj",
+      "source_sha256": "45acf2b35c92f5538485de2e2bd6570ea75328e3ce681fee3d32b063310f958e",
+      "sha256": "9e09b7d3110ecbc0c1d471ddae2e4c9fca0d6a433a6bfa152159e31829874e6e",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.030451428953880803,
+          0.09307761656524721,
+          -0.06003104570501124
+        ],
+        "half_size": [
+          0.0035098262797012936,
+          0.0035086221249413427,
+          0.0002606824739916438
+        ],
+        "quat_wxyz": [
+          0.4587668395432283,
+          0.5432961454854607,
+          -0.5372184546945621,
+          0.45360623581664467
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 237,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_237.obj",
+      "source_sha256": "7165951c056dc7158bff06816e4273db46779b322e6713e39c86581acb5844e2",
+      "sha256": "d9101e8017ae89f7a3d2199518803401691ba6f0edac82970732dd077c93e981",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.030451428950889634,
+          0.10737310629640355,
+          -0.0576043392571367
+        ],
+        "half_size": [
+          0.0035098263637896514,
+          0.0035086221298386085,
+          0.0002606856480689658
+        ],
+        "quat_wxyz": [
+          0.4587668265575867,
+          0.5432963484100266,
+          -0.537218434470573,
+          0.45360602985365917
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 238,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_238.obj",
+      "source_sha256": "69a80b0fc6da3ec39010c71d9299dd52b811236f3004568e423218a85eaa727f",
+      "sha256": "68f9a98fb3109b7128a6889f6312a7ae68c6713870ceb37294174a07a694a7b9",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.03045244503226982,
+          0.10880265840776453,
+          -0.05736168144461053
+        ],
+        "half_size": [
+          0.003081977105850667,
+          0.0030880594518909077,
+          0.0012393630997230027
+        ],
+        "quat_wxyz": [
+          -0.0992760048092362,
+          0.0874098106667697,
+          0.6424179677626409,
+          0.7548529357192926
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 239,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_239.obj",
+      "source_sha256": "9b43587645830dbb8b37c95a361eb9899473a1ef1edfd4479fab9c98678dd8ca",
+      "sha256": "96e903051671d09f97732b1f5cde5f9587c6f01e297bc658529ff4d932b5d01d",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897917479413,
+          0.10600001106031542,
+          -0.02178556877138555
+        ],
+        "half_size": [
+          0.0035098286748649864,
+          0.003508621717119847,
+          0.0002606831155820233
+        ],
+        "quat_wxyz": [
+          7.879796400690196e-05,
+          -0.7031052530425438,
+          0.7110857849873911,
+          5.765177644791408e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 240,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_240.obj",
+      "source_sha256": "9492b88afbe97b6be5af16380013ae7547a21f13575889013483eedf14b2ff37",
+      "sha256": "01968a895d266c2874287630d7867cbec6cea823dbef652fd41ba8cb41cab1fb",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05700154597055157,
+          0.10600088664142114,
+          -0.028035429483443303
+        ],
+        "half_size": [
+          0.00951047236755246,
+          0.00275389425381103,
+          0.0027598671546573196
+        ],
+        "quat_wxyz": [
+          -0.6790934448846726,
+          0.19681352202615604,
+          0.679202649401749,
+          0.19692712283475056
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 241,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_241.obj",
+      "source_sha256": "bfb6346c72cca7bf2944574b14adc980d249410871b24ee6a3c6723b6233101f",
+      "sha256": "a9ac7e115484794c10e4915f7670bac4466ccb34c4c8e7042c1b5c7cb7fabce6",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05699897917479413,
+          0.10600001106031542,
+          -0.03228556886265516
+        ],
+        "half_size": [
+          0.0035098286748649872,
+          0.003508621717119847,
+          0.00026068311558202306
+        ],
+        "quat_wxyz": [
+          7.879796400687141e-05,
+          -0.7031052530425437,
+          0.7110857849873912,
+          5.765177644788137e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 242,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_242.obj",
+      "source_sha256": "594805772481f3b8ce68444eb09bb4572a1bc416d3ea761d4fc96d70d429f5f8",
+      "sha256": "157ad2e58508c2348a1201998ed2262bb87eeae038198fa3d892fec421bf0ed6",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.057000002695554594,
+          0.10599999983764939,
+          -0.0337355690717191
+        ],
+        "half_size": [
+          0.0030819856754507216,
+          0.003088055861066795,
+          0.0012393616978432164
+        ],
+        "quat_wxyz": [
+          0.0027244209166424026,
+          0.13224451700670428,
+          0.9912062958340638,
+          -0.003747579384994528
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 243,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_243.obj",
+      "source_sha256": "0cdbb3ebcff07ff58f433d8798b95bac5c274d5fc435e0d7188be260b875505a",
+      "sha256": "7a0f3d684685a7916b18c2f84524cc3f53d3023db7dfa5bcecff8cb3e91f6d8d",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.03045868258458276,
+          0.10120897281036557,
+          -0.058640814814501986
+        ],
+        "half_size": [
+          0.011512183569750716,
+          0.0027586263250701077,
+          0.0027558108806379
+        ],
+        "quat_wxyz": [
+          0.568151163264491,
+          -0.4208606694338088,
+          -0.5105915855560356,
+          0.4892614693232091
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 244,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_244.obj",
+      "source_sha256": "d0186bd9b9ef377e37f47d3cf9afdd31e062bc41a512a1bb4b3c358edd182921",
+      "sha256": "12a21b4cf8da875dd164bd932fb08da9faae2de5b58ac8663c62e3f2272594c0",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.030453466956228713,
+          0.09307761655095823,
+          -0.06003104562155733
+        ],
+        "half_size": [
+          0.003509825452790122,
+          0.00350862502264001,
+          0.00026068247465951854
+        ],
+        "quat_wxyz": [
+          0.4587715888140325,
+          0.543301769168272,
+          -0.5372127673242245,
+          0.4536014324707569
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 245,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_245.obj",
+      "source_sha256": "6367098a8f1587db8fcf5468b2b6442f34f235aab693d5ada6e4511b4c75e60d",
+      "sha256": "c5b1034ba13a4ad69ef7a2dd190d062b41ea15cbbb1d285be72f986e4c5b402c",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.03045346695913554,
+          0.1073731062824379,
+          -0.05760433917362659
+        ],
+        "half_size": [
+          0.003509825536856567,
+          0.003508625027551757,
+          0.0002606856490651679
+        ],
+        "quat_wxyz": [
+          0.4587715757767114,
+          0.5433019720338178,
+          -0.5372127471575844,
+          0.4536012265579964
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 246,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_246.obj",
+      "source_sha256": "7fc49b37a6106db116a0ec3fb180bfd86647499dfb75ff7843c2b92c226c8a73",
+      "sha256": "35cb0198cf556438d45666b2c14dfdb20b9e917402a219bed5e1aacc6bfdd82d",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.030452448735643622,
+          0.10880265827268312,
+          -0.05736168051155159
+        ],
+        "half_size": [
+          0.0030819509731526934,
+          0.0030880864901263786,
+          0.001239363110116428
+        ],
+        "quat_wxyz": [
+          -0.09928961771110026,
+          0.08742141393011184,
+          0.6424163888024756,
+          0.7548511453255071
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 247,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_247.obj",
+      "source_sha256": "1f1e6c6ae5af881411c207e4072f7e9fb66466a02eb5bfc304a4d7f0b91193a3",
+      "sha256": "cd7d72a15cb0ea5aa7832919afcbccdbe70f6f6f5f5e594be99f561be15e820e",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02299898148548553,
+          0.08400001125396948,
+          -0.021785568771023986
+        ],
+        "half_size": [
+          0.0035098272293821284,
+          0.0035086202694985286,
+          0.00026068311368386896
+        ],
+        "quat_wxyz": [
+          7.879602866182993e-05,
+          -0.7030922611631335,
+          0.7110986308239576,
+          5.765406048632175e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 248,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_248.obj",
+      "source_sha256": "a60a24cfac92b516992acbbfa1044dcf0f364bfb1e640fbcc0cef6bdb0367198",
+      "sha256": "c70fa32fceffc378214cabb05dcdf7e67b036ce19582e0fa98f5dd6ff31c5a23",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02300154072782835,
+          0.08400089349460256,
+          -0.028035429494239865
+        ],
+        "half_size": [
+          0.009510472320375196,
+          0.0027538877550091242,
+          0.0027598684808822923
+        ],
+        "quat_wxyz": [
+          -0.6790900523538105,
+          0.19682526020927624,
+          0.6791992373526582,
+          0.19693885781434087
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 249,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_249.obj",
+      "source_sha256": "441d1382d94607552aeb2515a56fbb375c60128cb12bbadd3e8621e339df2d93",
+      "sha256": "0f335f63c49e05db036dda4fc9fcd3db1739a0798bb5637d815e726ad8015812",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02299898148548553,
+          0.08400001125396948,
+          -0.0322855688622936
+        ],
+        "half_size": [
+          0.0035098272293821275,
+          0.0035086202694985286,
+          0.0002606831136838691
+        ],
+        "quat_wxyz": [
+          7.879602866183116e-05,
+          -0.7030922611631334,
+          0.7110986308239577,
+          5.7654060486334285e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 250,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_250.obj",
+      "source_sha256": "95138d509a58ebf6e8a5088aac3b81a0c88e9961ac485679d2eac92f5dadb2a7",
+      "sha256": "4a82d0a7624feabb64d46154008316cb450ae3d206db88e00c23e5c2b552b474",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.023000000847862186,
+          0.08399999995682843,
+          -0.03373556907171862
+        ],
+        "half_size": [
+          0.0030819917060317457,
+          0.0030880449170746587,
+          0.0012393617086556227
+        ],
+        "quat_wxyz": [
+          0.0027243840573978146,
+          0.13223656055577093,
+          0.9912073573488837,
+          -0.003747602077372006
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 251,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_251.obj",
+      "source_sha256": "923aed68e54f3fa809eddcb0252d64e38630d07c42c0883c3c07890980b99ee7",
+      "sha256": "4cfb563fc4f51bf4fb38e087cce3a1a34ea26f836c5f816ff1662d102510f37c",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05997084921303583,
+          0.10030722127049078,
+          -0.05332867193561098
+        ],
+        "half_size": [
+          0.01151218358084888,
+          0.002758626649375585,
+          0.0027558075985430683
+        ],
+        "quat_wxyz": [
+          0.5681541860784303,
+          -0.4208565918570536,
+          -0.5105880748780437,
+          0.48926513029681085
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 252,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_252.obj",
+      "source_sha256": "df833507ad4152ea7398a95749b61bf6b32eef89ac4cd6d097d97d0036bbcab4",
+      "sha256": "1b9f8e425e31e5e723849d084688ad52b6d8e392ba411b79aed24d717b918276",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05996563215249394,
+          0.09217586294887725,
+          -0.05471890374839608
+        ],
+        "half_size": [
+          0.0035098254921179252,
+          0.0035086231201702264,
+          0.0002606814021793625
+        ],
+        "quat_wxyz": [
+          0.4587717445826762,
+          0.5433021267605166,
+          -0.5372125553223716,
+          0.4536010976993721
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 253,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_253.obj",
+      "source_sha256": "ee03fff06aab12df6f982dac3919983b913c05ddadd1986ab605195cdf77676a",
+      "sha256": "00ae089543e362807ed6ab09c4c643728851810d9c46d15e6f130890918606cc",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05996563218420504,
+          0.10647135506851216,
+          -0.05229219909161788
+        ],
+        "half_size": [
+          0.0035098245165941532,
+          0.003508623087785903,
+          0.00026068477286624373
+        ],
+        "quat_wxyz": [
+          0.45877191947775453,
+          0.5433022639614723,
+          -0.537212355962768,
+          0.45360099258485714
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 254,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_254.obj",
+      "source_sha256": "09acb6dbf51ba70a209bfa13f4b1acf034dd05e33ac3165c8d42677155ff612a",
+      "sha256": "22d92a9b1e596ff63e210a0522582666da90d7583561f28fd260661d217e501c",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          -0.05996461599198175,
+          0.10790090348407545,
+          -0.05204954049664125
+        ],
+        "half_size": [
+          0.0030819546260234198,
+          0.0030880855966959565,
+          0.0012393633094121854
+        ],
+        "quat_wxyz": [
+          -0.09928815462132669,
+          0.08742030460531786,
+          0.6424170773084598,
+          0.7548508802916385
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 255,
+      "source_part": "G_F_E_R_S_U上端_支腿顶端缩短8mm.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_255.obj",
+      "source_sha256": "e991922cc5d029f013ccff08427963578417175d5797b9017b65e08c0781a9a6",
+      "sha256": "40ea11609667830eb777d21a0d8696e9cd8f181931006d531e9ae2a9bbf80362",
+      "color": [
+        0.0176419541,
+        0.0251868591,
+        0.0343398079
+      ],
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.07071841606080825,
+          0.12315854901649295,
+          -0.19391502699445898
+        ],
+        "half_size": [
+          0.16304368070557884,
+          0.007994848996022014,
+          0.007994844637401183
+        ],
+        "quat_wxyz": [
+          0.6333232284286502,
+          -0.43440066281576756,
+          0.46008553127975305,
+          0.44555477372031466
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 256,
+      "source_part": "G_F_E_R_S_U上端_右前_法兰夹座.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_256.obj",
+      "source_sha256": "53ed1509fbcac20734f55f5c15b1ba6ce0c3a724ab4653c4b8748614b003050d",
+      "sha256": "4fee6526eb7ad9409a15ee6e0a272274f95e100d5718203f0bfccaefaeb50b95",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.04158022441595009,
+          0.09547609670816261,
+          -0.04536998711192668
+        ],
+        "half_size": [
+          0.030202580714977643,
+          0.027619319106945924,
+          0.01725713906951854
+        ],
+        "quat_wxyz": [
+          -0.24647830912969607,
+          0.24420527209100218,
+          0.6514729180404766,
+          0.6746816028849104
+        ]
+      },
+      "vertices": 3054,
+      "faces": 1018
+    },
+    {
+      "index": 257,
+      "source_part": "G_F_E_R_S_U上端_右前_活动夹盖.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_257.obj",
+      "source_sha256": "f85d28ab6775ab72a00b1280f6c8581075f199f6f71188cc53cbee481b5a714b",
+      "sha256": "96c2dccc64d8acd1b3939078862509596d75b26b41fff6864a2fcdb2bf9fec20",
+      "color": [
+        0.230740055,
+        0.386429429,
+        0.514917672
+      ],
+      "material_role": "locator",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.045234186990960906,
+          0.10643946046629267,
+          -0.05518933034981851
+        ],
+        "half_size": [
+          0.019037709254303297,
+          0.013899088025147367,
+          0.006281424089914702
+        ],
+        "quat_wxyz": [
+          0.059228827720284455,
+          0.06975881003799436,
+          0.7600901259511273,
+          -0.6433417869379877
+        ]
+      },
+      "vertices": 1356,
+      "faces": 452
+    },
+    {
+      "index": 258,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_258.obj",
+      "source_sha256": "14d738bd7fe0bf82ba5317c4afd0f83318971d85662a689a12232af0985ce36b",
+      "sha256": "a1478615bceb883aee23e29e86c132cb451157b1a750f776efde1d231b580766",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02299898148034403,
+          0.10600001113487666,
+          -0.021785568771023826
+        ],
+        "half_size": [
+          0.003509827227125587,
+          0.003508620267234954,
+          0.0002606831137469405
+        ],
+        "quat_wxyz": [
+          7.879603345667552e-05,
+          -0.7030922408728989,
+          0.7110986508857396,
+          5.7654069251875956e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 259,
+      "source_part": "G_F_E_R_S_U紧固_M3x16_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_259.obj",
+      "source_sha256": "de44b4417784cef4eef31dfdfd35aae466a2e8d0862b5f85962ab46cf53ccb0b",
+      "sha256": "da076d68a3f5240ffe283d82da11e64cdb800a200b030524869365d2d0696015",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02300154072782835,
+          0.10600089337539327,
+          -0.028035429494239865
+        ],
+        "half_size": [
+          0.009510472320375196,
+          0.0027538877550091242,
+          0.002759868480882292
+        ],
+        "quat_wxyz": [
+          -0.6790900523538105,
+          0.19682526020927624,
+          0.6791992373526582,
+          0.19693885781434087
+        ]
+      },
+      "vertices": 858,
+      "faces": 286
+    },
+    {
+      "index": 260,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_260.obj",
+      "source_sha256": "23e16330d4f1f01845942911d8abd031d7e9e8d732c66f66a7f7f8f8248fdbc3",
+      "sha256": "68edc85754cbc6475070d81ede4bd1d9ef97ce428f7f11de84670414c6598784",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02299898148034403,
+          0.10600001113487666,
+          -0.03228556886229344
+        ],
+        "half_size": [
+          0.003509827227125585,
+          0.003508620267234954,
+          0.00026068311374694025
+        ],
+        "quat_wxyz": [
+          7.879603345665164e-05,
+          -0.7030922408728986,
+          0.7110986508857399,
+          5.765406925184924e-05
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 261,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_261.obj",
+      "source_sha256": "1ac6fff6c9c90fa39c8ad0e11f69cd6b551ffdc2c0ba92fe63423efa103132b3",
+      "sha256": "a8450f2121562841ff5d19a7dd79c87d7dc91e0d851cd10fc59d5174ad879a26",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.02300000084786219,
+          0.10599999983761914,
+          -0.03373556907171862
+        ],
+        "half_size": [
+          0.0030819917060317457,
+          0.0030880449170746587,
+          0.0012393617086556225
+        ],
+        "quat_wxyz": [
+          0.0027243840573978146,
+          0.13223656055577093,
+          0.9912073573488837,
+          -0.003747602077372006
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    },
+    {
+      "index": 262,
+      "source_part": "G_F_E_R_S_U紧固_M3x20_内六角螺栓.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_262.obj",
+      "source_sha256": "96e0609c2c60a83cd29cf5feec82a17e01fdaf913e85a547689885b19558a44f",
+      "sha256": "c99452c195c63acfecf8cbeb1ae5f8c5c1e034b50fb5ece13798bd4735e50623",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05995838137197139,
+          0.10030722154528175,
+          -0.053328673535658684
+        ],
+        "half_size": [
+          0.011512183588697354,
+          0.002758626900979179,
+          0.002755810456683101
+        ],
+        "quat_wxyz": [
+          0.5681521263417949,
+          -0.4208593563772373,
+          -0.5105904673671772,
+          0.48926264737541764
+        ]
+      },
+      "vertices": 804,
+      "faces": 268
+    },
+    {
+      "index": 263,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_263.obj",
+      "source_sha256": "bcef65f39c37dcc23a97b2ae7375e8f608cb081d71b864d3a9d117c0756fdfa0",
+      "sha256": "24ffb2c0d02beddb9d96460ebfbc20bcf8afa6d57ee37c01ac605deb75d1ec37",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05996359569445024,
+          0.09217586295917538,
+          -0.05471890380765489
+        ],
+        "half_size": [
+          0.0035098262514041507,
+          0.003508622018202803,
+          0.000260681403524243
+        ],
+        "quat_wxyz": [
+          0.4587673854505933,
+          0.5432969631383082,
+          -0.5372177774315946,
+          0.45360550647338516
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 264,
+      "source_part": "G_F_E_R_S_U紧固_M3_平垫圈.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_264.obj",
+      "source_sha256": "cce3cefbc2ce14271eaac47eb727d65243d2ca5d62db92b0365f5c62fccb8ed9",
+      "sha256": "c71a912cb4ee5dac11d8a6c19e106ef55fb3659c0a2f08bc837d0d60487f9f2f",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05996359566271725,
+          0.10647135507881073,
+          -0.052292199150879445
+        ],
+        "half_size": [
+          0.0035098252759302256,
+          0.003508621985879899,
+          0.0002606847742111243
+        ],
+        "quat_wxyz": [
+          0.4587675602985618,
+          0.5432971002841587,
+          -0.5372175781309757,
+          0.45360540140921957
+        ]
+      },
+      "vertices": 1236,
+      "faces": 412
+    },
+    {
+      "index": 265,
+      "source_part": "G_F_E_R_S_U紧固_M3_六角螺母.SLDPRT",
+      "file": "revision/generated/custom_landing/landing_265.obj",
+      "source_sha256": "41bf8cb1d3f9f73f1074427b9f049fc8ff0cdd3057a7087802726e5304f993dc",
+      "sha256": "f4783f59a405a14883edf450ef1c8a244a59cbf341a192c1480a9c7022f4dd44",
+      "color": "#afbcc9",
+      "material_role": "native",
+      "collision": {
+        "type": "box",
+        "center": [
+          0.05996461185792011,
+          0.10790090355161594,
+          -0.0520495409631744
+        ],
+        "half_size": [
+          0.0030819785758263714,
+          0.003088060197473128,
+          0.0012393632922696267
+        ],
+        "quat_wxyz": [
+          -0.09927554099184259,
+          0.08740955253406739,
+          0.642418540367661,
+          0.754852539293904
+        ]
+      },
+      "vertices": 576,
+      "faces": 192
+    }
+  ]
+}

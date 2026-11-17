@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "commands_checked": 7,
+  "transport": "installed Qingyu C++ SDK to isolated ROS topic",
+  "master": "http://127.0.0.1:11483",
+  "topic": "/paper_revision_probe/command",
+  "serial_backend_started": false,
+  "sdk_library_sha256": "ebc9a13ccc65bd8e4c65a572f407c25a73cac7c1fa8e8f54f812f761a2572174",
+  "verified": [
+    "degree payload preserved",
+    "single-section zeroing",
+    "118 degree cap",
+    "periodic phi",
+    "enable field preserved"
+  ],
+  "physical_feedback_verified": false,
+  "physical_angle_unit_verified": false,
+  "limitation": "ROS message transport check; firmware interpretation and physical response require separate verification"
+}

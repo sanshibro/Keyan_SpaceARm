@@ -1,0 +1,9 @@
+Development checkpoint: registered SUPER airframe + native long landing gear + SDK arm.
+The camera mounting orientation and SDK visual representation are under active review.
+This is not a final hardware configuration or task benchmark.
+Fixed/hover integrated component checks passed; sampled self-collision audit found 18 of 48 configurations colliding.
+Preserved short-foot failure is fixed_previous_20261117_212106.
+Generate mesh assets with prepare_super_metric.py then prepare_custom_landing.py.
+New tests: python3 revision/scripts/test_platform_contract.py.
+Physics: python3 revision/scripts/qualify_super_backend.py --mode fixed (or hover).
+Use the existing MuJoCo dependency environment; all changes are isolated from the original workspace.
