@@ -1,0 +1,13 @@
+{
+  "original_head_unchanged": true,
+  "tracked_original_files_unchanged": true,
+  "checks": {
+    "PX4-SITL_gazebo-classic": true,
+    "xtdrone_catkin_ws/src/uav_continuum_opportunity_planner/scripts/whole_body_planner_node.py": true,
+    "xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/src/uav_continuum_whole_body_v2/geometry.py": true,
+    "xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/src/uav_continuum_whole_body_v2/types.py": true,
+    "xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/src/uav_continuum_whole_body_v2/validator.py": true,
+    "xtdrone_plan/reference/risk_segmented_whole_body_planning_paper_draft_cn.md": true,
+    "xtdrone_plan/reference/whole_body_planner_current_strategy_review_cn.md": true
+  }
+}

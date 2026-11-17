@@ -1,0 +1,18 @@
+{
+  "scope": "当前 Windows 桌面登录的 Codex 官方账号（账号共享额度）",
+  "updated": "2026-11-17T12:32:31.202Z",
+  "refresh_note": "工作期间按阶段刷新官方数据；页面每60秒读取最新快照。NUC第三方API余额不包含在内。",
+  "buckets": [
+    {
+      "name": "codex",
+      "windows": [
+        {
+          "minutes": 10080,
+          "usedPercent": 7,
+          "remainingPercent": 93,
+          "resetsAt": 1795517751
+        }
+      ]
+    }
+  ]
+}

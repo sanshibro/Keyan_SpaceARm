@@ -1,0 +1,46 @@
+{
+  "source": "/opt/qingyu_api_ros1",
+  "sdk_installed": true,
+  "hardware_command_sent": false,
+  "client_methods": [
+    "moveJoints",
+    "movePose",
+    "enableClosedLoopControl",
+    "enableOpenLoopControl",
+    "calibrate",
+    "readConfig",
+    "writeConfig",
+    "readAllConfigs",
+    "switchSerialDevice",
+    "stop"
+  ],
+  "gui_angle_unit": "degrees",
+  "gui_bend_max_deg": 135,
+  "project_command_limit_deg": 118,
+  "project_physical_check_deg": 120,
+  "client_unit_documentation": "not specified in header; SDK GUI and CLI examples use degree conventions; validate transport mapping before hardware operation",
+  "feedback_status": "No measured-shape read method in the inspected Client header. fb fields in a command message do not establish a measured-state publisher.",
+  "simulation_bridge_status": "SimArmBridge is currently a local actuator mapping, not a ROS/serial SDK replacement",
+  "files": [
+    {
+      "path": "/opt/qingyu_api_ros1/include/qingyu_api_sdk/client.hpp",
+      "sha256": "5f3021f236f2755009194139da54bf5eaf356e037e00e59f23b56130e32622ed"
+    },
+    {
+      "path": "/opt/qingyu_api_ros1/share/qingyu_api/msg/QingyuCommand.msg",
+      "sha256": "e34ed0abcd056501fe69f0d6fc8be077acaf05ff0859d9ca9595b9a497e8853f"
+    },
+    {
+      "path": "/opt/qingyu_api_ros1/share/continuum_arm/config/continuum_arm_visualize.yaml",
+      "sha256": "d05b98a661671ced1497f198527c2bbd6d3827c9a6937e3050e8f9976d94f5f9"
+    },
+    {
+      "path": "/opt/qingyu_api_ros1/share/continuum_arm/config/mcu_packet_sender.yaml",
+      "sha256": "d97f7cd3ea615a2d89036ea98e2dcfb1d2520e4d57fdc40fc38721f2ccc958c5"
+    },
+    {
+      "path": "/opt/qingyu_api_ros1/share/qingyu_api_sdk/README.md",
+      "sha256": "7aa2bd7cc2fa5c8b57100a863ab74504d6b5da84aa12be0a0e1afea60b8220b3"
+    }
+  ]
+}

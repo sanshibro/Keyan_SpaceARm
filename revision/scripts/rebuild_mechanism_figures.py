@@ -138,7 +138,7 @@ def save(fig,name):
 def title(ax,label,text):ax.set_title(label+'  '+text,loc='left',fontweight='bold',pad=8)
 
 def make_geometry(time,states,points,body,indices,sp,pairs,rows):
-    fig=plt.figure(figsize=(7.16,5.3));gs=fig.add_gridspec(3,3,height_ratios=[.86,1.4,.83],hspace=.65,wspace=.30,left=.075,right=.985,top=.945,bottom=.10)
+    fig=plt.figure(figsize=(7.16,5.3));gs=fig.add_gridspec(3,3,height_ratios=[.86,1.4,.83],hspace=.65,wspace=.30,left=.075,right=.985,top=.945,bottom=.145)
     ax=fig.add_subplot(gs[0,:]);title(ax,'a','Recorded passage and morphology')
     y0=states[0,1];progress=-(states[:,1]-y0)
     for p in pairs:
@@ -176,7 +176,7 @@ def make_geometry(time,states,points,body,indices,sp,pairs,rows):
         ax.text(a+.6,yy,f'+{a:.1f}',va='center',fontsize=8,color=GREEN);ax.text(b-.6,yy,f'{b:.1f}',va='center',ha='right',fontsize=8,color=ORANGE)
     ax.axvspan(-8,0,color=ORANGE,alpha=.045);ax.axvline(0,color=INK,lw=.8);ax.axvline(7,color=GRAY,lw=.75,ls='--');ax.text(7.3,2.65,'7 cm planning margin',fontsize=7.3,color=GRAY)
     ax.set_yticks([2,1,0]);ax.set_yticklabels(['G1','G2','G3']);ax.set_ylim(-.5,2.6);ax.set_xlim(-8,27);ax.set_xticks([-5,0,5,10,15,20,25]);ax.set_xlabel('Signed model-based clearance (cm)',labelpad=2);ax.grid(axis='x',alpha=.12)
-    fig.legend(*ax.get_legend_handles_labels(),loc='lower center',bbox_to_anchor=(.52,.005),frameon=False,ncol=2,columnspacing=2)
+    fig.legend(*ax.get_legend_handles_labels(),loc='lower center',bbox_to_anchor=(.52,.008),frameon=False,ncol=2,columnspacing=2)
     save(fig,'passage_mechanism_v2')
 
 def make_rolling(time,states,ct,commands,bc,ac,windows,gates):
@@ -200,8 +200,6 @@ def make_rolling(time,states,ct,commands,bc,ac,windows,gates):
     ax.plot(time,bc*100,color=BLUE,label='Body');ax.plot(time,ac*100,color=GREEN,label='Arm')
     ax.axhline(6,color=BLUE,lw=.7,ls='--');ax.axhline(2,color=GREEN,lw=.7,ls='--');ax.set_ylim(0,50)
     ax.set_ylabel('Clearance (cm)');ax.set_xlim(0,end);ax.set_xlabel('Elapsed execution time (s)',labelpad=1);ax.legend(frameon=False,ncol=2,loc='upper right');ax.grid(axis='y',alpha=.15)
-    ax.text(.015,.17,'Minimum: body 18.9 cm / arm 18.9 cm',transform=ax.transAxes,fontsize=7,color=GRAY)
-    ax.text(.015,.04,'Dashed: audit thresholds (6 / 2 cm)',transform=ax.transAxes,fontsize=7,color=GRAY)
     for ax in axes[:3]:
         for w in windows[1:]:ax.axvline(w['active_elapsed_s'],color='#849097',lw=.45,ls=':',alpha=.7,zorder=0)
         for g in gates:ax.axvline(g['elapsed_s'],color='#a8b9b3',lw=.65,ls=(0,(5,3)),alpha=.8,zorder=0)
@@ -211,7 +209,7 @@ def make_rolling(time,states,ct,commands,bc,ac,windows,gates):
     ax.bar(xx,seed,width=.46,color='#9eb5c1',label='Seed');ax.bar(xx,rv,bottom=seed,width=.46,color=BLUE,label='Refine + validate');ax.scatter(xx,reserve,marker='D',s=17,color=GREEN,label='Nominal metadata reserve')
     ax.axhline(15,color=GRAY,lw=.7,ls='--');ax.text(7.4,15,'15 s\ndeadline',fontsize=7,va='center',color=GRAY)
     for x,w in zip(xx,windows):ax.text(x,w['compute_wall_s']+.45,f"{w['compute_wall_s']:.2f}",ha='center',fontsize=7)
-    ax.set_ylim(0,28);ax.set_xlim(.5,8.2);ax.set_xticks(xx);ax.set_xticklabels(['W'+str(x) for x in xx]);ax.set_ylabel('Duration (s)');ax.grid(axis='y',alpha=.12);ax.legend(frameon=False,ncol=3,loc='upper left',bbox_to_anchor=(0,1.06),fontsize=6.8)
+    ax.set_ylim(0,34);ax.set_yticks([0,10,20,30]);ax.set_xlim(.5,8.2);ax.set_xticks(xx);ax.set_xticklabels(['W'+str(x) for x in xx]);ax.set_ylabel('Duration (s)');ax.grid(axis='y',alpha=.12);ax.legend(frameon=False,ncol=3,loc='upper left',bbox_to_anchor=(0,1.06),fontsize=6.8)
     save(fig,'rolling_execution_v2')
 
 if __name__=='__main__':main()

@@ -1,0 +1,1650 @@
+{
+  "total": 90,
+  "safe": 60,
+  "optimizer_status": {
+    "backend_projected_coordinate_pattern_anytime": 14,
+    "skipped_to_preserve_deadline": 46,
+    "unrecorded": 30
+  },
+  "runs": [
+    {
+      "run": "passage_sweep_easy_s020__global_batch_wb__20260803_211559_2689871",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 4.433061496994924,
+        "configuration_corridor": 2.215083053044509,
+        "incumbent_validation": 0.5073843220015988
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.215003628982231,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s013__global_batch_wb__20260804_013947_3632082",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 6.623458948975895,
+        "incumbent_validation": 1.769135651004035
+      },
+      "configuration_corridor": {
+        "elapsed_s": 6.623358445998747,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s020__global_batch_wb__20260804_091115_474581",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 4.394296382961329,
+        "configuration_corridor": 2.4059020890272222,
+        "incumbent_validation": 0.6131294540246017
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.4057564020040445,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s016__global_batch_wb__20260802_064603_2912932",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 4.999028258986073
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s017__global_batch_wb__20260802_043024_2428731",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 5.483313011980499,
+        "configuration_corridor": 2.535208611006965,
+        "incumbent_validation": 0.6201329290051945
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.535127704992192,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s019__global_batch_wb__20260803_201114_2451927",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.081137713044882,
+        "incumbent_validation": 0.9499782940256409
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.08108325797366,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s018__global_batch_wb__20260802_125517_62076",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 5.984360814996762,
+        "incumbent_validation": 1.4280993799911812
+      },
+      "configuration_corridor": {
+        "elapsed_s": 5.984101503010606,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s013__global_batch_wb__20260803_204615_2577375",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 3.7098079229472205,
+        "configuration_corridor": 1.7422082500415854,
+        "incumbent_validation": 0.3499924070201814
+      },
+      "configuration_corridor": {
+        "elapsed_s": 1.742022881982848,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s020__global_batch_wb__20260802_013258_1794040",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.74965477999649,
+        "incumbent_validation": 1.131472606008174
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.749591579005937,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s012__global_batch_wb__20260803_153738_1462174",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.2989644019980915,
+        "incumbent_validation": 0.9766188549983781
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.29891273600515,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s019__global_batch_wb__20260804_025627_3904765",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.124975990038365,
+        "incumbent_validation": 0.9798704219865613
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.124889662023634,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s017__global_batch_wb__20260802_032006_2177707",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.5164105930016376,
+        "incumbent_validation": 0.8048296950000804
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.516354835999664,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s013__global_batch_wb__20260804_080356_386850",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 4.353736106015276,
+        "configuration_corridor": 2.3803411810076796,
+        "incumbent_validation": 0.6261938089737669
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.3803070110152476,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_easy_s019__global_batch_wb__20260804_113149_658317",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 10.515195693005808,
+        "incumbent_validation": 2.758292934973724
+      },
+      "configuration_corridor": {
+        "elapsed_s": 10.515160178998485,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s016__global_batch_wb__20260802_122434_4143351",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.011554526980035
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 602
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s016__global_batch_wb__20260802_110934_3873547",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 5.763543230044888,
+        "configuration_corridor": 2.581305406987667,
+        "incumbent_validation": 0.594858429976739
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.581207672978053,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s016__global_batch_wb__20260804_060244_230914",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 2.9234082989860326,
+        "configuration_corridor": 1.3619594069896266,
+        "incumbent_validation": 0.34918561502126977
+      },
+      "configuration_corridor": {
+        "elapsed_s": 1.3619216909864917,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s012__global_batch_wb__20260803_164244_1697521",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 6.688898926018737,
+        "incumbent_validation": 1.5578022709814832
+      },
+      "configuration_corridor": {
+        "elapsed_s": 6.688808856997639,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s014__global_batch_wb__20260803_214238_2783995",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.09117862500716,
+        "incumbent_validation": 0.5818016169941984
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.0911404229700565,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s015__global_batch_wb__20260802_054013_2677990",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.449137781994068,
+        "incumbent_validation": 0.8163487830024678
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.4490674799890257,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s012__global_batch_wb__20260802_120533_4075132",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 4.721411580016138,
+        "configuration_corridor": 2.6616243190073874,
+        "incumbent_validation": 0.6074585989990737
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.6615427949873265,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s014__global_batch_wb__20260803_150759_1350231",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 5.158562366006663
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s011__global_batch_wb__20260802_133324_202262",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.713764470012393,
+        "incumbent_validation": 0.8121521419961937
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.713673059013672,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s020__global_batch_wb__20260802_073534_3091271",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 4.5342027739970945
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 602
+      }
+    },
+    {
+      "run": "multi_passage_easy_s011__global_batch_wb__20260804_051625_174112",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 6.27282238897169,
+        "incumbent_validation": 1.6254355210112408
+      },
+      "configuration_corridor": {
+        "elapsed_s": 6.27278658997966,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s019__global_batch_wb__20260804_085650_456398",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.5043044660123996
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s012__global_batch_wb__20260803_233234_3175431",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 4.605208680965006
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 7,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s017__global_batch_wb__20260804_115635_690231",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 3.0935427279327996,
+        "configuration_corridor": 1.3580583950388245,
+        "incumbent_validation": 0.3882018839940429
+      },
+      "configuration_corridor": {
+        "elapsed_s": 1.3580239469883963,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s016__global_batch_wb__20260803_194808_2371593",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 5.64137455704622,
+        "incumbent_validation": 1.328894626989495
+      },
+      "configuration_corridor": {
+        "elapsed_s": 5.641337900946382,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_easy_s016__global_batch_wb__20260803_184721_2152907",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 8.185159174026921,
+        "incumbent_validation": 1.6556226589600556
+      },
+      "configuration_corridor": {
+        "elapsed_s": 8.185113471990917,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_easy_s012__global_batch_wb__20260803_230333_3071781",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 10.102871193026658,
+        "incumbent_validation": 1.8798640169552527
+      },
+      "configuration_corridor": {
+        "elapsed_s": 10.102789246011525,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_easy_s018__global_batch_wb__20260804_062712_262467",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 6.850404196011368,
+        "incumbent_validation": 1.6296928459778428
+      },
+      "configuration_corridor": {
+        "elapsed_s": 6.8503509890288115,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s014__global_batch_wb__20260804_040532_4151981",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 5.24726524495054,
+        "incumbent_validation": 1.4008471440174617
+      },
+      "configuration_corridor": {
+        "elapsed_s": 5.247199533041567,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s011__global_batch_wb__20260802_051620_2593251",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 8.416457512008492,
+        "incumbent_validation": 1.7712501519999932
+      },
+      "configuration_corridor": {
+        "elapsed_s": 8.416398232002393,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_easy_s014__global_batch_wb__20260804_020324_3715450",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 8.33364063699264,
+        "incumbent_validation": 1.9281431850395165
+      },
+      "configuration_corridor": {
+        "elapsed_s": 8.333589661982842,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s017__global_batch_wb__20260804_100521_543604",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.000391530978959,
+        "incumbent_validation": 0.8126063770032488
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.000337617006153,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s017__global_batch_wb__20260803_191000_2235799",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 6.899561608035583,
+        "incumbent_validation": 1.6688127639936283
+      },
+      "configuration_corridor": {
+        "elapsed_s": 6.8994569960050285,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s018__global_batch_wb__20260804_054306_206396",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.006760968011804,
+        "incumbent_validation": 0.7886011829832569
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.006725015991833,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s013__global_batch_wb__20260803_152020_1393546",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 1.0574642340070568
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 2,
+        "tested_edges": 210
+      }
+    },
+    {
+      "run": "multi_passage_medium_s012__global_batch_wb__20260803_234729_3229073",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 4.776815174031071
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s011__global_batch_wb__20260802_113129_3953100",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.573886580998078,
+        "incumbent_validation": 1.0179218619887251
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.573832370981108,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s012__global_batch_wb__20260802_005054_1642795",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 5.107450552997761,
+        "incumbent_validation": 1.1848975559987593
+      },
+      "configuration_corridor": {
+        "elapsed_s": 5.107362155991723,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s015__global_batch_wb__20260802_104700_3793392",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 4.131611827964662,
+        "configuration_corridor": 1.846842759026913,
+        "incumbent_validation": 0.4376850530097727
+      },
+      "configuration_corridor": {
+        "elapsed_s": 1.8468067810172215,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s011__global_batch_wb__20260803_144544_1265696",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.395189770992147,
+        "incumbent_validation": 1.1854503930080682
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.395126743009314,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s014__global_batch_wb__20260804_121853_719361",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "incumbent_validation",
+      "stage_times": {
+        "configuration_corridor": 3.3214446639758535,
+        "incumbent_validation": 0.8533241049735807
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.3213736710022204,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s019__global_batch_wb__20260804_043042_47030",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 8.34670868102694,
+        "incumbent_validation": 2.0921343159861863
+      },
+      "configuration_corridor": {
+        "elapsed_s": 8.346622357028536,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s014__global_batch_wb__20260802_161538_820192",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.35642822101363,
+        "incumbent_validation": 0.7800198619952425
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.356339268008014,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s011__global_batch_wb__20260804_064702_286856",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.4822805650183,
+        "incumbent_validation": 0.8613110290025361
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.48223494598642,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s015__global_batch_wb__20260804_003219_3391818",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 1.3441112759755924
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 2,
+        "tested_edges": 210
+      }
+    },
+    {
+      "run": "multi_passage_easy_s017__global_batch_wb__20260804_011743_3554159",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 11.12204845098313
+      },
+      "configuration_corridor": {
+        "completed_transitions": 4,
+        "elapsed_s": 11.121977727045305,
+        "failure": "plan_timeout",
+        "stage": "corridor_edges",
+        "tested_edges": 798
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s012__global_batch_wb__20260802_141725_365781",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.0456174749997444,
+        "incumbent_validation": 0.6120176340045873
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.0455825329991058,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s019__global_batch_wb__20260804_000859_3306927",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 5.695444651006255,
+        "incumbent_validation": 1.268907475983724
+      },
+      "configuration_corridor": {
+        "elapsed_s": 5.695344218984246,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s018__global_batch_wb__20260804_031807_3979919",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 1.2188172499882057
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 2,
+        "tested_edges": 210
+      }
+    },
+    {
+      "run": "multi_passage_hard_s012__global_batch_wb__20260802_010650_1698114",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.4706401430012193
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 602
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s018__global_batch_wb__20260804_111108_630827",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 2.847531517036259
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 5,
+        "tested_edges": 798
+      }
+    },
+    {
+      "run": "multi_passage_medium_s013__global_batch_wb__20260803_220522_2863212",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 1.1519108840147965
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 2,
+        "tested_edges": 210
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s019__global_batch_wb__20260802_062447_2834915",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.0139338939916342,
+        "incumbent_validation": 0.8747054889972787
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.0138611959991977,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s018__global_batch_wb__20260802_152202_614261",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.643210720008938,
+        "incumbent_validation": 0.8752694549912121
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.643108637974365,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s019__global_batch_wb__20260802_095152_3593336",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 5.651655378984287,
+        "configuration_corridor": 2.648609927011421,
+        "incumbent_validation": 0.6158749640162569
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.6485714899899904,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s018__global_batch_wb__20260802_080835_3216902",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.1121630810084753
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 5,
+        "tested_edges": 798
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s013__global_batch_wb__20260804_074015_355916",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 2.8898355329874903,
+        "incumbent_validation": 0.7628417770029046
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.8897837880067527,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s015__global_batch_wb__20260804_071330_320866",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 1.8708033000002615
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 602
+      }
+    },
+    {
+      "run": "multi_passage_hard_s020__global_batch_wb__20260803_203202_2527849",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 1.1299661920056678
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 2,
+        "tested_edges": 210
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s015__global_batch_wb__20260802_030409_2119455",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 5.141227193991654
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s011__global_batch_wb__20260804_093320_502404",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 2.6097597180050798,
+        "configuration_corridor": 1.0795896310009994,
+        "incumbent_validation": 0.2524458129773848
+      },
+      "configuration_corridor": {
+        "elapsed_s": 1.0795566670130938,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s020__global_batch_wb__20260803_172412_1851625",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.575306910992367
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 602
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s018__global_batch_wb__20260804_005024_3457544",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.306029059982393
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 518
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s013__global_batch_wb__20260802_092915_3510619",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.0527793779911008,
+        "incumbent_validation": 0.6861734470003285
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.0526745459937956,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s014__global_batch_wb__20260802_100547_3641145",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.922001158003695,
+        "incumbent_validation": 1.2701501800038386
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.921918747975724,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s013__global_batch_wb__20260802_034631_2274574",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 2.779143143998226
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 518
+      }
+    },
+    {
+      "run": "multi_passage_easy_s013__global_batch_wb__20260804_082401_411372",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 6.061338010011241,
+        "incumbent_validation": 1.4972826539888047
+      },
+      "configuration_corridor": {
+        "elapsed_s": 6.061276383989025,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s018__global_batch_wb__20260804_033631_4048577",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 4.349779008945916,
+        "configuration_corridor": 1.864859941008035,
+        "incumbent_validation": 0.43804444605484605
+      },
+      "configuration_corridor": {
+        "elapsed_s": 1.8648016010411084,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s016__global_batch_wb__20260802_084408_3345218",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.70090964101837,
+        "incumbent_validation": 1.2991487899853382
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.700787490000948,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s017__global_batch_wb__20260802_020822_1921783",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 5.436369191011181,
+        "incumbent_validation": 1.5787042860029032
+      },
+      "configuration_corridor": {
+        "elapsed_s": 5.436128033994464,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s016__global_batch_wb__20260803_181536_2034027",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 6.785200089972932
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s020__global_batch_wb__20260802_040620_2343164",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.962637055999949,
+        "incumbent_validation": 1.376873503002571
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.9625600459985435,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s015__global_batch_wb__20260804_023130_3816384",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 5.34013640997
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "passage_sweep_medium_s016__global_batch_wb__20260803_222631_2940606",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.969658137008082,
+        "incumbent_validation": 0.9251382009824738
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.9695835770107806,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s017__global_batch_wb__20260802_145238_496255",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 4.291935774992453
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "clutter_reach_easy_s011__global_batch_wb__20260802_154158_689019",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 3.056617219990585,
+        "incumbent_validation": 0.6479652779817116
+      },
+      "configuration_corridor": {
+        "elapsed_s": 3.05655787998694,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s020__global_batch_wb__20260802_135735_291798",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.566664876998402
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 518
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s019__global_batch_wb__20260802_070941_2998306",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 5.1256346279988065,
+        "incumbent_validation": 1.4800056859967299
+      },
+      "configuration_corridor": {
+        "elapsed_s": 5.125550802011276,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "clutter_reach_hard_s015__global_batch_wb__20260802_002051_1530775",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 6.952921085001435
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 6,
+        "tested_edges": 994
+      }
+    },
+    {
+      "run": "clutter_reach_medium_s014__global_batch_wb__20260803_161027_1581630",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 4.556368901976384,
+        "incumbent_validation": 1.2180020860105287
+      },
+      "configuration_corridor": {
+        "elapsed_s": 4.556328367005335,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "passage_sweep_hard_s017__global_batch_wb__20260803_170433_1777735",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.3189348750165664
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 532
+      }
+    },
+    {
+      "run": "multi_passage_easy_s015__global_batch_wb__20260802_022626_1983925",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 8.750506865006173,
+        "incumbent_validation": 1.7687620999931823
+      },
+      "configuration_corridor": {
+        "elapsed_s": 8.750459018992842,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_medium_s015__global_batch_wb__20260804_102925_576313",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 0.7222175379865803
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 2,
+        "tested_edges": 210
+      }
+    },
+    {
+      "run": "passage_sweep_easy_s014__global_batch_wb__20260802_082923_3293988",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": null,
+      "backend": "projected_coordinate_pattern_anytime",
+      "stage": null,
+      "stage_times": {
+        "batch_refinement": 4.36377234000247,
+        "configuration_corridor": 2.2086065800103825,
+        "incumbent_validation": 0.49677336699096486
+      },
+      "configuration_corridor": {
+        "elapsed_s": 2.2085657069983426,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    },
+    {
+      "run": "multi_passage_hard_s011__global_batch_wb__20260803_175444_1952123",
+      "safe": false,
+      "status": "METHOD_FAILED",
+      "optimizer_status": null,
+      "backend": null,
+      "stage": "configuration_corridor",
+      "stage_times": {
+        "configuration_corridor": 3.9202750560070854
+      },
+      "configuration_corridor": {
+        "failure": "disconnected_configuration_corridor",
+        "layer": 4,
+        "tested_edges": 602
+      }
+    },
+    {
+      "run": "multi_passage_easy_s020__global_batch_wb__20260804_104045_589254",
+      "safe": true,
+      "status": "SAFE_TRAJECTORY",
+      "optimizer_status": "skipped_to_preserve_deadline",
+      "backend": null,
+      "stage": null,
+      "stage_times": {
+        "configuration_corridor": 6.654887962969951,
+        "incumbent_validation": 1.3894333920325153
+      },
+      "configuration_corridor": {
+        "elapsed_s": 6.654831835010555,
+        "failure": "none",
+        "layers": 8,
+        "maximum_layer_width": 14,
+        "tested_edges": 1008
+      }
+    }
+  ]
+}

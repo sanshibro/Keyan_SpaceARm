@@ -4,3 +4,5 @@ live/server.log
 live/server.pid
 *.tmp
 live/usage.json
+render_assets/
+archive/

@@ -27,6 +27,7 @@
 \hypersetup{pdftitle={Morphology-Aware Rolling Whole-Body Planning for Aerial Continuum Manipulation in Confined Spaces}}
 \newif\ifhardwareplaceholders
 \hardwareplaceholderstrue % Set false to hide future-data layout reservations.
+\usepackage{placeins}
 \begin{document}
 \raggedbottom
 \title{Morphology-Aware Rolling Whole-Body Planning for Aerial Continuum Manipulation in Confined Spaces}
@@ -676,7 +677,15 @@ The planner trades extra computation and some execution smoothness against acces
 
 \section{Conclusion}\label{sec:conclusion}
 % CN: 结论概括机制和证据，不重复完整摘要数据。
-This work treats continuum morphology as a whole-body planning variable and separates local trajectory generation from execution authorization. Geometry-guided initialization and joint spline refinement address confined-space feasibility, while boundary inheritance and revalidated bridging manage the transitions created by rolling replanning. The paired benchmark showed that this combination improved difficult-task completion within the tested computation budget, and the handoff ablation supported the contribution of continuity-aware switching. A compatible visual--strain frontend maintained morphology output during visual loss in recorded-data tests. The hardware demonstration illustrates compact passage, arm redeployment, and subsequent object handling. Together, these results establish a modular basis for low-dynamic aerial continuum planning. Future work will quantify end-to-end hardware performance using synchronized onboard mapping, morphology, and trajectory records.
+This work treats continuum morphology as a whole-body planning variable and separates local trajectory generation from execution authorization. Geometry-guided initialization and joint spline refinement address confined-space feasibility, while boundary inheritance and revalidated bridging manage the transitions created by rolling replanning. The paired benchmark showed that this combination improved difficult-task completion within the tested computation budget, and the paired version comparison showed improved transition behavior. A compatible visual--strain frontend maintained morphology output during visual loss in recorded-data tests. The hardware demonstration illustrates compact passage, arm redeployment, and subsequent object handling. Together, these results establish a modular basis for low-dynamic aerial continuum planning. Future work will quantify end-to-end hardware performance using synchronized onboard mapping, morphology, and trajectory records.
+
+\appendices
+\section{Development Checks for the New Simulation Backend}
+The new backend is qualified separately from the historical benchmark. Its current eight-element, alternating-axis arm discretization was compared with the SDK-sized PCC reference at bending angles $0^\circ$, $30^\circ$, $60^\circ$, $90^\circ$, and $120^\circ$ in eight bending planes. The maximum endpoint and bending-vector errors were 2.136\,mm and $1.089^\circ$, respectively. These are numerical kinematic consistency checks, not errors measured on the physical robot.
+
+Runtime commands and the new backend's planning model are limited to $118^\circ$, retaining a $2^\circ$ reserve below the $120^\circ$ evaluation bound. Four fixed-airframe actuator tests, each integrated for 14\,s in a different bending plane, produced a maximum total discrete curvature of $115.597^\circ$ with no evaluated step above $120^\circ$. Raw integrated states were retained without clipping. This test characterizes the current actuator model; stiffness, damping, friction, and mass properties still require physical identification before quantitative transfer claims.
+
+The revised native CAD assembly is maintained as a distinct platform configuration. Its visual geometry, full rigid envelope including the landing gear, sensor extrinsics, and actuation model must be reconciled before it is used for closed-loop passage evaluation. Neither rendered CAD scenes nor these component checks are counted in the historical task-success statistics.
 
 \balance
 \bibliographystyle{IEEEtran}

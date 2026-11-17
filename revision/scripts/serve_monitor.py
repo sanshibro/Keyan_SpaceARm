@@ -6,7 +6,8 @@ import os
 ROOT=Path(__file__).resolve().parents[1]/'live'
 ALLOWED={'index.html','status.json','usage.json','usage.js','replay.json',
          'passage_mechanism_v2.png','rolling_execution_v2.png','frame.png',
-         'paper_preview.pdf','focused_preview.pdf','mujoco_qualification.png'}
+         'paper_preview.pdf','focused_preview.pdf','mujoco_qualification.png','cad16_scene_preview.png','cad16_platform_preview.png',
+         'bending_envelope_check.png','model_checkpoint.pdf','model_paper_page.pdf'}
 class Handler(SimpleHTTPRequestHandler):
     def allowed(self):
         name=urlsplit(self.path).path.lstrip('/') or 'index.html'

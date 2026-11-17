@@ -1,0 +1,8 @@
+serial_device: "/dev/ttyACM0"
+port: "/dev/ttyACM0"
+baudrate: 115200
+response_timeout_ms: 200
+joint_topic: "/qingyu_api"
+pose_topic: "/qingyu_api_pose"
+angles_topic: "continuum_arm/control_angles"
+grasp_topic: "continuum_arm/grasp"
