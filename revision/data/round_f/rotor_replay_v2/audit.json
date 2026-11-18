@@ -1,0 +1,62 @@
+{
+  "flight": "F / final-full-log",
+  "source_sha256": {
+    "physics.npz": "fa5f8cebef0a7529a5a4b5f47b22bec315e6d60a1693e868ec36fed14a288f19",
+    "hil.csv": "7e1a3e8ef5f17f3084338a6b5683b414dc2759f1dd9dc7fef59d134f3b1e9d3f",
+    "flight.ulg": "4c06931a20cf70e1195692574ea1879d33da918a2193f87f18fa0d5d4951a165"
+  },
+  "physics_plant_xml_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+  "cad_prop_sha256": "dc809f75031908cb2f929547dc48c98b7dfef3b534301e9297049b2899955a9b",
+  "assembly": [
+    {
+      "cad_index": 0,
+      "vertices": 5127,
+      "triangles": 10254
+    },
+    {
+      "cad_index": 1,
+      "vertices": 5123,
+      "triangles": 10246
+    },
+    {
+      "cad_index": 2,
+      "vertices": 5127,
+      "triangles": 10254
+    },
+    {
+      "cad_index": 3,
+      "vertices": 5123,
+      "triangles": 10246
+    }
+  ],
+  "all_triangles_accounted_for": 41000,
+  "channel_to_cad": [
+    3,
+    1,
+    0,
+    2
+  ],
+  "directions_top_view": [
+    "CCW",
+    "CCW",
+    "CW",
+    "CW"
+  ],
+  "shaft_speed_telemetry": false,
+  "visual_phase": "Integral of signed 2*pi*1.2*sqrt(normalized HIL output) per simulation second; reduced for temporal resolution. Angular phase is illustrative.",
+  "frames": 517,
+  "fps": 24,
+  "replay_rate": 2.0,
+  "interval_relative_s": [
+    -4.0,
+    39.0
+  ],
+  "max_qpos_alignment_ms": 8.667,
+  "fixed_pose_zero_thrust_pixels_changed": 0,
+  "fixed_pose_active_pixels_changed_per_rotor": [
+    5346,
+    4956,
+    5212,
+    4829
+  ]
+}
