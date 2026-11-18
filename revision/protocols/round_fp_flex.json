@@ -1,0 +1,14 @@
+{
+  "stage": "F+ supplementary, outward bending speed",
+  "parent_protocol": "round_fp.json",
+  "declared_before_fast_run": true,
+  "fixed_reference": "Same hover, target, qpos model, native PX4, seeds and sensor streams as primary trials. Fresh process for each seed.",
+  "seeds": [
+    241118,
+    241119,
+    241120
+  ],
+  "comparison": "Existing 6 s nominal outward bend vs the identical two-part angle path compressed to 3 s (90 and 118 degree waypoints) starting at t=16. Each evaluated over the ramp plus exactly 2 s (16–24 s and 16–21 s). Shared interval 16–24 s reported separately. Same retraction schedule from t=24; fast group's extra 3 s hold not used for attribution of retraction.",
+  "metrics": "Actual net bending angular speed, peak 3D body position error during bend + 2 s hold, tilt, single motor physical-model headroom, hard saturation, residual at 2 s. Report realized speeds. Simulated acceleration stress test only: hardware rate not calibrated.",
+  "diagnostic": "If using a virtual mount torque sensor offline, register its point, frame and sign using a known gravitational load. Separate the gravitational moment of the arm subtree about the mount from the total sensor torque. Residual includes base and arm acceleration and cannot isolate the arm inertia alone."
+}
