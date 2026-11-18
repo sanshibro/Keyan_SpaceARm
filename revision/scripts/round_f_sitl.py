@@ -41,7 +41,7 @@ def dump(p,values):
     temp.replace(p)
 
 
-def prepare(runtime):
+def prepare(runtime,pitch_i):
     mixer=BUILD/'src/lib/mixer/MultirotorMixer/mixer_multirotor_normalized.generated.h'
     rows=mixer.read_text().split('_config_quad_x[] {')[1].split('};')[0]
     import re
@@ -60,6 +60,15 @@ param set MPC_THR_HOVER 0.46
 param set SDLOG_MODE 2
 param set SDLOG_PROFILE 0
 ''')
+    with params.open('a') as f: f.write('param set MC_PITCHRATE_I %.4f\n'%pitch_i)
+    logger=runtime/'etc/logging/logger_topics.txt'
+    logger.parent.mkdir(exist_ok=True)
+    logger.write_text('\n'.join(('sensor_combined 0','vehicle_gps_position 0','vehicle_magnetometer 20',
+                    'vehicle_air_data 20','vehicle_local_position 20','vehicle_attitude 20','estimator_status 20',
+                    'vehicle_status 0','vehicle_status_flags 0','offboard_control_mode 0','trajectory_setpoint 0',
+                    'vehicle_attitude_setpoint 20','vehicle_rates_setpoint 20','rate_ctrl_status 20',
+                    'actuator_controls_0 4','actuator_outputs 0','vehicle_control_mode 0','vehicle_land_detected 0',
+                    'vehicle_command 0','manual_control_setpoint 100'))+'\n')
     link=init/'px4-rc.mavlink'
     link.write_text('''#!/bin/sh
 mavlink start -u 14586 -o 14546 -t 127.0.0.1 -r 1000000 -m onboard
@@ -67,7 +76,7 @@ mavlink stream -u 14586 -s LOCAL_POSITION_NED -r 50
 mavlink stream -u 14586 -s ATTITUDE -r 20
 ''')
     return dict(binary_sha256=digest(BUILD/'bin/px4'),stock_rcS_sha256=digest(init/'rcS'),
-                params_override=params.read_text(),mavlink_override=link.read_text(),
+                params_override=params.read_text(),mavlink_override=link.read_text(),native_logger_topics=logger.read_text(),
                 normalized_mixer_rows=a.tolist(),mixer_sha256=digest(runtime/'etc/mixers/quad_x.main.mix'),
                 px4_checkout=subprocess.check_output(['git','rev-parse','HEAD'],cwd=str(BUILD.parents[1])).decode().strip())
 
@@ -99,11 +108,11 @@ class Bag:
         self.file.write('/f/arm/bend',m,stamp)
 
 
-def run(out,tag):
+def run(out,tag,pitch_i):
     out.mkdir(parents=True,exist_ok=False)
     runtime=out/'runtime'
     plant=Plant()
-    prov=prepare(runtime)
+    prov=prepare(runtime,pitch_i)
     prov.update(tag=tag,protocol_sha256=digest(ROOT/'revision/protocols/round_f.json'),
                 plant_xml_sha256=hashlib.sha256(plant.xml.encode()).hexdigest(),
                 source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=str(ROOT)).decode().strip(),
@@ -252,4 +261,5 @@ def run(out,tag):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('out',type=Path);parser.add_argument('--tag',required=True)
-    args=parser.parse_args();run(args.out.resolve(),args.tag)
+    parser.add_argument('--pitch-i',type=float,choices=(.2,.4),default=.2)
+    args=parser.parse_args();run(args.out.resolve(),args.tag,args.pitch_i)
