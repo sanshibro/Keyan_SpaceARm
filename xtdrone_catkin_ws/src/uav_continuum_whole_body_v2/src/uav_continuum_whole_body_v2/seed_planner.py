@@ -43,7 +43,8 @@ class WholeBodySeedPlanner:
     """Beam-search a collision-aware whole-body seed over the complete horizon."""
 
     def __init__(self, world, arm_model, mass_model, limits, config, body_world=None,
-                 center_keepout_world=None):
+                 center_keepout_world=None, platform_geometry=None):
+        self.platform_geometry = platform_geometry
         self.world = world
         self.body_world = body_world or world
         self.center_keepout_world = center_keepout_world
@@ -70,6 +71,11 @@ class WholeBodySeedPlanner:
         cached = self._clearance_cache.get(key)
         if cached is not None:
             return cached
+        if self.platform_geometry is not None:
+            body, arm = self.platform_geometry.search_clearances(state)
+            result = (body, arm, coupling_metrics(state, self.arm, self.mass))
+            self._clearance_cache[key] = result
+            return result
         body = self.body_world.minimum_distance(world_body_points(state, self.limits))[0]
         if self.center_keepout_world is not None:
             keepout = self.center_keepout_world.signed_distance(state[:3])[0]
@@ -288,6 +294,9 @@ class WholeBodySeedPlanner:
         cached = self._edge_cache.get(key)
         if cached is not None:
             return cached
+        if self.platform_geometry is not None and not self.platform_geometry.edge(previous, current):
+            self._edge_cache[key] = float("inf")
+            return float("inf")
         dp = np.linalg.norm(current[:3] - previous[:3])
         dyaw = abs(wrap_angle(current[YAW] - previous[YAW]))
         dtheta = abs(current[THETA] - previous[THETA])
@@ -398,6 +407,8 @@ class WholeBodySeedPlanner:
                 for candidate in candidates[index]:
                     expanded += 1
                     cost = accumulated + self._edge_cost(path[-1], candidate)
+                    if self.platform_geometry is not None and not np.isfinite(cost):
+                        continue
                     cost += self._node_cost(candidate, reference[index], index in risk_knots)
                     next_beams.append((cost, path + [candidate]))
             next_beams.sort(key=lambda item: item[0])

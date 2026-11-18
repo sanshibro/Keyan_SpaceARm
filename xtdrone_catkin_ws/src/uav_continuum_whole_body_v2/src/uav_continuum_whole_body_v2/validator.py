@@ -13,7 +13,8 @@ class SweptVolumeValidator:
     """Independent dense validator; it never reuses optimizer constraints as proof."""
 
     def __init__(self, world, arm_model, mass_model, limits, config, body_world=None,
-                 center_keepout_world=None, terminal_target=None, terminal_tolerance=0.05):
+                 center_keepout_world=None, terminal_target=None, terminal_tolerance=0.05, platform_geometry=None):
+        self.platform_geometry = platform_geometry
         self.world = world
         self.body_world = body_world or world
         self.center_keepout_world = center_keepout_world
@@ -64,12 +65,25 @@ class SweptVolumeValidator:
         # Collision proof remains independent and uses the same dense samples,
         # but evaluates all samples in grouped NumPy/KD-tree batches instead
         # of issuing hundreds of small Python queries.
-        body_groups = world_body_points_batch(
-            state, self.limits, azimuth_samples=32, vertical_samples=5
-        )
-        arm_groups = world_arm_points_batch(state, self.arm)
-        body_distances, body_names = self.body_world.minimum_distances_grouped(body_groups)
-        arm_distances, arm_names = self.world.minimum_distances_grouped(arm_groups)
+        if self.platform_geometry is None:
+            body_groups = world_body_points_batch(
+                state, self.limits, azimuth_samples=32, vertical_samples=5
+            )
+            arm_groups = world_arm_points_batch(state, self.arm)
+            body_distances, body_names = self.body_world.minimum_distances_grouped(body_groups)
+            arm_distances, arm_names = self.world.minimum_distances_grouped(arm_groups)
+        else:
+            proof = self.platform_geometry.proof(spline)
+            metrics["super_geometry"] = proof
+            if not proof["accepted"]:
+                w = proof["first"]
+                metrics.update(body_clearance_min=proof["body_min"], arm_clearance_min=proof["arm_min"])
+                return ValidationResult(False, "unsafe_super_geometry", metrics, w["index"], w["time_s"], w["reason"])
+            # The registered body/tool minima already cover the full, finer grid.
+            body_distances = np.full(len(times), proof["body_min"])
+            arm_distances = np.full(len(times), proof["arm_min"])
+            body_names = ["/".join(proof["body_pair"])] * len(times)
+            arm_names = ["/".join(proof["arm_pair"])] * len(times)
         com_offsets = coupling_metrics_batch(state, self.arm, self.mass)
         for index, current in enumerate(state):
             body = float(body_distances[index])
@@ -80,7 +94,7 @@ class SweptVolumeValidator:
                 if keepout_clearance < body:
                     body = keepout_clearance
                     body_name = "center_keepout:" + keepout_name
-            arm = float(arm_distances[index]) - self.arm.radius
+            arm = float(arm_distances[index]) - (self.arm.radius if self.platform_geometry is None else 0.)
             com_offset = float(com_offsets[index])
             gravity_torque = self.mass.total * 9.81 * com_offset
             speed = float(np.linalg.norm(velocity[index, :3]))

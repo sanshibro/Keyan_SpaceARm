@@ -59,6 +59,9 @@ class Limits:
     z_min: float = 0.75
     z_max: float = 2.20
 
+    # Applied to body-frame geometry only; zero preserves legacy profiles.
+    body_center_z: float = 0.0
+
     def resolved_torque_max(self, total_mass):
         if self.torque_max is not None:
             return float(self.torque_max)

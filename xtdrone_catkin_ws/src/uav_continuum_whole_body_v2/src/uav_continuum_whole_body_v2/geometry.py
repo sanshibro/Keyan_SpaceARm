@@ -185,6 +185,7 @@ def world_body_points(state, limits, azimuth_samples=16, vertical_samples=3):
     center = np.asarray(state[:3], dtype=float)
     yaw = float(state[3])
     half_height = 0.5 * limits.body_height
+    center = center + [0., 0., getattr(limits, "body_center_z", 0.)]
     points = [center, center + [0.0, 0.0, half_height], center - [0.0, 0.0, half_height]]
     for z in np.linspace(-half_height, half_height, max(2, int(vertical_samples))):
         for index in range(azimuth_samples):
@@ -197,7 +198,7 @@ def world_body_points_batch(states, limits, azimuth_samples=16, vertical_samples
     """Vectorized equivalent of :func:`world_body_points`."""
     states = np.asarray(states, dtype=float).reshape((-1, 6))
     count = len(states)
-    center = states[:, :3]
+    center = states[:, :3] + [0., 0., getattr(limits, "body_center_z", 0.)]
     half_height = 0.5 * limits.body_height
     core = np.repeat(center[:, None, :], 3, axis=1)
     core[:, 1, 2] += half_height

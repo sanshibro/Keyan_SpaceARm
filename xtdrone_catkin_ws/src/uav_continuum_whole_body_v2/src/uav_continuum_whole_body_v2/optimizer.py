@@ -20,7 +20,8 @@ class WholeBodyOptimizer:
     """Jointly optimize UAV pose, continuum shape, and non-uniform span time."""
 
     def __init__(self, world, arm_model, mass_model, limits, config, validator, body_world=None,
-                 center_keepout_world=None):
+                 center_keepout_world=None, platform_geometry=None):
+        self.platform_geometry = platform_geometry
         self.world = world
         self.body_world = body_world or world
         self.center_keepout_world = center_keepout_world
@@ -46,6 +47,8 @@ class WholeBodyOptimizer:
         )
 
     def _body_clearance(self, state):
+        if self.platform_geometry is not None:
+            return self.platform_geometry.search_clearances(state)[0]
         body = min(10.0, self.body_world.minimum_distance(world_body_points(state, self.limits))[0])
         if self.center_keepout_world is not None:
             keepout = self.center_keepout_world.signed_distance(state[:3])[0]
@@ -60,6 +63,8 @@ class WholeBodyOptimizer:
         are identical to the scalar implementation.
         """
         states = np.asarray(states, dtype=float)
+        if self.platform_geometry is not None:
+            return [(*self.platform_geometry.search_clearances(s), coupling_metrics(s, self.arm, self.mass)) for s in states]
         body_groups = np.stack([
             world_body_points(current, self.limits) for current in states
         ])

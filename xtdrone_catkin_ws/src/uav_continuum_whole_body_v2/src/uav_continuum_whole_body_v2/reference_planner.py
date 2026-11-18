@@ -25,7 +25,7 @@ class VoxelAStarReferencePlanner:
                  body_height=0.25, body_margin=0.10, z_min=0.75,
                  z_max=2.20, clearance_weight=0.04,
                  heuristic_weight=1.5,
-                 maximum_expansions=300000, time_budget=10.0):
+                 maximum_expansions=300000, time_budget=10.0, body_center_z=0.):
         preparation_started = time.monotonic()
         self.snapshot = snapshot
         self.world = snapshot.world(inflation=0.0, unknown_is_occupied=True)
@@ -55,7 +55,7 @@ class VoxelAStarReferencePlanner:
                 geometry_feasible = clearances >= self.center_clearance
             else:
                 body_limits = Limits(
-                    body_radius=self.body_radius, body_height=self.body_height,
+                    body_radius=self.body_radius, body_height=self.body_height, body_center_z=body_center_z,
                 )
                 body_template = world_body_points(
                     np.zeros(6), body_limits,
@@ -64,7 +64,7 @@ class VoxelAStarReferencePlanner:
                 self.body_template = body_template
                 geometry_feasible = np.zeros(len(self.observed_points), dtype=bool)
                 circumscribed = math.hypot(
-                    self.body_radius, 0.5 * self.body_height
+                    self.body_radius, 0.5 * self.body_height + abs(body_center_z)
                 ) + self.body_margin
                 for start in range(0, len(self.observed_points), 2000):
                     if time.monotonic() - preparation_started > self.time_budget:

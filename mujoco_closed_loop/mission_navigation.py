@@ -2,6 +2,7 @@
 import json,time
 from collections import deque
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import numpy as np
 from planner_adapter import V21Adapter
 from async_planner import AsyncV21Planner
@@ -129,6 +130,36 @@ class MissionNavigator:
         self.reference_velocity=np.zeros(3);self.reference_acceleration=np.zeros(3)
         self.trace=[];self.needs_map_refresh=False
 
+    def receive_candidate(self, candidate, measured, rates, info):
+        """Check the recovered spline on the full receiving map before installing it."""
+        try:
+            spline = reconstruct_spline(candidate)
+            proof = self.adapter.handoff_review(measured, rates, spline)
+        except ValueError as error:
+            self.status = 'spline_identity_rejected'
+            info['error'] = str(error)
+            return False
+        info['full_sensor_map_validation'] = proof.__dict__
+        if not proof.feasible:
+            self.status = 'full_sensor_map_validation_rejected'
+            return False
+        archive = self.directory / (self.name + '_trajectory.npz')
+        try:
+            with TemporaryDirectory(prefix='.candidate-', dir=self.directory) as directory:
+                pending = Path(directory) / 'trajectory.npz'
+                np.savez_compressed(pending, times=candidate.times, states=candidate.states,
+                                    velocities=candidate.velocities, accelerations=candidate.accelerations,
+                                    jerks=candidate.jerks, control_states=spline.control_states,
+                                    span_durations=spline.span_durations)
+                pending.replace(archive)
+        except OSError as error:
+            self.status = 'trajectory_archive_failed'
+            info['error'] = str(error)
+            return False
+        self.spline, self.trajectory = spline, candidate
+        self.status = 'executing'
+        return True
+
     def prepare_synchronous_frontier(self,measured,velocity,gyro):
         """Plan a short observed frontier while MuJoCo physics is paused."""
         measured=np.asarray(measured,dtype=float)
@@ -144,15 +175,8 @@ class MissionNavigator:
             violations=whole_body_switch_gate(gaps,GATES)
             info['takeover_gaps']=gaps;info['takeover_violations']=violations
             if not violations:
-                try:
-                    spline=reconstruct_spline(candidate)
-                    proof=self.adapter.validator.validate(spline)
-                    info['full_sensor_map_validation']=proof.__dict__
-                    if proof.feasible:
-                        self.spline=spline;self.trajectory=candidate;self.reference=candidate.states[0].copy();self.status='executing'
-                        np.savez_compressed(self.directory/(self.name+'_trajectory.npz'),times=candidate.times,states=candidate.states,velocities=candidate.velocities,accelerations=candidate.accelerations,jerks=candidate.jerks,control_states=spline.control_states,span_durations=spline.span_durations)
-                    else:self.status='full_sensor_map_validation_rejected'
-                except ValueError as error:self.status='spline_identity_rejected';info['error']=str(error)
+                if self.receive_candidate(candidate,measured,rates,info):
+                    self.reference=candidate.states[0].copy()
             else:self.status='start_or_rate_mismatch_hold_requires_validated_bridge'
         (self.directory/(self.name+'_planner.json')).write_text(json.dumps(info,default=str,indent=2))
         return self.spline is not None
@@ -187,16 +211,7 @@ class MissionNavigator:
                 if info['status']!='planning':
                     self.info=info;self.status=info['status']
                     if candidate is not None:
-                        try:self.spline=reconstruct_spline(candidate)
-                        except ValueError as error:self.status='spline_identity_rejected';self.info['error']=str(error)
-                        if self.spline is not None:
-                            full_proof=self.adapter.validator.validate(self.spline)
-                            self.info['full_sensor_map_validation']=full_proof.__dict__
-                            if not full_proof.feasible:
-                                self.spline=None;self.status='full_sensor_map_validation_rejected'
-                            else:
-                                self.trajectory=candidate;self.status='executing'
-                                np.savez_compressed(self.directory/(self.name+'_trajectory.npz'),times=candidate.times,states=candidate.states,velocities=candidate.velocities,accelerations=candidate.accelerations,jerks=candidate.jerks,control_states=self.spline.control_states,span_durations=self.spline.span_durations)
+                        self.receive_candidate(candidate,measured,rates,self.info)
                     (self.directory/(self.name+'_planner.json')).write_text(json.dumps(self.info,default=str,indent=2))
             if self.spline is not None:
                 clearance=self.adapter.clearance(measured)
