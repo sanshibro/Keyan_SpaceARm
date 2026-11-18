@@ -26,6 +26,9 @@ def anchor(file):return 'file-'+file.replace('.','-')
 def detail(s,offline=False,omitted=()):
     ff=[x for x in s['files'] if x['file'] not in omitted]; lookup={f['file']:f for f in ff};d=s['when'];top=nav('#top','本轮离线资料') if offline else nav('../index.html','← 全部轮次'); out=[top,'<main id="main"><header class="hero"><p class="eyebrow">'+e(s['stage'])+'　/　'+e(d[:10])+' '+e(d[11:16])+'（北京时间）</p><h1>'+e(s['title'])+'</h1><p class="desc">'+e(s['summary'])+'</p><p class="meta">'+e(counts({'files':ff}))+'</p>'];
     if not offline:out.append('<div class="actions"><a class="btn primary" href="meeting.zip" download>下载本轮离线汇报包</a><a class="btn" href="snapshot.json" download>下载文件校验清单</a></div>');
+    if not offline and s.get('parent_round'):
+        parent=s['parent_round'];req(bool(SAFE.fullmatch(parent)) and parent!=s['id'],'invalid parent round')
+        out.append('<p><a href="../'+e(parent)+'/index.html">打开对应飞行的原始日志与验收记录</a></p>')
     if omitted:out.append('<p class="note">为方便携带，此包未收入：'+e('、'.join(f['title'] for f in s['files'] if f['file'] in omitted))+'。可在本轮网页单独下载。</p>');
     elif not offline and any(f.get('separate',False) for f in ff):out.append('<p class="note">大附件单独提供：'+e('、'.join(f['title'] for f in ff if f.get('separate',False)))+'。</p>');
     out+=['</header><aside class="read"><h2>组会怎么讲</h2><ol>',''.join('<li>'+e(x)+'</li>' for x in s['guide']),'</ol><p class="scope"><strong>这轮验证了什么：</strong>'+e(s['scope'])+'</p></aside>','<nav class="pills" aria-label="本页内容">']

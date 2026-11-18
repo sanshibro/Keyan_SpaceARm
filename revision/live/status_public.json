@@ -1,10 +1,10 @@
 {
   "branch": "feat/paper-mechanism-rolling-20261117",
   "status": "awaiting_review",
-  "stage": "F 完成 · PX4 软件在环与日志重建",
+  "stage": "F 完成 · 四旋翼回放已修订",
   "mode": "SUPER 与 Qingyu · PX4 EKF2 · MuJoCo 自由飞行",
-  "detail": "最终自由飞行中，空载悬停误差 0.94 cm，弯臂期间三维均方根误差 11.25 cm，瞬时最大偏离 25.07 cm。PX4 原生四路电机记录已与实际施加推力对齐。",
-  "updated": "2026-11-18T22:53:26+08:00",
+  "detail": "F 轮原始飞行记录新增桨叶转动回放，可分别观察四个电机方向和推力。",
+  "updated": "2026-11-19T00:06:04+08:00",
   "progress": 100,
   "geometry": "round_f_cad.png",
   "geometry_caption": "悬停、平移和弯臂时的实际积分姿态",

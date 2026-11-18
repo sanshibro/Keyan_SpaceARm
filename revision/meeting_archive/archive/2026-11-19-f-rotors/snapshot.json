@@ -1,0 +1,87 @@
+{
+  "cover": "blades.png",
+  "files": [
+    {
+      "bytes": 90099,
+      "caption": "同一飞行的 30.000、30.083 和 30.167 s。桨绕右前电机轴旋转，机臂可作为固定参照。",
+      "file": "blades.png",
+      "kind": "image",
+      "sha256": "0f789775f19a42a84b0aa0581d8637272dcf5899179ff513a9ac07117da5f024",
+      "title": "右前桨连续三帧"
+    },
+    {
+      "bytes": 153152,
+      "caption": "F 轮原始验收曲线。图 c 的前、后推力是对应两台电机的平均值，视频分别显示四路瞬时数值。",
+      "file": "curves.png",
+      "kind": "curve",
+      "sha256": "5d47a9bc74aa118953d8345c77d6b39c4ca92ae8c002ffbbc2db8aa78d1ace53",
+      "title": "位置误差与前后旋翼推力"
+    },
+    {
+      "bytes": 3402349,
+      "caption": "从释放前 4 秒开始。中央俯视图可辨识两组对角桨的反向旋转，右侧给出各电机的模拟推力，底部同步显示臂角。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "poster.png",
+      "sha256": "96a1697745e64b5ca51fecd2ed9ac1219909eccde6e041a5c58243b00bcce65c",
+      "title": "四旋翼与推力同步回放"
+    },
+    {
+      "bytes": 221393,
+      "caption": "整机、四桨俯视和机身轨迹使用同一仿真时钟。",
+      "file": "poster.png",
+      "kind": "poster",
+      "sha256": "ca195a5543a58366e6eb0f71199a54d55c5dc1d1b32b482315a8b19f3d613cc1",
+      "title": "30 s 四旋翼视图"
+    },
+    {
+      "bytes": 471310,
+      "caption": "与 F 轮引用同一份 PDF，展示空场任务和俯仰增益配对。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "fa643c4bd7096eed65185d1c2a763bfa86ebb4f170a1b776c1b8aba488e64e3b",
+      "title": "本次飞行的两页验收图"
+    },
+    {
+      "bytes": 1503,
+      "caption": "包含 CAD 来源哈希、四桨三角面数量、两组旋向、零推力静止与同姿态有推力时的逐桨像素校验。",
+      "file": "audit.json",
+      "kind": "data",
+      "sha256": "d6b0bd862e89c69566906d9b7ec8f0d138d3229c0b987dd979930df4b2470c44",
+      "title": "桨轴、旋向与画面校验"
+    },
+    {
+      "bytes": 90903,
+      "caption": "517 帧。包括视频时间、原始机身姿态和输出时间戳、四路推力 N 以及仅用于显示的相位 rad。",
+      "file": "rotor-frames.csv",
+      "kind": "data",
+      "sha256": "36443a48b89421c836050326f8abfdcb111be264682f6ab3cf7ff91a5d3bb4ac",
+      "title": "逐帧推力与示意桨相位"
+    }
+  ],
+  "guide": [
+    "播放回放，先看起飞前的静止桨叶，再看电机输出上升时四桨的运动。",
+    "在俯视图中辨认 M1 至 M4。M1、M2 为一对对角桨，M3、M4 为另一对；每路显示速度随对应推力变化。",
+    "在 30 秒附近对照推力读数和右前桨的三帧局部放大。机身、机械臂和推力采用原始积分及飞控记录，叶片相位用于慢速展示。"
+  ],
+  "id": "2026-11-19-f-rotors",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "1ded4892d5f14e13f64fa9984104a348fecac94edcdff7976e3de28eb0e11e93"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "df78534505c8c2e9b797a03066a25f20c224c1c80e36e141ed2a2e431bf8c9a4"
+    }
+  },
+  "parent_round": "2026-11-18-f",
+  "revision": "7808d279b5e9fa85326568c33463728817c2b1c7",
+  "schema": 1,
+  "scope": "F 轮标称模型采用归一化飞控输出到推力的直接映射，日志记录推力与整机响应。桨叶显示转速采用缩放示意，实际 RPM 需要电调遥测或经标定的电机模型。",
+  "source_note": "7808d27 逐轴绘制来自原装配的四副螺旋桨；80b5fe2 为原始飞行配置。",
+  "stage": "F · 旋翼回放修订",
+  "summary": "同一次 F 轮飞行。四副原始 SUPER 桨叶在各自电机轴上转动，俯视可分辨相反的旋向。30 s 时前两台约 7.2 N，后两台约 3.8 N。",
+  "title": "从四路电机推力看螺旋桨转动",
+  "when": "2026-11-19T00:06:04+08:00"
+}
