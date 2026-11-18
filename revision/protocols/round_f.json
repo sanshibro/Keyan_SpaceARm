@@ -1,0 +1,24 @@
+{
+  "stage": "F. PX4 SITL and time-aligned evidence",
+  "base": "f9c833cab735533ca6d599093f4e6c1768fd0624",
+  "scope": "Known empty environment, nominal unloaded E2 configuration. One linked sequence with three qualification intervals; one deterministic run establishes interface function, not robustness or real-flight performance.",
+  "physics": "Registered SUPER and native Qingyu visual assembly. Eight integrated bending links, nominal drives, 0.5 ms physics, 4 ms HIL IMU clock. Temporary world support only before simulated takeoff; no external wrench or pose reset after release.",
+  "loops": "Synthetic accelerometer, gyro, magnetometer, barometer and GPS -> native EKF2 -> native PX4 position/rate controllers -> four HIL actuator channels -> MuJoCo rotor thrust. No simulator pose/attitude or simulator-truth feedback into flight control. All communication within the NUC. No physical flight.",
+  "task": "After free lift-off settle for 9 s, hover at launch +0.65 m for 5 s, translate east by 0.60 m with a 4 s cosine ramp and hold for 4 s, maintain the new position for the 14 s E1 bend/return profile at phi=180 degrees, then hold for 3 s. Fixed yaw = east. Time zero for phases is release of launch support.",
+  "acceptance": {
+    "hover_3d_rms_m": 0.12,
+    "translation_endpoint_error_3d_m": 0.12,
+    "translation_3d_rms_m": 0.18,
+    "translation_endpoint_displacement_tolerance_m": 0.15,
+    "bend_hold_3d_rms_m": 0.15,
+    "bend_tip_response_peak_min_deg": 105,
+    "airborne_peak_tilt_deg": 15,
+    "airborne_total_curvature_max_deg": 120,
+    "airborne_contacts": 0,
+    "offboard_and_armed_all_evaluated": true,
+    "clear_sensor_estimate_actuator_chain": true,
+    "native_ulog_rosbag_and_physics_reconstruction": true
+  },
+  "outputs": "Time-indexed HIL wire, MuJoCo full state and applied thrust, flight and arm requests/issued/response, native PX4 ULog, typed ROS1 bag, per-phase time index, clock alignment and independent reconstruction. Record failure reasons. Simulated sensor accuracy, motor conversion and inertia are nominal assumptions.",
+  "paper": "Standalone candidate preview. Admit the F chain only after reconstruction, no automatic manuscript or gate-passage claims."
+}
