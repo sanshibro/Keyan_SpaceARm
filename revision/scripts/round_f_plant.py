@@ -60,9 +60,12 @@ class Plant:
             raise ValueError('Rotor positions, numbering or reaction direction disagree with PX4')
         self.noise=np.random.default_rng(241118)
 
-    def step(self,k,us,controls,theta,free):
+    def issue(self,k,us,controls,theta):
         issued=self.arm.apply(ArmCommand(k,us/1e6,math.radians(theta),math.pi))
         self.d.ctrl[self.rotors]=12.*np.asarray(controls)
+        return math.degrees(issued['issued']['theta_rad'])
+
+    def step(self,free):
         for _ in range(round(TICK/DT)):
             mujoco.mj_step(self.m,self.d)
             if free:
@@ -72,7 +75,6 @@ class Plant:
         mujoco.mj_forward(self.m,self.d)
         if not np.isfinite(self.d.qpos).all() or not np.isfinite(self.d.qvel).all():
             raise ArithmeticError('Nonfinite plant state')
-        return math.degrees(issued['issued']['theta_rad'])
 
     def sensor(self):
         # MuJoCo linear accelerometer is specific force at the specified site.

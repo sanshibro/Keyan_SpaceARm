@@ -166,6 +166,8 @@ def run(out,tag):
             phase_t=None if released is None else (k-released)*TICK
             phase,ref,theta=reference(phase_t)
             if k%10==0 and ground_seen:
+                # A neutral virtual joystick supplies the monitored manual link in this isolated SITL.
+                ground.mav.manual_control_send(SYS,0,0,0,0,0)
                 ref_ned=ENU_NED@ref+(origin if origin is not None else 0.)
                 ground.mav.set_position_target_local_ned_send(us//1000,SYS,1,1,2552,
                                             *ref_ned,0,0,0,0,0,0,math.pi/2,0)
@@ -205,7 +207,8 @@ def run(out,tag):
                 last_phase=phase
             pose=plant.d.xpos[plant.base]-LAUNCH
             shape=plant.arm.observe()
-            angles=[theta,min(theta,118.),shape['net_bending_deg'],shape['total_curvature_deg']]
+            issued=plant.issue(k,us,motor,theta)
+            angles=[theta,issued,shape['net_bending_deg'],shape['total_curvature_deg']]
             # Stored qpos and position are at sensor time; thrust is issued for the following 4 ms.
             if k%5==0:
                 bag.sample(us,ref,pose,estimate,motor,motor*12,angles)
@@ -213,8 +216,7 @@ def run(out,tag):
                                 ('rotor_N',motor*12),('tcp',plant.d.site('tip').xpos.copy()),
                                 ('ref',ref.copy()),('ctrl',plant.d.ctrl.copy()),('ncon',plant.d.ncon)]:
                     samples[key].append(val)
-            issued=plant.step(k,us,motor,theta,released is not None)
-            angles[1]=issued
+            plant.step(released is not None)
             writer.writerow([us,phase,int(released is not None),act_us,int(armed),flag,int(last_mode),
                              *motor,*angles,*pose,*ref,est_ms,*(estimate or [float('nan')]*3),*acc,*gyro,*mag,press,alt])
             if released is not None: max_age=max(max_age,k-last_seq)
