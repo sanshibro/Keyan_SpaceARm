@@ -1,0 +1,18 @@
+{
+  "tag": "commissioning-01",
+  "error": "RuntimeError('No free lift-off in 48 simulated seconds; inspect estimator, arming and rotor signals')",
+  "release_us": null,
+  "end_us": 49000000,
+  "packets": 11967,
+  "contact_integration_steps": 0,
+  "max_total_curvature_deg": 0.0,
+  "max_ticks_since_new_packet": 0,
+  "ack_latest": {
+    "176": 0
+  },
+  "ekf_launch_origin_ned": [
+    -4.705276296590455e-05,
+    -0.00015508847718592733,
+    -0.0016276811948046088
+  ]
+}

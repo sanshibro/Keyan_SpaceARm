@@ -1,0 +1,79 @@
+{
+  "binary_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+  "stock_rcS_sha256": "2f6ab039693b60d95cb275fe90e2bbaec279f6ddf6d221330f8a6a62920a191d",
+  "params_override": "#!/bin/sh\n# shellcheck disable=SC2154\n\n#param set-default MAV_SYS_ID $((px4_instance+1))\n#param set-default IMU_INTEG_RATE 250\n\nset MIXER quad_x\nparam set EKF2_MULTI_IMU 1\nparam set EKF2_MULTI_MAG 1\nparam set SENS_IMU_MODE 1\nparam set SENS_MAG_MODE 1\nparam set MPC_THR_HOVER 0.46\nparam set SDLOG_MODE 2\nparam set SDLOG_PROFILE 0\nparam set MC_PITCHRATE_I 0.4000\n",
+  "mavlink_override": "#!/bin/sh\nmavlink start -u 14586 -o 14546 -t 127.0.0.1 -r 1000000 -m onboard\nmavlink stream -u 14586 -s LOCAL_POSITION_NED -r 50\nmavlink stream -u 14586 -s ATTITUDE -r 20\n",
+  "native_logger_topics": "sensor_combined 0\nvehicle_gps_position 0\nvehicle_magnetometer 20\nvehicle_air_data 20\nvehicle_local_position 20\nvehicle_attitude 20\nestimator_status 20\nvehicle_status 0\nvehicle_status_flags 0\noffboard_control_mode 0\ntrajectory_setpoint 0\nvehicle_attitude_setpoint 20\nvehicle_rates_setpoint 20\nrate_ctrl_status 20\nactuator_controls_0 4\nactuator_outputs 0\nvehicle_control_mode 0\nvehicle_land_detected 0\nvehicle_command 0\nmanual_control_setpoint 100\n",
+  "normalized_mixer_rows": [
+    [
+      -0.707107,
+      0.707107,
+      1.0,
+      1.0
+    ],
+    [
+      0.707107,
+      -0.707107,
+      1.0,
+      1.0
+    ],
+    [
+      0.707107,
+      0.707107,
+      -1.0,
+      1.0
+    ],
+    [
+      -0.707107,
+      -0.707107,
+      -1.0,
+      1.0
+    ]
+  ],
+  "mixer_sha256": "66d2fcf1308af244b159ff09eff29016a9fc137f522533c697b72fa422be4e39",
+  "px4_checkout": "1c8ab2a0d7db2d14a6f320ebd8766b5ffaea28fa",
+  "tag": "final-full-log",
+  "protocol_sha256": "bb264377d45404b28526b333878d05d0993c45b739b7d356b4b61653b5e2bf66",
+  "plant_xml_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+  "source_commit": "80b5fe25e6ced41bc08f5fc4d53b0194f9c3a98e",
+  "script_sha256": {
+    "round_f_plant.py": "0e18808c4b7c403f5091ee079f3d166021ffb58e9886baaf03b6fbe656170ef2",
+    "round_f_sitl.py": "37866e604e8689a815ae08b1c0ae4f8dc50fbd59f01228e7782839bdf36fac06"
+  },
+  "mujoco": "3.2.3",
+  "rotor_channels_to_model": [
+    3,
+    1,
+    0,
+    2
+  ],
+  "motor_gain_N": 12.0,
+  "differential_FRD": [
+    [
+      0.3959797543,
+      3.333000000022013e-07,
+      3.333000000022013e-07
+    ],
+    [
+      -4.166999999777321e-07,
+      0.3959791709,
+      -3.333000000022013e-07
+    ],
+    [
+      0.0,
+      0.0,
+      0.08
+    ]
+  ],
+  "mass_kg": 2.25,
+  "physics_dt_s": 0.0005,
+  "hil_dt_s": 0.004,
+  "clock_origin_us": 1000000,
+  "imu_std_si": [
+    0.015,
+    0.0008
+  ],
+  "mag_std_gauss": 0.0003,
+  "baro_std_m": 0.018,
+  "gps": "ideal WGS84 fix plus integer MAVLink quantization; one simulated receiver, 10 Hz"
+}

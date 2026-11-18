@@ -1,0 +1,19 @@
+{
+  "tag": "candidate-pitch-i-040",
+  "error": null,
+  "release_us": 15912000,
+  "end_us": 54912000,
+  "packets": 13445,
+  "contact_integration_steps": 0,
+  "max_total_curvature_deg": 115.55506014287606,
+  "max_ticks_since_new_packet": 0,
+  "ack_latest": {
+    "176": 0,
+    "400": 0
+  },
+  "ekf_launch_origin_ned": [
+    -4.705276296590455e-05,
+    -0.00015508847718592733,
+    -0.0016276811948046088
+  ]
+}

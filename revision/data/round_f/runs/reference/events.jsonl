@@ -1,0 +1,17 @@
+{"us": 1000000, "event": "simulator_connected"}
+{"us": 1000000, "event": "phase", "name_detail": "preflight"}
+{"us": 3512000, "event": "px4_text", "text": "[logger] ./log/2026-11-18/14_29_57.ulg\t"}
+{"us": 3564000, "event": "px4_text", "text": "Failsafe mode activated\t"}
+{"us": 7200000, "event": "px4_text", "text": "Failsafe mode deactivated\t"}
+{"us": 8004000, "event": "fixed_ekf_launch_origin", "ned": [-4.705276296590455e-05, -0.00015508847718592733, -0.0016276811948046088]}
+{"us": 12012000, "event": "ack", "command": 176, "result": 0}
+{"us": 13004000, "event": "px4_armed"}
+{"us": 13008000, "event": "ack", "command": 400, "result": 0}
+{"us": 13008000, "event": "px4_text", "text": "Armed by external command\t"}
+{"us": 14892000, "event": "px4_text", "text": "Takeoff detected\t"}
+{"us": 15952000, "event": "support_removed", "thrust_N": 21.636001110076904}
+{"us": 15952000, "event": "phase", "name_detail": "liftoff"}
+{"us": 24952000, "event": "phase", "name_detail": "hover"}
+{"us": 29952000, "event": "phase", "name_detail": "translate"}
+{"us": 37952000, "event": "phase", "name_detail": "bend"}
+{"us": 51952000, "event": "phase", "name_detail": "recover"}

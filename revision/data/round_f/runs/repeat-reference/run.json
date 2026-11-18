@@ -1,0 +1,19 @@
+{
+  "tag": "repeat-reference-pitch-i-020",
+  "error": null,
+  "release_us": 15952000,
+  "end_us": 54952000,
+  "packets": 13362,
+  "contact_integration_steps": 0,
+  "max_total_curvature_deg": 115.55349927002638,
+  "max_ticks_since_new_packet": 0,
+  "ack_latest": {
+    "176": 0,
+    "400": 0
+  },
+  "ekf_launch_origin_ned": [
+    -4.706203981186263e-05,
+    -0.0001550931337988004,
+    -0.0009685484692454338
+  ]
+}

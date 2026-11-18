@@ -1,0 +1,67 @@
+INFO  [px4] assuming working directory is rootfs, no symlinks needed.
+
+______  __   __    ___ 
+| ___ \ \ \ / /   /   |
+| |_/ /  \ V /   / /| |
+|  __/   /   \  / /_| |
+| |     / /^\ \ \___  |
+\_|     \/   \/     |_/
+
+px4 starting.
+
+INFO  [px4] Calling startup script: /bin/sh etc/init.d-posix/rcS 6
+INFO  [init] found model autostart file as SYS_AUTOSTART=10016
+INFO  [param] selected parameter default file eeprom/parameters_10016
+[param] parameter file not found, creating eeprom/parameters_10016
+  SYS_AUTOCONFIG: curr: 0 -> new: 1
+* MAV_SYS_ID: curr: 1 -> new: 7
+  SYS_AUTOSTART: curr: 0 -> new: 10016
+  CAL_ACC0_ID: curr: 0 -> new: 1310988
+  CAL_GYRO0_ID: curr: 0 -> new: 1310988
+  CAL_ACC1_ID: curr: 0 -> new: 1310996
+  CAL_GYRO1_ID: curr: 0 -> new: 1310996
+  CAL_ACC2_ID: curr: 0 -> new: 1311004
+  CAL_GYRO2_ID: curr: 0 -> new: 1311004
+* CAL_MAG0_ID: curr: 0 -> new: 197388
+* CAL_MAG1_ID: curr: 0 -> new: 197644
+* SENS_BOARD_X_OFF: curr: 0.0000 -> new: 0.0000
+* SENS_DPRES_OFF: curr: 0.0000 -> new: 0.0010
+* SYS_AUTOCONFIG: curr: 1 -> new: 0
+* IMU_INTEG_RATE: curr: 200 -> new: 250
+* EKF2_MULTI_IMU: curr: 3 -> new: 1
+* EKF2_MULTI_MAG: curr: 2 -> new: 1
+* SENS_IMU_MODE: curr: 0 -> new: 1
+* SENS_MAG_MODE: curr: 0 -> new: 1
+* MPC_THR_HOVER: curr: 0.5000 -> new: 0.4600
+* SDLOG_MODE: curr: 1 -> new: 2
+* SDLOG_PROFILE: curr: 131 -> new: 0
+* MC_PITCHRATE_I: curr: 0.2000 -> new: 0.4000
+INFO  [dataman] data manager file './dataman' size is 7866640 bytes
+PX4 SIM HOST: 127.0.0.1
+INFO  [simulator] Simulator using TCP on remote host 127.0.0.1 port 4566
+WARN  [simulator] Please ensure port 4566 is not blocked by a firewall.
+INFO  [simulator] Waiting for simulator to accept connection on TCP port 4566
+INFO  [simulator] Simulator connected on TCP port 4566.
+INFO  [commander] LED: open /dev/led0 failed (22)
+* PWM_AUX_OUT: curr: 0 -> new: 1234
+* PWM_MAIN_OUT: curr: 0 -> new: 1234
+INFO  [init] Mixer: etc/mixers/quad_x.main.mix on /dev/pwm_output0
+INFO  [init] setting PWM_AUX_OUT none
+INFO  [mavlink] mode: Onboard, data rate: 1000000 B/s on udp port 14586 remote port 14546
+INFO  [logger] logger started (mode=all)
+WARN  [logger] No logging profile selected. Using default set
+INFO  [logger] logging 20 topics from logger_topics.txt
+INFO  [logger] Start file log (type: full)
+INFO  [px4] Startup script returned successfully
+INFO  [logger] [logger] ./log/2026-11-18/14_35_32.ulg	
+INFO  [logger] Opened full log file: ./log/2026-11-18/14_35_32.ulg
+INFO  [commander] Failsafe mode activated	
+INFO  [tone_alarm] home set
+INFO  [tone_alarm] notify negative
+INFO  [commander] Failsafe mode deactivated	
+INFO  [commander] Armed by external command	
+INFO  [tone_alarm] arming warning
+INFO  [commander] Takeoff detected	
+
+PX4 Exiting...
+Exiting NOW.
