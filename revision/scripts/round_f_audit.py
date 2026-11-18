@@ -1,5 +1,5 @@
 """Reconstruct scoring intervals independently from HIL, native ULog, ROS1 bag and generalized states."""
-import argparse, csv, hashlib, json, math
+import argparse, csv, gzip, hashlib, json
 from pathlib import Path
 
 import numpy as np
@@ -13,13 +13,22 @@ def read(p): return json.loads(p.read_text())
 def save(p,x): p.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
 def rms(x): return float(np.sqrt(np.mean(np.sum(x*x,axis=1))))
 def hashes(folder):
-    return {n:hashlib.sha256((folder/n).read_bytes()).hexdigest() for n in
-            ('flight.ulg','flight.bag','physics.npz','hil.csv','events.jsonl','run.json','provenance.json')}
+    files=('flight.ulg','flight.bag','physics.npz','hil.csv','events.jsonl','run.json','provenance.json')
+    result={}
+    for n in files:
+        p=folder/n
+        content=p.read_bytes() if p.is_file() else gzip.decompress(p.with_suffix('.csv.gz').read_bytes())
+        result[n]=hashlib.sha256(content).hexdigest()
+    return result
+
+def wire(folder):
+    path=folder/'hil.csv'
+    return pd.read_csv(path if path.is_file() else folder/'hil.csv.gz')
 
 
 def audit(folder,raw,plant):
     meta=read(folder/'run.json');prov=read(folder/'provenance.json')
-    w=pd.read_csv(folder/'hil.csv');us=w.us.values.astype(np.int64)
+    w=wire(folder);us=w.us.values.astype(np.int64)
     release=meta['release_us'];end=release+39000000
     u=ULog(str(folder/'flight.ulg')); d=lambda n:u.get_dataset(n).data
     phase=w.phase.values; free=(us>=release)&(us<=end)
@@ -134,7 +143,7 @@ if __name__=='__main__':
          alignment_rule='HIL and ROS simulated timestamps in microseconds; add the reported offset to PX4 boot time. GPS packets are sent immediately before the matching IMU; infer the origin from GPS UTC minus uORB sample time minus 4 ms.',
          physics='qpos at 50 Hz includes free-body quaternion wxyz and integrated joints; ctrl holds the actual following interval drive. HIL CSV at 250 Hz, MuJoCo integrates eight 0.5 ms steps per HIL interval.',
          scope='ROS bag written by the running simulator bridge using typed messages on its simulation clock. PX4 control transport is MAVLink over loopback.',**final['reconstruction']))
-    s=pd.read_csv(args.source/'final'/'hil.csv')
+    s=wire(args.source/'final')
     s=s[(s.us>=final['release_us'])&(s.us<=final['scoring_end_us'])].iloc[::5].copy()
     s.insert(0,'since_release_s',(s.us-final['release_us'])/1e6)
     s.to_csv(args.out/'display_50hz.csv',index=False,float_format='%.8g')
