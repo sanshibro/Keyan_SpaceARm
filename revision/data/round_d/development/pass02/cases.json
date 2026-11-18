@@ -1,0 +1,792 @@
+[
+  {
+    "case": "48 archived penetration labels",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "points": 48,
+      "hard_hits": 18,
+      "one_mm_rejects": 18
+    }
+  },
+  {
+    "case": "voxel union matches all cell centres",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {}
+  },
+  {
+    "case": "unobserved interior cell becomes solid",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {}
+  },
+  {
+    "case": "aligned skid to sill support planes",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "analytic_m": 0.27998986000000003,
+      "computed_m": 0.27998986000000003
+    }
+  },
+  {
+    "case": "positive separation can fail the reserved margin",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "reason": "arm_environment",
+      "raw_arm_m": 0.07039764063686368,
+      "native_contacts": 0
+    }
+  },
+  {
+    "case": "production validator rejects interior collision",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "reason": "self_collision"
+    }
+  },
+  {
+    "case": "fully constrained nearby terminal rejected",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "status": "terminal_geometry_rejected"
+    }
+  },
+  {
+    "case": "self sweep phi90",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "proof": {
+        "accepted": false,
+        "first": {
+          "index": 102,
+          "time_s": 4.04,
+          "state": [
+            -0.8,
+            0.0,
+            1.5000000000000002,
+            0.0,
+            0.6754424205218055,
+            1.5707963267948968
+          ],
+          "body": 0.5083540382076125,
+          "arm": 0.6208818232734175,
+          "raw_body": 0.6499897118271757,
+          "raw_arm": 0.7522121436586872,
+          "body_pair": [
+            "collision_landing_151",
+            "outside_observed_map"
+          ],
+          "arm_pair": [
+            "visual_gripper_finger1",
+            "outside_observed_map"
+          ],
+          "tilt_reserve_body": 0.14163567361956322,
+          "tilt_reserve_arm": 0.1313303203852697,
+          "reason": "self_collision",
+          "pair": [
+            "collision_landing_168",
+            "d435"
+          ],
+          "self_contact": [
+            0.00028975970398729956,
+            "collision_landing_168",
+            "d435"
+          ]
+        },
+        "samples": 103,
+        "body_min": 0.5083540382076123,
+        "arm_min": 0.6153324852164463,
+        "body_pair": [
+          "collision_landing_151",
+          "outside_observed_map"
+        ],
+        "arm_pair": [
+          "visual_gripper_finger1",
+          "outside_observed_map"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      },
+      "native": {
+        "penetrated": true,
+        "first": {
+          "time_s": 4.07,
+          "worst": [
+            -0.00010554111523330411,
+            "collision_landing_168",
+            "d435",
+            "self"
+          ]
+        },
+        "samples": 409,
+        "dt_s": 0.01
+      },
+      "wall_s": 0.04721081699244678
+    }
+  },
+  {
+    "case": "front bend",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "proof": {
+        "accepted": true,
+        "first": null,
+        "samples": 421,
+        "body_min": 0.5083540382076123,
+        "arm_min": 0.6153324852164463,
+        "body_pair": [
+          "collision_landing_151",
+          "outside_observed_map"
+        ],
+        "arm_pair": [
+          "visual_gripper_finger1",
+          "outside_observed_map"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      },
+      "native": {
+        "penetrated": false,
+        "first": null,
+        "samples": 923,
+        "dt_s": 0.01
+      },
+      "wall_s": 0.38055047299712896
+    }
+  },
+  {
+    "case": "front return",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "proof": {
+        "accepted": true,
+        "first": null,
+        "samples": 421,
+        "body_min": 0.5083540382076123,
+        "arm_min": 0.6153324852164463,
+        "body_pair": [
+          "collision_landing_151",
+          "outside_observed_map"
+        ],
+        "arm_pair": [
+          "visual_gripper_finger1",
+          "outside_observed_map"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      },
+      "native": {
+        "penetrated": false,
+        "first": null,
+        "samples": 923,
+        "dt_s": 0.01
+      },
+      "wall_s": 0.34419347999210004
+    }
+  },
+  {
+    "case": "periodic 179 to -179",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "proof": {
+        "accepted": true,
+        "first": null,
+        "samples": 233,
+        "body_min": 0.5083540382076123,
+        "arm_min": 0.6645358228893834,
+        "body_pair": [
+          "collision_landing_151",
+          "outside_observed_map"
+        ],
+        "arm_pair": [
+          "visual_gripper_finger2",
+          "occupied_0"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      },
+      "native": {
+        "penetrated": false,
+        "first": null,
+        "samples": 923,
+        "dt_s": 0.01
+      },
+      "wall_s": 0.19839514199702535
+    }
+  },
+  {
+    "case": "wide gate level route",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "proof": {
+        "accepted": true,
+        "first": null,
+        "samples": 233,
+        "body_min": 0.39831638153313165,
+        "arm_min": 0.39351895014550425,
+        "body_pair": [
+          "collision_landing_151",
+          "occupied_0"
+        ],
+        "arm_pair": [
+          "collision_gripper_finger1",
+          "occupied_1"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      },
+      "native": {
+        "penetrated": false,
+        "first": null,
+        "samples": 923,
+        "dt_s": 0.01
+      },
+      "wall_s": 0.19989160500699654
+    }
+  },
+  {
+    "case": "low route skid contact",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "proof": {
+        "accepted": false,
+        "first": {
+          "index": 0,
+          "time_s": 0.0,
+          "state": [
+            -0.48,
+            0.0,
+            0.8,
+            0.0,
+            2.059488517353309,
+            3.141592653589793
+          ],
+          "body": 0.13835403285397976,
+          "arm": 0.05046415217441433,
+          "raw_body": 0.279989706473543,
+          "raw_arm": 0.15419360455396464,
+          "body_pair": [
+            "collision_landing_151",
+            "occupied_1"
+          ],
+          "arm_pair": [
+            "collision_gripper_finger1",
+            "occupied_1"
+          ],
+          "tilt_reserve_body": 0.14163567361956322,
+          "tilt_reserve_arm": 0.10372945237955031,
+          "reason": "arm_environment",
+          "pair": [
+            "collision_gripper_finger1",
+            "occupied_1"
+          ],
+          "self_contact": null
+        },
+        "samples": 1,
+        "body_min": 0.13835403285397976,
+        "arm_min": 0.05046415217441433,
+        "body_pair": [
+          "collision_landing_151",
+          "occupied_1"
+        ],
+        "arm_pair": [
+          "collision_gripper_finger1",
+          "occupied_1"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      },
+      "native": {
+        "penetrated": true,
+        "first": {
+          "time_s": 2.94,
+          "worst": [
+            -0.0008000055746983925,
+            "sill",
+            "visual_landing_162",
+            "wall"
+          ]
+        },
+        "samples": 296,
+        "dt_s": 0.01
+      },
+      "wall_s": 0.004895482008578256
+    }
+  },
+  {
+    "case": "low route tool contact",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "proof": {
+        "accepted": false,
+        "first": {
+          "index": 26,
+          "time_s": 1.0,
+          "state": [
+            -0.43177469135802476,
+            0.0,
+            0.8800000000000002,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "body": 0.09725471378362507,
+          "arm": 0.1787473636860296,
+          "raw_body": 0.2388903874031883,
+          "raw_arm": 0.30877469135802477,
+          "body_pair": [
+            "collision_landing_151",
+            "occupied_1"
+          ],
+          "arm_pair": [
+            "d435",
+            "occupied_1"
+          ],
+          "tilt_reserve_body": 0.14163567361956322,
+          "tilt_reserve_arm": 0.13002732767199518,
+          "reason": "body_environment",
+          "pair": [
+            "collision_landing_151",
+            "occupied_1"
+          ],
+          "self_contact": null
+        },
+        "samples": 27,
+        "body_min": 0.09725471378362507,
+        "arm_min": 0.1787473636860296,
+        "body_pair": [
+          "collision_landing_151",
+          "occupied_1"
+        ],
+        "arm_pair": [
+          "d435",
+          "occupied_1"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      },
+      "native": {
+        "penetrated": true,
+        "first": {
+          "time_s": 3.58,
+          "worst": [
+            -0.0003000000000000086,
+            "sill",
+            "d435",
+            "wall"
+          ]
+        },
+        "samples": 360,
+        "dt_s": 0.01
+      },
+      "wall_s": 0.019690528002684005
+    }
+  },
+  {
+    "case": "all frozen negative routes contain a physical witness",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {}
+  },
+  {
+    "case": "named skid at gate centre",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "witness": [
+        -0.022085916718353877,
+        "sill",
+        "collision_landing_151",
+        "wall"
+      ]
+    }
+  },
+  {
+    "case": "named tool at gate centre",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "witness": [
+        -0.0872575269100703,
+        "sill",
+        "collision_gripper_finger0",
+        "wall"
+      ]
+    }
+  },
+  {
+    "case": "seed rejects interior hit",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {}
+  },
+  {
+    "case": "seed keeps front bend",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {}
+  },
+  {
+    "case": "short unsafe",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "last_rejection": "blocked_proposal_edge"
+    }
+  },
+  {
+    "case": "short clear",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "last_rejection": "blocked_proposal_edge"
+    }
+  },
+  {
+    "case": "direct qualified",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "reason": "none",
+      "record": {
+        "route": "direct_gap",
+        "transition": {
+          "accepted": true,
+          "first": null,
+          "samples": 26,
+          "body_min": 0.4607807779755368,
+          "arm_min": 0.5169030537216331,
+          "body_pair": [
+            "visual_super_motor",
+            "occupied_3"
+          ],
+          "arm_pair": [
+            "collision_gripper_finger0",
+            "occupied_1"
+          ],
+          "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+          "platform_id": "super_qingyu_metric_candidate_v1",
+          "angular_step_deg": 0.5,
+          "translation_step_m": 0.01,
+          "max_time_step_s": 0.04,
+          "self_gap_m": 0.001,
+          "tilt_bound_rad": 0.2617993877991494
+        },
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46"
+      }
+    }
+  },
+  {
+    "case": "direct boundary mismatch",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "reason": "direct_gate",
+      "record": {}
+    }
+  },
+  {
+    "case": "bridge crosses skid",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "reason": "self_collision",
+      "record": {
+        "accepted": false,
+        "first": {
+          "index": 133,
+          "time_s": 3.7,
+          "state": [
+            -0.8,
+            0.0,
+            1.5,
+            0.0,
+            0.6753650225624145,
+            1.5707963267948966
+          ],
+          "body": 0.5083540382076125,
+          "arm": 0.6208806959788603,
+          "raw_body": 0.6499897118271757,
+          "raw_arm": 0.752212143658687,
+          "body_pair": [
+            "collision_landing_151",
+            "outside_observed_map"
+          ],
+          "arm_pair": [
+            "visual_gripper_finger1",
+            "outside_observed_map"
+          ],
+          "tilt_reserve_body": 0.14163567361956322,
+          "tilt_reserve_arm": 0.1313314476798267,
+          "reason": "self_collision",
+          "pair": [
+            "collision_landing_168",
+            "d435"
+          ],
+          "self_contact": [
+            0.00029476744919809065,
+            "collision_landing_168",
+            "d435"
+          ]
+        },
+        "samples": 134,
+        "body_min": 0.5083540382076125,
+        "arm_min": 0.6153324852164463,
+        "body_pair": [
+          "collision_landing_151",
+          "outside_observed_map"
+        ],
+        "arm_pair": [
+          "visual_gripper_finger1",
+          "outside_observed_map"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      }
+    }
+  },
+  {
+    "case": "bridge clear",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "reason": "none",
+      "record": {
+        "route": "quintic_geometry_only",
+        "transition": {
+          "accepted": true,
+          "first": null,
+          "samples": 359,
+          "body_min": 0.5083540382076125,
+          "arm_min": 0.6153324852164463,
+          "body_pair": [
+            "collision_landing_151",
+            "outside_observed_map"
+          ],
+          "arm_pair": [
+            "visual_gripper_finger1",
+            "outside_observed_map"
+          ],
+          "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+          "platform_id": "super_qingyu_metric_candidate_v1",
+          "angular_step_deg": 0.5,
+          "translation_step_m": 0.01,
+          "max_time_step_s": 0.04,
+          "self_gap_m": 0.001,
+          "tilt_bound_rad": 0.2617993877991494
+        },
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46"
+      }
+    }
+  },
+  {
+    "case": "119 degree command never admitted",
+    "expected": false,
+    "accepted": false,
+    "match": true,
+    "detail": {
+      "status": "command_range_reject"
+    }
+  },
+  {
+    "case": "finer grids retain interior rejection",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "refinement": [
+        {
+          "step_deg": 1.0,
+          "samples": 64,
+          "first_time_s": 4.08,
+          "first_theta_deg": 39.14999999999999,
+          "reason": "self_collision",
+          "pair": [
+            "collision_landing_168",
+            "d435"
+          ],
+          "wall_s": 0.05163092099246569
+        },
+        {
+          "step_deg": 0.5,
+          "samples": 124,
+          "first_time_s": 4.05,
+          "first_theta_deg": 38.8125,
+          "reason": "self_collision",
+          "pair": [
+            "collision_landing_168",
+            "d435"
+          ],
+          "wall_s": 0.07622614499996416
+        },
+        {
+          "step_deg": 0.25,
+          "samples": 246,
+          "first_time_s": 4.035,
+          "first_theta_deg": 38.64375,
+          "reason": "self_collision",
+          "pair": [
+            "collision_landing_168",
+            "d435"
+          ],
+          "wall_s": 0.15314636498806067
+        }
+      ]
+    }
+  },
+  {
+    "case": "wide gate +/-15 degree cardinal attitude probes",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "evaluations": 164,
+      "hits": []
+    }
+  },
+  {
+    "case": "full planner to receiving buffer",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "status": "validated_iteration_limit",
+      "error": null,
+      "elapsed_s": 0.8471096510038478,
+      "stages": [
+        "initial_clearance",
+        "reference_ready",
+        "seed_ready"
+      ],
+      "candidate": {
+        "accepted": true,
+        "native": {
+          "penetrated": false,
+          "first": null,
+          "samples": 906,
+          "dt_s": 0.01
+        },
+        "proof": {
+          "accepted": true,
+          "first": null,
+          "samples": 232,
+          "body_min": 0.39831638153313165,
+          "arm_min": 0.3935271765128983,
+          "body_pair": [
+            "collision_landing_151",
+            "occupied_0"
+          ],
+          "arm_pair": [
+            "collision_gripper_finger1",
+            "occupied_1"
+          ],
+          "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+          "platform_id": "super_qingyu_metric_candidate_v1",
+          "angular_step_deg": 0.5,
+          "translation_step_m": 0.01,
+          "max_time_step_s": 0.04,
+          "self_gap_m": 0.001,
+          "tilt_bound_rad": 0.2617993877991494
+        },
+        "elapsed_s": 0.8471096510038478,
+        "wall_budget_s": 15.0,
+        "samples": 181
+      }
+    }
+  },
+  {
+    "case": "no native penetration among accepted paths",
+    "expected": true,
+    "accepted": true,
+    "match": true,
+    "detail": {
+      "paths": [
+        "front bend",
+        "front return",
+        "periodic 179 to -179",
+        "wide gate level route",
+        "direct qualified",
+        "bridge clear",
+        "end-to-end planner"
+      ],
+      "false_accepts": []
+    }
+  }
+]

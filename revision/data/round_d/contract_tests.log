@@ -1,0 +1,15 @@
+test_allocation_uses_compiled_rotor_lever_arms (__main__.PlatformChecks) ... ok
+test_body_camera_preserves_native_camera_lidar_registration (__main__.PlatformChecks) ... ok
+test_camera_mesh_front_agrees_with_optical_axis (__main__.PlatformChecks) ... ok
+test_disabled_actuator_does_not_command_neutral_pose (__main__.PlatformChecks) ... ok
+test_free_endpoints_do_not_imply_a_free_bending_transition (__main__.PlatformChecks) ... ok
+test_front_bend_and_periodic_plane_transition_are_clear (__main__.PlatformChecks) ... ok
+test_out_of_order_commands_retain_controls (__main__.PlatformChecks) ... ok
+test_physical_collision_geometries_present (__main__.PlatformChecks) ... ok
+test_single_section_units_wrap_and_limits (__main__.PlatformChecks) ... ok
+test_visual_backbone_matches_installed_rviz_primitives (__main__.PlatformChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.075s
+
+OK

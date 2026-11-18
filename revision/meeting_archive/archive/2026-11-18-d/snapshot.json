@@ -1,0 +1,190 @@
+{
+  "cover": "sweep.png",
+  "files": [
+    {
+      "bytes": 157671,
+      "caption": "追踪同一段臂体和起落架支撑件。0°、60°、90° 的间距分别为 +106.0、−12.6、+39.9 mm。红圈标出 60° 时的接触位置。",
+      "file": "sweep.png",
+      "kind": "image",
+      "sha256": "2e9b7f120ce0c92ca66d4ecd0988dcf14aa24d8258630e4902f2e8cd51df10d8",
+      "title": "同一弯曲平面上的三个姿态"
+    },
+    {
+      "bytes": 197353,
+      "caption": "三幅图共用尺度。正常高度的规划轨迹通过门洞。两条指定低空路线分别让起落架和夹指进入下门槛 22.1 mm 和 87.3 mm。",
+      "file": "gate.png",
+      "kind": "image",
+      "sha256": "04a219a4b887b4644c7bda4c7488f3bf84eac7d1a9c27eb1b5b942c873650ee7",
+      "title": "同一门槛上的三条候选路线"
+    },
+    {
+      "bytes": 153622,
+      "caption": "在同一坐标系内显示 SUPER 机架、长起落架和 Qingyu 臂，以及用于检查的碰撞体。",
+      "file": "overlay.png",
+      "kind": "image",
+      "sha256": "12cdbdcb5dee2b68806a2d6c90f7edae6d0f8d14647b4866779a9a7ca72bcf09",
+      "title": "模型与碰撞体的侧视、俯视叠加"
+    },
+    {
+      "bytes": 78506,
+      "caption": "曲线固定追踪臂段 arm7 和起落架支撑 168。低于零的位置表示该对部件发生穿透。逐角原始值见 CSV。",
+      "file": "gap.png",
+      "kind": "curve",
+      "sha256": "0155ecad9f79e4beb92f6196c3c1e41fd797665cfa2912224f1abcc2b5b78c53",
+      "title": "从直臂到 90° 的有符号间距"
+    },
+    {
+      "bytes": 144868,
+      "caption": "摄像机和机身固定。按 1° 步长回放模型姿态，彩圈标出所追踪部件的接触。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "poster.png",
+      "sha256": "d1f5db0f92f833124cc560154ca92fc5129475ad9bbf2a7b874c9c46e4af58d3",
+      "title": "几何回放 · 从直臂弯至 90°"
+    },
+    {
+      "bytes": 125404,
+      "caption": "视频中的实际帧。",
+      "file": "poster.png",
+      "kind": "poster",
+      "sha256": "86eed5066b3182e917063a1f626c21e147eb06b14b40d6e0d9464584a3a48fab",
+      "title": "几何回放封面"
+    },
+    {
+      "bytes": 602560,
+      "caption": "从本轮完整论文抽取的原页。图 10 解释中途自碰，图 11 对比可通轨迹与两种触碰下门槛的姿态。",
+      "file": "paper.pdf",
+      "kind": "document",
+      "sha256": "6d4d64dabd0b8d917ab522093f8292a7355e6a01ffc9bb52533fa954b5b23238",
+      "title": "论文附录 B · 第 16 页"
+    },
+    {
+      "bytes": 270771,
+      "caption": "保留原始模型图像、矢量坐标轴和接触标注。",
+      "file": "gate.pdf",
+      "kind": "document",
+      "sha256": "684cc7f3a3882623c9ac017d2520a1e596d61561fc5faf38f38e80f033d2775a",
+      "title": "门槛对照图 PDF"
+    },
+    {
+      "bytes": 217357,
+      "caption": "可直接用于报告；纵轴单位为毫米。",
+      "file": "gap.pdf",
+      "kind": "document",
+      "sha256": "c2c069988de6692f11024ff41384375cda148c09417ca8fdd392bee88c508f43",
+      "title": "有符号间距曲线 PDF"
+    },
+    {
+      "bytes": 2727,
+      "caption": "期望、实际、首个失败样本及相关净空。布尔列表示对应测试条件是否成立。",
+      "file": "cases.csv",
+      "kind": "data",
+      "sha256": "07444dff57562c2e32d9d639100788879ccda3fb9e84fb25750e6c953bccc912",
+      "title": "34 项验收表 CSV"
+    },
+    {
+      "bytes": 23857,
+      "caption": "包含种子、短连接、门框、自碰、直接接管、五次桥接、缓冲替换和超时用例。",
+      "file": "cases.json",
+      "kind": "data",
+      "sha256": "f014be4d422ab93bb39c1ccd782e91da32b2ffa9e8428ac793a98aad13ac342b",
+      "title": "各用例的判据、部件对和耗时"
+    },
+    {
+      "bytes": 4864,
+      "caption": "弯曲角、指定部件的有符号距离、任意部件穿透标志；共 181 个姿态。",
+      "file": "sweep.csv",
+      "kind": "data",
+      "sha256": "5c885731107e323093a2578c03986932381a5598285ad35e92102369780cb250",
+      "title": "逐角形态扫掠 CSV"
+    },
+    {
+      "bytes": 735,
+      "caption": "保存的穿透分类、原生碰撞引擎分类和 1 mm 自碰裕度判定。",
+      "file": "grid.csv",
+      "kind": "data",
+      "sha256": "03f4a944bdd4a30537728ffe12968dd74bdc0fbdf27649dcc2a96bbd6902a761",
+      "title": "48 个历史姿态的逐项核对"
+    },
+    {
+      "bytes": 31821,
+      "caption": "记录规划时间、位置、偏航和两维弯曲状态。该表是候选轨迹。",
+      "file": "plan.csv",
+      "kind": "data",
+      "sha256": "005ecdffa2cda178e4c98d2f425ca5f01b2d3635278ce11d270ba178064d0ca8",
+      "title": "获准候选的时序状态 CSV"
+    },
+    {
+      "bytes": 3668,
+      "caption": "包含源代码提交、输入哈希、门框尺寸和地图分辨率。",
+      "file": "config.json",
+      "kind": "data",
+      "sha256": "38bca883aeff60e78f2a8f575827cf5e6f01663e46c51e3d4d882ffee59f2007",
+      "title": "模型、地图、采样和裕度参数"
+    },
+    {
+      "bytes": 518161,
+      "caption": "确定的已观测栅格及障碍占据，可按同一参数复算。",
+      "file": "known-map.npz",
+      "kind": "data",
+      "sha256": "f152d113ca5edcb97ee4f492e3b307f83cdf923f091b32788733f187a13f7f73",
+      "title": "单门占据栅格 NPZ"
+    },
+    {
+      "bytes": 4111,
+      "caption": "含终止原因、耗时及候选验证指标。",
+      "file": "planner.json",
+      "kind": "data",
+      "sha256": "dcfb21bf9de151e4fad46fb71a16b9557fcd9000376c183461e15d13b4f68409",
+      "title": "优化器与最终验证记录"
+    },
+    {
+      "bytes": 3334,
+      "caption": "给出获准候选的裕度、接收结果和独立采样数量。",
+      "file": "receiver.json",
+      "kind": "data",
+      "sha256": "bf99efc661365a8e482e6b370f06828e612066c98bd9d9095026e34036ac594e",
+      "title": "接收缓冲与原生接触复核"
+    },
+    {
+      "bytes": 1418,
+      "caption": "汇总 34 项检查、7 个获准案例、48 个静态姿态和不同步长下的首次触发位置。",
+      "file": "summary.json",
+      "kind": "data",
+      "sha256": "1d704dcf2d985ff3533709fddf6225682cf5d70b52785e3afe554521cd3b3619",
+      "title": "本轮结果与采样加密试验"
+    },
+    {
+      "bytes": 3153,
+      "caption": "保留本轮每项判断与规划阶段。",
+      "file": "run.txt",
+      "kind": "data",
+      "sha256": "81cbb944358d7ee30f9b71682a8aec5ffd0c6bc73eee5ce92658df44d2b6da50",
+      "title": "正式运行日志"
+    }
+  ],
+  "guide": [
+    "先看三帧或播放几何回放。沿 90° 平面弯臂，两个端点都有间距，中间的臂段却会碰到起落架。",
+    "再看单门侧视，比较正常通过、起落架触碰、夹指触碰三个姿态。净空可在各用例的 JSON 中追溯。",
+    "组会可直接打开论文第 16 页；离线包包含图、视频、数据和该页 PDF。"
+  ],
+  "id": "2026-11-18-d",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "a65d2dec2516a46b8acac7180a898b754f83bfff41fd0ffe9bfbe32135bff631"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "2003d3385ac129992804bd7e2c5816f690ec511a09f277de9dad6995590b35b3"
+    }
+  },
+  "revision": "8ec3c367557febcafa1f17321ca2df6546e4c154",
+  "schema": 1,
+  "scope": "本轮采用已知地图和按轨迹设置的模型姿态。几何回放与 10 ms 间隔的接触复核评估采样点上的碰撞；飞行动力学与传感器闭环属于后续阶段。",
+  "source_note": "源代码、验收脚本与模型库版本见下方配置文件。计时来自 NUC 的正式复跑。",
+  "stage": "D · 整机几何与规划接收",
+  "summary": "把 SUPER 机架、长起落架和 Qingyu 臂接入规划与接收检查。34 项检查符合预期；正常高度的候选通过，两条触及门槛的低空路线和一条中途自碰的弯臂动作被拒绝。",
+  "title": "弯臂会碰到哪里，哪条轨迹能通过单门",
+  "when": "2026-11-18T15:27:15+08:00"
+}

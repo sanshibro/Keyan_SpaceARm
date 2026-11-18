@@ -1,0 +1,47 @@
+GRID: saved/independent penetrations, 1 mm rejects [18, 18, 18]
+CASE 48 archived penetration labels True expected True
+CASE voxel union matches all cell centres True expected True
+CASE self sweep phi90 False expected False
+CASE front bend True expected True
+CASE front return True expected True
+CASE periodic 179 to -179 True expected True
+CASE wide gate level route True expected True
+CASE low route skid contact False expected False
+CASE low route tool contact False expected False
+CASE all frozen negative routes contain a physical witness True expected True
+CASE named skid at gate centre True expected True
+CASE named tool at gate centre True expected True
+CASE seed rejects interior hit False expected False
+CASE seed keeps front bend True expected True
+CASE short unsafe False expected False
+CASE short clear True expected True
+CASE direct qualified True expected True
+CASE direct boundary mismatch False expected False
+CASE bridge crosses skid False expected False
+CASE bridge clear True expected True
+CASE 119 degree command never admitted False expected False
+CASE finer grids retain interior rejection True expected True
+CASE wide gate +/-15 degree cardinal attitude probes True expected True
+PLANNER initial_clearance
+PLANNER reference_ready
+PLANNER seed_ready
+Traceback (most recent call last):
+  File "revision/scripts/round_d_acceptance.py", line 160, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--out',required=True,type=Path);main(p.parse_args().out)
+  File "revision/scripts/round_d_acceptance.py", line 148, in main
+    dump(out/'planner_run.json',info);full=None
+  File "revision/scripts/round_d_acceptance.py", line 23, in dump
+    p.write_text(json.dumps(x,ensure_ascii=False,indent=2,default=cast,allow_nan=False)+'\n')
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.8/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.8/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/usr/lib/python3.8/json/encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: -inf

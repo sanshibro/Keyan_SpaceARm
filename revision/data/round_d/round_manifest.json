@@ -1,0 +1,52 @@
+{
+  "platform": "SUPER airframe, candidate long landing-gear assembly and 0.28 m Qingyu arm",
+  "source_commit": "8ec3c367557febcafa1f17321ca2df6546e4c154",
+  "accepted_run": "accepted/",
+  "scope": "Kinematic qualification on one known occupancy map. The archive contains model poses and planned paths.",
+  "commands": [
+    "python3 revision/scripts/round_d_acceptance.py --out <new-output-directory>",
+    "python3 revision/scripts/round_d_gate_views.py --run <new-output-directory> --out <figure-directory>",
+    "python3 revision/scripts/round_d_views.py"
+  ],
+  "environment": {
+    "python": "3.8 on the NUC",
+    "mujoco": "3.2.3",
+    "renderer": "EGL",
+    "threads": "One OpenBLAS and OpenMP thread for timed runs",
+    "pythonpath": "MuJoCo dependencies, mujoco_closed_loop, and the catkin planning package's src directory"
+  },
+  "shape_sweep": {
+    "tracked_pair": [
+      "arm7",
+      "collision_landing_168"
+    ],
+    "plane_deg": 90,
+    "angle_step_deg": 0.5,
+    "units": "mm",
+    "pose_time": "prescribed; no flight integration"
+  },
+  "gate_sections": {
+    "accepted_source": "state nearest x=0 in accepted/planned_states.csv",
+    "negative_source": "prescribed z=0.80 m at theta=118 deg, phi=180 deg and z=0.88 m at theta=0 deg; both at x=y=0",
+    "signed_contact_depth": "native independent door model at the named pose",
+    "reported_clearance": "conservative lower bound after attitude allowance; mission tracking reserve is a decision threshold"
+  },
+  "evidence": {
+    "regression_cases": "accepted/cases.csv",
+    "detailed_witnesses": "accepted/cases.json",
+    "planner": "accepted/planner_run.json",
+    "receiver": "accepted/receiver.json",
+    "configuration_and_hashes": "accepted/config.json",
+    "trial_summary": "accepted/summary.json",
+    "historical_poses": "accepted/grid.csv",
+    "run_log": "accepted.log",
+    "legacy_tests": [
+      "core_tests.log",
+      "contract_tests.log",
+      "guard_tests.log"
+    ]
+  },
+  "development_runs": "Intermediate outputs stay in development/. Pass01 recorded a JSON serialization failure on a solver diagnostic sentinel. Pass02–04 exercised the corrections and new regression cases. The formal evidence is accepted/ at the pinned code revision.",
+  "paper": "paper/round_d_geometry.tex in the paper/ tree (Appendix B, Figs. 10–11)",
+  "meeting_archive": "revision/meeting_archive/archive/2026-11-18-d/"
+}

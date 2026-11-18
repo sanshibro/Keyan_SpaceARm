@@ -1,0 +1,136 @@
+{
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+  "resolution_m": 0.05,
+  "gate_boxes": [
+    [
+      "sill",
+      [
+        -0.05,
+        -1.5,
+        0
+      ],
+      [
+        0.05,
+        1.5,
+        0.45
+      ]
+    ],
+    [
+      "lintel",
+      [
+        -0.05,
+        -1.5,
+        2.25
+      ],
+      [
+        0.05,
+        1.5,
+        2.75
+      ]
+    ],
+    [
+      "jamb_negative",
+      [
+        -0.05,
+        -1.5,
+        0.45
+      ],
+      [
+        0.05,
+        -0.7,
+        2.25
+      ]
+    ],
+    [
+      "jamb_positive",
+      [
+        -0.05,
+        0.7,
+        0.45
+      ],
+      [
+        0.05,
+        1.5,
+        2.25
+      ]
+    ]
+  ],
+  "compiled_map_boxes": [
+    {
+      "name": "occupied_0",
+      "center": [
+        0.0,
+        -1.1,
+        1.375
+      ],
+      "half": [
+        0.05,
+        0.39999999999999997,
+        1.375
+      ]
+    },
+    {
+      "name": "occupied_1",
+      "center": [
+        0.0,
+        0.39999999999999997,
+        0.225
+      ],
+      "half": [
+        0.05,
+        1.1,
+        0.225
+      ]
+    },
+    {
+      "name": "occupied_2",
+      "center": [
+        0.0,
+        0.39999999999999997,
+        2.5
+      ],
+      "half": [
+        0.05,
+        1.1,
+        0.25
+      ]
+    },
+    {
+      "name": "occupied_3",
+      "center": [
+        0.0,
+        1.1,
+        1.35
+      ],
+      "half": [
+        0.05,
+        0.39999999999999997,
+        0.9
+      ]
+    }
+  ],
+  "observed": 211200,
+  "occupied": 4584,
+  "yaw_only_tilt_bound_deg": 14.999999999999998,
+  "body_margin_m": 0.1,
+  "arm_margin_m": 0.07,
+  "self_margin_m": 0.001,
+  "model_height_m": 0.4944768405670025,
+  "body_center_z_m": -0.12679146239902622,
+  "external_geom_count": 372,
+  "compiled_contact_model": "C2 CAviz + registered physical proxies",
+  "candidate_cap_deg": 118,
+  "hard_integrated_cap_deg": 120,
+  "flight": false,
+  "repo_commit": "47d14ef2f2cf1fed80b4bfb42ad87dd92b39658b",
+  "mujoco": "3.2.3",
+  "python": "3.8.10",
+  "seed": 0,
+  "input_hashes": {
+    "revision/data/super_geometry_audit.json": "764b7f64a4a228175ca1b06f1428f1b17c2d5905f91d302eb1e8831a5f3da31d",
+    "revision/data/super_metric_geometry.json": "00cf838376d8375a6cd49876cf04373f93c71d34c8acfdf0bc53bb94f8fc80bd",
+    "revision/data/custom_landing_geometry.json": "26ce885f3b4c5f229d866052b377ad0aa656687f3f4691e8dd450d852bad1159",
+    "revision/data/body_camera_registration.json": "b7f899d2f7dc5d1bf0012e08256ee8b4abc925e7fcf77bf7df2c44d3d69a41b1"
+  }
+}

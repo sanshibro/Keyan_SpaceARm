@@ -1,0 +1,30 @@
+\onecolumn
+\section{Whole-Body Geometry at Trajectory Handoff}
+\label{app:wholebodygeometry}
+
+The SUPER airframe and the $0.28$\,m Qingyu arm share space with the landing gear during bending. We tested whether a planner using this candidate assembly could retain a clear crossing and reject an unsafe transition before replacing its active trajectory. All poses in this appendix come from forward kinematics on a known $50$\,mm voxel map.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.85\linewidth]{round_d_model_sweep.pdf}
+\caption{A transition with clear endpoints. At a fixed bending-plane angle of $90^\circ$, the signed distance from the distal arm segment to the same landing support is $+106.0$, $-12.6$, and $+39.9$\,mm at the three poses. The ring marks their contact at $60^\circ$. A different pair, the distal camera and the landing support, first enters the $1$\,mm self-clearance margin near $39^\circ$.}
+\label{fig:rounddcollision}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.74\linewidth]{round_d_gate_candidates.pdf}
+\caption{Candidate states at a common gate section. The hatched region is the lower sill at $z=0.45$\,m. (a) The accepted trajectory is shown near the gate centre. (b,c) Two prescribed lower routes place a landing skid and a gripper finger inside the sill. Labels give signed contact depths reported by the native collision engine at the gate centre. All three panels use the same metric scale.}
+\label{fig:rounddgate}
+\end{figure}
+
+\noindent\begin{minipage}[t]{.48\linewidth}
+\textit{Planning and acceptance.}
+The seed and refinement stages use component bounds. A separate instance checks the candidate spline, the direct transition or quintic bridge, and the successor at handoff. External clearances include a $15^\circ$ tilt allowance. Body and arm margins are $100$ and $70$\,mm, respectively. The mission receiver adds $30$\,mm to both. Commands are limited to $118^\circ$.
+\end{minipage}\hfill
+\begin{minipage}[t]{.48\linewidth}
+\textit{Observed outcomes.}
+The crossing in Fig.~\ref{fig:rounddgate}(a) took $0.85$\,s to plan within a $15$\,s budget. Its minimum tilt-adjusted body and arm clearances were $398$ and $394$\,mm. The receiver retained that trajectory when offered the transition in Fig.~\ref{fig:rounddcollision}. A separately constructed gate and native contact queries at $10$\,ms intervals found zero penetrations across seven accepted cases. This test evaluates sampled trajectories on the fixed map.
+\end{minipage}
+
+\twocolumn

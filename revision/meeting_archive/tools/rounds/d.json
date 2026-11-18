@@ -1,0 +1,140 @@
+{
+  "schema": 1,
+  "id": "2026-11-18-d",
+  "stage": "D · 整机几何与规划接收",
+  "title": "弯臂会碰到哪里，哪条轨迹能通过单门",
+  "when": "2026-11-18T15:27:15+08:00",
+  "summary": "把 SUPER 机架、长起落架和 Qingyu 臂接入规划与接收检查。34 项检查符合预期；正常高度的候选通过，两条触及门槛的低空路线和一条中途自碰的弯臂动作被拒绝。",
+  "guide": [
+    "先看三帧或播放几何回放。沿 90° 平面弯臂，两个端点都有间距，中间的臂段却会碰到起落架。",
+    "再看单门侧视，比较正常通过、起落架触碰、夹指触碰三个姿态。净空可在各用例的 JSON 中追溯。",
+    "组会可直接打开论文第 16 页；离线包包含图、视频、数据和该页 PDF。"
+  ],
+  "scope": "本轮采用已知地图和按轨迹设置的模型姿态。几何回放与 10 ms 间隔的接触复核评估采样点上的碰撞；飞行动力学与传感器闭环属于后续阶段。",
+  "revision": "8ec3c367557febcafa1f17321ca2df6546e4c154",
+  "source_note": "源代码、验收脚本与模型库版本见下方配置文件。计时来自 NUC 的正式复跑。",
+  "cover": "sweep.png",
+  "files": [
+    {
+      "kind": "image",
+      "file": "sweep.png",
+      "title": "同一弯曲平面上的三个姿态",
+      "caption": "追踪同一段臂体和起落架支撑件。0°、60°、90° 的间距分别为 +106.0、−12.6、+39.9 mm。红圈标出 60° 时的接触位置。"
+    },
+    {
+      "kind": "image",
+      "file": "gate.png",
+      "title": "同一门槛上的三条候选路线",
+      "caption": "三幅图共用尺度。正常高度的规划轨迹通过门洞。两条指定低空路线分别让起落架和夹指进入下门槛 22.1 mm 和 87.3 mm。"
+    },
+    {
+      "kind": "image",
+      "file": "overlay.png",
+      "title": "模型与碰撞体的侧视、俯视叠加",
+      "caption": "在同一坐标系内显示 SUPER 机架、长起落架和 Qingyu 臂，以及用于检查的碰撞体。"
+    },
+    {
+      "kind": "curve",
+      "file": "gap.png",
+      "title": "从直臂到 90° 的有符号间距",
+      "caption": "曲线固定追踪臂段 arm7 和起落架支撑 168。低于零的位置表示该对部件发生穿透。逐角原始值见 CSV。"
+    },
+    {
+      "kind": "video",
+      "file": "replay.mp4",
+      "title": "几何回放 · 从直臂弯至 90°",
+      "caption": "摄像机和机身固定。按 1° 步长回放模型姿态，彩圈标出所追踪部件的接触。",
+      "poster": "poster.png"
+    },
+    {
+      "kind": "poster",
+      "file": "poster.png",
+      "title": "几何回放封面",
+      "caption": "视频中的实际帧。"
+    },
+    {
+      "kind": "document",
+      "file": "paper.pdf",
+      "title": "论文附录 B · 第 16 页",
+      "caption": "从本轮完整论文抽取的原页。图 10 解释中途自碰，图 11 对比可通轨迹与两种触碰下门槛的姿态。"
+    },
+    {
+      "kind": "document",
+      "file": "gate.pdf",
+      "title": "门槛对照图 PDF",
+      "caption": "保留原始模型图像、矢量坐标轴和接触标注。"
+    },
+    {
+      "kind": "document",
+      "file": "gap.pdf",
+      "title": "有符号间距曲线 PDF",
+      "caption": "可直接用于报告；纵轴单位为毫米。"
+    },
+    {
+      "kind": "data",
+      "file": "cases.csv",
+      "title": "34 项验收表 CSV",
+      "caption": "期望、实际、首个失败样本及相关净空。布尔列表示对应测试条件是否成立。"
+    },
+    {
+      "kind": "data",
+      "file": "cases.json",
+      "title": "各用例的判据、部件对和耗时",
+      "caption": "包含种子、短连接、门框、自碰、直接接管、五次桥接、缓冲替换和超时用例。"
+    },
+    {
+      "kind": "data",
+      "file": "sweep.csv",
+      "title": "逐角形态扫掠 CSV",
+      "caption": "弯曲角、指定部件的有符号距离、任意部件穿透标志；共 181 个姿态。"
+    },
+    {
+      "kind": "data",
+      "file": "grid.csv",
+      "title": "48 个历史姿态的逐项核对",
+      "caption": "保存的穿透分类、原生碰撞引擎分类和 1 mm 自碰裕度判定。"
+    },
+    {
+      "kind": "data",
+      "file": "plan.csv",
+      "title": "获准候选的时序状态 CSV",
+      "caption": "记录规划时间、位置、偏航和两维弯曲状态。该表是候选轨迹。"
+    },
+    {
+      "kind": "data",
+      "file": "config.json",
+      "title": "模型、地图、采样和裕度参数",
+      "caption": "包含源代码提交、输入哈希、门框尺寸和地图分辨率。"
+    },
+    {
+      "kind": "data",
+      "file": "known-map.npz",
+      "title": "单门占据栅格 NPZ",
+      "caption": "确定的已观测栅格及障碍占据，可按同一参数复算。"
+    },
+    {
+      "kind": "data",
+      "file": "planner.json",
+      "title": "优化器与最终验证记录",
+      "caption": "含终止原因、耗时及候选验证指标。"
+    },
+    {
+      "kind": "data",
+      "file": "receiver.json",
+      "title": "接收缓冲与原生接触复核",
+      "caption": "给出获准候选的裕度、接收结果和独立采样数量。"
+    },
+    {
+      "kind": "data",
+      "file": "summary.json",
+      "title": "本轮结果与采样加密试验",
+      "caption": "汇总 34 项检查、7 个获准案例、48 个静态姿态和不同步长下的首次触发位置。"
+    },
+    {
+      "kind": "data",
+      "file": "run.txt",
+      "title": "正式运行日志",
+      "caption": "保留本轮每项判断与规划阶段。"
+    }
+  ]
+}

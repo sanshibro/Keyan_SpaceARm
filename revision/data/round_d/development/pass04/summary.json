@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "cases": 34,
+  "failures": [],
+  "independent_accepted_paths": 7,
+  "false_accepts": [],
+  "archived_grid_penetrations": 18,
+  "native_grid_penetrations": 18,
+  "new_grid_1mm_rejections": 18,
+  "planner_status": "validated_iteration_limit",
+  "planner_wall_s": 0.8636900830024388,
+  "planner_budget_s": 15.0,
+  "geometry_handoff_only": true,
+  "flight_commands_sent": 0,
+  "wall_total_s": 10.658924389004824,
+  "refinement": [
+    {
+      "step_deg": 1.0,
+      "samples": 64,
+      "first_time_s": 4.08,
+      "first_theta_deg": 39.14999999999999,
+      "reason": "self_collision",
+      "pair": [
+        "collision_landing_168",
+        "d435"
+      ],
+      "wall_s": 0.0501403649977874
+    },
+    {
+      "step_deg": 0.5,
+      "samples": 124,
+      "first_time_s": 4.05,
+      "first_theta_deg": 38.8125,
+      "reason": "self_collision",
+      "pair": [
+        "collision_landing_168",
+        "d435"
+      ],
+      "wall_s": 0.08268495500669815
+    },
+    {
+      "step_deg": 0.25,
+      "samples": 246,
+      "first_time_s": 4.035,
+      "first_theta_deg": 38.64375,
+      "reason": "self_collision",
+      "pair": [
+        "collision_landing_168",
+        "d435"
+      ],
+      "wall_s": 0.16386398099712096
+    }
+  ],
+  "proposal_calls": {
+    "search": 751,
+    "final": 0,
+    "seed_edges": 18
+  },
+  "final_calls": {
+    "search": 0,
+    "final": 3239,
+    "seed_edges": 0
+  }
+}

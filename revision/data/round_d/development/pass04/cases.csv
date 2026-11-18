@@ -1,0 +1,35 @@
+case,expected_condition,observed_condition,matched,failure_reason,first_time_s,first_pair,body_clearance_m,arm_clearance_m,native_penetration,wall_s
+48 archived penetration labels,True,True,True,,,,,,,
+voxel union matches all cell centres,True,True,True,,,,,,,
+unobserved interior cell becomes solid,True,True,True,,,,,,,
+aligned skid to sill support planes,True,True,True,,,,,,,
+positive separation can fail the reserved margin,True,True,True,arm_environment,,,,,,
+production validator rejects interior collision,False,False,True,self_collision,,,,,,
+fully constrained nearby terminal rejected,True,True,True,,,,,,,
+self sweep phi90,False,False,True,self_collision,4.04,collision_landing_168/d435,0.5083540382076123,0.6153324852164463,True,0.04890128300758079
+front bend,True,True,True,,,,0.5083540382076123,0.6153324852164463,False,0.3680791559891077
+front return,True,True,True,,,,0.5083540382076123,0.6153324852164463,False,0.33912002001306973
+periodic 179 to -179,True,True,True,,,,0.5083540382076123,0.6645358228893834,False,0.19761441298760474
+wide gate level route,True,True,True,,,,0.39831638153313165,0.39351895014550425,False,0.18486398700042628
+low route skid contact,False,False,True,arm_environment,0.0,collision_gripper_finger1/occupied_1,0.13835403285397976,0.05046415217441433,True,0.004932323994580656
+low route tool contact,False,False,True,body_environment,1.0,collision_landing_151/occupied_1,0.09725471378362507,0.1787473636860296,True,0.017337518991553225
+all frozen negative routes contain a physical witness,True,True,True,,,,,,,
+named skid at gate centre,True,True,True,,,,,,,
+named tool at gate centre,True,True,True,,,,,,,
+seed rejects interior hit,False,False,True,,,,,,,
+seed keeps front bend,True,True,True,,,,,,,
+short unsafe,False,False,True,,,,,,,
+short clear,True,True,True,,,,,,,
+direct qualified,True,True,True,none,,,,,,
+direct boundary mismatch,False,False,True,direct_gate,,,,,,
+bridge crosses skid,False,False,True,self_collision,,,,,,
+bridge clear,True,True,True,none,,,,,,
+straight-arm plane is unobservable at handoff,True,True,True,,,,,,,
+expired planning budget holds the buffer,True,True,True,TimeoutError: SUPER geometry budget exhausted before acceptance,,,,,,
+quintic start acceleration mismatch,True,True,True,,,,,,,
+119 degree command never admitted,False,False,True,,,,,,,
+finer grids retain interior rejection,True,True,True,,,,,,,
+wide gate +/-15 degree cardinal attitude probes,True,True,True,,,,,,,
+buffer rejects unsafe replacement and retains accepted candidate,True,True,True,self_collision,,,,,,
+full planner to receiving buffer,True,True,True,,,,,,,0.8636900830024388
+no native penetration among accepted paths,True,True,True,,,,,,,

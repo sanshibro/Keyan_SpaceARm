@@ -1,0 +1,140 @@
+{
+  "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+  "profile_arm_length": 0.28,
+  "unknown_is_occupied": true,
+  "initial_clearance": {
+    "body": 0.46075750883977645,
+    "arm": 0.5169030537216331
+  },
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "reference_candidate_observed_voxels": 94760,
+  "full_observed_voxels": 211200,
+  "heading_reference": "hold_initial",
+  "reference": {
+    "search": "certified_continuous_body_bridge",
+    "expanded": 0,
+    "terminal_reached": true,
+    "certified_terminal_shortcut": true
+  },
+  "reference_states": [
+    [
+      -0.48,
+      0.0,
+      1.5,
+      0.0,
+      0.0,
+      3.141592653589793
+    ],
+    [
+      0.48,
+      0.0,
+      1.5,
+      0.0,
+      0.0,
+      3.141592653589793
+    ]
+  ],
+  "seed": {
+    "seed_cost": 0.13165714285714283,
+    "expanded": 7,
+    "raw_risk_knots": [],
+    "control_body_clearance_min": 0.39831638153313165,
+    "control_arm_clearance_min": 0.39351798219462303,
+    "control_theta_max_deg": 0.0,
+    "control_z_max": 1.5,
+    "edge_body_clearance_min": 0.39831638153313165,
+    "edge_arm_clearance_min": 0.39351798219462303,
+    "unsafe_edges": [],
+    "shape_mode": "theta_only_fixed_phi",
+    "fixed_phi_deg": 180.0,
+    "fixed_phi_screen_slack": "-infinity",
+    "terminal_shape": [
+      0.0,
+      3.141592653589793
+    ]
+  },
+  "status": "validated_iteration_limit",
+  "success": true,
+  "elapsed": 0.8470894080091966,
+  "optimizer": {
+    "solver_message": "None",
+    "backend": "projected_coordinate_pattern_anytime",
+    "seed": {
+      "seed_cost": 0.13165714285714283,
+      "expanded": 7,
+      "raw_risk_knots": [],
+      "control_body_clearance_min": 0.39831638153313165,
+      "control_arm_clearance_min": 0.39351798219462303,
+      "control_theta_max_deg": 0.0,
+      "control_z_max": 1.5,
+      "edge_body_clearance_min": 0.39831638153313165,
+      "edge_arm_clearance_min": 0.39351798219462303,
+      "unsafe_edges": [],
+      "shape_mode": "theta_only_fixed_phi",
+      "fixed_phi_deg": 180.0,
+      "fixed_phi_screen_slack": "-infinity",
+      "terminal_shape": [
+        0.0,
+        3.141592653589793
+      ]
+    },
+    "repair": "none",
+    "repair_attempts_run": 0,
+    "repair_attempt_labels": [],
+    "repair_attempt_results": [],
+    "candidate_collocation_min": 0.0,
+    "candidate_validation_skipped": false,
+    "solver_time_budget_s": 0.8,
+    "wall_time_budget_s": 14.821602757991059,
+    "validation_reserve_s": 0.15
+  },
+  "validation": {
+    "feasible": true,
+    "status": "safe",
+    "metrics": {
+      "duration": 8.985714285714291,
+      "validation_samples": 232.0,
+      "body_clearance_min": 0.39831638153313165,
+      "arm_clearance_min": 0.3935271765128963,
+      "com_offset_max": 1.1102230246251565e-16,
+      "gravity_torque_max": 2.450539771103877e-15,
+      "velocity_max": 0.20052014848621103,
+      "acceleration_max": 0.36713518295027747,
+      "jerk_max": 1.1556653068315947,
+      "yaw_rate_max": 0.0,
+      "theta_rate_max": 0.0,
+      "phi_rate_max": 0.0,
+      "tilt_max": 0.03740712779992515,
+      "thrust_ratio_min": 1.0,
+      "thrust_ratio_max": 1.000700054758521,
+      "body_obstacle_min": "collision_landing_151/occupied_0",
+      "arm_obstacle_min": "collision_gripper_finger1/occupied_1",
+      "terminal_tip_error": -1.0,
+      "super_geometry": {
+        "accepted": true,
+        "first": null,
+        "samples": 232,
+        "body_min": 0.39831638153313165,
+        "arm_min": 0.3935271765128963,
+        "body_pair": [
+          "collision_landing_151",
+          "occupied_0"
+        ],
+        "arm_pair": [
+          "collision_gripper_finger1",
+          "occupied_1"
+        ],
+        "map_hash": "e933daca8279db60c25c6553ba334a3427923961621eb41a3c997ededa839f46",
+        "platform_id": "super_qingyu_metric_candidate_v1",
+        "angular_step_deg": 0.5,
+        "translation_step_m": 0.01,
+        "max_time_step_s": 0.04,
+        "self_gap_m": 0.001,
+        "tilt_bound_rad": 0.2617993877991494
+      }
+    },
+    "failure_index": -1,
+    "failure_time": -1.0,
+    "failure_reason": "none"
+  }
+}

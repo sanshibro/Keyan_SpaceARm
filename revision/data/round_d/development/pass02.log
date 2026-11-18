@@ -1,0 +1,35 @@
+GRID: saved/independent penetrations, 1 mm rejects [18, 18, 18]
+CASE 48 archived penetration labels True expected True
+CASE voxel union matches all cell centres True expected True
+CASE unobserved interior cell becomes solid True expected True
+CASE aligned skid to sill support planes True expected True
+CASE positive separation can fail the reserved margin True expected True
+CASE production validator rejects interior collision False expected False
+CASE fully constrained nearby terminal rejected True expected True
+CASE self sweep phi90 False expected False
+CASE front bend True expected True
+CASE front return True expected True
+CASE periodic 179 to -179 True expected True
+CASE wide gate level route True expected True
+CASE low route skid contact False expected False
+CASE low route tool contact False expected False
+CASE all frozen negative routes contain a physical witness True expected True
+CASE named skid at gate centre True expected True
+CASE named tool at gate centre True expected True
+CASE seed rejects interior hit False expected False
+CASE seed keeps front bend True expected True
+CASE short unsafe False expected False
+CASE short clear True expected True
+CASE direct qualified True expected True
+CASE direct boundary mismatch False expected False
+CASE bridge crosses skid False expected False
+CASE bridge clear True expected True
+CASE 119 degree command never admitted False expected False
+CASE finer grids retain interior rejection True expected True
+CASE wide gate +/-15 degree cardinal attitude probes True expected True
+PLANNER initial_clearance
+PLANNER reference_ready
+PLANNER seed_ready
+CASE full planner to receiving buffer True expected True
+CASE no native penetration among accepted paths True expected True
+ROUND_D_COMPLETE {"passed": true, "cases": 30, "failures": [], "independent_accepted_paths": 7, "false_accepts": [], "archived_grid_penetrations": 18, "native_grid_penetrations": 18, "new_grid_1mm_rejections": 18, "planner_status": "validated_iteration_limit", "planner_wall_s": 0.8471096510038478, "planner_budget_s": 15.0, "geometry_handoff_only": true, "flight_commands_sent": 0, "wall_total_s": 8.348039841992431, "refinement": [{"step_deg": 1.0, "samples": 64, "first_time_s": 4.08, "first_theta_deg": 39.14999999999999, "reason": "self_collision", "pair": ["collision_landing_168", "d435"], "wall_s": 0.05163092099246569}, {"step_deg": 0.5, "samples": 124, "first_time_s": 4.05, "first_theta_deg": 38.8125, "reason": "self_collision", "pair": ["collision_landing_168", "d435"], "wall_s": 0.07622614499996416}, {"step_deg": 0.25, "samples": 246, "first_time_s": 4.035, "first_theta_deg": 38.64375, "reason": "self_collision", "pair": ["collision_landing_168", "d435"], "wall_s": 0.15314636498806067}], "proposal_calls": {"search": 751, "final": 0, "seed_edges": 18}, "final_calls": {"search": 0, "final": 3173, "seed_edges": 0}}
