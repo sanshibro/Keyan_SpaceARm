@@ -1,0 +1,57 @@
+{
+  "id": "n08_t0500_k075_d100_m050",
+  "N": 8,
+  "dt_s": 0.0005,
+  "k_scale": 0.75,
+  "d_scale": 1,
+  "load_g": 50,
+  "K_Nm_rad": 7.5,
+  "D_Nms_rad": 0.225,
+  "passive_D_Nms_rad": 0.01875,
+  "torque_limits_Nm": [
+    -4.0,
+    4.0
+  ],
+  "peak_total_deg": 113.81570328174799,
+  "peak_at_s": 7.039000000000001,
+  "peak_torque_Nm": 0.8331489691175165,
+  "over120_steps": 0,
+  "saturated_steps": 0,
+  "native_contact_steps": 0,
+  "contact_pairs": {},
+  "limited_commands": 0,
+  "solver_warnings": 0,
+  "steps": 28000,
+  "finite": true,
+  "whole_inertia_check": {
+    "tool_subtree_kg": 0.25,
+    "whole_mass_kg": 2.3,
+    "added_ballast_kg": 0.05,
+    "ballast_radius_m": 0.015,
+    "tool_local_TCP_m": [
+      0.0,
+      0.0,
+      0.13685756
+    ],
+    "neutral_inertia_kgm2": [
+      [
+        0.06224165201290761,
+        3.5998900258307764e-21,
+        0.0014634837023130428
+      ],
+      [
+        3.5998900258307764e-21,
+        0.06722796523029893,
+        -2.710505431213761e-20
+      ],
+      [
+        0.0014634837023130428,
+        -2.710505431213761e-20,
+        0.01598555867036514
+      ]
+    ],
+    "gravity_torque_residual_Nm": 3.608224830031759e-16
+  },
+  "valid": true,
+  "state_sha256": "5dce6939a9b38eb1f093f02fd858b0e62f78933394d3e8973e24baf66b9f89ef"
+}

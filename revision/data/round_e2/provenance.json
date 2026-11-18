@@ -1,0 +1,8 @@
+{
+  "protocol_hash": "448088f30af120e80d8b374f521fc4ba8d4d4a81804e867027a9ebe52ce9509e",
+  "git": "d1f43b163829c383ce5b2115ca16005a415528c5",
+  "mujoco": "3.2.3",
+  "num_cases": 30,
+  "command": "round_e1_run.command",
+  "factor_scope": "Prescribed engineering perturbations for sensitivity, not measured uncertainty limits, rated payloads, or hardware register settings. Passive joint damping and torque limit are fixed."
+}
