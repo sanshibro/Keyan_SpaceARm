@@ -1,6 +1,6 @@
 {
   "scope": "Windows 桌面登录的 Codex 官方账号共享额度",
-  "updated": "2026-11-18T16:06:06.939778+00:00",
+  "updated": "2026-11-18T16:55:01.240048+00:00",
   "refresh_note": "官方接口在归档时读取；网站每分钟检查最新快照。NUC 第三方余额由其服务商单独计量。",
   "buckets": [
     {
@@ -8,8 +8,8 @@
       "windows": [
         {
           "minutes": 10080,
-          "usedPercent": 34,
-          "remainingPercent": 66,
+          "usedPercent": 35,
+          "remainingPercent": 65,
           "resetsAt": 1795517751
         }
       ]

@@ -1,0 +1,730 @@
+{
+  "static_probe_reaction_Nm": [
+    -0.0,
+    1.9620000000000002,
+    -0.0
+  ],
+  "runs": {
+    "241118-straight": {
+      "log": {
+        "motor_max_abs": 2.9802322387695312e-08,
+        "pose_max_m": 9.980080997729068e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9273414065103878,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 9.996344030316351e-17,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2592
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "5ffd91adece02b41012a30afb9eb0843982b08dec915dabbc533df3acd2bf386",
+        "flight.bag": "7924284d0be04fbde8be5dc5558f2c2861b3236aadbbe48a0776bf86195db0c0",
+        "physics.npz": "96dec27a2a41d05ab3753079ccc2aaeaafa5bcb86dcf79c746f6f2a24eb10aff",
+        "hil.csv": "2025e5061033f06c3741cbee6352610afe44784d64a7da69cd0490a527bf76d2",
+        "events.jsonl": "07aadb1e38fdbb2142a76b672bb800c2c2231543d26adbf46a2fba238eebeed5",
+        "run.json": "a527652221064cb3ed6bc434561bfa70faf230fe673d38837a46f12999a9436f",
+        "provenance.json": "a7e1f075c3d7d05fc993f57e9c6d143c3eb40f015b1085ed9e10269e92098e5e"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        -0.0104889288988868,
+        0.0059984118865935,
+        0.6609456274683558
+      ],
+      "outward_start_vel": [
+        -0.0031323211538115303,
+        0.0037217234875158347,
+        0.0027451288348347693
+      ],
+      "start_pos": [
+        -0.0013516554461105,
+        0.0051560204493491,
+        0.6460737111248029
+      ],
+      "start_vel": [
+        0.00039834173015477353,
+        -0.004283412665336042,
+        -9.428778173052614e-05
+      ],
+      "start_bend_deg": 0.2197281716386399,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241118-nominal": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.974659986866641e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9415620486612598,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 2.842170943040401e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2592
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "4b3e51468663d2e3c9f9ff43836c299f4e9fe675ff8e7b7f5d80be4d8e42bfdc",
+        "flight.bag": "011294f8f69117e05c1d2504218326a2aed8249bdc7bf53f2f7089be717b52af",
+        "physics.npz": "808d9fa6d29d4dfe27608b7088c7217b322723894a2184163d648d45cc3a2c75",
+        "hil.csv": "4af1120098dcda620afa110fed79ed6fca70aeae284487cac0e30d0e51d7f046",
+        "events.jsonl": "0a0b217d2498883dda9e1b32ce7d153fbb0e5ded79d53f31d8867f5bdc878161",
+        "run.json": "e75db6f9aeb70f84953e8c85822a10ebcbf59cb6cff81ef46faeeb59d60bf7b3",
+        "provenance.json": "2a4e5efafbceab12826d2b9d9ead5ef08d606c6f85a3f0bbdb013902447292b8"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        -0.0026339555626406,
+        0.0019682058527201,
+        0.6624239018668798
+      ],
+      "outward_start_vel": [
+        -0.004829338010086339,
+        0.001920479732215376,
+        0.0019425214906717851
+      ],
+      "start_pos": [
+        -0.029831079690095,
+        0.0097436679445528,
+        0.6383758149776297
+      ],
+      "start_vel": [
+        -0.016138159685811938,
+        -0.002086532130542812,
+        0.013681336017599709
+      ],
+      "start_bend_deg": 115.54079135339528,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241118-slow": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.974659986866641e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9406732585268304,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 4.263256414560601e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2592
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "38cc675d5a95f38d2d85cab6a2817912156f1c73cb4e8c7827ba4f03c7c3e282",
+        "flight.bag": "5f52f20ea9e3e33f1ff0004de461730c45e2bad6d0c00f6db0e6437b38dbb728",
+        "physics.npz": "dc29c28080ccbe4bf76cef5997684de5300b429f20717b9979defabb2ab49adf",
+        "hil.csv": "ab148fcdbdd391cb88925aafe4363e54eacfd1c3e8c849d5438e4b25c0ff238f",
+        "events.jsonl": "7e39cdd3a76816fa7ac94c95d565f98d21b4be28e7da77260b0cfbf38de55fb3",
+        "run.json": "b4562d7ebb6253bf5c9dd3d3d7e854f12e5ba7808c986f55ec51f3efeb7c9434",
+        "provenance.json": "eaf1326c07ef78d8d62d2e846dd8af1fc1be45d3e1f1e6a70211f9182c97067c"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        0.0064673728895758,
+        0.0029727122100977,
+        0.6610459779874853
+      ],
+      "outward_start_vel": [
+        -0.002208890373336539,
+        -0.00392440904877169,
+        0.0009148646726590919
+      ],
+      "start_pos": [
+        -0.0317820637943789,
+        0.0086491934362885,
+        0.6360985113743287
+      ],
+      "start_vel": [
+        -0.018096489939068337,
+        0.003517058425336444,
+        0.014698801556009685
+      ],
+      "start_bend_deg": 115.54059745109048,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241118-fastbend": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.974659986866641e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.935784912787468,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 5.684341886080802e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2591
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "86e7eb87c80dad4b3abd72a76f95aa338bc771ad5d0d8bd1ea319864fd7a3b57",
+        "flight.bag": "3b341aad48c1ab0d73db3fbc9b1fd624ceed8c8651b8cb087d5ed671c7e03515",
+        "physics.npz": "31149282b5394edb42001f791fd9c1d251e93ee7109ec0c26697a1cf578923e2",
+        "hil.csv": "d9b93177cd4999e77e1c8facde59982c5413c16d75cc556bbb9439853668c0e4",
+        "events.jsonl": "3cc87e666b5dd0c72c84500100e037a749ffd1666c17e90a3bf408ac0c84a4c4",
+        "run.json": "2769322419e2d470b0b6ed4cf17da1708b66d06ca7bd26322c36af28dcf94f85",
+        "provenance.json": "e5e36e78eafc85ce3f13407dd34caa70eec8112a0fb92757dc7067e92a1f660e"
+      },
+      "source": "41ddd9bce6a822287ad1b526484f650bfacbc938",
+      "outward_start_pos": [
+        -0.0084883678251674,
+        0.0028053052944513,
+        0.6629678452264227
+      ],
+      "outward_start_vel": [
+        -0.004435051990001393,
+        -0.0011000222057169803,
+        0.0023463206467793716
+      ],
+      "start_pos": [
+        -0.0653365832081039,
+        0.0065864905924223,
+        0.6677375675668533
+      ],
+      "start_vel": [
+        -0.0038792304865824727,
+        0.00429811953750135,
+        0.008036748988522071
+      ],
+      "start_bend_deg": 115.5412155684482,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241119-straight": {
+      "log": {
+        "motor_max_abs": 2.9802322387695312e-08,
+        "pose_max_m": 9.996344030316351e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9592267525830463,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1801,
+        "bag_max_residual": 9.996344030316351e-17,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2590
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "45e15c185673f6c03439e7c41b2bcf0080eeb90c683cd0539830606f06228c9f",
+        "flight.bag": "dc1e54655c3a7afeb2f437aa4a72b0dacb81d4d70b14d24f113da895a1f4f453",
+        "physics.npz": "e2655a7204d54cc1c97998c917916c09a19b8ed626dc775a276834707fd51e7d",
+        "hil.csv": "4dc1e40477085fa85588a0fa3f688879cb68d8d7c650be4aa20231875a145fc9",
+        "events.jsonl": "c0e76840372d95801f22e0929ae6281c70e50093f3817dda857ae04d1123fd33",
+        "run.json": "51f6750ad438cf2749d0c966c50e2db643470c9febee8a4a1b31689a166116c4",
+        "provenance.json": "584fee9b3bbdcc6a21f288ec4449170e4bd6e2d192842cd74b8c150f5c096952"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        -0.0065946252822931,
+        -0.008046923580421,
+        0.6487528537332059
+      ],
+      "outward_start_vel": [
+        0.0028537498429989493,
+        -0.005809282223454114,
+        -0.0030981392983868263
+      ],
+      "start_pos": [
+        0.0081898530894068,
+        -0.0015236905661368,
+        0.649722542043909
+      ],
+      "start_vel": [
+        -0.0015578670795211517,
+        -0.0010245125846607315,
+        0.0050521432238404005
+      ],
+      "start_bend_deg": 0.2201672527510089,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241119-nominal": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.985502008591496e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9384512831907565,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1801,
+        "bag_max_residual": 2.842170943040401e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2591
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "d3e3f9e0fa5c1b23e56a0e7efc6a5a47c2837778ff339d56c5c543725e52131a",
+        "flight.bag": "ddf398c901093cdd9dc11bd3dc82ad7922b0216112f53ed9156565b23811fd7f",
+        "physics.npz": "8ece797dbc39dba46045ce529ef69019d2eede44856bc4f003c8f3d872c86db4",
+        "hil.csv": "74f8928c1c25001c2f9f941ca9366670ca9e6b11aebf41f758b6614438da236e",
+        "events.jsonl": "5383b1dfe651d7085a309c69460789a62b0e04b075f537135b411e64cb4569ab",
+        "run.json": "169afa9a39efb877ffcec0baa951b4abbf6ab7e195c375dbd9c33279329af5c6",
+        "provenance.json": "9667296838effe0d9530e346a8c39d4a3913408e412dc4fe80765bd4ba54244c"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        -0.0058159951634727,
+        0.000449873213355,
+        0.6475979545608328
+      ],
+      "outward_start_vel": [
+        0.004536009176827043,
+        -0.0004331256114179886,
+        -0.0018631382817717464
+      ],
+      "start_pos": [
+        -0.0266496241737242,
+        -0.0050726597227814,
+        0.6340547807652901
+      ],
+      "start_vel": [
+        -0.017989730304478743,
+        -0.0029407414152698543,
+        0.014890423966206783
+      ],
+      "start_bend_deg": 115.5385699885932,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241119-slow": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.993633524885137e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9514498389067881,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1801,
+        "bag_max_residual": 4.263256414560601e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2592
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "0b40976556736928516968f40d2c03a1f9e4f621c637afcee6944069d8e81e3c",
+        "flight.bag": "c2b6cd55ff334ee8a22f3b453692127341d5a2b28b492903951e8ded3e3c85b6",
+        "physics.npz": "de33b75ff6b62c798d0e9c946d80ce4a463dce02d2e2155cdec28f0937360c49",
+        "hil.csv": "50a3caec5f3780750020a5655dbb339087aa5ff22b28250884d755eea28b6669",
+        "events.jsonl": "46021e9942b4b2e2ae7feaf959e5b2ffbe774c41121124c4b91ae8e7d5618296",
+        "run.json": "44162361bb355dc004fb3379e51da8c0cf36d72e578a8906a4f72fadc4b00f17",
+        "provenance.json": "93e4d2848709a8c2765c6884e348b1b2712cf7930915f4caf93a2bfad6fde298"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        -0.0031887314160636,
+        -0.0012879710679746,
+        0.6480577681802564
+      ],
+      "outward_start_vel": [
+        0.003928724807361766,
+        -0.001253902911911371,
+        -0.002181800048726764
+      ],
+      "start_pos": [
+        -0.0255641292915258,
+        -0.0082827095099887,
+        0.6347837729780985
+      ],
+      "start_vel": [
+        -0.017670574660570326,
+        0.004764859917846115,
+        0.015368838974365234
+      ],
+      "start_bend_deg": 115.53876648545622,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241119-fastbend": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.974659986866641e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.93222975224975,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1801,
+        "bag_max_residual": 2.842170943040401e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2593
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "bc8bf6a84ecb3685f541865deccc00b548d5b9a9c045b6c6a553b3697bd23d4a",
+        "flight.bag": "4598ecddc637e270070d4e16f8f2918851b130fc59ae9a8dcc11d1e128ad5c2e",
+        "physics.npz": "1c17466ae5fd89da10866af26f389e7790490e757d9e57f1c40c01fec96e351a",
+        "hil.csv": "0e833fa2d7cac7428276b83c931a89d2df3cfd2175e24da43dd34782e365673d",
+        "events.jsonl": "18800ba911b1a78ff0677261d7a784ffed12da334bb92a6f7459a03647592a83",
+        "run.json": "bef2d5e1a29101676b56442506d2f7808cb31b7fad6ea2eb386e669fd1453781",
+        "provenance.json": "fe94eb415224cc2e29f48611e843c746b13ea75ab9925b5511cb1f76f8b8c216"
+      },
+      "source": "41ddd9bce6a822287ad1b526484f650bfacbc938",
+      "outward_start_pos": [
+        -0.0053153419395796,
+        -0.0068485929068106,
+        0.6535113031990378
+      ],
+      "outward_start_vel": [
+        0.0025880403766900483,
+        -0.0030111506088867763,
+        -0.0027376641018605264
+      ],
+      "start_pos": [
+        -0.0614523211017834,
+        -0.0037594081582099,
+        0.6615607158682697
+      ],
+      "start_vel": [
+        -0.005095106768125531,
+        0.0054143341033506594,
+        0.009124657018095363
+      ],
+      "start_bend_deg": 115.53873151066564,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241120-straight": {
+      "log": {
+        "motor_max_abs": 2.9802322387695312e-08,
+        "pose_max_m": 9.977370492297855e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9374513942895234,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 1.1102230246251565e-16,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2593
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "237826259108718623e01539d2e698c0cb881e7a38b55e37770b05ae5059df82",
+        "flight.bag": "16aaf181347e83fca7bdeac7fd58d05803af19132dbff783ba552b303dc3cded",
+        "physics.npz": "18ca9b4e48c839dc85ee7201d805f6a54344e852b1eae31ac2450d32a6866016",
+        "hil.csv": "f6a1ccab0834f06c253c0f7ddbe4a1a65145af39a0ff10b14c75c8cf5a02328f",
+        "events.jsonl": "d0111628991d6037fd62c99bd0aab05359d48a6e180660e15c244d8649079961",
+        "run.json": "b3c29ce2bd511d4fa6eb7f232c4f952a4fe4119102f1968f4e7b27132f58bb25",
+        "provenance.json": "4be304a8ec13d5261cda1aea885c18cf9f2ed44f6398a448a2b2933d362ac6ab"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        -0.0045058297512296,
+        -0.0059734567767206,
+        0.6579305980452648
+      ],
+      "outward_start_vel": [
+        -0.0015468852556024594,
+        -0.004898897486647661,
+        -0.0025487447005599793
+      ],
+      "start_pos": [
+        -0.0019758553476597,
+        0.0006480052019927,
+        0.646110692426106
+      ],
+      "start_vel": [
+        -0.0016415983386548556,
+        -0.0003772604480752254,
+        0.0009276192677623735
+      ],
+      "start_bend_deg": 0.2193843668220277,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241120-nominal": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.974659986866641e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9325630485501611,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 2.842170943040401e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2592
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "2841da329d145c1e43a797e603e88f92d95a5bd367c1942ffef0e9372eb5bd79",
+        "flight.bag": "8b92c6aa52c16aa48a2c734accd1fd7f30aa4d711f8a3185c7e957876e43fa10",
+        "physics.npz": "e3df9b236a80b3bb5efa49e84a811ee5f2dddbb765457db7ec18c8fd71400177",
+        "hil.csv": "a9d2be14575e5c25d06965c41d1664b19c24c06dd1ccd70c1dfe384ab9747c7c",
+        "events.jsonl": "c7fd55b7df3923ab409c0152253a04604feb0488990b3bfb16843a9aaffe52a6",
+        "run.json": "490ef042af0dba89820bd944e1ec0eb5b89c8d310099bb88e8e6763904f56157",
+        "provenance.json": "286a7b8b1423419a3bed01262afefdd1160c071e00655e71f1312607bb585011"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        -0.0027851290590718,
+        -0.0002663762097685,
+        0.6587127683979568
+      ],
+      "outward_start_vel": [
+        -0.0001282443815291358,
+        0.00024881318686489673,
+        -0.001128499747864925
+      ],
+      "start_pos": [
+        -0.0291507059617497,
+        0.0084224104019624,
+        0.638593355309764
+      ],
+      "start_vel": [
+        -0.02119289718559566,
+        0.0017689896400158382,
+        0.01570714322952182
+      ],
+      "start_bend_deg": 115.54033007395124,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241120-slow": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.996344030316351e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9438951227641373,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 4.263256414560601e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2592
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "e17254a4fc686734ee94f432e8e907ab51291e9855b5de4e73a3230dcf4593f8",
+        "flight.bag": "079965d0d26c3407918a919174e0cc21bc02a6266f6610d5404d47b619f6ebe6",
+        "physics.npz": "f00936cb9fdbcaac107b51a49588b10f946a5865d870274bcbe43007f4466463",
+        "hil.csv": "86775eaf6f2d3f2e049c4683bdbeaeb7d13c0e2b3f3e199541742f67e1a5ce7c",
+        "events.jsonl": "b01450d29b076ff567a131b322b03b95729a3fc606a0307da743c4617c209607",
+        "run.json": "92d037163cf763117d48b6b777015cf9f1c1770d49ab0c52961447c3adede664",
+        "provenance.json": "3f2bbcecec843569446cc39594d3089daed2e085f2baa078137add3279b37811"
+      },
+      "source": "72ddd950e18a16e51fdca4d9575b3351c3da635a",
+      "outward_start_pos": [
+        0.0062196270088659,
+        0.0007416309118791,
+        0.6576510353843208
+      ],
+      "outward_start_vel": [
+        -0.001177011828111138,
+        -0.001391866767315928,
+        -0.0029632469104788443
+      ],
+      "start_pos": [
+        -0.0309356749168241,
+        0.0019282742949114,
+        0.6373444154702064
+      ],
+      "start_vel": [
+        -0.02129704851156511,
+        0.004105375326240303,
+        0.01634594871686053
+      ],
+      "start_bend_deg": 115.5404742299649,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    },
+    "241120-fastbend": {
+      "log": {
+        "motor_max_abs": 5.960464477539063e-08,
+        "pose_max_m": 9.974659986866641e-17,
+        "thrust_max_N": 8.881784197001252e-16,
+        "ulog_dropouts": 0,
+        "native_motor_coverage": 0.9432285301633152,
+        "max_native_gap_ms": 8.0,
+        "last_native_gap_ms": 0.0,
+        "max_HIL_age_ms": 0.0,
+        "bag_samples_per_topic": 1800,
+        "bag_max_residual": 5.684341886080802e-14,
+        "time_offset_us": 1000000,
+        "offboard_all": true,
+        "integrator_samples": 2592
+      },
+      "checks": {
+        "logs": true,
+        "flight": true,
+        "curvature": true,
+        "prehover": true
+      },
+      "sha256": {
+        "flight.ulg": "7a6a13e0ac3bff11e2afd1714185eb90022b6ca4d5ef8d548fe0811ba396e11f",
+        "flight.bag": "11dba473f349227605647911597823073f951a1556b0c0b5991b8b009f5a9c05",
+        "physics.npz": "de631a27300bc405533453a7e61279217744234f8a7ad128aea684348aefc2b2",
+        "hil.csv": "68790d124c4db63995a5aafa792f8b17b85fb227dd5d091be3454188e0330888",
+        "events.jsonl": "614d02e7ea3467b4d4f8059db488cb5987d1c5bb092fc2e8e643256054b66774",
+        "run.json": "8ab51b878b9d76a489a87e4fe23560c55bc70b043d6a3f1cb5c0a29bde96301c",
+        "provenance.json": "113aa9421db75e85c7ef28c224e9da6569856ab680a1753dc78cd48d56fa4c15"
+      },
+      "source": "41ddd9bce6a822287ad1b526484f650bfacbc938",
+      "outward_start_pos": [
+        0.0045712296893525,
+        -0.010736456263713,
+        0.6584755993873359
+      ],
+      "outward_start_vel": [
+        -0.0017355644564027008,
+        0.0008070256348804179,
+        -0.0014678643503760764
+      ],
+      "start_pos": [
+        -0.0625021514155435,
+        0.0087561429309309,
+        0.6698009977627764
+      ],
+      "start_vel": [
+        -0.010152588640919726,
+        -0.0034126233276853216,
+        0.009220518787495675
+      ],
+      "start_bend_deg": 115.54048495774532,
+      "mass_kg": 2.25,
+      "plant_sha256": "7951b1233b939902d6f74e751e4254ac4595098135d43bf6dbd0f706524e2c7a",
+      "pitch_rate_i": 0.4000000059604645
+    }
+  },
+  "pairs": [
+    {
+      "seed": 241118,
+      "outward_start_position_difference_cm": 0.5938918486842673,
+      "outward_start_velocity_difference_cm_s": 0.307277515955215,
+      "return_start_position_difference_cm": 0.3192228864918162,
+      "return_start_velocity_difference_cm_s": 0.6022501193076708,
+      "return_start_shape_difference_deg": 0.0001939023048009858,
+      "pair_matched": true,
+      "slow_minus_nominal_cm": -11.815635697790963,
+      "fastbend_minus_nominal_cm": 6.383326556526354
+    },
+    {
+      "seed": 241119,
+      "outward_start_position_difference_cm": 0.9406697267094384,
+      "outward_start_velocity_difference_cm_s": 0.33474752790548074,
+      "return_start_position_difference_cm": 0.3466143162358396,
+      "return_start_velocity_difference_cm_s": 0.7727032622552363,
+      "return_start_shape_difference_deg": 0.000196496863026141,
+      "pair_matched": true,
+      "slow_minus_nominal_cm": -10.776930182390503,
+      "fastbend_minus_nominal_cm": 5.307021808497904
+    },
+    {
+      "seed": 241120,
+      "outward_start_position_difference_cm": 1.2798235796824657,
+      "outward_start_velocity_difference_cm_s": 0.17350064246706973,
+      "return_start_position_difference_cm": 0.6849800629968525,
+      "return_start_velocity_difference_cm_s": 0.24243799257026113,
+      "return_start_shape_difference_deg": 0.0001441560136612452,
+      "pair_matched": true,
+      "slow_minus_nominal_cm": -11.297711741857782,
+      "fastbend_minus_nominal_cm": 5.964202070903042
+    }
+  ],
+  "all_integrity_checks": true,
+  "all_pairs_matched": true
+}

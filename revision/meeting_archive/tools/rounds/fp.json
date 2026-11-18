@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "id": "2026-11-19-fp",
+  "stage": "F+ · 空场机臂耦合",
+  "title": "弯臂和收臂速度会让机身偏移多少？",
+  "when": "2026-11-19T00:54:15+08:00",
+  "summary": "12 次独立 PX4 软件在环飞行。弯臂从 6 秒压到 3 秒，定点峰值中位数由 15.37 增至 20.83 cm。收臂从 4 秒延至 8 秒，峰值从 25.27 降至 13.73 cm。",
+  "guide": [
+    "先看固定机位视频的两段动作。十字是共同的世界定点，观察机身相对十字的移动。",
+    "对照逐个种子的结果。快速弯臂与慢速收臂均走相同的臂形路径，额外耗时单独报告。",
+    "打开审查页。标称模型中的动态力矩增大，动作窗内四桨饱和时间为 0 ms。实机速度、门框净空和室内定位等待后续验证。"
+  ],
+  "scope": "SUPER + Qingyu 标称空载、固定空场、三组配对的传感器噪声。网页单独提供 12 个原始包，离线包包含视频、科学图、审查及指标。",
+  "revision": "dafeb709f88b6455dee538fd48b2715da864f8eb",
+  "source_note": "72ddd95 登记主对照，41ddd9b 登记主动弯臂补充，dafeb70 保存原始证据。",
+  "cover": "return.png",
+  "files": [
+    {
+      "kind": "image",
+      "file": "return.png",
+      "title": "同一世界机位下的收臂动作",
+      "caption": "收臂开始后第 4 秒。直臂、4 秒收臂、8 秒收臂处在同一个世界参考点和相机视角。"
+    },
+    {
+      "kind": "image",
+      "file": "bend.png",
+      "title": "以两种速度弯向同一角度",
+      "caption": "动作开始后第 4 秒。左列为直臂定点，中列与右列分别以 6 秒和 3 秒弯臂。"
+    },
+    {
+      "kind": "curve",
+      "file": "curves.png",
+      "title": "三维定点偏差与三个配对结果",
+      "caption": "曲线为预先选定的种子 241118。表中列出每次独立运行，单位为厘米。"
+    },
+    {
+      "kind": "curve",
+      "file": "moment.png",
+      "title": "安装座俯仰力矩的瞬态变化",
+      "caption": "力矩基于实际积分状态离线重建，扣除同姿态臂组件重力矩。"
+    },
+    {
+      "kind": "video",
+      "file": "comparison.mp4",
+      "title": "同步观看主动弯臂和收臂恢复",
+      "caption": "1 倍速、同一固定世界机位。十字为定点，细线跟随机身。桨叶相位按各桨推力降速显示。",
+      "poster": "return.png"
+    },
+    {
+      "kind": "document",
+      "file": "review.pdf",
+      "title": "两页组会结果与可信度审查",
+      "caption": "第一页给出逐次结果，第二页说明安装座力矩、飞控与物理模型的验证范围、下一轮单门任务。"
+    },
+    {
+      "kind": "data",
+      "file": "metrics.csv",
+      "title": "十二次飞行的完整评分",
+      "caption": "弯收各自窗口和统一时窗中的峰值、实际角速度、推力余量、倾角和安装座力矩。"
+    },
+    {
+      "kind": "data",
+      "file": "pairs.csv",
+      "title": "同一种子的配对变化",
+      "caption": "各动作起始状态差异和最大偏移的配对差。"
+    },
+    {
+      "kind": "data",
+      "file": "audit.json",
+      "title": "交叉核查与文件指纹",
+      "caption": "原生 ULog、ROS bag 和物理状态的对齐误差，各运行的源提交和 SHA-256。"
+    },
+    {
+      "kind": "data",
+      "file": "evidence-index.json",
+      "title": "十二个原始包的 SHA-256",
+      "caption": "按文件名核对下载的原始压缩包。"
+    },
+    {
+      "kind": "data",
+      "file": "notes.txt",
+      "title": "结果解读、局限与复现命令",
+      "caption": "包括标称参数、任务时序、力矩参考点、后续实物标定和 G1 的公平比较方式。"
+    },
+    {
+      "kind": "data",
+      "file": "protocol.json",
+      "title": "收臂比较的预登记协议",
+      "caption": "先冻结三组噪声、原速与慢速设定、评分窗口和初态匹配阈值。"
+    },
+    {
+      "kind": "data",
+      "file": "flex-protocol.json",
+      "title": "主动弯臂补充协议",
+      "caption": "追加快速弯臂前单独登记，原收臂组的控制与分析保持相同。"
+    },
+    {
+      "kind": "data",
+      "file": "241118-fastbend.tar.gz",
+      "title": "241118 · 快速弯臂原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241118-nominal.tar.gz",
+      "title": "241118 · 常速弯收原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241118-slow.tar.gz",
+      "title": "241118 · 慢速收臂原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241118-straight.tar.gz",
+      "title": "241118 · 直臂定点原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-fastbend.tar.gz",
+      "title": "241119 · 快速弯臂原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-nominal.tar.gz",
+      "title": "241119 · 常速弯收原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-slow.tar.gz",
+      "title": "241119 · 慢速收臂原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-straight.tar.gz",
+      "title": "241119 · 直臂定点原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-fastbend.tar.gz",
+      "title": "241120 · 快速弯臂原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-nominal.tar.gz",
+      "title": "241120 · 常速弯收原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-slow.tar.gz",
+      "title": "241120 · 慢速收臂原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-straight.tar.gz",
+      "title": "241120 · 直臂定点原始包",
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "separate": true
+    }
+  ]
+}

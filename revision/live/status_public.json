@@ -1,25 +1,25 @@
 {
   "branch": "feat/paper-mechanism-rolling-20261117",
   "status": "awaiting_review",
-  "stage": "F 完成 · 四旋翼回放已修订",
-  "mode": "SUPER 与 Qingyu · PX4 EKF2 · MuJoCo 自由飞行",
-  "detail": "F 轮原始飞行记录新增桨叶转动回放，可分别观察四个电机方向和推力。",
-  "updated": "2026-11-19T00:06:04+08:00",
+  "stage": "F+ 完成 · 空场弯收臂速度对照",
+  "mode": "SUPER 与 Qingyu · 原生 PX4 EKF2 · MuJoCo 自由飞行",
+  "detail": "12 次独立 PX4 软件在环飞行。弯臂从 6 秒压到 3 秒，定点峰值中位数由 15.37 增至 20.83 cm。收臂从 4 秒延至 8 秒，峰值从 25.27 降至 13.73 cm。",
+  "updated": "2026-11-19T00:54:15+08:00",
   "progress": 100,
-  "geometry": "round_f_cad.png",
-  "geometry_caption": "悬停、平移和弯臂时的实际积分姿态",
-  "rolling": "round_f_curves.png",
-  "rolling_caption": "位置误差、五次结果及前后旋翼反应",
+  "geometry": "round_fp_cad.png",
+  "geometry_caption": "同一收臂时刻的三种真实模型姿态",
+  "rolling": "round_fp_curves.png",
+  "rolling_caption": "时间对齐的定点偏差与三个配对种子的结果",
   "replay": null,
   "items": [
-    "同条件完成五次飞行",
-    "自由飞行评分时长 39 秒",
-    "弯臂总曲率峰值 115.55°",
-    "四路输出逐样本重建"
+    "12 次独立闭环飞行",
+    "3 个成对噪声种子",
+    "实际总弯曲上限 115.60°",
+    "两类动作的最小单桨余量 3.79 N"
   ],
   "commits": [
-    "1c877ed · 先登记验收阈值",
-    "80b5fe2 · 最终飞行配置",
-    "5db98c5 · 归档原始日志"
+    "72ddd95 · 主协议",
+    "41ddd9b · 追加弯速对照",
+    "dafeb70 · 十二次原始证据"
   ]
 }

@@ -1,0 +1,242 @@
+{
+  "cover": "return.png",
+  "files": [
+    {
+      "bytes": 191803,
+      "caption": "收臂开始后第 4 秒。直臂、4 秒收臂、8 秒收臂处在同一个世界参考点和相机视角。",
+      "file": "return.png",
+      "kind": "image",
+      "sha256": "1aea9e7d8cb7c1df7d428144497221d94415791a6bbd0142c6405c970878ba16",
+      "title": "同一世界机位下的收臂动作"
+    },
+    {
+      "bytes": 195083,
+      "caption": "动作开始后第 4 秒。左列为直臂定点，中列与右列分别以 6 秒和 3 秒弯臂。",
+      "file": "bend.png",
+      "kind": "image",
+      "sha256": "0343b876dbfc7c73208bd90098c72bb81e5c46c85e84cad397567211a57b7593",
+      "title": "以两种速度弯向同一角度"
+    },
+    {
+      "bytes": 205825,
+      "caption": "曲线为预先选定的种子 241118。表中列出每次独立运行，单位为厘米。",
+      "file": "curves.png",
+      "kind": "curve",
+      "sha256": "d8e65fe346fc31958433bb14fff5ab250f3c42f15ea2bdf8335154a5835c8fcc",
+      "title": "三维定点偏差与三个配对结果"
+    },
+    {
+      "bytes": 164071,
+      "caption": "力矩基于实际积分状态离线重建，扣除同姿态臂组件重力矩。",
+      "file": "moment.png",
+      "kind": "curve",
+      "sha256": "3d6e980a9ba7151a4c61b7f27a193e08ee8fb29c692b602c1433de84009be89a",
+      "title": "安装座俯仰力矩的瞬态变化"
+    },
+    {
+      "bytes": 2559534,
+      "caption": "1 倍速、同一固定世界机位。十字为定点，细线跟随机身。桨叶相位按各桨推力降速显示。",
+      "file": "comparison.mp4",
+      "kind": "video",
+      "poster": "return.png",
+      "sha256": "c05169e4145f1833d0ebc22e4697c58cc7fb98ed37eca93635bc2d5f7cfbd1a1",
+      "title": "同步观看主动弯臂和收臂恢复"
+    },
+    {
+      "bytes": 480531,
+      "caption": "第一页给出逐次结果，第二页说明安装座力矩、飞控与物理模型的验证范围、下一轮单门任务。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "932abe89da4f1727f4ae5d047f523d8059668de24e062b2fde0b01155143eb3b",
+      "title": "两页组会结果与可信度审查"
+    },
+    {
+      "bytes": 5125,
+      "caption": "弯收各自窗口和统一时窗中的峰值、实际角速度、推力余量、倾角和安装座力矩。",
+      "file": "metrics.csv",
+      "kind": "data",
+      "sha256": "d223aff18f15828eb7658166ecdc7a59041f1fca5396c2461b382d68f1fa5789",
+      "title": "十二次飞行的完整评分"
+    },
+    {
+      "bytes": 543,
+      "caption": "各动作起始状态差异和最大偏移的配对差。",
+      "file": "pairs.csv",
+      "kind": "data",
+      "sha256": "aa1fa60dda3a331e148246ebde4bf2414a242b8081071d8a732d5a6349d52a75",
+      "title": "同一种子的配对变化"
+    },
+    {
+      "bytes": 26825,
+      "caption": "原生 ULog、ROS bag 和物理状态的对齐误差，各运行的源提交和 SHA-256。",
+      "file": "audit.json",
+      "kind": "data",
+      "sha256": "88375dfd77a82f2c20748f5e533495a06cd4d454482561332edb4f5543bc3dc6",
+      "title": "交叉核查与文件指纹"
+    },
+    {
+      "bytes": 1644,
+      "caption": "按文件名核对下载的原始压缩包。",
+      "file": "evidence-index.json",
+      "kind": "data",
+      "sha256": "141a303248b9266de0f1cf6f924d48907c24910b170d2d323aacdc0037bc6fcb",
+      "title": "十二个原始包的 SHA-256"
+    },
+    {
+      "bytes": 6686,
+      "caption": "包括标称参数、任务时序、力矩参考点、后续实物标定和 G1 的公平比较方式。",
+      "file": "notes.txt",
+      "kind": "data",
+      "sha256": "832c444e07ccdb98e6ef0d8e396446d79915bfe75b06d6de9eb404783b420ee1",
+      "title": "结果解读、局限与复现命令"
+    },
+    {
+      "bytes": 3000,
+      "caption": "先冻结三组噪声、原速与慢速设定、评分窗口和初态匹配阈值。",
+      "file": "protocol.json",
+      "kind": "data",
+      "sha256": "cc14eda85b0e1ddbd0a264357614e701647f12e37c6e3e03a1be9908271f60e3",
+      "title": "收臂比较的预登记协议"
+    },
+    {
+      "bytes": 1301,
+      "caption": "追加快速弯臂前单独登记，原收臂组的控制与分析保持相同。",
+      "file": "flex-protocol.json",
+      "kind": "data",
+      "sha256": "c46acb65e0a44b486d13245b5a28286aabeb64108704ecad35044f9cd20e6a5e",
+      "title": "主动弯臂补充协议"
+    },
+    {
+      "bytes": 4465719,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241118-fastbend.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "9fa7b176b253166cf594603bd59b5b205bc5ae43c1f1cc5e177c1e6e5089967b",
+      "title": "241118 · 快速弯臂原始包"
+    },
+    {
+      "bytes": 4484303,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241118-nominal.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "60d47fb7fd98f18e9c1cb1902f03af5a7fbcafed4e0db38a55b88cecdf1b4a56",
+      "title": "241118 · 常速弯收原始包"
+    },
+    {
+      "bytes": 4494510,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241118-slow.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "ae4383ad36131ecb8e6c7c9112e353385f2b00078cb8813740a15ff05c5b222d",
+      "title": "241118 · 慢速收臂原始包"
+    },
+    {
+      "bytes": 4391351,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241118-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "03e6690d90a14bb62553377521bcfef7574067fcacaf109d8cdee8d85f176986",
+      "title": "241118 · 直臂定点原始包"
+    },
+    {
+      "bytes": 4469023,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241119-fastbend.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "3a46f96881bd3543f9fc6fc855db1fd0e175c685a1f4b733588655aa53f4c282",
+      "title": "241119 · 快速弯臂原始包"
+    },
+    {
+      "bytes": 4484022,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241119-nominal.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "ff3ce7f0dcfbd7a585d409198a0a6d26338d8575ecbf7eacc31ebd97b4bb8944",
+      "title": "241119 · 常速弯收原始包"
+    },
+    {
+      "bytes": 4498637,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241119-slow.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "1755fae47f7b9e31d8ad9038df19ee08810d8f5e302a7f0b26ddd8198ee19df3",
+      "title": "241119 · 慢速收臂原始包"
+    },
+    {
+      "bytes": 4402750,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241119-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "5a44705760108d611df7df723b6c7ab47279d726cbcb1df85f19463e6e2cae67",
+      "title": "241119 · 直臂定点原始包"
+    },
+    {
+      "bytes": 4465432,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241120-fastbend.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "02c69c1bf328b965b5dad276050dadd1a5cd40636eab04490d7d1340633c3ece",
+      "title": "241120 · 快速弯臂原始包"
+    },
+    {
+      "bytes": 4470427,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241120-nominal.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "37e14aa69b89d56802d81f199ac06069e0c218b00afed0e6f0bf99376c373103",
+      "title": "241120 · 常速弯收原始包"
+    },
+    {
+      "bytes": 4492213,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241120-slow.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "cf0056d75d96a139a27d24511ffae2cdd216041531342d3cced7de14043fe888",
+      "title": "241120 · 慢速收臂原始包"
+    },
+    {
+      "bytes": 4394887,
+      "caption": "原生 PX4 ULog、ROS bag、完整物理状态、250 Hz 下发与响应、运行版本及控制台记录。",
+      "file": "241120-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "00bb5de83e81d949db76beb89133b79fa0e3ef97fae9d2b01e7ebca9b984c686",
+      "title": "241120 · 直臂定点原始包"
+    }
+  ],
+  "guide": [
+    "先看固定机位视频的两段动作。十字是共同的世界定点，观察机身相对十字的移动。",
+    "对照逐个种子的结果。快速弯臂与慢速收臂均走相同的臂形路径，额外耗时单独报告。",
+    "打开审查页。标称模型中的动态力矩增大，动作窗内四桨饱和时间为 0 ms。实机速度、门框净空和室内定位等待后续验证。"
+  ],
+  "id": "2026-11-19-fp",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "6c72fa01c7e0a91a4c26fc3dc722a7d573f59b2d712e3d93697f2639c69d56f0"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "e76e4b43046605db99ec6f78b334617ffe8af8f13aada5f47a11ad99b020f9ed"
+    }
+  },
+  "revision": "dafeb709f88b6455dee538fd48b2715da864f8eb",
+  "schema": 1,
+  "scope": "SUPER + Qingyu 标称空载、固定空场、三组配对的传感器噪声。网页单独提供 12 个原始包，离线包包含视频、科学图、审查及指标。",
+  "source_note": "72ddd95 登记主对照，41ddd9b 登记主动弯臂补充，dafeb70 保存原始证据。",
+  "stage": "F+ · 空场机臂耦合",
+  "summary": "12 次独立 PX4 软件在环飞行。弯臂从 6 秒压到 3 秒，定点峰值中位数由 15.37 增至 20.83 cm。收臂从 4 秒延至 8 秒，峰值从 25.27 降至 13.73 cm。",
+  "title": "弯臂和收臂速度会让机身偏移多少？",
+  "when": "2026-11-19T00:54:15+08:00"
+}
