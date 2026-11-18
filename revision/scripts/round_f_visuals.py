@@ -34,9 +34,10 @@ def write_media(folder,out):
     fnt='/usr/share/fonts/truetype/dejavu/'
     big=ImageFont.truetype(fnt+'DejaVuSerif-Bold.ttf',23);small=ImageFont.truetype(fnt+'DejaVuSans.ttf',15)
     med=ImageFont.truetype(fnt+'DejaVuSans.ttf',18)
-    ff=subprocess.Popen(['ffmpeg','-v','error','-n','-f','rawvideo','-pix_fmt','rgb24','-s','960x554','-r','20','-i','-',
-                         '-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(out/'replay.mp4')],stdin=subprocess.PIPE)
-    def xy(e,h):return (round(505+(e+.08)*429),round(416-h*401))
+    pending=out/'replay.part.mp4'
+    ff=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','960x554','-r','20','-i','-',
+                         '-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(pending)],stdin=subprocess.PIPE)
+    def xy(e,h):return (round(505+(e+.08)*429),round(416-h*353))
     def text_at(draw,pos,txt,font=small,fill=INK):draw.text(pos,txt,font=font,fill=fill)
     for j in range(391):
         stamp=j/10;i=int(np.argmin(abs(t-stamp)));a=w.iloc[i]
@@ -68,6 +69,7 @@ def write_media(folder,out):
         ff.stdin.write(canvas.tobytes())
     ff.stdin.close()
     if ff.wait():raise RuntimeError('Replay encoder error')
+    pending.replace(out/'replay.mp4')
     render.close()
 
 
@@ -103,7 +105,7 @@ def figures(raw,out):
             x=.078+.286*k;a=f.add_axes([x,.541,.267,.240])
             a.imshow(plt.imread(str(out/('pose%d.png'%k))));a.axis('off')
             i=int(np.argmin(abs(t-at)));f.text(x,.794,chr(97+k)+'   '+title,fontsize=10.2,weight='bold')
-            f.text(x,.527,'%.0f s     /     %.1f° integrated'%(at,g.net_deg.iloc[i]),fontsize=8.8,color=MUTE)
+            f.text(x,.527,'%.0f s   /   E %.2f m   /   %.1f°'%(at,g.ex.iloc[i],g.net_deg.iloc[i]),fontsize=8.5,color=MUTE)
         savecropped(f,'cad.png',[.053,.508,.947,.823])
         a=axis(f,[.13,.321,.79,.139],'d   Translation and altitude')
         times(a);a.plot(t,g.ex.values,c=NAVY,lw=1.8,label='East');a.plot(t,g.ez.values,c=TEAL,lw=1.8,label='Height')
@@ -122,16 +124,18 @@ def figures(raw,out):
         a.plot(b.since_release_s.values-22,be,c=TEAL,lw=1.6,label='Revised gain, 0.40');a.set(xlim=(0,14),ylabel='Error (cm)',xlabel='Time since arm command began (s)')
         a.legend(loc='upper left',frameon=False,fontsize=7.6)
         a=axis(f,[.12,.345,.40,.16],'b   Bend-hold RMS error')
-        xs=[[c['phases']['bend']['rms_3d_m']*100 for c in s['cases'] if c['pitch_rate_i']==i] for i in [.2,.4]]
+        xs=[[c['phases']['bend']['rms_3d_m']*100 for c in s['cases'] if np.isclose(c['pitch_rate_i'],i)] for i in [.2,.4]]
+        assert [len(v) for v in xs]==[2,3]
         for i,vals in enumerate(xs):
             yy=i+np.linspace(-.12,.12,len(vals));a.scatter(vals,yy,s=28,facecolors='white',edgecolors=[OCHRE,TEAL][i],lw=1.65,zorder=4)
         a.axvline(15,ls='--',lw=1,c=MUTE);a.text(15.12,.42,'15 cm\ncriterion',va='center',size=7,color=MUTE)
         a.set(xlim=(10,19),ylim=(-.5,1.5),yticks=[0,1],yticklabels=['0.20','0.40'],xlabel='RMS position error (cm)',ylabel='Pitch-rate I gain')
-        f.text(.585,.518,'c   Four rotor channels',fontsize=10,weight='bold')
-        for j,txt in enumerate(['%s native PWM samples'%format(rec['overlap_native_motor_samples'],','),
-                      '%s HIL ticks in 39 s'%format(rec['wire_ticks'],','),'Largest native interval   %.0f ms'%(rec['max_native_motor_gap_us']/1000),
-                      'Maximum channel difference','%.1e normalized units'%rec['max_native_normalized_motor_error']]):
-            f.text(.585,.475-.031*j,txt,fontsize=8.9,color=INK if j!=3 else MUTE)
+        a=axis(f,[.605,.345,.315,.16],'c   Rotor thrust during bend')
+        bt=b.since_release_s.values-22
+        a.plot(bt,6*(b.m1.values+b.m3.values),c=NAVY,lw=1.5,label='Front pair')
+        a.plot(bt,6*(b.m2.values+b.m4.values),c=OCHRE,lw=1.35,label='Rear pair')
+        a.set(xlim=(0,14),ylim=(3.3,7.8),ylabel='Mean thrust (N)',xlabel='Time since bend onset (s)')
+        a.legend(loc='upper left',fontsize=6.9,frameon=False)
         savecropped(f,'curves.png',[.034,.274,.961,.821])
         f.add_artist(plt.Line2D([.073,.926],[.264,.264],transform=f.transFigure,color=GRID,lw=.7))
         f.text(.073,.224,'Qualification flight',fontsize=11,weight='bold')
@@ -140,7 +144,7 @@ def figures(raw,out):
                                    ('End error','%.2f cm'%(100*ph['translate']['endpoint_3d_m'])),('Peak bend','%.2f°'%case['max_total_curvature_deg'])]):
             xx=.075+.221*i;f.text(xx,.183,key,color=MUTE,fontsize=8);f.text(xx,.15,value,fontsize=14,weight='bold')
         f.text(.073,.093,'Bend-hold RMS was %.2f cm; the largest instantaneous deviation was %.2f cm.'%(100*ph['bend']['rms_3d_m'],100*ph['bend']['max_3d_m']),fontsize=8.8)
-        f.text(.073,.065,'Paired runs share a sensor seed. The native and wire clocks align at common samples.',fontsize=8.6)
+        f.text(.073,.065,'%s native motor samples match the HIL channels within %.1e in normalized output.'%(format(rec['overlap_native_motor_samples'],','),rec['max_native_normalized_motor_error']),fontsize=8.6)
         f.text(.073,.043,'This qualification covers an empty simulated workspace with nominal inertia, thrust and sensors.',fontsize=8.6)
         pdf.savefig(f);plt.close(f)
 
