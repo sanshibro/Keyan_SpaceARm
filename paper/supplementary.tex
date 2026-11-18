@@ -12,26 +12,14 @@
 Morphology-Aware Rolling Whole-Body Planning for\\
 Aerial Continuum Manipulation in Confined Spaces
 \end{center}
-These figures preserve the supplied source assets. They provide supporting records for the main manuscript; the planning benchmark and recorded-data sensing study were evaluated separately. File names are historical and do not change the experiment provenance described in the main text.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.71\textwidth,height=7.3in,keepaspectratio]{fig03_paired_outcome_matrix.pdf}
-\caption{Full scenario-by-method outcome matrix for the 90 paired tasks. All five methods and all failed outcomes are retained. This is the detailed record underlying the main success comparison.}
-\end{figure}
-\clearpage
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{fig06_representative_execution_time_history.pdf}
-\caption{Complete representative execution histories: tracking, audited clearance, morphology, center-of-mass offset, and rolling computation/buffer diagnostics. The supplied plotting ranges, thresholds, and annotations are unchanged. The two morphology coordinates describe one PCC section.}
-\end{figure}
-\clearpage
+Supplementary Fig.~S1 reports attitude and load diagnostics from three PX4/Gazebo runs. Figures~S2 and S3 show the original visual--strain records and their evaluation references.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.94\textwidth]{fig08_dynamics_proxy_validation.pdf}
 \caption{Supplied flight-response and load-proxy comparison. Realized-versus-PX4-target tilt statistics describe attitude tracking. Normalized IMU specific-force magnitude is an indirect load-related quantity, not a direct measurement of individual rotor thrust. The low-dynamic traces do not validate a complete rigid--soft coupled dynamics model.}
 \end{figure}
-
-
+\clearpage
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.87\textwidth,height=8.1in,keepaspectratio]{fig_sensor_theta_fusion.png}
@@ -42,25 +30,5 @@ These figures preserve the supplied source assets. They provide supporting recor
 \centering
 \includegraphics[width=0.87\textwidth,height=8.1in,keepaspectratio]{fig_sensor_phi_fusion.png}
 \caption{Original bending-plane record. The supplied reference was fitted from normal ORB observations, as indicated in the source image. Its failure-stage residual plot has a limited display range, while the full angle traces show the frozen visual estimate. The reference and residual limits preclude interpreting the printed errors as independent motion-capture test accuracy. All original panels and annotations are preserved.}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.87\textwidth]{fig04_measured_whole_body_trajectory.pdf}
-\caption{Complete supplied Multi-Passage figure, including top, side, and three-dimensional views. The main manuscript enlarges the side view to explain the competing body/arm constraints. Straight-arm counterfactuals apply to the marked states along this route, rather than proving infeasibility of all alternative routes. All trajectories, obstacle marks, and numerical annotations are retained.}
-\end{figure}
-\clearpage
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{handoff_revised.pdf}
-\caption{Complete command record around one revalidated handoff (formerly main Fig.~6). The vertical dashed line denotes the request; the shaded interval is the quintic bridge. The panels show issued position and velocity, filtered acceleration, jerk magnitude, bending vector, and bending-vector rate. Derivative peaks during the bridge represent a transient adjustment cost. This single trace does not establish a jerk reduction or prove strict physical $C^2$ continuity; the aggregate switching evidence comes from the paired ablation reported in the main text.}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{rolling_revised.pdf}
-\caption{Complete original rolling-window artwork (formerly main Fig.~5), preserving all seven windows and all three views. Each colored trajectory represents a window plan; the black trajectory represents execution. Plans are not necessarily executed over their entire plotted extent because successors may replace their remaining tails. The main figure highlights windows 1, 4, and 6 using dashed polylines transferred from this vector artwork, with no new experimental samples generated.}
 \end{figure}
 \end{document}

@@ -25,8 +25,8 @@
 \newcommand{\ours}{Rolling-WB-V2.1}
 \allowdisplaybreaks[1]
 \hypersetup{pdftitle={Morphology-Aware Rolling Whole-Body Planning for Aerial Continuum Manipulation in Confined Spaces}}
-\newif\ifhardwareplaceholders
-\hardwareplaceholderstrue % Set false to hide future-data layout reservations.
+
+
 \usepackage{placeins}
 \begin{document}
 \raggedbottom
@@ -36,10 +36,8 @@
 
 % Chinese comments provide a paragraph-level drafting companion; the PDF is English.
 \begin{abstract}
-% CN: 本文以形态感知滚动全身规划为主线，分别说明感知与规划的验证范围，并保留正式实验数据。
-% CN:柔性臂弯曲会同时改变空中连续体机械臂的空间占据范围和质量分布，因此在受限空间中，仅规划无人机本体的运动是不充分的。本文提出一种形态感知的滚动全身规划方法，将无人机位置、偏航角、单段连续体形态以及轨迹分段时间进行联合优化。方法首先通过几何引导初始化选择候选通道构型，再在有限在线计算预算内利用 B 样条对全身轨迹进行细化。候选轨迹还需经过独立的密集验证器检查其可行性，并通过连续性感知门控或可选的五次多项式桥接完成相邻滚动窗口之间的轨迹切换。作为形态反馈前端，视觉--应变估计器将动作捕捉监督训练的应变形态预测与经过无人机基座运动补偿的视觉观测进行融合，以在视觉退化条件下持续提供柔性臂形态反馈。感知鲁棒性通过分阶段视觉退化、遮挡和失效实验进行评估，实验过程中同步采集视觉与应变测量数据；滚动规划框架则在 PX4/Gazebo 闭环环境中采用二阶柔性臂响应模型，在 90 个严格配对场景中完成 450 次试验。所提规划器完成 89/90 个任务，成功率为 98.9%，而表现最好的对比方法完成 68/90 个任务，成功率为 75.6%；在 Hard 场景中，本方法成功率为 96.7%，最佳对比方法为 40.0%。规划时间 P95 为 3.697 s，且未观察到规划截止期违约。早期与修订接管版本的配对比较报告了单位路径长度平移 Jerk 能量中位降低 72.8%，单因素归因仍需独立接管消融。上述结果支持在低动态受限空间任务中，将连续体形态纳入全身联合规划，并在滚动轨迹切换前进行独立验证和连续接管。
+Arm bending changes the occupied volume and mass distribution of an aerial continuum manipulator. We present a rolling planner that jointly optimizes UAV position, yaw, single-section morphology, and trajectory timing in confined spaces. A geometric search initializes a finite-budget spline refinement. An independent dense validator checks each candidate, and a continuity gate authorizes a direct handoff or a revalidated quintic bridge. A compatible visual--strain frontend combines motion-capture-supervised strain prediction with base-motion-compensated vision. We evaluated the planner in PX4/Gazebo using a second-order arm response. It completed 89 of 90 tasks across three scenario families. The 95th percentile of computation time over 494 planning attempts was 3.697~s, within a 15~s per-attempt budget. Of 391 trajectory handoffs, 52 used a bridge. In a separate recorded sensing experiment, fusion continued to produce morphology estimates through visual loss. A physical demonstration shows how the arm changes configuration between passage traversal and object handling.
 
-Arm bending changes both the occupied volume and mass distribution of an aerial continuum manipulator, making vehicle-only planning insufficient in confined spaces. We present a morphology-aware rolling planner that jointly optimizes UAV position, yaw, single-section continuum morphology, and segment timing. Geometry-guided initialization selects candidate passage configurations, and finite-budget B-spline refinement improves the resulting whole-body trajectory. A separate dense validator checks candidate feasibility, while a continuity-aware gate and an optional quintic bridge authorize transitions between rolling windows. A complementary visual--strain estimator combines motion-capture-supervised strain prediction with base-motion-compensated vision to provide morphology feedback under visual degradation. Sensing robustness was evaluated through staged visual-degradation, occlusion, and loss experiments with synchronously acquired visual and strain measurements, while the rolling planning framework was evaluated in 450 PX4/Gazebo closed-loop trials across 90 paired scenarios using a second-order morphology-response model. The planner completed 89/90 tasks (98.9\%), compared with 68/90 (75.6\%) for the strongest baseline; hard-scenario success was 96.7\% versus 40.0\%. Planning-time P95 was 3.697~s, with no observed deadline miss. A paired comparison of the earlier and revised handoff versions reported a 72.8\% median reduction in translational jerk energy per unit path length. A hardware demonstration further illustrates compact passage configurations, arm redeployment, and object handling within a single task. These results support joint morphology planning and validated trajectory switching for low-dynamic confined-space tasks.
 \end{abstract}
 \begin{IEEEkeywords}
 Aerial manipulation, continuum robots, whole-body planning, visual--strain fusion, trajectory handoff.
@@ -481,14 +479,12 @@ T_{\mathrm{remain}}>T_{\mathrm{plan}}+T_{\mathrm{validate}}
 Deceleration or hold is admissible only if its continuation also satisfies the acceptance conditions. Repeated rejection or exhaustion without an authorized continuation is treated as failure; retaining an old trajectory alone does not guarantee indefinite safety.
 
 \section{Experimental Evaluation}\label{sec:experiments}
-\subsection{Setup and Matched Protocol}
-% CN: 感知鲁棒性与规划性能分别采用相应的实验协议进行验证。感知实验在同步采集视觉与应变数据的过程中分阶段引入视觉退化，用于评估融合权重迁移和形态估计连续性。规划性能则在 PX4/Gazebo 闭环环境中进行验证，在 90 个严格配对场景中共完成 450 次试验，并通过统一的 $(\theta,\phi)$ 形态状态接口采用二阶柔性臂响应模型描述形态动态。表~\ref{tab:parameters} 给出了主要平台与规划参数。
-
-Morphology-feedback robustness and planning performance were evaluated under their corresponding experimental protocols. The sensing experiments introduced staged visual degradation while visual and strain measurements were synchronously acquired to assess modality reweighting and estimation continuity. Planning performance was evaluated in 450 PX4/Gazebo closed-loop trials across 90 paired scenarios, with a second-order arm-response model providing morphology dynamics through the common $(\theta,\phi)$ interface. A complementary hardware demonstration illustrates morphology-coordinated passage and object handling (Sec.~\ref{sec:hardware}). Table~\ref{tab:parameters} lists the principal platform and planning parameters for the simulation benchmark.
+\subsection{Experimental Questions and Platform}
+The planning experiment asks whether successive whole-body plans can reach the tool goal under geometric, tracking, and computation constraints. Each trial runs the planner and the PX4 flight controller in Gazebo. A second-order response model supplies the arm state. Table~\ref{tab:parameters} gives the parameters of this benchmark. Separately, synchronized camera and strain recordings test morphology estimation during visual degradation. Section~\ref{sec:hardware} relates the simulated task geometry to the sequence observed on the physical platform.
 
 \begin{table}[t]
 \centering
-\caption{Principal benchmark parameters.}
+\caption{PX4/Gazebo planning benchmark with a 0.22-m arm.}
 \label{tab:parameters}
 \small
 \begin{tabular}{lc@{\quad}lc}
@@ -504,111 +500,30 @@ Planning deadline & 15 s & Tilt bound & $15^\circ$\\\bottomrule
 \end{tabular}
 \end{table}
 
-% CN: 90场景的任务种子与规划器随机种子是不同概念；仅保留材料所载的场景协议。
-The 90 paired scenarios covered Passage-Sweep, Multi-Passage, and Clutter-Reach, each at Easy, Medium, and Hard difficulty. Each family--difficulty cell contained ten tasks with fixed scenario seeds 11--20. Planner input was a common RGB-D/SLAM occupancy snapshot; unknown voxels were occupied, and hidden geometric truth was reserved for post-hoc auditing. The supplied protocol used a Latin-rotation method order within each scenario cell. Each method was evaluated once per scenario; these task replications do not quantify repeated-run variability of a randomized planner on one fixed task.
 
-% CN: 明确三类文献基线为结构适配实现，并保留共享条件。
-\emph{Fixed} followed the common reference with one development-set-selected morphology. \emph{AET-Seq.} adapted the waypoint/configuration decomposition of~\cite{peng2025aet}, fixing the UAV reference before solving a single-section morphology corridor. \emph{WB-RRT*} adapted RRT*~\cite{karaman2011sampling,meng2022rrtstar} to the coupled six-dimensional state and continued improvement after finding a solution. \emph{Global-WB} adapted the integrated batch structure of~\cite{deng2025wholebody}, replacing the delta-arm state with PCC morphology. These were structured adaptations, not the original authors' implementations. All five methods shared map input, task reference, hard constraints, terminal tolerances, low-level control, and a 15-s per-attempt wall-clock deadline. Failed and timed-out runs remained in the success denominator.
+\subsection{Planning Outcomes and Computation}
+The evaluation comprised 30 tasks in each of three families: Passage-Sweep, Multi-Passage, and Clutter-Reach. Each family contained ten scenarios at each of three difficulty levels, with scenario seeds 11--20. Each trial used the supplied occupancy snapshot and global path. Unknown voxels were treated as occupied. The independent geometry audit used the scene geometry and the recorded robot states.
 
-% CN: 规划裕度和事后实测验收阈值分别列明，不能混写为同一阈值。
-A successful trial required at least 1.0~s terminal dwell with tool error at most 0.08~m, available measured whole-body states, and no abort or unsafe event. Post-hoc swept-clearance limits were 0.06~m for the body and 0.02~m for the arm; these differ from the planning margins in Table~\ref{tab:parameters}. Maximum position-tracking error was limited to 0.25~m and continuous hold to 20~s. Exceeding the preregistered consecutive-rejection threshold also constituted failure. Planning latency and deadline statistics included all logged attempts, whether accepted or rejected.
-
-% CN: 给出指标的单位和处理方式；不凭空指定原稿未披露的滤波窗口整数样本数。
-For each successful trial, clearance was the minimum audited separation along the measured trajectory; P05 denotes the fifth percentile of these trial minima. Tracking RMSE used time-aligned measured and issued UAV positions. Commanded velocities were deduplicated, resampled at 20~Hz, and differentiated twice with the same third-order Savitzky--Golay procedure and nominal 0.5-s window. With commanded path length $L_c>0$,
-\begin{equation}
-E_{j/L}=\frac{1}{L_c}\int_{t_0}^{t_f}\|\hat{\mathbf j}_u(t)\|_2^2\,\mathrm dt,
-\qquad [E_{j/L}]=\mathrm{m\,s^{-5}}.
-\label{eq:jerk_metric}
-\end{equation}
-This filtered command metric does not measure raw physical jerk or mathematical impulses at discontinuities. Success rates used Wilson 95\% intervals and exact paired McNemar tests. Descriptive continuous summaries used each method's successful trials; paired continuous inference used only the 54 tasks completed by all methods, with bootstrap median differences, Holm-corrected Wilcoxon tests, and rank-biserial effect sizes.
-
-\subsection{Whole-Body Success and Computation}
-% CN: 主表保留全部指定指标；P95恢复3.697的已给精度，避免把非最优值加粗。
-\begin{table*}[t]
-\centering
-\caption{Results on 90 paired scenarios (450 trials). Task time, tracking RMSE, jerk energy, and tip error are medians on each method's successful trials; clearances are P05 of per-trial minima. Planning P95 and deadline misses include all attempts.}
-\label{tab:main}
-\small\setlength{\tabcolsep}{3.1pt}
-\begin{tabular}{lcccccccc}
-\toprule
-Method & Success, \% [95\% CI] & Task & Plan P95 & Deadline & Body/arm P05 & Track RMSE & $E_{j/L}$ & Tip error\\
- & & (s) & (s) & miss (\%) & (m) & (m) & (m s$^{-5}$) & (m)\\\midrule
-Fixed & 61.1 [50.8, 70.5] & 130.72 & 2.94 & 0.00 & 0.2324/0.1490 & 0.0214 & 0.0867 & 0.0176\\
-AET-Seq. & 67.8 [57.6, 76.5] & 98.06 & 10.44 & 0.00 & 0.2295/0.1436 & 0.0285 & 0.2734 & 0.0140\\
-WB-RRT* & 75.6 [65.8, 83.3] & 168.55 & 13.02 & 0.00 & 0.1793/0.1390 & 0.0195 & 0.0619 & 0.0155\\
-Global-WB & 65.6 [55.3, 74.6] & 99.68 & 10.39 & 2.25 & 0.2286/0.1434 & 0.0270 & 0.2574 & 0.0144\\
-\textbf{\ours} & \textbf{98.9 [94.0, 99.8]} & 103.62 & 3.697 & 0.00 & 0.1827/0.1442 & 0.0240 & 0.1263 & 0.0129\\\bottomrule
-\end{tabular}
-\end{table*}
-
-\begin{figure*}[!tb]
-\centering
-\includegraphics[width=0.88\textwidth]{outcomes_revised.pdf}
-\caption{Task outcomes on the same 90 scenarios. (a) Overall success and Wilson 95\% intervals. (b) Success at each difficulty. (c) Success in each scenario family. (d) Retained failure categories. The single proposed-method failure arose from repeated candidate rejection beyond the registered threshold, not collision. Colors identify the same methods in all panels. The complete scenario-by-method outcome matrix is provided in Supplementary Fig.~S1.}
-\label{fig:outcomes}
-\end{figure*}
-
-As shown in Table~\ref{tab:main} and Fig.~\ref{fig:outcomes}, \ours{} completed 89/90 tasks (98.9\%), compared with 68/90 (75.6\%) for WB-RRT*, an increase of 23.3 percentage points. On Hard tasks, success was 96.7\% versus 40.0\% for the strongest baseline. The proposed method completed every Passage-Sweep and Multi-Passage task and 29/30 Clutter-Reach tasks. Its only failure followed repeated gate rejection beyond the registered threshold; no collision was reported for that run.
+A successful trial required at least 1.0~s of terminal dwell with tool error at most 0.08~m. The audit required minimum body and arm clearances of 0.06 and 0.02~m, respectively, position-tracking error at most 0.25~m, and continuous hold of at most 20~s. A flight abort, unsafe event, or excessive consecutive planning rejections counted as failure. The planning margins used during optimization are listed in Table~\ref{tab:parameters}.
 
 \begin{table}[t]
 \centering
-\caption{Exact paired McNemar tests on the 90 tasks.}
-\label{tab:mcnemar}
+\caption{Task completion in the PX4/Gazebo benchmark.}
+\label{tab:own_planning}
 \small
-\begin{tabular}{lrrc}
-\toprule
-Baseline & Ours only & Baseline only & Two-sided $p$\\\midrule
-Fixed & 34 & 0 & $1.16\times10^{-10}$\\
-AET-Seq. & 28 & 0 & $7.45\times10^{-9}$\\
-WB-RRT* & 21 & 0 & $9.54\times10^{-7}$\\
-Global-WB & 30 & 0 & $1.86\times10^{-9}$\\\bottomrule
+\begin{tabular}{lrr}\toprule
+Scenario family & Completed & Attempted\\\midrule
+Passage-Sweep & 30 & 30\\
+Multi-Passage & 30 & 30\\
+Clutter-Reach & 29 & 30\\\midrule
+All scenarios & 89 & 90\\\bottomrule
 \end{tabular}
 \end{table}
 
-% CN: 显著性限定为这组配对任务，不能替代更广泛环境泛化实验。
-The discordant-pair counts in Table~\ref{tab:mcnemar} favored the proposed method on the matched task set, with no baseline-only successes. Planning latency had median 2.256~s and P95 3.697~s, and no attempt exceeded the 15-s deadline. Fixed was faster at P95, while the other planning baselines were slower. These measurements establish observed finite-budget computability on the tested platform, rather than a worst-case real-time guarantee.
-
-\subsection{Execution Quality and Feasible-Space Use}
-\begin{figure*}[!tb]
-\centering
-\includegraphics[width=0.94\textwidth]{quality_revised.pdf}
-\caption{Continuous metrics on the 54 commonly successful tasks. (a) Planning latency, (b) task time, (c,d) audited body and arm clearance, (e) tracking RMSE, and (f) normalized jerk energy. Red dashed lines indicate post-hoc clearance thresholds; the logarithmic jerk scale is retained from the source. Pairing controls the evaluated task set but conditions the comparison on common success.}
-\label{fig:quality}
-\end{figure*}
-
-% CN: 共同成功子集降低幸存者集合差异，但本身仍是条件分析，不能说完全消除选择偏差。
-On the common-success subset (Fig.~\ref{fig:quality}), the proposed method's median planning latency was approximately 0.99~s above Fixed and 2.42, 6.49, and 3.64~s below AET-Seq., WB-RRT*, and Global-WB, respectively. The latter differences remained significant after Holm correction. This conditional comparison should be read alongside the all-task success results, because it excludes the harder tasks that some baselines failed.
-
-Body-clearance paired median differences were approximately 5.4--6.2~cm below those of the baselines. The smaller separation indicates use of narrower feasible corridors while meeting the shared thresholds; it is not evidence of greater or lesser safety by itself. Arm-clearance differences were smaller and not consistently significant after correction. Tracking RMSE and normalized jerk were worse than Fixed and WB-RRT* but better than AET-Seq. and Global-WB. The observed advantage was primarily task feasibility under confined geometry, with a measurable computation and execution-quality tradeoff.
-
-\subsection{Representative Passage and Rolling Updates}
-\begin{figure*}[!tb]
-\centering
-\includegraphics[width=\textwidth]{passage_mechanism_v2.pdf}
-\caption{Morphology changes the geometric outcome in a recorded Multi-Passage task. (a) Side projection of the UAV path and five measured configurations; rectangles depict the body collision envelope. (b)--(d) Equal-scale gate-normal sections compare the recorded bent arm with a straight-arm counterfactual at the same UAV position and yaw. Crosses mark the counterfactual distal point. (e) Signed arm clearances at the three selected samples, computed with the frozen three-dimensional geometry; zero indicates contact and the dashed line marks the 7~cm planning margin. Samples are selected nearest each gate's world-$y$ center. Projections explain the mechanism; the audit uses the full three-dimensional boxes and sampled robot model.}
-\label{fig:geometry}
-\end{figure*}
-
-Figure~\ref{fig:geometry} links the full passage to its local geometric constraints. The recorded bent configurations provide arm clearances of 21.6, 23.4, and 19.1~cm at G1--G3. Straightening the arm while retaining each measured UAV position and yaw changes these values to $-4.7$, $-3.3$, and $-4.8$~cm. Thus, the shape change alters the feasibility of the illustrated states, rather than merely changing the appearance of the path.
-
-Increasing altitude alone also faces competing local constraints. With the original map inflation and planning margins, G1 requires a straight-arm UAV height of at least 1.465~m, whereas its upper-body constraint permits at most 1.422~m. The corresponding lower/upper height intervals are separated by 4.3, 2.3, and 2.0~cm at G1--G3. These are per-gate interval gaps for the specified local geometry, not collision depths or a restriction to constant altitude over the complete task. The counterfactual explains the demonstrated route; fixed-morphology planning with a newly optimized route is a separate comparison.
-
-\begin{figure*}[!tb]
-\centering
-\includegraphics[width=\textwidth]{rolling_execution_v2.pdf}
-\caption{Rolling execution reconstructed from the same recorded task. (a) Actual active-window intervals W1--W7; dotted segments indicate accepted successors awaiting activation, and orange segments denote the two 1.5~s validated C$^2$ bridges. (b) The actually issued bending command and measured bending response, rather than superseded candidate tails. (c) Post-hoc body and arm clearances, displayed over the critical 0--50~cm range; dashed horizontal lines are the original audit thresholds of 6 and 2~cm. Vertical dotted lines indicate activations; green dashed lines locate the samples used in Fig.~\ref{fig:geometry}. (d) Wall-clock computation durations and nominal reserve reconstructed from trajectory metadata, indexed by window. This reserve is not corrected for execution-phase modulation.}
-\label{fig:rolling}
-\end{figure*}
-
-Figure~\ref{fig:rolling} separates planning, command issuance, and physical response. Seven accepted windows cover 124.96~s of task execution, with four direct successor handoffs and two revalidated C$^2$ bridges. The measured morphology follows the issued command while local candidates are replaced. Comparing execution with a superseded candidate tail would therefore not measure tracking error. The post-hoc sampled-model audit retains minimum body and arm clearances of 0.1889 and 0.1887~m over the recorded task.
-
-Planning and validation require 2.06--3.88~s per window in this case, below the 15~s planning deadline. The nominal metadata reserves at successor acceptance are 13.5--23.3~s. Computation durations are plotted by window because solver wall time and execution timestamps have different time bases. Supplementary Fig.~S2 retains the additional position, bending-vector, and coupling histories, while Supplementary Fig.~S8 shows the full candidate plans, including portions superseded before execution.
+The planner completed 89 of 90 tasks (Table~\ref{tab:own_planning}). In the remaining Clutter-Reach trial, successive candidates exceeded the rejection limit. Across all 494 logged planning attempts, including rejected candidates, the median computation time was 2.256~s, the 95th percentile was 3.697~s, and the maximum was 8.779~s. All attempts finished within the 15~s budget.
 
 \subsection{Handoff Continuity}
-
-
-% CN: 候选缺口与相邻命令差不是同一物理统计量，不把二者直接相除当作因果改善率。
-The benchmark recorded 391 handoffs: 339 passed the direct gate and 52 used a revalidated quintic bridge. Supplementary Fig.~S7 shows a representative transition, including the transient derivative peaks during bridging; it illustrates the issued commands rather than establishing a reduction in jerk by itself. Table~\ref{tab:handoff} separates the gap between candidate and active trajectories from the step between issued commands 50~ms apart. For example, bending-vector P95 was $22.7983^\circ$ for candidate gaps and $1.2358^\circ$ for issued steps. These are different diagnostic quantities; their comparison describes transition handling rather than a paired causal reduction ratio.
+Of 391 handoffs, 339 passed the direct gate and 52 used a revalidated quintic bridge. Table~\ref{tab:handoff} reports the discrepancy initially presented to the gate and the command step issued across 50~ms. For bending, the former compares the candidate and active bending vectors at the transition boundary. The latter measures the change in the issued bending vector between consecutive command samples.
 
 \begin{table}[t]
 \centering
@@ -627,8 +542,7 @@ Linear acceleration & m/s$^2$ & 0.0195 & 0.0392 & 0.0064 & 0.0249\\\bottomrule
 \end{tabular}
 \end{table}
 
-% CN: 72.8%按用户指定的配对统计结果保留，不用两个边际中位数反推此值。
-A separate 15-scenario paired version comparison evaluated the earlier position-only switching implementation against the revised continuity-aware implementation. Both versions completed 15/15 tasks. The supplied paired analysis reported a 72.8\% median reduction in $E_{j/L}$, with improvement on all 15 tasks. This result characterizes the combined version change; an otherwise identical single-factor handoff ablation is needed to isolate the contribution of the gate and bridge.
+
 
 \subsection{Morphology Feedback Under Visual Degradation}
 % CN: 当前附件的图像明确写有指令推导/ORB拟合参考，故保留可核验的鲁棒性口径，不重命名为动捕真值。
@@ -636,9 +550,16 @@ Recorded-data stress tests evaluated whether fusion continued to track changing 
 
 \begin{figure*}[!tb]
 \centering
-\includegraphics[width=\textwidth]{sensing_restored.png}
-\caption{Recorded-data visual-degradation tests. Columns show bending magnitude and bending-plane angle; rows show full angle trajectories, full residual records, and enlarged degradation intervals. Black denotes the supplied reference, blue ORB, orange strain, gray static fusion, and red temporal fusion. The references are command-derived and normal-ORB-fitted, respectively. The source residual limits are retained: visual-loss errors extend beyond $\pm12^\circ$ for $\theta$ and $\pm18^\circ$ for $\phi$, so clipped visual residuals must not be interpreted as small errors. The source images and their printed statistics are preserved in Supplementary Figs.~S4 and S5.}
+\includegraphics[width=\textwidth,trim=0 31bp 0 0,clip]{sensing_restored.png}
+\caption{Recorded-data visual-degradation tests. Columns show bending magnitude and bending-plane angle; rows show full angle trajectories, full residual records, and enlarged degradation intervals. Black denotes the supplied reference, blue ORB, orange strain, gray static fusion, and red temporal fusion. The references are command-derived and normal-ORB-fitted, respectively. The source residual limits are retained: visual-loss errors extend beyond $\pm12^\circ$ for $\theta$ and $\pm18^\circ$ for $\phi$, so clipped visual residuals must not be interpreted as small errors. The source images and their printed statistics are preserved in Supplementary Figs.~S2 and S3.}
 \label{fig:sensing}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=.84\textwidth]{hardware_sequence_raw.pdf}
+\caption{Physical demonstration of morphology-coordinated task execution. Frames sampled from one original video show (a) a compact configuration near the passage, (b) arm redeployment after passage, (c) target engagement, (d) return toward the receptacle, (e) object release, and (f) return and landing. Times refer to the source-video clock. All panels use the same scene crop; framed insets magnify the corresponding original frame. Robot and object shapes are preserved.}
+\label{fig:hardware_sequence}
 \end{figure*}
 
 \begin{table}[t]
@@ -657,42 +578,20 @@ Complete visual loss & 2.64 & 3.60\\\bottomrule
 
 Fusion errors increased gradually across the three stages (Table~\ref{tab:sensing}). Mean visual/strain weights in the highlighted degradation intervals were 0.126/0.874 for $\theta$ and 0.039/0.961 for $\phi$. Under complete loss, ORB-only errors reached approximately $49.4^\circ$ and $96.8^\circ$, whereas fusion remained at the strain-dominated error scale. The evidence supports modality reweighting and continued output during visual loss, without claiming that fusion outperforms every individual sensor in every condition.
 
-\subsection{Flight-Load Proxies and Attribution}
-% CN: PX4目标与实测姿态之间的统计不能直接当作规划倾角与实测之间的统计。
-The supplied flight-response traces are provided in Supplementary Fig.~S3. Maximum realized tilt ranged from approximately $1.655^\circ$ to $2.345^\circ$, below the $15^\circ$ planning limit. Realized-versus-PX4-target tilt RMSE was $0.061^\circ$--$0.107^\circ$, with correlation 0.909--0.967. These statistics characterize attitude tracking; visual agreement with the planned tilt proxy is complementary evidence, not the same comparison.
-
-The maximum thrust ratio was 1.0026--1.0058, consistent with near-hover motion. The proxy and low-pass IMU specific-force magnitude divided by $g$ differed by RMSE 0.0010--0.0011 but had weak temporal correlation ($-0.079$ to 0.167). IMU specific force is not a direct rotor-thrust measurement. The results therefore establish only low dynamic demand in the tested tasks, not accurate high-dynamic thrust prediction. The paired version comparison supports improved transition behavior without isolating each implementation change. The main success result belongs to the complete planning pipeline because separate seed and adaptive-plane ablations were not supplied.
+\subsection{Attitude and Load Proxies}
+Three additional PX4/Gazebo trajectories, one per task family, provide time-aligned PX4 target and simulated attitude records (Supplementary Fig.~S1). Across these trajectories, maximum realized tilt ranged from $1.655^\circ$ to $2.345^\circ$. The tilt RMSE relative to the PX4 target was $0.061^\circ$--$0.107^\circ$. The maximum planned thrust-to-weight proxy ranged from 1.0026 to 1.0058. Its rank correlation with low-pass simulated IMU specific-force magnitude divided by $g$ ranged from $-0.079$ to 0.167. These traces characterize the low-dynamic flight regime of the examples. Rotor thrust was not measured.
 
 \input{hardware_section}
 
 \section{Discussion}\label{sec:discussion}
-% CN: 集中说明形态模型、采样几何及感知证据边界，避免在每段重复免责声明。
-The useful operating regime is a single predominantly bending section in a static mapped environment under low-dynamic flight. Within this regime, morphology changes the usable corridor and must be planned jointly with vehicle motion. Nonuniform curvature, significant twist, rapid arm motion, and detailed camera/gripper housing geometry require richer modeling or a more conservative envelope. The yaw-only planning geometry and sampled distance checks limit the interpretation of acceptance; they do not provide a continuous-time or full-dynamics safety proof.
+The planning study covers a static occupancy snapshot, a single predominantly bending section, and low-dynamic motion. Changing morphology changes where the tool lies relative to the vehicle and which parts of the arm occupy a passage. The reported completion and handoff statistics describe the joint planner, dense validator, and execution gate operating together. The sampled clearance checks and yaw-based planning geometry limit how closely this evaluation represents rapid flight, torsion, or nonuniform bending.
 
-% CN: 贡献边界与实际验证相对应；给出缺口而不堆叠未来工作段落。
-The experiments support different parts of the architecture at different levels. The planning benchmark demonstrates task feasibility and command-transition handling with a modeled morphology response. The recorded sensing study demonstrates graceful reweighting under visual degradation. The hardware demonstration illustrates the correspondence between compact passage morphology and redeployed interaction morphology in a physical task. A causal estimate of the benefit of visual--strain feedback to planning requires matched end-to-end trials. Independent mocap-referenced test traces are also needed to establish absolute sensing accuracy. These missing comparisons do not invalidate the observed planning results, but they delimit the claims that can be attributed to the complete architecture.
-
-% CN: 计算预算、困难任务成功率与连续指标之间的取舍是讨论重点。
-The planner trades extra computation and some execution smoothness against access to difficult corridors. It achieved higher success while Fixed and WB-RRT* retained better values on selected continuous metrics. Zero observed deadline misses does not imply a worst-case bound, and common-success analysis does not replace all-task evaluation. Likewise, finite-tolerance direct handoffs and derivative-matched command bridges should be judged by the disclosed command and task metrics rather than by unsupported physical continuity guarantees.
+The sensing experiment addresses a separate dependence: when distal tracking degrades, surface strain can sustain the morphology estimate. Its evaluation references are command-derived for bending magnitude and fitted to normal vision for bending plane. Quantifying how estimation errors affect whole-body passage requires synchronized estimator, planner, and flight records. In the physical task, compact passage and subsequent arm redeployment are directly visible; quantitative tracking and clearance would require synchronized measurements.
 
 \section{Conclusion}\label{sec:conclusion}
-% CN: 结论概括机制和证据，不重复完整摘要数据。
-This work treats continuum morphology as a whole-body planning variable and separates local trajectory generation from execution authorization. Geometry-guided initialization and joint spline refinement address confined-space feasibility, while boundary inheritance and revalidated bridging manage the transitions created by rolling replanning. The paired benchmark showed that this combination improved difficult-task completion within the tested computation budget, and the paired version comparison showed improved transition behavior. A compatible visual--strain frontend maintained morphology output during visual loss in recorded-data tests. The hardware demonstration illustrates compact passage, arm redeployment, and subsequent object handling. Together, these results establish a modular basis for low-dynamic aerial continuum planning. Future work will quantify end-to-end hardware performance using synchronized onboard mapping, morphology, and trajectory records.
+We presented a rolling whole-body planner that treats single-section bending as a trajectory variable and checks both candidate feasibility and continuity at handoff. In the PX4/Gazebo benchmark it completed 89 of 90 tasks and met the computation budget on all 494 attempts. The recorded sensing study documents morphology feedback under visual loss. The physical sequence shows how passage traversal and object handling use different arm configurations within one task.
 
-\appendices
-\section{Development Checks for the New Simulation Backend}
-The new backend is qualified separately from the historical benchmark. Its current eight-element, alternating-axis arm discretization was compared with the SDK-sized PCC reference at bending angles $0^\circ$, $30^\circ$, $60^\circ$, $90^\circ$, and $120^\circ$ in eight bending planes. The maximum endpoint and bending-vector errors were 2.136\,mm and $1.089^\circ$, respectively. These are numerical kinematic consistency checks, not errors measured on the physical robot.
-
-Runtime commands and the new backend's planning model are limited to $118^\circ$, retaining a $2^\circ$ reserve below the $120^\circ$ evaluation bound. Four fixed-airframe actuator tests, each integrated for 14\,s in a different bending plane, produced a maximum total discrete curvature of $115.597^\circ$ with no evaluated step above $120^\circ$. Raw integrated states were retained without clipping. This test characterizes the current actuator model; stiffness, damping, friction, and mass properties still require physical identification before quantitative transfer claims.
-
-The revised configuration combines the SUPER airframe~\cite{superhardware} with the continuum module and a native long-landing-gear assembly. CAD registration gives rotor-axis coordinates of approximately $\pm99.0$\,mm in the body $x$ and $y$ directions. The rigid assembly spans $z\in[-374.03,120.45]$\,mm relative to the UAV origin; its vertical offset must therefore be represented explicitly in the planning envelope. Camera placement preserves the native camera--MID360 mounting relation. Camera mesh fronts and optical axes were checked together using rendered targets.
-
-The installed Qingyu visualization node supplies 15 spherical backbone markers of 50\,mm diameter. These markers are attached to the integrated numerical backbone, while the complete gripper surface is retained from the SDK mesh. An isolated API-to-visualization check revealed the convention $\beta_{\rm SDK}=\pi/2-\varphi$ (modulo $2\pi$), which is now applied at the SDK adapter. Seven SDK command-transport cases and ten model/interface checks passed. This establishes software-coordinate consistency; physical feedback and actuator identification remain separate steps.
-
-For the revised assembly, a fixed-base test and an internally controlled hover test each integrated 14\,s without state replay. The maximum total curvature was $115.556^\circ$, with no contact or evaluated step above $120^\circ$. The hover test used simulator-state feedback and is not a PX4 or hardware flight result. A separate 48-configuration self-collision audit rejected 18 samples. Appendix~\ref{app:wholebodygeometry} follows one such transition through candidate generation and trajectory handoff. Parameter identification, flight-control and perception integration, and multiwindow flight evaluation remain ongoing. These development checks are excluded from the historical benchmark.
-
-\input{round_d_geometry}
-
+\FloatBarrier
 \balance
 \bibliographystyle{IEEEtran}
 \bibliography{references}
