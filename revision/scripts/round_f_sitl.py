@@ -174,6 +174,7 @@ def run(out,tag,pitch_i):
                 ground.mav.heartbeat_send(6,8,0,0,4)
             phase_t=None if released is None else (k-released)*TICK
             phase,ref,theta=reference(phase_t)
+            if phase_t is not None and phase_t>39.: phase='log_tail'
             if k%10==0 and ground_seen:
                 # A neutral virtual joystick supplies the monitored manual link in this isolated SITL.
                 ground.mav.manual_control_send(SYS,0,0,0,0,0)
@@ -235,7 +236,8 @@ def run(out,tag,pitch_i):
                      rotor_N=np.round(motor*12,3).tolist(),wall_s=round(time.monotonic()-ts0,1)))
                 if released is None and sim_t>=48:
                     raise RuntimeError('No free lift-off in 48 simulated seconds; inspect estimator, arming and rotor signals')
-            if phase_t is not None and phase_t>=39.: break
+            # Keep the simulator live beyond the final scoring stamp while the native logger drains.
+            if phase_t is not None and phase_t>=40.: break
             k+=1
     except Exception as e:
         err=repr(e);event('error',detail=err)
@@ -253,6 +255,7 @@ def run(out,tag,pitch_i):
             server.close();ground.close();log.close()
             dump(out/'run.json',dict(tag=tag,error=err,release_us=None if released is None else CLOCK_ORIGIN_US+4000*released,
                  end_us=us,packets=npack,contact_integration_steps=plant.contact_count,
+                 max_tilt_integration_deg=float(np.degrees(np.arccos(np.clip(plant.minimum_body_up,-1.,1.)))),
                  max_total_curvature_deg=plant.max_curve,max_ticks_since_new_packet=max_age,ack_latest=latest_ack,
                  ekf_launch_origin_ned=None if origin is None else origin.tolist()))
             candidates=list(runtime.rglob('*.ulg'))

@@ -48,6 +48,7 @@ class Plant:
         self.arm=MujocoArmBackend(self.m,self.d,8)
         self.contact_count=0
         self.max_curve=0.
+        self.minimum_body_up=1.
         self.mass=float(self.m.body_subtreemass[self.base])
         # Each column of A maps one PX4 motor's force into collective and FRD moments.
         a=allocation_matrix(self.m)[:,CHANNELS].copy()
@@ -70,6 +71,8 @@ class Plant:
             mujoco.mj_step(self.m,self.d)
             if free:
                 self.contact_count+=int(self.d.ncon>0)
+                quat=self.d.qpos[3:7]
+                self.minimum_body_up=min(self.minimum_body_up,1.-2.*float(quat[1]**2+quat[2]**2))
                 q=self.d.qpos[self.arm.qpos_ids].reshape(-1,2)
                 self.max_curve=max(self.max_curve,float(np.degrees(np.linalg.norm(q,axis=1).sum())))
         mujoco.mj_forward(self.m,self.d)
