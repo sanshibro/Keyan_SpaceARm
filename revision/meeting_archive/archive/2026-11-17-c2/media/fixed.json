@@ -1,0 +1,27 @@
+{
+  "platform_id": "super_qingyu_metric_candidate_v1",
+  "mode": "fixed",
+  "sim_seconds": 13.99999999999768,
+  "wall_seconds": 10.203076632999,
+  "physics": "mj_step; qpos initialized once, no pose replay during integration",
+  "mass_kg": 2.2499999999999996,
+  "mass_calibrated": false,
+  "command_cap_deg": 118.0,
+  "nominal_motion_precheck": {
+    "accepted": true,
+    "checked": 478,
+    "platform_id": "super_qingyu_metric_candidate_v1",
+    "angular_step_deg": 0.5,
+    "clearance_m": 0.001,
+    "kind": "dense_sampled_self_collision; not continuous certification"
+  },
+  "peak_total_curvature_deg": 115.55596177291704,
+  "above_120_steps": 0,
+  "contact_steps": 0,
+  "saturated_steps": 0,
+  "max_position_error_m": 0.0,
+  "max_tilt_deg": 0.0,
+  "accepted_for_task_evaluation": false,
+  "events": [],
+  "component_check_passed": true
+}

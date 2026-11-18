@@ -1,0 +1,101 @@
+{
+  "cover": "mechanism.png",
+  "files": [
+    {
+      "bytes": 153987,
+      "caption": "按 G1 至 G3 对比实际弯曲形态与同一机身位姿下的直臂。适合先在汇报里放大单门，再对照三门。",
+      "file": "mechanism.png",
+      "kind": "curve",
+      "sha256": "c10921d0b0e4b6f73023bf566dc847e55520c26bc7bb4b45122bee55e19e8426",
+      "title": "三门局部截面与弯臂净空"
+    },
+    {
+      "bytes": 227022,
+      "caption": "沿记录的时间轴读取已下发指令与响应。七个窗口不能当成七次独立穿门。",
+      "file": "rolling.png",
+      "kind": "curve",
+      "sha256": "738106d59478bb2fbe3cc9cfec256d88ff5fcae01b374794f8b275807ce618ae",
+      "title": "滚动窗口、下发指令与实际响应"
+    },
+    {
+      "bytes": 247905,
+      "caption": "归档时从当轮 964 帧状态重建；原记录约 125 秒。左侧是侧视轨迹，右侧是最近门截面，底部是弯曲角。画面不是机载相机录像。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "replay-poster.png",
+      "sha256": "cc64fa68e0cd03b3a81afbe6cf94c0b2a51a5b18a613c9f1931f31f5bf5116d6",
+      "title": "三门侧视几何回放 · 4 倍速"
+    },
+    {
+      "bytes": 36978,
+      "caption": "来自归档回放中的一帧。",
+      "file": "replay-poster.png",
+      "kind": "poster",
+      "sha256": "59363970dfdbfee2f04e5d760cbd112475026e046cdc8c07dbab8f96b6d7717c",
+      "title": "三门回放封面"
+    },
+    {
+      "bytes": 1258765,
+      "caption": "阶段 A 保存的两页正文预览，适合核对图注与论述。",
+      "file": "paper.pdf",
+      "kind": "document",
+      "sha256": "b45988282c2c2765b5a8d04efa66b52ebe9a2ff4105802a3afe4a9b92369d6e0",
+      "title": "论文中两张图所在页"
+    },
+    {
+      "bytes": 1456,
+      "caption": "逐门给出位姿、弯曲角、净空及直臂反事实所需高度。",
+      "file": "gates.csv",
+      "kind": "data",
+      "sha256": "26f74c58c9d7c59eceaa65a6d548f747b989a95b78d28af95aa460560767e57b",
+      "title": "三门局部采样表"
+    },
+    {
+      "bytes": 1226,
+      "caption": "窗口开始、接管时刻、规划耗时与接续类型。",
+      "file": "windows.csv",
+      "kind": "data",
+      "sha256": "28d8cfe03c7080858c9f1ff273bb4c6ed753b2c6dcb74b0acd655fefeb935c69",
+      "title": "七个窗口的接续事件"
+    },
+    {
+      "bytes": 406860,
+      "caption": "下发形态与记录状态按时间戳配对。",
+      "file": "issued.csv",
+      "kind": "data",
+      "sha256": "803c197bd75f7c9e689673afd3fb470141889bf748b274ed0e42d3f240c723f9",
+      "title": "指令与实际状态时序"
+    },
+    {
+      "bytes": 830674,
+      "caption": "各帧的进度、高度、弯曲角和臂中心线。",
+      "file": "replay.json",
+      "kind": "data",
+      "sha256": "734eb598286a67e878f8b03f9d65f5d08c643461aaa3c95ec7a376c977f82efe",
+      "title": "几何回放原始输入"
+    }
+  ],
+  "guide": [
+    "先看 G1：固定同一机身位姿，弯臂净空约 +21.6 cm；把臂反事实地伸直，净空约 −4.7 cm。这里比较的是同一时刻的两种几何。",
+    "播放侧视回放观察三次接近门洞的姿态，再看执行曲线：后一个窗口可以取代前一个窗口未执行的尾段。"
+  ],
+  "id": "2026-11-17-a",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "27923fca2106064f06abc4d007bcffe700ae2104ef937860492d8e1ee738d414"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "a2c93b1289a4ed358f43d843a9d2943e91c7cb51c825e60316275fe48c81fa2e"
+    }
+  },
+  "revision": "5be307981b53014c87e06532039102bf1ffcd86f",
+  "schema": 1,
+  "scope": "三门来自一次已记录的仿真任务；直臂结果是事后几何计算，不是另飞的一次试验，也不能据此估计跨场景成功率。",
+  "source_note": "分析与数据：5be3079；最终图件保存在 688e16a，论文页取自当轮本机预览。",
+  "stage": "A · 三门任务",
+  "summary": "用同一条 PX4/Gazebo 仿真记录对照弯臂与直臂，并把七个滚动窗口的接续还原到同一时间轴。",
+  "title": "弯臂如何改变穿门净空",
+  "when": "2026-11-17T19:51:00+08:00"
+}

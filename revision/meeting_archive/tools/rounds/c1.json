@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "id": "2026-11-17-c1",
+  "stage": "C1 · 修正前",
+  "title": "SUPER 机架与柔性臂初版",
+  "when": "2026-11-17T21:42:00+08:00",
+  "summary": "保存第一次统一 SUPER 机架与柔性臂后的外观、碰撞包络和两段积分录像，供与修正后的安装位置对照。",
+  "guide": [
+    "先观察整机和侧视包络，记下相机安装、夹爪外形与下一轮的差别。",
+    "播放固定机身和悬停两段录像，再看同一批 CSV 的弯曲响应和机体位移曲线。"
+  ],
+  "scope": "这是修正前的模型。悬停使用仿真真值反馈的内部控制器；这些结果属于模型检查，不是实飞或整机穿门结果。",
+  "revision": "1327b59aa67e2b1440659b5fa4fb6515e859e2b0",
+  "source_note": "两个视频按原始记录转为 H.264；本页响应图由本次归档从该提交的 CSV 补绘。",
+  "cover": "assembly.png",
+  "files": [
+    {
+      "kind": "image",
+      "file": "assembly.png",
+      "title": "修正前整机",
+      "caption": "保留旧版相机与末端外观，用于逐轮回看。"
+    },
+    {
+      "kind": "image",
+      "file": "envelope.png",
+      "title": "侧视碰撞包络",
+      "caption": "该轮仿真对整机和柔性臂采用的碰撞表示。"
+    },
+    {
+      "kind": "curve",
+      "file": "response.png",
+      "title": "弯曲响应与悬停位移",
+      "caption": "左：固定机身和悬停的总弯曲与指令；右：悬停相对首个采样时刻的位移。由该轮时序补绘。"
+    },
+    {
+      "kind": "video",
+      "file": "fixed.mp4",
+      "title": "固定机身弯臂 · 初版",
+      "caption": "原始积分录像转为 H.264；固定机身用于单独观察臂的响应。",
+      "poster": "fixed.png"
+    },
+    {
+      "kind": "video",
+      "file": "hover.mp4",
+      "title": "内部控制器悬停 · 初版",
+      "caption": "同版机体与臂在悬停条件下的 14 秒积分记录。",
+      "poster": "hover.png"
+    },
+    {
+      "kind": "poster",
+      "file": "fixed.png",
+      "title": "固定机身原始帧",
+      "caption": "来自同轮积分。"
+    },
+    {
+      "kind": "poster",
+      "file": "hover.png",
+      "title": "悬停原始帧",
+      "caption": "来自同轮积分。"
+    },
+    {
+      "kind": "document",
+      "file": "response.pdf",
+      "title": "响应曲线 PDF",
+      "caption": "归档补绘，可放大与 PNG 核对。"
+    },
+    {
+      "kind": "data",
+      "file": "fixed.csv",
+      "title": "固定机身状态 CSV",
+      "caption": "逐时记录指令、形态和机身位置。"
+    },
+    {
+      "kind": "data",
+      "file": "hover.csv",
+      "title": "悬停状态 CSV",
+      "caption": "与本轮悬停录像对应。"
+    },
+    {
+      "kind": "data",
+      "file": "fixed.json",
+      "title": "固定机身运行摘要",
+      "caption": "记录该轮指令上限、积分时长和接触步。"
+    },
+    {
+      "kind": "data",
+      "file": "hover.json",
+      "title": "悬停运行摘要",
+      "caption": "记录该轮位置误差、姿态和总弯曲峰值。"
+    }
+  ]
+}

@@ -17,3 +17,7 @@ Public stage snapshots: https://aerial-continuum-research-monitor.consideratepas
 ## Next milestone
 
 Reconcile the native CAD dimensions/frames/collision envelope, the SDK command/feedback contract and the current MuJoCo platform before a new free-flight experiment. Reuse the paper's actual rolling-buffer/gate/bridge implementation, then add PX4 SITL and sensor mapping in separately verified steps. Do not substitute per-leg stop-and-go execution for rolling handoff evidence.
+
+## 组会逐轮归档
+
+[公网归档目录](https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/index.html) · [离线归档入口](meeting_archive/archive/index.html) · [下一轮的归档与发布步骤](meeting_archive/README.md)。每轮结束时冻结当轮图、曲线、视频、数据与论文页，校验旧轮与离线包后发布并暂停。

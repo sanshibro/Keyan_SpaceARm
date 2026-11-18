@@ -1,0 +1,93 @@
+{
+  "cover": "gate-cad.png",
+  "files": [
+    {
+      "bytes": 1068634,
+      "caption": "按原设计几何呈现整机与门框，检查尺寸和构图。",
+      "file": "gate-cad.png",
+      "kind": "image",
+      "sha256": "92a939523fd4ee1cb2fb0fb1838cdac082fe4489ec4e0fcccdc3e441f790ed53",
+      "title": "门洞中的原生 CAD · 90° 构型"
+    },
+    {
+      "bytes": 719581,
+      "caption": "同一套原生 16 版装配的近景。",
+      "file": "assembly.png",
+      "kind": "image",
+      "sha256": "982fb1cbd5690c837c573e4cb343ac4be7f3195681bcf27f17276317b87f4850",
+      "title": "整机、起落架与末端组件"
+    },
+    {
+      "bytes": 88609,
+      "caption": "对照请求、受限指令与积分后的总弯曲，读出相对 120° 上限的余量。",
+      "file": "bend.png",
+      "kind": "curve",
+      "sha256": "5ca5449fdd578293e254657ee367c154701cee5f51ad4c60b9bf9e005530e859",
+      "title": "四个方位的弯曲响应"
+    },
+    {
+      "bytes": 1121465,
+      "caption": "会中放大坐标与图例时使用。",
+      "file": "bend.pdf",
+      "kind": "document",
+      "sha256": "f279776b4237c820395c787d613522ed10fe80a580c65983c802de218e1f2a63",
+      "title": "弯曲曲线 PDF"
+    },
+    {
+      "bytes": 2862770,
+      "caption": "两页：原生整机视图、运动学与弯曲核查。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "1dce067b2cdf3644ded5eb3238c9ed295676b97fc7ef5aa0c648f0e9e9d7a4a2",
+      "title": "CAD 与模型核查简报"
+    },
+    {
+      "bytes": 1205309,
+      "caption": "保留当时版本，可与阶段 C 的修订附页对照。",
+      "file": "paper.pdf",
+      "kind": "document",
+      "sha256": "d5f02f476b178cac93a859b66a61e5ceb6c41e3a7036cafb34d046243dae47dc",
+      "title": "论文新增的模型核查页"
+    },
+    {
+      "bytes": 547566,
+      "caption": "包含方位角、请求角度、下发角度与积分结果。",
+      "file": "bend.csv",
+      "kind": "data",
+      "sha256": "6659f3de6e2f4c7ebf6d0aedc1eff616126eff2c15af840d5073befb414fa8cc",
+      "title": "弯曲时序"
+    },
+    {
+      "bytes": 975,
+      "caption": "固定机身执行器模型的运行摘要。",
+      "file": "bench.json",
+      "kind": "data",
+      "sha256": "ab0e49ca16c30c826357b3e6b444dee9ff1819329189b6e9674ab30a9b77c68e",
+      "title": "四个方位的峰值与判定"
+    }
+  ],
+  "guide": [
+    "用门洞图交代机体、起落架和臂的空间关系；图中 90° 是 CAD 展示构型。",
+    "再看弯曲曲线：四个方位分别施加最高 118° 指令，模型最大总弯曲约 115.60°。"
+  ],
+  "id": "2026-11-17-b",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "202de60d0abd7f608e5d223fa16a0f7230366126e27fd9963241f536ed4ec131"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "41b6908f75730c41478bf1a265b572aa93ed15352f18981e9f24cee8e358e3f8"
+    }
+  },
+  "revision": "1b99084e84531326da2f11659364f8ec2d263d75",
+  "schema": 1,
+  "scope": "门洞图是 Mitsuba 静态渲染；曲线来自独立的固定机身 MuJoCo 检查。该轮没有用这套 CAD 飞越门洞。",
+  "source_note": "16 版 CAD、独立执行器记录及当轮论文附件。",
+  "stage": "B · 原生 CAD",
+  "summary": "把原生整机 CAD 外观与独立的固定机身弯曲检查放在同一轮评审，区分外观看到了什么、积分验证了什么。",
+  "title": "16 版整机与弯曲上限",
+  "video_note": "该轮交付的是原生 CAD 静帧和独立的固定机身曲线，未归档本轮 MP4。",
+  "when": "2026-11-17T20:42:00+08:00"
+}

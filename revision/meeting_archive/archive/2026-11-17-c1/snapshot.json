@@ -1,0 +1,126 @@
+{
+  "cover": "assembly.png",
+  "files": [
+    {
+      "bytes": 151885,
+      "caption": "保留旧版相机与末端外观，用于逐轮回看。",
+      "file": "assembly.png",
+      "kind": "image",
+      "sha256": "e3cf42ddf02e0fa5c7dc02051b43c49c0e208242ab820b9f41a5c6778c1d89cc",
+      "title": "修正前整机"
+    },
+    {
+      "bytes": 146577,
+      "caption": "该轮仿真对整机和柔性臂采用的碰撞表示。",
+      "file": "envelope.png",
+      "kind": "image",
+      "sha256": "ab08f09a7b451e39ed1b5395fc5a878fd0fb65f04e2b052104ee551d62b43372",
+      "title": "侧视碰撞包络"
+    },
+    {
+      "bytes": 120200,
+      "caption": "左：固定机身和悬停的总弯曲与指令；右：悬停相对首个采样时刻的位移。由该轮时序补绘。",
+      "file": "response.png",
+      "kind": "curve",
+      "sha256": "e9aa18e4b3154d0187e7cde1af190d2b27fc6d54a9cfc2a56328a5564fbff4bb",
+      "title": "弯曲响应与悬停位移"
+    },
+    {
+      "bytes": 371831,
+      "caption": "原始积分录像转为 H.264；固定机身用于单独观察臂的响应。",
+      "file": "fixed.mp4",
+      "kind": "video",
+      "poster": "fixed.png",
+      "sha256": "62db3cb1a2a74c0471aec14d89d6891a10d7691d94fe944c1471d67871ceb86e",
+      "title": "固定机身弯臂 · 初版"
+    },
+    {
+      "bytes": 1166714,
+      "caption": "同版机体与臂在悬停条件下的 14 秒积分记录。",
+      "file": "hover.mp4",
+      "kind": "video",
+      "poster": "hover.png",
+      "sha256": "157a9c8a96b5a68288dcf880dff73d1033e70cffe0863dafb4ef2b98e02f026c",
+      "title": "内部控制器悬停 · 初版"
+    },
+    {
+      "bytes": 172571,
+      "caption": "来自同轮积分。",
+      "file": "fixed.png",
+      "kind": "poster",
+      "sha256": "dd5c65fd044980d7424b5afb9d268b2b4516dfbbd05c1433e7b3c39e04a4eec0",
+      "title": "固定机身原始帧"
+    },
+    {
+      "bytes": 172931,
+      "caption": "来自同轮积分。",
+      "file": "hover.png",
+      "kind": "poster",
+      "sha256": "32ee5fa2675a2ff25ad1916512e25d14ce2f61681cb18bc71f683b58feba781f",
+      "title": "悬停原始帧"
+    },
+    {
+      "bytes": 20559,
+      "caption": "归档补绘，可放大与 PNG 核对。",
+      "file": "response.pdf",
+      "kind": "document",
+      "sha256": "8f95a39ca9020e35358e6dbc79d34249be94cd4a1bde09edc968be8e083a663a",
+      "title": "响应曲线 PDF"
+    },
+    {
+      "bytes": 118856,
+      "caption": "逐时记录指令、形态和机身位置。",
+      "file": "fixed.csv",
+      "kind": "data",
+      "sha256": "121b665416f7f0c47d37048d8cb585f23616e601ab6b974d563123fd9e97c6a6",
+      "title": "固定机身状态 CSV"
+    },
+    {
+      "bytes": 192003,
+      "caption": "与本轮悬停录像对应。",
+      "file": "hover.csv",
+      "kind": "data",
+      "sha256": "b4369d2eb37c1f453f7df20f381167418bfdea7799a8414d883aa2403eb94000",
+      "title": "悬停状态 CSV"
+    },
+    {
+      "bytes": 845,
+      "caption": "记录该轮指令上限、积分时长和接触步。",
+      "file": "fixed.json",
+      "kind": "data",
+      "sha256": "c9610c525011c02d90a4a380310302733f93ff73db805078184dfb09bdc754a0",
+      "title": "固定机身运行摘要"
+    },
+    {
+      "bytes": 880,
+      "caption": "记录该轮位置误差、姿态和总弯曲峰值。",
+      "file": "hover.json",
+      "kind": "data",
+      "sha256": "49dd5ccd8466feb3b2eddc251291e91132bac72d3324cf3872a2877321f62213",
+      "title": "悬停运行摘要"
+    }
+  ],
+  "guide": [
+    "先观察整机和侧视包络，记下相机安装、夹爪外形与下一轮的差别。",
+    "播放固定机身和悬停两段录像，再看同一批 CSV 的弯曲响应和机体位移曲线。"
+  ],
+  "id": "2026-11-17-c1",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "42855bf9a191d644eebf06872145e420cb3d6beab787999205f129af6a65e807"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "d1e66cae256788ea61cd7079e0dfe50e0898daedbda28e62a9d7e0537803fa52"
+    }
+  },
+  "revision": "1327b59aa67e2b1440659b5fa4fb6515e859e2b0",
+  "schema": 1,
+  "scope": "这是修正前的模型。悬停使用仿真真值反馈的内部控制器；这些结果属于模型检查，不是实飞或整机穿门结果。",
+  "source_note": "两个视频按原始记录转为 H.264；本页响应图由本次归档从该提交的 CSV 补绘。",
+  "stage": "C1 · 修正前",
+  "summary": "保存第一次统一 SUPER 机架与柔性臂后的外观、碰撞包络和两段积分录像，供与修正后的安装位置对照。",
+  "title": "SUPER 机架与柔性臂初版",
+  "when": "2026-11-17T21:42:00+08:00"
+}

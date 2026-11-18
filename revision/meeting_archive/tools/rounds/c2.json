@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "id": "2026-11-17-c2",
+  "stage": "C2 · 相机与夹爪修正",
+  "title": "按原生 CAD 核对相机与 SDK 夹爪",
+  "when": "2026-11-17T22:35:00+08:00",
+  "summary": "以原生总装为参照核对机身相机，把末端相机放回夹爪上方；保存修正后固定机身与悬停两种条件的积分记录。",
+  "guide": [
+    "先放大「原生 CAD 与修正模型」：以雷达为参照核对机身相机位置，再看末端相机和夹爪的朝向。",
+    "对照曲线与两段 14 秒视频：两次积分的最大总弯曲均约 115.56°。右图的 48 个采样形态中有 18 个发生自碰撞。",
+    "需要引用数字时，打开对应运行摘要或下载逐时 CSV；汇报结束时可展示论文第 13–15 页。"
+  ],
+  "scope": "两段录像来自 MuJoCo 积分。悬停使用内部控制器与真值反馈；本轮尚未验证 PX4、感知闭环或真实飞行。",
+  "revision": "99a4c60fab9441ac777604d6bd28e8e819e93a98",
+  "source_note": "积分与修正模型：2dbbf2a；相机并排对照：99a4c60。",
+  "cover": "comparison.png",
+  "files": [
+    {
+      "kind": "image",
+      "file": "comparison.png",
+      "title": "原生 CAD 与修正模型：相机安装对照",
+      "caption": "先对齐雷达与上层支架，再比较机身相机的高度、前后位置及正面朝向。"
+    },
+    {
+      "kind": "image",
+      "file": "assembly.png",
+      "title": "修正后的 SUPER 整机",
+      "caption": "SDK 的臂体可视化和完整夹爪网格装入同一平台。"
+    },
+    {
+      "kind": "image",
+      "file": "body-camera.png",
+      "title": "机身相机与雷达支架",
+      "caption": "核对机身相机在上层支架与雷达的相对位置。"
+    },
+    {
+      "kind": "image",
+      "file": "distal-camera.png",
+      "title": "末端相机与 SDK 夹爪",
+      "caption": "镜头位于夹爪上侧，光轴朝向抓取方向。"
+    },
+    {
+      "kind": "curve",
+      "file": "checks.png",
+      "title": "弯曲响应与形态自碰撞",
+      "caption": "左边比较固定机身和悬停的积分响应；右边检查 48 个离散形态。两条已执行轨迹无接触并不代表所有形态都安全。"
+    },
+    {
+      "kind": "video",
+      "file": "fixed.mp4",
+      "title": "固定机身 · 14 秒",
+      "caption": "观看 0° → 90° → 118° → 0° 指令下的弯曲与回正。",
+      "poster": "fixed.png"
+    },
+    {
+      "kind": "video",
+      "file": "hover.mp4",
+      "title": "弯臂悬停 · 14 秒",
+      "caption": "同样指令下由内部控制器保持悬停，可和固定机身录像并排比较。",
+      "poster": "hover.png"
+    },
+    {
+      "kind": "poster",
+      "file": "fixed.png",
+      "title": "固定机身原始帧",
+      "caption": "来自修正后的固定机身运行。"
+    },
+    {
+      "kind": "poster",
+      "file": "hover.png",
+      "title": "悬停原始帧",
+      "caption": "来自修正后的悬停运行。"
+    },
+    {
+      "kind": "document",
+      "file": "checks.pdf",
+      "title": "弯曲与碰撞曲线 PDF",
+      "caption": "矢量版，适合投屏放大和引用。"
+    },
+    {
+      "kind": "document",
+      "file": "review.pdf",
+      "title": "阶段 C 模型核查简报",
+      "caption": "两页：修改后的平台和模型积分检查。"
+    },
+    {
+      "kind": "document",
+      "file": "paper.pdf",
+      "title": "论文附录 · 第 13–15 页",
+      "caption": "当轮论文 PDF 的三个原页；为控制离线汇报包大小，此文件另行下载。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "fixed.csv",
+      "title": "固定机身状态 CSV",
+      "caption": "指令、积分弯曲量、机身位置及接触计数。"
+    },
+    {
+      "kind": "data",
+      "file": "hover.csv",
+      "title": "悬停状态 CSV",
+      "caption": "与悬停视频配套的逐时记录。"
+    },
+    {
+      "kind": "data",
+      "file": "fixed.json",
+      "title": "固定机身运行摘要",
+      "caption": "包括弯曲峰值与是否超过 120°。"
+    },
+    {
+      "kind": "data",
+      "file": "hover.json",
+      "title": "悬停运行摘要",
+      "caption": "包括约 3.91 mm 的位置误差峰值、接触步数和模型适用范围。"
+    }
+  ]
+}

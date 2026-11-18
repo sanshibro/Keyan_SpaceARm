@@ -1,0 +1,34 @@
+{
+  "test": "fixed-airframe actuator dynamics qualification",
+  "integration": "mj_step; no state overwrite after initialization",
+  "command_limit_deg": 118,
+  "physical_limit_deg": 120,
+  "planes": [
+    {
+      "phi_deg": 0,
+      "peak_total_curvature_deg": 115.59673077734101,
+      "hard_limit_violation_steps": 0,
+      "command_limit_events": 7760
+    },
+    {
+      "phi_deg": 90,
+      "peak_total_curvature_deg": 115.52469674309053,
+      "hard_limit_violation_steps": 0,
+      "command_limit_events": 7760
+    },
+    {
+      "phi_deg": 180,
+      "peak_total_curvature_deg": 115.45537611608194,
+      "hard_limit_violation_steps": 0,
+      "command_limit_events": 7760
+    },
+    {
+      "phi_deg": 270,
+      "peak_total_curvature_deg": 115.52475412165856,
+      "hard_limit_violation_steps": 0,
+      "command_limit_events": 7760
+    }
+  ],
+  "passed": true,
+  "scope": "Actuator bench only. Does not establish free-flight, passage or perception performance."
+}
