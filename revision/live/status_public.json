@@ -1,26 +1,25 @@
 {
   "branch": "feat/paper-mechanism-rolling-20261117",
   "status": "awaiting_review",
-  "stage": "E1 完成 · 固定机身的柔性臂分段核查",
-  "mode": "SUPER 与 Qingyu · 8 / 16 / 24 段",
-  "detail": "从 8 段加密到 24 段，夹爪轨迹相差最多 1.121 mm。点开本轮归档可看积分视频、曲线、组会候选页与全部六次原始数据。",
-  "updated": "2026-11-18T18:19:14+08:00",
+  "stage": "E2 完成 · 驱动与末端载荷敏感性",
+  "mode": "SUPER 与 Qingyu · 固定机身 · 30 次积分",
+  "detail": "额外 100 g 让标称模型保持时的夹爪平均下移 6.34 mm。组会归档收录同步视频、夹爪局部放大、配对曲线和全部状态。",
+  "updated": "2026-11-18T21:42:10+08:00",
   "progress": 100,
-  "geometry": "round_e1_cad.png",
-  "geometry_caption": "相同视角下，0、4、8 秒的积分姿态",
-  "rolling": "round_e1_curves.png",
-  "rolling_caption": "同一动作的弯曲响应与分段造成的夹爪间距，单位为毫米",
+  "geometry": "round_e2_cad.png",
+  "geometry_caption": "同一时刻的两个 CAD 姿态和毫米单位的夹爪局部放大",
+  "rolling": "round_e2_curves.png",
+  "rolling_caption": "载荷和驱动参数如何分别影响保持欠角与上行响应",
   "replay": null,
   "items": [
-    "6 次积分，共 126000 步",
-    "峰值总弯曲 115.556°",
-    "三组模型均检出已知的起落架碰撞对照",
-    "本动作可保留 8 段"
+    "27 项参数组合 + 3 项数值对照",
+    "最大总弯曲 116.05°",
+    "零接触、零饱和",
+    "3 项数值对照均通过"
   ],
   "commits": [
-    "a8743b0 · 运行前登记",
-    "91a3aa7 · 积分模型",
-    "fe2f49d · 全部状态与判定",
-    "a7b8d48 · 正文证据整理"
+    "bfe6768 · 运行前登记",
+    "d1f43b1 · 积分与负载惯量",
+    "4201114 · 原始数据及配对分析"
   ]
 }

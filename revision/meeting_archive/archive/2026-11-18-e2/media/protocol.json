@@ -1,0 +1,71 @@
+{
+  "phase": "E2 — fixed-base actuator and added-load sensitivity",
+  "parent": "996fec15a978ed96a948c2abd9b834de278d2b56",
+  "prior": "revision/protocols/round_e1.json",
+  "geometry": "Unchanged registered SUPER airframe, Qingyu 0.28 m single section (0.25 kg), 0.20 kg distal assembly; fixed airframe, E1 validated phi=180 degrees, gravity -9.81 m/s^2. Reuse E1 command and nominal model.",
+  "factors": {
+    "stiffness_scale": [
+      0.75,
+      1,
+      1.25
+    ],
+    "drive_damping_scale": [
+      0.6,
+      1,
+      1.4
+    ],
+    "added_payload_g": [
+      0,
+      50,
+      100
+    ]
+  },
+  "bounds_source": "Prescribed engineering perturbations for sensitivity, not measured uncertainty limits, rated payloads, or hardware register settings. Passive joint damping and torque limit are fixed.",
+  "load_model": "Rigid equivalent ballast with COM at the native gripper TCP. Solid sphere inertia (2/5 mr^2; r=15 mm) in the tool frame, implemented by mass, COM and inertia addition. No geometry/contact object is added. Independently verify added mass, added first moment, and full inertia by a parallel-axis sum.",
+  "design": "All 27 deterministic factor combinations at N=8, dt=0.5 ms, 14 s each. No stochastic repeats. No physical actuation. Base trace must reproduce E1 within 0.001 mm TCP and 0.0001 deg bend. Same open-loop command, closed joint servos. All cases retained.",
+  "crosschecks": [
+    {
+      "N": 24,
+      "dt_s": 0.0005,
+      "stiffness_scale": 0.75,
+      "drive_damping_scale": 0.6,
+      "added_payload_g": 100
+    },
+    {
+      "N": 24,
+      "dt_s": 0.0005,
+      "stiffness_scale": 1.25,
+      "drive_damping_scale": 0.6,
+      "added_payload_g": 0
+    },
+    {
+      "N": 8,
+      "dt_s": 0.00025,
+      "stiffness_scale": 0.75,
+      "drive_damping_scale": 0.6,
+      "added_payload_g": 100
+    }
+  ],
+  "motion": "E1 raised cosine: neutral 0–1 s, 0–90 deg 1–5 s, 90–118 deg 5–7 s, hold 118 deg 7–9 s, return to 0 by 13 s, settle to 14 s. Same discrete left-endpoint command at each physics step.",
+  "signals": "Every 5 ms save commanded and net bend, total curvature, TCP and backbone end in world metres. Retain integrated qpos, qvel, applied ctrl at 20 ms and initial/final states for replay. Count all native contacts, torque saturation, >120 deg, nonfinite and solver warnings at physics-step rate; preserve extrema and event witnesses. Keep all cases incl. failures.",
+  "metrics": "Hold deficit 118 minus mean net bend over [8.5,9.0] s. Rise and fall delay: linearly interpolated 59-degree crossing vs command. Positive hold overshoot=max(max_bend_in_hold-118,0). Compare peak 3D TCP difference at aligned times to nominal. Also report signed paired results: identical two other factors for low-to-high contrasts; corner difference-in-differences of stiffness and load at nominal damping. No inference across machines or general parameter importance.",
+  "limits": {
+    "angle_raw_total_deg": 120,
+    "drive_saturation_steps": 0,
+    "native_contact_steps": 0,
+    "solver_warnings": 0,
+    "coarse_fine": {
+      "tcp_mm": 3,
+      "backbone_end_mm": 3,
+      "net_deg": 1,
+      "t50_delta_ms": 20
+    },
+    "time_halving": {
+      "tcp_mm": 0.6,
+      "backbone_end_mm": 0.6,
+      "net_deg": 0.2,
+      "t50_delta_ms": 5
+    }
+  },
+  "interpretation": "Use predeclared E1 numerical budgets at the selected perturbed cells. An excursion or failed check limits the scope of the associated comparison. Do not retune thresholds. Physical identification needs a known load, registered TCP or independent shape observation, timing and held-out trials. Default manuscript stays at its reviewed E1 state; deliver separate E2 candidate for review."
+}

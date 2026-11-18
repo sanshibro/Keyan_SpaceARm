@@ -1,0 +1,146 @@
+{
+  "sdk_package": "qingyu-api-ros1-a01",
+  "version": "0.0.1",
+  "source_sha256": {
+    "include/qingyu_api_sdk/client.hpp": "5f3021f236f2755009194139da54bf5eaf356e037e00e59f23b56130e32622ed",
+    "share/qingyu_api_sdk/examples/cli.cpp": "7124b27c9d4e85d3885c24e57094a6f42a43af35ed12fb584666c410bf6f47f7",
+    "share/qingyu_api_sdk/README.md": "7aa2bd7cc2fa5c8b57100a863ab74504d6b5da84aa12be0a0e1afea60b8220b3",
+    "share/qingyu_api_sdk/USAGE.md": "8585c67ea12d5a5220dd5439aaab394405b3c9dbf1ec7fa1fc2118aa30def5e9",
+    "share/qingyu_api/srv/ConfigReadOne.srv": "8555da28d2b40e0fce7ab3000549403379919a0e77d1584122059620688c17c8",
+    "share/qingyu_api/srv/ConfigWriteOne.srv": "e1ab19b2fca13e2640d2091efb53e638a45b2522965150809f7854e0002db953",
+    "share/continuum_arm/config/mcu_packet_sender.yaml": "d97f7cd3ea615a2d89036ea98e2dcfb1d2520e4d57fdc40fc38721f2ccc958c5",
+    "lib/continuum_arm/continuum_arm_slider_gui.py": "95db073022dc93d7f95a6ee252804a1a8ac0c9d6cd88b8b131e465c5030c2fe6"
+  },
+  "named_ratio_matches": [],
+  "families": {
+    "angle_runs": {
+      "tables": 57,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "theta_deg",
+        "wall_time"
+      ]
+    },
+    "orientation_fai_runs": {
+      "tables": 2,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "wall_time"
+      ]
+    },
+    "clean_fai_runs": {
+      "tables": 9,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "theta_deg",
+        "wall_time"
+      ]
+    },
+    "fai_runs": {
+      "tables": 42,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "wall_time"
+      ]
+    },
+    "fai_position_runs": {
+      "tables": 24,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "wall_time"
+      ]
+    },
+    "orb_strain_runs": {
+      "tables": 39,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "orb_theta_deg",
+        "rel_time",
+        "strain_value",
+        "theta_true_deg",
+        "wall_time"
+      ]
+    },
+    "orb_theta_runs": {
+      "tables": 2,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "theta_deg",
+        "wall_time"
+      ]
+    },
+    "orb_fai_runs": {
+      "tables": 69,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "theta_deg",
+        "wall_time"
+      ]
+    },
+    "live_strain_theta_runs": {
+      "tables": 31,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "orb_theta_deg",
+        "pred_raw_theta_deg",
+        "pred_theta_deg",
+        "rel_time",
+        "strain_value",
+        "wall_time"
+      ]
+    },
+    "live_dual_strain_theta_fai_runs": {
+      "tables": 5,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "orb_theta_deg",
+        "pred_theta_deg",
+        "rel_time",
+        "wall_time"
+      ]
+    },
+    "paired_orientation_fai_runs": {
+      "tables": 10,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "wall_time"
+      ]
+    },
+    "dual_strain_theta_fai_models": {
+      "tables": 4,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "rel_time",
+        "theta_true_deg"
+      ]
+    },
+    "dual_strain_ai": {
+      "tables": 165,
+      "payload_column_candidates": [],
+      "signal_examples": [
+        "auto_cmd_theta_deg",
+        "cmd_theta_deg",
+        "control_cmd_theta_deg",
+        "orb_theta_deg",
+        "orb_theta_display",
+        "pred_theta_deg",
+        "rel_time",
+        "vision_orb_theta",
+        "vision_orb_theta_display",
+        "wall_time"
+      ]
+    }
+  },
+  "total_nonempty_csv": 459,
+  "payload_column_candidates": 0,
+  "scope": "Header audit of listed local bench folders and text scan of listed installed SDK files. Payloads may also have been recorded out of band. No hardware connection or configuration changes.",
+  "register_semantics": "Generic typed configuration/readback is documented. Specific ratio ID, unit, type and calibration are not established from this audit."
+}

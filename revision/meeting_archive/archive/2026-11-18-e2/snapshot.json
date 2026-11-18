@@ -1,0 +1,182 @@
+{
+  "cover": "cad.png",
+  "files": [
+    {
+      "bytes": 89909,
+      "caption": "8.80 s，原生模型使用实际积分关节状态。两个标记指向夹爪工具中心，等比例 x–z 局部图放大两次运行的位置差。",
+      "file": "cad.png",
+      "kind": "image",
+      "sha256": "6c10ca8416b0ecc3b5a0ad37ad00c8e5707f87fcf5ce107a03aa662f22cdea59",
+      "title": "同一指令下的两个夹爪位置"
+    },
+    {
+      "bytes": 86108,
+      "caption": "左图固定标称阻尼，比较三档刚度的载荷响应。右图固定标称刚度，比较三档附加载荷时阻尼变化对 59° 交叉时差的影响。",
+      "file": "curves.png",
+      "kind": "curve",
+      "sha256": "83bfe24eb065b4d1b458c7a1e8de821a3ce3cf4631fafa19ff6e6717313e33d8",
+      "title": "保持欠角与上升响应"
+    },
+    {
+      "bytes": 544702,
+      "caption": "两边共用时间轴与相机，每帧各自读取仿真关节状态。下方给出相同指令、两个实际弯角及其三维 TCP 间距。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "poster.png",
+      "sha256": "f7245111d9f7687f4f4e585841534e6bd9ee00ce2642a6a30aba1aab0087de63",
+      "title": "0 g 与 100 g 同步积分回放"
+    },
+    {
+      "bytes": 79737,
+      "caption": "模型、时间和数值均取自回放。",
+      "file": "poster.png",
+      "kind": "poster",
+      "sha256": "e9cbb49e846df087600a7bc520d9c3a8fa76e8595a917a3c1969ba3fac582be0",
+      "title": "8.80 s 视频帧"
+    },
+    {
+      "bytes": 637714,
+      "caption": "一页显示实际模型、毫米级局部放大、两个参数切片和三项配对效应，独立于论文正文。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "de9ebf7272205353895bb8342c49b67cf709b603df2c0210b6da34c6be9dc95f",
+      "title": "E2 组会预览"
+    },
+    {
+      "bytes": 3716,
+      "caption": "27 项完整组合和 3 项网格/时间步对照、载荷惯量建模、保留的信号及判据。",
+      "file": "protocol.json",
+      "kind": "data",
+      "sha256": "448088f30af120e80d8b374f521fc4ba8d4d4a81804e867027a9ebe52ce9509e",
+      "title": "运行前登记的试验协议"
+    },
+    {
+      "bytes": 6472,
+      "caption": "每次的参数、保持欠角、上行及回程时差、峰值、扭矩、接触与越界计数。",
+      "file": "matrix.csv",
+      "kind": "data",
+      "sha256": "3b18db519ec7a9f11eadfe47b7fbef7d7a8f44e23e74049ff7d6b82cf6387e1a",
+      "title": "30 次运行的指标"
+    },
+    {
+      "bytes": 4154,
+      "caption": "每一对只改变一个因素，另外两个取值相同。包含保持段、瞬态与全程 TCP 变化。",
+      "file": "pairs.csv",
+      "kind": "data",
+      "sha256": "5229bdb85c1c3a9970b4171e71a22fe0f789471b494b433362a82427e9f58917",
+      "title": "27 个单因素配对结果"
+    },
+    {
+      "bytes": 526,
+      "caption": "两个边界工况比较 8 段和 24 段；低刚度、低阻尼、100 g 工况另外将时间步减半。",
+      "file": "checks.csv",
+      "kind": "data",
+      "sha256": "5dc4666e63fae0c9232f30f1a40cd43fb3863079a1570277d38ab4fb3cf865ee",
+      "title": "三个数值对照"
+    },
+    {
+      "bytes": 1686292,
+      "caption": "5 ms 时间轴，代表工况的命令、实际弯曲和夹爪位置，可用来重画曲线及复核某一时刻。",
+      "file": "aligned-trajectories.csv",
+      "kind": "data",
+      "sha256": "4caeed6a9fa5d773684677ed54c7c9b731c75e22041d2f4724489ff635a78166",
+      "title": "代表工况的同步轨迹"
+    },
+    {
+      "bytes": 7613,
+      "caption": "记录 E1 复跑偏差、数值对照、三个因素的配对影响及载荷与刚度的交互。",
+      "file": "summary.json",
+      "kind": "data",
+      "sha256": "086c1b5291e2749c49921eadc923634dab8aabd1ba0c39716f2ccc996f24da33",
+      "title": "完整汇总与名义条件复跑"
+    },
+    {
+      "bytes": 41665,
+      "caption": "可核查附加质量、惯量、重力矩独立校验、原始峰值和饱和/接触事件。",
+      "file": "model-checks.json",
+      "kind": "data",
+      "sha256": "f68b6715933214609e70fa6e7fefe65d8cacc82573c78112963efb59e7cf636f",
+      "title": "各工况编译与逐步诊断汇总"
+    },
+    {
+      "bytes": 425,
+      "caption": "积分时的研究分支提交、MuJoCo 版本和预登记文件摘要。",
+      "file": "versions.json",
+      "kind": "data",
+      "sha256": "d703bc03b6ff52e5253371d0cfdf16dd936e3504b6367e05d3bf6d867db558ad",
+      "title": "软件与协议版本"
+    },
+    {
+      "bytes": 4216,
+      "caption": "指定台架/感知目录的表头和已安装 SDK 文本清单。保留可用角度/应变线索，说明已知负载标注和柔性比映射的查证范围。",
+      "file": "bench-inventory.json",
+      "kind": "data",
+      "sha256": "bc4443fbb8a59bd1f84f4519246102a58b12b4d3af059e616d2b17aa4f029d60",
+      "title": "实测资料与 SDK 核查"
+    },
+    {
+      "bytes": 4619,
+      "caption": "含图的讲述顺序、工况适用范围、可直接采集的台架对照和 NPZ 字段说明。",
+      "file": "review-notes.txt",
+      "kind": "data",
+      "sha256": "68c8726cb5555718a8c575255daccb1ed7c18bc40562e761a220bc59e1240a32",
+      "title": "组会讲解与论文衔接"
+    },
+    {
+      "bytes": 3522727,
+      "caption": "9 个工况，按运行编号/字段名可用 NumPy 直接读取。保留关节位置、速度、驱动、工具点和命令。",
+      "file": "states-0g.npz",
+      "kind": "data",
+      "sha256": "86b8eb097c96a87b5dc288c98a964d3e0b15eb73d4152bd546ed079547138915",
+      "title": "0 g 全状态"
+    },
+    {
+      "bytes": 3561751,
+      "caption": "9 个工况，按运行编号/字段名可用 NumPy 直接读取。保留关节位置、速度、驱动、工具点和命令。",
+      "file": "states-50g.npz",
+      "kind": "data",
+      "sha256": "3764a2c84a2d3f558b2816637414eb81aee7900d9485862a17147533e606c726",
+      "title": "50 g 全状态"
+    },
+    {
+      "bytes": 3583650,
+      "caption": "9 个工况，按运行编号/字段名可用 NumPy 直接读取。保留关节位置、速度、驱动、工具点和命令。",
+      "file": "states-100g.npz",
+      "kind": "data",
+      "sha256": "99c5cd9a3f614960e893ec4542973959629295ed19955e4dd74373b658c406e7",
+      "title": "100 g 全状态"
+    },
+    {
+      "bytes": 1877501,
+      "caption": "3 个工况，按运行编号/字段名可用 NumPy 直接读取。保留关节位置、速度、驱动、工具点和命令。",
+      "file": "states-checks.npz",
+      "kind": "data",
+      "sha256": "a1e56c8fed9b8865c621049f82176e01aeed26f3789c9aa81c3bf47af21978ef",
+      "title": "数值对照全状态"
+    }
+  ],
+  "guide": [
+    "先看一对同步画面和局部放大。同一条 118° 指令下，0 g 与 100 g 的两次运行在保持段拉开毫米级距离。",
+    "再看两条参数关系。附加载荷和较低刚度会增加保持欠角；驱动阻尼的影响更容易在弯曲过程中识别。",
+    "打开一页候选图和配对表。离线包包含全部 30 次积分数据、14 秒视频、协议与本轮说明，可直接投屏。"
+  ],
+  "id": "2026-11-18-e2",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "8ad0c353f89ff5c9aa5b64254ccc500017f1ea0bd4229dcb672b117966a067fa"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "ce9ee6875e6ddd8a0dd8f0aac4b7d26e7cc92204cc7d45f57235c7bbedbc8f4b"
+    }
+  },
+  "revision": "d1f43b163829c383ce5b2115ca16005a415528c5",
+  "schema": 1,
+  "scope": "数值模型参数敏感性，固定 SUPER 机身和 180° 弯曲平面。附加质心位于夹爪 TCP，质量和惯量随负载调整。真实台架刚度与负载能力还需测量。",
+  "source_note": "bfe6768 登记判据；d1f43b1 实际积分；4201114 保存全部原始状态及配对分析。",
+  "stage": "E2 · 等效驱动与末端载荷",
+  "summary": "固定机身运行 27 种参数组合和 3 项数值对照。标称驱动下，增加 100 g 使保持欠角增加 1.39°，夹爪平均下移 6.34 mm，上升到 59° 晚 34.25 ms。",
+  "title": "夹爪加 100 g 后，停在哪里，又晚到多久",
+  "when": "2026-11-18T21:42:10+08:00"
+}
