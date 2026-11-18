@@ -1,0 +1,107 @@
+{
+  "label": "n08_dt0500us",
+  "N": 8,
+  "dt_s": 0.0005,
+  "steps": 28000,
+  "samples": 2801,
+  "peak_raw_curvature_deg": 115.55576509022868,
+  "peak_time_s": 7.029499999998824,
+  "over120_steps": 0,
+  "max_arm_torque_Nm": 0.6769771509438343,
+  "saturated_steps": 0,
+  "contact_steps": 0,
+  "contact_pairs": {},
+  "command_limited_steps": 0,
+  "solver_warnings": 0,
+  "invariants": {
+    "arm": {
+      "mass": 0.25,
+      "com": [
+        0.0,
+        0.0,
+        1.2596
+      ],
+      "inertia": [
+        [
+          0.001821806431535255,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001821806431535255,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00012819128630705396
+        ]
+      ]
+    },
+    "whole": {
+      "mass": 2.2499999999999996,
+      "com": [
+        0.0018044444444444449,
+        -4.8186763221577984e-20,
+        1.4246711111111112
+      ],
+      "inertia": [
+        [
+          0.052684388137090796,
+          2.752857078576476e-21,
+          0.0015024887111111103
+        ],
+        [
+          2.752857078576476e-21,
+          0.057670542092646396,
+          -8.131516293641283e-20
+        ],
+        [
+          0.0015024887111111103,
+          -8.131516293641283e-20,
+          0.015980899408529387
+        ]
+      ]
+    },
+    "distal_mass_kg": 0.2,
+    "zero_tip_world": [
+      0.0,
+      0.0,
+      0.9827424400000004
+    ],
+    "drive_stiffness_Nm_rad": 10.0,
+    "drive_bias_stiffness_Nm_rad": 10.0,
+    "drive_damping_Nms_rad": 0.225,
+    "passive_damping_Nms_rad": 0.01875,
+    "reflected_inertia_kgm2": 1.25e-05,
+    "equivalent_axis_range_rad": [
+      -3.2,
+      3.2
+    ],
+    "torque_limits_Nm": [
+      -4.0,
+      4.0
+    ],
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ]
+  },
+  "collision_controls": {
+    "neutral_contacts": [],
+    "unsafe_phi90_theta60": [
+      [
+        "arm7",
+        "collision_landing_168",
+        -0.012620338523059636
+      ],
+      [
+        "collision_landing_168",
+        "collision_gripper_housing",
+        -0.03089888408137318
+      ]
+    ]
+  }
+}

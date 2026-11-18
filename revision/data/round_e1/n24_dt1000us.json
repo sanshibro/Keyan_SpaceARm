@@ -1,0 +1,112 @@
+{
+  "label": "n24_dt1000us",
+  "N": 24,
+  "dt_s": 0.001,
+  "steps": 14000,
+  "samples": 2801,
+  "peak_raw_curvature_deg": 115.55177904864279,
+  "peak_time_s": 7.029000000000682,
+  "over120_steps": 0,
+  "max_arm_torque_Nm": 0.6811739897326028,
+  "saturated_steps": 0,
+  "contact_steps": 0,
+  "contact_pairs": {},
+  "command_limited_steps": 0,
+  "solver_warnings": 0,
+  "invariants": {
+    "arm": {
+      "mass": 0.25,
+      "com": [
+        0.0,
+        0.0,
+        1.2595999999999992
+      ],
+      "inertia": [
+        [
+          0.001821806431535275,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001821806431535275,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00012819128630705393
+        ]
+      ]
+    },
+    "whole": {
+      "mass": 2.2499999999999996,
+      "com": [
+        0.0018044444444444449,
+        -4.8186763221577984e-20,
+        1.424671111111111
+      ],
+      "inertia": [
+        [
+          0.05268438813709108,
+          2.752857078576476e-21,
+          0.0015024887111111161
+        ],
+        [
+          2.752857078576476e-21,
+          0.05767054209264667,
+          -2.710505431213761e-20
+        ],
+        [
+          0.0015024887111111161,
+          -2.710505431213761e-20,
+          0.015980899408529394
+        ]
+      ]
+    },
+    "distal_mass_kg": 0.2,
+    "zero_tip_world": [
+      0.0,
+      0.0,
+      0.9827424399999989
+    ],
+    "drive_stiffness_Nm_rad": 10.0,
+    "drive_bias_stiffness_Nm_rad": 10.0,
+    "drive_damping_Nms_rad": 0.225,
+    "passive_damping_Nms_rad": 0.01875,
+    "reflected_inertia_kgm2": 1.25e-05,
+    "equivalent_axis_range_rad": [
+      -3.2,
+      3.2
+    ],
+    "torque_limits_Nm": [
+      -4.0,
+      4.0
+    ],
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ]
+  },
+  "collision_controls": {
+    "neutral_contacts": [],
+    "unsafe_phi90_theta60": [
+      [
+        "arm22",
+        "collision_landing_168",
+        -0.0031990941669005797
+      ],
+      [
+        "arm23",
+        "collision_landing_168",
+        -0.012952001111173565
+      ],
+      [
+        "collision_landing_168",
+        "collision_gripper_housing",
+        -0.030728038630471317
+      ]
+    ]
+  }
+}
