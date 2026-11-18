@@ -108,12 +108,15 @@ class Bag:
         self.file.write('/f/arm/bend',m,stamp)
 
 
-def run(out,tag,pitch_i):
+def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
+        protocol_name='round_f.json',mission_record=None):
     out.mkdir(parents=True,exist_ok=False)
     runtime=out/'runtime'
     plant=Plant()
+    if noise_seed is not None:
+        plant.noise=np.random.default_rng(noise_seed)
     prov=prepare(runtime,pitch_i)
-    prov.update(tag=tag,protocol_sha256=digest(ROOT/'revision/protocols/round_f.json'),
+    prov.update(tag=tag,protocol_sha256=digest(ROOT/'revision/protocols'/protocol_name),
                 plant_xml_sha256=hashlib.sha256(plant.xml.encode()).hexdigest(),
                 source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=str(ROOT)).decode().strip(),
                 script_sha256={s:digest(Path(__file__).with_name(s)) for s in ('round_f_plant.py','round_f_sitl.py')},
@@ -121,6 +124,8 @@ def run(out,tag,pitch_i):
                 differential_FRD=plant.check.tolist(),mass_kg=plant.mass,physics_dt_s=.0005,hil_dt_s=TICK,
                 clock_origin_us=CLOCK_ORIGIN_US,imu_std_si=[.015,.0008],mag_std_gauss=.0003,baro_std_m=.018,
                 gps='ideal WGS84 fix plus integer MAVLink quantization; one simulated receiver, 10 Hz')
+    if mission_record is not None:
+        prov['mission']=mission_record
     dump(out/'provenance.json',prov)
     server=socket.socket(); server.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
     server.bind(('127.0.0.1',4560+INSTANCE));server.listen(1);server.settimeout(18)
@@ -173,8 +178,8 @@ def run(out,tag,pitch_i):
             if ground_seen and k%FREQ==0:
                 ground.mav.heartbeat_send(6,8,0,0,4)
             phase_t=None if released is None else (k-released)*TICK
-            phase,ref,theta=reference(phase_t)
-            if phase_t is not None and phase_t>39.: phase='log_tail'
+            phase,ref,theta=reference_fn(phase_t)
+            if phase_t is not None and phase_t>score_end: phase='log_tail'
             if k%10==0 and ground_seen:
                 # A neutral virtual joystick supplies the monitored manual link in this isolated SITL.
                 ground.mav.manual_control_send(SYS,0,0,0,0,0)
@@ -209,6 +214,9 @@ def run(out,tag,pitch_i):
                 arm_since=sim_t;event('px4_armed')
             if released is None and armed and last_mode and motor.sum()*12>=plant.mass*9.81*.98:
                 plant.d.eq_active[0]=0
+                if noise_seed is not None:
+                    # Paired airborne sensor noise is indexed by time since release.
+                    plant.noise=np.random.default_rng([noise_seed,1])
                 released=k;phase_t=0.;phase='liftoff';event('support_removed',thrust_N=12*motor.sum())
             if released is not None and (not armed or not last_mode):
                 raise RuntimeError('Arming or OFFBOARD lost in free flight')
@@ -237,7 +245,7 @@ def run(out,tag,pitch_i):
                 if released is None and sim_t>=48:
                     raise RuntimeError('No free lift-off in 48 simulated seconds; inspect estimator, arming and rotor signals')
             # Keep the simulator live beyond the final scoring stamp while the native logger drains.
-            if phase_t is not None and phase_t>=40.: break
+            if phase_t is not None and phase_t>=score_end+1.: break
             k+=1
     except Exception as e:
         err=repr(e);event('error',detail=err)

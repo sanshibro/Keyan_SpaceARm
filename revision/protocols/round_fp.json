@@ -1,0 +1,65 @@
+{
+  "stage": "F+. Empty-airspace retraction study, frozen before new runs",
+  "parent": "1ba7706",
+  "vehicle": "SUPER + eight paired Qingyu bending elements; nominal E2 unloaded model; native EKF2 and PX4 v1.13 MC_PITCHRATE_I=0.40; F rotor allocation and 12 N linear max per channel.",
+  "target_ENU_m": [
+    0,
+    0,
+    0.65
+  ],
+  "time_zero": "Full launch-support release. All trials hold the same world-fixed target and fly freely thereafter. No translation leg.",
+  "shape": "Same 0-to-90-to-118-degree F ascent, phi=180 deg, from t=16 to 22 s. Hold to 24 s. Original half-cosine retraction over 4 s, slow over 8 s. Straight holds zero at all times.",
+  "return_start_s": 24,
+  "durations_s": {
+    "straight": 0,
+    "nominal": 4,
+    "slow": 8
+  },
+  "recovery_s": 3,
+  "score_end_s": 36,
+  "common_window_s": [
+    24,
+    35
+  ],
+  "seed_order": {
+    "241118": [
+      "straight",
+      "nominal",
+      "slow"
+    ],
+    "241119": [
+      "nominal",
+      "slow",
+      "straight"
+    ],
+    "241120": [
+      "slow",
+      "straight",
+      "nominal"
+    ]
+  },
+  "development_seed": 241118,
+  "heldout_seeds": [
+    241119,
+    241120
+  ],
+  "pairing": "Same seed for synthetic IMU, magnetometer and barometer. Noise sequence restarts at release. Fresh PX4 process per trial. Microsecond-exact PX4 startup/state cloning is not assumed; pre-activation and return-start differences are measured.",
+  "eligibility": {
+    "prebend_window_s": [
+      14,
+      16
+    ],
+    "max_prebend_position_rms_m": 0.025,
+    "max_prebend_speed_rms_m_s": 0.04,
+    "max_nominal_slow_return_start_separation_m": 0.03,
+    "max_nominal_slow_return_start_speed_difference_m_s": 0.04,
+    "max_nominal_slow_return_start_bend_difference_deg": 1,
+    "integrated_total_bend_limit_deg": 120,
+    "airborne_contact_steps": 0
+  },
+  "primary": "Peak true 3D body-reference position error from t=24 to command end + 3 s (inclusive). Straight is reported at both matched windows. Report peak in the common 24–35 s interval as a sensitivity check, recovery endpoint, time-to-peak and extra action time.",
+  "secondary": "Tilt, net/total curvature, min of upper/lower rotor force headroom at the actual four channels, saturation fraction and measured model motor allocation; gravitational pitch moment from model mass and pose, unvalidated in hardware. Use one 50 Hz trace plus 250 Hz wire for primary scores.",
+  "integrity": "Native PX4 ULog -> HIL -> actual MuJoCo actuator(s), world pose and shape -> ROS bag: independently compare outputs, mode, time, sample gaps and dropouts. Model states never replace PX4 sensors.",
+  "interpretation": "Only timing differs between the two moving arms. Retain all trials. Three paired sensor-noise seeds, same physical model and environment. Segment lengths differ by design. No gate or new controller is implemented in this round.",
+  "representative": "241118 development seed fixed in advance for video and detailed time series. Report all three paired seeds."
+}
