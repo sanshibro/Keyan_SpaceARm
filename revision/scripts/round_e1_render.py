@@ -26,9 +26,11 @@ def render():
     fig,axes=plt.subplots(1,3,figsize=(8,3.12))
     ts=[0,4,8]
     for ax,t,letter in zip(axes,ts,'abc'):
-        i=int(round(t/.005));ax.imshow(frame(i));ax.axis('off')
+        i=int(round(t/.005));rgb=frame(i)
+        Image.fromarray(rgb).save(DEFAULT/('cad_t%02d.png'%t))
+        ax.imshow(rgb);ax.axis('off')
         ax.set_title('(%s)  %s'%(letter,{0:'Neutral',4:'Bending',8:'Peak hold'}[t]),loc='left',size=11)
-        ax.text(.02,-.035,'%.1f s   |   measured %.1f°'%(t,src['net'][i]),transform=ax.transAxes,color='#315361',size=9)
+        ax.text(.02,-.035,'%.1f s   |   integrated %.1f°'%(t,src['net'][i]),transform=ax.transAxes,color='#315361',size=9)
     fig.subplots_adjust(left=.02,right=.985,top=.85,bottom=.12,wspace=.07)
     fig.savefig(DEFAULT/'cad.png',dpi=210,facecolor='white')
     fig.savefig(DEFAULT/'cad.pdf',facecolor='white')

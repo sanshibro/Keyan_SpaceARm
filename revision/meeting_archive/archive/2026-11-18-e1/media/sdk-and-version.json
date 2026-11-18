@@ -1,0 +1,34 @@
+{
+  "protocol_sha256": "540ff68922af67e169ecef9432cbc467997a93842b53a1a3c82320cf21dcd5fe",
+  "code_commit": "91a3aa7144ab096b55a547d53a794d77ac726259",
+  "mujoco": "3.2.3",
+  "numpy": "1.24.4",
+  "sdk": {
+    "local_prefix": "/opt/qingyu_api_ros1",
+    "source_file_sha256": {
+      "include/qingyu_api_sdk/client.hpp": "5f3021f236f2755009194139da54bf5eaf356e037e00e59f23b56130e32622ed",
+      "share/qingyu_api_sdk/examples/cli.cpp": "7124b27c9d4e85d3885c24e57094a6f42a43af35ed12fb584666c410bf6f47f7",
+      "share/qingyu_api_sdk/README.md": "7aa2bd7cc2fa5c8b57100a863ab74504d6b5da84aa12be0a0e1afea60b8220b3",
+      "share/qingyu_api_sdk/USAGE.md": "8585c67ea12d5a5220dd5439aaab394405b3c9dbf1ec7fa1fc2118aa30def5e9",
+      "share/qingyu_api/srv/ConfigReadOne.srv": "8555da28d2b40e0fce7ab3000549403379919a0e77d1584122059620688c17c8",
+      "share/qingyu_api/srv/ConfigWriteOne.srv": "e1ab19b2fca13e2640d2091efb53e638a45b2522965150809f7854e0002db953",
+      "share/qingyu_api_sdk/package.xml": "529143b93e4f55f1732c2d501f706fe5ebb12cadf8ebd5338a2f6c0eef06f495",
+      "lib/continuum_arm/continuum_arm_slider_gui.py": "95db073022dc93d7f95a6ee252804a1a8ac0c9d6cd88b8b131e465c5030c2fe6"
+    },
+    "config_key": "uint8_t param_id",
+    "supported_values": [
+      "Float",
+      "Int32",
+      "UInt8"
+    ],
+    "write_verification": "Installed cli.cpp calls readConfig and compares the returned typed value after writeConfig.",
+    "joint_angles": "SDK joint commands and isolated RViz adapter use degrees; these fields represent bend and plane.",
+    "flexibility_ratio": {
+      "parameter_id": null,
+      "specific_type": null,
+      "unit": null,
+      "torque_or_stiffness_mapping": null,
+      "finding": "No named flexibility-ratio register or calibrated mapping identified in the inspected files. Device settings and serial transport were not accessed."
+    }
+  }
+}

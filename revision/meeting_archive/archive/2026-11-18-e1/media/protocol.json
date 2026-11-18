@@ -1,0 +1,57 @@
+{
+  "title": "E1 fixed-airframe spatial and temporal convergence",
+  "scope": "One unloaded bend–hold–return in the D-cleared PCC plane. Numerical convergence only. Research harness; the production eight-element backend remains the reference.",
+  "parent": "9ec26ab3998816570c27896f661709ecf2cd5f89",
+  "segments": [
+    8,
+    16,
+    24
+  ],
+  "step_s": [
+    0.001,
+    0.0005
+  ],
+  "sample_s": 0.005,
+  "duration_s": 14,
+  "arclength_samples": 41,
+  "plane_deg": 180,
+  "command_profile": "Raised cosine: rest to 1 s; 0–90 deg at 1–5; 90–118 at 5–7; 118 at 7–9; 118–0 at 9–13; rest to 14 s. Sampled ctrl is held over each integration step.",
+  "equivalence": "Build native SUPER/Qingyu XML at N. Match native N8 neutral flexible mass, COM and full inertia about COM by subdividing a common axial inertia distribution; match integrated neutral inertia of complete robot. Same distal rigid assembly and gravity, no payload. For uniform bending, scale per-joint kp,kv,passive damping,armature by N/8 and per-joint angular range by 8/N with unchanged torque limit. Preserve collision pairs with nonlocal hardware; discretized soft-volume local-seam exclusion inside 3 native element lengths and proximal/distal first/last native element only. Verify all N report collisions on the independent D known-unsafe plane witness and zero native contacts on neutral. Separate kinematic witness data from integrated data.",
+  "metrics": "At common physical times compare Euclidean backbone end and jaw TCP, maximum over 41 normalized arclength locations and time, net bending difference, absolute difference in rise and fall delays at interpolated 59-degree crossings and in positive 118-degree hold overshoot. At every physics step record/check raw summed joint-vector magnitudes, contact, force saturation, finite states and solver warnings. Log steady hold bias, tool and backbone trajectories, relative and world frames. Fine–fine comparison tests refinement trend without designating N24 ground truth.",
+  "selection": {
+    "coarse_vs_finer": {
+      "position_mm": 3,
+      "angle_deg": 1,
+      "delay_ms": 20,
+      "overshoot_deg": 0.5
+    },
+    "fine_vs_fine": {
+      "position_mm": 1.5,
+      "angle_deg": 0.5,
+      "delay_ms": 10,
+      "overshoot_deg": 0.25
+    },
+    "time_halving": {
+      "position_mm": 0.6,
+      "angle_deg": 0.2,
+      "delay_ms": 5,
+      "overshoot_deg": 0.1
+    },
+    "validity": {
+      "max_raw_total_curvature_deg": 120,
+      "contact_steps": 0,
+      "solver_warnings": 0,
+      "saturated_arm_steps": 0,
+      "finite": true
+    },
+    "decision": "Use fine timestep for spatial tests. Retain N8 for this profile only if both coarse comparisons, fine comparison, three time-halving checks and all six run validity checks pass. Consider N16 for this profile only if fine pair and time/validity of both fine models pass. Otherwise hold resolution choice. No extrapolation to E2/flight or hardware.",
+    "rationale": "3 mm is a chosen numerical allowance (one tenth of a 30 mm reference length, well below the historical 70 mm planning arm margin); 20 ms is below the 50 ms historical publication period. Tighter fine–fine and time budgets separate temporal and spatial discrepancies. Neither budget certifies millimetric self-clearance or physical material parameters."
+  },
+  "sources": [
+    "mujoco_closed_loop/model.py",
+    "mujoco_closed_loop/super_metric_model.py",
+    "mujoco_closed_loop/arm_command.py",
+    "revision/scripts/round_d_acceptance.py"
+  ],
+  "hardware_policy": "Inspect installed SDK headers/services, readback sample and available register documentation as files only. Record known type/unit explicitly or unknown; no calls to connected hardware."
+}

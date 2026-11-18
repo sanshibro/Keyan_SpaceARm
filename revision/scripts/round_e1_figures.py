@@ -49,7 +49,12 @@ def figures():
     f.text(.08,.881,'What changes if the same arm is integrated with more elements?',size=11,style='italic')
     f.text(.08,.850,'The 0.28 m arm bends, holds and returns in a single plane under gravity. All models share the\n'
                       'same 0.25 kg arm, 0.20 kg distal assembly, neutral inertia and equivalent drive parameters.',size=9,linespacing=1.45)
-    ax=f.add_axes([.068,.568,.864,.266]);ax.imshow(plt.imread(str(DEFAULT/'cad.png')));ax.axis('off')
+    for j,(t,phase) in enumerate([(0,'Neutral'),(4,'Bending'),(8,'Peak hold')]):
+        ax=f.add_axes([.08+j*.288,.588,.265,.224])
+        ax.imshow(plt.imread(str(DEFAULT/('cad_t%02d.png'%t))));ax.axis('off')
+        ax.text(0,1.02,'(%s)  %s'%('abc'[j],phase),transform=ax.transAxes,size=10)
+        i=int(np.argmin(np.abs(x['t_s']-t)))
+        ax.text(0,-.04,'%.1f s    |    integrated %.1f°'%(t,x['bend_8_deg'][i]),transform=ax.transAxes,color=grey,size=8)
     grid=gridspec.GridSpec(1,2,figure=f,left=.107,right=.924,bottom=.37,top=.548,wspace=.37)
     chart(f,[grid[0],grid[1]],x,'de')
     f.text(.08,.309,'Maximum differences over the 14 s cycle',size=11,weight='bold')

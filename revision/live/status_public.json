@@ -1,23 +1,26 @@
 {
   "branch": "feat/paper-mechanism-rolling-20261117",
   "status": "awaiting_review",
-  "stage": "D 轮完成 · 整机几何与规划接收",
-  "mode": "SUPER 与 Qingyu · 已知单门",
-  "detail": "正常路线通过规划及接收复核。接收端拦住了中途自碰的候选，缓冲保留原轨迹。点开本轮归档可查看模型、间距曲线、几何回放和论文原页。",
-  "updated": "2026-11-18T15:27:15+08:00",
+  "stage": "E1 完成 · 固定机身的柔性臂分段核查",
+  "mode": "SUPER 与 Qingyu · 8 / 16 / 24 段",
+  "detail": "从 8 段加密到 24 段，夹爪轨迹相差最多 1.121 mm。点开本轮归档可看积分视频、曲线、组会候选页与全部六次原始数据。",
+  "updated": "2026-11-18T18:19:14+08:00",
   "progress": 100,
-  "geometry": "round_d_sweep.png",
-  "geometry_caption": "同一对臂段与起落架支撑在 0°、60°、90° 的有符号距离",
-  "rolling": "round_d_gate.png",
-  "rolling_caption": "同尺度的单门侧视与两种低空触碰，单位为米",
+  "geometry": "round_e1_cad.png",
+  "geometry_caption": "相同视角下，0、4、8 秒的积分姿态",
+  "rolling": "round_e1_curves.png",
+  "rolling_caption": "同一动作的弯曲响应与分段造成的夹爪间距，单位为毫米",
   "replay": null,
   "items": [
-    "34 项检查符合预期",
-    "18/48 个历史姿态发生穿透",
-    "7 个获准案例在独立采样中均无穿透",
-    "规划用时 0.85 s，预算 15 s"
+    "6 次积分，共 126000 步",
+    "峰值总弯曲 115.556°",
+    "三组模型均检出已知的起落架碰撞对照",
+    "本动作可保留 8 段"
   ],
   "commits": [
-    "8ec3c36 · 整机几何接入规划与接收"
+    "a8743b0 · 运行前登记",
+    "91a3aa7 · 积分模型",
+    "fe2f49d · 全部状态与判定",
+    "a7b8d48 · 正文证据整理"
   ]
 }
