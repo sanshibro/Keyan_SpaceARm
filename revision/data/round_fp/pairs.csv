@@ -1,0 +1,4 @@
+seed,outward_start_position_difference_cm,outward_start_velocity_difference_cm_s,return_start_position_difference_cm,return_start_velocity_difference_cm_s,return_start_shape_difference_deg,pair_matched,slow_minus_nominal_cm,fastbend_minus_nominal_cm
+241118,0.593891849,0.307277516,0.319222886,0.602250119,0.000193902305,True,-11.8156357,6.38332656
+241119,0.940669727,0.334747528,0.346614316,0.772703262,0.000196496863,True,-10.7769302,5.30702181
+241120,1.27982358,0.173500642,0.684980063,0.242437993,0.000144156014,True,-11.2977117,5.96420207

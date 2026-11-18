@@ -74,14 +74,14 @@ class View:
         self.render=mujoco.Renderer(model,height=480,width=480)
         self.opt=mujoco.MjvOption();self.opt.geomgroup[0]=0;self.opt.geomgroup[3]=0;self.opt.sitegroup[:]=0
         self.cam=mujoco.MjvCamera();self.cam.orthographic=1;self.cam.distance=1.0
-    def draw(self,q,angles,top):
+    def draw(self,q,angles,top,anchor=None,side_span=.71):
         d=self.d;d.qpos[:]=q;mujoco.mj_forward(self.m,d)
         U=d.xmat[self.base].reshape(3,3);origin=d.xpos[self.base]
         centers=origin+self.axes[CHANNELS]@U.T
-        self.cam.lookat[:]=origin+([0,0,0] if top else [.018,0,-.17])
+        self.cam.lookat[:]=(origin if anchor is None else anchor)+([0,0,0] if top else [.018,0,-.17])
         self.cam.azimuth=90 if top else 116
         self.cam.elevation=-89.99 if top else -21
-        self.m.vis.global_.fovy=.435 if top else .71
+        self.m.vis.global_.fovy=.435 if top else side_span
         self.render.update_scene(d,camera=self.cam,scene_option=self.opt)
         used=set()
         for g in self.render.scene.geoms[:self.render.scene.ngeom]:

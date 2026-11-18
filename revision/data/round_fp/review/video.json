@@ -1,0 +1,14 @@
+{
+  "seed": 241118,
+  "fps": 16,
+  "frames": 338,
+  "playback": 1,
+  "max_qpos_time_error_ms": 9.5,
+  "world_fixed_anchor": [
+    0.0,
+    0.0,
+    2.15
+  ],
+  "native_meshes": true,
+  "propeller_phase": "Integrated signed square root of per-channel thrust; illustrative speed, no measured RPM."
+}
