@@ -1,0 +1,142 @@
+{
+  "cover": "cad.png",
+  "files": [
+    {
+      "bytes": 136681,
+      "caption": "12、17 和 30 秒的模型均读取完整积分状态。相机随模型居中，E 给出机身相对起点的向东位移。",
+      "file": "cad.png",
+      "kind": "image",
+      "sha256": "0b63b7ace6d0baba3c101d740d97f96a06b5da216361b22147b31b48285003fd",
+      "title": "自由飞行的三个实测仿真姿态"
+    },
+    {
+      "bytes": 153152,
+      "caption": "五个空心点分别对应同一条件下的五次飞行。右下是最终运行前、后两对旋翼每台的平均推力。",
+      "file": "curves.png",
+      "kind": "curve",
+      "sha256": "5d47a9bc74aa118953d8345c77d6b39c4ca92ae8c002ffbbc2db8aa78d1ace53",
+      "title": "弯臂期间的位置误差与前后电机推力"
+    },
+    {
+      "bytes": 752609,
+      "caption": "以两倍速播放。左侧是日志姿态，右侧为相对起飞点的固定东向–高度坐标，方框是请求、实心点是机身。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "poster.png",
+      "sha256": "cbfc27a9d179cca6f0d93ea7fc313d1122c105b6e0939a9befa4ba74ecde02e6",
+      "title": "39 秒飞行回放"
+    },
+    {
+      "bytes": 75681,
+      "caption": "118° 指令的持续段。",
+      "file": "poster.png",
+      "kind": "poster",
+      "sha256": "91301e6639eadb2c1998e52e75c0e22680bf41b5d87a651fd6305c1037f4a027",
+      "title": "30 秒原始姿态"
+    },
+    {
+      "bytes": 471310,
+      "caption": "第一页呈现飞行任务与臂响应，第二页核对位置误差、俯仰控制与电机输出。独立组会预览。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "fa643c4bd7096eed65185d1c2a763bfa86ebb4f170a1b776c1b8aba488e64e3b",
+      "title": "两页论文候选图"
+    },
+    {
+      "bytes": 4104740,
+      "caption": "传感器、EKF2、飞行模式、飞控设定值与四路原生 PWM，可用 Flight Review 或 pyulog 打开。",
+      "file": "flight.ulg",
+      "kind": "data",
+      "sha256": "4c06931a20cf70e1195692574ea1879d33da918a2193f87f18fa0d5d4951a165",
+      "title": "PX4 原生 ULog"
+    },
+    {
+      "bytes": 447764,
+      "caption": "七个有时间戳的记录主题，包括仿真时钟、请求、EKF 遥测、控制输出、形态与评估真值。",
+      "file": "flight.bag",
+      "kind": "data",
+      "sha256": "1e7943843aad36a84225f3569c4af58fbc7d5d748ff5fd254615bc270f034bbb",
+      "title": "ROS1 原生 bag"
+    },
+    {
+      "bytes": 1109851,
+      "caption": "50 Hz 的 qpos、qvel、ctrl、TCP 与旋翼推力，动作时间使用 HIL 微秒时钟。",
+      "file": "physics.npz",
+      "kind": "data",
+      "sha256": "fa5f8cebef0a7529a5a4b5f47b22bec315e6d60a1693e868ec36fed14a288f19",
+      "title": "MuJoCo 完整状态"
+    },
+    {
+      "bytes": 7120758,
+      "caption": "250 Hz。含原生 HIL 时间、传感器、四路电机、机身与臂请求和响应。",
+      "file": "hil.csv",
+      "kind": "data",
+      "sha256": "7e1a3e8ef5f17f3084338a6b5683b414dc2759f1dd9dc7fef59d134f3b1e9d3f",
+      "title": "逐帧飞控通讯与施加量"
+    },
+    {
+      "bytes": 3151,
+      "caption": "悬停、平移、弯臂和恢复的三维 RMS、峰值与终点误差。包含两次超出弯臂阈值的原设置运行。",
+      "file": "metrics.csv",
+      "kind": "data",
+      "sha256": "ed217a7d15355adecea05e16bc5052ae4429a9df2d9784773b93dd7b480128c5",
+      "title": "五次飞行逐段指标"
+    },
+    {
+      "bytes": 2252,
+      "caption": "核对 GPS 时钟、四路原生电机输出、bag 数值及广义坐标，并报告各记录的覆盖率。",
+      "file": "alignment.json",
+      "kind": "data",
+      "sha256": "d2e893d7f5ada1c92f343ca6c0014bfd9aa78cda7751bd820da60108f4509016",
+      "title": "时间对齐与独立重建"
+    },
+    {
+      "bytes": 23790,
+      "caption": "每次运行的参数、验收布尔值、时间窗、重建误差与原文件 SHA-256。",
+      "file": "summary.json",
+      "kind": "data",
+      "sha256": "b8a6358f9907ee2e06232168df1e3268262f86879d2f8082e49add6a5c2dcba3",
+      "title": "逐项验收和文件校验值"
+    },
+    {
+      "bytes": 2213,
+      "caption": "悬停、平移与弯臂任务及预先登记的阈值。",
+      "file": "protocol.json",
+      "kind": "data",
+      "sha256": "bb264377d45404b28526b333878d05d0993c45b739b7d356b4b61653b5e2bf66",
+      "title": "运行前验收协议"
+    },
+    {
+      "bytes": 5262,
+      "caption": "讲图顺序、调通时的发现、模型假设、数据来源与下一轮单门对照。",
+      "file": "review-notes.txt",
+      "kind": "data",
+      "sha256": "4f614da776e0d81ec480eb7f9c5ba1b7fa679723f6e279d506e81fcbc83c5a2b",
+      "title": "组会讲稿与复现命令"
+    }
+  ],
+  "guide": [
+    "先看 39 秒自由飞行回放。任务依次为起飞、悬停、向东平移、悬停弯臂和恢复。",
+    "再看两页候选图。相同臂指令下，两个原设置运行的弯臂均方根误差为 17.20、17.21 cm；提高俯仰角速度积分增益后三次为 11.42、11.18、11.25 cm。",
+    "在本页直接下载最终运行的 ULog、ROS bag、MuJoCo 状态和逐帧通讯表。离线包包含同一组原始文件与曲线。"
+  ],
+  "id": "2026-11-18-f",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "7e55f7ee24da32941928b914805abf8fd8d3413e7c4f8e6e31daecc0b989ce9f"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "4613ec3e0656f5edc06043262c6323e88cae8a6aa6eb8f95055cdfb7b428f4f0"
+    }
+  },
+  "revision": "80b5fe25e6ced41bc08f5fc4d53b0194f9c3a98e",
+  "schema": 1,
+  "scope": "NUC 本机软件在环。SUPER 与 Qingyu 标称空载模型，合成惯导、磁力计、气压与 GPS，固定空场。门洞通过和实物结果按后续任务单独评价。",
+  "source_note": "1c877ed 登记阈值；80b5fe2 最终运行；5db98c5 保存七次原始记录与核查材料。",
+  "stage": "F · PX4 飞控闭环",
+  "summary": "最终自由飞行中，空载悬停误差 0.94 cm，弯臂期间三维均方根误差 11.25 cm，瞬时最大偏离 25.07 cm。PX4 原生四路电机记录已与实际施加推力对齐。",
+  "title": "空中弯臂时，机身偏离定点多远？",
+  "when": "2026-11-18T22:53:26+08:00"
+}

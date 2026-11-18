@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "id": "2026-11-18-f",
+  "stage": "F · PX4 飞控闭环",
+  "title": "空中弯臂时，机身偏离定点多远？",
+  "when": "2026-11-18T22:53:26+08:00",
+  "summary": "最终自由飞行中，空载悬停误差 0.94 cm，弯臂期间三维均方根误差 11.25 cm，瞬时最大偏离 25.07 cm。PX4 原生四路电机记录已与实际施加推力对齐。",
+  "guide": [
+    "先看 39 秒自由飞行回放。任务依次为起飞、悬停、向东平移、悬停弯臂和恢复。",
+    "再看两页候选图。相同臂指令下，两个原设置运行的弯臂均方根误差为 17.20、17.21 cm；提高俯仰角速度积分增益后三次为 11.42、11.18、11.25 cm。",
+    "在本页直接下载最终运行的 ULog、ROS bag、MuJoCo 状态和逐帧通讯表。离线包包含同一组原始文件与曲线。"
+  ],
+  "scope": "NUC 本机软件在环。SUPER 与 Qingyu 标称空载模型，合成惯导、磁力计、气压与 GPS，固定空场。门洞通过和实物结果按后续任务单独评价。",
+  "revision": "80b5fe25e6ced41bc08f5fc4d53b0194f9c3a98e",
+  "source_note": "1c877ed 登记阈值；80b5fe2 最终运行；5db98c5 保存七次原始记录与核查材料。",
+  "cover": "cad.png",
+  "files": [
+    {
+      "kind": "image",
+      "file": "cad.png",
+      "title": "自由飞行的三个实测仿真姿态",
+      "caption": "12、17 和 30 秒的模型均读取完整积分状态。相机随模型居中，E 给出机身相对起点的向东位移。"
+    },
+    {
+      "kind": "curve",
+      "file": "curves.png",
+      "title": "弯臂期间的位置误差与前后电机推力",
+      "caption": "五个空心点分别对应同一条件下的五次飞行。右下是最终运行前、后两对旋翼每台的平均推力。"
+    },
+    {
+      "kind": "video",
+      "file": "replay.mp4",
+      "title": "39 秒飞行回放",
+      "caption": "以两倍速播放。左侧是日志姿态，右侧为相对起飞点的固定东向–高度坐标，方框是请求、实心点是机身。",
+      "poster": "poster.png"
+    },
+    {
+      "kind": "poster",
+      "file": "poster.png",
+      "title": "30 秒原始姿态",
+      "caption": "118° 指令的持续段。"
+    },
+    {
+      "kind": "document",
+      "file": "review.pdf",
+      "title": "两页论文候选图",
+      "caption": "第一页呈现飞行任务与臂响应，第二页核对位置误差、俯仰控制与电机输出。独立组会预览。"
+    },
+    {
+      "kind": "data",
+      "file": "flight.ulg",
+      "title": "PX4 原生 ULog",
+      "caption": "传感器、EKF2、飞行模式、飞控设定值与四路原生 PWM，可用 Flight Review 或 pyulog 打开。"
+    },
+    {
+      "kind": "data",
+      "file": "flight.bag",
+      "title": "ROS1 原生 bag",
+      "caption": "七个有时间戳的记录主题，包括仿真时钟、请求、EKF 遥测、控制输出、形态与评估真值。"
+    },
+    {
+      "kind": "data",
+      "file": "physics.npz",
+      "title": "MuJoCo 完整状态",
+      "caption": "50 Hz 的 qpos、qvel、ctrl、TCP 与旋翼推力，动作时间使用 HIL 微秒时钟。"
+    },
+    {
+      "kind": "data",
+      "file": "hil.csv",
+      "title": "逐帧飞控通讯与施加量",
+      "caption": "250 Hz。含原生 HIL 时间、传感器、四路电机、机身与臂请求和响应。"
+    },
+    {
+      "kind": "data",
+      "file": "metrics.csv",
+      "title": "五次飞行逐段指标",
+      "caption": "悬停、平移、弯臂和恢复的三维 RMS、峰值与终点误差。包含两次超出弯臂阈值的原设置运行。"
+    },
+    {
+      "kind": "data",
+      "file": "alignment.json",
+      "title": "时间对齐与独立重建",
+      "caption": "核对 GPS 时钟、四路原生电机输出、bag 数值及广义坐标，并报告各记录的覆盖率。"
+    },
+    {
+      "kind": "data",
+      "file": "summary.json",
+      "title": "逐项验收和文件校验值",
+      "caption": "每次运行的参数、验收布尔值、时间窗、重建误差与原文件 SHA-256。"
+    },
+    {
+      "kind": "data",
+      "file": "protocol.json",
+      "title": "运行前验收协议",
+      "caption": "悬停、平移与弯臂任务及预先登记的阈值。"
+    },
+    {
+      "kind": "data",
+      "file": "review-notes.txt",
+      "title": "组会讲稿与复现命令",
+      "caption": "讲图顺序、调通时的发现、模型假设、数据来源与下一轮单门对照。"
+    }
+  ]
+}

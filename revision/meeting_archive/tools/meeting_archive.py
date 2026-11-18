@@ -4,7 +4,7 @@ from pathlib import Path
 
 SCHEMA=1
 GROUPS={'image':('images','模型与场景','原图'),'curve':('curves','曲线与机制图','原图'),'video':('videos','视频回放','MP4'),'document':('documents','论文与报告','PDF'),'data':('data','数据及运行记录','数据')}
-EXT={'image':{'.png','.jpg','.jpeg','.webp'},'curve':{'.png','.jpg','.webp'},'video':{'.mp4'},'document':{'.pdf'},'data':{'.csv','.json','.npz','.txt'},'poster':{'.png','.jpg','.webp'}}
+EXT={'image':{'.png','.jpg','.jpeg','.webp'},'curve':{'.png','.jpg','.webp'},'video':{'.mp4'},'document':{'.pdf'},'data':{'.csv','.json','.npz','.txt','.ulg','.bag'},'poster':{'.png','.jpg','.webp'}}
 SAFE=re.compile(r'^[a-z0-9][a-z0-9-]{0,79}$'); FILE=re.compile(r'^[a-z0-9][a-z0-9._-]{0,95}$')
 LIMIT=24*1024**2
 CSS='''

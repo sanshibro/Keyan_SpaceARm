@@ -1,0 +1,53 @@
+{
+  "axes": "World ENU (east,north,up); PX4 local NED; body FLU -> FRD with diag(+1,-1,-1).",
+  "alignment_rule": "HIL and ROS simulated timestamps in microseconds; add the reported offset to PX4 boot time. GPS packets are sent immediately before the matching IMU; infer the origin from GPS UTC minus uORB sample time minus 4 ms.",
+  "physics": "qpos at 50 Hz includes free-body quaternion wxyz and integrated joints; ctrl holds the actual following interval drive. HIL CSV at 250 Hz, MuJoCo integrates eight 0.5 ms steps per HIL interval.",
+  "scope": "ROS bag written by the running simulator bridge using typed messages on its simulation clock. PX4 control transport is MAVLink over loopback.",
+  "px4_boot_to_hil_us": 1000000,
+  "gps_minus_prior_pulse_us": 4000,
+  "overlap_native_motor_samples": 9160,
+  "fraction_native_per_wire": 0.9393908317095683,
+  "max_native_motor_gap_us": 8000,
+  "wire_ticks": 9751,
+  "max_hil_actuator_stamp_error_us": 0,
+  "max_native_normalized_motor_error": 5.960464477539063e-08,
+  "swapped_first_two_channels_max_error": 0.2860000431537628,
+  "max_qpos_position_error_m": 9.974659986866641e-17,
+  "max_actuator_write_error_N": 1.1657341758564144e-15,
+  "bag_samples_per_topic": {
+    "clock": 1950,
+    "est": 1950,
+    "position": 1950,
+    "ref": 1950,
+    "motors": 1950,
+    "thrust": 1950,
+    "arm": 1950
+  },
+  "bag_max_abs_error_by_topic": {
+    "ref": 9.71445146547012e-17,
+    "position": 0.0,
+    "motors": 5.551115123125783e-17,
+    "thrust": 0.0,
+    "arm": 2.842170943040401e-14,
+    "est": 9.974659986866641e-17
+  },
+  "ulog_dropouts": 0,
+  "ulog_topic_samples": {
+    "sensor_combined": 13706,
+    "vehicle_gps_position": 549,
+    "vehicle_magnetometer": 807,
+    "vehicle_air_data": 1098,
+    "estimator_status": 2707,
+    "vehicle_local_position": 2707,
+    "trajectory_setpoint": 1582,
+    "vehicle_status": 114,
+    "actuator_outputs": 12896
+  },
+  "ros_telemetry_vs_native_ekf_rms_m": 1.3429233985550981e-05,
+  "native_ekf_vs_plant_3d_rms_m": 0.016222740690104757,
+  "native_accel_vs_wire_p99_m_s2": 0.03597205525541314,
+  "native_held_setpoint_max_component_error_m": 2.139713617399508e-08,
+  "native_motor_first_us": 15952000,
+  "native_motor_last_us": 54952000,
+  "gps_offset_outliers": 0
+}

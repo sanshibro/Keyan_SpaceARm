@@ -1,25 +1,25 @@
 {
   "branch": "feat/paper-mechanism-rolling-20261117",
   "status": "awaiting_review",
-  "stage": "E2 完成 · 驱动与末端载荷敏感性",
-  "mode": "SUPER 与 Qingyu · 固定机身 · 30 次积分",
-  "detail": "额外 100 g 让标称模型保持时的夹爪平均下移 6.34 mm。组会归档收录同步视频、夹爪局部放大、配对曲线和全部状态。",
-  "updated": "2026-11-18T21:42:10+08:00",
+  "stage": "F 完成 · PX4 软件在环与日志重建",
+  "mode": "SUPER 与 Qingyu · PX4 EKF2 · MuJoCo 自由飞行",
+  "detail": "最终自由飞行中，空载悬停误差 0.94 cm，弯臂期间三维均方根误差 11.25 cm，瞬时最大偏离 25.07 cm。PX4 原生四路电机记录已与实际施加推力对齐。",
+  "updated": "2026-11-18T22:53:26+08:00",
   "progress": 100,
-  "geometry": "round_e2_cad.png",
-  "geometry_caption": "同一时刻的两个 CAD 姿态和毫米单位的夹爪局部放大",
-  "rolling": "round_e2_curves.png",
-  "rolling_caption": "载荷和驱动参数如何分别影响保持欠角与上行响应",
+  "geometry": "round_f_cad.png",
+  "geometry_caption": "悬停、平移和弯臂时的实际积分姿态",
+  "rolling": "round_f_curves.png",
+  "rolling_caption": "位置误差、五次结果及前后旋翼反应",
   "replay": null,
   "items": [
-    "27 项参数组合 + 3 项数值对照",
-    "最大总弯曲 116.05°",
-    "零接触、零饱和",
-    "3 项数值对照均通过"
+    "同条件完成五次飞行",
+    "自由飞行评分时长 39 秒",
+    "弯臂总曲率峰值 115.55°",
+    "四路输出逐样本重建"
   ],
   "commits": [
-    "bfe6768 · 运行前登记",
-    "d1f43b1 · 积分与负载惯量",
-    "4201114 · 原始数据及配对分析"
+    "1c877ed · 先登记验收阈值",
+    "80b5fe2 · 最终飞行配置",
+    "5db98c5 · 归档原始日志"
   ]
 }

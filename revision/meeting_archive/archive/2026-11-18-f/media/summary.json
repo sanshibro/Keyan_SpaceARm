@@ -1,0 +1,651 @@
+{
+  "protocol": "revision/protocols/round_f.json",
+  "cases": [
+    {
+      "label": "reference",
+      "pitch_rate_i": 0.20000000298023224,
+      "phases": {
+        "liftoff": {
+          "first_us": 15952000,
+          "last_us": 24948000,
+          "ticks": 2250,
+          "rms_3d_m": 0.31247626155254166,
+          "max_3d_m": 0.6518573439832842,
+          "endpoint_3d_m": 0.01793201066520462
+        },
+        "hover": {
+          "first_us": 24952000,
+          "last_us": 29948000,
+          "ticks": 1250,
+          "rms_3d_m": 0.01193973806582606,
+          "max_3d_m": 0.017903706349129255,
+          "endpoint_3d_m": 0.012010945414527371
+        },
+        "translate": {
+          "first_us": 29952000,
+          "last_us": 37948000,
+          "ticks": 2000,
+          "rms_3d_m": 0.13169850735241562,
+          "max_3d_m": 0.2614689700976681,
+          "endpoint_3d_m": 0.007159469453122807
+        },
+        "bend": {
+          "first_us": 37952000,
+          "last_us": 51948000,
+          "ticks": 3500,
+          "rms_3d_m": 0.17204489353398675,
+          "max_3d_m": 0.3775199374378789,
+          "endpoint_3d_m": 0.2504581107259136
+        },
+        "recover": {
+          "first_us": 51952000,
+          "last_us": 54952000,
+          "ticks": 751,
+          "rms_3d_m": 0.10639585411594077,
+          "max_3d_m": 0.249586741815688,
+          "endpoint_3d_m": 0.08249967965897312
+        }
+      },
+      "release_us": 15952000,
+      "scoring_end_us": 54952000,
+      "code": "2b5b082985131b9f60df96735fc391e7b47f5226",
+      "mass_kg": 2.25,
+      "displacement_east_m": 0.6068381627950019,
+      "peak_tilt_deg": 1.7535596177729316,
+      "tilt_source": "50 Hz qpos",
+      "max_total_curvature_deg": 115.55358157269818,
+      "peak_net_bend_deg": 115.55357824596422,
+      "maximum_bend_hold_deviation_m": 0.3775199374378789,
+      "airborne_contact_steps": 0,
+      "checks": {
+        "hover": true,
+        "translation_endpoint": true,
+        "translation_rms": true,
+        "translation_distance": true,
+        "bend_position": false,
+        "bend_response": true,
+        "peak_tilt": true,
+        "curvature": true,
+        "no_contacts": true,
+        "offboard": true,
+        "logs": true
+      },
+      "passed": false,
+      "sha256": {
+        "flight.ulg": "42927d9ceaa147766ca2b76424128926f62ca46df3cb67c013933b1338def60a",
+        "flight.bag": "48a7801400e863fcb431cba4504d56f268d15982db6d61ae18553c9d6d5530b7",
+        "physics.npz": "e48daecbbc2d965c5deef47e524490951594293a093f38722a0893c1b8652a02",
+        "hil.csv": "3fdae6ce6c75e1e4bbc1ad45ad4ce707341e06ab301688a8ef11eb574b639089",
+        "events.jsonl": "c11d5cc4321f0dff3a73e31321a952ab4f00f336e00402e77cc709e771c95900",
+        "run.json": "141b0a2906d3bce44370e892cb77f298770e0d196dc91f3aa4aae456f87e2e4b",
+        "provenance.json": "43477459edaf374661dfdc070bcfb7788b98e377762fd460df7abe6c7052e2ff"
+      },
+      "reconstruction": {
+        "px4_boot_to_hil_us": 1000000,
+        "gps_minus_prior_pulse_us": 4000,
+        "overlap_native_motor_samples": 9119,
+        "fraction_native_per_wire": 0.9351861347554097,
+        "max_native_motor_gap_us": 8000,
+        "wire_ticks": 9751,
+        "max_hil_actuator_stamp_error_us": 0,
+        "max_native_normalized_motor_error": 5.960464477539063e-08,
+        "swapped_first_two_channels_max_error": 0.2860000431537628,
+        "max_qpos_position_error_m": 9.974659986866641e-17,
+        "max_actuator_write_error_N": 1.1657341758564144e-15,
+        "bag_samples_per_topic": {
+          "clock": 1950,
+          "est": 1950,
+          "position": 1950,
+          "ref": 1950,
+          "motors": 1950,
+          "thrust": 1950,
+          "arm": 1950
+        },
+        "bag_max_abs_error_by_topic": {
+          "ref": 9.71445146547012e-17,
+          "position": 0.0,
+          "motors": 5.551115123125783e-17,
+          "thrust": 0.0,
+          "arm": 2.842170943040401e-14,
+          "est": 9.996344030316351e-17
+        },
+        "ulog_dropouts": 0,
+        "ulog_topic_samples": {
+          "sensor_combined": 13456,
+          "vehicle_gps_position": 539,
+          "vehicle_magnetometer": 792,
+          "vehicle_air_data": 1078,
+          "estimator_status": 2657,
+          "vehicle_local_position": 2657,
+          "trajectory_setpoint": 1557,
+          "vehicle_status": 112,
+          "actuator_outputs": 12482
+        },
+        "ros_telemetry_vs_native_ekf_rms_m": 1.5119736688307205e-05,
+        "native_ekf_vs_plant_3d_rms_m": 0.01734370221452191,
+        "native_accel_vs_wire_p99_m_s2": 0.03622077027777659,
+        "native_held_setpoint_max_component_error_m": 2.139713617399508e-08,
+        "native_motor_first_us": 15952000,
+        "native_motor_last_us": 54920000,
+        "gps_offset_outliers": 0
+      }
+    },
+    {
+      "label": "candidate",
+      "pitch_rate_i": 0.4000000059604645,
+      "phases": {
+        "liftoff": {
+          "first_us": 15912000,
+          "last_us": 24908000,
+          "ticks": 2250,
+          "rms_3d_m": 0.3121279210941651,
+          "max_3d_m": 0.6518598447709506,
+          "endpoint_3d_m": 0.01613869120676325
+        },
+        "hover": {
+          "first_us": 24912000,
+          "last_us": 29908000,
+          "ticks": 1250,
+          "rms_3d_m": 0.009219436142222308,
+          "max_3d_m": 0.016099866970636968,
+          "endpoint_3d_m": 0.010069625185883587
+        },
+        "translate": {
+          "first_us": 29912000,
+          "last_us": 37908000,
+          "ticks": 2000,
+          "rms_3d_m": 0.12348655674689564,
+          "max_3d_m": 0.24727138600862378,
+          "endpoint_3d_m": 0.009820856034834034
+        },
+        "bend": {
+          "first_us": 37912000,
+          "last_us": 51908000,
+          "ticks": 3500,
+          "rms_3d_m": 0.11423648985547696,
+          "max_3d_m": 0.25394738512915943,
+          "endpoint_3d_m": 0.14455995615962447
+        },
+        "recover": {
+          "first_us": 51912000,
+          "last_us": 54912000,
+          "ticks": 751,
+          "rms_3d_m": 0.06564923006395564,
+          "max_3d_m": 0.14396934803416034,
+          "endpoint_3d_m": 0.04574005014916324
+        }
+      },
+      "release_us": 15912000,
+      "scoring_end_us": 54912000,
+      "code": "2b5b082985131b9f60df96735fc391e7b47f5226",
+      "mass_kg": 2.25,
+      "displacement_east_m": 0.6021801844022253,
+      "peak_tilt_deg": 1.2310950926506077,
+      "tilt_source": "50 Hz qpos",
+      "max_total_curvature_deg": 115.55506014287606,
+      "peak_net_bend_deg": 115.55503259405248,
+      "maximum_bend_hold_deviation_m": 0.25394738512915943,
+      "airborne_contact_steps": 0,
+      "checks": {
+        "hover": true,
+        "translation_endpoint": true,
+        "translation_rms": true,
+        "translation_distance": true,
+        "bend_position": true,
+        "bend_response": true,
+        "peak_tilt": true,
+        "curvature": true,
+        "no_contacts": true,
+        "offboard": true,
+        "logs": true
+      },
+      "passed": true,
+      "sha256": {
+        "flight.ulg": "917f4be99312321ff346b26bf0a6e4f153c487785832d683a1b59e3e7c147b67",
+        "flight.bag": "e8b631e029894fb0446c23c2470391ac2f36868c826c7ac4e12cf1b36e50f69b",
+        "physics.npz": "42365993eaca68c44d70e4fee932f79528ab9028e0837abf3e38633b836dba8e",
+        "hil.csv": "4feab628e5307be919830d97310561240a3231915012f5b208ad60864c1a2937",
+        "events.jsonl": "31d0a5b6a38cff4a9466c3e5c559dd5dbd231e24d4151f96daffda9325ead5b2",
+        "run.json": "c6f74fc58b99ac4fa6a32b23041631cace8b0e8b20f1f88570076005fdbb6c38",
+        "provenance.json": "260385c74221fb46f79c512aeaecfbd1caead4fe25d37be15c016a2a08087368"
+      },
+      "reconstruction": {
+        "px4_boot_to_hil_us": 1000000,
+        "gps_minus_prior_pulse_us": 4000,
+        "overlap_native_motor_samples": 9178,
+        "fraction_native_per_wire": 0.9412367962260281,
+        "max_native_motor_gap_us": 8000,
+        "wire_ticks": 9751,
+        "max_hil_actuator_stamp_error_us": 0,
+        "max_native_normalized_motor_error": 5.960464477539063e-08,
+        "swapped_first_two_channels_max_error": 0.2860000431537628,
+        "max_qpos_position_error_m": 9.990923019453923e-17,
+        "max_actuator_write_error_N": 1.1102230246251565e-15,
+        "bag_samples_per_topic": {
+          "clock": 1950,
+          "est": 1950,
+          "position": 1950,
+          "ref": 1950,
+          "motors": 1950,
+          "thrust": 1950,
+          "arm": 1950
+        },
+        "bag_max_abs_error_by_topic": {
+          "ref": 9.71445146547012e-17,
+          "position": 0.0,
+          "motors": 5.551115123125783e-17,
+          "thrust": 0.0,
+          "arm": 2.842170943040401e-14,
+          "est": 9.98821251402271e-17
+        },
+        "ulog_dropouts": 0,
+        "ulog_topic_samples": {
+          "sensor_combined": 13449,
+          "vehicle_gps_position": 539,
+          "vehicle_magnetometer": 792,
+          "vehicle_air_data": 1077,
+          "estimator_status": 2656,
+          "vehicle_local_position": 2656,
+          "trajectory_setpoint": 1556,
+          "vehicle_status": 112,
+          "actuator_outputs": 12616
+        },
+        "ros_telemetry_vs_native_ekf_rms_m": 1.3881173516741102e-05,
+        "native_ekf_vs_plant_3d_rms_m": 0.01636336760181277,
+        "native_accel_vs_wire_p99_m_s2": 0.03645225531115493,
+        "native_held_setpoint_max_component_error_m": 2.139713617399508e-08,
+        "native_motor_first_us": 15912000,
+        "native_motor_last_us": 54904000,
+        "gps_offset_outliers": 0
+      }
+    },
+    {
+      "label": "repeat-reference",
+      "pitch_rate_i": 0.20000000298023224,
+      "phases": {
+        "liftoff": {
+          "first_us": 15952000,
+          "last_us": 24948000,
+          "ticks": 2250,
+          "rms_3d_m": 0.31272954763023175,
+          "max_3d_m": 0.6519143130887184,
+          "endpoint_3d_m": 0.01717643513391885
+        },
+        "hover": {
+          "first_us": 24952000,
+          "last_us": 29948000,
+          "ticks": 1250,
+          "rms_3d_m": 0.015280421832151982,
+          "max_3d_m": 0.018525997723277537,
+          "endpoint_3d_m": 0.012430431508770129
+        },
+        "translate": {
+          "first_us": 29952000,
+          "last_us": 37948000,
+          "ticks": 2000,
+          "rms_3d_m": 0.1297758548537336,
+          "max_3d_m": 0.25754282434382647,
+          "endpoint_3d_m": 0.009976279136847946
+        },
+        "bend": {
+          "first_us": 37952000,
+          "last_us": 51948000,
+          "ticks": 3500,
+          "rms_3d_m": 0.17207792769956792,
+          "max_3d_m": 0.3761956854010198,
+          "endpoint_3d_m": 0.2493403011078514
+        },
+        "recover": {
+          "first_us": 51952000,
+          "last_us": 54952000,
+          "ticks": 751,
+          "rms_3d_m": 0.1056875769958249,
+          "max_3d_m": 0.24846862873605413,
+          "endpoint_3d_m": 0.0829850000316919
+        }
+      },
+      "release_us": 15952000,
+      "scoring_end_us": 54952000,
+      "code": "2b5b082985131b9f60df96735fc391e7b47f5226",
+      "mass_kg": 2.25,
+      "displacement_east_m": 0.6075563643801478,
+      "peak_tilt_deg": 1.7539890206700968,
+      "tilt_source": "50 Hz qpos",
+      "max_total_curvature_deg": 115.55349927002638,
+      "peak_net_bend_deg": 115.55349179851584,
+      "maximum_bend_hold_deviation_m": 0.3761956854010198,
+      "airborne_contact_steps": 0,
+      "checks": {
+        "hover": true,
+        "translation_endpoint": true,
+        "translation_rms": true,
+        "translation_distance": true,
+        "bend_position": false,
+        "bend_response": true,
+        "peak_tilt": true,
+        "curvature": true,
+        "no_contacts": true,
+        "offboard": true,
+        "logs": true
+      },
+      "passed": false,
+      "sha256": {
+        "flight.ulg": "e84fda0b4b60be9a743d76fc9b6b10898a0cfabe22a15a497d297b5bc1b769e9",
+        "flight.bag": "4c68f5eaa2f18d711bf94dc905232a1fe4b4d2e92b32c9b09d7ec83a4257709e",
+        "physics.npz": "e84aa7931b1a071c876167a8d0de66e0470ee2c05b893efc32ccf60402d8ee42",
+        "hil.csv": "0013cfb360f66dd022fc566497a4d7ee07d87737b1ef617c839ba3295f9cdacc",
+        "events.jsonl": "d6f89bbf0a6ec950e548027bef3e8586b64b9b935125df962878e99e6ce58e86",
+        "run.json": "25f5566bb300813b164939a88f522bbae941acad087efcb3915157711887f562",
+        "provenance.json": "360a690a36a47d32be543f11ba064dff9a88aedc110c1472c9e7b13fc8416832"
+      },
+      "reconstruction": {
+        "px4_boot_to_hil_us": 1000000,
+        "gps_minus_prior_pulse_us": 4000,
+        "overlap_native_motor_samples": 9216,
+        "fraction_native_per_wire": 0.9451338324274433,
+        "max_native_motor_gap_us": 8000,
+        "wire_ticks": 9751,
+        "max_hil_actuator_stamp_error_us": 0,
+        "max_native_normalized_motor_error": 5.960464477539063e-08,
+        "swapped_first_two_channels_max_error": 0.2860000431537628,
+        "max_qpos_position_error_m": 9.974659986866641e-17,
+        "max_actuator_write_error_N": 1.1657341758564144e-15,
+        "bag_samples_per_topic": {
+          "clock": 1950,
+          "est": 1950,
+          "position": 1950,
+          "ref": 1950,
+          "motors": 1950,
+          "thrust": 1950,
+          "arm": 1950
+        },
+        "bag_max_abs_error_by_topic": {
+          "ref": 9.71445146547012e-17,
+          "position": 0.0,
+          "motors": 5.551115123125783e-17,
+          "thrust": 0.0,
+          "arm": 4.263256414560601e-14,
+          "est": 9.996344030316351e-17
+        },
+        "ulog_dropouts": 0,
+        "ulog_topic_samples": {
+          "sensor_combined": 13461,
+          "vehicle_gps_position": 540,
+          "vehicle_magnetometer": 792,
+          "vehicle_air_data": 1078,
+          "estimator_status": 2657,
+          "vehicle_local_position": 2657,
+          "trajectory_setpoint": 1558,
+          "vehicle_status": 112,
+          "actuator_outputs": 12581
+        },
+        "ros_telemetry_vs_native_ekf_rms_m": 1.6335566187043347e-05,
+        "native_ekf_vs_plant_3d_rms_m": 0.01721390276480398,
+        "native_accel_vs_wire_p99_m_s2": 0.03612325975430885,
+        "native_held_setpoint_max_component_error_m": 2.56899511663633e-08,
+        "native_motor_first_us": 15952000,
+        "native_motor_last_us": 54936000,
+        "gps_offset_outliers": 1
+      }
+    },
+    {
+      "label": "qualification",
+      "pitch_rate_i": 0.4000000059604645,
+      "phases": {
+        "liftoff": {
+          "first_us": 15948000,
+          "last_us": 24944000,
+          "ticks": 2250,
+          "rms_3d_m": 0.3129404729540001,
+          "max_3d_m": 0.6519148249891806,
+          "endpoint_3d_m": 0.016862543788971833
+        },
+        "hover": {
+          "first_us": 24948000,
+          "last_us": 29944000,
+          "ticks": 1250,
+          "rms_3d_m": 0.01039534804030758,
+          "max_3d_m": 0.016834685367188674,
+          "endpoint_3d_m": 0.0059125406370257785
+        },
+        "translate": {
+          "first_us": 29948000,
+          "last_us": 37944000,
+          "ticks": 2000,
+          "rms_3d_m": 0.12771334792769098,
+          "max_3d_m": 0.25533404402536514,
+          "endpoint_3d_m": 0.009356787408822188
+        },
+        "bend": {
+          "first_us": 37948000,
+          "last_us": 51944000,
+          "ticks": 3500,
+          "rms_3d_m": 0.1117922185992297,
+          "max_3d_m": 0.24781874824445205,
+          "endpoint_3d_m": 0.1414131765343142
+        },
+        "recover": {
+          "first_us": 51948000,
+          "last_us": 54948000,
+          "ticks": 751,
+          "rms_3d_m": 0.06566607796510363,
+          "max_3d_m": 0.1408338389710326,
+          "endpoint_3d_m": 0.04760509067058608
+        }
+      },
+      "release_us": 15948000,
+      "scoring_end_us": 54948000,
+      "code": "2b5b082985131b9f60df96735fc391e7b47f5226",
+      "mass_kg": 2.25,
+      "displacement_east_m": 0.6014368381116477,
+      "peak_tilt_deg": 1.2246603380690875,
+      "tilt_source": "50 Hz qpos",
+      "max_total_curvature_deg": 115.55439705305399,
+      "peak_net_bend_deg": 115.5543970530486,
+      "maximum_bend_hold_deviation_m": 0.24781874824445205,
+      "airborne_contact_steps": 0,
+      "checks": {
+        "hover": true,
+        "translation_endpoint": true,
+        "translation_rms": true,
+        "translation_distance": true,
+        "bend_position": true,
+        "bend_response": true,
+        "peak_tilt": true,
+        "curvature": true,
+        "no_contacts": true,
+        "offboard": true,
+        "logs": true
+      },
+      "passed": true,
+      "sha256": {
+        "flight.ulg": "40de6b7405bafd4f42446eb4e995e0127bc348551d3e31f2bdf6395118f3944a",
+        "flight.bag": "21b1a2d98014580360fc8b0c7049b49db265c7c89938c6296d4a464f15c2ae53",
+        "physics.npz": "7ff01de12b23ce9429b8f657883344caaef0fad6dbc7c19101f51c92e9dd9e6b",
+        "hil.csv": "0ec4ac4a5c14164f47c2143663de6f29227642fd67ca507525d4fa68cb4fd9e0",
+        "events.jsonl": "19bd47bfb658ff23800725e656a72bb4a1acd8b407e71a80b01ce783f0a84dfe",
+        "run.json": "82070badc5324bb3477ce731d784cf908f6a0b2ea62c1977218f8b66ba7b731c",
+        "provenance.json": "5f197f3dbbc8398b3c05be12c2430fa24b3c85d219638df36dcbd71ac74769d2"
+      },
+      "reconstruction": {
+        "px4_boot_to_hil_us": 1000000,
+        "gps_minus_prior_pulse_us": 4000,
+        "overlap_native_motor_samples": 9077,
+        "fraction_native_per_wire": 0.9308788842170034,
+        "max_native_motor_gap_us": 8000,
+        "wire_ticks": 9751,
+        "max_hil_actuator_stamp_error_us": 0,
+        "max_native_normalized_motor_error": 5.960464477539063e-08,
+        "swapped_first_two_channels_max_error": 0.2860000431537628,
+        "max_qpos_position_error_m": 9.996344030316351e-17,
+        "max_actuator_write_error_N": 1.1657341758564144e-15,
+        "bag_samples_per_topic": {
+          "clock": 1950,
+          "est": 1950,
+          "position": 1950,
+          "ref": 1950,
+          "motors": 1950,
+          "thrust": 1950,
+          "arm": 1950
+        },
+        "bag_max_abs_error_by_topic": {
+          "ref": 9.8879238130678e-17,
+          "position": 0.0,
+          "motors": 5.551115123125783e-17,
+          "thrust": 0.0,
+          "arm": 2.842170943040401e-14,
+          "est": 9.990923019453923e-17
+        },
+        "ulog_dropouts": 0,
+        "ulog_topic_samples": {
+          "sensor_combined": 13440,
+          "vehicle_gps_position": 538,
+          "vehicle_magnetometer": 791,
+          "vehicle_air_data": 1076,
+          "estimator_status": 2654,
+          "vehicle_local_position": 2654,
+          "trajectory_setpoint": 1555,
+          "vehicle_status": 112,
+          "actuator_outputs": 12605
+        },
+        "ros_telemetry_vs_native_ekf_rms_m": 3.4830144791851445e-05,
+        "native_ekf_vs_plant_3d_rms_m": 0.01622919824208004,
+        "native_accel_vs_wire_p99_m_s2": 0.03626204208684387,
+        "native_held_setpoint_max_component_error_m": 2.139713617399508e-08,
+        "native_motor_first_us": 15952000,
+        "native_motor_last_us": 54864000,
+        "gps_offset_outliers": 0
+      }
+    },
+    {
+      "label": "final",
+      "pitch_rate_i": 0.4000000059604645,
+      "phases": {
+        "liftoff": {
+          "first_us": 15952000,
+          "last_us": 24948000,
+          "ticks": 2250,
+          "rms_3d_m": 0.3125609247722049,
+          "max_3d_m": 0.6518651901767416,
+          "endpoint_3d_m": 0.01723774930798882
+        },
+        "hover": {
+          "first_us": 24952000,
+          "last_us": 29948000,
+          "ticks": 1250,
+          "rms_3d_m": 0.009434227575088057,
+          "max_3d_m": 0.017207879428627056,
+          "endpoint_3d_m": 0.0071847054792116335
+        },
+        "translate": {
+          "first_us": 29952000,
+          "last_us": 37948000,
+          "ticks": 2000,
+          "rms_3d_m": 0.12289681968382356,
+          "max_3d_m": 0.24626796997883718,
+          "endpoint_3d_m": 0.013211293261916042
+        },
+        "bend": {
+          "first_us": 37952000,
+          "last_us": 51948000,
+          "ticks": 3500,
+          "rms_3d_m": 0.11250280625087711,
+          "max_3d_m": 0.25067831913663363,
+          "endpoint_3d_m": 0.1444386307501255
+        },
+        "recover": {
+          "first_us": 51952000,
+          "last_us": 54952000,
+          "ticks": 751,
+          "rms_3d_m": 0.06682553653971424,
+          "max_3d_m": 0.1438578091236604,
+          "endpoint_3d_m": 0.049952304743283084
+        }
+      },
+      "release_us": 15952000,
+      "scoring_end_us": 54952000,
+      "code": "80b5fe25e6ced41bc08f5fc4d53b0194f9c3a98e",
+      "mass_kg": 2.25,
+      "displacement_east_m": 0.6022027116460191,
+      "peak_tilt_deg": 1.2304251564107986,
+      "tilt_source": "every physics step",
+      "max_total_curvature_deg": 115.55435970395618,
+      "peak_net_bend_deg": 115.55435888324324,
+      "maximum_bend_hold_deviation_m": 0.25067831913663363,
+      "airborne_contact_steps": 0,
+      "checks": {
+        "hover": true,
+        "translation_endpoint": true,
+        "translation_rms": true,
+        "translation_distance": true,
+        "bend_position": true,
+        "bend_response": true,
+        "peak_tilt": true,
+        "curvature": true,
+        "no_contacts": true,
+        "offboard": true,
+        "logs": true
+      },
+      "passed": true,
+      "sha256": {
+        "flight.ulg": "4c06931a20cf70e1195692574ea1879d33da918a2193f87f18fa0d5d4951a165",
+        "flight.bag": "1e7943843aad36a84225f3569c4af58fbc7d5d748ff5fd254615bc270f034bbb",
+        "physics.npz": "fa5f8cebef0a7529a5a4b5f47b22bec315e6d60a1693e868ec36fed14a288f19",
+        "hil.csv": "7e1a3e8ef5f17f3084338a6b5683b414dc2759f1dd9dc7fef59d134f3b1e9d3f",
+        "events.jsonl": "a628c4e59bc834d46ace64fc0e0a657e64be6fc5e4c9d031dd62c74da6013d5d",
+        "run.json": "68c477cd695c261c8289a2dbc94f2ebebf0b74de4f5b80ba86049685596a1b95",
+        "provenance.json": "09b1182dff438a265d644888b27b0604727b191483d56ec0ae72f4a2cc39b160"
+      },
+      "reconstruction": {
+        "px4_boot_to_hil_us": 1000000,
+        "gps_minus_prior_pulse_us": 4000,
+        "overlap_native_motor_samples": 9160,
+        "fraction_native_per_wire": 0.9393908317095683,
+        "max_native_motor_gap_us": 8000,
+        "wire_ticks": 9751,
+        "max_hil_actuator_stamp_error_us": 0,
+        "max_native_normalized_motor_error": 5.960464477539063e-08,
+        "swapped_first_two_channels_max_error": 0.2860000431537628,
+        "max_qpos_position_error_m": 9.974659986866641e-17,
+        "max_actuator_write_error_N": 1.1657341758564144e-15,
+        "bag_samples_per_topic": {
+          "clock": 1950,
+          "est": 1950,
+          "position": 1950,
+          "ref": 1950,
+          "motors": 1950,
+          "thrust": 1950,
+          "arm": 1950
+        },
+        "bag_max_abs_error_by_topic": {
+          "ref": 9.71445146547012e-17,
+          "position": 0.0,
+          "motors": 5.551115123125783e-17,
+          "thrust": 0.0,
+          "arm": 2.842170943040401e-14,
+          "est": 9.974659986866641e-17
+        },
+        "ulog_dropouts": 0,
+        "ulog_topic_samples": {
+          "sensor_combined": 13706,
+          "vehicle_gps_position": 549,
+          "vehicle_magnetometer": 807,
+          "vehicle_air_data": 1098,
+          "estimator_status": 2707,
+          "vehicle_local_position": 2707,
+          "trajectory_setpoint": 1582,
+          "vehicle_status": 114,
+          "actuator_outputs": 12896
+        },
+        "ros_telemetry_vs_native_ekf_rms_m": 1.3429233985550981e-05,
+        "native_ekf_vs_plant_3d_rms_m": 0.016222740690104757,
+        "native_accel_vs_wire_p99_m_s2": 0.03597205525541314,
+        "native_held_setpoint_max_component_error_m": 2.139713617399508e-08,
+        "native_motor_first_us": 15952000,
+        "native_motor_last_us": 54952000,
+        "gps_offset_outliers": 0
+      }
+    }
+  ],
+  "display_run": "final"
+}
