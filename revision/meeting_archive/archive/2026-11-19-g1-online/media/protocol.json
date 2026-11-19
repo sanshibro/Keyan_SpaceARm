@@ -1,0 +1,80 @@
+{
+  "id": "G1O_known_single_gate_online_timing_v1",
+  "frozen_parent": "16696f0e1001d23a45b45edc6026d33eb0e33791",
+  "parent_protocol": "round_g1.json",
+  "geometry": "Same G1 narrow aperture, SUPER + Qingyu 2.25 kg unloaded assembly and common 52 s TCP task. No real actuators or physical UAV connection.",
+  "gate_angle_deg": 75,
+  "terminal_angle_deg": 20,
+  "bend_duration_s": 10,
+  "return_duration_s": 8,
+  "nominal_bend_s": [
+    14,
+    24
+  ],
+  "nominal_return_s": [
+    34,
+    42
+  ],
+  "pause": {
+    "deceleration_start_s": 22,
+    "ramp_s": 2,
+    "stationary_s": 4,
+    "effective_delay_s": 6
+  },
+  "controller": {
+    "update_s": 0.2,
+    "horizon_s": 14,
+    "predict_step_s": 0.25,
+    "delay_options_s": [
+      0,
+      0.5,
+      1,
+      2,
+      3,
+      4
+    ],
+    "commit_within_s": 0.5,
+    "body_margin_m": 0.1,
+    "arm_margin_m": 0.07,
+    "prediction_reserve_m": 0.01,
+    "crossing_buffer_m": 0.06,
+    "tail_buffer_m": 0.035,
+    "bend_tolerance_deg": 5,
+    "settled_rate_deg_s": 3,
+    "estimator_age_limit_s": 0.18,
+    "ready_altitude_tolerance_m": 0.08,
+    "ready_vz_mps": 0.15,
+    "position_error_decay_s": 3,
+    "velocity_error_decay_s": 1,
+    "angle_pad_per_degree_m": 0.0091
+  },
+  "primary": "Same preregistered all-pass criteria as G1. Additional readouts: trigger x/t, actual arm/tool and rigid body 50 Hz convex-surface distance, margin before retraction, deadline, time to valid TCP dwell, conservative gate certification, predict-loop runtime. All failures retained.",
+  "arm_input": "simulated eight-link joint feedback reconstructed net bend. PX4 LOCAL_POSITION_NED velocity and position, ATTITUDE; no simulator base truth provided to the timing planner.",
+  "clock_conditions": "Clock uses the G1 anticipatory absolute schedule, route-phase applies the same schedule to the currently issued base phase, online rolls candidate start times using current observations and local reference preview. All methods receive the same base commands within a disturbance condition. Clock and route-phase coincide in the nominal condition and share one reference trial per seed.",
+  "seed_order": {
+    "241118": [
+      "clock_nominal",
+      "online_pause",
+      "phase_pause",
+      "online_nominal",
+      "clock_pause"
+    ],
+    "241119": [
+      "phase_pause",
+      "online_nominal",
+      "clock_pause",
+      "clock_nominal",
+      "online_pause"
+    ],
+    "241120": [
+      "online_nominal",
+      "clock_pause",
+      "online_pause",
+      "phase_pause",
+      "clock_nominal"
+    ]
+  },
+  "visual_seed": 241119,
+  "site_data_policy": "Publish images, interactive playback, PDF and compact scores in the public round. Source-pinned, anonymously verified downloads for large evidence packages.",
+  "scope": "Rolling arm timing on a frozen geometric base path. No novel force cancellation, physical calibration, camera mapping, or multi-window path replacement claimed."
+}

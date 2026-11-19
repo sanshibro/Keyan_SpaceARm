@@ -1,0 +1,84 @@
+{
+  "geometry": {
+    "poses": 36,
+    "group_checks": 72,
+    "minimum_lower_bound_difference_m": 0.007324991665128788,
+    "max_conservatism_m": 0.15943989032730838,
+    "all_predicted_bounds_below_convex_upper": true
+  },
+  "faults": {
+    "missing_feedback_no_commit": true,
+    "stale_feedback_no_commit": true,
+    "blocked_lintel_no_commit": true,
+    "max_phase_rate": 1.0000000000012221,
+    "net_route_delay_s": 6.0
+  },
+  "prefix": [
+    {
+      "seed": 241118,
+      "outward": "phase",
+      "first_return_s": 38.404,
+      "critical_s": [
+        34.708,
+        34.668
+      ],
+      "both_minima_before_either_return": true,
+      "max_pre_return_command_difference_deg": 0.0
+    },
+    {
+      "seed": 241118,
+      "outward": "online",
+      "first_return_s": 38.404,
+      "critical_s": [
+        34.748,
+        34.668
+      ],
+      "both_minima_before_either_return": true,
+      "max_pre_return_command_difference_deg": 0.0
+    },
+    {
+      "seed": 241119,
+      "outward": "phase",
+      "first_return_s": 38.404,
+      "critical_s": [
+        34.64,
+        34.66
+      ],
+      "both_minima_before_either_return": true,
+      "max_pre_return_command_difference_deg": 0.0
+    },
+    {
+      "seed": 241119,
+      "outward": "online",
+      "first_return_s": 38.404,
+      "critical_s": [
+        34.74,
+        33.86
+      ],
+      "both_minima_before_either_return": true,
+      "max_pre_return_command_difference_deg": 0.0
+    },
+    {
+      "seed": 241120,
+      "outward": "phase",
+      "first_return_s": 38.404,
+      "critical_s": [
+        34.624,
+        34.664
+      ],
+      "both_minima_before_either_return": true,
+      "max_pre_return_command_difference_deg": 0.0
+    },
+    {
+      "seed": 241120,
+      "outward": "online",
+      "first_return_s": 38.404,
+      "critical_s": [
+        33.924,
+        33.924
+      ],
+      "both_minima_before_either_return": true,
+      "max_pre_return_command_difference_deg": 0.0
+    }
+  ]
+}
