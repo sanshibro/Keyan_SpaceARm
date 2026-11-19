@@ -1,0 +1,162 @@
+{
+  "cover": "mechanism.webp",
+  "files": [
+    {
+      "bytes": 62032,
+      "caption": "同一趟左偏飞行中的机器人、腕部图像、偏移概率和弯角误差。灰带对应 4 秒黑帧。",
+      "file": "mechanism.webp",
+      "kind": "image",
+      "sha256": "3fcc49468742f5c216120c4066f8d01f0c3e73849804bfb62f05779a114bfcd0",
+      "title": "零点偏移报警与腕部相机失视"
+    },
+    {
+      "bytes": 31234,
+      "caption": "三趟留出轨迹合计评分，包含健康基线胜出的工况和定向偏移反例。",
+      "file": "transfer.webp",
+      "kind": "curve",
+      "sha256": "001074829e2a281ea270d2a3c4723ba814201d1374bb3b302d4a9cbde8e3a9bd",
+      "title": "五种应变工况下的弯角误差与覆盖率"
+    },
+    {
+      "bytes": 94893,
+      "caption": "观察随实际推力指令渲染的旋翼、视野遮挡、独立虚拟动捕和估计误差范围。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "mechanism.webp",
+      "sha256": "c8340477f7e42cbcd819a6132b2fb3e563492d0b64884bb2758ec223b00a95d3",
+      "title": "失视前后 18 秒同步回放"
+    },
+    {
+      "bytes": 170078,
+      "caption": "第 1 页解释感知与训练，第 2 页列出定量结果、反例和下一步的实验。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "2619ec3dfd788e44860634b93e6b2257f08a311d9e87f2522dbcc9bf6525cb82",
+      "title": "两页组会预览"
+    },
+    {
+      "bytes": 5468,
+      "caption": "加载、保持、卸载与相同角度的回程读数。",
+      "file": "bench-scores.json",
+      "kind": "data",
+      "sha256": "995b9e29a11e18c88abd649d6f5742c029ded1ead92b3e98b4fa95c6b1bdd256",
+      "title": "独立台架动作的测试结果"
+    },
+    {
+      "bytes": 244313,
+      "caption": "8 种估计方法的弯曲量、方向、弯曲向量、有效率及名义区间覆盖。",
+      "file": "flight-scores.json",
+      "kind": "data",
+      "sha256": "7260a48857fb80d634736060059af59c41e7549ba7e51fbed27c913d05ade09f",
+      "title": "清晰与遮挡的总体评分"
+    },
+    {
+      "bytes": 66316,
+      "caption": "可按轨迹、材料回程、采集盒偏移与视觉条件定位。",
+      "file": "case-scores.json",
+      "kind": "data",
+      "sha256": "10b79010efe34c10da327e636c225b36a38ba37a0c891ad1c0ca9ae489aa95d2",
+      "title": "三趟飞行逐趟评分"
+    },
+    {
+      "bytes": 14534,
+      "caption": "先对每趟轨迹的灵敏度与特异度取均值，再对轨迹等权平均。",
+      "file": "timing-reports.json",
+      "kind": "data",
+      "sha256": "cc72171d7653d9d1260f511b6150517d53b12f6e110afa6dd5a52133a5e010f0",
+      "title": "偏移识别和报警延迟"
+    },
+    {
+      "bytes": 3162,
+      "caption": "核对构造的 35° / 43° 反例、输入时间截断、失视窗口和原始飞行日志。",
+      "file": "audit.json",
+      "kind": "data",
+      "sha256": "965d252651f013878e85febfc888bbbcb28268941b48a1242a081344f4fad095",
+      "title": "不可辨识反例与因果性检查"
+    },
+    {
+      "bytes": 1045,
+      "caption": "各次运行的帧数、原地图姿态以及由 RGB-D 关键帧配准回原坐标的结果。",
+      "file": "optical.json",
+      "kind": "data",
+      "sha256": "533ba0674b99dc393a9894e21220424cd2b968573faa20aa8456ccf914cb7a45",
+      "title": "ORB-SLAM3 跟踪与配准恢复"
+    },
+    {
+      "bytes": 2143,
+      "caption": "独立台架动作标识、代码与输入指纹、模型 SHA-256。",
+      "file": "freeze.json",
+      "kind": "data",
+      "sha256": "6875e13ba93297feb600ef04c18822036646dab1acff1838572491dd0cd8b2d5",
+      "title": "训练和标定冻结记录"
+    },
+    {
+      "bytes": 39048,
+      "caption": "可核对每个压缩包及其成员文件的 SHA-256。",
+      "file": "evidence-index.json",
+      "kind": "data",
+      "sha256": "bacd85a2d8c4704fb272170f79cc289b9390a35e19d4e69626464f6a6b0353b5",
+      "title": "原始数据包清单与指纹"
+    },
+    {
+      "bytes": 6979249,
+      "caption": "独立原始读数、虚拟动捕及冻结权重。",
+      "file": "health-bench.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "e43812ec5c8b98e5caaa39fa211677352e80eba544766fc937ee0f835fb55b97",
+      "title": "14 段台架动作与冻结模型"
+    },
+    {
+      "bytes": 19428354,
+      "caption": "原始 ULog、ROS bag、物理状态、传感输入、估计轨迹、选取的原始相机帧及完整 RGB-D 序列指纹。",
+      "file": "health-26112011-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "6102e34cfedc2fa604418f3d446e17bb5d0a3de875758968ada3a2aef0c4edc8",
+      "title": "直行轨迹原始证据"
+    },
+    {
+      "bytes": 19422621,
+      "caption": "原始 ULog、ROS bag、物理状态、传感输入、估计轨迹、选取的原始相机帧及完整 RGB-D 序列指纹。",
+      "file": "health-26112012-left.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "91e7e4e888fdc7149bade5be72426d95983bc685630bd872db13ac7fdc1ff8ae",
+      "title": "左偏轨迹原始证据"
+    },
+    {
+      "bytes": 19303961,
+      "caption": "原始 ULog、ROS bag、物理状态、传感输入、估计轨迹、选取的原始相机帧及完整 RGB-D 序列指纹。",
+      "file": "health-26112013-right.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "e52f7afe0ae4c8350e65b90b9aff9a1d469e4c0fd259d6eb8f791de5c54b435b",
+      "title": "右偏轨迹原始证据"
+    }
+  ],
+  "guide": [
+    "先播放视频，看相机被遮挡后读数和真实弯角如何分离。",
+    "比较五种应变工况的误差及区间覆盖，特别注意定向偏移。",
+    "打开两页 PDF，使用随附校验的数据复核。"
+  ],
+  "id": "2026-11-20-strain-health",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "05302f0779b7b46114c9671911584efcfe7d6b0b4e0e59835593a70ce44c3c8c"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "9c84fc81eb84f5314f11c0e32cee4ff405feb3d29fa940e4a5d9c8a97dcb3dd4"
+    }
+  },
+  "revision": "3f54116afec8ed6b72375fda278480c67360bf75",
+  "schema": 1,
+  "scope": "三趟新的 PX4 SITL / MuJoCo 飞行仿真。观测器使用各趟传感器记录回放，虚拟动捕独立评分。尚待实物四通道和反馈控制验证。",
+  "source_note": "1fd2dee 登记方案，368a8d8 冻结台架模型，fd3d5c2 完成主评分，3f54116 记录报警延迟与原始日志。",
+  "stage": "G1 · 应变零偏和回程辨识",
+  "summary": "三趟新飞行仿真上比较同一腕部视觉配不同应变工况，测量偏移报警、失视弯角误差和误差区间的覆盖率。",
+  "title": "四路应变能区分零点偏移和材料迟滞吗？",
+  "when": "2026-11-20T00:39:22+08:00"
+}

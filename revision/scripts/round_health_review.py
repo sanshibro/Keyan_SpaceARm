@@ -38,7 +38,7 @@ def build(root):
     def figure(p,x,top,w):
         with Image.open(p) as orig:
             im=orig.convert('RGB');im.thumbnail((1400,820));buf=io.BytesIO()
-            im.save(buf,'JPEG',quality=82,optimize=True,subsampling=0);buf.seek(0)
+            im.save(buf,'JPEG',quality=75,optimize=True,subsampling=1);buf.seek(0)
             height=w*im.height/im.width;c.drawImage(ImageReader(buf),x,H-top-height,w,height)
     head(1,'四路应变能区分零点偏移和材料迟滞吗？','用虚拟动捕训练应变模型，再用三趟独立飞行检验它在腕部相机被遮挡时能否估准臂形。')
     figure(rd/'mechanism.png',L,116,R-L)
@@ -98,4 +98,30 @@ def build(root):
               '误差与覆盖率，结果决定估计器何时可以接入规划器。'],9.5,16)
     para(718,['冻结模型 SHA-256 前缀 '+freeze['model_sha256'][:16]+'    /    保留逐趟评分、原始遥测与输入时序校验。'],8.25,14,muted)
     c.showPage();c.save()
+    # The review is hosted together with earlier rounds. Keep the embedded CJK outlines
+    # and their Unicode maps, while removing device-specific screen hints from its fonts.
+    import zlib
+    sys.path.insert(0,str(root/'qa/packing'))
+    from fontTools.ttLib import TTFont as OutlineFont
+    from pypdf import PdfReader,PdfWriter
+    from pypdf.generic import NameObject,NumberObject
+    path=rd/'review.pdf';reader=PdfReader(io.BytesIO(path.read_bytes()))
+    writer=PdfWriter(clone_from=reader);seen=set()
+    for page in writer.pages:
+        for ref in page['/Resources']['/Font'].values():
+            f=ref.get_object();descriptor=f.get('/FontDescriptor')
+            if descriptor is None:continue
+            fref=descriptor.get_object().raw_get('/FontFile2')
+            if fref.idnum in seen:continue
+            seen.add(fref.idnum);stream=fref.get_object();filters=stream['/Filter']
+            assert filters=='/FlateDecode' or list(filters)==['/FlateDecode']
+            font=OutlineFont(io.BytesIO(stream.get_data()),recalcTimestamp=False)
+            for glyph in font['glyf'].keys():font['glyf'][glyph].removeHinting()
+            for key in ('fpgm','prep','cvt ','LTSH','VDMX','hdmx'):
+                if key in font:del font[key]
+            buf=io.BytesIO();font.save(buf);raw=buf.getvalue();stream._data=zlib.compress(raw,9)
+            stream[NameObject('/Length1')]=NumberObject(len(raw))
+    tmp=rd/'review-compact.tmp';writer.write(tmp)
+    check=PdfReader(tmp);assert [p.extract_text() for p in check.pages]==[p.extract_text() for p in reader.pages]
+    tmp.replace(path)
 if __name__=='__main__':build(Path(sys.argv[1]).resolve())
