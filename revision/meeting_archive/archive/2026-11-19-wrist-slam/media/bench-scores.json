@@ -1,0 +1,23 @@
+{
+  "train": {
+    "n": 6408,
+    "vector_rmse_deg": 0.9788233361772394,
+    "theta_rmse_deg": 0.8380389180414829,
+    "phi_rmse_deg": 0.8826627083116476,
+    "phi_n": 4701
+  },
+  "validation": {
+    "n": 1602,
+    "vector_rmse_deg": 1.0279773250654027,
+    "theta_rmse_deg": 0.8811394021145007,
+    "phi_rmse_deg": 0.9607699015967128,
+    "phi_n": 1054
+  },
+  "test": {
+    "n": 2403,
+    "vector_rmse_deg": 0.951136092331728,
+    "theta_rmse_deg": 0.7956912548038552,
+    "phi_rmse_deg": 0.8771166369291074,
+    "phi_n": 1999
+  }
+}

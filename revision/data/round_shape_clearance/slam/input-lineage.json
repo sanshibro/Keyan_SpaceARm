@@ -1,0 +1,46 @@
+{
+  "native_G1": {
+    "241118-online_pause": {
+      "physics.npz": "d6b5da6ddf313f5979de1c20a614b242b5c3c2f7a868de5d84bf0f8bd58a790f",
+      "timing.jsonl": "9694e7d547a15881835d41976b704a72e122250b3dc947574e1cdc4231308b04",
+      "hil.csv": "dc3b134363a28f72b615eefee2aea9333ffdf88b9673d687604d8a25b6f10469",
+      "run.json": "9a2774c9ca27002b9b2cfe8e13544216563fb3edd7368b85430b26b9f2eafe49"
+    },
+    "241119-clock_pause": {
+      "physics.npz": "32c303b48c2fb26864131d3af7a5c89fc761731637c7f6b6be12b449ba360378",
+      "timing.jsonl": "596c55523b95523e6a23457cf8ac43e806043be4e056b2b17da610b50774918d",
+      "hil.csv": "d4dacb084b7f55647b7cf725a51016ceb12712c8f25e4488d1e2b331959a4d97",
+      "run.json": "952e4817234c80f52a0ce5d83b6a67c008f9fc5d2e18c1621f7257e918886a80"
+    },
+    "241119-online_pause": {
+      "physics.npz": "f266fef326c3072b080552c8804619928a89194184cf0256df4909ba9de3bf99",
+      "timing.jsonl": "c49233f749233fe267450bc3d7d548f52f293a33bd485d5ed82ef3e9b458a84d",
+      "hil.csv": "5c30daaba6d60a14e3a604d62ab20ba91c5612ea25c2926e28030b1e34113d0f",
+      "run.json": "be32fc6a9eb9a8ea511db4856c71f743244ce537650af9a15318b82e76354780"
+    },
+    "241120-clock_pause": {
+      "physics.npz": "59b93593e2f816677ce8394114685af887aa2f6f34dc7806df571b7ad884aede",
+      "timing.jsonl": "c4a40862cb56bdadb61599600fab62a486f9c29dc596b0c3953a322476f4d4b6",
+      "hil.csv": "c07636d9a0c01169423225ced5c7994a1b10bd5ffe6a5b8af950f32de915b370",
+      "run.json": "2d58cd86bbabbae5851f5ca80e13e651b445a49fc1c0b961c6f5775a063c4285"
+    },
+    "241120-online_pause": {
+      "physics.npz": "ce53db2ed6243365f5924896ba0fb004e14683b8d96fe50a77dd961610044dbe",
+      "timing.jsonl": "fa35de6d4f868fb05bbf46aee1da75ff271535420984b8c695bcf5f694a26b09",
+      "hil.csv": "8325fec658de30f8097e0e0f0751ec64c6c14e9099616ede43116b5451b6f7ca",
+      "run.json": "fafa5e04a31d9691523ae33f7b357b4ade124133ef2df29fa1be2551fd31ad1d"
+    },
+    "241118-clock_pause": {
+      "physics.npz": "7323c27a7d1b1cfd2b3181b34cacd2d13f463b89b0132fbd4e6013f1e2ce74a5",
+      "timing.jsonl": "fa376d380eb1b63d9485e34bab2888a567d0f2ea4df6348f221a8ac714da087a",
+      "hil.csv": "7926e26e4fd97dcd5a8a8398b45c11a6d7b15b4fedd76610f99165d123176515",
+      "run.json": "14d938307c0a109aaea1121c33cb86cc8aefd438c6e33b6d08614a05764c31fb"
+    }
+  },
+  "rgbd_manifest_sha256": "5407407ffd20f7123a3d08a4f409145ab32997cc2934d51e0dac82b8abe57b44",
+  "full_frame_count": 4400,
+  "depth_count": 4400,
+  "local_full_input_path": "/home/uav/paper_revision_20261117/revision/data/round_shape_clearance/rgbd-inputs",
+  "time_window": "12 through 46 seconds at 25 Hz, plain-scene control 6 seconds",
+  "material": "Seeded uncoded surface texture; no feature locations exposed to tracker."
+}

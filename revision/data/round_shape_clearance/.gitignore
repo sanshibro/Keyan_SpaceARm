@@ -1,0 +1,10 @@
+# Expanded acquisition workspaces are preserved locally and represented by versioned evidence packs.
+/bench/
+/bench-vision/
+/frames/
+/pilot/
+/runs/
+/rgbd-inputs/
+/review/
+/slam/plain/
+/slam/textured/

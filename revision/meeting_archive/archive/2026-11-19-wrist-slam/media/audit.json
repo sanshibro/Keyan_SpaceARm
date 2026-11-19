@@ -1,0 +1,73 @@
+{
+  "reference_kernel_source_sha256": "f327c72717dd8c0c9efecb2c9186d60ee488196843cb542b1be18a605bb6de58",
+  "mocap_global_rotation_translation_invariance": true,
+  "bench_splits": {
+    "train": 8,
+    "validation": 2,
+    "test": 3
+  },
+  "predictor_sha256": "f449f047a19db212072d1d4fb67bea70f0dc9cd2cb5e900bfa2efd2da02f923d",
+  "plain_first_6s": {
+    "frames": 150,
+    "tracking_ok": 0
+  },
+  "causal_prefix_matches_full_run": true,
+  "flight_verification": {
+    "241119-clock_pause": {
+      "natural": {
+        "camera_frames": 850,
+        "camera_obscured": 0,
+        "reacquired_original_map_s": "not applicable",
+        "maximum_estimated_fused_bend_deg": 72.50175273075654
+      },
+      "occluded": {
+        "camera_frames": 850,
+        "camera_obscured": 100,
+        "reacquired_original_map_s": null,
+        "maximum_estimated_fused_bend_deg": 72.5011248816
+      }
+    },
+    "241119-online_pause": {
+      "natural": {
+        "camera_frames": 850,
+        "camera_obscured": 0,
+        "reacquired_original_map_s": "not applicable",
+        "maximum_estimated_fused_bend_deg": 73.17643781251353
+      },
+      "occluded": {
+        "camera_frames": 850,
+        "camera_obscured": 100,
+        "reacquired_original_map_s": null,
+        "maximum_estimated_fused_bend_deg": 73.18393489523822
+      }
+    },
+    "241120-clock_pause": {
+      "natural": {
+        "camera_frames": 850,
+        "camera_obscured": 0,
+        "reacquired_original_map_s": "not applicable",
+        "maximum_estimated_fused_bend_deg": 73.43347118032388
+      },
+      "occluded": {
+        "camera_frames": 850,
+        "camera_obscured": 100,
+        "reacquired_original_map_s": null,
+        "maximum_estimated_fused_bend_deg": 73.43431699498625
+      }
+    },
+    "241120-online_pause": {
+      "natural": {
+        "camera_frames": 850,
+        "camera_obscured": 0,
+        "reacquired_original_map_s": "not applicable",
+        "maximum_estimated_fused_bend_deg": 73.62408982860649
+      },
+      "occluded": {
+        "camera_frames": 850,
+        "camera_obscured": 100,
+        "reacquired_original_map_s": null,
+        "maximum_estimated_fused_bend_deg": 73.61374465631133
+      }
+    }
+  }
+}

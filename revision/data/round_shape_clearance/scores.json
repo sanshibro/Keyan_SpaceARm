@@ -1,0 +1,1128 @@
+{
+  "held_out_cases": [
+    "241119-clock_pause",
+    "241119-online_pause",
+    "241120-clock_pause",
+    "241120-online_pause"
+  ],
+  "pad_fingerprint": "a04388e4d121512390b1b06995aba04bca071d9cf70823ebf0440b721a7e43cd",
+  "results": {
+    "natural": {
+      "command": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 1.8513794353529696,
+          "theta_rmse_deg": 1.8512196613267904,
+          "phi_rmse_deg": 0.0017630521123955082,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 602,
+          "vector_rmse_deg": 1.8387470821722274,
+          "theta_rmse_deg": 1.8385760598593555,
+          "phi_rmse_deg": 0.0018104969523307375,
+          "phi_n": 534
+        },
+        "world_tcp_rmse_mm": 15.950908515305253,
+        "world_tcp_common_rmse_mm": 16.030798979869846,
+        "world_interior_max_point_p95_mm": 21.44958032906855,
+        "mount_interior_max_point_p95_mm": 5.84913701727708,
+        "nominal_arm_clearance_error_rmse_mm": 8.574977766710518,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8629,
+            "false_pass": 35,
+            "false_reject_observed": 159,
+            "conservative_or_unknown_hold_on_safe": 159
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8243,
+            "false_pass": 0,
+            "false_reject_observed": 545,
+            "conservative_or_unknown_hold_on_safe": 545
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 568,
+          "wrapped_rmse_deg": 0.0017630521123955082
+        }
+      },
+      "strain": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 0.5774400006803453,
+          "theta_rmse_deg": 0.49102386123941727,
+          "phi_rmse_deg": 0.5137088869764854,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 602,
+          "vector_rmse_deg": 0.5819681721845678,
+          "theta_rmse_deg": 0.4939312593552101,
+          "phi_rmse_deg": 0.5251233389553315,
+          "phi_n": 534
+        },
+        "world_tcp_rmse_mm": 12.162740518970656,
+        "world_tcp_common_rmse_mm": 12.36128536110708,
+        "world_interior_max_point_p95_mm": 20.434771880949274,
+        "mount_interior_max_point_p95_mm": 2.8960472948182416,
+        "nominal_arm_clearance_error_rmse_mm": 8.454903133605075,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8608,
+            "false_pass": 31,
+            "false_reject_observed": 180,
+            "conservative_or_unknown_hold_on_safe": 180
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8222,
+            "false_pass": 0,
+            "false_reject_observed": 566,
+            "conservative_or_unknown_hold_on_safe": 566
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 566,
+          "wrapped_rmse_deg": 0.49812214776748637
+        }
+      },
+      "vision": {
+        "all_frames": {
+          "coverage": 0.940625,
+          "n": 602,
+          "vector_rmse_deg": 1.1667550693537723,
+          "theta_rmse_deg": 1.1583942756434307,
+          "phi_rmse_deg": 0.23908596077863503,
+          "phi_n": 534
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 602,
+          "vector_rmse_deg": 1.1667550693537723,
+          "theta_rmse_deg": 1.1583942756434307,
+          "phi_rmse_deg": 0.23908596077863503,
+          "phi_n": 534
+        },
+        "world_tcp_rmse_mm": 13.761023300892973,
+        "world_tcp_common_rmse_mm": 13.761023300892973,
+        "world_interior_max_point_p95_mm": 22.041762876926683,
+        "mount_interior_max_point_p95_mm": 5.631084528715232,
+        "nominal_arm_clearance_error_rmse_mm": 9.18357671542547,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8606,
+            "false_pass": 31,
+            "false_reject_observed": 182,
+            "conservative_or_unknown_hold_on_safe": 182
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8220,
+            "false_pass": 0,
+            "false_reject_observed": 568,
+            "conservative_or_unknown_hold_on_safe": 568
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 528,
+          "wrapped_rmse_deg": 0.23600365992613997
+        }
+      },
+      "fusion": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 0.7207537102949764,
+          "theta_rmse_deg": 0.688510741597251,
+          "phi_rmse_deg": 0.34488404164941167,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 602,
+          "vector_rmse_deg": 0.7356237649912956,
+          "theta_rmse_deg": 0.7031480258108416,
+          "phi_rmse_deg": 0.35240195339077157,
+          "phi_n": 534
+        },
+        "world_tcp_rmse_mm": 12.616245280062984,
+        "world_tcp_common_rmse_mm": 12.827684883614571,
+        "world_interior_max_point_p95_mm": 20.72567350934451,
+        "mount_interior_max_point_p95_mm": 3.7007128943463554,
+        "nominal_arm_clearance_error_rmse_mm": 8.60712005836673,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8608,
+            "false_pass": 31,
+            "false_reject_observed": 180,
+            "conservative_or_unknown_hold_on_safe": 180
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8223,
+            "false_pass": 0,
+            "false_reject_observed": 565,
+            "conservative_or_unknown_hold_on_safe": 565
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 566,
+          "wrapped_rmse_deg": 0.32040858054090227
+        }
+      },
+      "joint_pcc": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 3.770411540162524e-05,
+          "theta_rmse_deg": 1.0641799831026467e-10,
+          "phi_rmse_deg": 3.408451711083845e-05,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 602,
+          "vector_rmse_deg": 3.844096077405957e-05,
+          "theta_rmse_deg": 1.06699575718527e-10,
+          "phi_rmse_deg": 3.440597013443942e-05,
+          "phi_n": 534
+        },
+        "world_tcp_rmse_mm": 11.627390428824642,
+        "world_tcp_common_rmse_mm": 11.792059850394315,
+        "world_interior_max_point_p95_mm": 20.142778732496478,
+        "mount_interior_max_point_p95_mm": 1.0496320455478645,
+        "nominal_arm_clearance_error_rmse_mm": 8.534277833155182,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8606,
+            "false_pass": 31,
+            "false_reject_observed": 182,
+            "conservative_or_unknown_hold_on_safe": 182
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8219,
+            "false_pass": 0,
+            "false_reject_observed": 569,
+            "conservative_or_unknown_hold_on_safe": 569
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 568,
+          "wrapped_rmse_deg": 3.408451711083845e-05
+        }
+      }
+    },
+    "blackout": {
+      "command": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 1.8513794353529696,
+          "theta_rmse_deg": 1.8512196613267904,
+          "phi_rmse_deg": 0.0017630521123955082,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 522,
+          "vector_rmse_deg": 1.7580135787156626,
+          "theta_rmse_deg": 1.7578072936134417,
+          "phi_rmse_deg": 0.0019588344258500536,
+          "phi_n": 454
+        },
+        "world_tcp_rmse_mm": 15.950908515305253,
+        "world_tcp_common_rmse_mm": 15.914592892916147,
+        "world_interior_max_point_p95_mm": 21.44958032906855,
+        "mount_interior_max_point_p95_mm": 5.84913701727708,
+        "nominal_arm_clearance_error_rmse_mm": 8.574977766710518,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8629,
+            "false_pass": 35,
+            "false_reject_observed": 159,
+            "conservative_or_unknown_hold_on_safe": 159
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8243,
+            "false_pass": 0,
+            "false_reject_observed": 545,
+            "conservative_or_unknown_hold_on_safe": 545
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 568,
+          "wrapped_rmse_deg": 0.0017630521123955082
+        }
+      },
+      "strain": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 0.5774400006803453,
+          "theta_rmse_deg": 0.49102386123941727,
+          "phi_rmse_deg": 0.5137088869764854,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 522,
+          "vector_rmse_deg": 0.5685799905524754,
+          "theta_rmse_deg": 0.4845615860729981,
+          "phi_rmse_deg": 0.55631098560687,
+          "phi_n": 454
+        },
+        "world_tcp_rmse_mm": 12.162740518970656,
+        "world_tcp_common_rmse_mm": 11.92268921821633,
+        "world_interior_max_point_p95_mm": 20.434771880949274,
+        "mount_interior_max_point_p95_mm": 2.8960472948182416,
+        "nominal_arm_clearance_error_rmse_mm": 8.454903133605075,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8608,
+            "false_pass": 31,
+            "false_reject_observed": 180,
+            "conservative_or_unknown_hold_on_safe": 180
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8222,
+            "false_pass": 0,
+            "false_reject_observed": 566,
+            "conservative_or_unknown_hold_on_safe": 566
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 566,
+          "wrapped_rmse_deg": 0.49812214776748637
+        }
+      },
+      "vision": {
+        "all_frames": {
+          "coverage": 0.815625,
+          "n": 522,
+          "vector_rmse_deg": 1.2502205831799083,
+          "theta_rmse_deg": 1.2425231531590626,
+          "phi_rmse_deg": 0.25481114042475006,
+          "phi_n": 454
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 522,
+          "vector_rmse_deg": 1.2502205831799083,
+          "theta_rmse_deg": 1.2425231531590626,
+          "phi_rmse_deg": 0.25481114042475006,
+          "phi_n": 454
+        },
+        "world_tcp_rmse_mm": 13.631484938095177,
+        "world_tcp_common_rmse_mm": 13.631484938095179,
+        "world_interior_max_point_p95_mm": 22.938628154337056,
+        "mount_interior_max_point_p95_mm": 5.700723410064751,
+        "nominal_arm_clearance_error_rmse_mm": 8.535742931703432,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 7920,
+            "unknown_hold": 2640,
+            "safe_released": 6649,
+            "false_pass": 31,
+            "false_reject_observed": 79,
+            "conservative_or_unknown_hold_on_safe": 2139
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 7920,
+            "unknown_hold": 2640,
+            "safe_released": 6422,
+            "false_pass": 0,
+            "false_reject_observed": 306,
+            "conservative_or_unknown_hold_on_safe": 2366
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 0,
+            "unknown_hold": 132,
+            "safe_released": 0,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 55
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 0,
+            "unknown_hold": 132,
+            "safe_released": 0,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 55
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 0,
+            "unknown_hold": 4,
+            "safe_released": 0,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 4
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 0,
+            "unknown_hold": 4,
+            "safe_released": 0,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 4
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 448,
+          "wrapped_rmse_deg": 0.25160856681083527
+        }
+      },
+      "fusion": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 0.7277192267725284,
+          "theta_rmse_deg": 0.6955761237702436,
+          "phi_rmse_deg": 0.3452085172436698,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 522,
+          "vector_rmse_deg": 0.7661728708091754,
+          "theta_rmse_deg": 0.7372702540056668,
+          "phi_rmse_deg": 0.37228133081731707,
+          "phi_n": 454
+        },
+        "world_tcp_rmse_mm": 12.625254210385691,
+        "world_tcp_common_rmse_mm": 12.505220250578114,
+        "world_interior_max_point_p95_mm": 20.72587523750951,
+        "mount_interior_max_point_p95_mm": 3.6787675278000385,
+        "nominal_arm_clearance_error_rmse_mm": 8.58776058972726,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8607,
+            "false_pass": 31,
+            "false_reject_observed": 181,
+            "conservative_or_unknown_hold_on_safe": 181
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8222,
+            "false_pass": 0,
+            "false_reject_observed": 566,
+            "conservative_or_unknown_hold_on_safe": 566
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 566,
+          "wrapped_rmse_deg": 0.32075904961160523
+        }
+      },
+      "joint_pcc": {
+        "all_frames": {
+          "coverage": 1.0,
+          "n": 640,
+          "vector_rmse_deg": 3.770411540162524e-05,
+          "theta_rmse_deg": 1.0641799831026467e-10,
+          "phi_rmse_deg": 3.408451711083845e-05,
+          "phi_n": 568
+        },
+        "common_visible_frames": {
+          "coverage": 1.0,
+          "n": 522,
+          "vector_rmse_deg": 3.662496823319509e-05,
+          "theta_rmse_deg": 1.0759924194978397e-10,
+          "phi_rmse_deg": 3.366026607933182e-05,
+          "phi_n": 454
+        },
+        "world_tcp_rmse_mm": 11.627390428824642,
+        "world_tcp_common_rmse_mm": 11.306732825418788,
+        "world_interior_max_point_p95_mm": 20.142778732496478,
+        "mount_interior_max_point_p95_mm": 1.0496320455478645,
+        "nominal_arm_clearance_error_rmse_mm": 8.534277833155182,
+        "pad_m": 0.016401506558387444,
+        "decision_frames": {
+          "raw": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8606,
+            "false_pass": 31,
+            "false_reject_observed": 182,
+            "conservative_or_unknown_hold_on_safe": 182
+          },
+          "empirical_pad": {
+            "total": 10560,
+            "reference_pass": 8788,
+            "est_available": 10560,
+            "unknown_hold": 0,
+            "safe_released": 8219,
+            "false_pass": 0,
+            "false_reject_observed": 569,
+            "conservative_or_unknown_hold_on_safe": 569
+          }
+        },
+        "decision_routes": {
+          "raw": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 52,
+            "false_pass": 0,
+            "false_reject_observed": 3,
+            "conservative_or_unknown_hold_on_safe": 3
+          },
+          "empirical_pad": {
+            "total": 132,
+            "reference_pass": 55,
+            "est_available": 132,
+            "unknown_hold": 0,
+            "safe_released": 38,
+            "false_pass": 0,
+            "false_reject_observed": 17,
+            "conservative_or_unknown_hold_on_safe": 17
+          }
+        },
+        "nominal_route": {
+          "raw": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          },
+          "empirical_pad": {
+            "total": 4,
+            "reference_pass": 4,
+            "est_available": 4,
+            "unknown_hold": 0,
+            "safe_released": 4,
+            "false_pass": 0,
+            "false_reject_observed": 0,
+            "conservative_or_unknown_hold_on_safe": 0
+          }
+        },
+        "plane_observable": {
+          "truth_eligible": 568,
+          "reported": 568,
+          "wrapped_rmse_deg": 3.408451711083845e-05
+        }
+      }
+    }
+  },
+  "selected_counterexamples": {
+    "natural": {
+      "command": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "strain": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "vision": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "fusion": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "joint_pcc": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      }
+    },
+    "blackout": {
+      "command": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "strain": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "vision": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "fusion": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      },
+      "joint_pcc": {
+        "case": "241119-clock_pause",
+        "t": 38.6,
+        "sill_raise_m": 0.15,
+        "true_reserve_mm": -20.546327017690004,
+        "estimated_reserve_mm": 0.32004246326708397
+      }
+    }
+  },
+  "vision_timing": {
+    "241119-clock_pause": {
+      "detected": 152,
+      "captured": 160,
+      "at_capture": {
+        "coverage": 1.0,
+        "n": 152,
+        "vector_rmse_deg": 0.29937874992911095,
+        "theta_rmse_deg": 0.26687612542250866,
+        "phi_rmse_deg": 0.20260324021128157,
+        "phi_n": 141
+      },
+      "against_later_truth": {
+        "coverage": 1.0,
+        "n": 152,
+        "vector_rmse_deg": 1.172333928952195,
+        "theta_rmse_deg": 1.1641883567739695,
+        "phi_rmse_deg": 0.20500915544003,
+        "phi_n": 142
+      }
+    },
+    "241119-online_pause": {
+      "detected": 151,
+      "captured": 160,
+      "at_capture": {
+        "coverage": 1.0,
+        "n": 151,
+        "vector_rmse_deg": 0.3041431378289882,
+        "theta_rmse_deg": 0.2756938377021165,
+        "phi_rmse_deg": 0.2429547775264646,
+        "phi_n": 126
+      },
+      "against_later_truth": {
+        "coverage": 1.0,
+        "n": 151,
+        "vector_rmse_deg": 1.1327632107522416,
+        "theta_rmse_deg": 1.1251877465847193,
+        "phi_rmse_deg": 0.24362472446988803,
+        "phi_n": 127
+      }
+    },
+    "241120-clock_pause": {
+      "detected": 152,
+      "captured": 160,
+      "at_capture": {
+        "coverage": 1.0,
+        "n": 152,
+        "vector_rmse_deg": 0.2868608087540401,
+        "theta_rmse_deg": 0.24918566420038554,
+        "phi_rmse_deg": 0.21302801162902155,
+        "phi_n": 141
+      },
+      "against_later_truth": {
+        "coverage": 1.0,
+        "n": 152,
+        "vector_rmse_deg": 1.1663431302717695,
+        "theta_rmse_deg": 1.1573461580324087,
+        "phi_rmse_deg": 0.21424630214492035,
+        "phi_n": 142
+      }
+    },
+    "241120-online_pause": {
+      "detected": 151,
+      "captured": 160,
+      "at_capture": {
+        "coverage": 1.0,
+        "n": 151,
+        "vector_rmse_deg": 0.35854104100577827,
+        "theta_rmse_deg": 0.3303991558713804,
+        "phi_rmse_deg": 0.28716153098437514,
+        "phi_n": 126
+      },
+      "against_later_truth": {
+        "coverage": 1.0,
+        "n": 151,
+        "vector_rmse_deg": 1.1799465603522907,
+        "theta_rmse_deg": 1.171308132616599,
+        "phi_rmse_deg": 0.2896608835365384,
+        "phi_n": 127
+      }
+    }
+  },
+  "decision_window_s": [
+    26,
+    42
+  ],
+  "selected_rule": "Largest estimated minus recorded conservative reserve among actual threshold flips per estimator."
+}

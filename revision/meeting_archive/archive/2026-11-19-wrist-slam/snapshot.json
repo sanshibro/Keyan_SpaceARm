@@ -1,0 +1,155 @@
+{
+  "cover": "mechanism.png",
+  "files": [
+    {
+      "bytes": 272310,
+      "caption": "同一趟运行的侧视剖面与末端相机原始输入。",
+      "file": "mechanism.png",
+      "kind": "image",
+      "sha256": "0fa3614c5b1f3df05060f76a222b922d55339a56187765b1845de731899f9cbf",
+      "title": "遮挡前、遮挡中与重新建图"
+    },
+    {
+      "bytes": 153598,
+      "caption": "独立台架测试动作。四通道 ADC 相对零点的变化、训练模型输出与虚拟动捕逐时对应。",
+      "file": "gauges.png",
+      "kind": "curve",
+      "sha256": "d74ec27e5d2b9ed2550dedf614d49d2b2ea1ae72db9bc05b3c9f40ecd070e3eb",
+      "title": "四条表面应变路径怎样产生读数"
+    },
+    {
+      "bytes": 164047,
+      "caption": "同一时钟的虚拟动捕、应变、原地图视觉与融合。阴影为视觉遮挡对应的输出时段。",
+      "file": "curves.png",
+      "kind": "curve",
+      "sha256": "4c1aae58eaec7e15d3b63fb651f28beca36daafd8d26959d408a6d5e0264bb7b",
+      "title": "视觉失效前后的弯曲量、误差和可用性"
+    },
+    {
+      "bytes": 689887,
+      "caption": "训练与评分数据、四组对照、遮挡恢复和单门净空的定量衔接。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "e6895c649b948749eb505473922ef1c3c32591d63006ff93cee43432088960ff",
+      "title": "两页组会审阅"
+    },
+    {
+      "bytes": 418827,
+      "caption": "原始仿真飞行轨迹、实际进入 SLAM 的腕部图像和融合弯曲量，同步回放。",
+      "file": "comparison.mp4",
+      "kind": "video",
+      "poster": "mechanism.png",
+      "sha256": "b1ec3b663ca3d25c01049bb86dee7c8a70b32689796d8ed2350d6d025c394936",
+      "title": "32 秒同步录像"
+    },
+    {
+      "bytes": 39052,
+      "caption": "正常与遮挡分别评分，包含相同可见帧和弯曲平面可辨时刻。",
+      "file": "markerless-scores.json",
+      "kind": "data",
+      "sha256": "b2477bcdf4168dcf74f896ef224c36849de0453e8f40712a8124bd9d7011281f",
+      "title": "四趟逐组误差与覆盖率"
+    },
+    {
+      "bytes": 533,
+      "caption": "8 段训练、2 段验证、3 段测试。",
+      "file": "bench-scores.json",
+      "kind": "data",
+      "sha256": "1435bceab8ef625c6b82419ac5e9ca1b6f21be9ed12c78a5b73ef9529ce0fae7",
+      "title": "独立台架评分"
+    },
+    {
+      "bytes": 10982,
+      "caption": "80 个门区时刻乘以 33 种假设门槛高度；沿用此前校准的经验余量。",
+      "file": "geometry.json",
+      "kind": "data",
+      "sha256": "84007f99c84a67bff068cc73e66a440fd101f30fdfb0f43b8c890540d4d803ae",
+      "title": "整机净空与判定代价"
+    },
+    {
+      "bytes": 2207,
+      "caption": "逐趟记录原地图恢复情况和角度范围，检查不使用未来观测。",
+      "file": "audit.json",
+      "kind": "data",
+      "sha256": "48bd59765643eb7125ba7106b539ffb10a9613153d92ee1f2053b0db4bff6204",
+      "title": "时钟、前缀及坐标不变性复核"
+    },
+    {
+      "bytes": 633,
+      "caption": "四份证据包的字节数、成员数和 SHA-256。",
+      "file": "evidence-index.json",
+      "kind": "data",
+      "sha256": "ef8c93d3de72b27f26465e7d88e974c50ef60e263698c493aa08065b9f8d3c8e",
+      "title": "原始数据包校验值"
+    },
+    {
+      "bytes": 2358,
+      "caption": "试验前冻结光学遮挡时段、训练划分、初始坐标系与评价范围。",
+      "file": "protocol.json",
+      "kind": "data",
+      "sha256": "68ffa3429839ef550df272d261cf21832f31134d3417eada3a9f0993423c1c41",
+      "title": "无标签对照协议"
+    },
+    {
+      "bytes": 2786357,
+      "caption": "13 段原始读数、独立动捕点簇、模型和台架评估。",
+      "file": "bench-training.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "c69dbb2f977158ed7146bbf2948368cb873042b4570c1c22e511adfa57f53120",
+      "title": "虚拟台架训练和测试数据"
+    },
+    {
+      "bytes": 14262418,
+      "caption": "四路应变采样、独立评分真值、六趟记录、标签诊断与净空。",
+      "file": "flight-sensors.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "c0e6f4df98a93f144e868bc6e3d3031d078c24de73a3ea4d32264fdad7eb135e",
+      "title": "飞行传感器和动捕数据"
+    },
+    {
+      "bytes": 4062679,
+      "caption": "原生逐帧跟踪状态、地图编号、重投影误差、估计结果、RGB-D 样本及完整图像指纹。",
+      "file": "orb-slam-results.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "e9c2cd44dd8edca3c375df451585e7e1796217746d6ab554b025ec23f8a5dc85",
+      "title": "无标签 SLAM 跟踪与融合数据"
+    },
+    {
+      "bytes": 12660786,
+      "caption": "保留用于核对相机外参和解角链的早期对照。",
+      "file": "tagged-reference.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "2b908a95759a7db312bde6ff28e7dc64b1e0632c5188b6818a0d4dd8dc7eee43",
+      "title": "有标签定位诊断"
+    }
+  ],
+  "guide": [
+    "从四路应变曲线查看独立动捕的训练标签。",
+    "按下同步录像，观察第 31 秒遮挡与第 35 秒恢复时的地图编号变化。",
+    "比较仅应变与相同动态滤波器的结果，区分感知冗余和滤波平滑的贡献。"
+  ],
+  "id": "2026-11-19-wrist-slam",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "4d2ae6fbba7c4d5ecddd7dcbfbfbbf13274348a7b652c6f9a655263160be6db3"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "caaf373f18339c1c28cae030040d2e91b35f989c24cf84cdd74eb3319405dfb0"
+    }
+  },
+  "parent_round": "2026-11-19-g1-online",
+  "revision": "ac470477a42eb96d69d78d7304a67e49d3b875cd",
+  "schema": 1,
+  "scope": "仿真应变采集与动捕，四趟既有 PX4/MuJoCo 轨迹回放，带非编码纹理的已知单门。退出遮挡后追踪新地图，恢复原地图坐标前继续使用应变。",
+  "source_note": "04d4df3 登记传感链，16b2796 登记无标签 SLAM 对照，8980baa 接入原生 ORB-SLAM3 与延迟量测，ac47047 保存审查与证据。",
+  "stage": "G1 · 柔性臂本体感知",
+  "summary": "四趟单门飞行重放中，遮挡 4 秒时原地图视觉输出中断，融合每个时刻仍有估计，弯曲量 RMSE 为 0.50°。",
+  "title": "视觉失效时，柔性臂怎样保持形态估计？",
+  "when": "2026-11-19T22:04:31+08:00"
+}
