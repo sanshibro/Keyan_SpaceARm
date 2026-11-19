@@ -1,0 +1,64 @@
+{
+  "sensor": "Elastreme Sense Slim M",
+  "approved_mount": "four gauges at arm midsection; radial offset inherited from G1 model",
+  "free_active_length_m": 0.025,
+  "active_width_m": 0.0035,
+  "mount_center_m": 0.14,
+  "arm_radius_m": 0.025,
+  "preload_primary": 0.3,
+  "preloads": [
+    0,
+    0.15,
+    0.3,
+    0.4
+  ],
+  "sensor_range": [
+    0,
+    1
+  ],
+  "sensor_resolution_strain_approx": 0.0001,
+  "response_time_upper_bound_s": 0.0001,
+  "resistance_curve_25C": {
+    "engineering_strain": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "relative_resistance_change": [
+      0,
+      0.1008,
+      0.2097,
+      0.3477,
+      0.4845,
+      0.6386,
+      0.8075,
+      0.9845,
+      1.1862,
+      1.3527,
+      1.5662
+    ],
+    "read_from": "filled vector marker centers, y=0..2.0 axis; nominal zero anchored to origin; interpolation linear between digitized points, no extrapolation",
+    "digitization_roundoff": 0.001
+  },
+  "source_pdf_sha256": "c9f9dde92546d43e57a11433b03a99e27fd39ef4d79810fd0fb037a0840d80e3",
+  "box_manual_sha256": "50f64218d9954ec30cecedeb8f67db229b2f09d3e5c62a25b0567a808d245864",
+  "electronics": "User confirmed multichannel Elastreme acquisition box. Native serial codes; ASCII 11 fields, first 6 used. Noise and time from actual baseline segments; independent channel 4 borrows pooled active-channel fluctuations. Analog reference circuit not used.",
+  "source_sessions": [
+    "20260619_161342",
+    "20260619_161413"
+  ],
+  "hardware_session_holdout": "20260619_163049",
+  "box_gain": "Fit a combined mounting and readout slope in counts per normalized resistance from median stable holds on 161413, using its camera angle for electronics characterization only. Evaluate fixed model against separate 163049. Use channel median slope for simulated fourth channel. Compare half and twice nominal gain; report absolute residuals and directional coverage. Hardware reference angles never supervise the virtual arm predictor.",
+  "separation": "8 complete simulated training motions, 2 validation, 3 untouched bench motions. Four previously held-out G1 flights and identical archived native RGB-D ORB-SLAM3 observations; 31–35 s real tracker blackout. New sensor comparison is a replay on known motions, not new blinded flights.",
+  "model": "Installed neutral span = free active length * (1+preload). Surface paths interpolate moving link rings at each station breakpoint inside the gauge. Negative engineering extension is tracked as unsupported/slack, resistance held at free value under that assumption. Above 100% is invalid. 25 C. Finite response is unresolved on these sample clocks; no invented 45 ms sensor lag. Digital acquisition has its measured serial sampling intervals and sample/hold.",
+  "stress": "0,15,30,40 percent preload; native kinematic sweep 0..120 degrees in 5-degree steps across 24 planes. Additional readout gain x0.5 and x2 and test-only end-of-session zero-return offset from the characterization session. Distinguish slack from converter rails and distinguish both from material overload.",
+  "estimation": "Train regularized quadratic predictor using simulated native ADC events, per-run neutral tare and independent virtual marker labels. Prior two-angle filter accepts actual fresh ADC events once, previous-data-only replay at delayed camera arrival. Metrics on same 50 Hz output clock; truth only in supervised fit and scores."
+}
