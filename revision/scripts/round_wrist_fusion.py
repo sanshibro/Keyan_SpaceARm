@@ -53,9 +53,11 @@ def visual_packets(case,csv,plant):
                               original_map_accepted=int(good.sum()),new_map_frames=int((candidate&~good).sum()),
                               processing_median_ms=float(np.median(tab.track_ms)),processing_p95_ms=float(np.percentile(tab.track_ms,95)))
 
-def filter_bend(t,bs,capture,bv,quality,sigma):
+def filter_bend(t,bs,capture,bv,quality,sigma,strain_fresh=None):
     """Update at exposure, replay the intervening strain samples, release only the current output."""
     ts,ps=vector_angles(bs)
+    strain_fresh=np.ones(len(t),dtype=bool) if strain_fresh is None else np.asarray(strain_fresh,dtype=bool)
+    if strain_fresh.shape!=(len(t),):raise ValueError('Incorrect strain clock length')
     tv,pv=vector_angles(bv)
     ci=np.searchsorted(t,capture-1e-7);di=np.searchsorted(t,capture+DELAY-1e-7)
     assert np.allclose(t[ci],capture,atol=1e-6)
@@ -71,7 +73,8 @@ def filter_bend(t,bs,capture,bv,quality,sigma):
             c,j=delivered[i]
             if quality[j]>0 and np.isfinite(tv[j]):
                 seen[c]=j;start=c
-                wv_now[i]=(quality[j]/2.2**2)/(1./sigma[0]**2+quality[j]/2.2**2)
+                present_precision=(1./sigma[0]**2 if strain_fresh[c] else 0.)
+                wv_now[i]=(quality[j]/2.2**2)/(present_precision+quality[j]/2.2**2)
         for k in range(start,i+1):
             if k:
                 xk=x[k-1]@f.T;pk=f@P[k-1]@f.T+Q;plane=has_plane[k-1]
@@ -79,8 +82,8 @@ def filter_bend(t,bs,capture,bv,quality,sigma):
                 xk=np.array([[ts[0],0.],[ps[0],0.]])
                 pk=np.array([np.diag([25.,25.]),np.diag([180.**2,40.**2])]);plane=False
             j=seen.get(k)
-            ws=np.array([1./sigma[0]**2,0.])
-            if ts[k]>=5:ws[1]=(max(.12,np.sin(np.deg2rad(ts[k])))/sigma[1])**2
+            ws=np.array([1./sigma[0]**2 if strain_fresh[k] else 0.,0.])
+            if strain_fresh[k] and ts[k]>=5:ws[1]=(max(.12,np.sin(np.deg2rad(ts[k])))/sigma[1])**2
             wv=np.zeros(2)
             if j is not None:
                 wv[0]=quality[j]/2.2**2
