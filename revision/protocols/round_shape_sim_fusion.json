@@ -1,0 +1,50 @@
+{
+  "id": "G1-shape-virtual-sensor-amendment",
+  "parent": "round_shape_clearance.json",
+  "reason": "User requested in-simulator strain acquisition, training and separate virtual motion-capture truth. Supersedes the hardware-sessions task; applies before training or held-out scoring. A five-frame calibration-seed pilot verified RGB-D decoding only.",
+  "sensors": {
+    "strain": "Four virtual 60 mm surface gauge lengths at material azimuths 0,90,180,270 degrees and central arc stations 0.11..0.17 m; 25 mm visual radius. Deformed material paths from simulated segment frames, normalized against straight free lengths, sampled at 50 Hz with 45 ms transducer lag, gains, session bias/noise, quantization and neutral tare; synthetic equivalent surface strain, not measured material stress.",
+    "camera": "Rendered 480x360 wrist RGB-D, known surveyed visual-only boards, metric marker localization, reported PX4 base attitude at capture time, calibrated rigid mount and camera/tool extrinsics. 5 Hz, delivered one decision tick later. No simulation camera pose supplied to detector.",
+    "mocap": "Noiseless independent noncoplanar virtual marker clusters fixed to mount and tool, rigid registration and relative distal tangent for theta/phi/2D bending. Centreline and TCP from full simulated link geometry are scoring channels. Mocap is accessible only to offline label creation and scoring."
+  },
+  "bench": {
+    "dt_s": 0.002,
+    "observation_hz": 50,
+    "isolated_fixed_mount": true,
+    "contact_disabled_on_isolated_bench_only": true,
+    "train_sessions": 8,
+    "validation_sessions": 2,
+    "test_sessions": 3,
+    "split_by_complete_motion": true,
+    "curve": "piecewise quintic in bending-vector space with four directions/amplitudes per session; train azimuth steps 45 deg; separate unseen azimuths, independent sensor seeds and different timings for validation/test",
+    "predictor": "training-only standardization, 4 tare-adjusted channels and opposing differences, degree-2 polynomial ridge, lambda 0.01; target is relative marker bending vector, convert to theta/phi; validation reports frozen sensor-only residuals; no parameter selection on held-out flights"
+  },
+  "fusion": {
+    "source": "NUC Test/dual_strain_ai/run_confidence_ekf_fusion.py, sha256 f327c72717dd8c0c9efecb2c9186d60ee488196843cb542b1be18a605bb6de58; reuse original run_ekf theta confidence and defaults exactly; current manuscript circular fusion for phi, reject near-zero direction below 5 deg, single counting of fresh vision, no motion capture or commands in estimator",
+    "conditions": [
+      "natural image visibility",
+      "added capture blackout from 31 s inclusive to 35 s exclusive"
+    ],
+    "rate_hz": 50
+  },
+  "evaluation": {
+    "flight_modes": [
+      "command",
+      "strain",
+      "vision",
+      "fusion",
+      "net-joint-PCC diagnostic"
+    ],
+    "holdout_total_flights": 4,
+    "margin_fit_flights": 2,
+    "render_replay_only": true,
+    "near_straight_phi_exclusion_deg": 5,
+    "outputs": [
+      "test error in theta, circular phi where identifiable, bend vector",
+      "all interior stations and TCP position",
+      "clearance bias, threshold decisions and unknown/coverage",
+      "real measured versus synthesized sensor provenance written in outputs"
+    ]
+  },
+  "publication": "This is a simulation sensor qualification. Do not attribute renders to ORB-SLAM3 or gauge values to hardware."
+}

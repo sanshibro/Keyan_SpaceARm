@@ -51,12 +51,16 @@ def layout():
     assert identifier==50
     return items
 
-def marker_corners():
-    return {i:np.array([p+(-u-v)*L/2,p+(u-v)*L/2,p+(u+v)*L/2,p+(-u+v)*L/2]) for i,p,u,v,L in layout()}
+def marker_corners(items=None):
+    if items is None:
+        items=layout()
+    return {i:np.array([p+(-u-v)*L/2,p+(u-v)*L/2,p+(u+v)*L/2,p+(-u+v)*L/2]) for i,p,u,v,L in items}
 
-def add_fiducials(root):
+def add_fiducials(root,items=None):
     w=root.find('worldbody')
-    for i,p,u,v,L in layout():
+    if items is None:
+        items=layout()
+    for i,p,u,v,L in items:
         n=np.cross(u,v);rotation=np.column_stack([u,v,n])
         xy=' '.join(map(str,np.r_[u,v]));bitmap=cv2.aruco.drawMarker(DICTIONARY,i,6)
         # Actual printed cells; no texture UV assumptions or marker IDs in sensor packets.
@@ -68,8 +72,8 @@ def add_fiducials(root):
                 S(w,'geom',type='box',pos=' '.join(map(str,center)),xyaxes=xy,size=f'{L/12} {L/12} .0005',rgba='.01 .01 .01 1',contype='0',conaffinity='0')
 
 class FiducialLocalization:
-    def __init__(self,T_initial,refine=False,robust_depth=False):
-        self.pose=T_initial.copy();self.points=marker_corners();self.params=cv2.aruco.DetectorParameters_create();self.params.cornerRefinementMethod=cv2.aruco.CORNER_REFINE_SUBPIX
+    def __init__(self,T_initial,refine=False,robust_depth=False,items=None):
+        self.pose=T_initial.copy();self.points=marker_corners(items);self.params=cv2.aruco.DetectorParameters_create();self.params.cornerRefinementMethod=cv2.aruco.CORNER_REFINE_SUBPIX
         self.refine=refine
         self.robust_depth=robust_depth
         grid=np.linspace(.1,.9,5);self.samples=np.stack(np.meshgrid(grid,grid),axis=-1).reshape(-1,2)
