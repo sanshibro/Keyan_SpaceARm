@@ -1,0 +1,41 @@
+{
+  "title": "Marker-free wrist RGB-D, truth-trained strain and patent-style adaptive fusion",
+  "primary_protocol_parent": "round_shape_sim_fusion.json",
+  "scene": "Same archived G1 plant and states. Deterministic, non-coded workshop textures on floor, gate and static room surfaces. No surveyed point list. Native plain-floor untextured scene serves as acquisition control on 241118-online_pause.",
+  "training": "Existing 8 complete trajectories and 2 validation trajectories. Frozen four-channel virtual strain predictor. 3 reserved bench test motions. Simulator marker ground truth in training or scoring only.",
+  "calibration": "241118-online_pause for software and sizing. Held-out sessions: 241119 and 241120, both clock_pause and online_pause. All prior tagged results are development diagnostics, not SLAM or external confirmation.",
+  "capture": "25 Hz 480 x 360, 12 through 46 s. PX4 body attitude and CAD mount-camera chain, one neutral, initial-map alignment before 13.0s. Fixed shared 0.20s presentation latency. No truth or strain alignment of the SLAM trajectory. Report native computational timing separately.",
+  "conditions": {
+    "natural": "Nominal rendered RGB-D",
+    "occluded": "Exact same source pixels, replace both RGB and depth by zeros for all captures 31.0 <= t < 35.0. Run actual SLAM independently. No filled poses after TRACK_LOST or map changes."
+  },
+  "comparators": [
+    "raw strain",
+    "strain-only temporal filter with identical process model",
+    "RGB-D ORB-SLAM3 only",
+    "strain + ORB-SLAM3 adaptive filter"
+  ],
+  "metrics": [
+    "coverage",
+    "wrapped plane error with >=5 deg estimated and reference magnitude, bilateral coverage",
+    "theta and bend-vector RMSE on shared timestamps",
+    "outage coverage and error",
+    "reacquisition in original map",
+    "timestamp and pair count"
+  ],
+  "process": "Simulation-only screening. No online retraining. No noise chosen after observing the held-out results. Preserve visual failure and report tradeoffs. Patented ideas modeled: confidence as observation variance, circular plane fusion, adaptive temporal filtering. Existing scalar project kernel retained as separate reference.",
+  "phases_s": {
+    "pre": [
+      14,
+      31.2
+    ],
+    "occluded_delivered": [
+      31.2,
+      35.2
+    ],
+    "recovery": [
+      35.2,
+      46
+    ]
+  }
+}
