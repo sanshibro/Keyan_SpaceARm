@@ -109,7 +109,7 @@ class Bag:
 
 
 def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
-        protocol_name='round_f.json',mission_record=None,plant_factory=Plant):
+        protocol_name='round_f.json',mission_record=None,plant_factory=Plant,shape_policy=None):
     out.mkdir(parents=True,exist_ok=False)
     runtime=out/'runtime'
     plant=plant_factory()
@@ -143,6 +143,7 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
     k=0;released=None; last_phase=''; arm_since=None
     last_mode=False;armed=False;motor=np.zeros(4);flag=0;act_us=0;positions=[]
     estimate=None;est_ms=0; origin=None;ground_seen=False
+    velocity=None;attitude=None;att_ms=0
     ts0=time.monotonic();npack=0; max_age=0;last_seq=-1;latest_ack={}
     err=None;us=CLOCK_ORIGIN_US
     def event(name,**fields):
@@ -167,7 +168,10 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                     ground_seen=True;last_mode=((msg.custom_mode>>16)&255)==6
                 elif typ=='LOCAL_POSITION_NED':
                     estimate=[msg.x,msg.y,msg.z];est_ms=msg.time_boot_ms
+                    velocity=[msg.vx,msg.vy,msg.vz]
                     if origin is None: positions.append(estimate)
+                elif typ=='ATTITUDE':
+                    attitude=[msg.roll,msg.pitch,msg.yaw];att_ms=msg.time_boot_ms
                 elif typ=='COMMAND_ACK':
                     latest_ack[int(msg.command)]=int(msg.result)
                     event('ack',command=msg.command,result=msg.result)
@@ -179,6 +183,12 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                 ground.mav.heartbeat_send(6,8,0,0,4)
             phase_t=None if released is None else (k-released)*TICK
             phase,ref,theta=reference_fn(phase_t)
+            shape=plant.arm.observe()
+            if shape_policy is not None and phase_t is not None:
+                xyz=None if origin is None or estimate is None else LAUNCH+ENU_NED@(np.asarray(estimate)-origin)
+                vel=None if velocity is None else ENU_NED@velocity
+                theta=shape_policy.command(us,phase_t,ref,theta,xyz,vel,attitude,est_ms,att_ms,
+                                           shape['net_bending_deg'])
             if phase_t is not None and phase_t>score_end: phase='log_tail'
             if k%10==0 and ground_seen:
                 # A neutral virtual joystick supplies the monitored manual link in this isolated SITL.
@@ -224,7 +234,6 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                 event('phase',name_detail=phase)
                 last_phase=phase
             pose=plant.d.xpos[plant.base]-LAUNCH
-            shape=plant.arm.observe()
             issued=plant.issue(k,us,motor,theta)
             angles=[theta,issued,shape['net_bending_deg'],shape['total_curvature_deg']]
             # Stored qpos and position are at sensor time; thrust is issued for the following 4 ms.
