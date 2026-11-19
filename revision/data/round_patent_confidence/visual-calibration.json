@@ -1,0 +1,12 @@
+{
+  "matched_ref": 509.25,
+  "inlier_ref": 0.5114971493683191,
+  "pixel_ref": 1.2098856054,
+  "epsilon": 0.0001,
+  "pilot": "241118-online_pause",
+  "theta_k": 1.4779527056780943,
+  "phi_k": 0.8568628675195549,
+  "teacher_threshold": 0.3701243709876448,
+  "teacher_pixel_max": 1.2098856054,
+  "calibration_frames": 800
+}
