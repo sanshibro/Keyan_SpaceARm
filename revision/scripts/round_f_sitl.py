@@ -109,10 +109,10 @@ class Bag:
 
 
 def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
-        protocol_name='round_f.json',mission_record=None):
+        protocol_name='round_f.json',mission_record=None,plant_factory=Plant):
     out.mkdir(parents=True,exist_ok=False)
     runtime=out/'runtime'
-    plant=Plant()
+    plant=plant_factory()
     if noise_seed is not None:
         plant.noise=np.random.default_rng(noise_seed)
     prov=prepare(runtime,pitch_i)

@@ -29,7 +29,7 @@ def reference(t):
 
 
 class Plant:
-    def __init__(self):
+    def __init__(self, scene_update=None):
         root=ET.fromstring(build_super_metric(fixed=False,segments=8)[0])
         root.find('option').set('timestep',str(DT))
         uav=root.find(".//body[@name='uav']")
@@ -39,6 +39,8 @@ class Plant:
             ET.SubElement(sensors,tag,name=tag,site='f_imu')
         equality=ET.SubElement(root,'equality')
         ET.SubElement(equality,'weld',name='launch_support',body1='uav',solref='.002 1')
+        if scene_update is not None:
+            scene_update(root)
         self.xml=ET.tostring(root,encoding='unicode')
         self.m=mujoco.MjModel.from_xml_string(self.xml)
         self.d=mujoco.MjData(self.m)
