@@ -1,0 +1,58 @@
+{
+  "id": "G1 strain health, 2026-11-20",
+  "parent": "3042b50",
+  "bench": {
+    "new_train_headings_deg": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "validation": [
+      25,
+      165,
+      285
+    ],
+    "test": [
+      70,
+      202,
+      335
+    ],
+    "motion": "Independent, fixed-base 8-link MuJoCo cycles at multiple speeds; repeated load, hold, partial unload, reload; independently observed mount/tool markers. Whole motions kept together across all sensor factors. Prior nominal calibration is frozen."
+  },
+  "flight": [
+    {
+      "case": "26112011-straight",
+      "seed": 26112011,
+      "route": "nominal",
+      "lateral_m": 0,
+      "policy": "phase",
+      "bend_scale": 0.9
+    },
+    {
+      "case": "26112012-left",
+      "seed": 26112012,
+      "route": "pause",
+      "lateral_m": 0.085,
+      "policy": "phase",
+      "bend_scale": 1.05
+    },
+    {
+      "case": "26112013-right",
+      "seed": 26112013,
+      "route": "nominal",
+      "lateral_m": -0.07,
+      "policy": "phase",
+      "bend_scale": 1.13
+    }
+  ],
+  "split": "New motion seeds and distinct smooth commanded profiles. Acquire native loopback PX4 SITL and MuJoCo without feeding evaluation estimates to the flight controller. Freeze fitted bench model hash before any flight scores are computed; score every completed run.",
+  "sensor": "Slim M 25 mm with 30% mid-arm preload, 32.5 mm installed, axial surface paths and empirical four-channel box timing/noise. Neutral, zero shift, rate-dependent loading/unloading plus relaxation, combination, and a separate differential-offset observability challenge. Offset injection in signal generator only, no clock, scenario labels, motion command or target truths enter the observer. Measured old-box return magnitudes are stress scales, not an identified physical law.",
+  "observer": "Compare previous point model and patent-confidence fusion (with and without teacher), strain alone, same native RGB-D ORB-SLAM3 alone, and a four-mode probabilistic strain observer fused with the same camera and delay. Infer health from opposing pair residuals and causal history, learn separate maps for healthy, drift, memory and combined modes. Conditional uncertainty includes ambiguity between estimated shapes. Fixed 90% identification threshold, otherwise ambiguous. Previous bounded visual teacher as a separate ablation. Optical pose on original map only unless return verified with the preceding round's RGB-D registration method.",
+  "evaluation": "Flight score [14,46) s and 4 s blind [31.2,35.2) s after 0.20 s delivery; nominal clear, full visual dropout plus each sensor setting, recovery; all and common-valid coverage, angular and vector errors, nominal 95% intervals, per-flight paired scores. Bench state confusion with ambiguous column, balanced averaging by trajectory, direction and dwell. Synthetic differential ambiguity and causal-prefix checks; overconfident failures included.",
+  "decision": "Stage sensing results only. Qualify evidence for paper if healthy precision, drift suppression and dual-failure uncertainty transfer to independent movement; no measurements of onboard physical flight or closed-loop clearance in this round."
+}

@@ -1,0 +1,11 @@
+/runs/
+/bench/
+/camera/
+/inputs/
+/evidence/
+/review/
+/records/
+/traces/
+/model/
+/artifacts/
+/*.log
