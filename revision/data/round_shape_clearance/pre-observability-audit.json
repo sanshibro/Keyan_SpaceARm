@@ -1,0 +1,11 @@
+{
+  "previous": {
+    "coverage": 1.0,
+    "n": 640,
+    "vector_rmse_deg": 1.1825410218240342,
+    "theta_rmse_deg": 0.688510741597251,
+    "phi_rmse_deg": 10.684880400722463,
+    "phi_n": 568
+  },
+  "issue": "Legacy azimuth initialized to zero before first supported observation when bend crossed five degrees. Report angular identifiability separately. Retain the measured strain vector near straight. No EKF bend gain or fitted uncertainty pad was changed."
+}

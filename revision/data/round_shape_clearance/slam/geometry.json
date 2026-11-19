@@ -1,0 +1,359 @@
+{
+  "counterfactual_sill_heights_m": [
+    0.0,
+    0.16,
+    0.005
+  ],
+  "prior_empirical_pad_m": 0.016401506558387444,
+  "scope": "Paired replay of four trajectories, 80 instants, 33 related sill positions. Conservative CAD envelopes. Not new flights or a universal safety guarantee.",
+  "conditions": {
+    "natural": {
+      "strain": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8608,
+          "false_pass": 31,
+          "false_reject_observed": 180,
+          "conservative_or_unknown_hold_on_safe": 180
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8222,
+          "false_pass": 0,
+          "false_reject_observed": 566,
+          "conservative_or_unknown_hold_on_safe": 566
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 52,
+          "false_pass": 0,
+          "false_reject_observed": 3,
+          "conservative_or_unknown_hold_on_safe": 3
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 38,
+          "false_pass": 0,
+          "false_reject_observed": 17,
+          "conservative_or_unknown_hold_on_safe": 17
+        },
+        "tcp_on_available_rmse_mm": 14.759515334730072
+      },
+      "strain_filter": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8607,
+          "false_pass": 31,
+          "false_reject_observed": 181,
+          "conservative_or_unknown_hold_on_safe": 181
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8223,
+          "false_pass": 0,
+          "false_reject_observed": 565,
+          "conservative_or_unknown_hold_on_safe": 565
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 52,
+          "false_pass": 0,
+          "false_reject_observed": 3,
+          "conservative_or_unknown_hold_on_safe": 3
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 38,
+          "false_pass": 0,
+          "false_reject_observed": 17,
+          "conservative_or_unknown_hold_on_safe": 17
+        },
+        "tcp_on_available_rmse_mm": 14.728518786630497
+      },
+      "slam": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8602,
+          "false_pass": 31,
+          "false_reject_observed": 186,
+          "conservative_or_unknown_hold_on_safe": 186
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8214,
+          "false_pass": 0,
+          "false_reject_observed": 574,
+          "conservative_or_unknown_hold_on_safe": 574
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 52,
+          "false_pass": 0,
+          "false_reject_observed": 3,
+          "conservative_or_unknown_hold_on_safe": 3
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 38,
+          "false_pass": 0,
+          "false_reject_observed": 17,
+          "conservative_or_unknown_hold_on_safe": 17
+        },
+        "tcp_on_available_rmse_mm": 16.01275044719777
+      },
+      "fusion": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8607,
+          "false_pass": 31,
+          "false_reject_observed": 181,
+          "conservative_or_unknown_hold_on_safe": 181
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8223,
+          "false_pass": 0,
+          "false_reject_observed": 565,
+          "conservative_or_unknown_hold_on_safe": 565
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 52,
+          "false_pass": 0,
+          "false_reject_observed": 3,
+          "conservative_or_unknown_hold_on_safe": 3
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 38,
+          "false_pass": 0,
+          "false_reject_observed": 17,
+          "conservative_or_unknown_hold_on_safe": 17
+        },
+        "tcp_on_available_rmse_mm": 14.716543270695894
+      }
+    },
+    "occluded": {
+      "strain": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8608,
+          "false_pass": 31,
+          "false_reject_observed": 180,
+          "conservative_or_unknown_hold_on_safe": 180
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8222,
+          "false_pass": 0,
+          "false_reject_observed": 566,
+          "conservative_or_unknown_hold_on_safe": 566
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 52,
+          "false_pass": 0,
+          "false_reject_observed": 3,
+          "conservative_or_unknown_hold_on_safe": 3
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 38,
+          "false_pass": 0,
+          "false_reject_observed": 17,
+          "conservative_or_unknown_hold_on_safe": 17
+        },
+        "tcp_on_available_rmse_mm": 14.759515334730072
+      },
+      "strain_filter": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8607,
+          "false_pass": 31,
+          "false_reject_observed": 181,
+          "conservative_or_unknown_hold_on_safe": 181
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8223,
+          "false_pass": 0,
+          "false_reject_observed": 565,
+          "conservative_or_unknown_hold_on_safe": 565
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 52,
+          "false_pass": 0,
+          "false_reject_observed": 3,
+          "conservative_or_unknown_hold_on_safe": 3
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 38,
+          "false_pass": 0,
+          "false_reject_observed": 17,
+          "conservative_or_unknown_hold_on_safe": 17
+        },
+        "tcp_on_available_rmse_mm": 14.728518786630497
+      },
+      "slam": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 3432,
+          "unknown_hold": 7128,
+          "safe_released": 3432,
+          "false_pass": 0,
+          "false_reject_observed": 0,
+          "conservative_or_unknown_hold_on_safe": 5356
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 3432,
+          "unknown_hold": 7128,
+          "safe_released": 3432,
+          "false_pass": 0,
+          "false_reject_observed": 0,
+          "conservative_or_unknown_hold_on_safe": 5356
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 0,
+          "unknown_hold": 132,
+          "safe_released": 0,
+          "false_pass": 0,
+          "false_reject_observed": 0,
+          "conservative_or_unknown_hold_on_safe": 55
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 0,
+          "unknown_hold": 132,
+          "safe_released": 0,
+          "false_pass": 0,
+          "false_reject_observed": 0,
+          "conservative_or_unknown_hold_on_safe": 55
+        },
+        "tcp_on_available_rmse_mm": 6.691452692494739
+      },
+      "fusion": {
+        "frame_raw": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8607,
+          "false_pass": 31,
+          "false_reject_observed": 181,
+          "conservative_or_unknown_hold_on_safe": 181
+        },
+        "frame_with_prior_pad": {
+          "total": 10560,
+          "reference_pass": 8788,
+          "est_available": 10560,
+          "unknown_hold": 0,
+          "safe_released": 8223,
+          "false_pass": 0,
+          "false_reject_observed": 565,
+          "conservative_or_unknown_hold_on_safe": 565
+        },
+        "route_raw": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 52,
+          "false_pass": 0,
+          "false_reject_observed": 3,
+          "conservative_or_unknown_hold_on_safe": 3
+        },
+        "route_with_prior_pad": {
+          "total": 132,
+          "reference_pass": 55,
+          "est_available": 132,
+          "unknown_hold": 0,
+          "safe_released": 38,
+          "false_pass": 0,
+          "false_reject_observed": 17,
+          "conservative_or_unknown_hold_on_safe": 17
+        },
+        "tcp_on_available_rmse_mm": 14.720329359257736
+      }
+    }
+  }
+}

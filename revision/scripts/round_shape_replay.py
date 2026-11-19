@@ -118,7 +118,8 @@ def run(case,model):
                             bend=bvec[:,j],world=world,local=local,clear=cl,
                             reference_b=truth[j],reference_world=truepoints,reference_local=localpoints,reference_clear=truthclear,
                             w_theta=e['w_theta'],w_phi=e['w_phi'],time_50=t,fresh=e['fresh'],vision_age=e['vision_age_s'],
-                            theta_phi_b_50=bvec[:4],reference_b_50=truth)
+                            theta_phi_b_50=bvec[:4],reference_b_50=truth,
+                            fusion_direction_identifiable=e['direction_identifiable'][j])
     print(case,'gauges',len(t),'camera',len(j),'geometry per condition',len(HEIGHTS)*len(j),flush=True)
 
 

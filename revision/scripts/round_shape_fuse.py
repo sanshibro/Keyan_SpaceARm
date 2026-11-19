@@ -51,6 +51,7 @@ def fuse(t,strain_b,packets,phi_sigma,blackout=None):
     # Manuscript angular observation: inverse-variance weighting on the unit circle,
     # wrapped innovations in a constant-rate model and no new azimuth near straight.
     phi=np.zeros(len(t));plane_weight=np.zeros(len(t))
+    identified=np.zeros(len(t),bool);initialized=False
     state=np.zeros(2);P=np.diag([180.**2,40.**2]);I=np.eye(2)
     for i,now in enumerate(t):
         dt=.02 if not i else now-t[i-1]
@@ -64,12 +65,19 @@ def fuse(t,strain_b,packets,phi_sigma,blackout=None):
             if wv:obs+=wv*np.exp(1j*np.deg2rad(pv[i]))
             if abs(obs)>1e-7*(ws+wv):
                 z=np.rad2deg(np.angle(obs));R=1./(ws+wv);K=P[:,0]/(P[0,0]+R)
+                if not initialized:
+                    state[:]=[z,0.];initialized=True
                 state+=K*wrap_deg(z-state[0])
                 H=np.array([1.,0.]);A=I-np.outer(K,H)
                 P=A@P@A.T+np.outer(K,K)*R
-        phi[i]=wrap_deg(state[0]);plane_weight[i]=wv/(ws+wv) if ws+wv else 0.
+        identified[i]=initialized and legacy['theta'][i]>=5.
+        # A nearly straight arm has a small bending vector and an unobservable plane.
+        # Retain the local strain vector direction for geometry only until orientation is supported.
+        phi[i]=wrap_deg(state[0]) if identified[i] else ps[i]
+        plane_weight[i]=wv/(ws+wv) if ws+wv else 0.
     return dict(strain=strain_b,vision=held,fusion=bend_vectors(np.maximum(legacy['theta'],0.),phi),
-                fresh=fresh,vision_age_s=age,w_theta=legacy['vision_weight'],w_phi=plane_weight)
+                fresh=fresh,vision_age_s=age,w_theta=legacy['vision_weight'],w_phi=plane_weight,
+                direction_identifiable=identified)
 
 
 def bench_pixels():

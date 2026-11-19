@@ -106,6 +106,12 @@ def summarize():
                        pad_m=frozen['pad_m'][method],decision_frames=pair_metrics(rr,pp),
                        decision_routes=pair_metrics(rr.min(axis=1),pp.min(axis=1)),
                        nominal_route=pair_metrics(rr[:,:,0].min(axis=1),pp[:,:,0].min(axis=1)))
+            pred_theta,pred_phi=vector_angles(predicted);true_theta,true_phi=vector_angles(truth)
+            reportable=(np.concatenate([z['fusion_direction_identifiable'] for z in zs]) if method=='fusion' else pred_theta>=5.)
+            eligible=true_theta>=5.
+            usable=eligible&reportable&np.isfinite(pred_phi)
+            entry['plane_observable']=dict(truth_eligible=int(eligible.sum()),reported=int(usable.sum()),
+                wrapped_rmse_deg=float(np.sqrt(np.mean(wrap_deg(pred_phi[usable]-true_phi[usable])**2))) if usable.any() else None)
             summary[cond][method]=entry
             if bad:witness[cond][method]=max(bad,key=lambda b:b['estimated_reserve_mm']-b['true_reserve_mm'])
     # Compare pose quality at capture and at delivery without fitting any delay to the scoring truth.

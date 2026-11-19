@@ -1,0 +1,1290 @@
+{
+  "cases": [
+    "241119-clock_pause",
+    "241119-online_pause",
+    "241120-clock_pause",
+    "241120-online_pause"
+  ],
+  "phase_s": {
+    "all": [
+      14,
+      46
+    ],
+    "before": [
+      14,
+      31.2
+    ],
+    "during": [
+      31.2,
+      35.2
+    ],
+    "after": [
+      35.2,
+      46
+    ]
+  },
+  "conditions": {
+    "natural": {
+      "all": {
+        "strain": {
+          "all": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4873484229562414,
+            "vector_rmse_deg": 0.5737911026532595,
+            "phi_rmse_deg": 0.5202367789744055,
+            "phi_n": 5689,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4873484229562414,
+            "vector_rmse_deg": 0.5737911026532595,
+            "phi_rmse_deg": 0.5202367789744055,
+            "phi_n": 5689,
+            "phi_truth_eligible": 5698
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4874734094543845,
+            "vector_rmse_deg": 0.5338343070286058,
+            "phi_rmse_deg": 0.31966619142453817,
+            "phi_n": 5684,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4874734094543845,
+            "vector_rmse_deg": 0.5338343070286058,
+            "phi_rmse_deg": 0.31966619142453817,
+            "phi_n": 5684,
+            "phi_truth_eligible": 5698
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.8089156004195244,
+            "vector_rmse_deg": 1.8307154454022285,
+            "phi_rmse_deg": 0.4309662224397666,
+            "phi_n": 5662,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.8089156004195244,
+            "vector_rmse_deg": 1.8307154454022285,
+            "phi_rmse_deg": 0.4309662224397666,
+            "phi_n": 5662,
+            "phi_truth_eligible": 5698
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4856106931271699,
+            "vector_rmse_deg": 0.5309140540154862,
+            "phi_rmse_deg": 0.3140303422078349,
+            "phi_n": 5684,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4856106931271699,
+            "vector_rmse_deg": 0.5309140540154862,
+            "phi_rmse_deg": 0.3140303422078349,
+            "phi_n": 5684,
+            "phi_truth_eligible": 5698
+          }
+        }
+      },
+      "before": {
+        "strain": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45358242101629576,
+            "vector_rmse_deg": 0.5470632390836018,
+            "phi_rmse_deg": 0.5780988788184677,
+            "phi_n": 2729,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45358242101629576,
+            "vector_rmse_deg": 0.5470632390836018,
+            "phi_rmse_deg": 0.5780988788184677,
+            "phi_n": 2729,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45447821813117273,
+            "vector_rmse_deg": 0.5106282327881776,
+            "phi_rmse_deg": 0.3618193718792298,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45447821813117273,
+            "vector_rmse_deg": 0.5106282327881776,
+            "phi_rmse_deg": 0.3618193718792298,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.8867921056415642,
+            "vector_rmse_deg": 1.8895235798039405,
+            "phi_rmse_deg": 0.1785556191233474,
+            "phi_n": 2702,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.8867921056415642,
+            "vector_rmse_deg": 1.8895235798039405,
+            "phi_rmse_deg": 0.1785556191233474,
+            "phi_n": 2702,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4516506384766765,
+            "vector_rmse_deg": 0.5071164420986962,
+            "phi_rmse_deg": 0.35753101200797693,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4516506384766765,
+            "vector_rmse_deg": 0.5071164420986962,
+            "phi_rmse_deg": 0.35753101200797693,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          }
+        }
+      },
+      "during": {
+        "strain": {
+          "all": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5427238838776332,
+            "vector_rmse_deg": 0.6445253689272552,
+            "phi_rmse_deg": 0.2743519312847549,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5427238838776332,
+            "vector_rmse_deg": 0.6445253689272552,
+            "phi_rmse_deg": 0.2743519312847549,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5025562330762458,
+            "vector_rmse_deg": 0.5670736426443471,
+            "phi_rmse_deg": 0.20760252311355734,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5025562330762458,
+            "vector_rmse_deg": 0.5670736426443471,
+            "phi_rmse_deg": 0.20760252311355734,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6989459834220021,
+            "vector_rmse_deg": 0.7513208255540825,
+            "phi_rmse_deg": 0.2187250987003503,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6989459834220021,
+            "vector_rmse_deg": 0.7513208255540825,
+            "phi_rmse_deg": 0.2187250987003503,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5006366317942862,
+            "vector_rmse_deg": 0.563339191983424,
+            "phi_rmse_deg": 0.2041102435655879,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5006366317942862,
+            "vector_rmse_deg": 0.563339191983424,
+            "phi_rmse_deg": 0.2041102435655879,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          }
+        }
+      },
+      "after": {
+        "strain": {
+          "all": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.516702333649098,
+            "vector_rmse_deg": 0.5873924419077587,
+            "phi_rmse_deg": 0.512557337413912,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.516702333649098,
+            "vector_rmse_deg": 0.5873924419077587,
+            "phi_rmse_deg": 0.512557337413912,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5306574865717061,
+            "vector_rmse_deg": 0.5568006813354384,
+            "phi_rmse_deg": 0.2963834145296263,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5306574865717061,
+            "vector_rmse_deg": 0.5568006813354384,
+            "phi_rmse_deg": 0.2963834145296263,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.9608148885347312,
+            "vector_rmse_deg": 2.0088122629712615,
+            "phi_rmse_deg": 0.655177364425646,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.9608148885347312,
+            "vector_rmse_deg": 2.0088122629712615,
+            "phi_rmse_deg": 0.655177364425646,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5301136280797278,
+            "vector_rmse_deg": 0.5550403214059448,
+            "phi_rmse_deg": 0.28786776448479456,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5301136280797278,
+            "vector_rmse_deg": 0.5550403214059448,
+            "phi_rmse_deg": 0.28786776448479456,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          }
+        }
+      }
+    },
+    "occluded": {
+      "all": {
+        "strain": {
+          "all": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4873484229562414,
+            "vector_rmse_deg": 0.5737911026532595,
+            "phi_rmse_deg": 0.5202367789744055,
+            "phi_n": 5689,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45358242101629576,
+            "vector_rmse_deg": 0.5470632390836018,
+            "phi_rmse_deg": 0.5780988788184677,
+            "phi_n": 2729,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4874734094543845,
+            "vector_rmse_deg": 0.5338343070286058,
+            "phi_rmse_deg": 0.31966619142453817,
+            "phi_n": 5684,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45447821813117273,
+            "vector_rmse_deg": 0.5106282327881776,
+            "phi_rmse_deg": 0.3618193718792298,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 6400,
+            "n": 3440,
+            "coverage": 0.5375,
+            "theta_rmse_deg": 2.100116148679545,
+            "vector_rmse_deg": 2.103908085978437,
+            "phi_rmse_deg": 0.1876802823260109,
+            "phi_n": 2702,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 2.100116148679545,
+            "vector_rmse_deg": 2.103908085978437,
+            "phi_rmse_deg": 0.1876802823260109,
+            "phi_n": 2702,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 6400,
+            "n": 6400,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.48558665666923145,
+            "vector_rmse_deg": 0.5314460307398949,
+            "phi_rmse_deg": 0.31718396481831884,
+            "phi_n": 5684,
+            "phi_truth_eligible": 5698
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45020884252059695,
+            "vector_rmse_deg": 0.5054502212016214,
+            "phi_rmse_deg": 0.3571427062577115,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          }
+        }
+      },
+      "before": {
+        "strain": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45358242101629576,
+            "vector_rmse_deg": 0.5470632390836018,
+            "phi_rmse_deg": 0.5780988788184677,
+            "phi_n": 2729,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45358242101629576,
+            "vector_rmse_deg": 0.5470632390836018,
+            "phi_rmse_deg": 0.5780988788184677,
+            "phi_n": 2729,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45447821813117273,
+            "vector_rmse_deg": 0.5106282327881776,
+            "phi_rmse_deg": 0.3618193718792298,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45447821813117273,
+            "vector_rmse_deg": 0.5106282327881776,
+            "phi_rmse_deg": 0.3618193718792298,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 2.100116148679545,
+            "vector_rmse_deg": 2.103908085978437,
+            "phi_rmse_deg": 0.1876802823260109,
+            "phi_n": 2702,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 2.100116148679545,
+            "vector_rmse_deg": 2.103908085978437,
+            "phi_rmse_deg": 0.1876802823260109,
+            "phi_n": 2702,
+            "phi_truth_eligible": 2738
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45020884252059695,
+            "vector_rmse_deg": 0.5054502212016214,
+            "phi_rmse_deg": 0.3571427062577115,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          },
+          "shared_visual": {
+            "total": 3440,
+            "n": 3440,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.45020884252059695,
+            "vector_rmse_deg": 0.5054502212016214,
+            "phi_rmse_deg": 0.3571427062577115,
+            "phi_n": 2724,
+            "phi_truth_eligible": 2738
+          }
+        }
+      },
+      "during": {
+        "strain": {
+          "all": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5427238838776332,
+            "vector_rmse_deg": 0.6445253689272552,
+            "phi_rmse_deg": 0.2743519312847549,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5025562330762458,
+            "vector_rmse_deg": 0.5670736426443471,
+            "phi_rmse_deg": 0.20760252311355734,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 800,
+            "n": 0,
+            "coverage": 0.0,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 800,
+            "n": 800,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.504463980167602,
+            "vector_rmse_deg": 0.5690716034580665,
+            "phi_rmse_deg": 0.2081248750728118,
+            "phi_n": 800,
+            "phi_truth_eligible": 800
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        }
+      },
+      "after": {
+        "strain": {
+          "all": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.516702333649098,
+            "vector_rmse_deg": 0.5873924419077587,
+            "phi_rmse_deg": 0.512557337413912,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        },
+        "strain_filter": {
+          "all": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5306574865717061,
+            "vector_rmse_deg": 0.5568006813354384,
+            "phi_rmse_deg": 0.2963834145296263,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        },
+        "slam": {
+          "all": {
+            "total": 2160,
+            "n": 0,
+            "coverage": 0.0,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        },
+        "fusion": {
+          "all": {
+            "total": 2160,
+            "n": 2160,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5306574865534177,
+            "vector_rmse_deg": 0.5568006813288314,
+            "phi_rmse_deg": 0.29638341453874195,
+            "phi_n": 2160,
+            "phi_truth_eligible": 2160
+          },
+          "shared_visual": {
+            "total": 0,
+            "n": 0,
+            "coverage": null,
+            "theta_rmse_deg": null,
+            "vector_rmse_deg": null,
+            "phi_rmse_deg": null,
+            "phi_n": 0,
+            "phi_truth_eligible": 0
+          }
+        }
+      }
+    }
+  },
+  "per_case": {
+    "241119-clock_pause": {
+      "natural": {
+        "at_capture": {
+          "total": 800,
+          "n": 800,
+          "coverage": 1.0,
+          "theta_rmse_deg": 0.5507758911857873,
+          "vector_rmse_deg": 0.6470968209002573,
+          "phi_rmse_deg": 0.40300374432518954,
+          "phi_n": 745,
+          "phi_truth_eligible": 745
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4220241583857244,
+            "vector_rmse_deg": 0.5930114514297801,
+            "phi_rmse_deg": 0.6236616000250055,
+            "phi_n": 1487,
+            "phi_truth_eligible": 1490
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.38118419992073,
+            "vector_rmse_deg": 0.5223566590590455,
+            "phi_rmse_deg": 0.4513165080675767,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          },
+          "slam": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.5488603589004628,
+            "vector_rmse_deg": 1.5848230690014906,
+            "phi_rmse_deg": 0.40395708043622386,
+            "phi_n": 1480,
+            "phi_truth_eligible": 1490
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.38107262049829044,
+            "vector_rmse_deg": 0.5176930485925705,
+            "phi_rmse_deg": 0.4384544787101188,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.0,
+          "state_ok": 850,
+          "original_map_accepted": 850,
+          "new_map_frames": 0,
+          "processing_median_ms": 15.629747,
+          "processing_p95_ms": 17.796546,
+          "first_valid_after_restore_s": 0.0,
+          "raw_valid_in_occlusion": 100
+        }
+      },
+      "occluded": {
+        "at_capture": {
+          "total": 800,
+          "n": 425,
+          "coverage": 0.53125,
+          "theta_rmse_deg": 0.6859649743106785,
+          "vector_rmse_deg": 0.7081793516022101,
+          "phi_rmse_deg": 0.27559743597573566,
+          "phi_n": 370,
+          "phi_truth_eligible": 745
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.4220241583857244,
+            "vector_rmse_deg": 0.5930114514297801,
+            "phi_rmse_deg": 0.6236616000250055,
+            "phi_n": 1487,
+            "phi_truth_eligible": 1490
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.38118419992073,
+            "vector_rmse_deg": 0.5223566590590455,
+            "phi_rmse_deg": 0.4513165080675767,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          },
+          "slam": {
+            "total": 1600,
+            "n": 860,
+            "coverage": 0.5375,
+            "theta_rmse_deg": 1.8839201898157876,
+            "vector_rmse_deg": 1.8920485657481796,
+            "phi_rmse_deg": 0.27542000787544757,
+            "phi_n": 740,
+            "phi_truth_eligible": 1490
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.38162210754875564,
+            "vector_rmse_deg": 0.5206004332256187,
+            "phi_rmse_deg": 0.4483211274579713,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.0,
+          "state_ok": 750,
+          "original_map_accepted": 475,
+          "new_map_frames": 275,
+          "processing_median_ms": 15.96273,
+          "processing_p95_ms": 18.0038277,
+          "first_valid_after_restore_s": null,
+          "raw_valid_in_occlusion": 0
+        }
+      }
+    },
+    "241119-online_pause": {
+      "natural": {
+        "at_capture": {
+          "total": 800,
+          "n": 800,
+          "coverage": 1.0,
+          "theta_rmse_deg": 0.641538671044945,
+          "vector_rmse_deg": 0.6782242873418631,
+          "phi_rmse_deg": 0.27124056903947175,
+          "phi_n": 679,
+          "phi_truth_eligible": 679
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.3949710326484626,
+            "vector_rmse_deg": 0.4729041151130049,
+            "phi_rmse_deg": 0.42896082494743626,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.3937913416843155,
+            "vector_rmse_deg": 0.42527797015744295,
+            "phi_rmse_deg": 0.1966163416217475,
+            "phi_n": 1355,
+            "phi_truth_eligible": 1359
+          },
+          "slam": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.6191604478163928,
+            "vector_rmse_deg": 1.6334061640418385,
+            "phi_rmse_deg": 0.27246110197967865,
+            "phi_n": 1350,
+            "phi_truth_eligible": 1359
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.39103914224653424,
+            "vector_rmse_deg": 0.4221936808111484,
+            "phi_rmse_deg": 0.1922076914653203,
+            "phi_n": 1355,
+            "phi_truth_eligible": 1359
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.0,
+          "state_ok": 850,
+          "original_map_accepted": 850,
+          "new_map_frames": 0,
+          "processing_median_ms": 15.9621535,
+          "processing_p95_ms": 17.586922,
+          "first_valid_after_restore_s": 0.0,
+          "raw_valid_in_occlusion": 100
+        }
+      },
+      "occluded": {
+        "at_capture": {
+          "total": 800,
+          "n": 425,
+          "coverage": 0.53125,
+          "theta_rmse_deg": 0.6415872171571516,
+          "vector_rmse_deg": 0.6558372054497453,
+          "phi_rmse_deg": 0.1724629199096608,
+          "phi_n": 304,
+          "phi_truth_eligible": 679
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.3949710326484626,
+            "vector_rmse_deg": 0.4729041151130049,
+            "phi_rmse_deg": 0.42896082494743626,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.3937913416843155,
+            "vector_rmse_deg": 0.42527797015744295,
+            "phi_rmse_deg": 0.1966163416217475,
+            "phi_n": 1355,
+            "phi_truth_eligible": 1359
+          },
+          "slam": {
+            "total": 1600,
+            "n": 860,
+            "coverage": 0.5375,
+            "theta_rmse_deg": 1.8324182818574462,
+            "vector_rmse_deg": 1.8371630285476706,
+            "phi_rmse_deg": 0.17599431877114097,
+            "phi_n": 610,
+            "phi_truth_eligible": 1359
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.39276352064980813,
+            "vector_rmse_deg": 0.42398952007735546,
+            "phi_rmse_deg": 0.19478789875256988,
+            "phi_n": 1355,
+            "phi_truth_eligible": 1359
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.0,
+          "state_ok": 750,
+          "original_map_accepted": 475,
+          "new_map_frames": 275,
+          "processing_median_ms": 15.930582,
+          "processing_p95_ms": 17.8103081,
+          "first_valid_after_restore_s": null,
+          "raw_valid_in_occlusion": 0
+        }
+      }
+    },
+    "241120-clock_pause": {
+      "natural": {
+        "at_capture": {
+          "total": 800,
+          "n": 800,
+          "coverage": 1.0,
+          "theta_rmse_deg": 1.2514827231375876,
+          "vector_rmse_deg": 1.295325020416172,
+          "phi_rmse_deg": 0.4963833478485763,
+          "phi_n": 745,
+          "phi_truth_eligible": 745
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.492451629823166,
+            "vector_rmse_deg": 0.5486444019271588,
+            "phi_rmse_deg": 0.4709707212468102,
+            "phi_n": 1488,
+            "phi_truth_eligible": 1490
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5079778089828801,
+            "vector_rmse_deg": 0.5174505261061432,
+            "phi_rmse_deg": 0.15666151699919198,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          },
+          "slam": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 1.7938268836642768,
+            "vector_rmse_deg": 1.8232174084421369,
+            "phi_rmse_deg": 0.49468766877462006,
+            "phi_n": 1482,
+            "phi_truth_eligible": 1490
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5037441082958355,
+            "vector_rmse_deg": 0.5130084897003379,
+            "phi_rmse_deg": 0.15322318852628422,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.004,
+          "state_ok": 850,
+          "original_map_accepted": 850,
+          "new_map_frames": 0,
+          "processing_median_ms": 15.9047935,
+          "processing_p95_ms": 17.7437763,
+          "first_valid_after_restore_s": 0.003999999999997783,
+          "raw_valid_in_occlusion": 100
+        }
+      },
+      "occluded": {
+        "at_capture": {
+          "total": 800,
+          "n": 425,
+          "coverage": 0.53125,
+          "theta_rmse_deg": 0.5523746951380382,
+          "vector_rmse_deg": 0.557950875403488,
+          "phi_rmse_deg": 0.10870988334536283,
+          "phi_n": 370,
+          "phi_truth_eligible": 745
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.492451629823166,
+            "vector_rmse_deg": 0.5486444019271588,
+            "phi_rmse_deg": 0.4709707212468102,
+            "phi_n": 1488,
+            "phi_truth_eligible": 1490
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.5079778089828801,
+            "vector_rmse_deg": 0.5174505261061432,
+            "phi_rmse_deg": 0.15666151699919198,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          },
+          "slam": {
+            "total": 1600,
+            "n": 860,
+            "coverage": 0.5375,
+            "theta_rmse_deg": 1.7795819986994743,
+            "vector_rmse_deg": 1.7810622534919203,
+            "phi_rmse_deg": 0.10925876388159012,
+            "phi_n": 742,
+            "phi_truth_eligible": 1490
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.50616469387585,
+            "vector_rmse_deg": 0.5156039547794208,
+            "phi_rmse_deg": 0.15628435464933582,
+            "phi_n": 1486,
+            "phi_truth_eligible": 1490
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.004,
+          "state_ok": 750,
+          "original_map_accepted": 475,
+          "new_map_frames": 275,
+          "processing_median_ms": 15.9964405,
+          "processing_p95_ms": 17.658815450000002,
+          "first_valid_after_restore_s": null,
+          "raw_valid_in_occlusion": 0
+        }
+      }
+    },
+    "241120-online_pause": {
+      "natural": {
+        "at_capture": {
+          "total": 800,
+          "n": 800,
+          "coverage": 1.0,
+          "theta_rmse_deg": 1.2418436582386183,
+          "vector_rmse_deg": 1.2646290367571824,
+          "phi_rmse_deg": 0.5322318982046622,
+          "phi_n": 679,
+          "phi_truth_eligible": 679
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6110800494400697,
+            "vector_rmse_deg": 0.6638021953507649,
+            "phi_rmse_deg": 0.530274432592107,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6261843420483622,
+            "vector_rmse_deg": 0.646872005354042,
+            "phi_rmse_deg": 0.3734929698286105,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          },
+          "slam": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 2.202325757480389,
+            "vector_rmse_deg": 2.2141080806775175,
+            "phi_rmse_deg": 0.5071483862414597,
+            "phi_n": 1350,
+            "phi_truth_eligible": 1359
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6256076259227471,
+            "vector_rmse_deg": 0.6465660243332289,
+            "phi_rmse_deg": 0.3740964995958818,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.004,
+          "state_ok": 850,
+          "original_map_accepted": 850,
+          "new_map_frames": 0,
+          "processing_median_ms": 15.7020935,
+          "processing_p95_ms": 17.40223455,
+          "first_valid_after_restore_s": 0.003999999999997783,
+          "raw_valid_in_occlusion": 100
+        }
+      },
+      "occluded": {
+        "at_capture": {
+          "total": 800,
+          "n": 425,
+          "coverage": 0.53125,
+          "theta_rmse_deg": 1.8236825212431935,
+          "vector_rmse_deg": 1.8266904496339202,
+          "phi_rmse_deg": 0.13442204758104367,
+          "phi_n": 304,
+          "phi_truth_eligible": 679
+        },
+        "all": {
+          "strain": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6110800494400697,
+            "vector_rmse_deg": 0.6638021953507649,
+            "phi_rmse_deg": 0.530274432592107,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          },
+          "strain_filter": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6261843420483622,
+            "vector_rmse_deg": 0.646872005354042,
+            "phi_rmse_deg": 0.3734929698286105,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          },
+          "slam": {
+            "total": 1600,
+            "n": 860,
+            "coverage": 0.5375,
+            "theta_rmse_deg": 2.751022940726277,
+            "vector_rmse_deg": 2.752910898949671,
+            "phi_rmse_deg": 0.13604256927924072,
+            "phi_n": 610,
+            "phi_truth_eligible": 1359
+          },
+          "fusion": {
+            "total": 1600,
+            "n": 1600,
+            "coverage": 1.0,
+            "theta_rmse_deg": 0.6221545556300212,
+            "vector_rmse_deg": 0.6427286923441727,
+            "phi_rmse_deg": 0.3696895138568405,
+            "phi_n": 1357,
+            "phi_truth_eligible": 1359
+          }
+        },
+        "tracking": {
+          "anchored": true,
+          "initial_map": 0,
+          "anchor_s": 12.004,
+          "state_ok": 750,
+          "original_map_accepted": 475,
+          "new_map_frames": 275,
+          "processing_median_ms": 15.982225,
+          "processing_p95_ms": 17.802009899999998,
+          "first_valid_after_restore_s": null,
+          "raw_valid_in_occlusion": 0
+        }
+      }
+    }
+  }
+}

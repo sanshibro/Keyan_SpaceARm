@@ -1,0 +1,22 @@
+{
+  "bench-training.tar.gz": {
+    "bytes": 2786357,
+    "sha256": "c69dbb2f977158ed7146bbf2948368cb873042b4570c1c22e511adfa57f53120",
+    "members": 19
+  },
+  "flight-sensors.tar.gz": {
+    "bytes": 14262418,
+    "sha256": "c0e6f4df98a93f144e868bc6e3d3031d078c24de73a3ea4d32264fdad7eb135e",
+    "members": 24
+  },
+  "tagged-reference.tar.gz": {
+    "bytes": 12660786,
+    "sha256": "2b908a95759a7db312bde6ff28e7dc64b1e0632c5188b6818a0d4dd8dc7eee43",
+    "members": 9
+  },
+  "orb-slam-results.tar.gz": {
+    "bytes": 4062679,
+    "sha256": "e9c2cd44dd8edca3c375df451585e7e1796217746d6ab554b025ec23f8a5dc85",
+    "members": 109
+  }
+}
