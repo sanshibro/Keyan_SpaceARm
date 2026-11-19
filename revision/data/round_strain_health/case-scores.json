@@ -1,0 +1,2462 @@
+{
+  "26112011-straight/healthy/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.25291704584537206,
+      "vector_rmse_deg": 0.3638457267340426,
+      "phi_rmse_deg": 0.5634029932668857,
+      "phi_n": 1485,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8691574289897501,
+      "vector_rmse_deg": 2.0570124451499567,
+      "phi_rmse_deg": 0.981315868403759,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0870884269459795,
+      "vector_rmse_deg": 3.3628447741104477,
+      "phi_rmse_deg": 2.322804044933357,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.22605480859488447,
+      "vector_rmse_deg": 0.3467002878750204,
+      "phi_rmse_deg": 0.5621631560371074,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8418195387054568,
+      "vector_rmse_deg": 2.357186896977251,
+      "phi_rmse_deg": 1.970183699845068,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0083932448606676,
+      "vector_rmse_deg": 3.3392413012201647,
+      "phi_rmse_deg": 1.970183699845068,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.822769570873465,
+      "vector_rmse_deg": 2.0752539874666884,
+      "phi_rmse_deg": 1.1040311472866144,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.250727184636836,
+      "vector_rmse_deg": 3.395969967487052,
+      "phi_rmse_deg": 1.1040311472866144,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/healthy/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.18364100646868475,
+      "vector_rmse_deg": 0.26316565116958374,
+      "phi_rmse_deg": 0.3385537307568476,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.519452576865288,
+      "vector_rmse_deg": 1.7381019369149315,
+      "phi_rmse_deg": 0.41564354642095575,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.7027079381968653,
+      "vector_rmse_deg": 3.873102518888911,
+      "phi_rmse_deg": 1.220913174777128,
+      "phi_n": 1482,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.1517886100917626,
+      "vector_rmse_deg": 0.23259480488431583,
+      "phi_rmse_deg": 0.3218757178775034,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.3040492068621488,
+      "vector_rmse_deg": 2.584927307660042,
+      "phi_rmse_deg": 0.8236491265566438,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.105765844021498,
+      "vector_rmse_deg": 3.3165204514628623,
+      "phi_rmse_deg": 0.8236491265566438,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.4287607962104611,
+      "vector_rmse_deg": 1.7114145144152402,
+      "phi_rmse_deg": 0.5703312294549109,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.6420042677179487,
+      "vector_rmse_deg": 2.801736961745171,
+      "phi_rmse_deg": 0.5703312294549109,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/healthy/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.17780401209516103,
+      "vector_rmse_deg": 0.2752673396143892,
+      "phi_rmse_deg": 0.4968778174093416,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8488491683990356,
+      "vector_rmse_deg": 2.02195693989967,
+      "phi_rmse_deg": 0.6036766695359496,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.678483416489613,
+      "vector_rmse_deg": 4.707793810162151,
+      "phi_rmse_deg": 0.7181994334495503,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.14501006375268458,
+      "vector_rmse_deg": 0.24792349317769566,
+      "phi_rmse_deg": 0.48603075419902536,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.8518298729037603,
+      "vector_rmse_deg": 3.022049676180056,
+      "phi_rmse_deg": 0.6334695774146227,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.9828648678872067,
+      "vector_rmse_deg": 4.105769604162293,
+      "phi_rmse_deg": 0.6334695774146227,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.0698566541170362,
+      "vector_rmse_deg": 2.226232773507077,
+      "phi_rmse_deg": 0.6063157075212886,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.430067159556963,
+      "vector_rmse_deg": 4.503866373287924,
+      "phi_rmse_deg": 0.6063157075212886,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/healthy/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.25291704584537206,
+      "vector_rmse_deg": 0.3638457267340426,
+      "phi_rmse_deg": 0.5634029932668857,
+      "phi_n": 1485,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8691574289897501,
+      "vector_rmse_deg": 2.0570124451499567,
+      "phi_rmse_deg": 0.981315868403759,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.0510808569010233,
+      "vector_rmse_deg": 2.0576984355372376,
+      "phi_rmse_deg": 0.28645205327316153,
+      "phi_n": 1262,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.22649035928100383,
+      "vector_rmse_deg": 0.33461005664531196,
+      "phi_rmse_deg": 0.5243201944631249,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.6417502009934338,
+      "vector_rmse_deg": 1.170859537365224,
+      "phi_rmse_deg": 0.3106323689071746,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.8342873524412939,
+      "vector_rmse_deg": 1.2865413922214206,
+      "phi_rmse_deg": 0.3106323689071746,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.585337398935488,
+      "vector_rmse_deg": 1.7992885261773253,
+      "phi_rmse_deg": 0.9468922809804924,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.8027490305173411,
+      "vector_rmse_deg": 1.170559288024382,
+      "phi_rmse_deg": 0.9468922809804924,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/healthy/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.18364100646868475,
+      "vector_rmse_deg": 0.26316565116958374,
+      "phi_rmse_deg": 0.3385537307568476,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.519452576865288,
+      "vector_rmse_deg": 1.7381019369149315,
+      "phi_rmse_deg": 0.41564354642095575,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.5554374410420726,
+      "vector_rmse_deg": 2.5680363689400028,
+      "phi_rmse_deg": 0.3020139040351227,
+      "phi_n": 1268,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.15132167957768494,
+      "vector_rmse_deg": 0.23371672227459078,
+      "phi_rmse_deg": 0.3218333363777354,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.3305853055369472,
+      "vector_rmse_deg": 1.6438657624197168,
+      "phi_rmse_deg": 0.2812808183418586,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8326090175157177,
+      "vector_rmse_deg": 2.0712146592396823,
+      "phi_rmse_deg": 0.2812808183418586,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.2388422367701657,
+      "vector_rmse_deg": 1.4914527434869234,
+      "phi_rmse_deg": 0.3771747766422946,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.0963766941105146,
+      "vector_rmse_deg": 2.2545235242696977,
+      "phi_rmse_deg": 0.3771747766422946,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/healthy/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.17780401209516103,
+      "vector_rmse_deg": 0.2752673396143892,
+      "phi_rmse_deg": 0.4968778174093416,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8488491683990356,
+      "vector_rmse_deg": 2.02195693989967,
+      "phi_rmse_deg": 0.6036766695359496,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 3.029074064457232,
+      "vector_rmse_deg": 3.035545256666771,
+      "phi_rmse_deg": 0.40529707672570126,
+      "phi_n": 1270,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.14444640932756925,
+      "vector_rmse_deg": 0.24510692066254058,
+      "phi_rmse_deg": 0.4846952881809645,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.610437369218953,
+      "vector_rmse_deg": 1.8659452124040654,
+      "phi_rmse_deg": 0.4218031550111217,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.297393756917457,
+      "vector_rmse_deg": 2.4830171629790128,
+      "phi_rmse_deg": 0.4218031550111217,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.6881882098839553,
+      "vector_rmse_deg": 1.8663414836942,
+      "phi_rmse_deg": 0.5565833412188558,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.7249710116482113,
+      "vector_rmse_deg": 2.838356055144199,
+      "phi_rmse_deg": 0.5565833412188558,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/offset/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.313358406555393,
+      "vector_rmse_deg": 3.6865701654860343,
+      "phi_rmse_deg": 6.712605052701559,
+      "phi_n": 1485,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.350380038122584,
+      "vector_rmse_deg": 4.471040678147481,
+      "phi_rmse_deg": 1.5002757682749128,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0870884269459795,
+      "vector_rmse_deg": 3.3628447741104477,
+      "phi_rmse_deg": 2.322804044933357,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.306034414065563,
+      "vector_rmse_deg": 3.620575558266167,
+      "phi_rmse_deg": 6.543862412696302,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.8405537398469067,
+      "vector_rmse_deg": 3.2928889215824415,
+      "phi_rmse_deg": 2.128329638486144,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.3169684412484894,
+      "vector_rmse_deg": 3.708289536792411,
+      "phi_rmse_deg": 2.128329638486144,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.470554511051973,
+      "vector_rmse_deg": 3.741437540255447,
+      "phi_rmse_deg": 1.466575268422749,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.9629507536968096,
+      "vector_rmse_deg": 3.2642678460982992,
+      "phi_rmse_deg": 1.466575268422749,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/offset/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.593770410716026,
+      "vector_rmse_deg": 8.838085056654082,
+      "phi_rmse_deg": 4.873664108950485,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.6667589386271535,
+      "vector_rmse_deg": 4.178825305299903,
+      "phi_rmse_deg": 2.208743502975885,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.7027079381968653,
+      "vector_rmse_deg": 3.873102518888911,
+      "phi_rmse_deg": 1.220913174777128,
+      "phi_n": 1482,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.593307208428595,
+      "vector_rmse_deg": 8.793069602981987,
+      "phi_rmse_deg": 4.740457577377335,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.900335150374515,
+      "vector_rmse_deg": 5.292903537274352,
+      "phi_rmse_deg": 1.6970522086968673,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.21463918077599,
+      "vector_rmse_deg": 5.583641369202316,
+      "phi_rmse_deg": 1.6970522086968673,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.5369539281755937,
+      "vector_rmse_deg": 3.886743794329107,
+      "phi_rmse_deg": 1.5972875907591833,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.003043062240926,
+      "vector_rmse_deg": 5.245612622656883,
+      "phi_rmse_deg": 1.5972875907591833,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/offset/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.682505386404165,
+      "vector_rmse_deg": 4.715836858339409,
+      "phi_rmse_deg": 5.347252700525372,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.343153143445534,
+      "vector_rmse_deg": 3.5433854949170716,
+      "phi_rmse_deg": 1.4870197298175956,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.678483416489613,
+      "vector_rmse_deg": 4.707793810162151,
+      "phi_rmse_deg": 0.7181994334495503,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.6763250151159923,
+      "vector_rmse_deg": 4.6847325268475615,
+      "phi_rmse_deg": 5.284426824320644,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.7121597221417835,
+      "vector_rmse_deg": 5.051981022028842,
+      "phi_rmse_deg": 1.4261011113920516,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.5897451312065956,
+      "vector_rmse_deg": 5.874810916637958,
+      "phi_rmse_deg": 1.4261011113920516,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.400594819230854,
+      "vector_rmse_deg": 2.601822174748633,
+      "phi_rmse_deg": 1.1482069683234044,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.172653410503672,
+      "vector_rmse_deg": 4.285190424369007,
+      "phi_rmse_deg": 1.1482069683234044,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/offset/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.313358406555393,
+      "vector_rmse_deg": 3.6865701654860343,
+      "phi_rmse_deg": 6.712605052701559,
+      "phi_n": 1485,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.350380038122584,
+      "vector_rmse_deg": 4.471040678147481,
+      "phi_rmse_deg": 1.5002757682749128,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.0510808569010233,
+      "vector_rmse_deg": 2.0576984355372376,
+      "phi_rmse_deg": 0.28645205327316153,
+      "phi_n": 1262,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.305754191317691,
+      "vector_rmse_deg": 3.6192127664334217,
+      "phi_rmse_deg": 6.432504881224847,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.1691356810379068,
+      "vector_rmse_deg": 2.8539054115288782,
+      "phi_rmse_deg": 1.5521367015223542,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.246544036065059,
+      "vector_rmse_deg": 2.9132109014580894,
+      "phi_rmse_deg": 1.5521367015223542,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.939978461309701,
+      "vector_rmse_deg": 4.036667472580312,
+      "phi_rmse_deg": 1.046031299348582,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.55910243867177,
+      "vector_rmse_deg": 2.7044055351831,
+      "phi_rmse_deg": 1.046031299348582,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/offset/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.593770410716026,
+      "vector_rmse_deg": 8.838085056654082,
+      "phi_rmse_deg": 4.873664108950485,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.6667589386271535,
+      "vector_rmse_deg": 4.178825305299903,
+      "phi_rmse_deg": 2.208743502975885,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.5554374410420726,
+      "vector_rmse_deg": 2.5680363689400028,
+      "phi_rmse_deg": 0.3020139040351227,
+      "phi_n": 1268,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.59234610459093,
+      "vector_rmse_deg": 8.787276878334362,
+      "phi_rmse_deg": 4.697152568962461,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.043112292193845,
+      "vector_rmse_deg": 5.715169968516967,
+      "phi_rmse_deg": 2.151632815542447,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.375376453314961,
+      "vector_rmse_deg": 5.9998812531013215,
+      "phi_rmse_deg": 2.151632815542447,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.3521167366765905,
+      "vector_rmse_deg": 3.5513750533683135,
+      "phi_rmse_deg": 0.8686323089370571,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.204526465369461,
+      "vector_rmse_deg": 4.360987898743482,
+      "phi_rmse_deg": 0.8686323089370571,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/offset/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.682505386404165,
+      "vector_rmse_deg": 4.715836858339409,
+      "phi_rmse_deg": 5.347252700525372,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.343153143445534,
+      "vector_rmse_deg": 3.5433854949170716,
+      "phi_rmse_deg": 1.4870197298175956,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 3.029074064457232,
+      "vector_rmse_deg": 3.035545256666771,
+      "phi_rmse_deg": 0.40529707672570126,
+      "phi_n": 1270,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.6753457850297346,
+      "vector_rmse_deg": 4.678382728028222,
+      "phi_rmse_deg": 5.223742571621733,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.7736431983897947,
+      "vector_rmse_deg": 4.254414798445929,
+      "phi_rmse_deg": 1.4186067439940575,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.717473196025016,
+      "vector_rmse_deg": 5.101405657210924,
+      "phi_rmse_deg": 1.4186067439940575,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.677118244649095,
+      "vector_rmse_deg": 2.848694120146133,
+      "phi_rmse_deg": 0.9871660247577092,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.159645050222691,
+      "vector_rmse_deg": 4.267351831442491,
+      "phi_rmse_deg": 0.9871660247577092,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/memory/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.214435037326393,
+      "vector_rmse_deg": 4.222996949142378,
+      "phi_rmse_deg": 0.4812561031312861,
+      "phi_n": 1455,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.6489710797176251,
+      "vector_rmse_deg": 2.145916014950556,
+      "phi_rmse_deg": 0.9336943620664606,
+      "phi_n": 1462,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0870884269459795,
+      "vector_rmse_deg": 3.3628447741104477,
+      "phi_rmse_deg": 2.322804044933357,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.201533112954488,
+      "vector_rmse_deg": 4.210052496470457,
+      "phi_rmse_deg": 0.4669774383767717,
+      "phi_n": 1453,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.474544936485744,
+      "vector_rmse_deg": 2.9341927807259314,
+      "phi_rmse_deg": 1.9241128939412198,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.118966250207295,
+      "vector_rmse_deg": 2.6373927846767296,
+      "phi_rmse_deg": 1.9241128939412198,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.4211478355819682,
+      "vector_rmse_deg": 1.8258742889946606,
+      "phi_rmse_deg": 1.1374424041289084,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.4534097776558266,
+      "vector_rmse_deg": 2.7065377596833096,
+      "phi_rmse_deg": 1.1374424041289084,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/memory/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.548356927920927,
+      "vector_rmse_deg": 3.5538252527436947,
+      "phi_rmse_deg": 0.36459822397064834,
+      "phi_n": 1470,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.4276057488179352,
+      "vector_rmse_deg": 1.8915624276404013,
+      "phi_rmse_deg": 0.4374486924810049,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.7027079381968653,
+      "vector_rmse_deg": 3.873102518888911,
+      "phi_rmse_deg": 1.220913174777128,
+      "phi_n": 1482,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.539797524580989,
+      "vector_rmse_deg": 3.5446399155186645,
+      "phi_rmse_deg": 0.34608855566499175,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0528349221100806,
+      "vector_rmse_deg": 3.3233399112245166,
+      "phi_rmse_deg": 0.7720622733776311,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0609825453996775,
+      "vector_rmse_deg": 3.330350031575546,
+      "phi_rmse_deg": 0.7720622733776311,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.5024515406824617,
+      "vector_rmse_deg": 1.9371876003663218,
+      "phi_rmse_deg": 0.5775056248357247,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.1783542746512343,
+      "vector_rmse_deg": 2.4966320653872622,
+      "phi_rmse_deg": 0.5775056248357247,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/memory/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.167323326467912,
+      "vector_rmse_deg": 4.173133193292677,
+      "phi_rmse_deg": 0.4375639749569736,
+      "phi_n": 1467,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.34842125655737,
+      "vector_rmse_deg": 2.6542596806888574,
+      "phi_rmse_deg": 0.6333106991421306,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.678483416489613,
+      "vector_rmse_deg": 4.707793810162151,
+      "phi_rmse_deg": 0.7181994334495503,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.153589304049151,
+      "vector_rmse_deg": 4.15904556963376,
+      "phi_rmse_deg": 0.4113559649977306,
+      "phi_n": 1465,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.9314914244310764,
+      "vector_rmse_deg": 3.137341503913216,
+      "phi_rmse_deg": 0.5622198106163815,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.1804347627177885,
+      "vector_rmse_deg": 3.370919004312031,
+      "phi_rmse_deg": 0.5622198106163815,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.1733005952165234,
+      "vector_rmse_deg": 2.374661863259904,
+      "phi_rmse_deg": 0.6415384770943453,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.7053830843650992,
+      "vector_rmse_deg": 2.8689889288330765,
+      "phi_rmse_deg": 0.6415384770943453,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/memory/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.214435037326393,
+      "vector_rmse_deg": 4.222996949142378,
+      "phi_rmse_deg": 0.4812561031312861,
+      "phi_n": 1455,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.6489710797176251,
+      "vector_rmse_deg": 2.145916014950556,
+      "phi_rmse_deg": 0.9336943620664606,
+      "phi_n": 1462,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.0510808569010233,
+      "vector_rmse_deg": 2.0576984355372376,
+      "phi_rmse_deg": 0.28645205327316153,
+      "phi_n": 1262,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.200485155606679,
+      "vector_rmse_deg": 4.20820542249667,
+      "phi_rmse_deg": 0.4413336157125161,
+      "phi_n": 1453,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.674411429652042,
+      "vector_rmse_deg": 2.893087148375984,
+      "phi_rmse_deg": 0.2639778325513154,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.6417902228539714,
+      "vector_rmse_deg": 1.9783613317644673,
+      "phi_rmse_deg": 0.2639778325513154,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.5516108231347696,
+      "vector_rmse_deg": 1.8534330635202154,
+      "phi_rmse_deg": 0.9616303054653842,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.3918077679176182,
+      "vector_rmse_deg": 1.722152594957282,
+      "phi_rmse_deg": 0.9616303054653842,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/memory/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.548356927920927,
+      "vector_rmse_deg": 3.5538252527436947,
+      "phi_rmse_deg": 0.36459822397064834,
+      "phi_n": 1470,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.4276057488179352,
+      "vector_rmse_deg": 1.8915624276404013,
+      "phi_rmse_deg": 0.4374486924810049,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.5554374410420726,
+      "vector_rmse_deg": 2.5680363689400028,
+      "phi_rmse_deg": 0.3020139040351227,
+      "phi_n": 1268,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.539007364670384,
+      "vector_rmse_deg": 3.5439797586906487,
+      "phi_rmse_deg": 0.3465838695540244,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.594238072902375,
+      "vector_rmse_deg": 2.8334901912524963,
+      "phi_rmse_deg": 0.249409608634348,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.168374333107001,
+      "vector_rmse_deg": 2.44961966911318,
+      "phi_rmse_deg": 0.249409608634348,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.4672113208018476,
+      "vector_rmse_deg": 1.8583485224069212,
+      "phi_rmse_deg": 0.36292669452331416,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8008630596833715,
+      "vector_rmse_deg": 2.131394898635941,
+      "phi_rmse_deg": 0.36292669452331416,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/memory/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.167323326467912,
+      "vector_rmse_deg": 4.173133193292677,
+      "phi_rmse_deg": 0.4375639749569736,
+      "phi_n": 1467,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.34842125655737,
+      "vector_rmse_deg": 2.6542596806888574,
+      "phi_rmse_deg": 0.6333106991421306,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 3.029074064457232,
+      "vector_rmse_deg": 3.035545256666771,
+      "phi_rmse_deg": 0.40529707672570126,
+      "phi_n": 1270,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.152982211593607,
+      "vector_rmse_deg": 4.158298176731431,
+      "phi_rmse_deg": 0.4102459068570749,
+      "phi_n": 1465,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.7575870993225027,
+      "vector_rmse_deg": 2.9586508425710925,
+      "phi_rmse_deg": 0.3533799625775197,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.5209678334541863,
+      "vector_rmse_deg": 2.7391943257041875,
+      "phi_rmse_deg": 0.3533799625775197,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.2228831116168126,
+      "vector_rmse_deg": 2.4052887011399524,
+      "phi_rmse_deg": 0.5695732429885805,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.5849445027157607,
+      "vector_rmse_deg": 2.7424778824655007,
+      "phi_rmse_deg": 0.5695732429885805,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/mixed/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.967495262370344,
+      "vector_rmse_deg": 5.674025047251895,
+      "phi_rmse_deg": 5.676649253640778,
+      "phi_n": 1455,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.461348802743372,
+      "vector_rmse_deg": 5.675976927446304,
+      "phi_rmse_deg": 1.5549307732871969,
+      "phi_n": 1462,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0870884269459795,
+      "vector_rmse_deg": 3.3628447741104477,
+      "phi_rmse_deg": 2.322804044933357,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.955484994604778,
+      "vector_rmse_deg": 5.6333522267638045,
+      "phi_rmse_deg": 5.578741101835075,
+      "phi_n": 1453,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.119554604053673,
+      "vector_rmse_deg": 3.564308985183808,
+      "phi_rmse_deg": 2.086768539681493,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.915808823475248,
+      "vector_rmse_deg": 3.3861900791970014,
+      "phi_rmse_deg": 2.086768539681493,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.2892793066127615,
+      "vector_rmse_deg": 4.545375160869714,
+      "phi_rmse_deg": 1.5178325601768672,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.6435861345616836,
+      "vector_rmse_deg": 3.9400021524896345,
+      "phi_rmse_deg": 1.5178325601768672,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/mixed/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 9.136867437372883,
+      "vector_rmse_deg": 10.189111890976521,
+      "phi_rmse_deg": 4.752050350757929,
+      "phi_n": 1470,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.8335875736911635,
+      "vector_rmse_deg": 4.475631435251599,
+      "phi_rmse_deg": 2.201831727081694,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.7027079381968653,
+      "vector_rmse_deg": 3.873102518888911,
+      "phi_rmse_deg": 1.220913174777128,
+      "phi_n": 1482,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 9.134742354922363,
+      "vector_rmse_deg": 10.15014326276997,
+      "phi_rmse_deg": 4.646851475596139,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.203817609260531,
+      "vector_rmse_deg": 5.552949815373378,
+      "phi_rmse_deg": 1.5784587449155756,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.860756394614228,
+      "vector_rmse_deg": 5.2351788387165445,
+      "phi_rmse_deg": 1.5784587449155756,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.6954993832365317,
+      "vector_rmse_deg": 4.116620481402081,
+      "phi_rmse_deg": 1.5784717843999663,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.07569060253589,
+      "vector_rmse_deg": 4.458444763118948,
+      "phi_rmse_deg": 1.5784717843999663,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/mixed/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.972511320259194,
+      "vector_rmse_deg": 6.619313803634517,
+      "phi_rmse_deg": 4.67692422793845,
+      "phi_n": 1467,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.329854130692642,
+      "vector_rmse_deg": 5.524098216741709,
+      "phi_rmse_deg": 1.5480905389504578,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.678483416489613,
+      "vector_rmse_deg": 4.707793810162151,
+      "phi_rmse_deg": 0.7181994334495503,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.962349986312697,
+      "vector_rmse_deg": 6.595302934303913,
+      "phi_rmse_deg": 4.639896391501652,
+      "phi_n": 1465,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.050507090223986,
+      "vector_rmse_deg": 5.33710872194075,
+      "phi_rmse_deg": 1.3032983670574998,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.895122812929985,
+      "vector_rmse_deg": 5.192401052222267,
+      "phi_rmse_deg": 1.3032983670574998,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.9244981515837334,
+      "vector_rmse_deg": 4.077156574886167,
+      "phi_rmse_deg": 1.2108388524357985,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.568477928028601,
+      "vector_rmse_deg": 3.7321177969017554,
+      "phi_rmse_deg": 1.2108388524357985,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/mixed/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.967495262370344,
+      "vector_rmse_deg": 5.674025047251895,
+      "phi_rmse_deg": 5.676649253640778,
+      "phi_n": 1455,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.461348802743372,
+      "vector_rmse_deg": 5.675976927446304,
+      "phi_rmse_deg": 1.5549307732871969,
+      "phi_n": 1462,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.0510808569010233,
+      "vector_rmse_deg": 2.0576984355372376,
+      "phi_rmse_deg": 0.28645205327316153,
+      "phi_n": 1262,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.954337546955954,
+      "vector_rmse_deg": 5.638661720647513,
+      "phi_rmse_deg": 5.534565447292567,
+      "phi_n": 1453,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.53168464969796,
+      "vector_rmse_deg": 4.016247161374151,
+      "phi_rmse_deg": 1.5764974822734537,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.993760526828382,
+      "vector_rmse_deg": 2.798401316762729,
+      "phi_rmse_deg": 1.5764974822734537,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.742596351705933,
+      "vector_rmse_deg": 4.863126659292967,
+      "phi_rmse_deg": 1.1400673755636268,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.7618505661309762,
+      "vector_rmse_deg": 3.911537339898505,
+      "phi_rmse_deg": 1.1400673755636268,
+      "phi_n": 1464,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/mixed/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 9.136867437372883,
+      "vector_rmse_deg": 10.189111890976521,
+      "phi_rmse_deg": 4.752050350757929,
+      "phi_n": 1470,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.8335875736911635,
+      "vector_rmse_deg": 4.475631435251599,
+      "phi_rmse_deg": 2.201831727081694,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.5554374410420726,
+      "vector_rmse_deg": 2.5680363689400028,
+      "phi_rmse_deg": 0.3020139040351227,
+      "phi_n": 1268,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 9.133370047861346,
+      "vector_rmse_deg": 10.14674608110819,
+      "phi_rmse_deg": 4.618733596903301,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 6.029042818389653,
+      "vector_rmse_deg": 6.63018056435817,
+      "phi_rmse_deg": 2.2062158227142175,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.859412246782278,
+      "vector_rmse_deg": 5.6136372911874,
+      "phi_rmse_deg": 2.2062158227142175,
+      "phi_n": 1478,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.633629541170944,
+      "vector_rmse_deg": 3.9202017992005476,
+      "phi_rmse_deg": 0.9167049308285803,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.4925422547800506,
+      "vector_rmse_deg": 3.78791998275801,
+      "phi_rmse_deg": 0.9167049308285803,
+      "phi_n": 1477,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/mixed/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.972511320259194,
+      "vector_rmse_deg": 6.619313803634517,
+      "phi_rmse_deg": 4.67692422793845,
+      "phi_n": 1467,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.329854130692642,
+      "vector_rmse_deg": 5.524098216741709,
+      "phi_rmse_deg": 1.5480905389504578,
+      "phi_n": 1468,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 3.029074064457232,
+      "vector_rmse_deg": 3.035545256666771,
+      "phi_rmse_deg": 0.40529707672570126,
+      "phi_n": 1270,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.960966700462621,
+      "vector_rmse_deg": 6.594123237801536,
+      "phi_rmse_deg": 4.607251127157292,
+      "phi_n": 1465,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.01951451600323,
+      "vector_rmse_deg": 5.429028276590798,
+      "phi_rmse_deg": 1.4710806829962915,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.538994033507441,
+      "vector_rmse_deg": 4.994020639691499,
+      "phi_rmse_deg": 1.4710806829962915,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.353594083739543,
+      "vector_rmse_deg": 4.476269545287528,
+      "phi_rmse_deg": 1.031090951141718,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.4862961825055763,
+      "vector_rmse_deg": 3.6331327008011676,
+      "phi_rmse_deg": 1.031090951141718,
+      "phi_n": 1469,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/differential/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 8.135165211267225,
+      "vector_rmse_deg": 8.367374752495873,
+      "phi_rmse_deg": 3.365679045337002,
+      "phi_n": 1485,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.757961548955226,
+      "vector_rmse_deg": 8.131315744080258,
+      "phi_rmse_deg": 4.685247888414201,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.0870884269459795,
+      "vector_rmse_deg": 3.3628447741104477,
+      "phi_rmse_deg": 2.322804044933357,
+      "phi_n": 1476,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 8.138552831058647,
+      "vector_rmse_deg": 8.36881597084991,
+      "phi_rmse_deg": 3.357951435615972,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.5970057141854896,
+      "vector_rmse_deg": 3.1899320981275747,
+      "phi_rmse_deg": 2.567253599424917,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.1497777124872477,
+      "vector_rmse_deg": 2.819171421551747,
+      "phi_rmse_deg": 2.567253599424917,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 6.790086643689881,
+      "vector_rmse_deg": 7.192710118925533,
+      "phi_rmse_deg": 4.530220573379845,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.429925518239471,
+      "vector_rmse_deg": 4.945595369427591,
+      "phi_rmse_deg": 4.530220573379845,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/differential/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.0030828392773525,
+      "vector_rmse_deg": 7.234636054629093,
+      "phi_rmse_deg": 1.6066785548183777,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.0936208935242355,
+      "vector_rmse_deg": 7.380526598552528,
+      "phi_rmse_deg": 1.6987029098748618,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.7027079381968653,
+      "vector_rmse_deg": 3.873102518888911,
+      "phi_rmse_deg": 1.220913174777128,
+      "phi_n": 1482,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.01745662395032,
+      "vector_rmse_deg": 7.239582607649506,
+      "phi_rmse_deg": 1.572326747838867,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.656927740984327,
+      "vector_rmse_deg": 3.0634507636625776,
+      "phi_rmse_deg": 0.945785946182375,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.4439469807393466,
+      "vector_rmse_deg": 2.8792579311345365,
+      "phi_rmse_deg": 0.945785946182375,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 6.6496352044578355,
+      "vector_rmse_deg": 6.910172892359911,
+      "phi_rmse_deg": 1.512016694706477,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.910870541133498,
+      "vector_rmse_deg": 5.249249884781869,
+      "phi_rmse_deg": 1.512016694706477,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/differential/natural": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.77133538922726,
+      "vector_rmse_deg": 8.01090103221401,
+      "phi_rmse_deg": 2.6047628481996083,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.394619858700084,
+      "vector_rmse_deg": 7.778174041175215,
+      "phi_rmse_deg": 3.244799782879954,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.678483416489613,
+      "vector_rmse_deg": 4.707793810162151,
+      "phi_rmse_deg": 0.7181994334495503,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.771477189791384,
+      "vector_rmse_deg": 8.00655811836749,
+      "phi_rmse_deg": 2.584869166666991,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.1955792330056494,
+      "vector_rmse_deg": 2.7213000761925326,
+      "phi_rmse_deg": 1.0316312003060093,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.4239032730563865,
+      "vector_rmse_deg": 2.904933453263551,
+      "phi_rmse_deg": 1.0316312003060093,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 6.292179361530972,
+      "vector_rmse_deg": 6.662681532915118,
+      "phi_rmse_deg": 3.009607189410101,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.45633576356913,
+      "vector_rmse_deg": 4.036597087509321,
+      "phi_rmse_deg": 3.009607189410101,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    }
+  },
+  "26112011-straight/differential/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 8.135165211267225,
+      "vector_rmse_deg": 8.367374752495873,
+      "phi_rmse_deg": 3.365679045337002,
+      "phi_n": 1485,
+      "phi_truth_eligible": 1487
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.757961548955226,
+      "vector_rmse_deg": 8.131315744080258,
+      "phi_rmse_deg": 4.685247888414201,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.0510808569010233,
+      "vector_rmse_deg": 2.0576984355372376,
+      "phi_rmse_deg": 0.28645205327316153,
+      "phi_n": 1262,
+      "phi_truth_eligible": 1487
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 8.136215413076291,
+      "vector_rmse_deg": 8.362954714735189,
+      "phi_rmse_deg": 3.3165789405731054,
+      "phi_n": 1484,
+      "phi_truth_eligible": 1487
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 5.426567534080769,
+      "vector_rmse_deg": 5.6445103047724,
+      "phi_rmse_deg": 1.107649666650529,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.812442350825343,
+      "vector_rmse_deg": 5.056672667355055,
+      "phi_rmse_deg": 1.107649666650529,
+      "phi_n": 1481,
+      "phi_truth_eligible": 1487
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.20424272732852,
+      "vector_rmse_deg": 7.498921606719895,
+      "phi_rmse_deg": 3.9521405160459686,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.952725130727015,
+      "vector_rmse_deg": 5.324833334470602,
+      "phi_rmse_deg": 3.9521405160459686,
+      "phi_n": 1487,
+      "phi_truth_eligible": 1487
+    }
+  },
+  "26112012-left/differential/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.0030828392773525,
+      "vector_rmse_deg": 7.234636054629093,
+      "phi_rmse_deg": 1.6066785548183777,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.0936208935242355,
+      "vector_rmse_deg": 7.380526598552528,
+      "phi_rmse_deg": 1.6987029098748618,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 2.5554374410420726,
+      "vector_rmse_deg": 2.5680363689400028,
+      "phi_rmse_deg": 0.3020139040351227,
+      "phi_n": 1268,
+      "phi_truth_eligible": 1492
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.016218145249394,
+      "vector_rmse_deg": 7.241759833516418,
+      "phi_rmse_deg": 1.5808771861666626,
+      "phi_n": 1491,
+      "phi_truth_eligible": 1492
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.973686760148074,
+      "vector_rmse_deg": 4.283479943710275,
+      "phi_rmse_deg": 1.012556170457948,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.8930924919817214,
+      "vector_rmse_deg": 3.2979818422888285,
+      "phi_rmse_deg": 1.012556170457948,
+      "phi_n": 1488,
+      "phi_truth_eligible": 1492
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 6.670482509675488,
+      "vector_rmse_deg": 6.9342125349298716,
+      "phi_rmse_deg": 1.4832804936252564,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.857309279071493,
+      "vector_rmse_deg": 4.27758839162717,
+      "phi_rmse_deg": 1.4832804936252564,
+      "phi_n": 1492,
+      "phi_truth_eligible": 1492
+    }
+  },
+  "26112013-right/differential/occluded": {
+    "raw_nominal": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.77133538922726,
+      "vector_rmse_deg": 8.01090103221401,
+      "phi_rmse_deg": 2.6047628481996083,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "strain": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.394619858700084,
+      "vector_rmse_deg": 7.778174041175215,
+      "phi_rmse_deg": 3.244799782879954,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "vision": {
+      "total": 1600,
+      "n": 1386,
+      "coverage": 0.86625,
+      "theta_rmse_deg": 3.029074064457232,
+      "vector_rmse_deg": 3.035545256666771,
+      "phi_rmse_deg": 0.40529707672570126,
+      "phi_n": 1270,
+      "phi_truth_eligible": 1494
+    },
+    "legacy": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 7.770047413682118,
+      "vector_rmse_deg": 8.005800599162418,
+      "phi_rmse_deg": 2.575988750717982,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "previous": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 4.326778387835203,
+      "vector_rmse_deg": 4.631587639658187,
+      "phi_rmse_deg": 1.0322849471186495,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "previous_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.995896060097654,
+      "vector_rmse_deg": 3.413456111328738,
+      "phi_rmse_deg": 1.0322849471186495,
+      "phi_n": 1490,
+      "phi_truth_eligible": 1494
+    },
+    "health": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 6.419804399911177,
+      "vector_rmse_deg": 6.762678040235205,
+      "phi_rmse_deg": 2.923542140681679,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    },
+    "health_teacher": {
+      "total": 1600,
+      "n": 1600,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.9079075276424664,
+      "vector_rmse_deg": 3.528565090614156,
+      "phi_rmse_deg": 2.923542140681679,
+      "phi_n": 1494,
+      "phi_truth_eligible": 1494
+    }
+  }
+}

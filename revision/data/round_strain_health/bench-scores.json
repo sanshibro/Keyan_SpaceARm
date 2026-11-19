@@ -1,0 +1,228 @@
+{
+  "classification": {
+    "counts": [
+      [
+        20,
+        0,
+        0,
+        0,
+        3440
+      ],
+      [
+        0,
+        146,
+        0,
+        0,
+        1912
+      ],
+      [
+        0,
+        0,
+        110,
+        0,
+        3350
+      ],
+      [
+        0,
+        159,
+        0,
+        0,
+        1899
+      ]
+    ],
+    "threshold": 0.9,
+    "high_confidence_fraction": 0.039416455237404856,
+    "high_confidence_accuracy": 0.6344827586206897,
+    "forced_balanced_accuracy": 0.6133650157007476,
+    "marginal": {
+      "offset": {
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "high_confidence_fraction": 0.9554186299383834,
+        "high_confidence_accuracy": 1.0
+      },
+      "memory": {
+        "balanced_accuracy": 0.6099130119608553,
+        "sensitivity": 0.6134469010511054,
+        "specificity": 0.6063791228706052,
+        "high_confidence_fraction": 0.03959768031895614,
+        "high_confidence_accuracy": 0.6361556064073226
+      }
+    }
+  },
+  "per_motion": {
+    "test-00/healthy": {
+      "n": 1191,
+      "nominal_rmse": 0.30223389301674564,
+      "health_rmse": 1.8543655095927976
+    },
+    "test-00/offset": {
+      "n": 656,
+      "nominal_rmse": 7.426845055529568,
+      "health_rmse": 4.166680838638611
+    },
+    "test-00/memory": {
+      "n": 1191,
+      "nominal_rmse": 3.2835384121764024,
+      "health_rmse": 2.385208685598027
+    },
+    "test-00/mixed": {
+      "n": 656,
+      "nominal_rmse": 7.687528401437539,
+      "health_rmse": 5.364511653635527
+    },
+    "test-01/healthy": {
+      "n": 1143,
+      "nominal_rmse": 0.18280608541417173,
+      "health_rmse": 1.6824298182997686
+    },
+    "test-01/offset": {
+      "n": 724,
+      "nominal_rmse": 6.427494935745487,
+      "health_rmse": 6.326129651692667
+    },
+    "test-01/memory": {
+      "n": 1143,
+      "nominal_rmse": 3.1452109964928643,
+      "health_rmse": 1.604814670139048
+    },
+    "test-01/mixed": {
+      "n": 724,
+      "nominal_rmse": 6.577691196039837,
+      "health_rmse": 6.249897313705436
+    },
+    "test-02/healthy": {
+      "n": 1126,
+      "nominal_rmse": 0.15845747460156678,
+      "health_rmse": 2.230319032051309
+    },
+    "test-02/offset": {
+      "n": 678,
+      "nominal_rmse": 2.358136677240984,
+      "health_rmse": 4.037882897855041
+    },
+    "test-02/memory": {
+      "n": 1126,
+      "nominal_rmse": 4.099398876116986,
+      "health_rmse": 1.829604881896239
+    },
+    "test-02/mixed": {
+      "n": 678,
+      "nominal_rmse": 4.923337521914549,
+      "health_rmse": 3.0470087124361913
+    }
+  },
+  "phases": {
+    "healthy/loading": {
+      "n": 566,
+      "nominal_rmse": 0.2048728827451557,
+      "health_rmse": 1.9040853626396124
+    },
+    "healthy/holding": {
+      "n": 1727,
+      "nominal_rmse": 0.2470112983732115,
+      "health_rmse": 1.9399582700724607
+    },
+    "healthy/unloading": {
+      "n": 1167,
+      "nominal_rmse": 0.19882423317417333,
+      "health_rmse": 1.9374037082198352
+    },
+    "offset/loading": {
+      "n": 238,
+      "nominal_rmse": 6.472258202209275,
+      "health_rmse": 5.451203937123536
+    },
+    "offset/holding": {
+      "n": 1133,
+      "nominal_rmse": 6.034599591685863,
+      "health_rmse": 5.353349781395165
+    },
+    "offset/unloading": {
+      "n": 687,
+      "nominal_rmse": 5.208136646959438,
+      "health_rmse": 4.157664589223879
+    },
+    "memory/loading": {
+      "n": 566,
+      "nominal_rmse": 3.4398009222588657,
+      "health_rmse": 2.3307972324047666
+    },
+    "memory/holding": {
+      "n": 1727,
+      "nominal_rmse": 3.69051162700769,
+      "health_rmse": 2.0045708685602057
+    },
+    "memory/unloading": {
+      "n": 1167,
+      "nominal_rmse": 3.318538086800972,
+      "health_rmse": 1.7254432756770322
+    },
+    "mixed/loading": {
+      "n": 238,
+      "nominal_rmse": 7.360831992807265,
+      "health_rmse": 5.684264627091112
+    },
+    "mixed/holding": {
+      "n": 1133,
+      "nominal_rmse": 6.849587376742907,
+      "health_rmse": 5.419227631719943
+    },
+    "mixed/unloading": {
+      "n": 687,
+      "nominal_rmse": 5.459270116398414,
+      "health_rmse": 4.263764790684964
+    }
+  },
+  "equal_shape_pairs": {
+    "test-00/healthy": {
+      "n": 8,
+      "median_rms_channel_code_difference": 1.118033988749895
+    },
+    "test-00/offset": {
+      "n": 4,
+      "median_rms_channel_code_difference": 0.9125703849682212
+    },
+    "test-00/memory": {
+      "n": 8,
+      "median_rms_channel_code_difference": 1.266123775561495
+    },
+    "test-00/mixed": {
+      "n": 4,
+      "median_rms_channel_code_difference": 0.9125703849682212
+    },
+    "test-01/healthy": {
+      "n": 10,
+      "median_rms_channel_code_difference": 1.6951816013732885
+    },
+    "test-01/offset": {
+      "n": 7,
+      "median_rms_channel_code_difference": 2.0615528128088303
+    },
+    "test-01/memory": {
+      "n": 10,
+      "median_rms_channel_code_difference": 1.478397839480233
+    },
+    "test-01/mixed": {
+      "n": 7,
+      "median_rms_channel_code_difference": 2.5495097567963922
+    },
+    "test-02/healthy": {
+      "n": 13,
+      "median_rms_channel_code_difference": 1.224744871391589
+    },
+    "test-02/offset": {
+      "n": 5,
+      "median_rms_channel_code_difference": 1.5
+    },
+    "test-02/memory": {
+      "n": 13,
+      "median_rms_channel_code_difference": 1.5
+    },
+    "test-02/mixed": {
+      "n": 5,
+      "median_rms_channel_code_difference": 1.224744871391589
+    }
+  }
+}

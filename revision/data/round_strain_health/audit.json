@@ -1,0 +1,122 @@
+{
+  "ambiguity": {
+    "physical_bends_deg": [
+      35.000000000000114,
+      43.000000000000036
+    ],
+    "max_channel_changes_counts": [
+      29,
+      0,
+      26,
+      0
+    ],
+    "peak_observed_code_difference": 0,
+    "max_estimate_difference_rad": 0.0,
+    "unavoidable_worst_case_error_deg": 3.999999999999961,
+    "scope": "Constructed identical four-channel histories. This establishes ambiguity for an allowed directional offset, not how often real offsets have this structure."
+  },
+  "flight": {
+    "26112011-straight": {
+      "ulog_bytes": 4823824,
+      "topics": {
+        "/clock": 3248,
+        "/f/arm/bend": 3248,
+        "/f/evaluation/mujoco_position": 3248,
+        "/f/plant/rotor_thrust_N": 3248,
+        "/f/px4/hil_motor_channels": 3248,
+        "/f/px4/local_position_ned": 2988,
+        "/f/reference/position": 3248
+      },
+      "contact_steps": 0,
+      "peak_curvature_deg": 65.32166626098252,
+      "native_sensor_packets": 16111
+    },
+    "26112012-left": {
+      "ulog_bytes": 4822163,
+      "topics": {
+        "/clock": 3247,
+        "/f/arm/bend": 3247,
+        "/f/evaluation/mujoco_position": 3247,
+        "/f/plant/rotor_thrust_N": 3247,
+        "/f/px4/hil_motor_channels": 3247,
+        "/f/px4/local_position_ned": 2987,
+        "/f/reference/position": 3247
+      },
+      "contact_steps": 0,
+      "peak_curvature_deg": 76.40150228068346,
+      "native_sensor_packets": 16201
+    },
+    "26112013-right": {
+      "ulog_bytes": 4842005,
+      "topics": {
+        "/clock": 3248,
+        "/f/arm/bend": 3248,
+        "/f/evaluation/mujoco_position": 3248,
+        "/f/plant/rotor_thrust_N": 3248,
+        "/f/px4/hil_motor_channels": 3248,
+        "/f/px4/local_position_ned": 2988,
+        "/f/reference/position": 3248
+      },
+      "contact_steps": 0,
+      "peak_curvature_deg": 82.33609389700447,
+      "native_sensor_packets": 16113
+    }
+  },
+  "flight_classification": {
+    "counts": [
+      [
+        1,
+        0,
+        0,
+        0,
+        3861
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1773
+      ],
+      [
+        7,
+        0,
+        105,
+        0,
+        3750
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1773
+      ]
+    ],
+    "threshold": 0.9,
+    "high_confidence_fraction": 0.010026619343389529,
+    "high_confidence_accuracy": 0.9380530973451328,
+    "forced_balanced_accuracy": 0.5880848231849922,
+    "marginal": {
+      "offset": {
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "high_confidence_fraction": 0.9956521739130435,
+        "high_confidence_accuracy": 1.0
+      },
+      "memory": {
+        "balanced_accuracy": 0.6043478260869566,
+        "sensitivity": 0.7267080745341615,
+        "specificity": 0.48198757763975153,
+        "high_confidence_fraction": 0.010026619343389529,
+        "high_confidence_accuracy": 0.9380530973451328
+      }
+    }
+  },
+  "sensor_prefix_tests": 36,
+  "maximum_sensor_prefix_difference_rad": 2.220446049250313e-16,
+  "fusion_prefix_tests": 9,
+  "maximum_fusion_prefix_difference_rad": 0.0,
+  "blind_ticks_per_three_flights": 600
+}

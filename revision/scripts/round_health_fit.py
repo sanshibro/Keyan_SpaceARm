@@ -102,7 +102,7 @@ def fit():
         split='First two validation motions estimate expert and one-second bias variances; third scales marginal intervals. Pilot visual scale from previous independent flight.',
         input_hashes={p.name:digest(p/'reference.npz') for p in tr+val},point_model_sha256=digest(SLIM/'p30/predictor.json'),
         code_files={p.name:digest(p) for p in [__import__('pathlib').Path(__file__),__import__('pathlib').Path(__import__('strain_health').__file__)]},
-        confidence_threshold=.90,neighbors=48,library_size=len(S),novelty_ref=float(m['novelty_ref']),
+        confidence_threshold=.90,neighbors=48,library_size=len(m['library']),novelty_ref=float(m['novelty_ref']),
         variance_multiplier=m['variance_scale'].tolist(),camera_systematic_theta_sd_deg=float(np.sqrt(m['camera_systematic']))))
     print('FROZEN',digest(path),flush=True)
 if __name__=='__main__':fit()

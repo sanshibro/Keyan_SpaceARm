@@ -36,11 +36,12 @@
   },
   "confidence_threshold": 0.9,
   "neighbors": 48,
-  "library_size": 1316,
+  "library_size": 18240,
   "novelty_ref": 2.4263485738588506,
   "variance_multiplier": [
     0.43651006478511434,
     0.7711189536532443
   ],
-  "camera_systematic_theta_sd_deg": 1.7974099035843565
+  "camera_systematic_theta_sd_deg": 1.7974099035843565,
+  "metadata_note": "Library size counted directly from frozen model rows. Original fitting code fingerprints retained."
 }
