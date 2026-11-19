@@ -30,6 +30,22 @@ class SlimGaugeRig:
     def lengths(self,data):
         return np.linalg.norm(np.diff(self.paths(data),axis=0),axis=-1).sum(axis=0)
 
+def memory_components(t, ratio, half_width, tau):
+    """Play and decaying transient, in units of relative resistance. Time is in seconds."""
+    t=np.asarray(t,float);ratio=np.asarray(ratio,float)
+    if len(t)!=len(ratio) or not len(t) or np.any(np.diff(t)<=0) or np.any(np.asarray(tau)<=0) or np.any(np.asarray(half_width)<0):
+        raise ValueError('Invalid material history or timescale')
+    play=np.zeros_like(ratio);transient=np.zeros_like(ratio)
+    prev=ratio[0].copy();tr=np.zeros_like(prev)
+    for k,dt in enumerate(np.diff(t),1):
+        x=ratio[k];delta=x-ratio[k-1];ok=np.isfinite(delta)
+        prev=np.where(ok,np.clip(prev,x-half_width,x+half_width),x)
+        # Exact first-order transient for a linear input between consecutive solver states.
+        decay=np.exp(-dt/tau)
+        tr=np.where(ok,decay*tr+delta*(-np.expm1(-dt/tau))*tau/dt,0.)
+        play[k]=prev-x;transient[k]=tr
+    return play,transient
+
 class SlimReadout:
     def __init__(self,spec,profile,baseline_events,seed):
         self.spec=spec;self.profile=profile;self.reference=baseline_events
@@ -41,7 +57,7 @@ class SlimReadout:
         e=np.asarray(strain,float)
         out=np.interp(np.maximum(e,0.),self.strain,self.resistance)
         return np.where((e<=1+1e-12)&np.isfinite(e),out,np.nan)
-    def sample(self,physics_t,lengths,preload,gain_scale=1.,offset=None):
+    def sample(self,physics_t,lengths,preload,gain_scale=1.,offset=None,memory=None):
         physics_t=np.asarray(physics_t);lengths=np.asarray(lengths)
         if np.any(np.diff(physics_t)<=0) or lengths.shape!=(len(physics_t),4):
             raise ValueError('Expected four synchronized paths')
@@ -58,6 +74,12 @@ class SlimReadout:
         # The neutral preload is fixed during the pre-roll; the neutral button sets the box baseline.
         L=np.column_stack([np.interp(t,physics_t,lengths[:,j],left=free*(1.+preload)) for j in range(4)])
         extension=L/free-1.;relative=self.ratio(extension)
+        if memory is not None:
+            history=self.ratio(lengths/free-1.)
+            play,slow=memory_components(physics_t,history,np.asarray(memory['half_width']),np.asarray(memory['tau_s']))
+            correction=play*np.asarray(memory['play_weight'])+slow*np.asarray(memory['transient_weight'])
+            residual=np.column_stack([np.interp(t,physics_t,correction[:,k],left=0.) for k in range(4)])
+            relative=np.where(extension<0,0.,np.maximum(0.,relative+residual))
         gain=np.asarray(self.profile['slope_counts_per_unit_ratio'])*gain_scale
         box_zero=np.array(self.profile['neutral_codes'])
         analog=box_zero+(relative-self.ratio(preload))*gain+noise

@@ -59,11 +59,11 @@ def geometry():
             overrange_channel_samples=int(np.sum(e>1+1e-9)))
     savej(OUT/'sweep.json',out);print('120 degrees',out,flush=True)
 
-def acquire(case,p,scale=1.,shift=False):
+def acquire(case,p,scale=1.,shift=False,memory=None):
     path=OUT/'kinematics'/(case+'.npz');source=np.load(str(path));t=source['t']
     profile=readj(OUT/'box-profile.json');noise=np.load(str(OUT/'stationary-box.npz'))['events']
     box=SlimReadout(SPEC,profile,noise,stable_seed('box-v1-'+case))
-    data=box.sample(t,source['length_m'][:,PRELOADS.index(p)],p,scale,profile['offset_stress_counts'] if shift else None)
+    data=box.sample(t,source['length_m'][:,PRELOADS.index(p)],p,scale,profile['offset_stress_counts'] if shift else None,memory)
     return t,source['mocap_b'],data
 
 def train():
@@ -90,9 +90,9 @@ def train():
         savej(out/'bench-scores.json',stats);results[label(p)]=stats
     savej(OUT/'bench-scores.json',results);print('Bench test',[(k,round(v['test']['theta_rmse_deg'],3)) for k,v in results.items()],flush=True)
 
-def estimates(case,p,tag,scale=1.,shift=False):
-    model=readj(OUT/label(p)/'predictor.json')
-    t,truth,d=acquire(case,p,scale,shift)
+def estimates(case,p,tag,scale=1.,shift=False,memory=None,model_path=None):
+    model=readj(model_path if model_path is not None else OUT/label(p)/'predictor.json')
+    t,truth,d=acquire(case,p,scale,shift,memory)
     adc_t=d['t'];valid=~d['overrange'].any(1)
     prediction=predict(model,features_at(d['adc'][valid],d['tare']))
     initial=predict(model,features_at(d['initial_adc'][None,:],d['tare']))[0]

@@ -13,5 +13,10 @@
     "bytes": 4657165,
     "sha256": "07921e81116b5bf21f784475e6b916c0c2700a578059142144de5148b7756233",
     "members": 39
+  },
+  "slim-memory.tar.gz": {
+    "bytes": 3828374,
+    "sha256": "fe8e4f2fb851076dc5be53db0eb5b0bd1daf57f6c6fafc5c03ed7ee9e536db39",
+    "members": 34
   }
 }

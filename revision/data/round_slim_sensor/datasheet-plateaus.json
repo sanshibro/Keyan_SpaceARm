@@ -1,0 +1,114 @@
+{
+  "source": "Elastreme Sense Slim, p. 2, repeatability trace (no numerical R axis or synchronized length input).",
+  "trace_reading_uncertainty_px": 2,
+  "plateaus": [
+    {
+      "level": 50,
+      "sequence": "before80",
+      "x_interior": [
+        192,
+        199
+      ],
+      "early_px": 171.0,
+      "late_px": 171.5,
+      "step_height_px": 101.5,
+      "relative_sag_pct": 0.49261083743842365
+    },
+    {
+      "level": 50,
+      "sequence": "before80",
+      "x_interior": [
+        215,
+        222
+      ],
+      "early_px": 171.5,
+      "late_px": 172.0,
+      "step_height_px": 99.5,
+      "relative_sag_pct": 0.5025125628140703
+    },
+    {
+      "level": 50,
+      "sequence": "before80",
+      "x_interior": [
+        237,
+        244
+      ],
+      "early_px": 171.0,
+      "late_px": 171.0,
+      "step_height_px": 99.5,
+      "relative_sag_pct": 0.0
+    },
+    {
+      "level": 80,
+      "sequence": "peak",
+      "x_interior": [
+        259,
+        266
+      ],
+      "early_px": 68.0,
+      "late_px": 69.5,
+      "step_height_px": 202.5,
+      "relative_sag_pct": 0.7407407407407407
+    },
+    {
+      "level": 80,
+      "sequence": "peak",
+      "x_interior": [
+        282,
+        289
+      ],
+      "early_px": 66.0,
+      "late_px": 67.0,
+      "step_height_px": 204.0,
+      "relative_sag_pct": 0.49019607843137253
+    },
+    {
+      "level": 80,
+      "sequence": "peak",
+      "x_interior": [
+        305,
+        312
+      ],
+      "early_px": 67.0,
+      "late_px": 68.0,
+      "step_height_px": 201.5,
+      "relative_sag_pct": 0.49627791563275436
+    },
+    {
+      "level": 50,
+      "sequence": "after80",
+      "x_interior": [
+        327,
+        335
+      ],
+      "early_px": 168.5,
+      "late_px": 169.5,
+      "step_height_px": 100.5,
+      "relative_sag_pct": 0.9950248756218906
+    },
+    {
+      "level": 50,
+      "sequence": "after80",
+      "x_interior": [
+        349,
+        357
+      ],
+      "early_px": 168.0,
+      "late_px": 170.0,
+      "step_height_px": 100.5,
+      "relative_sag_pct": 1.9900497512437811
+    },
+    {
+      "level": 50,
+      "sequence": "after80",
+      "x_interior": [
+        372,
+        380
+      ],
+      "early_px": 169.5,
+      "late_px": 173.5,
+      "step_height_px": 100.0,
+      "relative_sag_pct": 4.0
+    }
+  ]
+}

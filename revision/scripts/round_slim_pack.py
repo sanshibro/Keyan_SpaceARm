@@ -14,5 +14,10 @@ def main():
         path=dest/name;pack(path,{f.relative_to(OUT).as_posix():f for f in paths})
         assert 0<path.stat().st_size<24*1024**2
         catalog[name]=dict(bytes=path.stat().st_size,sha256=sha(path),members=len(paths))
+    memory=dest/'slim-memory.tar.gz'
+    if memory.exists():
+        import tarfile
+        with tarfile.open(memory,'r:gz') as arc:count=len(arc.getmembers())
+        catalog[memory.name]=dict(bytes=memory.stat().st_size,sha256=sha(memory),members=count)
     savej(OUT/'evidence-index.json',catalog); print(catalog,flush=True)
 if __name__=='__main__':main()
