@@ -1,5 +1,5 @@
 """Make space for the new video and paper in landing-page PNGs; verify RGBA pixels and metadata."""
-import io,sys
+import io,sys,subprocess
 from pathlib import Path
 from PIL import Image
 def keep(p,raw):
@@ -11,12 +11,15 @@ def run(stage):
     from zopfli.png import optimize
     root=stage/'site-cache/dist'
     files=list(root.rglob('*'));old=sum(p.stat().st_size for p in files if p.is_file())
-    target=256*1024**2-65536 if (root/'archive/2026-11-19-confidence').is_dir() else 256*1024**2-610000
+    # The hosting limit includes expanded tar headers and 512-byte entry padding.
+    target=256*1024**2-282000 if (root/'archive/2026-11-19-confidence').is_dir() else 256*1024**2-610000
     required=max(0,old-target);saved=0
     names=['super_body_camera.png','super_hover_frame.png','super_platform_preview.png','super_distal_tool.png','cad16_scene_preview.png']
     paths=[root/n for n in names];paths.extend(sorted((p for p in root.glob('*.png') if p not in paths),key=lambda p:-p.stat().st_size))
+    changed=set(subprocess.check_output(['git','diff','--name-only','--','dist/*.png'],cwd=root.parent,text=True).splitlines())
     for p in paths:
         if saved>=required:break
+        if 'dist/'+p.name in changed:continue
         initial=p.read_bytes()
         raw=optimize(initial,keepchunks=['pHYs','iCCP','tEXt','zTXt','iTXt','gAMA','sRGB','cHRM'],
              num_iterations=4,num_iterations_large=3,filter_strategies='01234m')
