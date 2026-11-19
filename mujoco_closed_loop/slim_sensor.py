@@ -57,7 +57,7 @@ class SlimReadout:
         e=np.asarray(strain,float)
         out=np.interp(np.maximum(e,0.),self.strain,self.resistance)
         return np.where((e<=1+1e-12)&np.isfinite(e),out,np.nan)
-    def sample(self,physics_t,lengths,preload,gain_scale=1.,offset=None,memory=None):
+    def sample(self,physics_t,lengths,preload,gain_scale=1.,offset=None,memory=None,offset_profile=None):
         physics_t=np.asarray(physics_t);lengths=np.asarray(lengths)
         if np.any(np.diff(physics_t)<=0) or lengths.shape!=(len(physics_t),4):
             raise ValueError('Expected four synchronized paths')
@@ -85,6 +85,12 @@ class SlimReadout:
         analog=box_zero+(relative-self.ratio(preload))*gain+noise
         if offset is not None:
             analog+=np.clip((t-29.)/4.,0,1)[:,None]*np.asarray(offset)
+        if offset_profile is not None:
+            if offset is not None:raise ValueError('Specify one readout offset profile')
+            injected=np.asarray(offset_profile(t),dtype=float)
+            if injected.shape!=analog.shape or not np.isfinite(injected).all():
+                raise ValueError('Expected one finite additive code offset per channel at each sample')
+            analog+=injected
         ok=np.isfinite(analog)
         codes=np.full(analog.shape,-1,dtype=np.int16)
         codes[ok]=np.rint(np.clip(analog[ok],0,4095)).astype(np.int16)

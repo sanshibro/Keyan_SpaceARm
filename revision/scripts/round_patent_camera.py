@@ -17,8 +17,8 @@ def exposure(t):
     if 31-1e-7<=t<31.32-1e-7:return 1.
     if 26<=t<31:return .88*min(1.,(t-26)/1.1)
     return 0.
-def images(case):
-    src=INPUT/case;rows=[]
+def images(case,input_root=INPUT):
+    src=input_root/case;rows=[]
     for line in (src/'frames.txt').read_text().splitlines():
         ts,rgb,depth=line.split();rows.append((float(ts),src/rgb,src/depth))
     return rows

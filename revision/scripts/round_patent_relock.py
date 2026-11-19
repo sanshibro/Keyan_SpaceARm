@@ -56,11 +56,11 @@ class Keyframes:
                 ang,dist=delta(T,U)
                 if abs(t-other)>=.25 and ang<2 and dist<.04:return T,n,e,d
         return None
-def process(case,cond):
-    dest=OUT/'camera'/case;dest.mkdir(parents=True,exist_ok=True)
-    csv=dest/'graded.csv' if cond=='graded' else OLD/case/(cond+'.csv')
-    tab=pd.read_csv(csv);raw=list(images(case));assert np.allclose(tab.t,[v[0] for v in raw],atol=1e-6)
-    reader=Keyframes(INPUT/case/'settings.yaml');cv2.setRNGSeed(7101)
+def process(case,cond,output=OUT,old=OLD,input_root=INPUT):
+    dest=output/'camera'/case;dest.mkdir(parents=True,exist_ok=True)
+    csv=dest/'graded.csv' if cond=='graded' else old/case/(cond+'.csv')
+    tab=pd.read_csv(csv);raw=list(images(case,input_root));assert np.allclose(tab.t,[v[0] for v in raw],atol=1e-6)
+    reader=Keyframes(input_root/case/'settings.yaml');cv2.setRNGSeed(7101)
     frames=tab.copy();cols=['r'+str(i) for i in range(12)]
     anchor=None;first={};last_bank=-10.;pending=[];link={};seen={};gain=[];original=[];bridged=[];tested=0;null_count=0
     for i,row in enumerate(tab.itertuples()):
@@ -72,7 +72,7 @@ def process(case,cond):
             _,rp,dp=raw[i]
             if cond=='graded':
                 # Select the identical pixels materialized for ORB-SLAM3.
-                p=OUT/'inputs'/case;alter=p/('r%04d.png'%i)
+                p=output/'inputs'/case;alter=p/('r%04d.png'%i)
                 rp=alter if alter.is_file() else p/rp.name;dp=p/dp.name
             if cond=='occluded' and bool(row.occluded):return None
             return reader.features(cv2.imread(str(rp),0),cv2.imread(str(dp),cv2.IMREAD_UNCHANGED))

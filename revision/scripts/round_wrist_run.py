@@ -21,14 +21,14 @@ def build(orb,store):
     subprocess.run([link[0],*flags,'-w',str(src.resolve()),'-o',str(dest),*libs],cwd=b,check=True)
     return dest
 
-def run(orb,store,case,finish,cond):
+def run(orb,store,case,finish,cond,output=OUTPUT,executable=None):
     data=store/finish/case
     count=json.loads((data/'complete.json').read_bytes())['n']
-    out=OUTPUT/'slam'/finish/case
+    out=output/'slam'/finish/case
     out.mkdir(parents=True,exist_ok=True)
     csv=out/(cond+'.csv');manifest=out/(cond+'.json')
     if manifest.is_file() and csv.is_file() and json.loads(manifest.read_bytes())['processed']==count:return
-    exe=build(orb,store)
+    exe=executable if executable is not None else build(orb,store)
     args=[exe,orb/'Vocabulary/ORBvoc.txt',data/'settings.yaml',data,cond,csv.resolve()]
     with (out/(cond+'.log')).open('w') as log:
         result=subprocess.run(list(map(str,args)),cwd=data,stdout=log,stderr=subprocess.STDOUT,timeout=420)

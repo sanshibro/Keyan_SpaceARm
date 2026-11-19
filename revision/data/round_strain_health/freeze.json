@@ -1,0 +1,46 @@
+{
+  "model_sha256": "7c842a23adb1a1c7fc138528fdeae47869c9c86726ac9a8a801a63a41cda87ae",
+  "bench_training": [
+    "train-00",
+    "train-01",
+    "train-02",
+    "train-03",
+    "train-04",
+    "train-05",
+    "train-06",
+    "train-07"
+  ],
+  "bench_validation": [
+    "validation-00",
+    "validation-01",
+    "validation-02"
+  ],
+  "split": "First two validation motions estimate expert and one-second bias variances; third scales marginal intervals. Pilot visual scale from previous independent flight.",
+  "input_hashes": {
+    "train-00": "c678bc79a47636276cd858b2332b4beeb4f0be913dccfa0175ee2fea2f60e4f5",
+    "train-01": "b8573ae18b2d859fd454917364015e1a3f816274f5814f65b29d034ed8ba202f",
+    "train-02": "50be13209f59ac4374a92e0aef5cb61f8cd345c2f3aaa5b998f45edd20820120",
+    "train-03": "8cec3c6ed2bc0978522cbb6cf25477895beb07f29a838703dfa5bcb9bd06375a",
+    "train-04": "b9746e545f6c92c0e38548d3673f0d3159666cd0638b9c8a9d7a34df9dfe319e",
+    "train-05": "38b525a4bf86e4364d2c141d6a4f17295ff6837d929c63121e0b525dacdd0dfd",
+    "train-06": "8351f7ba617220a6a32613f5b4e7f9529757bef6da62592edc50ce0b9aba1190",
+    "train-07": "e3b767ddb951fc30d8dbef020505189b19bb2f7a91dcc8576b9040ab3b80ad19",
+    "validation-00": "348e1ea410e033c454ed5567081f1416caa18d2e20a344e784dc1245661b2d12",
+    "validation-01": "bfb97de15f963c7f3b4827df51571f3c6f0c65ed3e09d9b4aa7fb627009ee807",
+    "validation-02": "146e9df9cb21adf9858447184cc7e075a2bc0d9c1ddad58b9c7df6ae144e8e59"
+  },
+  "point_model_sha256": "96f13f085bedf26c2e8fda526e6e2d70f8e11a94cc4428e75d72c01a662b4dde",
+  "code_files": {
+    "round_health_fit.py": "10b237339103267777520377a8986bf96a21c91a3f4aeba1476c7f913075051f",
+    "strain_health.py": "94b6c9114a90c6ac16f498be9dbb2f89b3417de991abbca401f7df85bbf96b22"
+  },
+  "confidence_threshold": 0.9,
+  "neighbors": 48,
+  "library_size": 1316,
+  "novelty_ref": 2.4263485738588506,
+  "variance_multiplier": [
+    0.43651006478511434,
+    0.7711189536532443
+  ],
+  "camera_systematic_theta_sd_deg": 1.7974099035843565
+}

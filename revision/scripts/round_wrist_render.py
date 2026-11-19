@@ -25,7 +25,7 @@ def surface_image(path,seed):
                     0,360,int(rng.integers(55,223)),-1)
     assert cv2.imwrite(str(path),cv2.cvtColor(img,cv2.COLOR_GRAY2BGR))
 
-def model_for(work,plain):
+def model_for(work,plain,material_seed=71321):
     base=make_plant();root=ET.fromstring(base.xml);asset=root.find('asset');world=root.find('worldbody')
     for g in world.findall('geom'):
         if g.get('name','').startswith('G1_'):
@@ -33,7 +33,7 @@ def model_for(work,plain):
     if not plain:
         for j,kind in enumerate(('floor','far','left','right','rear','gate')):
             tex=work/('finish-'+kind+'.png')
-            if not tex.exists():surface_image(tex,71321+j)
+            if not tex.exists():surface_image(tex,material_seed+j)
             ET.SubElement(asset,'texture',name='tex_'+kind,type='2d',file=str(tex.resolve()))
             ET.SubElement(asset,'material',name='mat_'+kind,texture='tex_'+kind,
                           texrepeat='1 1',specular='.04',shininess='.05',texuniform='false')
@@ -51,13 +51,13 @@ def model_for(work,plain):
     assert m.nq==base.m.nq and m.nbody==base.m.nbody
     return m
 
-def run(case,plain,store):
+def run(case,plain,store,evidence=EVIDENCE,output=OUTPUT,material_seed=71321):
     cv2.setNumThreads(1);work=store/('plain' if plain else 'textured');work.mkdir(parents=True,exist_ok=True)
     dest=work/case;dest.mkdir(exist_ok=True)
     sentinel=dest/'complete.json'
     if sentinel.exists():return
-    m=model_for(work,plain);d=mujoco.MjData(m);sensor=RGBDSensor(m,'wrist_rgbd',480,360)
-    src=EVIDENCE/'runs'/case;record=np.load(str(src/'physics.npz'))
+    m=model_for(work,plain,material_seed);d=mujoco.MjData(m);sensor=RGBDSensor(m,'wrist_rgbd',480,360)
+    src=evidence/'runs'/case;record=np.load(str(src/'physics.npz'))
     release=json.loads((src/'run.json').read_bytes())['release_us']
     time=(record['us']-release)/1e6;idx=np.flatnonzero((time>=12)&(time<46))[::2]
     if plain:idx=idx[:150]
@@ -82,7 +82,7 @@ def run(case,plain,store):
         tmpl,n=re.subn('^'+re.escape(k)+r':.*$',k+': '+str(v),tmpl,flags=re.M)
         assert n==1,k
     (dest/'settings.yaml').write_text(tmpl)
-    result=OUTPUT/'slam'/('plain' if plain else 'textured')/case;result.mkdir(parents=True,exist_ok=True)
+    result=output/'slam'/('plain' if plain else 'textured')/case;result.mkdir(parents=True,exist_ok=True)
     (result/'settings.yaml').write_text(tmpl)
     np.savez_compressed(result/'wrists.npz',t=time[idx[::5]],rgb=mini)
     sentinel.write_text(json.dumps(dict(case=case,n=len(idx),start=float(time[idx[0]]),end=float(time[idx[-1]]))))

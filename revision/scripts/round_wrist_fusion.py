@@ -22,10 +22,10 @@ def savej(path,data):path.write_text(json.dumps(data,indent=2,allow_nan=False)+'
 def as_b(theta,phi):
     return np.deg2rad(theta)[...,None]*np.stack((np.cos(np.deg2rad(phi)),np.sin(np.deg2rad(phi))),axis=-1)
 
-def visual_packets(case,csv,plant):
+def visual_packets(case,csv,plant,evidence=EVIDENCE):
     tab=pd.read_csv(csv);t=tab.t.to_numpy()
     assert np.allclose(np.diff(t),.04,atol=1e-7)
-    folder=EVIDENCE/'runs'/case
+    folder=evidence/'runs'/case
     events=[json.loads(s) for s in (folder/'timing.jsonl').read_text().splitlines()]
     events=[e for e in events if 'rpy_frd_ned' in e and e.get('t') is not None]
     stamps=np.array([e['t'] for e in events])
