@@ -1,0 +1,54 @@
+{
+  "241119-wide.tar.gz": {
+    "bytes": 4707578,
+    "sha256": "0ed843618cf728c8bba503949fb105783efae4d86eea9ec76ffb47771f5864c9"
+  },
+  "241118-straight.tar.gz": {
+    "bytes": 5924617,
+    "sha256": "20592748dd0581d1fcfe5421a85ca7c32edd75695599a0c9bf5a5f0fe3d69ec7"
+  },
+  "241118-fixed.tar.gz": {
+    "bytes": 5926127,
+    "sha256": "8a1be06d2f6af35c7fde35ef0fbe4ea9fbeeef993cb0592cddf1f4d53bebd004"
+  },
+  "241118-variable_nominal.tar.gz": {
+    "bytes": 5955225,
+    "sha256": "c90d757daccec63314246bff11e4eba5d2367e33ae1fc310cbd3405da36543bb"
+  },
+  "241118-variable_timed.tar.gz": {
+    "bytes": 5977888,
+    "sha256": "6649d3c542d9c463075bc80a1220cf6eaee9d4dd28372d5f6661418739cda2b1"
+  },
+  "241119-fixed.tar.gz": {
+    "bytes": 5926469,
+    "sha256": "d17c66eb2a251b591c4bec29e0489f6188fae60c9256698ddcced698956dcbe6"
+  },
+  "241119-variable_timed.tar.gz": {
+    "bytes": 5988418,
+    "sha256": "9ecbd7c58e13dd426742592c199f3d275f6353360d9881b66db4f50256cab555"
+  },
+  "241119-straight.tar.gz": {
+    "bytes": 5924562,
+    "sha256": "ad772e30ba654c3ecad7687eb3c50a1707a195065a6958c6b70c653f0e745f9c"
+  },
+  "241119-variable_nominal.tar.gz": {
+    "bytes": 5954856,
+    "sha256": "4b3fc9da72764cc0d83b54c46c2475ae27170c892af1f5101f88cb5aae931875"
+  },
+  "241120-variable_nominal.tar.gz": {
+    "bytes": 5950576,
+    "sha256": "92a785e1f74187ca5cc1ae0d9e8577dd008ffc801494d29862c176b3e1865d0d"
+  },
+  "241120-straight.tar.gz": {
+    "bytes": 5921603,
+    "sha256": "658b3e3d9ffa58c0dcdf67d3f40d815c356404877d66ed51876bcd2ec230f906"
+  },
+  "241120-variable_timed.tar.gz": {
+    "bytes": 5983402,
+    "sha256": "05142d909e60dc130919b90239e3816217851964c8d23dc4cc718c802c45f25d"
+  },
+  "241120-fixed.tar.gz": {
+    "bytes": 5925348,
+    "sha256": "33bbb98005e2a9373e9a91d57672ea070383d97dcbaa8348ad4e54d68bd774e4"
+  }
+}
