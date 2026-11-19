@@ -1,0 +1,62 @@
+{
+  "241118-clock_nominal.tar.gz": {
+    "bytes": 6041580,
+    "sha256": "bb893bd14b8d249a2ebcc0d51b59e867f98246733371d2252ca23ae3dd723755"
+  },
+  "241118-online_pause.tar.gz": {
+    "bytes": 6057902,
+    "sha256": "795fe1c87bd132ba73f47b4bc6e0584cc7b09ddf5e930e897f7e5ea25946f4e9"
+  },
+  "241118-phase_pause.tar.gz": {
+    "bytes": 6067103,
+    "sha256": "53f3093fc57abe2840887cc168c4cf0c0092e6b24420baa5f574aadb7c6991d9"
+  },
+  "241118-online_nominal.tar.gz": {
+    "bytes": 6049071,
+    "sha256": "5dc740c800b97403e7ce50de5717d85a6c4e00d1458e94542fbbd725c3cb67f7"
+  },
+  "241118-clock_pause.tar.gz": {
+    "bytes": 6053802,
+    "sha256": "6661f396b5f497f23971d53b2501cfcd047bd8af72dbd970aa31461fd33c4b4b"
+  },
+  "241119-phase_pause.tar.gz": {
+    "bytes": 6055700,
+    "sha256": "6eb484cb4a964063dcbf939af01ae26d47d4e71c8abe22e24cec24674494dc96"
+  },
+  "241119-online_nominal.tar.gz": {
+    "bytes": 6041063,
+    "sha256": "c03515301b52c197cca8c0446bf40e7ef2a13017361de76687e87e71e56392ef"
+  },
+  "241119-clock_pause.tar.gz": {
+    "bytes": 6053586,
+    "sha256": "44618ec5182d3e304c5dc6d3cee3372b29aa39272154bd116ec00643660ef391"
+  },
+  "241119-clock_nominal.tar.gz": {
+    "bytes": 6045203,
+    "sha256": "df751cd73423b048db67e6126dab6e0676d02a60a33f448199aaa7580db53d10"
+  },
+  "241119-online_pause.tar.gz": {
+    "bytes": 6060866,
+    "sha256": "4253ae15211519f1c39886c2d163ae3f2bd037c9ad74e68d19d1f4757b33ea55"
+  },
+  "241120-online_nominal.tar.gz": {
+    "bytes": 6052125,
+    "sha256": "b99714e3f3b8c489d93713250c5a7dc754e15732a4355fdea0ebaadff63bf30c"
+  },
+  "241120-clock_pause.tar.gz": {
+    "bytes": 6046896,
+    "sha256": "948980f9cd34a436eafb5f5b86a82f6c2e730e27673a8dc8161f20a4ad3afc56"
+  },
+  "241120-online_pause.tar.gz": {
+    "bytes": 6065243,
+    "sha256": "8efc94f3eccca489105bb0366bc29bde75518cf1473a0988ade278cc0cd4089a"
+  },
+  "241120-phase_pause.tar.gz": {
+    "bytes": 6065311,
+    "sha256": "28c6e73cc2d832a0ae3cb2e5bab678c17ed2f92548d3973a52f2aca564da90df"
+  },
+  "241120-clock_nominal.tar.gz": {
+    "bytes": 6041699,
+    "sha256": "e47d3eccf8e96b159d4f67846295bda257b1c43207ecdb28de31822b4259300a"
+  }
+}
