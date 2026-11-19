@@ -1,0 +1,23 @@
+{
+  "scope": "One sensing round on prior PX4/MuJoCo G1 motions. Previous published checkpoints remain comparators. No feedback to the flight controller or actuator in this replay.",
+  "source": "Local 1202V1 design, sections 3, 4.2 and 5.1–5.3. Published engineering interpretation only; original document stays local.",
+  "source_fingerprint": "8f3c9ab8c7698a7f26426999755b4617a93fef3ebd38ab70a0349ba776ec5d76",
+  "benchmark": "2 setup/validation bench motions, 3 bench tests, 8 train motions; 241118-online_pause for visual calibration. Reuse previously audited 241119/241120 clock/online flights solely for paired evaluation; these are known trajectories, not a new blinded flight or hardware.",
+  "visual": "Actual saved natural and 4-s occlusion native ORB-SLAM3. One additional tracking pass per test camera input with an advancing opaque mask covering up to 88% width from t=26 to 31, complete loss 31.00..31.32, then clean frames. Scores on measured quality & correct map. No confidence from scenario time. Long blackout at 31..35 retained. Capture-to-delivery delay .20 s. No IMU-VINS backend or unobserved covariance substituted.",
+  "confidence": "Calibrate visual scale independently at capture. Raw track validity, map registration, matched points, reprojection, inlier fraction and uninterrupted track determine Cv; near straight kappa=sin^2(theta) for plane. Strain log variance head predicts from four ADCs and their histories, including opposite-pair common mode and rails. Train by Gaussian NLL with train-only out-of-fold residual targets; validation scales frozen. Held-out truth for scoring only.",
+  "strain_conditions": [
+    "unchanged material baseline",
+    "archived measured zero-return shift applied in simulation",
+    "illustrative hysteresis + hold relaxation on same movements"
+  ],
+  "branches": [
+    "strain-only with identical temporal model",
+    "vision-only",
+    "previous filter",
+    "patent inverse-variance fusion",
+    "same fusion plus gated, bounded, validated residual bias correction"
+  ],
+  "online": "High-quality original-frame visual teachers only, corroborated by consecutive tracking. EMA on residual bias only, with separate forward validation, no truth online. Near straight plane ambiguous; ignore unreliable plane. No training during optical blackout. Validated bias may be carried during loss.",
+  "recovery": "Native same-map tracking may resume; a new map must be connected optically to original-map keyframes by RGB-D 3D–2D PnP, inlier/depth/reprojection/spatial support and consecutive transform agreement. Evaluate native and auxiliary recovery separately; reject absent connection.",
+  "report": "Coverage and RMSE for theta, wrapped observable phi, bend vector; paired errors, common-tick relative weight distinct from Kalman gain; phase/seed, time to accepted original-frame return, jump; causal prefix and no-teacher checks; primary comparison fixed at [14,46), blackout delivery [31.2,35.2). Do not infer safety or hide failing clean cases."
+}
