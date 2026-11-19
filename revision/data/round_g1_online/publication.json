@@ -1,0 +1,30 @@
+{
+  "round": "2026-11-19-g1-online",
+  "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/2026-11-19-g1-online/index.html",
+  "published_utc": "2026-11-19T08:07:28.980938+00:00",
+  "site_version": 13,
+  "site_source_commit": "101c13c80cb73c8b8263bbfd4a01806a2742475a",
+  "public_deployment_id": "appgdep_6afeae03043881918ec9f06695b4d494",
+  "flight_evidence_commit": "d38c40d4d410e8cbffc854507a43a82a7c338ded",
+  "report_commit": "28337e2d7917e7edb0469f23652545a032e51c99",
+  "offline_mirror_commit": "5f3e3c95e6366d472f0a2faf3f4ed6f5fb6b9d12",
+  "archived_rounds": 12,
+  "files_verified_on_site": [
+    "release.png",
+    "matched.png",
+    "curves.png",
+    "review.pdf",
+    "comparison.mp4",
+    "all-metrics.csv",
+    "factorial.json",
+    "engineering-checks.json",
+    "all-audit.json",
+    "all-evidence-index.json",
+    "protocol.json",
+    "split-protocol.json",
+    "notes.txt"
+  ],
+  "raw_packages_verified": 21,
+  "external_trace_and_offline_pack_verified": 2,
+  "anonymous_sha256_check": true
+}

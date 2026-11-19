@@ -1,0 +1,12 @@
+{
+  "all-traces.npz": {
+    "bytes": 6416869,
+    "external_url": "https://raw.githubusercontent.com/sanshibro/Keyan_SpaceARm/5f3e3c95e6366d472f0a2faf3f4ed6f5fb6b9d12/revision/meeting_archive/archive/2026-11-19-g1-online/media/all-traces.npz",
+    "sha256": "c7249a3b7c8df7f1fc4ad67551f9300713aae994f45b036e0ef627aa74f989a7"
+  },
+  "meeting.zip": {
+    "bytes": 2558458,
+    "external_url": "https://raw.githubusercontent.com/sanshibro/Keyan_SpaceARm/5f3e3c95e6366d472f0a2faf3f4ed6f5fb6b9d12/revision/meeting_archive/archive/2026-11-19-g1-online/meeting.zip",
+    "sha256": "c1db5a4cd27786ff2c15d1715cc241dbc0b30b1ecb34b27ae5f3f8fa8b8a029a"
+  }
+}
