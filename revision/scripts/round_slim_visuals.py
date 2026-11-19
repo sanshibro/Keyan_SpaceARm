@@ -127,6 +127,9 @@ def movie(cam):
             proc.stdin.write(np.asarray(canvas).tobytes())
     finally:proc.stdin.close()
     if proc.wait():raise RuntimeError('ffmpeg could not finish')
+    subprocess.run(['ffmpeg','-nostdin','-loglevel','error','-y','-i',str(R/'comparison.mp4'),
+        '-vf','fps=3,scale=560:-2:flags=lanczos','-c:v','libx264','-crf','33','-preset','slow',
+        '-pix_fmt','yuv420p','-movflags','+faststart',str(R/'replay.mp4')],check=True)
 if __name__=='__main__':
     R.mkdir(exist_ok=True);curves()
     with tempfile.TemporaryDirectory() as td:

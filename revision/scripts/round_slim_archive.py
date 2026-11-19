@@ -62,7 +62,11 @@ def publish(stage,rev):
     assert len(prev)==13,len(prev);snap=read(native/'snapshot.json');spec=read(stage/'canonical/slim.json')
     data=BASE+rev+'/revision/data/round_slim_sensor/';arch=BASE+rev+'/revision/meeting_archive/archive/'+TAG+'/'
     external={n:(data+'evidence/'+n,stage/'evidence'/n) for n in read(stage/'evidence-index.json')}
-    external['flight-scores.json']=(data+'flight-scores.json',stage/'flight-scores.json');external['meeting.zip']=(arch+'meeting.zip',native/'meeting.zip')
+    for item in snap['files']:
+        name=item['file']
+        if name in external or name in ('review.pdf','replay.mp4'):continue
+        external[name]=(arch+'media/'+name,native/'media'/name)
+    external['meeting.zip']=(arch+'meeting.zip',native/'meeting.zip')
     with ThreadPoolExecutor(max_workers=4) as pool:
         jobs={n:pool.submit(confirm,*args) for n,args in external.items()};proof={n:f.result() for n,f in jobs.items()}
     cached=site/'source-evidence'/TAG;write(cached/'verified.json',proof);shutil.copyfile(native/'meeting.zip',cached/'meeting.zip')
@@ -73,7 +77,12 @@ def publish(stage,rev):
         n=f['file']
         if n in external:
             report=proof[n];assert f['sha256']==report['sha256'] and f['bytes']==report['bytes']
-            f['external_url']=files[n]['external_url']=report['external_url'];page=page.replace('href="media/'+n+'"','href="'+report['external_url']+'"')
+            f['external_url']=files[n]['external_url']=report['external_url']
+            page=page.replace('"media/'+n+'"','"'+report['external_url']+'"')
+            old=dest/'media'/n
+            if old.is_file():
+                assert sha(old)==report['sha256']
+                old.unlink()
         else:shutil.copyfile(native/'media'/n,dest/'media'/n)
     entry=snap['outputs']['pack'];entry['external_url']=proof['meeting.zip']['external_url']
     page=page.replace('href="meeting.zip"','href="'+entry['external_url']+'"')
@@ -83,9 +92,18 @@ def publish(stage,rev):
     with attrs.open('ab') as fo:
         for row in ['dist/archive/'+TAG+'/media/* -text','source-evidence/'+TAG+'/* -text']:
             if row not in attrs.read_text(encoding='utf-8'):fo.write(('\n'+row+'\n').encode())
-    gen=site/'tools/meeting_archive.py';run(gen,'index',dist)
+    gen=site/'tools/meeting_archive.py'
+    # The round catalog must respect the same externally verified cover as the detail view.
+    code=gen.read_text(encoding='utf-8')
+    old="f=s['cover'];out.append"
+    new="f=s['cover'];thumb=next(v for v in s['files'] if v['file']==f).get('external_url',u+'media/'+f);out.append"
+    if old in code:
+        code=code.replace(old,new,1).replace("src=\"'+u+'media/'+f+'\"", "src=\"'+e(thumb)+'\"",1)
+        gen.write_bytes(code.encode())
+    run(gen,'index',dist)
     home=dist/'index.html';html=home.read_text(encoding='utf-8')
     block=('<section id="reviewVideo"><h2>'+TITLE+'</h2><video controls playsinline preload="metadata" poster="'+link+'media/mechanism.webp" style="display:block;width:100%;max-height:600px;background:white"><source src="'+link+'media/replay.mp4" type="video/mp4"></video><p><a href="'+link+'index.html">本轮图像与原始数据</a> · <a href="'+link+'media/memory.webp">加载与卸载曲线</a> · <a href="'+link+'media/review.pdf">两页组会 PDF</a></p></section>')
+    for n in ('mechanism.webp','memory.webp'):block=block.replace(link+'media/'+n,proof[n]['external_url'])
     html,n=re.subn(r'<section id="reviewVideo">.*?</section>',lambda _:block,html,count=1,flags=re.S);assert n==1
     key='<section><h2>阶段文件</h2><p>';assert key in html
     item='<a href="'+link+'media/review.pdf" target="_blank">中段预拉伸与迟滞审阅</a>　'
@@ -96,6 +114,7 @@ def publish(stage,rev):
         rolling=link+'media/memory.webp',rolling_caption='相同长度下的去程、回程与保持回落',replay=None,
         items=['25 mm 敏感段使用 30% 中立预拉伸','实际采集盒记录约 40.2 Hz，三个通道可交叉验证','四次同轨回放中将控制误差和估计误差分别计算','下一步采集四通道定长往返与定长保持记录'],
         commits=['5d4ccc9 · 中段贴片及采集盒','c691c34 · 扫角与同轨原始数据','04787dc · 迟滞及独立实物记录复核'])
+    state.update(geometry=proof['mechanism.webp']['external_url'],rolling=proof['memory.webp']['external_url'])
     write(dist/'status_public.json',state)
     sys.path.insert(0,str(stage.parent/'D_整机几何与规划验收_20261118'));from quota_snapshot import read_windows
     try:quota=read_windows()
