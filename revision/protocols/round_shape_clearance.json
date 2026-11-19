@@ -1,0 +1,67 @@
+{
+  "id": "G1-shape-observation-known-gate-review",
+  "frozen_source": "a50f84074f948747887cb575f46eff9baa6cec1c",
+  "replay": "Previously flown PX4/MuJoCo trajectory; no re-flight. Rendering adds only non-contact surveyed markers and makes the original physical gate opaque to the wrist camera.",
+  "cases": {
+    "calibration": [
+      241118
+    ],
+    "held_out": [
+      241119,
+      241120
+    ],
+    "methods": [
+      "clock_pause",
+      "online_pause"
+    ]
+  },
+  "clock": {
+    "window_s": [
+      14,
+      46
+    ],
+    "geometry_window_s": [
+      26,
+      42
+    ],
+    "hz": 5,
+    "vision_delivery_s": 0.2,
+    "max_obs_age_s": 0.41,
+    "additional_dropout_capture_s": [
+      31,
+      35
+    ]
+  },
+  "robot": "SUPER + Qingyu, G1 known map. Separate estimated CAD accepts only body PX4 estimate, issued scalar command or pixel-derived signed two-axis bend, and nominal finger configuration. No physics state in the reconstruction. Full recorded joint states and TCP are for rendering and independent scoring only.",
+  "visual": "Rendered wrist RGB-D 480x360 or higher; image and depth only, surveyed stationary floor/wall fiducials, base-motion compensation from logged PX4, constant static CAD extrinsics. No markerless/ORB or physical-camera performance claim.",
+  "estimators": [
+    "command/plane pi",
+    "vision: latest valid image delivered after one 5 Hz tick, hold up to 0.41 s",
+    "joint-PCC diagnostic: actual net joint bend with estimated base, oracle only"
+  ],
+  "thresholds": {
+    "body_m": 0.1,
+    "arm_tool_m": 0.07,
+    "sill_raise_m": {
+      "start": 0,
+      "end": 0.16,
+      "step": 0.005
+    }
+  },
+  "scoring": "Compare labeled side of the 10/7 cm conservative whole-geometry screen at logged poses for fixed, predeclared alternate sills, with and without an empirical pad fit ONLY on seed 241118. The label refers to sampled CAD AABB clearance, not physical contact or a new flight. One-sided pad in meters = maximum positive overestimate of signed reserve on calibration + 0.001. Freeze pad before evaluating other seeds. Report unavailable, correct, false pass, false rejection and complete path decisions, and losses from caution. Score matched time availability. Native GJK bracket at representative challenging configurations as independent check.",
+  "physical_sessions": {
+    "files": [
+      "9-16-11-36.csv",
+      "9-16-11-43.csv",
+      "9-16-11-52.csv"
+    ],
+    "separation": "Only three named sequential four-channel bench sessions. Predict bending vectors from ADC alone using degree-2 ridge, standardized from training sessions, alpha 0.01; hold out one entire session at a time and compare training-set constant. Reconstruct camera-derived labels from saved quaternions and original logging equations; never call these independent mocap truth. Entirely separate clock and rig from simulation; no transfer of voltage calibration or empirical centimeters into hardware."
+  },
+  "review_case": "241119-online_pause",
+  "scopes": [
+    "visual-frame file and camera validity under nominal and imposed dropout",
+    "centreline (all seven interior stations), TCP and obstacle-clearance error",
+    "natural nominal geometry, conservative screen decisions on alternative sills and command vs observed bend",
+    "empirical evidence only, no confidence or universal collision guarantee"
+  ]
+}
