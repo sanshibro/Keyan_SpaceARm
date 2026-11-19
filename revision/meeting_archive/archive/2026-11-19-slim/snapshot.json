@@ -1,0 +1,195 @@
+{
+  "cover": "mechanism.webp",
+  "files": [
+    {
+      "bytes": 63292,
+      "caption": "MuJoCo 臂体中段的四条表面路径、25 °C 产品曲线及 24 个弯曲平面的应变范围。",
+      "file": "mechanism.webp",
+      "kind": "image",
+      "sha256": "2c87ad69a62d689d396421060c6200ac2edb0ea96324ce6ca855a9740b7880dc",
+      "title": "从贴片安装到电阻变化"
+    },
+    {
+      "bytes": 53998,
+      "caption": "受控往返的支路、定长保持，以及另一段真实采集记录的独立检验。",
+      "file": "memory.webp",
+      "kind": "curve",
+      "sha256": "f7d6e6300da439399e24d8d3c36e890b2d0461091cbe58dbb25a442ff7dcc9ff",
+      "title": "相同长度下的加载与卸载"
+    },
+    {
+      "bytes": 59570,
+      "caption": "同一条 G1 轨迹上对齐虚拟动捕、采集盒、腕部视觉与零点改变后的融合输出。",
+      "file": "curves.webp",
+      "kind": "curve",
+      "sha256": "ce23a273be5166d3f9196985ba1e673db49bb42aaec732c5a732c69b8fe096b1",
+      "title": "四路采集值怎样变成弯角"
+    },
+    {
+      "bytes": 284390,
+      "caption": "产品资料、四种安装、静态与动态传感器在遮挡中的结果，以及实机标定步骤。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "d299bd5fb01eac1d1b5608f8f911a65fa1c75498e1a6eda3983fc4e6f8354a74",
+      "title": "两页组会审阅"
+    },
+    {
+      "bytes": 111758,
+      "caption": "同一时钟上的整机、腕部相机、四路模拟读数与弯曲量。此视频展示 30% 预拉伸的静态材料基线。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "mechanism.webp",
+      "sha256": "19aab5a1203cb025daed30d93505e19d174ebf1b076f33ce1001ed91b2b8cdbe",
+      "title": "32 秒同步回放"
+    },
+    {
+      "bytes": 2542,
+      "caption": "包含触底与松弛、刚体变换不变性和遮挡覆盖。",
+      "file": "audit.json",
+      "kind": "data",
+      "sha256": "da5ff97c7a708c46d298347e47f2e473854b4deddb7694a9ff149615fecfcf24",
+      "title": "几何与采样独立检查"
+    },
+    {
+      "bytes": 5368,
+      "caption": "8 段训练、2 段验证、3 段整段测试。",
+      "file": "bench-scores.json",
+      "kind": "data",
+      "sha256": "402a43a478916b9ecedd1d6fe0557c4c8a17863208649fe86b1837b809c6acfd",
+      "title": "台架角度预测与安装跨度"
+    },
+    {
+      "bytes": 212217,
+      "caption": "完整分阶段评分、各模式覆盖率与零点敏感度。",
+      "file": "flight-scores.json",
+      "kind": "data",
+      "sha256": "fcf2fe3e27f78a08fff3cfda854f1d763020a1343e4a21b6defafb4c229e6f85",
+      "title": "四趟同轨对照与采集盒灵敏度"
+    },
+    {
+      "bytes": 10324,
+      "caption": "参数仅由第一个历史文件拟合，第二个文件检验。含同向与反向配对。",
+      "file": "memory-scores.json",
+      "kind": "data",
+      "sha256": "d74aafd00b2a0b39c74d5e31c4dd6b78de47a75cf62af19b6f8531de4ac5ca98",
+      "title": "迟滞、回落及真实采集盒迁移"
+    },
+    {
+      "bytes": 1124,
+      "caption": "已下发指令与虚拟动捕比较，和估计误差分别计算。",
+      "file": "tracking-check.json",
+      "kind": "data",
+      "sha256": "4c323f802c6597061a61a458bad98115519f782ffe9d064eb544dd7c8526d60c",
+      "title": "指令与真实运动轨迹的差异"
+    },
+    {
+      "bytes": 839,
+      "caption": "四种预拉伸的内、外侧范围与首次松弛角度。",
+      "file": "sweep.json",
+      "kind": "data",
+      "sha256": "a5ee45ae1d5e5e29793d7c245daa4e9c4e0fd4b3ebe5ebb425ccaa14028f7f4c",
+      "title": "120° 扫角结果"
+    },
+    {
+      "bytes": 2824,
+      "caption": "串口采样、三个实物输入的有效增益与跨记录残差。",
+      "file": "box-profile.json",
+      "kind": "data",
+      "sha256": "0163ece2bd1fa2fa6bdebc38fc0bba10cd2aa0ac7803678613fa0b66dbfd1e78",
+      "title": "柔致采集盒历史特性"
+    },
+    {
+      "bytes": 2312,
+      "caption": "第 2 页图上平台的像素坐标及读图精度。",
+      "file": "datasheet-plateaus.json",
+      "kind": "data",
+      "sha256": "c9087073dd907f4ba7c773047d4cc7448da9a940b18e08f605668f4935c80f7a",
+      "title": "厂家重复拉伸图的复读记录"
+    },
+    {
+      "bytes": 622,
+      "caption": "四个归档文件的成员数、字节数和 SHA-256。",
+      "file": "evidence-index.json",
+      "kind": "data",
+      "sha256": "b6e4ef767db82e610811217abacd317996140cdd9a6890937b71cf9527d17c1d",
+      "title": "原始证据包校验"
+    },
+    {
+      "bytes": 3496,
+      "caption": "区分设备规格、历史采集量与本次试验设定。",
+      "file": "protocol.json",
+      "kind": "data",
+      "sha256": "55107f648b3577fabcf3ba22e10d003fcfd17f0f5cbc8dd903381ae2b2face8e",
+      "title": "安装与同轨基线协议"
+    },
+    {
+      "bytes": 2670,
+      "caption": "区分设备规格、历史采集量与本次试验设定。",
+      "file": "memory-scope.json",
+      "kind": "data",
+      "sha256": "4f702eb81dd65b5ce19bbbf29eba03c188e0c9abb7060dd33b36a79afd50c576",
+      "title": "迟滞、时间尺度与适用范围"
+    },
+    {
+      "bytes": 2364782,
+      "caption": "可复核数值与原始数组，单独下载。",
+      "file": "slim-material-paths.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "45ea8656d03454deec63729a2eb6d5f8acd45dba5d4436745563343e01a3727c",
+      "title": "原始表面轨迹"
+    },
+    {
+      "bytes": 873291,
+      "caption": "可复核数值与原始数组，单独下载。",
+      "file": "slim-bench.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "6f7aa85a33698f9e9d2bdf6a340dc8c62541baf7a639267bcc422defb1d07163",
+      "title": "台架训练与留出测试"
+    },
+    {
+      "bytes": 4657165,
+      "caption": "可复核数值与原始数组，单独下载。",
+      "file": "slim-flights.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "07921e81116b5bf21f784475e6b916c0c2700a578059142144de5148b7756233",
+      "title": "四次任务重放"
+    },
+    {
+      "bytes": 3828374,
+      "caption": "可复核数值与原始数组，单独下载。",
+      "file": "slim-memory.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "fe8e4f2fb851076dc5be53db0eb5b0bd1daf57f6c6fafc5c03ed7ee9e536db39",
+      "title": "动态传感器与留出检验"
+    }
+  ],
+  "guide": [
+    "看中段安装图，比较 25、32.5 和 35 mm 的机械余量。",
+    "对照加载、卸载曲线及实际串口记录，区分材料回程和采集盒零点。",
+    "打开两页 PDF 对照视觉中断的覆盖率与角度误差。"
+  ],
+  "id": "2026-11-19-slim",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "b272f67858f2917c696060591bc1e57e83ba3531e2ab7512042e5fd8b13b2af4"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "ca66c2dcccc469960876bea791c4fd9da93885d12a2c4827b453ccbb8ec27208"
+    }
+  },
+  "parent_round": "2026-11-19-wrist-slam",
+  "revision": "04787dcf517393a7168338edf82c0c7d5db7c526",
+  "schema": 1,
+  "scope": "四次已有单门飞行重放。迟滞与保持回落的幅度有条件假设，实物盒记录只有三个有效通道，四条新装贴片仍待定长标定。",
+  "source_note": "c2f2828 登记主模型，5d4ccc9 接入采集盒，c691c34 保存原始数据，04787dc 检查往返历史与跟踪误差。",
+  "stage": "G1 · 电阻式应变本体感知",
+  "summary": "把手册的电阻曲线、实物采集盒和同轨仿真对齐，比较四种安装跨度，并单独检验加载、卸载和定长保持。",
+  "title": "中段预拉伸应变片怎样观测弯曲与回程？",
+  "when": "2026-11-19T22:52:39+08:00"
+}

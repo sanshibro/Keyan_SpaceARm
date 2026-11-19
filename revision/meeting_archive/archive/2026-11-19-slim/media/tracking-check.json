@@ -1,0 +1,46 @@
+{
+  "241119-clock_pause": {
+    "mocap_max_deg": 72.70230343550314,
+    "request_deg": {
+      "rmse_deg": 1.8266140152309698,
+      "peak_abs_deg": 2.383212991819306
+    },
+    "issued_deg": {
+      "rmse_deg": 1.82661401523097,
+      "peak_abs_deg": 2.383212991819306
+    }
+  },
+  "241119-online_pause": {
+    "mocap_max_deg": 72.7019303458828,
+    "request_deg": {
+      "rmse_deg": 1.876682843114337,
+      "peak_abs_deg": 2.381959640971516
+    },
+    "issued_deg": {
+      "rmse_deg": 1.8766828431143374,
+      "peak_abs_deg": 2.381959640971516
+    }
+  },
+  "241120-clock_pause": {
+    "mocap_max_deg": 72.70134733607968,
+    "request_deg": {
+      "rmse_deg": 1.826650366907261,
+      "peak_abs_deg": 2.3841460345967533
+    },
+    "issued_deg": {
+      "rmse_deg": 1.8266503669072611,
+      "peak_abs_deg": 2.3841460345967533
+    }
+  },
+  "241120-online_pause": {
+    "mocap_max_deg": 72.70112937317087,
+    "request_deg": {
+      "rmse_deg": 1.87669885022093,
+      "peak_abs_deg": 2.3834830860065352
+    },
+    "issued_deg": {
+      "rmse_deg": 1.87669885022093,
+      "peak_abs_deg": 2.3834830860065352
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "rigid_transform_residual_m": 2.498001805406602e-16,
+  "registered_preloads": [
+    0,
+    0.15,
+    0.3,
+    0.4
+  ],
+  "adc_sweep": {
+    "p00": {
+      "first_nominal_low_code_bend_deg": null,
+      "low_code_120_deg_channel_plane_samples": 0,
+      "total_120_deg_channel_plane_samples": 96
+    },
+    "p15": {
+      "first_nominal_low_code_bend_deg": null,
+      "low_code_120_deg_channel_plane_samples": 0,
+      "total_120_deg_channel_plane_samples": 96
+    },
+    "p30": {
+      "first_nominal_low_code_bend_deg": 60,
+      "low_code_120_deg_channel_plane_samples": 28,
+      "total_120_deg_channel_plane_samples": 96
+    },
+    "p40": {
+      "first_nominal_low_code_bend_deg": 55,
+      "low_code_120_deg_channel_plane_samples": 30,
+      "total_120_deg_channel_plane_samples": 96
+    }
+  },
+  "flight": {
+    "241119-clock_pause": {
+      "analysis_box_updates": 1287,
+      "analysis_low_code": 0,
+      "analysis_low_code_all_taut": 0,
+      "analysis_slack": 0,
+      "analysis_above_range": 0,
+      "analysis_hz": 40.21875,
+      "covered_output_ticks": 200,
+      "covered_finite_fused": 200,
+      "covered_valid_slam": 0
+    },
+    "241119-online_pause": {
+      "analysis_box_updates": 1287,
+      "analysis_low_code": 0,
+      "analysis_low_code_all_taut": 0,
+      "analysis_slack": 0,
+      "analysis_above_range": 0,
+      "analysis_hz": 40.21875,
+      "covered_output_ticks": 200,
+      "covered_finite_fused": 200,
+      "covered_valid_slam": 0
+    },
+    "241120-clock_pause": {
+      "analysis_box_updates": 1287,
+      "analysis_low_code": 0,
+      "analysis_low_code_all_taut": 0,
+      "analysis_slack": 0,
+      "analysis_above_range": 0,
+      "analysis_hz": 40.21875,
+      "covered_output_ticks": 200,
+      "covered_finite_fused": 200,
+      "covered_valid_slam": 0
+    },
+    "241120-online_pause": {
+      "analysis_box_updates": 1288,
+      "analysis_low_code": 0,
+      "analysis_low_code_all_taut": 0,
+      "analysis_slack": 0,
+      "analysis_above_range": 0,
+      "analysis_hz": 40.25,
+      "covered_output_ticks": 200,
+      "covered_finite_fused": 200,
+      "covered_valid_slam": 0
+    }
+  },
+  "legacy_all_fresh_matches_default": true,
+  "train_motion_ids": [
+    "train-00",
+    "train-01",
+    "train-02",
+    "train-03",
+    "train-04",
+    "train-05",
+    "train-06",
+    "train-07"
+  ],
+  "box_curve_checked": true,
+  "virtual_fourth_channel": "independent simulated material path; median effective gain and independent stationary-noise donor; no active fourth reference channel"
+}

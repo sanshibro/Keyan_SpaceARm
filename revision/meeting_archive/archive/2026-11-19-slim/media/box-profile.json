@@ -1,0 +1,106 @@
+{
+  "slope_counts_per_unit_ratio": [
+    1290.345012108827,
+    1651.1695481069687,
+    1170.0310757407399,
+    1290.345012108827
+  ],
+  "neutral_codes": [
+    252.0,
+    258.0,
+    256.0,
+    256.0
+  ],
+  "stationary_sessions": [
+    "20260619_161342",
+    "20260619_161413"
+  ],
+  "calibration_session": "20260619_161413",
+  "transfer_check_session": "20260619_163049",
+  "transfer_check": [
+    {
+      "sensor": 1,
+      "effective_slope": 1290.345012108827,
+      "n_fit": 261,
+      "n_check": 263,
+      "equivalent_angle_deg": 349.2425142783747,
+      "holdout_rmse_counts": 39.85401012331318,
+      "holdout_r2": 0.8518246163761397
+    },
+    {
+      "sensor": 2,
+      "effective_slope": 1651.1695481069687,
+      "n_fit": 261,
+      "n_check": 263,
+      "equivalent_angle_deg": 93.62827925047111,
+      "holdout_rmse_counts": 45.30031842150374,
+      "holdout_r2": 0.9122744996622174
+    },
+    {
+      "sensor": 3,
+      "effective_slope": 1170.0310757407399,
+      "n_fit": 261,
+      "n_check": 263,
+      "equivalent_angle_deg": 257.2271372644932,
+      "holdout_rmse_counts": 63.51325490421051,
+      "holdout_r2": 0.7362299860681816
+    }
+  ],
+  "session_stats": {
+    "20260619_161342": {
+      "n": 124,
+      "dt_median_s": 0.024846000000000146,
+      "arrival_hz": 40.21318874893827,
+      "neutral_codes": [
+        258.0,
+        256.0,
+        249.0
+      ],
+      "noise_sd_code": [
+        0.7563037203251953,
+        0.8284107121545974,
+        0.3680636679756138
+      ],
+      "source_sha256": "b23870404f58ed7d1d210f42fed69b2df62d73b8815ae78d6a0489331a2a195e"
+    },
+    "20260619_161413": {
+      "n": 1005,
+      "dt_median_s": 0.02486749999999982,
+      "arrival_hz": 40.227484018089385,
+      "neutral_codes": [
+        252.0,
+        258.0,
+        256.0
+      ],
+      "noise_sd_code": [
+        0.6366184395291858,
+        0.9233562785609849,
+        0.1865665008280081
+      ],
+      "source_sha256": "bc132fa26dd01b92c298341f435a6843e20d5dc2ef2e926c6c0c94281971036c"
+    },
+    "20260619_163049": {
+      "n": 1005,
+      "dt_median_s": 0.024868000000000112,
+      "arrival_hz": 40.23141236620651,
+      "neutral_codes": [
+        265.0,
+        251.0,
+        244.0
+      ],
+      "noise_sd_code": [
+        2.052447147573316,
+        0.6672782521819545,
+        1.4336323104079054
+      ],
+      "source_sha256": "52cdb27e277d6a436ec1577a4fccf2a65f890c7c2d3e9f700f6c244e4c6cf9b3"
+    }
+  },
+  "offset_stress_counts": [
+    -71.0,
+    -22.0,
+    -52.0,
+    -52.0
+  ],
+  "interpretation": "Effective installed gain inferred from optical angle and nominal radius. Hardware session transfer is checked independently. Offset stress is the observed end-minus-start code change and may also include pose change. Channel 4 borrows the median gain and a pooled recorded idle-noise trace."
+}

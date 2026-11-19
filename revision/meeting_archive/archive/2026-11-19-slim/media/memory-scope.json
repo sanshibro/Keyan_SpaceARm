@@ -1,0 +1,27 @@
+{
+  "sensor": "Elastreme Sense Slim M; four middle-arm paths with the multichannel box",
+  "manufacturer": {
+    "part": "25 × 3.5 mm active region",
+    "extension_range_percent": [
+      0,
+      100
+    ],
+    "response_time_ms_less_than": 0.1,
+    "resolution_strain_percent_approx": 0.01,
+    "temperature_range_C": [
+      -15,
+      80
+    ],
+    "fatigue": "ΔR/R < 1% after 10,000 cycles at 50% strain, as reported by manufacturer; distinct from intra-cycle hysteresis",
+    "repeatability_figure": "Compare plateau direction and sag against page 2 of the supplied datasheet. It does not contain a synchronous imposed length trace, numeric resistance scale, or separate unloading curve.",
+    "elastic_modulus_MPa": 10
+  },
+  "readout": "Historical measured frame intervals around 24.9 ms, 3 identified channels. Fourth simulated channel has its own deformation and uses median readout and memory parameters.",
+  "scope": "Replay on previously registered simulation motions. Step and loop tests isolate the electrical model; no additional mechanical force applied to the plant. Adhesive slip, preload relaxation over hours, temperature coefficients, self-heating, cable motion and rate-dependent bonding are not individually identified.",
+  "static_model": "Digitized 25 °C curve, tensile limit, independent observed timing, raw stationary noise, quantization and measured effective gain",
+  "memory_model": "Rate-independent play on normalized resistance, plus a slow decaying term with immediate feedthrough. Simulated material states are evaluated at the plant rate; output is sampled on the actual box clock. Decay uses exact linear-input integration; only past states affect current output.",
+  "sensitivity": "h=0.02, weight=0.5 means a major-branch gap of 0.02 in ΔR/R0. Slow transient weight 0.02 and tau=2 s are exploratory knobs; neither a reported sensor constant nor calibrated from six plateau pixels.",
+  "transfer": "20260619_161413 used for effective preprocessing and memory fitting. Selection grid by chronological 68/32 fit check. Parameters refit on entire fitting recording and frozen before prediction on 20260619_163049. Sparse comparison is conditional on optical bending vector; no measured local length. All 3 slow weights hit search limits, so time constants cannot be claimed as material parameters.",
+  "units": "Raw box counts and angular RMSE have different physical units and are reported separately.",
+  "literature_method": "Di Tocco et al., Sensors 22 (2022) 3954, DOI 10.3390/s22103954. Fig. 5 cyclic hysteresis, Fig. 7 rate, Fig. 8 hold drift. The study uses a different sensor material; no numeric parameters copied."
+}

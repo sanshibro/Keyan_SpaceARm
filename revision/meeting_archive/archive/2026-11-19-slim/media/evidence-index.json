@@ -1,0 +1,22 @@
+{
+  "slim-material-paths.tar.gz": {
+    "bytes": 2364782,
+    "sha256": "45ea8656d03454deec63729a2eb6d5f8acd45dba5d4436745563343e01a3727c",
+    "members": 19
+  },
+  "slim-bench.tar.gz": {
+    "bytes": 873291,
+    "sha256": "6f7aa85a33698f9e9d2bdf6a340dc8c62541baf7a639267bcc422defb1d07163",
+    "members": 27
+  },
+  "slim-flights.tar.gz": {
+    "bytes": 4657165,
+    "sha256": "07921e81116b5bf21f784475e6b916c0c2700a578059142144de5148b7756233",
+    "members": 39
+  },
+  "slim-memory.tar.gz": {
+    "bytes": 3828374,
+    "sha256": "fe8e4f2fb851076dc5be53db0eb5b0bd1daf57f6c6fafc5c03ed7ee9e536db39",
+    "members": 34
+  }
+}
