@@ -1,0 +1,12 @@
+{
+  "confidence-inputs.tar.gz": {
+    "bytes": 4325288,
+    "members": 92,
+    "sha256": "2fd88144f5c0420388debfab6ddb56126d7c19c69ef6096fd42afc75b6369af5"
+  },
+  "confidence-results.tar.gz": {
+    "bytes": 13462629,
+    "members": 57,
+    "sha256": "61629682aa4755e0fa22f3345ee5d2b8b10e492d101045d952ea0db44bbf2c0f"
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "natural/nominal": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.7444315732972139,
+      "vector_rmse_deg": 0.9461848664195033,
+      "phi_rmse_deg": 0.4394004222269548,
+      "phi_n": 5680,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.8180992147428165
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.529153220694686,
+      "vector_rmse_deg": 0.5675074516971318,
+      "phi_rmse_deg": 0.1622329108670197,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.8776444275626485
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.49076427089651625,
+      "vector_rmse_deg": 0.5225907173108383,
+      "phi_rmse_deg": 0.1420024833363351,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": 0.874053871670042
+    }
+  },
+  "natural/zero_offset": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.580178339532483,
+      "vector_rmse_deg": 1.7984051074698713,
+      "phi_rmse_deg": 0.7260910652559821,
+      "phi_n": 5680,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.8469495975025984
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.1310733790218708,
+      "vector_rmse_deg": 1.4094067077748311,
+      "phi_rmse_deg": 0.6712602909445835,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.8437004460797166
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.1571614624212336,
+      "vector_rmse_deg": 2.6741041273197506,
+      "phi_rmse_deg": 1.264865188571588,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": 0.8281852499884436
+    }
+  },
+  "natural/material_memory": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.7012444108754594,
+      "vector_rmse_deg": 1.814969610786475,
+      "phi_rmse_deg": 0.40412837709515476,
+      "phi_n": 5634,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.81413938480029
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.870332499165308,
+      "vector_rmse_deg": 1.881805176184703,
+      "phi_rmse_deg": 0.16561868346599848,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.8612076626494879
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.8585593595760488,
+      "vector_rmse_deg": 1.8673942564891688,
+      "phi_rmse_deg": 0.14482407455730958,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": 0.8574841988039671
+    }
+  },
+  "graded/nominal": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.5664994954995919,
+      "vector_rmse_deg": 0.9689465579872314,
+      "phi_rmse_deg": 0.6733478486822161,
+      "phi_n": 5680,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.7337335923103332
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.2915283291726015,
+      "vector_rmse_deg": 0.4224038564186576,
+      "phi_rmse_deg": 0.2415317524560605,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.2337915279036707
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.2424049463716617,
+      "vector_rmse_deg": 0.37348690164566517,
+      "phi_rmse_deg": 0.22438782102266036,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": null
+    }
+  },
+  "graded/zero_offset": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.7246055908096818,
+      "vector_rmse_deg": 2.2274644424013545,
+      "phi_rmse_deg": 1.2782555605391115,
+      "phi_n": 5680,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.7645581809417977
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.5409819111902452,
+      "vector_rmse_deg": 1.982605412795953,
+      "phi_rmse_deg": 1.0017547960041406,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.19700932613127775
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.913268234212119,
+      "vector_rmse_deg": 4.997862371121519,
+      "phi_rmse_deg": 2.5189934364652964,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": null
+    }
+  },
+  "graded/material_memory": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.075078262480996,
+      "vector_rmse_deg": 2.2333543663124735,
+      "phi_rmse_deg": 0.643165848969305,
+      "phi_n": 5634,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.728948087253103
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.5935235923713,
+      "vector_rmse_deg": 3.607509697366415,
+      "phi_rmse_deg": 0.256655719464724,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.20951887495775562
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.5348717516573394,
+      "vector_rmse_deg": 3.5472214279939274,
+      "phi_rmse_deg": 0.23928173165022618,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": null
+    }
+  },
+  "occluded/nominal": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.732623939767124,
+      "vector_rmse_deg": 0.9167890595960058,
+      "phi_rmse_deg": 0.2796877945598879,
+      "phi_n": 5680,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.8325631041873068
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.9520642955825346,
+      "vector_rmse_deg": 0.9771435014438761,
+      "phi_rmse_deg": 0.17403396346953248,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.8811827467214793
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 0.6731903489567131,
+      "vector_rmse_deg": 0.7173232867846059,
+      "phi_rmse_deg": 0.19573926622096718,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": null
+    }
+  },
+  "occluded/zero_offset": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.1502472519295743,
+      "vector_rmse_deg": 3.6676257277273723,
+      "phi_rmse_deg": 1.6255962328755291,
+      "phi_n": 5680,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.8569874897905934
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 1.3987261840881495,
+      "vector_rmse_deg": 1.6135040521193522,
+      "phi_rmse_deg": 0.6430032459157181,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.8483740942146605
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 3.018631070211197,
+      "vector_rmse_deg": 3.8151956652187815,
+      "phi_rmse_deg": 1.8797641305282415,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": null
+    }
+  },
+  "occluded/material_memory": {
+    "all": {
+      "total": 6400,
+      "n": 6400,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.121620260263476,
+      "vector_rmse_deg": 2.2060232263680923,
+      "phi_rmse_deg": 0.2387065470626842,
+      "phi_n": 5634,
+      "phi_truth_eligible": 5698,
+      "joint_share": 0.8308173428653537
+    },
+    "partial": {
+      "total": 780,
+      "n": 780,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.1732939654016263,
+      "vector_rmse_deg": 2.1848169202091534,
+      "phi_rmse_deg": 0.17892042966167862,
+      "phi_n": 780,
+      "phi_truth_eligible": 780,
+      "joint_share": 0.8651720257453984
+    },
+    "dark": {
+      "total": 64,
+      "n": 64,
+      "coverage": 1.0,
+      "theta_rmse_deg": 2.7021264391324866,
+      "vector_rmse_deg": 2.714137128921025,
+      "phi_rmse_deg": 0.20455054121612395,
+      "phi_n": 64,
+      "phi_truth_eligible": 64,
+      "joint_share": null
+    }
+  }
+}

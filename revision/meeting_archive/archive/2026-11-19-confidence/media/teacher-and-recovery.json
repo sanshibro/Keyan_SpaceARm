@@ -1,0 +1,462 @@
+{
+  "teachers": {
+    "nominal/natural/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        2,
+        0,
+        0
+      ],
+      "pairs": 377
+    },
+    "nominal/natural/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        2,
+        0,
+        0
+      ],
+      "pairs": 454
+    },
+    "nominal/natural/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        4,
+        0,
+        0
+      ],
+      "pairs": 592
+    },
+    "nominal/natural/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        3,
+        0,
+        0
+      ],
+      "pairs": 268
+    },
+    "nominal/graded/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        3,
+        0,
+        0
+      ],
+      "pairs": 278
+    },
+    "nominal/graded/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        2,
+        0,
+        0
+      ],
+      "pairs": 375
+    },
+    "nominal/graded/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        5,
+        0,
+        0
+      ],
+      "pairs": 443
+    },
+    "nominal/graded/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        3,
+        0,
+        0
+      ],
+      "pairs": 413
+    },
+    "nominal/occluded/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        2,
+        0,
+        0
+      ],
+      "pairs": 543
+    },
+    "nominal/occluded/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        0,
+        0,
+        0
+      ],
+      "pairs": 379
+    },
+    "nominal/occluded/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        1,
+        0,
+        0
+      ],
+      "pairs": 588
+    },
+    "nominal/occluded/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        11,
+        0,
+        0
+      ],
+      "pairs": 529
+    },
+    "nominal/native-long/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        2,
+        0,
+        0
+      ],
+      "pairs": 347
+    },
+    "nominal/native-long/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        0,
+        0,
+        0
+      ],
+      "pairs": 119
+    },
+    "nominal/native-long/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        1,
+        0,
+        0
+      ],
+      "pairs": 354
+    },
+    "nominal/native-long/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        3,
+        0,
+        0
+      ],
+      "pairs": 269
+    },
+    "zero_offset/natural/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        7,
+        0,
+        0
+      ],
+      "pairs": 377
+    },
+    "zero_offset/natural/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        10,
+        1,
+        0
+      ],
+      "pairs": 454
+    },
+    "zero_offset/natural/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        7,
+        1,
+        0
+      ],
+      "pairs": 592
+    },
+    "zero_offset/natural/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        8,
+        1,
+        0
+      ],
+      "pairs": 268
+    },
+    "zero_offset/graded/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        7,
+        0,
+        0
+      ],
+      "pairs": 278
+    },
+    "zero_offset/graded/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        10,
+        0,
+        0
+      ],
+      "pairs": 375
+    },
+    "zero_offset/graded/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        8,
+        0,
+        0
+      ],
+      "pairs": 443
+    },
+    "zero_offset/graded/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        11,
+        2,
+        0
+      ],
+      "pairs": 413
+    },
+    "zero_offset/occluded/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        8,
+        0,
+        0
+      ],
+      "pairs": 543
+    },
+    "zero_offset/occluded/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        11,
+        1,
+        0
+      ],
+      "pairs": 379
+    },
+    "zero_offset/occluded/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        7,
+        0,
+        0
+      ],
+      "pairs": 588
+    },
+    "zero_offset/occluded/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        14,
+        0,
+        0
+      ],
+      "pairs": 529
+    },
+    "zero_offset/native-long/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        3,
+        0,
+        0
+      ],
+      "pairs": 347
+    },
+    "zero_offset/native-long/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        0,
+        0,
+        0
+      ],
+      "pairs": 119
+    },
+    "zero_offset/native-long/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        2,
+        0,
+        0
+      ],
+      "pairs": 354
+    },
+    "zero_offset/native-long/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        4,
+        0,
+        0
+      ],
+      "pairs": 269
+    },
+    "material_memory/natural/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        13,
+        0,
+        0
+      ],
+      "pairs": 365
+    },
+    "material_memory/natural/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        11,
+        1,
+        0
+      ],
+      "pairs": 442
+    },
+    "material_memory/natural/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        15,
+        5,
+        0
+      ],
+      "pairs": 580
+    },
+    "material_memory/natural/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        10,
+        0,
+        0
+      ],
+      "pairs": 257
+    },
+    "material_memory/graded/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        10,
+        1,
+        0
+      ],
+      "pairs": 266
+    },
+    "material_memory/graded/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        14,
+        1,
+        0
+      ],
+      "pairs": 363
+    },
+    "material_memory/graded/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        12,
+        0,
+        0
+      ],
+      "pairs": 431
+    },
+    "material_memory/graded/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        12,
+        0,
+        0
+      ],
+      "pairs": 402
+    },
+    "material_memory/occluded/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        17,
+        0,
+        0
+      ],
+      "pairs": 531
+    },
+    "material_memory/occluded/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        14,
+        1,
+        0
+      ],
+      "pairs": 367
+    },
+    "material_memory/occluded/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        17,
+        0,
+        0
+      ],
+      "pairs": 576
+    },
+    "material_memory/occluded/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        12,
+        0,
+        0
+      ],
+      "pairs": 518
+    },
+    "material_memory/native-long/241119-clock_pause": {
+      "accepted_rejected_rollback": [
+        7,
+        0,
+        0
+      ],
+      "pairs": 335
+    },
+    "material_memory/native-long/241119-online_pause": {
+      "accepted_rejected_rollback": [
+        4,
+        1,
+        0
+      ],
+      "pairs": 107
+    },
+    "material_memory/native-long/241120-clock_pause": {
+      "accepted_rejected_rollback": [
+        8,
+        0,
+        0
+      ],
+      "pairs": 342
+    },
+    "material_memory/native-long/241120-online_pause": {
+      "accepted_rejected_rollback": [
+        4,
+        0,
+        0
+      ],
+      "pairs": 258
+    }
+  },
+  "recovery": {
+    "graded/241119-clock_pause": {
+      "first_original_frame_capture_s": 31.32,
+      "delay_from_uncover_to_release_s": 0.2,
+      "additional_registration": false,
+      "theta_step_deg": -0.0069723694091266
+    },
+    "graded/241119-online_pause": {
+      "first_original_frame_capture_s": 31.32,
+      "delay_from_uncover_to_release_s": 0.2,
+      "additional_registration": false,
+      "theta_step_deg": -0.0024727919394251785
+    },
+    "graded/241120-clock_pause": {
+      "first_original_frame_capture_s": 31.404,
+      "delay_from_uncover_to_release_s": 0.284,
+      "additional_registration": false,
+      "theta_step_deg": 0.007256434659140609
+    },
+    "graded/241120-online_pause": {
+      "first_original_frame_capture_s": 31.324,
+      "delay_from_uncover_to_release_s": 0.204,
+      "additional_registration": false,
+      "theta_step_deg": -0.011935941413909745
+    },
+    "occluded/241119-clock_pause": {
+      "first_original_frame_capture_s": 35.28,
+      "delay_from_uncover_to_release_s": 0.48,
+      "additional_registration": true,
+      "theta_step_deg": -0.14591500497607512
+    },
+    "occluded/241119-online_pause": {
+      "first_original_frame_capture_s": 35.28,
+      "delay_from_uncover_to_release_s": 0.48,
+      "additional_registration": true,
+      "theta_step_deg": -0.008203903984707495
+    },
+    "occluded/241120-clock_pause": {
+      "first_original_frame_capture_s": 35.284,
+      "delay_from_uncover_to_release_s": 0.484,
+      "additional_registration": true,
+      "theta_step_deg": -0.1268000540042351
+    },
+    "occluded/241120-online_pause": {
+      "first_original_frame_capture_s": 35.284,
+      "delay_from_uncover_to_release_s": 0.484,
+      "additional_registration": true,
+      "theta_step_deg": -0.06964985287022785
+    },
+    "native-long/241119-clock_pause": {
+      "first_original_frame_capture_s": null,
+      "delay_from_uncover_to_release_s": null,
+      "additional_registration": false,
+      "theta_step_deg": null
+    },
+    "native-long/241119-online_pause": {
+      "first_original_frame_capture_s": null,
+      "delay_from_uncover_to_release_s": null,
+      "additional_registration": false,
+      "theta_step_deg": null
+    },
+    "native-long/241120-clock_pause": {
+      "first_original_frame_capture_s": null,
+      "delay_from_uncover_to_release_s": null,
+      "additional_registration": false,
+      "theta_step_deg": null
+    },
+    "native-long/241120-online_pause": {
+      "first_original_frame_capture_s": null,
+      "delay_from_uncover_to_release_s": null,
+      "additional_registration": false,
+      "theta_step_deg": null
+    }
+  }
+}

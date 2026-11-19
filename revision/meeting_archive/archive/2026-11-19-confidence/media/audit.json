@@ -1,0 +1,84 @@
+{
+  "synthetic": {
+    "wrap_error_around_180_deg": 0.6082136067650481,
+    "near_straight_plane_updates": 0,
+    "both_absent_sigma_start_end_deg": [
+      1.3736997203816341,
+      6.984965616572858
+    ],
+    "simultaneous_vision_share_low_cv_normal_high_strain_variance": [
+      0.28888263207669085,
+      0.7302195048255554,
+      0.9605685304105825
+    ]
+  },
+  "blind_by_case": {
+    "241119-clock_pause/nominal": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241119-clock_pause/zero_offset": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241119-clock_pause/material_memory": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241119-online_pause/nominal": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241119-online_pause/zero_offset": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241119-online_pause/material_memory": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241120-clock_pause/nominal": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241120-clock_pause/zero_offset": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241120-clock_pause/material_memory": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241120-online_pause/nominal": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241120-online_pause/zero_offset": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    },
+    "241120-online_pause/material_memory": {
+      "finite_outputs": 200,
+      "ticks": 200,
+      "visible": 0
+    }
+  },
+  "clock_prefix_max_difference_rad": 0.0,
+  "checked_prefix_count": 12,
+  "updates_learned_during_blackout": 0,
+  "false_map_links_on_permuted_pixels": 0,
+  "zero_offset_blind_ticks": 800,
+  "maximum_reported_bend_deg": 72.88501228973318,
+  "scorer": "Only independent motion capture in score routines. Online estimator has no truth, command, scenario labels or dropout schedule."
+}

@@ -1,0 +1,145 @@
+{
+  "cover": "tracking.webp",
+  "files": [
+    {
+      "bytes": 111854,
+      "caption": "相机依次经历清晰、局部遮挡、全遮挡及恢复。横轴按估计器输出时钟对齐。",
+      "file": "tracking.webp",
+      "kind": "image",
+      "sha256": "f98a596f7de64e8bcdbf9e8b6e40e6c7d950ff432637cfa2b9d79216240b1b82",
+      "title": "腕部相机原帧、置信度与弯角误差"
+    },
+    {
+      "bytes": 22236,
+      "caption": "四趟重放的弯角 RMSE，分别对照健康应变、零点偏移和材料迟滞。",
+      "file": "paired.webp",
+      "kind": "curve",
+      "sha256": "e052761f73746d8ce20c442d7f1544d1559c938f53804bd5118f015bbcac12f3",
+      "title": "图像清晰和失视，各自适合怎样的权重？"
+    },
+    {
+      "bytes": 137568,
+      "caption": "17 秒中同时查看实际输入相机图像、视觉置信度、估计弯角与虚拟动捕。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "tracking.webp",
+      "sha256": "f0b3d9de9a18424cb7f70a0ad92d1acfe1de365fc21b7b58b9fafd3822ceef88",
+      "title": "腕部视角与动捕同步回放"
+    },
+    {
+      "bytes": 376335,
+      "caption": "第 1 页说明两路观测和修正条件，第 2 页给出五种方法的同轨结果与误差边界。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "3ba98a722175fb99895d16a38db2665e99a69fc12e558053a7ba61657fd1f892",
+      "title": "两页组会预览"
+    },
+    {
+      "bytes": 252931,
+      "caption": "弯角、可观弯曲方向、弯曲向量误差和有效帧覆盖，含共同有效时刻。",
+      "file": "paired-scores.json",
+      "kind": "data",
+      "sha256": "67cb6344d086f301f209a7ae41c5130e99b49a02fe76b47139489573218aded5",
+      "title": "五种方法的分阶段评分"
+    },
+    {
+      "bytes": 67329,
+      "caption": "四条已知轨迹逐一核对，区分光照与应变观测工况。",
+      "file": "case-scores.json",
+      "kind": "data",
+      "sha256": "654acc36e973f6dbdd366dee7f7544f86f9a4d9ff50fe2587dbae77a1402d130",
+      "title": "逐趟配对结果"
+    },
+    {
+      "bytes": 10099,
+      "caption": "逐趟记录修正次数、原生或几何配准恢复和输出时延。",
+      "file": "teacher-and-recovery.json",
+      "kind": "data",
+      "sha256": "ef2fd4cbb3c74b764caa21a8769d0df7553ee30108c41cf52165ad0bff5b4136",
+      "title": "视觉教学与重定位"
+    },
+    {
+      "bytes": 2161,
+      "caption": "12 次截断输入、无视觉时冻结修正、两路均失时方差增长及弯曲方向跨界。",
+      "file": "audit.json",
+      "kind": "data",
+      "sha256": "d921caf27523c9d5a3a52674757115fe016fabdf64490cb457eef18096a94cbe",
+      "title": "因果性与失视检查"
+    },
+    {
+      "bytes": 8413,
+      "caption": "主试验后另做的同轨诊断。低维特征支撑会改变视觉相对权重。",
+      "file": "support-scores.json",
+      "kind": "data",
+      "sha256": "d9b882c6abf0bc9e48ff8500d85b837bb110f17da307f3e3e2eb2d8366e801ca",
+      "title": "局部遮挡的图像覆盖检查"
+    },
+    {
+      "bytes": 1272,
+      "caption": "按物理工况分层检查实际误差落入预测区间的比例。",
+      "file": "variance-bench.json",
+      "kind": "data",
+      "sha256": "17cac31eb4247a69f981def11e547283611f8950f45685e2f0a347a6cae87598",
+      "title": "应变置信区间的留出检验"
+    },
+    {
+      "bytes": 321,
+      "caption": "800 帧估计弯角和弯曲方向的方差尺度。",
+      "file": "visual-calibration.json",
+      "kind": "data",
+      "sha256": "0572aecab159e51526b51b02d19e3bae3440de50825438d369bd5011e75413e0",
+      "title": "独立飞行上的视觉标定"
+    },
+    {
+      "bytes": 323,
+      "caption": "两份数据包的大小、文件数和 SHA-256。",
+      "file": "evidence-index.json",
+      "kind": "data",
+      "sha256": "efc0d633b8c53e61284038eff11f53814b406f9b01166912b14f634feaae36d7",
+      "title": "原始归档校验"
+    },
+    {
+      "bytes": 4325288,
+      "caption": "完整压缩数据，可单独下载并与校验表核对。",
+      "file": "confidence-inputs.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "2fd88144f5c0420388debfab6ddb56126d7c19c69ef6096fd42afc75b6369af5",
+      "title": "传感输入与配准记录"
+    },
+    {
+      "bytes": 13462629,
+      "caption": "完整压缩数据，可单独下载并与校验表核对。",
+      "file": "confidence-results.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "61629682aa4755e0fa22f3345ee5d2b8b10e492d101045d952ea0db44bbf2c0f",
+      "title": "估计轨迹与独立评分真值"
+    }
+  ],
+  "guide": [
+    "先看视频中腕部图像被遮挡时两种置信度的变化。",
+    "对照清晰与全遮挡的误差，再看在线修正在不同应变工况下的得失。",
+    "打开两页 PDF 或离线包准备汇报。"
+  ],
+  "id": "2026-11-19-confidence",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "d58eb23f58f7cd19c009f622a9919db3f73f5772ef2b969351ca791896b28dd7"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "cc3f5f392441c57adcef77009915d6129004247a9e6c1c896012dd18547fde0f"
+    }
+  },
+  "parent_round": "2026-11-19-slim",
+  "revision": "b72ee60fffde5fa0942384c436cdfb7e8f9211a3",
+  "schema": 1,
+  "scope": "复用既有飞行轨迹检验估计器。地图恢复使用腕部 RGB-D 几何；阶段结论尚待新的轨迹与四通道实物采集复核。",
+  "source_note": "425eabb 登记同轨主试验，587b89d 实现两路方差与延迟融合，本轮评分与校验随数据包保存。",
+  "stage": "G1 · 视觉与应变置信度",
+  "summary": "四趟单门轨迹上，逐帧比较清晰、局部遮挡、短时与长时失视，以及应变零点偏移和材料回程。",
+  "title": "腕部视觉何时能纠正应变偏差？",
+  "when": "2026-11-19T23:54:21+08:00"
+}
