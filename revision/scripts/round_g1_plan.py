@@ -82,7 +82,7 @@ def wide_reference():
 
 
 def main():
-    DATA.mkdir(exist_ok=True)
+    DATA.mkdir(parents=True,exist_ok=True)
     geo = Geometry(make_plant())
     z0, z1, step = P['grid_pass_height_m']
     heights = np.arange(z0, z1+.5*step, step)
@@ -106,7 +106,12 @@ def main():
                   wide_accepted_npz_sha256=hashlib.sha256((D/'receiver_trajectory.npz').read_bytes()).hexdigest(),
                   geom_counts={k:int(sum(geo.cat==k)) for k in ('body','arm','tool')})
     for name, data in [('plans.json',record),('candidate-grid.json',pool)]:
-        (DATA/name).write_text(json.dumps(data,indent=2)+'\n')
+        p=DATA/name
+        serialized=json.dumps(data,indent=2)+'\n'
+        if p.exists() and p.read_text()!=serialized:
+            raise FileExistsError('Use a fresh ROUND_G1_OUTPUT to preserve the existing '+name)
+        if not p.exists():
+            p.write_text(serialized)
     print(json.dumps(record,indent=2))
 
 

@@ -1,6 +1,7 @@
 """Frozen G1 geometry in the MuJoCo ENU world; all lengths in metres."""
 import json
 import math
+import os
 from pathlib import Path
 from xml.etree import ElementTree as ET
 import mujoco
@@ -10,7 +11,7 @@ from round_f_plant import LAUNCH, Plant, ROOT
 
 PROTOCOL = ROOT / 'revision/protocols/round_g1.json'
 P = json.loads(PROTOCOL.read_text())
-DATA = ROOT / 'revision/data/round_g1'
+DATA = Path(os.environ.get('ROUND_G1_OUTPUT', str(ROOT / 'revision/data/round_g1'))).expanduser().resolve()
 D = ROOT / 'revision/data/round_d/accepted'
 SHIFT = np.array([.48, 0., .65])
 TARGET = np.array(P['target_tip_ENU_m'])
