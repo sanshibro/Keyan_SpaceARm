@@ -1,0 +1,30 @@
+{
+  "p00": {
+    "installed_span_mm": 25,
+    "min_120_percent": -18.450746661446825,
+    "max_120_percent": 18.512069343791325,
+    "first_slack_test_angle_deg": 5,
+    "overrange_channel_samples": 0
+  },
+  "p15": {
+    "installed_span_mm": 28.749999999999996,
+    "min_120_percent": -6.218358660663914,
+    "max_120_percent": 36.288879745359814,
+    "first_slack_test_angle_deg": 85,
+    "overrange_channel_samples": 0
+  },
+  "p30": {
+    "installed_span_mm": 32.5,
+    "min_120_percent": 6.01402934011912,
+    "max_120_percent": 54.065690146928766,
+    "first_slack_test_angle_deg": null,
+    "overrange_channel_samples": 0
+  },
+  "p40": {
+    "installed_span_mm": 35.0,
+    "min_120_percent": 14.16895467397492,
+    "max_120_percent": 65.91689708130745,
+    "first_slack_test_angle_deg": null,
+    "overrange_channel_samples": 0
+  }
+}
