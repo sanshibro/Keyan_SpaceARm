@@ -1,0 +1,15 @@
+{
+  "fit_cases": [
+    "241118-clock_pause",
+    "241118-online_pause"
+  ],
+  "condition": "natural",
+  "pad_m": {
+    "command": 0.016401506558387444,
+    "strain": 0.016401506558387444,
+    "vision": 0.016401506558387444,
+    "fusion": 0.016401506558387444,
+    "joint_pcc": 0.016401506558387444
+  },
+  "meaning": "Empirical maximum overestimate of whole-body clearance reserve plus 1 mm; not a guaranteed hardware margin."
+}
