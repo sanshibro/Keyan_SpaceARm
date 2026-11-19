@@ -1,0 +1,28 @@
+{
+  "id": "G1O-pause-factorial-addendum",
+  "parent": "round_g1_online.json",
+  "reason": "After scoring the frozen 15 flights, the critical arm/tool minimum preceded online retraction. Six additional native flights cross the outward and return policies in the pause condition to isolate timing effects.",
+  "conditions": [
+    "phasebend_pause",
+    "onlinebend_pause"
+  ],
+  "meaning": {
+    "phasebend_pause": "route-phase outward bend, live state-triggered return",
+    "onlinebend_pause": "live state-triggered outward bend, route-phase return"
+  },
+  "order": {
+    "241118": [
+      "onlinebend_pause",
+      "phasebend_pause"
+    ],
+    "241119": [
+      "phasebend_pause",
+      "onlinebend_pause"
+    ],
+    "241120": [
+      "onlinebend_pause",
+      "phasebend_pause"
+    ]
+  },
+  "scores": "Same 52 s deadline, body 10 cm, arm 7 cm, native plant and seeds. Analyze every flight, two-by-two table per seed, closest time relative to retraction and earliest 1 s target dwell. Post-hoc contrast distinct from preregistered primary cases."
+}

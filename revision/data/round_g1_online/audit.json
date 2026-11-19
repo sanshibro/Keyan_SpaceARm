@@ -1,0 +1,2740 @@
+{
+  "runs": {
+    "241118-clock_nominal": {
+      "witness": {
+        "body": {
+          "t": 30.928,
+          "k": 2294,
+          "lower_m": 0.14229498199800625,
+          "upper_m": 0.1522492184061206,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0322294238909946,
+            0.06562455307350588,
+            2.2877507815938793
+          ],
+          "wall": [
+            1.0322294238909946,
+            0.06562455307350588,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.508,
+          "k": 2173,
+          "lower_m": 0.1861774476845664,
+          "upper_m": 0.1997950090721684,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9108827119741771,
+            0.0033060038605159958,
+            1.8159282609213196
+          ],
+          "wall": [
+            0.95,
+            0.0033060038605159958,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.888,
+          "k": 2142,
+          "lower_m": 0.1410631243526773,
+          "upper_m": 0.15644398295671905,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.93659563768682,
+            0.012978434071536182,
+            1.7758686718822587
+          ],
+          "wall": [
+            0.95,
+            0.012978434071536182,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.888,
+          "k": 2142,
+          "lower_m": 0.1410631243526773,
+          "upper_m": 0.15644398295671905,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.93659563768682,
+            0.012978434071536182,
+            1.7758686718822587
+          ],
+          "wall": [
+            0.95,
+            0.012978434071536182,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12171,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "436d3f68e908891af53f83fd67e712a00651cf48a05b61ac489a089dad83a8c0",
+        "flight.bag": "4f94ae1f3d2e8fb78b2ec947a050b28f525d9bc4f76bc54abf0d1784eccb1b4a",
+        "physics.npz": "5702490995736f2e51d53909249b0bbf41c135b284ca550a3c27dc0aec8214c3",
+        "hil.csv": "79d6e70dfaf11b0696d5230685be02c2712e4466899a949d112a2bb9998f1c5b",
+        "events.jsonl": "33ec18f1eab8cc4fd5f88ead61913b730f7f217a8ec4c220f948ea010f356015",
+        "run.json": "b044a0b38c2f996874009d2995df0d907f5f0aaa001dfc89177f0844732632c6",
+        "provenance.json": "21719564d8a59e0856973289b2720ff7071ffb0ff5af034adda76b4ff3d819e3",
+        "timing.jsonl": "236ffa529aca9acfd14de13beb5e868ac173391c24826e14e63c03e0dbc88acf"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.012052443795255385,
+            "rear": -1.2608962865184943,
+            "body": 0.7319260593040757,
+            "tool": 0.8362026375570694,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 32.404,
+            "x": 1.3098517628241098,
+            "rear": 0.03545918105036616,
+            "body": 0.15154185895124433,
+            "tool": 0.33985313751824936,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.7934383999090642,
+        "compute_max_ms": 1.8712049932219088,
+        "max_feedback_age_ms": 28.000000000005798,
+        "native": {
+          "position_interp_max_m": 1.2583118708109353e-05,
+          "velocity_interp_max_m_s": 0.00016103219240903854,
+          "attitude_interp_max_deg": 0.00048074916246487796,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 227
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15202285926517498,
+          "upper_m": 0.15210165550481902,
+          "frames_refined": 96,
+          "pairs_refined": 122,
+          "t": 31.068,
+          "k": 2301,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0524393219067496,
+            0.004188992695593286,
+            2.2879179060135963
+          ],
+          "wall": [
+            1.05,
+            0.004186835707101849,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.15615659502194604,
+          "upper_m": 0.15617257938209417,
+          "frames_refined": 111,
+          "pairs_refined": 222,
+          "t": 27.968,
+          "k": 2146,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9475295045616671,
+            0.013216114359890157,
+            1.7761530377634993
+          ],
+          "wall": [
+            0.95,
+            0.01321672825764525,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 34.0
+      }
+    },
+    "241118-online_pause": {
+      "witness": {
+        "body": {
+          "t": 35.608,
+          "k": 2528,
+          "lower_m": 0.14373889587493305,
+          "upper_m": 0.15368075235792755,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9697507402762225,
+            -0.05811921357260355,
+            2.2863192476420724
+          ],
+          "wall": [
+            0.9697507402762225,
+            -0.05811921357260355,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 36.088,
+          "k": 2552,
+          "lower_m": 0.18960103410392495,
+          "upper_m": 0.21248099485442076,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1235880121078474,
+            0.0043791150836934,
+            1.8193313263095887
+          ],
+          "wall": [
+            1.05,
+            0.0043791150836934,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 35.188,
+          "k": 2507,
+          "lower_m": 0.15035806460058082,
+          "upper_m": 0.1751680973222881,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0783219304793044,
+            0.015370162416925402,
+            1.792863329174918
+          ],
+          "wall": [
+            1.05,
+            0.015370162416925402,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 35.188,
+          "k": 2507,
+          "lower_m": 0.15035806460058082,
+          "upper_m": 0.1751680973222881,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0783219304793044,
+            0.015370162416925402,
+            1.792863329174918
+          ],
+          "wall": [
+            1.05,
+            0.015370162416925402,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12186,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "c1080d9c5c5c0af6185765c64188f07131f5f390ab06cf2ed60e054eefbb0a69",
+        "flight.bag": "72b07b94089b154edbb76d83607896a10fb65c5dd44bd26fe10e8901cc0a368e",
+        "physics.npz": "d6b5da6ddf313f5979de1c20a614b242b5c3c2f7a868de5d84bf0f8bd58a790f",
+        "hil.csv": "dc3b134363a28f72b615eefee2aea9333ffdf88b9673d687604d8a25b6f10469",
+        "events.jsonl": "6a80d000aa54016541e3c7e65e45daa5f38853965c437859c071500bd3bacded",
+        "run.json": "9a2774c9ca27002b9b2cfe8e13544216563fb3edd7368b85430b26b9f2eafe49",
+        "provenance.json": "0ce5624045a6017cd4de8ba0e0a5a10a15136df18fbfce493a1e0e289c5a7203",
+        "timing.jsonl": "9694e7d547a15881835d41976b704a72e122250b3dc947574e1cdc4231308b04"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": -0.006542713861563243,
+            "rear": -1.2802145731326584,
+            "body": 0.7491857310783433,
+            "tool": 0.8794953927130051,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 38.404,
+            "x": 1.312785384230665,
+            "rear": 0.038440646244035204,
+            "body": 0.15574265658817618,
+            "tool": 0.3395704899511939,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.7974579939618707,
+        "compute_max_ms": 1.9014989957213402,
+        "max_feedback_age_ms": 28.000000000005798,
+        "native": {
+          "position_interp_max_m": 1.2327916920185089e-05,
+          "velocity_interp_max_m_s": 0.00016321719158440828,
+          "attitude_interp_max_deg": 0.00042370553111446406,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 220
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15288316554398546,
+          "upper_m": 0.1529792935907702,
+          "frames_refined": 97,
+          "pairs_refined": 127,
+          "t": 35.428,
+          "k": 2519,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.944043862028705,
+            0.0010208509098866803,
+            2.287136699350072
+          ],
+          "wall": [
+            0.9500000000000001,
+            0.0010224025786566282,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.1665500026346758,
+          "upper_m": 0.1666330946345401,
+          "frames_refined": 120,
+          "pairs_refined": 240,
+          "t": 34.668,
+          "k": 2481,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0504076845741348,
+            0.00921089019552848,
+            1.7866325958492835
+          ],
+          "wall": [
+            1.05,
+            0.009215505487887382,
+            1.6199999999999999
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 16.604,
+        "return": 38.404
+      }
+    },
+    "241118-phase_pause": {
+      "witness": {
+        "body": {
+          "t": 37.668,
+          "k": 2631,
+          "lower_m": 0.15111967619660982,
+          "upper_m": 0.15111999703334364,
+          "geom": "collision_landing_157",
+          "gate": "sill",
+          "robot": [
+            1.0516133394846656,
+            -0.15989422901695152,
+            1.7711113848757434
+          ],
+          "wall": [
+            1.05,
+            -0.15989422901695152,
+            1.62
+          ]
+        },
+        "arm": {
+          "t": 36.108,
+          "k": 2553,
+          "lower_m": 0.1764098546283262,
+          "upper_m": 0.19938801382058835,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.121185309370622,
+            0.003220633747753437,
+            1.8062477698796096
+          ],
+          "wall": [
+            1.05,
+            0.003220633747753437,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 35.208,
+          "k": 2508,
+          "lower_m": 0.13593867518500635,
+          "upper_m": 0.16081470809683102,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0773857826843065,
+            0.01729896654526712,
+            1.7784657352459419
+          ],
+          "wall": [
+            1.05,
+            0.01729896654526712,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 35.208,
+          "k": 2508,
+          "lower_m": 0.13593867518500635,
+          "upper_m": 0.16081470809683102,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0773857826843065,
+            0.01729896654526712,
+            1.7784657352459419
+          ],
+          "wall": [
+            1.05,
+            0.01729896654526712,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12136,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "12861dcdf8dfc3d5c927bbff56e7e0031e233f71c7c64f89658412e3f2ed7205",
+        "flight.bag": "8c436825837cf5e492225bd25bd3658bd646d143003f49e8fd878688e916a4c1",
+        "physics.npz": "c13f779b8807689bba06e70a2b9d09f72cae2b2bd4b5a02483e68288106cd794",
+        "hil.csv": "8beb64b7e66e7080ea0b65de39be9f6bfcd10165ab65b173e9bb2d2047493658",
+        "events.jsonl": "db0722a5e3f009b874345e52fc96122bd0e065031b119172ef3507fdecf39c7b",
+        "run.json": "fe6da37ba72f2f172ebe4f37cecea17b77600eaecfa578a4ff5f3faad935b943",
+        "provenance.json": "71b14962631c09d11beab04c6c6bbe649b09add4d35bbfb0ea60c094260f3ea1",
+        "timing.jsonl": "b97e0b7fef74df32ff05a8d5b8eec7aa161bdd87017306672def3cc15972e8fe"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.016328215584508143,
+            "rear": -1.2565661624782642,
+            "body": 0.7277203479821063,
+            "tool": 0.8319216929318838,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 38.404,
+            "x": 1.3134664315584814,
+            "rear": 0.03909346611372477,
+            "body": 0.15934955505713796,
+            "tool": 0.3373090439504596,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.8056755885481834,
+        "compute_max_ms": 1.896411005873233,
+        "max_feedback_age_ms": 28.000000000005798,
+        "native": {
+          "position_interp_max_m": 1.248986033419719e-05,
+          "velocity_interp_max_m_s": 0.00017610564827919006,
+          "attitude_interp_max_deg": 0.00033554235483586445,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 214
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15111967619660982,
+          "upper_m": 0.15112534039560324,
+          "frames_refined": 1,
+          "pairs_refined": 1,
+          "t": 37.668,
+          "k": 2631,
+          "geom": "collision_landing_157",
+          "gate": "sill",
+          "robot": [
+            1.0516353274753711,
+            -0.1467095952158086,
+            1.7711164921955855
+          ],
+          "wall": [
+            1.05,
+            -0.1467091085835603,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.15211211844516107,
+          "upper_m": 0.15218447686607206,
+          "frames_refined": 113,
+          "pairs_refined": 226,
+          "t": 34.708,
+          "k": 2483,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.053303265115023,
+            0.01210372532460292,
+            1.77214862283024
+          ],
+          "wall": [
+            1.05,
+            0.012106797988922724,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 40.0
+      }
+    },
+    "241118-online_nominal": {
+      "witness": {
+        "body": {
+          "t": 30.968,
+          "k": 2296,
+          "lower_m": 0.15068868362568014,
+          "upper_m": 0.1606123375815791,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.035508098737343,
+            -0.06712115964238746,
+            2.279387662418421
+          ],
+          "wall": [
+            1.035508098737343,
+            -0.06712115964238746,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.508,
+          "k": 2173,
+          "lower_m": 0.17575259401869878,
+          "upper_m": 0.18952912288726492,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9117315158510307,
+            -0.009685968522756069,
+            1.8056254603855735
+          ],
+          "wall": [
+            0.95,
+            -0.009685968522756069,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.868,
+          "k": 2141,
+          "lower_m": 0.12952742349393662,
+          "upper_m": 0.14513626877975813,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.933886628984167,
+            0.0009257540502777811,
+            1.7642390231172422
+          ],
+          "wall": [
+            0.95,
+            0.0009257540502777811,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.868,
+          "k": 2141,
+          "lower_m": 0.12952742349393662,
+          "upper_m": 0.14513626877975813,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.933886628984167,
+            0.0009257540502777811,
+            1.7642390231172422
+          ],
+          "wall": [
+            0.95,
+            0.0009257540502777811,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12216,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "94912f86e900938604d1ffa39b9be417dc1fab480369cd1909a09f17420fd6be",
+        "flight.bag": "bdd601181f77f495e606c8effeacdc97d6d445e818ce7b9b4d5fc2bb00e2640f",
+        "physics.npz": "eb5bacddf2cf8d2202688b8ae96052071f79737600f44b5d09a6925591bc7b96",
+        "hil.csv": "9510430535afc388d557e73eab45a1cff19229255e1d27b88361c887ed7ec712",
+        "events.jsonl": "f1553a67500c08a0a90e1b7b84114fcb601e99320598487decf3a442f56010b0",
+        "run.json": "3d21f9bb6033352a2481c79ec97c3b990b7e85ff6d418ecc07d919d5179e7a51",
+        "provenance.json": "e445eabda8e3c090442f2634ca37d1838e318abfa0a1110b7d24892dc924ca34",
+        "timing.jsonl": "71ab4ff1f51a745ab1f78f1842e2a72931dcc1dbe1ba14f52cc5534b314da3e2"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": -0.004703538506873883,
+            "rear": -1.2782658848307642,
+            "body": 0.7471192634401351,
+            "tool": 0.8775630245426312,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 32.604,
+            "x": 1.3341580601263558,
+            "rear": 0.059773358212444005,
+            "body": 0.15881944900823475,
+            "tool": 0.35828534896584024,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.7759111826308072,
+        "compute_max_ms": 1.8472200026735663,
+        "max_feedback_age_ms": 20.000000000010232,
+        "native": {
+          "position_interp_max_m": 2.86102294921875e-06,
+          "velocity_interp_max_m_s": 0.00011049398381146602,
+          "attitude_interp_max_deg": 0.0003001376960918617,
+          "exact_pos_stamp_count": 220,
+          "exact_att_stamp_count": 223
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.1573252292157365,
+          "upper_m": 0.15734506079788266,
+          "frames_refined": 93,
+          "pairs_refined": 120,
+          "t": 28.808,
+          "k": 2188,
+          "geom": "collision_landing_163",
+          "gate": "sill",
+          "robot": [
+            0.9414275985898996,
+            0.14094012691861502,
+            1.7771113684330975
+          ],
+          "wall": [
+            0.9499999999999998,
+            0.14093933132278189,
+            1.6199999999999999
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.14479834291697527,
+          "upper_m": 0.14481094550869125,
+          "frames_refined": 108,
+          "pairs_refined": 216,
+          "t": 27.948,
+          "k": 2145,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9448518893137636,
+            0.0007112294590096829,
+            1.7647194074588586
+          ],
+          "wall": [
+            0.9500000000000001,
+            0.0007117196690137606,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 16.604,
+        "return": 32.604
+      }
+    },
+    "241118-clock_pause": {
+      "witness": {
+        "body": {
+          "t": 35.628,
+          "k": 2529,
+          "lower_m": 0.14936704876606652,
+          "upper_m": 0.1592017943385442,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9709452467237512,
+            -0.0638984523083005,
+            2.2807982056614557
+          ],
+          "wall": [
+            0.9709452467237512,
+            -0.0638984523083005,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 36.408,
+          "k": 2568,
+          "lower_m": 0.16939315017502804,
+          "upper_m": 0.20251856198872922,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1403908352200849,
+            -0.0037729063989948627,
+            1.8012271085080769
+          ],
+          "wall": [
+            1.05,
+            -0.0037729063989948627,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 35.328,
+          "k": 2514,
+          "lower_m": 0.13917651593722352,
+          "upper_m": 0.16733682566221106,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0834557905446873,
+            0.008011288806172683,
+            1.7839582974470498
+          ],
+          "wall": [
+            1.05,
+            0.008011288806172683,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 35.328,
+          "k": 2514,
+          "lower_m": 0.13917651593722352,
+          "upper_m": 0.16733682566221106,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0834557905446873,
+            0.008011288806172683,
+            1.7839582974470498
+          ],
+          "wall": [
+            1.05,
+            0.008011288806172683,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12159,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "cdc5f8e9e8ed5bdd55fba3b3c0ff1d4d3609fa2b5595b132666172f86fd69581",
+        "flight.bag": "2585053f0c18a7dddc742a34f375308cdf29bd3e47dad191173f779e6db070b5",
+        "physics.npz": "7323c27a7d1b1cfd2b3181b34cacd2d13f463b89b0132fbd4e6013f1e2ce74a5",
+        "hil.csv": "7926e26e4fd97dcd5a8a8398b45c11a6d7b15b4fedd76610f99165d123176515",
+        "events.jsonl": "b9eb377ee5b0f2f6cc571bbbf06f82f053d6f31eba3d0458d8bdb1b52a3b8318",
+        "run.json": "14d938307c0a109aaea1121c33cb86cc8aefd438c6e33b6d08614a05764c31fb",
+        "provenance.json": "de872df47c8c2b43d615f8b546099eeecee9fb35881426baba880bfef3ecef24",
+        "timing.jsonl": "fa376d380eb1b63d9485e34bab2888a567d0f2ea4df6348f221a8ac714da087a"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.012803555684513412,
+            "rear": -1.2600001395018228,
+            "body": 0.7312465920610145,
+            "tool": 0.835342035883631,
+            "decision": "last_valid_start_window"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 330,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.8029116094112396,
+        "compute_max_ms": 1.8963390029966831,
+        "max_feedback_age_ms": 28.000000000005798,
+        "native": {
+          "position_interp_max_m": 1.2633827282115817e-05,
+          "velocity_interp_max_m_s": 0.00017067727943261522,
+          "attitude_interp_max_deg": 0.0002947237367864465,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 228
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15853978726588386,
+          "upper_m": 0.15856229668002106,
+          "frames_refined": 128,
+          "pairs_refined": 179,
+          "t": 35.448,
+          "k": 2520,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9466836053299684,
+            -0.0037114913742093973,
+            2.2814723889873987
+          ],
+          "wall": [
+            0.95,
+            -0.003710277708209503,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.16035091278365882,
+          "upper_m": 0.16038735956978445,
+          "frames_refined": 131,
+          "pairs_refined": 262,
+          "t": 34.708,
+          "k": 2483,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0577148038207516,
+            0.007722848899055873,
+            1.7802017069453804
+          ],
+          "wall": [
+            1.05,
+            0.007724735999523252,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 34.0
+      }
+    },
+    "241119-phase_pause": {
+      "witness": {
+        "body": {
+          "t": 37.64,
+          "k": 2628,
+          "lower_m": 0.14919604829827532,
+          "upper_m": 0.14919642677362321,
+          "geom": "collision_landing_157",
+          "gate": "sill",
+          "robot": [
+            1.0523071456721378,
+            -0.15658103957062905,
+            1.7691785870722225
+          ],
+          "wall": [
+            1.05,
+            -0.15658103957062905,
+            1.62
+          ]
+        },
+        "arm": {
+          "t": 36.04,
+          "k": 2548,
+          "lower_m": 0.17460164456901936,
+          "upper_m": 0.19759868682864368,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.120910440049783,
+            0.002783523687143986,
+            1.8044368469920005
+          ],
+          "wall": [
+            1.05,
+            0.002783523687143986,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 35.16,
+          "k": 2504,
+          "lower_m": 0.1350734686020914,
+          "upper_m": 0.16052039030166948,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0812043091476151,
+            0.016349391825630773,
+            1.7774582064969
+          ],
+          "wall": [
+            1.05,
+            0.016349391825630773,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 35.16,
+          "k": 2504,
+          "lower_m": 0.1350734686020914,
+          "upper_m": 0.16052039030166948,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0812043091476151,
+            0.016349391825630773,
+            1.7774582064969
+          ],
+          "wall": [
+            1.05,
+            0.016349391825630773,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12109,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "b1969fc4f192fc8731e1bd9394f7c52f5d74a5cd6de1ad0822ed072ff9919755",
+        "flight.bag": "459d2d3442c1a1ab5af4706476aba10f2b31b4d3373557030d357e582a5f8cbf",
+        "physics.npz": "2dc160fa89c1ef7cae9233c21604ac6ff0f25a6722ac7ce1dc4c84fdfc0643ad",
+        "hil.csv": "7700193b1843f130d7e6e7bcb5be68a14a46758b7ce09e843e58508104158b01",
+        "events.jsonl": "4489c5907827389cf4a88f692aa9e6ef6efb1f8ebbc091709f88142483f33bfc",
+        "run.json": "e4974ffe8eebd7efd740f111992b21823ae2f1d5f71e7ac98735e38e11569515",
+        "provenance.json": "fe5cb3fdd8021beb851b964198d2dd5e5e176441959e91547d1d6f25e4e3c007",
+        "timing.jsonl": "e5a2a7cda4d93b6dca9c540cfeb40bdb636d04d130d63499ea421b0494e63b18"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.0115695291897282,
+            "rear": -1.2614571615805872,
+            "body": 0.7319821127196086,
+            "tool": 0.8366181532677577,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 38.404,
+            "x": 1.3171215191250667,
+            "rear": 0.04274645287541734,
+            "body": 0.1580431834464647,
+            "tool": 0.3385230371061126,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.8010335974395275,
+        "compute_max_ms": 3.145466005662456,
+        "max_feedback_age_ms": 36.000000000001364,
+        "native": {
+          "position_interp_max_m": 6.328802555799484e-06,
+          "velocity_interp_max_m_s": 0.00014087767340242863,
+          "attitude_interp_max_deg": 0.0007326513604765877,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 0
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.14919604829827532,
+          "upper_m": 0.14919887967670264,
+          "frames_refined": 1,
+          "pairs_refined": 1,
+          "t": 37.64,
+          "k": 2628,
+          "geom": "collision_landing_157",
+          "gate": "sill",
+          "robot": [
+            1.0523268133901007,
+            -0.1434227161424935,
+            1.7691807348023934
+          ],
+          "wall": [
+            1.05,
+            -0.1434224951070512,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.15195994648406838,
+          "upper_m": 0.15202092927717453,
+          "frames_refined": 113,
+          "pairs_refined": 226,
+          "t": 34.64,
+          "k": 2478,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0532615333028876,
+            0.010768891897528124,
+            1.7719859379326273
+          ],
+          "wall": [
+            1.05,
+            0.010771982117820877,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 40.0
+      }
+    },
+    "241119-online_nominal": {
+      "witness": {
+        "body": {
+          "t": 30.94,
+          "k": 2293,
+          "lower_m": 0.1488108012109092,
+          "upper_m": 0.15876796934438486,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0337087467654398,
+            -0.05803275796169939,
+            2.281232030655615
+          ],
+          "wall": [
+            1.0337087467654398,
+            -0.05803275796169939,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.54,
+          "k": 2173,
+          "lower_m": 0.17766560518340804,
+          "upper_m": 0.19135019209107243,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9118746272542438,
+            0.004611774205072456,
+            1.8075136047498621
+          ],
+          "wall": [
+            0.95,
+            0.004611774205072456,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.86,
+          "k": 2139,
+          "lower_m": 0.12989764615356483,
+          "upper_m": 0.14561725824874688,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9321808969611555,
+            0.012455706503824176,
+            1.7645228890756524
+          ],
+          "wall": [
+            0.95,
+            0.012455706503824176,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.86,
+          "k": 2139,
+          "lower_m": 0.12989764615356483,
+          "upper_m": 0.14561725824874688,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9321808969611555,
+            0.012455706503824176,
+            1.7645228890756524
+          ],
+          "wall": [
+            0.95,
+            0.012455706503824176,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12012,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "c520a8d04b890470f68b41a495ac9b98106be07d2a2dfd59d8f3953a95824fd7",
+        "flight.bag": "ac295ad931a4eecd0b7f29cac8289d90f598d416708dcb71a167202e58d7d6c6",
+        "physics.npz": "4912bd33e4a6c07324040e7f09fe11589068b6b428c3329c27ce66d77b463572",
+        "hil.csv": "2fa940a862da24cacb1f084c9415490e206e60d1ba2840357010ce002e5e1e82",
+        "events.jsonl": "556b5cf8031fbc8f034c56dcef221232362c1068d5c152b98081da246e05bd0f",
+        "run.json": "65573c83765a8d28987dbb28196bbae7e06ef919f96721f0ecc57b5d9aa41e6c",
+        "provenance.json": "3eac6cf8b9f0b83db0a87d5eecb6f1c96df89e1a90d98310d5e08794f6e722a3",
+        "timing.jsonl": "25914a488c1500b580b3b556ba9b8a1e7dcba254cd8325a621beeb509052fcfd"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": -0.003729327814653516,
+            "rear": -1.2774439421431754,
+            "body": 0.7461360569835499,
+            "tool": 0.8766087539866609,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 32.604,
+            "x": 1.333416237263009,
+            "rear": 0.059041011925990095,
+            "body": 0.15992482237520964,
+            "tool": 0.3566120983953464,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.7882116022519767,
+        "compute_max_ms": 1.9351639784872532,
+        "max_feedback_age_ms": 36.000000000001364,
+        "native": {
+          "position_interp_max_m": 2.8908252716064453e-06,
+          "velocity_interp_max_m_s": 9.804809815250337e-05,
+          "attitude_interp_max_deg": 0.0007711925011491997,
+          "exact_pos_stamp_count": 201,
+          "exact_att_stamp_count": 0
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15821398471568154,
+          "upper_m": 0.15829951428404415,
+          "frames_refined": 98,
+          "pairs_refined": 130,
+          "t": 31.08,
+          "k": 2300,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.053612434860581,
+            -0.0585076847797554,
+            2.2817417094211416
+          ],
+          "wall": [
+            1.05,
+            -0.05850768477975543,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.1453269222653172,
+          "upper_m": 0.14533701753772638,
+          "frames_refined": 109,
+          "pairs_refined": 218,
+          "t": 27.94,
+          "k": 2143,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9425871417809047,
+            0.012797734358455439,
+            1.7651478494487496
+          ],
+          "wall": [
+            0.95,
+            0.012798168102588159,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 16.604,
+        "return": 32.604
+      }
+    },
+    "241119-clock_pause": {
+      "witness": {
+        "body": {
+          "t": 35.6,
+          "k": 2528,
+          "lower_m": 0.1501600204866245,
+          "upper_m": 0.160052608432959,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9725269885150944,
+            -0.060521949296613566,
+            2.279947391567041
+          ],
+          "wall": [
+            0.9725269885150944,
+            -0.060521949296613566,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 36.36,
+          "k": 2566,
+          "lower_m": 0.16898653680916387,
+          "upper_m": 0.20193004057517305,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1400616803354564,
+            -0.0023540713292500588,
+            1.800733602359509
+          ],
+          "wall": [
+            1.05,
+            -0.0023540713292500588,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 35.26,
+          "k": 2511,
+          "lower_m": 0.13891929407841788,
+          "upper_m": 0.1666767264611837,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0804469274572837,
+            0.012670260351751943,
+            1.7838722543697596
+          ],
+          "wall": [
+            1.05,
+            0.012670260351751943,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 35.26,
+          "k": 2511,
+          "lower_m": 0.13891929407841788,
+          "upper_m": 0.1666767264611837,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0804469274572837,
+            0.012670260351751943,
+            1.7838722543697596
+          ],
+          "wall": [
+            1.05,
+            0.012670260351751943,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3399,
+        "native_actuator_samples": 12139,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "782114c6bca0ac4534d7e1a1ece4efb4189293803a40f3406b24b274217fb4b8",
+        "flight.bag": "1939db93c727babffdc58251f8b531ecfe0989ced10ffeb04259844eb9682648",
+        "physics.npz": "32c303b48c2fb26864131d3af7a5c89fc761731637c7f6b6be12b449ba360378",
+        "hil.csv": "d4dacb084b7f55647b7cf725a51016ceb12712c8f25e4488d1e2b331959a4d97",
+        "events.jsonl": "7e0bea742d95feeb7c3e9f5ee9046222da9994a542975587f204ccc94d3c0ae7",
+        "run.json": "952e4817234c80f52a0ce5d83b6a67c008f9fc5d2e18c1621f7257e918886a80",
+        "provenance.json": "06742887b3c0d6892c455b9f391ed93f6b369640ef43cbd06d7d9986449ac1d1",
+        "timing.jsonl": "596c55523b95523e6a23457cf8ac43e806043be4e056b2b17da610b50774918d"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.013149672886356711,
+            "rear": -1.2599015343757394,
+            "body": 0.7301664397213081,
+            "tool": 0.8350139178130108,
+            "decision": "last_valid_start_window"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 330,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.816545391920954,
+        "compute_max_ms": 1.8857709947042167,
+        "max_feedback_age_ms": 28.000000000005798,
+        "native": {
+          "position_interp_max_m": 6.5838685259222984e-06,
+          "velocity_interp_max_m_s": 0.00014874525368213654,
+          "attitude_interp_max_deg": 0.0002667175897944099,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 226
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15941010370214567,
+          "upper_m": 0.1594176408569314,
+          "frames_refined": 119,
+          "pairs_refined": 151,
+          "t": 35.4,
+          "k": 2518,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9456193389422568,
+            0.00012348689739860043,
+            2.280642558928331
+          ],
+          "wall": [
+            0.95,
+            0.00012306701730283032,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.15945404948076866,
+          "upper_m": 0.1594945436489028,
+          "frames_refined": 129,
+          "pairs_refined": 258,
+          "t": 34.68,
+          "k": 2482,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0595412407781208,
+            0.013196860013649411,
+            1.7792089010605898
+          ],
+          "wall": [
+            1.05,
+            0.013197984753595071,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 34.0
+      }
+    },
+    "241119-clock_nominal": {
+      "witness": {
+        "body": {
+          "t": 30.94,
+          "k": 2295,
+          "lower_m": 0.1405815813115692,
+          "upper_m": 0.15052592193741754,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0330620074654873,
+            -0.059966272427812606,
+            2.2894740780625824
+          ],
+          "wall": [
+            1.0330620074654873,
+            -0.059966272427812606,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.54,
+          "k": 2175,
+          "lower_m": 0.18516662765302544,
+          "upper_m": 0.19865751576385307,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9117327760992034,
+            0.0035341338235211715,
+            1.8149369850602801
+          ],
+          "wall": [
+            0.95,
+            0.0035341338235211715,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.88,
+          "k": 2142,
+          "lower_m": 0.13950372143556314,
+          "upper_m": 0.1549938925409767,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9350452950456345,
+            0.010924761688628538,
+            1.7742707474692845
+          ],
+          "wall": [
+            0.95,
+            0.010924761688628538,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.88,
+          "k": 2142,
+          "lower_m": 0.13950372143556314,
+          "upper_m": 0.1549938925409767,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9350452950456345,
+            0.010924761688628538,
+            1.7742707474692845
+          ],
+          "wall": [
+            0.95,
+            0.010924761688628538,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3399,
+        "native_actuator_samples": 12221,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "2b57ac1fe10cbe83cff261046d8e530549dd88506d381a59222e31f46689a465",
+        "flight.bag": "9aa416d86bb421fe16515e7ab74c16afc0e0d5ff92fab29ff5d23ad2e1f312a0",
+        "physics.npz": "9048578320a1d0f69ea4c7a3c6463e598ba0cb60cb836ca38e09fa91b665d46b",
+        "hil.csv": "5529fa0700c6bf0763985ef3f65dd51d07910ecbed7a5fedc976245b0f38cd77",
+        "events.jsonl": "7013272b75d74130793fcc12ada63cc6d7ec71317e9413331acb45d609423611",
+        "run.json": "ec6f2d39a1bac784a7d466b18db0b8364075fe60f072aff3a953c5e1f331a4ba",
+        "provenance.json": "3fbb44ea20128f54a5a9701e0a9664cf524f56bf802950fb487708a6c47cda96",
+        "timing.jsonl": "a78a7e3fae943f3a29a40c29b3c33b904474d2cf03564df735d10380b59d59a9"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.016057769826147705,
+            "rear": -1.256746875920228,
+            "body": 0.7276633266122426,
+            "tool": 0.8319201860224333,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 32.404,
+            "x": 1.311195879301522,
+            "rear": 0.036823648255845276,
+            "body": 0.15219673287612487,
+            "tool": 0.34069664810557043,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.7933293827809393,
+        "compute_max_ms": 1.8493020033929497,
+        "max_feedback_age_ms": 28.000000000005798,
+        "native": {
+          "position_interp_max_m": 6.5963249653577805e-06,
+          "velocity_interp_max_m_s": 0.00013623549602925777,
+          "attitude_interp_max_deg": 0.0003551742637100999,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 229
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.150139425022676,
+          "upper_m": 0.15014194448661186,
+          "frames_refined": 95,
+          "pairs_refined": 123,
+          "t": 31.08,
+          "k": 2302,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0528230277858626,
+            -0.06027666100569522,
+            2.289884597697834
+          ],
+          "wall": [
+            1.05,
+            -0.060276661005695426,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.15460638243331998,
+          "upper_m": 0.15462030324451,
+          "frames_refined": 110,
+          "pairs_refined": 220,
+          "t": 27.96,
+          "k": 2146,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9455691346630335,
+            0.011361731266608072,
+            1.774556803821379
+          ],
+          "wall": [
+            0.95,
+            0.01136228776114262,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 34.0
+      }
+    },
+    "241119-online_pause": {
+      "witness": {
+        "body": {
+          "t": 35.58,
+          "k": 2527,
+          "lower_m": 0.13939926401822247,
+          "upper_m": 0.14937399869015433,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9712341292020463,
+            -0.060647175059783225,
+            2.2906260013098456
+          ],
+          "wall": [
+            0.9712341292020463,
+            -0.060647175059783225,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 36.06,
+          "k": 2551,
+          "lower_m": 0.19372478022799522,
+          "upper_m": 0.21662646643399572,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1244409050356383,
+            -0.003683227581569955,
+            1.8234344553342776
+          ],
+          "wall": [
+            1.05,
+            -0.003683227581569955,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 33.78,
+          "k": 2437,
+          "lower_m": 0.15450358886086663,
+          "upper_m": 0.16983501508538065,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.936709774064027,
+            0.017902170463577265,
+            1.7893142115819647
+          ],
+          "wall": [
+            0.95,
+            0.017902170463577265,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 33.78,
+          "k": 2437,
+          "lower_m": 0.15450358886086663,
+          "upper_m": 0.16983501508538065,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.936709774064027,
+            0.017902170463577265,
+            1.7893142115819647
+          ],
+          "wall": [
+            0.95,
+            0.017902170463577265,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3399,
+        "native_actuator_samples": 12276,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "1a2409fe43c53bc000f5c22cf96ebe8adec09cdb6434d47586ac76d3d41e26de",
+        "flight.bag": "06259758d1d994be2e9d5daf2466e4ca4e6018ab7ac10a7af72bce2ac8c9ac7c",
+        "physics.npz": "f266fef326c3072b080552c8804619928a89194184cf0256df4909ba9de3bf99",
+        "hil.csv": "5c30daaba6d60a14e3a604d62ab20ba91c5612ea25c2926e28030b1e34113d0f",
+        "events.jsonl": "32178a52c34e765c8678fb72c5a02b0c7a5bf20a0755817542e599698d1f8e33",
+        "run.json": "be32fc6a9eb9a8ea511db4856c71f743244ce537650af9a15318b82e76354780",
+        "provenance.json": "aaa98c374b2b94e234b7c1eb0f7ffb96528788e15a6a896672446fe0f2b2cf61",
+        "timing.jsonl": "c49233f749233fe267450bc3d7d548f52f293a33bd485d5ed82ef3e9b458a84d"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": -0.004275662126019597,
+            "rear": -1.2779043637528678,
+            "body": 0.7467492705996007,
+            "tool": 0.8770566056809953,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 38.404,
+            "x": 1.318923010258004,
+            "rear": 0.044505160094288954,
+            "body": 0.15911491999756536,
+            "tool": 0.34307424754235955,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.8994798068888483,
+        "compute_max_ms": 3.2724439806770533,
+        "max_feedback_age_ms": 28.000000000005798,
+        "native": {
+          "position_interp_max_m": 6.58154021948576e-06,
+          "velocity_interp_max_m_s": 0.00014602451119571924,
+          "attitude_interp_max_deg": 0.0003690578281590083,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 232
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.14860432386659786,
+          "upper_m": 0.14867394834330475,
+          "frames_refined": 96,
+          "pairs_refined": 126,
+          "t": 35.4,
+          "k": 2518,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9458006563938729,
+            0.000800914942116628,
+            2.2913853694129314
+          ],
+          "wall": [
+            0.95,
+            0.0008030908239393675,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.16945255811404183,
+          "upper_m": 0.16946845531910373,
+          "frames_refined": 120,
+          "pairs_refined": 240,
+          "t": 33.86,
+          "k": 2441,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9472069281537839,
+            0.018165916537269497,
+            1.789445436933144
+          ],
+          "wall": [
+            0.9499999999999998,
+            0.01816658051971562,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 16.604,
+        "return": 38.404
+      }
+    },
+    "241120-online_nominal": {
+      "witness": {
+        "body": {
+          "t": 31.024,
+          "k": 2298,
+          "lower_m": 0.15095145632555163,
+          "upper_m": 0.16089956682753925,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.035315804795787,
+            0.05776978714093545,
+            2.2791004331724607
+          ],
+          "wall": [
+            1.035315804795787,
+            0.05776978714093545,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.544,
+          "k": 2174,
+          "lower_m": 0.1733693008230227,
+          "upper_m": 0.18758510514568771,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9099809739847784,
+            0.004773751128194286,
+            1.8032666069673136
+          ],
+          "wall": [
+            0.95,
+            0.004773751128194286,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.884,
+          "k": 2141,
+          "lower_m": 0.12519338191461463,
+          "upper_m": 0.14095908382511352,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.931944939559363,
+            0.017133058655436434,
+            1.75979799034786
+          ],
+          "wall": [
+            0.95,
+            0.017133058655436434,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.884,
+          "k": 2141,
+          "lower_m": 0.12519338191461463,
+          "upper_m": 0.14095908382511352,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.931944939559363,
+            0.017133058655436434,
+            1.75979799034786
+          ],
+          "wall": [
+            0.95,
+            0.017133058655436434,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12161,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "014585a9f6d2883428a3657330105e1dfcecc296cb82de3f394d989bfbb2d8dc",
+        "flight.bag": "94ab352e8da695ab5f93057864f9eb699882581eee9bca90eec684ebdf05ed56",
+        "physics.npz": "351ab01129edfd4d53aae2086083435cc3a81f44144a900aa78aae37610e724c",
+        "hil.csv": "b6cd5bd6ba54f0be4382d76649186f9ee37176740f6bf7042425e97a7f6f7484",
+        "events.jsonl": "9e401878237fe5080f22583eef5bded1d6a23586be2a79c3565f3b542ab97e32",
+        "run.json": "24626ef6b0b4c2b4fd09eb6e21e61b875eab6a0f28913bd813c41a5ed7d73c1d",
+        "provenance.json": "2bc91b038ca203b58ea527258aa5eb9478e1f4a324d17b9fd48b12c21f1557c1",
+        "timing.jsonl": "94327fcec02e9ee02ede71fdbfda19e27d69c895ac08fd0d519931c9913370d5"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.0050079421198461205,
+            "rear": -1.268590327786969,
+            "body": 0.7376542461926259,
+            "tool": 0.8677254868249331,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 32.604,
+            "x": 1.3315474310948048,
+            "rear": 0.05713561717542093,
+            "body": 0.15931293177574646,
+            "tool": 0.3552022921807324,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.799359591677785,
+        "compute_max_ms": 1.9094010058324784,
+        "max_feedback_age_ms": 52.00000000000671,
+        "native": {
+          "position_interp_max_m": 1.3189739547669888e-05,
+          "velocity_interp_max_m_s": 0.00024138763546943665,
+          "attitude_interp_max_deg": 0.0006568282659504605,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 0
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15527195279354164,
+          "upper_m": 0.15527686790619788,
+          "frames_refined": 64,
+          "pairs_refined": 89,
+          "t": 28.884,
+          "k": 2191,
+          "geom": "collision_landing_162",
+          "gate": "sill",
+          "robot": [
+            0.9424581359592605,
+            -0.14582031573085866,
+            1.7750936039735603
+          ],
+          "wall": [
+            0.95,
+            -0.1458201100657713,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.14058181786287013,
+          "upper_m": 0.14059175510124466,
+          "frames_refined": 108,
+          "pairs_refined": 216,
+          "t": 27.964,
+          "k": 2145,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9425590516850497,
+            0.017207766286793824,
+            1.760394707487317
+          ],
+          "wall": [
+            0.95,
+            0.017208182618757922,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 16.604,
+        "return": 32.604
+      }
+    },
+    "241120-clock_pause": {
+      "witness": {
+        "body": {
+          "t": 37.064,
+          "k": 2600,
+          "lower_m": 0.1467581508855891,
+          "upper_m": 0.15647234360571716,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0405325745539327,
+            -0.05917065522854726,
+            2.283527656394283
+          ],
+          "wall": [
+            1.0405325745539327,
+            -0.05917065522854726,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 36.304,
+          "k": 2562,
+          "lower_m": 0.17136396644007573,
+          "upper_m": 0.20249292066367786,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1358889057508434,
+            -0.0008522595068331936,
+            1.8033752403892884
+          ],
+          "wall": [
+            1.05,
+            -0.0008522595068331936,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 35.264,
+          "k": 2510,
+          "lower_m": 0.13703894842629535,
+          "upper_m": 0.16457673370824785,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.088971102408667,
+            0.014625325084422587,
+            1.7798960739203085
+          ],
+          "wall": [
+            1.05,
+            0.014625325084422587,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 35.264,
+          "k": 2510,
+          "lower_m": 0.13703894842629535,
+          "upper_m": 0.16457673370824785,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.088971102408667,
+            0.014625325084422587,
+            1.7798960739203085
+          ],
+          "wall": [
+            1.05,
+            0.014625325084422587,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12085,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "e051434a5ad912159eb72022e3790be7086e469794ce8443363e956947bdb771",
+        "flight.bag": "6d83867f8f2140fcb032b4b3936c245011b9d6f1f45a5eeb32340f5cb808bfce",
+        "physics.npz": "59b93593e2f816677ce8394114685af887aa2f6f34dc7806df571b7ad884aede",
+        "hil.csv": "c07636d9a0c01169423225ced5c7994a1b10bd5ffe6a5b8af950f32de915b370",
+        "events.jsonl": "c1e98bbdebea156aa17d8eb8a3f986327ded0b7c0ae900e49a72a59b59b32d1f",
+        "run.json": "2d58cd86bbabbae5851f5ca80e13e651b445a49fc1c0b961c6f5775a063c4285",
+        "provenance.json": "0222677a4a04964d9dfa893d43521a71eac8346991076077ffbb39d357b20f4c",
+        "timing.jsonl": "c4a40862cb56bdadb61599600fab62a486f9c29dc596b0c3953a322476f4d4b6"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.02110540252760984,
+            "rear": -1.2517145515736519,
+            "body": 0.7231621564306077,
+            "tool": 0.8270255175739548,
+            "decision": "last_valid_start_window"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 330,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.8055507855024189,
+        "compute_max_ms": 1.8817690142896026,
+        "max_feedback_age_ms": 52.00000000000671,
+        "native": {
+          "position_interp_max_m": 1.338775230874667e-05,
+          "velocity_interp_max_m_s": 0.0002413849191119275,
+          "attitude_interp_max_deg": 0.0006287763338554305,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 0
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.1554095552588088,
+          "upper_m": 0.15545255023155613,
+          "frames_refined": 116,
+          "pairs_refined": 150,
+          "t": 37.244,
+          "k": 2609,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0623955494968516,
+            0.0014449001724921326,
+            2.2850424389673027
+          ],
+          "wall": [
+            1.05,
+            0.0014471280652124663,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.15659823532659659,
+          "upper_m": 0.15663418457629466,
+          "frames_refined": 123,
+          "pairs_refined": 246,
+          "t": 34.704,
+          "k": 2482,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.057667325741118,
+            0.010326581203958646,
+            1.77644641220115
+          ],
+          "wall": [
+            1.05,
+            0.010328383483388492,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 34.0
+      }
+    },
+    "241120-online_pause": {
+      "witness": {
+        "body": {
+          "t": 35.884,
+          "k": 2541,
+          "lower_m": 0.13586022457476732,
+          "upper_m": 0.14581781657431625,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.011399255236961,
+            -0.06671767835542285,
+            2.2941821834256837
+          ],
+          "wall": [
+            1.011399255236961,
+            -0.06671767835542285,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 34.484,
+          "k": 2471,
+          "lower_m": 0.1968495861538696,
+          "upper_m": 0.21035402163279818,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9100041440689959,
+            -0.0025205939597222195,
+            1.8265166964810307
+          ],
+          "wall": [
+            0.95,
+            -0.0025205939597222195,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 33.844,
+          "k": 2439,
+          "lower_m": 0.15096013963466548,
+          "upper_m": 0.166430641403049,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.934583024181259,
+            0.008864003838750668,
+            1.785715042330003
+          ],
+          "wall": [
+            0.95,
+            0.008864003838750668,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 33.844,
+          "k": 2439,
+          "lower_m": 0.15096013963466548,
+          "upper_m": 0.166430641403049,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.934583024181259,
+            0.008864003838750668,
+            1.785715042330003
+          ],
+          "wall": [
+            0.95,
+            0.008864003838750668,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12281,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "42cf1a0b318b00c960f367428c889f244b044ee85d548dca48c9637ab2b62301",
+        "flight.bag": "381b560e21bd2f3b10769b371d00d8273c87d0295d9db6dbfbc74b91110b733c",
+        "physics.npz": "ce53db2ed6243365f5924896ba0fb004e14683b8d96fe50a77dd961610044dbe",
+        "hil.csv": "8325fec658de30f8097e0e0f0751ec64c6c14e9099616ede43116b5451b6f7ca",
+        "events.jsonl": "86d79539bec0f3998c852bea1b27f036d14235a44a4c42f0f24bfb38f3cc93a4",
+        "run.json": "fafa5e04a31d9691523ae33f7b357b4ade124133ef2df29fa1be2551fd31ad1d",
+        "provenance.json": "acccc6366502cf2863e506a7d0c1996895fc6ae56fa8641b0186c734e16b00a2",
+        "timing.jsonl": "fa35de6d4f868fb05bbf46aee1da75ff271535420984b8c695bcf5f694a26b09"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": -0.0005487454036483541,
+            "rear": -1.2741990203588227,
+            "body": 0.743001780328431,
+            "tool": 0.8735060047035818,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 38.404,
+            "x": 1.317611745937029,
+            "rear": 0.04319087149009482,
+            "body": 0.15666858888743881,
+            "tool": 0.3433851419379538,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.805741200223565,
+        "compute_max_ms": 7.573085022158921,
+        "max_feedback_age_ms": 52.00000000000671,
+        "native": {
+          "position_interp_max_m": 1.3252594120105599e-05,
+          "velocity_interp_max_m_s": 0.00023499589102963592,
+          "attitude_interp_max_deg": 0.0007465528506057673,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 0
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.14581528533642407,
+          "upper_m": 0.14583554749494462,
+          "frames_refined": 94,
+          "pairs_refined": 116,
+          "t": 35.884,
+          "k": 2541,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9778793756042243,
+            -0.0063385083989196895,
+            2.2941644583802634
+          ],
+          "wall": [
+            0.977837979619949,
+            -0.00633847969392462,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.16608997652641783,
+          "upper_m": 0.1661037375505668,
+          "frames_refined": 112,
+          "pairs_refined": 224,
+          "t": 33.924,
+          "k": 2443,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9451884025711593,
+            0.008826988013779175,
+            1.7860340331320603
+          ],
+          "wall": [
+            0.95,
+            0.008827581540439555,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 16.604,
+        "return": 38.404
+      }
+    },
+    "241120-phase_pause": {
+      "witness": {
+        "body": {
+          "t": 37.584,
+          "k": 2626,
+          "lower_m": 0.15318844962270856,
+          "upper_m": 0.1531890353922679,
+          "geom": "collision_landing_157",
+          "gate": "sill",
+          "robot": [
+            1.0529495861625293,
+            -0.16133993434257765,
+            1.7731606362806167
+          ],
+          "wall": [
+            1.05,
+            -0.16133993434257765,
+            1.62
+          ]
+        },
+        "arm": {
+          "t": 36.004,
+          "k": 2547,
+          "lower_m": 0.17939738263246197,
+          "upper_m": 0.20266638194101594,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1226208943831868,
+            -0.0023897354727075762,
+            1.8092085306429069
+          ],
+          "wall": [
+            1.05,
+            -0.0023897354727075762,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 35.124,
+          "k": 2503,
+          "lower_m": 0.14012459122565876,
+          "upper_m": 0.16535752517364544,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0803076809988468,
+            0.007630297223070441,
+            1.78255631517731
+          ],
+          "wall": [
+            1.05,
+            0.007630297223070441,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 35.124,
+          "k": 2503,
+          "lower_m": 0.14012459122565876,
+          "upper_m": 0.16535752517364544,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0803076809988468,
+            0.007630297223070441,
+            1.78255631517731
+          ],
+          "wall": [
+            1.05,
+            0.007630297223070441,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12222,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "96f348ddef6699f93ca9a78d5b98a0fd5bf398a2be985f249983f0c930f2cd2b",
+        "flight.bag": "fab4dcb66aec9b8878c31251e1b3322419e6a1ee71eff41c9c5a1db68639dd20",
+        "physics.npz": "aa7e097e0a998f2cc793368a9ab071570c28268031639b1611df63cbccd40f66",
+        "hil.csv": "4248a53ae83add0bdc5c3a4b6abdf7e52734a10aec8c63bcf5fb36a8de7cb0b7",
+        "events.jsonl": "a677c3b9e24d6159e509e894c32e3533e0e17020733a6a0912082baeec0c2440",
+        "run.json": "62dea7740e07d9db868b86395609fdbeca0ded5385892a3a8cb5d14dfcaceceb",
+        "provenance.json": "7a77fb1a405c573e58015c7eebb7f273af7f95aeed5474a6694d97e48ee4490e",
+        "timing.jsonl": "d228478c9ab11d7d85ed0817dcc2f28bd02e9f00e8009ed545ca75c4ae9ac602"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.015133561013499275,
+            "rear": -1.2579314893349671,
+            "body": 0.7287139364081955,
+            "tool": 0.8331831423478385,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 38.404,
+            "x": 1.321008972270647,
+            "rear": 0.046648422045312055,
+            "body": 0.16128987637332132,
+            "tool": 0.3429028640619321,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.8219501827843487,
+        "compute_max_ms": 2.8910019900649786,
+        "max_feedback_age_ms": 52.00000000000671,
+        "native": {
+          "position_interp_max_m": 1.3390109719013665e-05,
+          "velocity_interp_max_m_s": 0.000241380805770556,
+          "attitude_interp_max_deg": 0.0007606204168685991,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 0
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.15318844962270856,
+          "upper_m": 0.153192962760563,
+          "frames_refined": 1,
+          "pairs_refined": 1,
+          "t": 37.584,
+          "k": 2626,
+          "geom": "collision_landing_157",
+          "gate": "sill",
+          "robot": [
+            1.0529772751366389,
+            -0.1481438262960431,
+            1.7731640286489903
+          ],
+          "wall": [
+            1.05,
+            -0.14814346392190184,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.1570279729704854,
+          "upper_m": 0.15708300285206914,
+          "frames_refined": 113,
+          "pairs_refined": 226,
+          "t": 34.624,
+          "k": 2478,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0541794575010475,
+            0.002143943237300977,
+            1.777027392233704
+          ],
+          "wall": [
+            1.05,
+            0.002146824656982904,
+            1.62
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 40.0
+      }
+    },
+    "241120-clock_nominal": {
+      "witness": {
+        "body": {
+          "t": 30.584,
+          "k": 2276,
+          "lower_m": 0.139727981806125,
+          "upper_m": 0.1497036174356059,
+          "geom": "visual_super_Lidar",
+          "gate": "lintel",
+          "robot": [
+            1.0474730979401874,
+            0.0010960314195462267,
+            2.290296382564394
+          ],
+          "wall": [
+            1.0474730979401874,
+            0.0010960314195462267,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.564,
+          "k": 2175,
+          "lower_m": 0.19244798338168043,
+          "upper_m": 0.20537152932441133,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9135870157566036,
+            -0.0031518054459263325,
+            1.8221176875870535
+          ],
+          "wall": [
+            0.95,
+            -0.0031518054459263325,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.904,
+          "k": 2142,
+          "lower_m": 0.1468959460332231,
+          "upper_m": 0.16236735585105933,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9348319693909888,
+            0.013946620861654775,
+            1.7816573199502845
+          ],
+          "wall": [
+            0.95,
+            0.013946620861654775,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.904,
+          "k": 2142,
+          "lower_m": 0.1468959460332231,
+          "upper_m": 0.16236735585105933,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9348319693909888,
+            0.013946620861654775,
+            1.7816573199502845
+          ],
+          "wall": [
+            0.95,
+            0.013946620861654775,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12116,
+        "source_commit": "bcfd99246da74cdc2dde153356ec022e61dbc6ef"
+      },
+      "sha256": {
+        "flight.ulg": "d6b8fa8451c36593041f490be95d0a68078d797553f87fe1a0ded7928e16c0b0",
+        "flight.bag": "9d3907da9235b65880a0b4c2d6c3ed7ef146341c965622859c5e20ac62ede34e",
+        "physics.npz": "f99a7c6e0abba17c3b3f10738055a58f9d294ab91d2c4211984b1293fd49dc00",
+        "hil.csv": "64048f88e32da47e4ebc4e8b4e0119546e2731630420c7e226714c91d53727f2",
+        "events.jsonl": "36aacef74463c0ee63b62dbed90c05be861f5975578f1e0b72424a46c28ce8ca",
+        "run.json": "ff0da408a7a04cb801769674448e06965ee31abe9ec330f7d33cdf9895113530",
+        "provenance.json": "94c0bc7a7720490ff5b1d77eb4f028d0ce6573f18d9e778f249596ad98163fba",
+        "timing.jsonl": "7a52a13dda4a06550228e89219deb3f8e8cd21a1b932249c96685304f8b3688d"
+      },
+      "timing": {
+        "accepted": [
+          {
+            "action": "bend",
+            "t": 16.604,
+            "x": 0.017499617679277435,
+            "rear": -1.255334431146595,
+            "body": 0.7263409765692062,
+            "tool": 0.8305480207553813,
+            "decision": "last_valid_start_window"
+          },
+          {
+            "action": "return",
+            "t": 32.404,
+            "x": 1.310267857654253,
+            "rear": 0.035878409612081,
+            "body": 0.15106764657076222,
+            "tool": 0.3405480773093444,
+            "decision": "rear_clear_and_return_validated"
+          }
+        ],
+        "decisions": 265,
+        "candidate_evaluations": 331,
+        "stale_ticks": 0,
+        "blocked_candidate_ticks": 0,
+        "compute_p95_ms": 1.8071810016408563,
+        "compute_max_ms": 2.647521992912516,
+        "max_feedback_age_ms": 52.00000000000671,
+        "native": {
+          "position_interp_max_m": 1.3375237661650274e-05,
+          "velocity_interp_max_m_s": 0.00024137708048025753,
+          "attitude_interp_max_deg": 0.0006555134914289864,
+          "exact_pos_stamp_count": 0,
+          "exact_att_stamp_count": 0
+        }
+      },
+      "convex": {
+        "body": {
+          "lower_m": 0.14964151927322655,
+          "upper_m": 0.1497218946008054,
+          "frames_refined": 96,
+          "pairs_refined": 144,
+          "t": 30.584,
+          "k": 2276,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.019147164174329,
+            -0.003621492942727011,
+            2.290278112216635
+          ],
+          "wall": [
+            1.0191020995495306,
+            -0.003624751733584397,
+            2.44
+          ]
+        },
+        "arm_tool": {
+          "lower_m": 0.16208038453276716,
+          "upper_m": 0.16209458099855767,
+          "frames_refined": 114,
+          "pairs_refined": 228,
+          "t": 27.984,
+          "k": 2146,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.945655247691569,
+            0.013150674581853764,
+            1.7820363425782235
+          ],
+          "wall": [
+            0.95,
+            0.013151265265738482,
+            1.6199999999999999
+          ]
+        }
+      },
+      "executed_transition_times": {
+        "bend": 14.0,
+        "return": 34.0
+      }
+    }
+  },
+  "base_references_identical_within_condition": true,
+  "independent_flights": 15,
+  "nominal_phase_control": "same command at every tick as the absolute clock; one shared baseline, no duplicate independent observation"
+}

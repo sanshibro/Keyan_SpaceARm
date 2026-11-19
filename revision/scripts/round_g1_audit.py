@@ -87,7 +87,8 @@ def dwell(t, passed):
     return max_d, (float(min(qualifying)) if qualifying else None)
 
 
-def log_check(folder, plant, a, w, ix, release, deadline, mode, seed, plan):
+def log_check(folder, plant, a, w, ix, release, deadline, mode, seed, plan,
+              expected_reference=None, protocol_file=PROTOCOL, plan_file=None):
     stamps=a['us'];us=w.us.to_numpy(np.int64)
     assert np.all(np.diff(us)==4000) and np.all(np.diff(stamps)==20000)
     np.testing.assert_array_equal(us[ix],stamps)
@@ -97,7 +98,7 @@ def log_check(folder, plant, a, w, ix, release, deadline, mode, seed, plan):
     np.testing.assert_allclose(a['qpos'][:,:3]-LAUNCH,w[['ex','ey','ez']].values[ix],atol=1e-8)
     joints=a['qpos'][:,plant.arm.qpos_ids].reshape(-1,8,2)
     np.testing.assert_allclose(np.degrees(np.linalg.norm(joints,axis=2).sum(axis=1)),w.total_deg.values[ix],atol=1e-7)
-    fn=wide_reference() if mode=='wide' else lambda tt:reference(tt,plan,mode)
+    fn=expected_reference or (wide_reference() if mode=='wide' else lambda tt:reference(tt,plan,mode))
     for n in range(0,len(ix),11):
         tr=(stamps[n]-release)/1e6
         _,pos,deg=fn(None if tr<0 else tr)
@@ -105,8 +106,8 @@ def log_check(folder, plant, a, w, ix, release, deadline, mode, seed, plan):
         assert abs(deg-w.request_deg.values[ix[n]])<1e-7
     prov=read(folder/'provenance.json')
     assert prov['plant_xml_sha256']==hashlib.sha256(plant.xml.encode()).hexdigest()
-    assert prov['protocol_sha256']==hashlib.sha256(PROTOCOL.read_bytes()).hexdigest()
-    assert prov['mission']['plan_sha256']==hashlib.sha256((DATA/'plans.json').read_bytes()).hexdigest()
+    assert prov['protocol_sha256']==hashlib.sha256(protocol_file.read_bytes()).hexdigest()
+    assert prov['mission']['plan_sha256']==hashlib.sha256((plan_file or DATA/'plans.json').read_bytes()).hexdigest()
     assert (prov['mission']['seed'],prov['mission']['mode'])==(seed,mode)
     u=ULog(str(folder/'flight.ulg'));get=lambda n:u.get_dataset(n).data
     gps=get('vehicle_gps_position')
@@ -139,7 +140,7 @@ def log_check(folder, plant, a, w, ix, release, deadline, mode, seed, plan):
                 bag_sample_count=len(stamps),native_actuator_samples=int(sum(mask)),source_commit=prov['source_commit'])
 
 
-def score(folder, plans):
+def score(folder, plans, *, expected_reference=None, protocol_file=PROTOCOL, plan_file=None, trace_dir=None):
     case=folder.name;seed,mode=case.split('-');seed=int(seed);wide=mode=='wide'
     scene='wide' if wide else 'study'
     plant=make_plant(scene);g=Geometry(plant,scene)
@@ -150,7 +151,8 @@ def score(folder, plans):
         return dict(case=case,seed=seed,mode=mode,pass_all=False,error=meta['error']),dict(meta=meta)
     release=meta['release_us'];deadline=39. if wide else P['deadline_s']
     stamps=a['us'];ix=np.searchsorted(w.us.values,stamps)
-    logs=log_check(folder,plant,a,w,ix,release,deadline,mode,seed,None if wide else plans[mode])
+    logs=log_check(folder,plant,a,w,ix,release,deadline,mode,seed,plans.get(mode),
+                   expected_reference,protocol_file,plan_file)
     t=(stamps-release)/1e6
     keep=np.flatnonzero((t>=0)&(t<=deadline))
     if wide:
@@ -170,7 +172,7 @@ def score(folder, plans):
                      np.linalg.norm(q[:3]-LAUNCH-a['ref'][k])])
     tr=pd.DataFrame(data,columns='t x y z tip_x tip_y tip_z bend_deg body_m link_m tool_m rear_m front_m target_m axis_deg base_error_m'.split())
     tr['arm_tool_m']=tr[['link_m','tool_m']].min(axis=1)
-    tr.to_csv(DATA/'traces'/(case+'.csv'),index=False,float_format='%.8f')
+    tr.to_csv((trace_dir or DATA/'traces')/(case+'.csv'),index=False,float_format='%.8f')
     tv=tr.t.values; clearly_behind=tr.rear_m.values>0
     after=tv>=(26 if wide else P['terminal_evaluation_s'][0])
     valid=after&clearly_behind&(tr.target_m.values<=P['terminal_position_tolerance_m'])
