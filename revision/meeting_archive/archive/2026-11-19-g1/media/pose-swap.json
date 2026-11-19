@@ -1,0 +1,155 @@
+{
+  "method": "Offline geometry only. Change base pose or post-base joint coordinates between two synchronized simulated flights of the same seed. Shape coordinates linearly interpolated at each recorded base time. Recompute the 3-D convex clearance minimum over the complete flight. Hybrid histories are not dynamically integrated.",
+  "pairs": [
+    {
+      "seed": 241118,
+      "nominal_actual_cm": 11.457058057736171,
+      "nominal_base_timed_arm_cm": 11.457779360643196,
+      "timed_base_nominal_arm_cm": 15.445125897270051,
+      "timed_actual_cm": 15.44534180339953,
+      "within_pair_change_cm": 3.9882837456633577,
+      "arm_swap_at_nominal_base_cm": 0.0007213029070243238,
+      "base_swap_at_nominal_arm_cm": 3.9880678395338798,
+      "nominal_base_timed_arm": {
+        "lower_m": 0.1145439970736158,
+        "upper_m": 0.11457779360643196,
+        "frames_refined": 91,
+        "pairs_refined": 182,
+        "t": 27.768,
+        "k": 2136,
+        "geom": "visual_gripper_finger1",
+        "gate": "sill",
+        "robot": [
+          0.9329006251381752,
+          0.012050761098085859,
+          1.7332946696247746
+        ],
+        "wall": [
+          0.95,
+          0.012052051875473202,
+          1.62
+        ]
+      },
+      "timed_base_nominal_arm": {
+        "lower_m": 0.15443860657879624,
+        "upper_m": 0.1544512589727005,
+        "frames_refined": 111,
+        "pairs_refined": 222,
+        "t": 27.952,
+        "k": 2145,
+        "geom": "collision_gripper_finger1",
+        "gate": "sill",
+        "robot": [
+          0.9444155988096953,
+          0.011244014111248703,
+          1.7743502700396825
+        ],
+        "wall": [
+          0.95,
+          0.011244538561497264,
+          1.62
+        ]
+      }
+    },
+    {
+      "seed": 241119,
+      "nominal_actual_cm": 11.315943210509365,
+      "nominal_base_timed_arm_cm": 11.316911456495028,
+      "timed_base_nominal_arm_cm": 15.458405998734873,
+      "timed_actual_cm": 15.459451329713877,
+      "within_pair_change_cm": 4.143508119204512,
+      "arm_swap_at_nominal_base_cm": 0.0009682459856623638,
+      "base_swap_at_nominal_arm_cm": 4.142462788225508,
+      "nominal_base_timed_arm": {
+        "lower_m": 0.11313731698966512,
+        "upper_m": 0.11316911456495028,
+        "frames_refined": 91,
+        "pairs_refined": 182,
+        "t": 27.72,
+        "k": 2134,
+        "geom": "collision_gripper_finger1",
+        "gate": "sill",
+        "robot": [
+          0.9323201691747816,
+          0.017872187936689116,
+          1.7317795691169353
+        ],
+        "wall": [
+          0.95,
+          0.01787338743783598,
+          1.62
+        ]
+      },
+      "timed_base_nominal_arm": {
+        "lower_m": 0.1545691795277793,
+        "upper_m": 0.15458405998734873,
+        "frames_refined": 109,
+        "pairs_refined": 218,
+        "t": 27.96,
+        "k": 2146,
+        "geom": "visual_gripper_finger1",
+        "gate": "sill",
+        "robot": [
+          0.9465333035312408,
+          0.014044000237139564,
+          1.7745451830935834
+        ],
+        "wall": [
+          0.95,
+          0.014044580345730834,
+          1.62
+        ]
+      }
+    },
+    {
+      "seed": 241120,
+      "nominal_actual_cm": 11.985942038776667,
+      "nominal_base_timed_arm_cm": 11.987521191325023,
+      "timed_base_nominal_arm_cm": 15.897176514372259,
+      "timed_actual_cm": 15.898142461425154,
+      "within_pair_change_cm": 3.912200422648487,
+      "arm_swap_at_nominal_base_cm": 0.0015791525483557223,
+      "base_swap_at_nominal_arm_cm": 3.9112344755955917,
+      "nominal_base_timed_arm": {
+        "lower_m": 0.11985506567145654,
+        "upper_m": 0.11987521191325023,
+        "frames_refined": 89,
+        "pairs_refined": 178,
+        "t": 27.784,
+        "k": 2136,
+        "geom": "visual_gripper_finger1",
+        "gate": "sill",
+        "robot": [
+          0.9335238873588348,
+          0.0076918732712672935,
+          1.7387375431059373
+        ],
+        "wall": [
+          0.9500000000000001,
+          0.0076926782829351,
+          1.6200000000000003
+        ]
+      },
+      "timed_base_nominal_arm": {
+        "lower_m": 0.15895773455184806,
+        "upper_m": 0.15897176514372258,
+        "frames_refined": 111,
+        "pairs_refined": 222,
+        "t": 28.004,
+        "k": 2145,
+        "geom": "collision_gripper_finger1",
+        "gate": "sill",
+        "robot": [
+          0.9455246625878498,
+          0.016903670645159016,
+          1.7789087583100036
+        ],
+        "wall": [
+          0.9499999999999998,
+          0.016904246077199397,
+          1.6199999999999999
+        ]
+      }
+    }
+  ]
+}

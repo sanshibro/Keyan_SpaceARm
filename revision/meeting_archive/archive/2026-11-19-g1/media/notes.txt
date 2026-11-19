@@ -1,0 +1,34 @@
+G1 已知单门闭环试验记录　2026-11-19
+研究分支  feat/paper-mechanism-rolling-20261117
+980d9bc 冻结门框、任务、评分规则、候选规划与飞行程序。2976b30 保存 13 趟原始飞行、定量审计及凸体距离复核。网页保留每趟原始包的下载入口，组会离线包包括图片、视频、曲线和评分。
+
+任务与边界
+本轮用同一 SUPER 机架、Qingyu 八段离散臂、真实来源的结构网格及注册碰撞代理，在 NUC 上独立启动原生 PX4 v1.13 SITL / EKF2。MuJoCo 3.2.3 以 0.5 ms 步长实际积分自由机身与臂的动力学，250 Hz 驱动四桨并记录下发，50 Hz 记录全广义状态。室内实物的质量分布、旋翼迟滞、臂刚度与应变映射仍需标定。GPS/IMU 等为合成输入，图中的相机为观察回放的世界机位，飞控的当前定位未使用机载图像。桨叶角相位按各桨推力降速呈现。
+宽门链路检查复用 D 轮 V2.1 接收并验证的轨迹和 1.80 m 高门框，同时平移地图与轨迹。直臂通过、整机后缘越门、定点保持成功，实际凸体机身及臂爪最小间距约 27.34 和 34.40 cm。该趟有独立的目标和评分，不计入 12 趟窄门比较。
+窄门高 0.82 m、宽 1.40 m、厚 0.10 m。起飞位置、机体航向、门后任务与总时限相同。目标 TCP 为 ENU (2.00, 0.00, 1.67) m，方向从竖直向下往东偏 20°。整机后缘过门后，位置误差不超过 8 cm、轴向误差不超过 25°，同时连续保持 1 s。末端位置和朝向作为到位判据，本轮不包含接触抓取或提载。
+每种形态均可在相同网格上重新选过门高度，并按自身末端偏置反解终端机身位置。固定角方案在窄门的标称几何上离线择优，没有使用执行结果调参。各组使用相同的几何准则，但自由度不同。以全路径最小的净空余量选择候选，在可行近优解中优先选择较小弯角。评分种子不参与规划。固定角用 0/10/20/30/40° 候选，自由角用 0–118° 候选。这些结果限于此单门任务和候选族，通用滚动规划器与跨场景最优性留待多门试验。
+直臂选 2.21 m，固定弯臂为 2.19 m 和 40°，可变形为 2.15 m 和 75°。两组可变形的机身参考轨迹完全相同。常规弯臂在 21–27 s，回收到 20° 在 33–37 s；调时分别为 14–24 s 和 34–42 s。三组噪声种子为 241118、241119 和 241120。目标时限均为 52 s。时序调整同时改变了提前量、动作持续时间与收臂时刻，单个因素需后续分别验证。
+
+结果与因果解释
+12 趟窄门均无物理接触、越门并在约 43 s 满足到位保持。各组预登记通过次数依次为 0/3、3/3、3/3、3/3。直臂的差别来自机身 10 cm 保守净空门槛。四组的机身凸体净空中位数为 9.92、12.04、13.87、15.21 cm，臂与工具为 8.09、9.07、11.46、15.46 cm。直臂第一趟精细复核落在 10.004–10.014 cm，后两趟分别约为 9.92、9.44 cm。不能把 0/3 解读为三次碰撞，也不能据此声称此门只有主动变形才能通过。
+调时相对常规时序的三次配对增益分别为 3.99、4.14、3.91 cm。最近部位为爪指与门槛。种子 241119 的两个最近时刻分别是 27.72 和 27.94 s，机身高度 2.115 与 2.157 m，实际弯角均约 72.7°。将两趟日志按释放时钟对齐，在同一机身轨迹上换用另一趟的实际臂形，再交换机身轨迹，分别离线重算全程净空。仅换臂形时变化小于数值求解精度；换机身位置和姿态时复现约 4 cm 差异。该分解定位了影响几何余量的状态量。辨识具体反作用力矩、推进器滞后和闭环增益的贡献，还需单独的控制实验。
+13 趟中累计弯曲最大 72.71°。每个运行独立记录原生 ULog、ROS bag、HIL 命令与模拟器真实状态。全部 ULog 没有记录器报告的 dropout，归一化四桨输出逐样本对齐至 5.97×10⁻⁸。接触在 0.5 ms 积分步记录，距离在每个 20 ms 的真实姿态重新计算。机身、臂体、工具的包围盒下界用于协议通过评分，完整凸体间距以支持平面下界和可行点对上界独立复核，所有全程最小值的区间宽度均小于 0.14 mm。该误差是对已采样姿态的数值界限，不含实机几何、标定误差和帧间运动。
+
+论文安排
+本轮保留作为组会结果。先以单门解释净空来自哪一部位及哪段动作，再由多门验证滚动窗口何时接管、过期规划如何处置。论文最终 Fig.5/6 应依这一因果顺序取证。本轮主动反力矩前馈并未启用，姿态几何交换是离线诊断。后续先在同一门任务上把时序接入在线规划与动态验收，再做 G2 多门、时序消融与 I 对比方法原文复核。H1/H2 增加机载相机建图、视觉/应变和遮挡情形，J 使用同一到位与净空定义补实物飞行。
+可供后续论文编排的英文表述
+In the known-map single-gate task, all twelve closed-loop flights traversed the aperture and reached the same distal pose tolerance. A fixed bend of 40 degrees already met the preregistered clearance criteria in three paired simulation seeds. With the translational reference and deadline held fixed, advancing and slowing the bending motion and delaying retraction increased minimum arm-and-tool clearance by 3.91 to 4.14 cm relative to nominal timing. Offline pose exchanges localized the geometric difference to the executed vehicle pose in the critical interval.
+
+复现
+在 NUC 的研究分支加载 ROS Noetic 和项目的 MuJoCo Python 依赖。新计算可按下面的命令写到一个新目录。
+  source /opt/ros/noetic/setup.bash
+  export PYTHONPATH="$HOME/桌面/uav_arm_1/.mujoco_deps:$PWD/mujoco_closed_loop:$PWD/xtdrone_catkin_ws/src/uav_continuum_whole_body_v2/src:${PYTHONPATH:-}"
+  export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MUJOCO_GL=egl
+  export ROUND_G1_OUTPUT="$(mktemp -d /tmp/g1-repeat.XXXXXX)"
+  python3 revision/scripts/round_g1_plan.py
+  bash revision/scripts/round_g1_batch.sh
+  python3 revision/scripts/round_g1_audit.py
+  python3 revision/scripts/round_g1_distance.py
+  python3 revision/scripts/round_g1_pose_swap.py
+  python3 revision/scripts/round_g1_visuals.py --video
+只复核已有记录时，在新输出目录同步 plans.json、为每个原始包按原目录结构展开到 runs/，再运行审计与距离复核命令。protocol.json、metrics.csv、convex-distance.json 与 pose-swap.json 均可从网页下载。PDF 可在有中文字体的 Windows 环境运行 round_g1_report.py <阶段目录> 再生成。

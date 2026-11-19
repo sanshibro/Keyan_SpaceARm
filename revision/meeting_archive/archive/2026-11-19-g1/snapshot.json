@@ -1,0 +1,259 @@
+{
+  "cover": "closest.png",
+  "files": [
+    {
+      "bytes": 180539,
+      "caption": "预先选定的噪声种子 241119。红线连接完整三维凸体几何的最近点，各画面取各自最近时刻。",
+      "file": "closest.png",
+      "kind": "image",
+      "sha256": "af221fc748cde0e7fe7d5ffe48221aad32cc7becc67da5403f877a0c446fae90",
+      "title": "直臂贴近门楣，夹爪最接近门槛"
+    },
+    {
+      "bytes": 81540,
+      "caption": "飞行第 28 秒。相机固定在同一世界坐标，左右两图使用相同尺度。绿色为夹爪轨迹，十字为门后的目标。",
+      "file": "matched.png",
+      "kind": "image",
+      "sha256": "d324a0856703ba1cc5c95a217018ad149acf98a4d14d488f14ef194f802e0a49",
+      "title": "在同一时刻观察两种时序"
+    },
+    {
+      "bytes": 248711,
+      "caption": "前三幅显示种子 241119 的保守净空曲线和实际弯角。最后一幅连接各配对种子的精细凸体距离。",
+      "file": "curves.png",
+      "kind": "curve",
+      "sha256": "c6540263fc6be4beae3970efa810b6ac53053497a98160ebee8a3730c802ee98",
+      "title": "净空、执行弯角与三组配对结果"
+    },
+    {
+      "bytes": 1688495,
+      "caption": "1 倍速，从离地后第 14 秒到第 46 秒。中剖面省略侧柱，物理碰撞模型包含全部四面门框。",
+      "file": "comparison.mp4",
+      "kind": "video",
+      "poster": "matched.png",
+      "sha256": "99ac9e68f4c1f6472a467ed2bb7679fcfa52a969c51badbc15c936fff74db3bf",
+      "title": "同步观看过门及门后夹爪到位"
+    },
+    {
+      "bytes": 589176,
+      "caption": "第一页给出最近点和四种方案的结果，第二页解释为什么相同弯角能留下不同的夹爪净空。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "9b79ec929d2b1363e6c2a8495b0d340e00347ba925295c00598676cf89ce228d",
+      "title": "两页组会结果及因果审查"
+    },
+    {
+      "bytes": 4028,
+      "caption": "协议通过、接触、部件净空下界、截止时夹爪误差、姿态与到位时间。宽门链路检查单列。",
+      "file": "metrics.csv",
+      "kind": "data",
+      "sha256": "6f9a4d56926efbf4420262f780025a065984523766de27138136ecc16c917230",
+      "title": "十三趟飞行逐次评分"
+    },
+    {
+      "bytes": 13930,
+      "caption": "每个运行列出机身、臂与工具最近点的两端坐标、仿真时间与数值夹逼区间。",
+      "file": "convex-distance.json",
+      "kind": "data",
+      "sha256": "33872a8f1bf06f0f4c92369a08ba3ed446e15e68a16fcc5e60fd03db2c4978a5",
+      "title": "三维凸体间最近点"
+    },
+    {
+      "bytes": 4628,
+      "caption": "三组配对逐一重放。两个混合状态为离线重构，原始两组来自独立的 PX4 飞行。",
+      "file": "pose-swap.json",
+      "kind": "data",
+      "sha256": "5c5c7c97b610f5c44a5246b0d9f4c85e51f659845a1c12302226c3f7c8a07918",
+      "title": "交换机身与臂形的几何诊断"
+    },
+    {
+      "bytes": 2232,
+      "caption": "直臂、固定弯臂和可变形方案均独立搜索机身高度，常规与调时共用机身参考和截止时间。",
+      "file": "plans.json",
+      "kind": "data",
+      "sha256": "a52bafe8847865ef33ae6b47bf7fd230f02f1c7b17b1be7a901e40afe01de9c1",
+      "title": "飞行前冻结的路径与名义净空"
+    },
+    {
+      "bytes": 39304,
+      "caption": "逐次记录四项 ROS 主题检查、ULog 电机对时、预登记通过条件和原始文件指纹。",
+      "file": "audit.json",
+      "kind": "data",
+      "sha256": "5e4393cb08d96bfd7342e59a3d5cbe23225644d9d1876ea12275b4c57f31904c",
+      "title": "PX4、MuJoCo 与 ROS 日志核对"
+    },
+    {
+      "bytes": 1826,
+      "caption": "SHA-256 及文件大小，可用来核对逐趟下载的原始 ULog、ROS bag、HIL 与物理状态。",
+      "file": "evidence-index.json",
+      "kind": "data",
+      "sha256": "4d73173ba051d14989c7a9658d6dd6360a35eb514c52a8a79c16ce30843f5165",
+      "title": "原始压缩包指纹"
+    },
+    {
+      "bytes": 3064,
+      "caption": "包含统一的目标位姿、门框、阈值、噪声顺序和评分截止时间。",
+      "file": "protocol.json",
+      "kind": "data",
+      "sha256": "ec7ad366cff9b969cfbec583a5d3296dc61c90bbbe87848eb47d43be3a6448c2",
+      "title": "飞行前冻结的任务定义"
+    },
+    {
+      "bytes": 6647,
+      "caption": "说明单门搜索的适用范围、离线反事实、后续论文安排和新目录复现步骤。",
+      "file": "notes.txt",
+      "kind": "data",
+      "sha256": "a96f68340ac2bcc9f1b32bef4acee1de13d282689f90bfea10dcda34c0457edb",
+      "title": "详细解读、证据边界及复现命令"
+    },
+    {
+      "bytes": 3863006,
+      "caption": "每趟一张数组和共用列名，含三维机身与夹爪位置、弯角、三组部件净空、越门程度和目标误差。",
+      "file": "all-traces.npz",
+      "kind": "data",
+      "sha256": "0e8f1ad9450af45cb0661c5253c61da581ccab86e121ad389f40d5e1b35a72d2",
+      "title": "十三趟 50 Hz 曲线数据"
+    },
+    {
+      "bytes": 5926127,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241118-fixed.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "8a1be06d2f6af35c7fde35ef0fbe4ea9fbeeef993cb0592cddf1f4d53bebd004",
+      "title": "241118 · 固定弯臂原始包"
+    },
+    {
+      "bytes": 5924617,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241118-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "20592748dd0581d1fcfe5421a85ca7c32edd75695599a0c9bf5a5f0fe3d69ec7",
+      "title": "241118 · 直臂原始包"
+    },
+    {
+      "bytes": 5955225,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241118-variable_nominal.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "c90d757daccec63314246bff11e4eba5d2367e33ae1fc310cbd3405da36543bb",
+      "title": "241118 · 可变形常规时序原始包"
+    },
+    {
+      "bytes": 5977888,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241118-variable_timed.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "6649d3c542d9c463075bc80a1220cf6eaee9d4dd28372d5f6661418739cda2b1",
+      "title": "241118 · 可变形提前调时原始包"
+    },
+    {
+      "bytes": 5926469,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241119-fixed.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "d17c66eb2a251b591c4bec29e0489f6188fae60c9256698ddcced698956dcbe6",
+      "title": "241119 · 固定弯臂原始包"
+    },
+    {
+      "bytes": 5924562,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241119-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "ad772e30ba654c3ecad7687eb3c50a1707a195065a6958c6b70c653f0e745f9c",
+      "title": "241119 · 直臂原始包"
+    },
+    {
+      "bytes": 5954856,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241119-variable_nominal.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "4b3fc9da72764cc0d83b54c46c2475ae27170c892af1f5101f88cb5aae931875",
+      "title": "241119 · 可变形常规时序原始包"
+    },
+    {
+      "bytes": 5988418,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241119-variable_timed.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "9ecbd7c58e13dd426742592c199f3d275f6353360d9881b66db4f50256cab555",
+      "title": "241119 · 可变形提前调时原始包"
+    },
+    {
+      "bytes": 4707578,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241119-wide.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "0ed843618cf728c8bba503949fb105783efae4d86eea9ec76ffb47771f5864c9",
+      "title": "241119 · 宽门链路检查原始包"
+    },
+    {
+      "bytes": 5925348,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241120-fixed.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "33bbb98005e2a9373e9a91d57672ea070383d97dcbaa8348ad4e54d68bd774e4",
+      "title": "241120 · 固定弯臂原始包"
+    },
+    {
+      "bytes": 5921603,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241120-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "658b3e3d9ffa58c0dcdf67d3f40d815c356404877d66ed51876bcd2ec230f906",
+      "title": "241120 · 直臂原始包"
+    },
+    {
+      "bytes": 5950576,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241120-variable_nominal.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "92a785e1f74187ca5cc1ae0d9e8577dd008ffc801494d29862c176b3e1865d0d",
+      "title": "241120 · 可变形常规时序原始包"
+    },
+    {
+      "bytes": 5983402,
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "file": "241120-variable_timed.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "05142d909e60dc130919b90239e3816217851964c8d23dc4cc718c802c45f25d",
+      "title": "241120 · 可变形提前调时原始包"
+    }
+  ],
+  "guide": [
+    "先看固定世界机位视频和最近点。红线连接实际注册的部件与门框。",
+    "对照净空曲线和两页审查。固定弯臂同样通过，直臂的差异在机身到门楣的余量。",
+    "看机身与臂形交换结果，区分物理闭环运行与离线几何归因。"
+  ],
+  "id": "2026-11-19-g1",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "afda5d04f02f62bf79f7e9517be85208c3f5c6211ea81317912b7329e393d59f"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "d794183a9c66bb8e5975abac78226ae45738772144f2667b69f318ac6a42b1e7"
+    }
+  },
+  "revision": "980a4e852e77fef8d77dea2b2130d44c8adf4253",
+  "schema": 1,
+  "scope": "1 趟宽门链路检查，加上 3 个噪声种子、4 种方案的窄门比较。标称空载与已知地图。整机运动源自实际运行的 PX4 软件在环，距离按 50 Hz 状态复核。",
+  "source_note": "980d9bc 冻结协议，2976b30 保存飞行原始证据，980a4e8 补充姿态交换、图与视频。",
+  "stage": "G1 · 已知单门闭环",
+  "summary": "12 趟窄门均无接触并到达门后目标。固定 40° 已能通过。配对调时后，臂与爪的最小凸体净空增加 3.91–4.14 cm。",
+  "title": "同一扇门与同一目标，机身和臂各留出多少空间？",
+  "when": "2026-11-19T14:05:43+08:00"
+}

@@ -1,0 +1,93 @@
+{
+  "selected": {
+    "straight": {
+      "gate_deg": 0,
+      "end_deg": 0,
+      "z": 2.21,
+      "end_xyz": [
+        2.0,
+        0.0,
+        2.18725756
+      ],
+      "body": 0.09954442472675762,
+      "arm_tool": 0.07039735601303376,
+      "slack": -0.0004555752732423868
+    },
+    "fixed": {
+      "gate_deg": 40,
+      "end_deg": 40,
+      "z": 2.19,
+      "end_xyz": [
+        1.818256549727845,
+        -2.2285428235996783e-17,
+        2.13287846575652
+      ],
+      "body": 0.11954442472675719,
+      "arm_tool": 0.07789536382009765,
+      "slack": 0.007895363820097645
+    },
+    "variable_nominal": {
+      "gate_deg": 75,
+      "end_deg": 20,
+      "z": 2.15,
+      "end_xyz": [
+        1.904824616656329,
+        -1.1659322122097262e-17,
+        2.173308861232108
+      ],
+      "body": 0.15595457983616612,
+      "arm_tool": 0.1415959547307677,
+      "slack": 0.05595457983616611
+    },
+    "variable_timed": {
+      "gate_deg": 75,
+      "end_deg": 20,
+      "z": 2.15,
+      "end_xyz": [
+        1.904824616656329,
+        -1.1659322122097262e-17,
+        2.173308861232108
+      ],
+      "body": 0.15595457983616612,
+      "arm_tool": 0.1415959547307677,
+      "slack": 0.05595457983616611
+    }
+  },
+  "nominal_sweep": {
+    "straight": {
+      "sample_dt_s": 0.05,
+      "body_lower_m": 0.0995444247267554,
+      "arm_tool_lower_m": 0.07039735601303554,
+      "meets_nominal_margins": false
+    },
+    "fixed": {
+      "sample_dt_s": 0.05,
+      "body_lower_m": 0.11954442472675542,
+      "arm_tool_lower_m": 0.07789536382009943,
+      "meets_nominal_margins": true
+    },
+    "variable_nominal": {
+      "sample_dt_s": 0.05,
+      "body_lower_m": 0.155954579836167,
+      "arm_tool_lower_m": 0.14135940302545125,
+      "meets_nominal_margins": true
+    },
+    "variable_timed": {
+      "sample_dt_s": 0.05,
+      "body_lower_m": 0.155954579836167,
+      "arm_tool_lower_m": 0.14236852936881594,
+      "meets_nominal_margins": true
+    }
+  },
+  "candidate_counts": {
+    "straight": 89,
+    "fixed": 445,
+    "variable_nominal": 801
+  },
+  "wide_accepted_npz_sha256": "735de924b19f1ea8484e425b8e0ee27b2692c97d5041ed91c62f33849f23dbfd",
+  "geom_counts": {
+    "body": 303,
+    "arm": 22,
+    "tool": 47
+  }
+}

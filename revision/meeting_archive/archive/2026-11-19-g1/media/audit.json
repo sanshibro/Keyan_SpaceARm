@@ -1,0 +1,1339 @@
+{
+  "runs": {
+    "241119-wide": {
+      "witness": {
+        "body": {
+          "t": 0.76,
+          "k": 786,
+          "lower_m": 0.273267357044553,
+          "upper_m": 0.2733170084857264,
+          "geom": "collision_landing_163",
+          "gate": "sill",
+          "robot": [
+            0.16174425003603196,
+            0.16242677069530603,
+            1.1523549399661166
+          ],
+          "wall": [
+            0.43,
+            0.16242677069530603,
+            1.1
+          ]
+        },
+        "arm": {
+          "t": 0.88,
+          "k": 792,
+          "lower_m": 0.3841962158698975,
+          "upper_m": 0.3877871141954954,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.04591942821480112,
+            0.0013666707830621062,
+            1.1534879454945213
+          ],
+          "wall": [
+            0.43,
+            0.0013666707830621062,
+            1.1
+          ]
+        },
+        "tool": {
+          "t": 0.98,
+          "k": 797,
+          "lower_m": 0.3438825901800968,
+          "upper_m": 0.3438825901800968,
+          "geom": "d435",
+          "gate": "sill",
+          "robot": [
+            0.08611740981990317,
+            0.04651927737238332,
+            1.0964290015933826
+          ],
+          "wall": [
+            0.43,
+            0.04651927737238332,
+            1.0964290015933826
+          ]
+        },
+        "arm_tool": {
+          "t": 0.98,
+          "k": 797,
+          "lower_m": 0.3438825901800968,
+          "upper_m": 0.3438825901800968,
+          "geom": "d435",
+          "gate": "sill",
+          "robot": [
+            0.08611740981990317,
+            0.04651927737238332,
+            1.0964290015933826
+          ],
+          "wall": [
+            0.43,
+            0.04651927737238332,
+            1.0964290015933826
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 2.9802322387695312e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 2749,
+        "native_actuator_samples": 9244,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "8452efb4dec47aed6a07bb20ed357e147d5f83780ae3e1b2abc92a1664eb249a",
+        "flight.bag": "65b3a229b0d7d77ff46f24b2ee478fa1f8f6f10cff7cb07ec59365ae7b301a48",
+        "physics.npz": "2c9e7c739de21f050f37532f7ef31bebbb7f229fdb0721ae827b6290045e5729",
+        "hil.csv": "dd4f2f340264d9f77040feafecd877b4aa187e212baf0178f6830799c56cc34f",
+        "events.jsonl": "c348f782e07cafa5ab4a2ed206ed25030e1cd63c42829a877374faeafc66d741",
+        "run.json": "57eaa26a106dd97eb2def098c67a261f5bcb182508229a28faeee131f42f782f",
+        "provenance.json": "7919794feb34210928a13fcf977f8591b78a385a59e03c42d5f89888d5ed488d"
+      }
+    },
+    "241118-straight": {
+      "witness": {
+        "body": {
+          "t": 29.748,
+          "k": 2233,
+          "lower_m": 0.09013677735358971,
+          "upper_m": 0.10005445630893472,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0011034301059065,
+            0.06824060318801736,
+            2.339945543691065
+          ],
+          "wall": [
+            1.0011034301059065,
+            0.06824060318801736,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 30.808,
+          "k": 2286,
+          "lower_m": 0.1834426433825945,
+          "upper_m": 0.1867243305287563,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.0817985172269684,
+            0.0020922321402105097,
+            1.8039968203898602
+          ],
+          "wall": [
+            1.05,
+            0.0020922321402105097,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 30.908,
+          "k": 2291,
+          "lower_m": 0.07820944197912638,
+          "upper_m": 0.08292517583040021,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0693093582482354,
+            0.012681010073588876,
+            1.7006457281605425
+          ],
+          "wall": [
+            1.05,
+            0.012681010073588876,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 30.908,
+          "k": 2291,
+          "lower_m": 0.07820944197912638,
+          "upper_m": 0.08292517583040021,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0693093582482354,
+            0.012681010073588876,
+            1.7006457281605425
+          ],
+          "wall": [
+            1.05,
+            0.012681010073588876,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": false,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 2.9802322387695312e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3396,
+        "native_actuator_samples": 12165,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "d43e751f9cf225336030c06c795c3ca36720d3e263fe560b55c9f0c6be454ad4",
+        "flight.bag": "a59b129b18d9a887cd7348d44bb8175b9ff9c0cdce800aab48353a4477857697",
+        "physics.npz": "b5cac035d01c8a412632eb32ab5ec7db4834921409532f52833c64128ed45b8f",
+        "hil.csv": "0099655035f59b5f6617a24345e8107c1b6ac22ac11b839d4a8d8bd057e42340",
+        "events.jsonl": "5f2624d910f852df37a6ba323744926b9ac0188b26de3790b174f6a608bafd01",
+        "run.json": "3f055d1a59e087f15b57e769051831fa3b5e88d6670e8fea9c9e03c10e751ee9",
+        "provenance.json": "47361ae934e44e82cc249b40f64767e3100ad3414f87b4402cd79b43d97c9171"
+      }
+    },
+    "241118-fixed": {
+      "witness": {
+        "body": {
+          "t": 29.872,
+          "k": 2241,
+          "lower_m": 0.11034672839175963,
+          "upper_m": 0.1203592798222961,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0133368394653623,
+            -0.06917010019769794,
+            2.319640720177704
+          ],
+          "wall": [
+            1.0133368394653623,
+            -0.06917010019769794,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.832,
+          "k": 2189,
+          "lower_m": 0.1697490323631533,
+          "upper_m": 0.18950937183079625,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9073977697594757,
+            -0.005619207208359145,
+            1.8046587446893225
+          ],
+          "wall": [
+            0.95,
+            -0.005619207208359145,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 28.612,
+          "k": 2178,
+          "lower_m": 0.0814685125934688,
+          "upper_m": 0.09282983798366097,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9282680025270136,
+            0.006323273349879569,
+            1.7102502028025803
+          ],
+          "wall": [
+            0.95,
+            0.006323273349879569,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 28.612,
+          "k": 2178,
+          "lower_m": 0.0814685125934688,
+          "upper_m": 0.09282983798366097,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9282680025270136,
+            0.006323273349879569,
+            1.7102502028025803
+          ],
+          "wall": [
+            0.95,
+            0.006323273349879569,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12164,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "7b5aa54701ec6e90f3b88b4c4737fef6fc76912a4a2e1baabc92b76f9aa63f75",
+        "flight.bag": "1d0ad9f9e37b37f31333268f8cf926648e25d540e2948b1204ba1a76fde02aa9",
+        "physics.npz": "58b05b82299e484aa92527e09b45a87a702b3bfb8c215a323aef0a8779e69fe0",
+        "hil.csv": "9252efe68bb1b6f85248e95dd5fc08dbeba9cc79969a4a6925a91c91fc255f42",
+        "events.jsonl": "3336d12f4a2d9504f15f346f9c76cd7b25515972ead6c4bc6c2dc4d400161bc0",
+        "run.json": "55eb63d7839a4f3cbce935cd37d47dda4eead2b2c4aace862a3f484681dd7057",
+        "provenance.json": "98715d1df1e4d8e0c425f8628a1c30321a06d7f56d1e911c35fe9580704af404"
+      }
+    },
+    "241118-variable_nominal": {
+      "witness": {
+        "body": {
+          "t": 28.808,
+          "k": 2188,
+          "lower_m": 0.13865989551781285,
+          "upper_m": 0.13866390665787984,
+          "geom": "collision_landing_163",
+          "gate": "sill",
+          "robot": [
+            0.9356037577034287,
+            0.1641697928071145,
+            1.7579145649210541
+          ],
+          "wall": [
+            0.95,
+            0.1641697928071145,
+            1.62
+          ]
+        },
+        "arm": {
+          "t": 28.428,
+          "k": 2169,
+          "lower_m": 0.15382066245469878,
+          "upper_m": 0.17082630230017037,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9011148357131034,
+            0.0005820592125821577,
+            1.7836822112209887
+          ],
+          "wall": [
+            0.95,
+            0.0005820592125821577,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.688,
+          "k": 2132,
+          "lower_m": 0.0982678637400643,
+          "upper_m": 0.11478728913886356,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9248279065124099,
+            0.012533124337561315,
+            1.7319932473736748
+          ],
+          "wall": [
+            0.95,
+            0.012533124337561315,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.688,
+          "k": 2132,
+          "lower_m": 0.0982678637400643,
+          "upper_m": 0.11478728913886356,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9248279065124099,
+            0.012533124337561315,
+            1.7319932473736748
+          ],
+          "wall": [
+            0.95,
+            0.012533124337561315,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12343,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "ad4790672efc9cc486fe3f0a76f2bb0c3a1e21cfda90dd69e84a6e0abafdf9c8",
+        "flight.bag": "a5572050e0520e981d09ed6d2e6163e0da239089832edf05eac9a50c1c0a6b7e",
+        "physics.npz": "1e28d02c0803cde6f7c2ad3c2c795691c31952911a75e259498dcd66398fec60",
+        "hil.csv": "325b65e70bead8360f8ccee7da5b3f2f47426b60f74a3e545e41934605928b5a",
+        "events.jsonl": "9b7f1ec4e4d3937423fda449360edea845d6b470a63c7b5a3cf3ca7e3c3022db",
+        "run.json": "73ea447416861b0fa83202fd71288a2a53f4ad84de3b94b71de6c8466fc35528",
+        "provenance.json": "488a2f305c95904e6f482a5a4ebe1cb34835145e9ac9764db716352b83862e7d"
+      }
+    },
+    "241118-variable_timed": {
+      "witness": {
+        "body": {
+          "t": 30.932,
+          "k": 2294,
+          "lower_m": 0.1454610421274634,
+          "upper_m": 0.15545040432571078,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0318315613160045,
+            0.06451659200392752,
+            2.284549595674289
+          ],
+          "wall": [
+            1.0318315613160045,
+            0.06451659200392752,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.532,
+          "k": 2174,
+          "lower_m": 0.18516898105071702,
+          "upper_m": 0.19828804058345176,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9134051640401208,
+            0.0010725980390171085,
+            1.8148819258409927
+          ],
+          "wall": [
+            0.95,
+            0.0010725980390171085,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.872,
+          "k": 2141,
+          "lower_m": 0.13915772962080997,
+          "upper_m": 0.15475454428106158,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9333549087457647,
+            0.011075670299698182,
+            1.7738567837723682
+          ],
+          "wall": [
+            0.95,
+            0.011075670299698182,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.872,
+          "k": 2141,
+          "lower_m": 0.13915772962080997,
+          "upper_m": 0.15475454428106158,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9333549087457647,
+            0.011075670299698182,
+            1.7738567837723682
+          ],
+          "wall": [
+            0.95,
+            0.011075670299698182,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3398,
+        "native_actuator_samples": 12060,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "0043d6dfe62bc07bec5dc5a88144100e4b77be57c7b13827403fd22a23b6ab15",
+        "flight.bag": "57335c501e076143fdbc68b1859409b8046f10140ebf1fec5a520fa3f5805280",
+        "physics.npz": "9f05c2dced0ac3a7011ae9458467a6f425b0338335aa99c7396185cdf83cec50",
+        "hil.csv": "45ebd7b59a8ac9332494f2b94ad251368f2ba430df05f30d14b57b0130f3d3d2",
+        "events.jsonl": "afb59a3ee55c5a9d5102fa40d4455604b106c7baa751390de9d80443884f35e3",
+        "run.json": "e1f2ad2562001608644c75231832f3b8aa5dd2cbea9749b6079d3a48c15b8c1e",
+        "provenance.json": "4c638fb172fe2317f9e1447ec19793d32b6bf43d30e690f5530a35684220f6cb"
+      }
+    },
+    "241119-fixed": {
+      "witness": {
+        "body": {
+          "t": 29.54,
+          "k": 2225,
+          "lower_m": 0.10459537465882407,
+          "upper_m": 0.1145811302551718,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9733502394717155,
+            -0.057293396567419094,
+            2.325418869744828
+          ],
+          "wall": [
+            0.9733502394717155,
+            -0.057293396567419094,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 30.38,
+          "k": 2267,
+          "lower_m": 0.17539908855506497,
+          "upper_m": 0.2010957711375569,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1150672667209245,
+            -0.0019067837070942202,
+            1.8102781121697311
+          ],
+          "wall": [
+            1.05,
+            -0.0019067837070942202,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 29.82,
+          "k": 2239,
+          "lower_m": 0.08924635336509014,
+          "upper_m": 0.1113913755729689,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.102787977043728,
+            0.011608080091048176,
+            1.718089082122676
+          ],
+          "wall": [
+            1.05,
+            0.011608080091048176,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 29.82,
+          "k": 2239,
+          "lower_m": 0.08924635336509014,
+          "upper_m": 0.1113913755729689,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.102787977043728,
+            0.011608080091048176,
+            1.718089082122676
+          ],
+          "wall": [
+            1.05,
+            0.011608080091048176,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3399,
+        "native_actuator_samples": 12172,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "ca603181b2622a846b3c76f5ee0c7a3a3a2dc53bdfa4b524d52963e8547865cf",
+        "flight.bag": "196556b32d5cb1e5528ca6b523bf6d1705650198bd3bbd8d27351da1d3d1bfb0",
+        "physics.npz": "d15335857e2d0ea85ce8975aee7736a7da9346ee8bde1e947282641782c94680",
+        "hil.csv": "b3539d8c48e3859b12ac4c98df391b74d3809f89b678af371e9cdb633b2dcf1a",
+        "events.jsonl": "fbd6b91841a3d597b975e4002848430fe1de8b0a83488a434ebf726bebfdcce3",
+        "run.json": "6e9eed05c8af6f4a882e5b4ea674dfad6524e210ba8c133024a65be22c71ca9c",
+        "provenance.json": "1c74eec13dd33432616b696850d59a7ec1a5f0009a9f2f505fc3a12be7de6be0"
+      }
+    },
+    "241119-variable_timed": {
+      "witness": {
+        "body": {
+          "t": 30.92,
+          "k": 2294,
+          "lower_m": 0.1422783287501194,
+          "upper_m": 0.152281488019002,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0328942182096317,
+            0.06260226261104887,
+            2.287718511980998
+          ],
+          "wall": [
+            1.0328942182096317,
+            0.06260226261104887,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.52,
+          "k": 2174,
+          "lower_m": 0.1855931769388713,
+          "upper_m": 0.19924045703222096,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9110209430863039,
+            0.000631085797162006,
+            1.815390360152509
+          ],
+          "wall": [
+            0.95,
+            0.000631085797162006,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.88,
+          "k": 2142,
+          "lower_m": 0.13942710954556065,
+          "upper_m": 0.15486567981143856,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9358098172931473,
+            0.01455195125360329,
+            1.774214193569221
+          ],
+          "wall": [
+            0.95,
+            0.01455195125360329,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.88,
+          "k": 2142,
+          "lower_m": 0.13942710954556065,
+          "upper_m": 0.15486567981143856,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9358098172931473,
+            0.01455195125360329,
+            1.774214193569221
+          ],
+          "wall": [
+            0.95,
+            0.01455195125360329,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3399,
+        "native_actuator_samples": 12267,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "ac2d555e59f4483e648a44c30e2b3d1e1654d58ef78686d39316102ee243969a",
+        "flight.bag": "9e853c239105c94d4239286c6d1e6374595e0fc62cec772b8b4b8c9c90ecabdf",
+        "physics.npz": "371466abd6967ae099a3b878d695ae6e432f5cc26493f337176b859225c5ed5b",
+        "hil.csv": "2619d9a81cb0b6de07ccbc2cee28704bc624f228de28cfce09d5bcfc3aad8194",
+        "events.jsonl": "f7928c5b87e27c9a0191caa9530ac970a3d33bad47ec5cb6e5fee647b45d5391",
+        "run.json": "795ac75b861232d957ac5e699fb73d08d7225d7631afcfcc32eeaa7ada105a6f",
+        "provenance.json": "d7883f6117d3a001471d10009fe214a019f9e635b958eda64c0ce1c4af3a2eb0"
+      }
+    },
+    "241119-straight": {
+      "witness": {
+        "body": {
+          "t": 29.54,
+          "k": 2223,
+          "lower_m": 0.0893053028976678,
+          "upper_m": 0.0992441903646788,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9765649653187829,
+            0.06493479144966201,
+            2.340755809635321
+          ],
+          "wall": [
+            0.9765649653187829,
+            0.06493479144966201,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 30.74,
+          "k": 2283,
+          "lower_m": 0.183186568754126,
+          "upper_m": 0.1866537651371077,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.0830270529412194,
+            0.0035858965902682343,
+            1.8037085784983284
+          ],
+          "wall": [
+            1.05,
+            0.0035858965902682343,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 30.82,
+          "k": 2287,
+          "lower_m": 0.07779205508221058,
+          "upper_m": 0.08233466397995155,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.068538923340258,
+            0.014886485944977542,
+            1.700220354113377
+          ],
+          "wall": [
+            1.05,
+            0.014886485944977542,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 30.82,
+          "k": 2287,
+          "lower_m": 0.07779205508221058,
+          "upper_m": 0.08233466397995155,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.068538923340258,
+            0.014886485944977542,
+            1.700220354113377
+          ],
+          "wall": [
+            1.05,
+            0.014886485944977542,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": false,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 2.9802322387695312e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12100,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "8cfc49f5f0d8b2c17e75a5c7d9fe0292781cbbf044314911bd36cf2d4089fa14",
+        "flight.bag": "ddd704894e464fbc91d051f1e7d57399c2e3e34f77ebf71da4c03424e5d23017",
+        "physics.npz": "bc6c29119f664280e1ea5f3fb726e985b941d5eff33b62ca0224e3f11d312c17",
+        "hil.csv": "c9ee155d79c3bd4e6522fe79d0f485492b771858353f79cd7350d9298c56d1c6",
+        "events.jsonl": "4b4bd7f510ca054bfed1f6e1bb4e034fda05363e33621cb8fb18a2aef7c9c0a9",
+        "run.json": "f1c1c8f29fc0bd219a06b3687462f3c1362f56e3c30e20d3b7f2ccf5675eaed8",
+        "provenance.json": "e392eacfe1f7c04c67f562026a613ab2a758d811e876f8a9e353f9e4805dbd83"
+      }
+    },
+    "241119-variable_nominal": {
+      "witness": {
+        "body": {
+          "t": 28.8,
+          "k": 2188,
+          "lower_m": 0.13848852638504977,
+          "upper_m": 0.13849499188694897,
+          "geom": "collision_landing_163",
+          "gate": "sill",
+          "robot": [
+            0.9352641199852422,
+            0.16545722625780743,
+            1.757708810967043
+          ],
+          "wall": [
+            0.95,
+            0.16545722625780743,
+            1.62
+          ]
+        },
+        "arm": {
+          "t": 28.4,
+          "k": 2168,
+          "lower_m": 0.15328345940347582,
+          "upper_m": 0.17071990578429141,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.8991994726671817,
+            0.005056820988217404,
+            1.7829864799721282
+          ],
+          "wall": [
+            0.95,
+            0.005056820988217404,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.64,
+          "k": 2130,
+          "lower_m": 0.09690204031096276,
+          "upper_m": 0.1134369904945586,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9248680520475931,
+            0.01805024150887031,
+            1.7306179732438636
+          ],
+          "wall": [
+            0.95,
+            0.01805024150887031,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.64,
+          "k": 2130,
+          "lower_m": 0.09690204031096276,
+          "upper_m": 0.1134369904945586,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9248680520475931,
+            0.01805024150887031,
+            1.7306179732438636
+          ],
+          "wall": [
+            0.95,
+            0.01805024150887031,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3399,
+        "native_actuator_samples": 12152,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "25a643f1ef0aa374f6d314e08e7922c61f70fda2d1caa6f02048b281bf1fa9b3",
+        "flight.bag": "b7beb4a30d2cab62fa96d59d653b48c2aba9b3c28b26340aaa39f7b9c1b68d24",
+        "physics.npz": "0dcaf634742595231b31e711edc55a59c59993cca991fd7a9c5a3a74966f2591",
+        "hil.csv": "6a27d9a92186d38e62924891a1d1714a7fe8c3f74fa0a3cb00e0133568bbadb6",
+        "events.jsonl": "dff8f541c9985307db4bc21d80578cb04a2758d44db1f2b6220f7182b729c6cb",
+        "run.json": "af0f6cd341722897d86ce0606575810307142dfb40043cb35b11e72f2c947867",
+        "provenance.json": "9dddbec25c425b125fcc15c591b71c5d8450c190b48457f0598731c785dd8142"
+      }
+    },
+    "241120-variable_nominal": {
+      "witness": {
+        "body": {
+          "t": 28.824,
+          "k": 2188,
+          "lower_m": 0.14459202791351208,
+          "upper_m": 0.1445989337499405,
+          "geom": "collision_landing_163",
+          "gate": "sill",
+          "robot": [
+            0.9350826615334638,
+            0.15930188642378862,
+            1.7638274127372613
+          ],
+          "wall": [
+            0.95,
+            0.15930188642378862,
+            1.62
+          ]
+        },
+        "arm": {
+          "t": 28.424,
+          "k": 2168,
+          "lower_m": 0.1592964899683639,
+          "upper_m": 0.17654603084173795,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.8985053409768482,
+            -0.003024500905792024,
+            1.7888691833877965
+          ],
+          "wall": [
+            0.95,
+            -0.003024500905792024,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.704,
+          "k": 2132,
+          "lower_m": 0.103717411829599,
+          "upper_m": 0.12011241256316253,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9256322302872454,
+            0.007855698745275665,
+            1.7376146396116128
+          ],
+          "wall": [
+            0.95,
+            0.007855698745275665,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.704,
+          "k": 2132,
+          "lower_m": 0.103717411829599,
+          "upper_m": 0.12011241256316253,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9256322302872454,
+            0.007855698745275665,
+            1.7376146396116128
+          ],
+          "wall": [
+            0.95,
+            0.007855698745275665,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12109,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "40c89eccf6efc0889d9fe1e2979524d3105eb0c43403baa01df04eaf4c8b61f1",
+        "flight.bag": "b4887fcfd8d330c32d6d55755312edcaf4b87f5edbfa4fc6ed199a1c74c8b61c",
+        "physics.npz": "fc602bd67c5d998a6b6fc10b1a4559861593814d75709e513ba339d6edca89d4",
+        "hil.csv": "2966d0d48f28563ef423887a30b0425b74d67c89dc1dfdd3e8167ac119479bfd",
+        "events.jsonl": "13526be6bc7fd425685f93021d072dcd60befe65259d263269e552a05c1f61e9",
+        "run.json": "4051939f90212be5868a78f82634a9f36813c797790a622025c587afbed3827b",
+        "provenance.json": "67fb6cf118ed56008bd061d8d8d54124a7ee7e8e51e90ced76dbbc0b4177c27d"
+      }
+    },
+    "241120-straight": {
+      "witness": {
+        "body": {
+          "t": 30.124,
+          "k": 2253,
+          "lower_m": 0.08435442839864704,
+          "upper_m": 0.09437787934655884,
+          "geom": "visual_super_Lidar",
+          "gate": "lintel",
+          "robot": [
+            0.9872142708121259,
+            0.0009964954189473144,
+            2.345622120653441
+          ],
+          "wall": [
+            0.9872142708121259,
+            0.0009964954189473144,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 30.764,
+          "k": 2285,
+          "lower_m": 0.18992091280250192,
+          "upper_m": 0.19288335004494384,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.0806664714567857,
+            -0.004199090267636473,
+            1.8104299195319646
+          ],
+          "wall": [
+            1.05,
+            -0.004199090267636473,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 30.864,
+          "k": 2290,
+          "lower_m": 0.08470972051337926,
+          "upper_m": 0.08910461162482493,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0685893925972156,
+            0.006712816772593397,
+            1.7071439400972752
+          ],
+          "wall": [
+            1.05,
+            0.006712816772593397,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 30.864,
+          "k": 2290,
+          "lower_m": 0.08470972051337926,
+          "upper_m": 0.08910461162482493,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.0685893925972156,
+            0.006712816772593397,
+            1.7071439400972752
+          ],
+          "wall": [
+            1.05,
+            0.006712816772593397,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": false,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 2.9802322387695312e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12148,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "638e0a98d1fe5614ccf40083c636ae9827162ff82af2a87579ef7a0e82897cf3",
+        "flight.bag": "dc819fad464d34c851600f96c991e67067e049cdb778b3cef7e573637480c068",
+        "physics.npz": "72b795f844096d49c57276ebd3d731789927203dc955502ca53c27ab43c3f0a0",
+        "hil.csv": "8ee12b397bdfc9ca2effeb3ee098fa2b2f81a67c978a1bd51116a0b2e933cf96",
+        "events.jsonl": "3351ddc55fd710f107088b9d174f6bd9a57c3f6ef851e79a18239387af56ae64",
+        "run.json": "48661e922eafc0451e2396ecd8334d62e70fc0b5d63b3a43fb6bcd39e3fa32c7",
+        "provenance.json": "3dbbfd1c1358f444504bd361775f1e158293de296475e0bb6036b835d504b0ba"
+      }
+    },
+    "241120-variable_timed": {
+      "witness": {
+        "body": {
+          "t": 30.964,
+          "k": 2293,
+          "lower_m": 0.13828052751504427,
+          "upper_m": 0.14824565961651004,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            1.0347791472623835,
+            0.054977199560955696,
+            2.29175434038349
+          ],
+          "wall": [
+            1.0347791472623835,
+            0.054977199560955696,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 28.564,
+          "k": 2173,
+          "lower_m": 0.18932863239618183,
+          "upper_m": 0.20277224879823977,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            0.9112377848087355,
+            0.002277546477220971,
+            1.819032850444748
+          ],
+          "wall": [
+            0.95,
+            0.002277546477220971,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 27.924,
+          "k": 2141,
+          "lower_m": 0.14385966120107277,
+          "upper_m": 0.159348614903026,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9347268761423166,
+            0.017065603353886603,
+            1.7786149827700422
+          ],
+          "wall": [
+            0.95,
+            0.017065603353886603,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 27.924,
+          "k": 2141,
+          "lower_m": 0.14385966120107277,
+          "upper_m": 0.159348614903026,
+          "geom": "collision_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            0.9347268761423166,
+            0.017065603353886603,
+            1.7786149827700422
+          ],
+          "wall": [
+            0.95,
+            0.017065603353886603,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3395,
+        "native_actuator_samples": 12114,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "201cff7f0c431d480eb8913de89a6733fbbef499b42f6eba0034bed0e3d989bd",
+        "flight.bag": "aecdc14ced66dde8e4672792e0ef02a43025950f53175c6d7c6f8c43987dec5b",
+        "physics.npz": "dbfa1314256244c0fa0644e6b9319db021a4ab3afc1f20d151acc1b1eea1a016",
+        "hil.csv": "200a63ae0d59ab234d9dd2eaac9bcdd80566bad560fc6b6d501d20e782429a1b",
+        "events.jsonl": "8c578b15bb7e6f6229f1ef4499bb2d67b58bf72880e49c97819480a04ef5ea5d",
+        "run.json": "1767ea3fc5c0be3515e8c99a502d8139198c3eb54acb2648e1b81c6e6d04170c",
+        "provenance.json": "03cf3d5d590476a2c4594dc7c20a550708001db563393c09f2ad7252da0142f9"
+      }
+    },
+    "241120-fixed": {
+      "witness": {
+        "body": {
+          "t": 29.564,
+          "k": 2225,
+          "lower_m": 0.11418003501877198,
+          "upper_m": 0.1240749208609957,
+          "geom": "collision_central_equipment",
+          "gate": "lintel",
+          "robot": [
+            0.9706308973429417,
+            0.05495014620941693,
+            2.3159250791390043
+          ],
+          "wall": [
+            0.9706308973429417,
+            0.05495014620941693,
+            2.44
+          ]
+        },
+        "arm": {
+          "t": 30.424,
+          "k": 2268,
+          "lower_m": 0.1648504109848597,
+          "upper_m": 0.1907590354149074,
+          "geom": "arm7",
+          "gate": "sill",
+          "robot": [
+            1.1137300863361816,
+            -0.007941349993832222,
+            1.7997984585251185
+          ],
+          "wall": [
+            1.05,
+            -0.007941349993832222,
+            1.62
+          ]
+        },
+        "tool": {
+          "t": 29.864,
+          "k": 2240,
+          "lower_m": 0.07898801551431127,
+          "upper_m": 0.10205180554830849,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.1018818670239319,
+            0.00551189294428691,
+            1.7078797069281688
+          ],
+          "wall": [
+            1.05,
+            0.00551189294428691,
+            1.62
+          ]
+        },
+        "arm_tool": {
+          "t": 29.864,
+          "k": 2240,
+          "lower_m": 0.07898801551431127,
+          "upper_m": 0.10205180554830849,
+          "geom": "visual_gripper_finger1",
+          "gate": "sill",
+          "robot": [
+            1.1018818670239319,
+            0.00551189294428691,
+            1.7078797069281688
+          ],
+          "wall": [
+            1.05,
+            0.00551189294428691,
+            1.62
+          ]
+        }
+      },
+      "checks": {
+        "body": true,
+        "arm_tool": true,
+        "curvature": true,
+        "contacts": true,
+        "rear": true,
+        "target": true
+      },
+      "logs": {
+        "ros_residual": 0.0,
+        "ulog_motor_residual": 5.960464477539063e-08,
+        "ulog_dropouts": 0,
+        "bag_sample_count": 3397,
+        "native_actuator_samples": 12145,
+        "source_commit": "980d9bc86f62b263a177d98caa5a6fe2a0964798"
+      },
+      "sha256": {
+        "flight.ulg": "c85a0bc41be7177e56f50743bedc574652ada8427c545de56643542465bbad11",
+        "flight.bag": "b212e179f030bca66d102a0841e8cf7a56ef88bfd8b3db992a1e3c55a01238bd",
+        "physics.npz": "9b0007ce1cfe0a513c7366a6462765d11ec4d7f635078ab7fb16db090ec1678e",
+        "hil.csv": "6d17445d61388406e939df35395d71c1a4d900bf44f0868ab98cb030d8aac9a7",
+        "events.jsonl": "971927635741572b7e748edb6b78b0fb729e254928c860d34342dc60018602c2",
+        "run.json": "82f6af2c5e05be2c75c4bc933c05904ecf00a019fb1867afc6c26f3ecc74afe0",
+        "provenance.json": "dd2905a167b2e35bf8b40691879afc4104c5ae335f6793ed36ff8e8e68c004cc"
+      }
+    }
+  },
+  "groups": {
+    "straight": [
+      false,
+      false,
+      false
+    ],
+    "fixed": [
+      true,
+      true,
+      true
+    ],
+    "variable_nominal": [
+      true,
+      true,
+      true
+    ],
+    "variable_timed": [
+      true,
+      true,
+      true
+    ]
+  }
+}

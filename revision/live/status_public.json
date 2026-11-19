@@ -1,25 +1,25 @@
 {
   "branch": "feat/paper-mechanism-rolling-20261117",
   "status": "awaiting_review",
-  "stage": "F+ 完成 · 空场弯收臂速度对照",
-  "mode": "SUPER 与 Qingyu · 原生 PX4 EKF2 · MuJoCo 自由飞行",
-  "detail": "12 次独立 PX4 软件在环飞行。弯臂从 6 秒压到 3 秒，定点峰值中位数由 15.37 增至 20.83 cm。收臂从 4 秒延至 8 秒，峰值从 25.27 降至 13.73 cm。",
-  "updated": "2026-11-19T00:54:15+08:00",
+  "stage": "G1 完成 · 已知单门闭环",
+  "mode": "SUPER 与 Qingyu · PX4 EKF2 软件在环 · MuJoCo 自由飞行",
+  "detail": "12 趟窄门均无接触并到达门后目标。固定 40° 已能通过。配对调时后，臂与爪的最小凸体净空增加 3.91–4.14 cm。",
+  "updated": "2026-11-19T14:05:43+08:00",
   "progress": 100,
-  "geometry": "round_fp_cad.png",
-  "geometry_caption": "同一收臂时刻的三种真实模型姿态",
-  "rolling": "round_fp_curves.png",
-  "rolling_caption": "时间对齐的定点偏差与三个配对种子的结果",
+  "geometry": "archive/2026-11-19-g1/media/closest.png",
+  "geometry_caption": "直臂与门楣、夹爪与门槛的三维最近点",
+  "rolling": "archive/2026-11-19-g1/media/curves.png",
+  "rolling_caption": "执行净空、实际弯角与三次配对结果",
   "replay": null,
   "items": [
-    "12 次独立闭环飞行",
-    "3 个成对噪声种子",
-    "实际总弯曲上限 115.60°",
-    "两类动作的最小单桨余量 3.79 N"
+    "1 趟宽门链路检查和 12 趟窄门对照",
+    "相同 52 s 时限与门后夹爪目标",
+    "全部飞行接触积分步为 0",
+    "实际累计弯曲最大 72.71°"
   ],
   "commits": [
-    "72ddd95 · 主协议",
-    "41ddd9b · 追加弯速对照",
-    "dafeb70 · 十二次原始证据"
+    "980d9bc · 预登记与单门规划",
+    "2976b30 · 十三趟原始飞行",
+    "980a4e8 · 可视化与因果审查"
   ]
 }

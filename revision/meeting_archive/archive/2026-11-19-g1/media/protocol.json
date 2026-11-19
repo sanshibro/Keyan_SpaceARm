@@ -1,0 +1,112 @@
+{
+  "id": "G1-known-map-single-gate-v1",
+  "release_relative_times_s": true,
+  "gate_center_x": 1,
+  "standard_gate": {
+    "sill_z": 1.62,
+    "lintel_z": 2.44,
+    "half_width_y": 0.7,
+    "thickness": 0.1
+  },
+  "target_tip_ENU_m": [
+    2,
+    0,
+    1.67
+  ],
+  "target_tool_tilt_from_down_to_east_deg": 20,
+  "terminal_axis_tolerance_deg": 25,
+  "terminal_position_tolerance_m": 0.08,
+  "terminal_dwell_s": 1,
+  "deadline_s": 52,
+  "gate_body_margin_m": 0.1,
+  "gate_arm_tool_margin_m": 0.07,
+  "hard_total_bend_deg": 120,
+  "grid_pass_height_m": [
+    2.1,
+    2.32,
+    0.0025
+  ],
+  "fixed_grid_deg": [
+    0,
+    10,
+    20,
+    30,
+    40
+  ],
+  "pass_grid_deg": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    118
+  ],
+  "selection": "Across the complete nominal passage sampled at 0.20 s, maximize the smaller clearance surplus. Among feasible candidates within 5 mm of the optimum prefer smaller bend and then less altitude change. When all fail, use the largest surplus. Verify the selected route at 0.05 s. Counterfactuals with a predicted shortfall still fly in isolated simulation.",
+  "initial_hover_z": 2.15,
+  "move_s": [
+    16,
+    29,
+    42
+  ],
+  "lift_s": [
+    14,
+    23
+  ],
+  "lower_s": [
+    35,
+    42
+  ],
+  "terminal_evaluation_s": [
+    42,
+    52
+  ],
+  "seed_order": {
+    "241118": [
+      "straight",
+      "fixed",
+      "variable_nominal",
+      "variable_timed"
+    ],
+    "241119": [
+      "fixed",
+      "variable_timed",
+      "straight",
+      "variable_nominal"
+    ],
+    "241120": [
+      "variable_nominal",
+      "straight",
+      "variable_timed",
+      "fixed"
+    ]
+  },
+  "visual_seed": 241119,
+  "nominal_bend_return_s": [
+    [
+      21,
+      27
+    ],
+    [
+      33,
+      37
+    ]
+  ],
+  "timed_bend_return_s": [
+    [
+      14,
+      24
+    ],
+    [
+      34,
+      42
+    ]
+  ],
+  "base_setpoint": "two smooth progress intervals with nonzero crossing speed, common x at t=29 and common time budget; endpoint base position solved from the common TCP target for each final bend",
+  "conditions": "known static geometry; fixed y=0,yaw=0,phi=pi; no perception input, external payload, arm-force feed-forward, or physical UAV connection; native PX4 commands the four MuJoCo rotors",
+  "positive_control": "separate actual native free flight following the frozen Round D receiver trajectory translated by [+0.48,0,+0.65] m; its own gate and task; excluded from comparative counts",
+  "primary": "all of: whole robot behind gate by deadline, no free-flight physics contact, both conservative sampled gaps above margins, measured integrated curvature <=120 deg, and continuous sampled TCP pose dwell within position and axis tolerance behind gate",
+  "timing_comparison": "identical translational reference, shape endpoints and score deadline in both variable modes; schedules differ in both timing and rate; comparison identifies the package, not either factor separately"
+}

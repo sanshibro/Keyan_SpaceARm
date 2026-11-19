@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "id": "2026-11-19-g1",
+  "stage": "G1 · 已知单门闭环",
+  "title": "同一扇门与同一目标，机身和臂各留出多少空间？",
+  "when": "2026-11-19T14:05:43+08:00",
+  "summary": "12 趟窄门均无接触并到达门后目标。固定 40° 已能通过。配对调时后，臂与爪的最小凸体净空增加 3.91–4.14 cm。",
+  "guide": [
+    "先看固定世界机位视频和最近点。红线连接实际注册的部件与门框。",
+    "对照净空曲线和两页审查。固定弯臂同样通过，直臂的差异在机身到门楣的余量。",
+    "看机身与臂形交换结果，区分物理闭环运行与离线几何归因。"
+  ],
+  "scope": "1 趟宽门链路检查，加上 3 个噪声种子、4 种方案的窄门比较。标称空载与已知地图。整机运动源自实际运行的 PX4 软件在环，距离按 50 Hz 状态复核。",
+  "revision": "980a4e852e77fef8d77dea2b2130d44c8adf4253",
+  "source_note": "980d9bc 冻结协议，2976b30 保存飞行原始证据，980a4e8 补充姿态交换、图与视频。",
+  "cover": "closest.png",
+  "files": [
+    {
+      "kind": "image",
+      "file": "closest.png",
+      "title": "直臂贴近门楣，夹爪最接近门槛",
+      "caption": "预先选定的噪声种子 241119。红线连接完整三维凸体几何的最近点，各画面取各自最近时刻。"
+    },
+    {
+      "kind": "image",
+      "file": "matched.png",
+      "title": "在同一时刻观察两种时序",
+      "caption": "飞行第 28 秒。相机固定在同一世界坐标，左右两图使用相同尺度。绿色为夹爪轨迹，十字为门后的目标。"
+    },
+    {
+      "kind": "curve",
+      "file": "curves.png",
+      "title": "净空、执行弯角与三组配对结果",
+      "caption": "前三幅显示种子 241119 的保守净空曲线和实际弯角。最后一幅连接各配对种子的精细凸体距离。"
+    },
+    {
+      "kind": "video",
+      "file": "comparison.mp4",
+      "title": "同步观看过门及门后夹爪到位",
+      "caption": "1 倍速，从离地后第 14 秒到第 46 秒。中剖面省略侧柱，物理碰撞模型包含全部四面门框。",
+      "poster": "matched.png"
+    },
+    {
+      "kind": "document",
+      "file": "review.pdf",
+      "title": "两页组会结果及因果审查",
+      "caption": "第一页给出最近点和四种方案的结果，第二页解释为什么相同弯角能留下不同的夹爪净空。"
+    },
+    {
+      "kind": "data",
+      "file": "metrics.csv",
+      "title": "十三趟飞行逐次评分",
+      "caption": "协议通过、接触、部件净空下界、截止时夹爪误差、姿态与到位时间。宽门链路检查单列。"
+    },
+    {
+      "kind": "data",
+      "file": "convex-distance.json",
+      "title": "三维凸体间最近点",
+      "caption": "每个运行列出机身、臂与工具最近点的两端坐标、仿真时间与数值夹逼区间。"
+    },
+    {
+      "kind": "data",
+      "file": "pose-swap.json",
+      "title": "交换机身与臂形的几何诊断",
+      "caption": "三组配对逐一重放。两个混合状态为离线重构，原始两组来自独立的 PX4 飞行。"
+    },
+    {
+      "kind": "data",
+      "file": "plans.json",
+      "title": "飞行前冻结的路径与名义净空",
+      "caption": "直臂、固定弯臂和可变形方案均独立搜索机身高度，常规与调时共用机身参考和截止时间。"
+    },
+    {
+      "kind": "data",
+      "file": "audit.json",
+      "title": "PX4、MuJoCo 与 ROS 日志核对",
+      "caption": "逐次记录四项 ROS 主题检查、ULog 电机对时、预登记通过条件和原始文件指纹。"
+    },
+    {
+      "kind": "data",
+      "file": "evidence-index.json",
+      "title": "原始压缩包指纹",
+      "caption": "SHA-256 及文件大小，可用来核对逐趟下载的原始 ULog、ROS bag、HIL 与物理状态。"
+    },
+    {
+      "kind": "data",
+      "file": "protocol.json",
+      "title": "飞行前冻结的任务定义",
+      "caption": "包含统一的目标位姿、门框、阈值、噪声顺序和评分截止时间。"
+    },
+    {
+      "kind": "data",
+      "file": "notes.txt",
+      "title": "详细解读、证据边界及复现命令",
+      "caption": "说明单门搜索的适用范围、离线反事实、后续论文安排和新目录复现步骤。"
+    },
+    {
+      "kind": "data",
+      "file": "all-traces.npz",
+      "title": "十三趟 50 Hz 曲线数据",
+      "caption": "每趟一张数组和共用列名，含三维机身与夹爪位置、弯角、三组部件净空、越门程度和目标误差。"
+    },
+    {
+      "kind": "data",
+      "file": "241118-fixed.tar.gz",
+      "title": "241118 · 固定弯臂原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241118-straight.tar.gz",
+      "title": "241118 · 直臂原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241118-variable_nominal.tar.gz",
+      "title": "241118 · 可变形常规时序原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241118-variable_timed.tar.gz",
+      "title": "241118 · 可变形提前调时原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-fixed.tar.gz",
+      "title": "241119 · 固定弯臂原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-straight.tar.gz",
+      "title": "241119 · 直臂原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-variable_nominal.tar.gz",
+      "title": "241119 · 可变形常规时序原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-variable_timed.tar.gz",
+      "title": "241119 · 可变形提前调时原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241119-wide.tar.gz",
+      "title": "241119 · 宽门链路检查原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-fixed.tar.gz",
+      "title": "241120 · 固定弯臂原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-straight.tar.gz",
+      "title": "241120 · 直臂原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-variable_nominal.tar.gz",
+      "title": "241120 · 可变形常规时序原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    },
+    {
+      "kind": "data",
+      "file": "241120-variable_timed.tar.gz",
+      "title": "241120 · 可变形提前调时原始包",
+      "caption": "原生 ULog 和 bag、50 Hz 广义状态、250 Hz HIL、事件、版本与控制台记录。",
+      "separate": true
+    }
+  ]
+}
