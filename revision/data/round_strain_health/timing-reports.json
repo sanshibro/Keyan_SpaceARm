@@ -1,0 +1,552 @@
+{
+  "bench": {
+    "macro_balanced_accuracy": {
+      "offset": 1.0,
+      "memory": 0.609567214498634
+    },
+    "per_motion": {
+      "test-00": {
+        "eligible": {
+          "healthy": 1191,
+          "offset": 656,
+          "memory": 1191,
+          "mixed": 656
+        },
+        "classifier": {
+          "counts": [
+            [
+              20,
+              0,
+              0,
+              0,
+              1171
+            ],
+            [
+              0,
+              146,
+              0,
+              0,
+              510
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1191
+            ],
+            [
+              0,
+              159,
+              0,
+              0,
+              497
+            ]
+          ],
+          "threshold": 0.9,
+          "high_confidence_fraction": 0.08798050893340552,
+          "high_confidence_accuracy": 0.5107692307692308,
+          "forced_balanced_accuracy": 0.605070293461121,
+          "marginal": {
+            "offset": {
+              "balanced_accuracy": 1.0,
+              "sensitivity": 1.0,
+              "specificity": 1.0,
+              "high_confidence_fraction": 0.8668110449377369,
+              "high_confidence_accuracy": 1.0
+            },
+            "memory": {
+              "balanced_accuracy": 0.6139685977260423,
+              "sensitivity": 0.41905793178126693,
+              "specificity": 0.8088792636708175,
+              "high_confidence_fraction": 0.08852192744991878,
+              "high_confidence_accuracy": 0.5137614678899083
+            }
+          }
+        },
+        "alarms": {
+          "healthy": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1387,
+            "detection_delay_s": null
+          },
+          "offset": {
+            "onset_s": 13.569534159471646,
+            "false_episodes": 0,
+            "baseline_samples": 493,
+            "detection_delay_s": 0.6807288405283494
+          },
+          "memory": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1387,
+            "detection_delay_s": null
+          },
+          "mixed": {
+            "onset_s": 13.569534159471646,
+            "false_episodes": 0,
+            "baseline_samples": 493,
+            "detection_delay_s": 0.6557778405283496
+          }
+        }
+      },
+      "test-01": {
+        "eligible": {
+          "healthy": 1143,
+          "offset": 724,
+          "memory": 1143,
+          "mixed": 724
+        },
+        "classifier": {
+          "counts": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1143
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              724
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1143
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              724
+            ]
+          ],
+          "threshold": 0.9,
+          "high_confidence_fraction": 0.0,
+          "high_confidence_accuracy": null,
+          "forced_balanced_accuracy": 0.657934980157867,
+          "marginal": {
+            "offset": {
+              "balanced_accuracy": 1.0,
+              "sensitivity": 1.0,
+              "specificity": 1.0,
+              "high_confidence_fraction": 1.0,
+              "high_confidence_accuracy": 1.0
+            },
+            "memory": {
+              "balanced_accuracy": 0.6368505623995715,
+              "sensitivity": 0.7032672737011249,
+              "specificity": 0.5704338510980183,
+              "high_confidence_fraction": 0.0,
+              "high_confidence_accuracy": null
+            }
+          }
+        },
+        "alarms": {
+          "healthy": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1333,
+            "detection_delay_s": null
+          },
+          "offset": {
+            "onset_s": 9.162599016445238,
+            "false_episodes": 0,
+            "baseline_samples": 316,
+            "detection_delay_s": 0.8326499835547647
+          },
+          "memory": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1333,
+            "detection_delay_s": null
+          },
+          "mixed": {
+            "onset_s": 9.162599016445238,
+            "false_episodes": 0,
+            "baseline_samples": 316,
+            "detection_delay_s": 0.8581289835547619
+          }
+        }
+      },
+      "test-02": {
+        "eligible": {
+          "healthy": 1126,
+          "offset": 678,
+          "memory": 1126,
+          "mixed": 678
+        },
+        "classifier": {
+          "counts": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1126
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              678
+            ],
+            [
+              0,
+              0,
+              110,
+              0,
+              1016
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              678
+            ]
+          ],
+          "threshold": 0.9,
+          "high_confidence_fraction": 0.03048780487804878,
+          "high_confidence_accuracy": 1.0,
+          "forced_balanced_accuracy": 0.5713380960614491,
+          "marginal": {
+            "offset": {
+              "balanced_accuracy": 1.0,
+              "sensitivity": 1.0,
+              "specificity": 1.0,
+              "high_confidence_fraction": 1.0,
+              "high_confidence_accuracy": 1.0
+            },
+            "memory": {
+              "balanced_accuracy": 0.5778824833702882,
+              "sensitivity": 0.7195121951219512,
+              "specificity": 0.4362527716186253,
+              "high_confidence_fraction": 0.03048780487804878,
+              "high_confidence_accuracy": 1.0
+            }
+          }
+        },
+        "alarms": {
+          "healthy": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1305,
+            "detection_delay_s": null
+          },
+          "offset": {
+            "onset_s": 10.013559507784764,
+            "false_episodes": 0,
+            "baseline_samples": 350,
+            "detection_delay_s": 0.7769334922152265
+          },
+          "memory": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1305,
+            "detection_delay_s": null
+          },
+          "mixed": {
+            "onset_s": 10.013559507784764,
+            "false_episodes": 0,
+            "baseline_samples": 350,
+            "detection_delay_s": 0.7769334922152265
+          }
+        }
+      }
+    },
+    "sustained_alarm": {
+      "positive_cases": 6,
+      "detected": 6,
+      "min_delay_s": 0.6557778405283496,
+      "max_delay_s": 0.8581289835547619,
+      "false_episodes": 0
+    }
+  },
+  "flight": {
+    "macro_balanced_accuracy": {
+      "offset": 1.0,
+      "memory": 0.6049565890754837
+    },
+    "per_motion": {
+      "26112011-straight": {
+        "eligible": {
+          "healthy": 1287,
+          "offset": 615,
+          "memory": 1287,
+          "mixed": 615
+        },
+        "classifier": {
+          "counts": [
+            [
+              1,
+              0,
+              0,
+              0,
+              1286
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              615
+            ],
+            [
+              6,
+              0,
+              22,
+              0,
+              1259
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              615
+            ]
+          ],
+          "threshold": 0.9,
+          "high_confidence_fraction": 0.007623554153522608,
+          "high_confidence_accuracy": 0.7931034482758621,
+          "forced_balanced_accuracy": 0.5260778516876078,
+          "marginal": {
+            "offset": {
+              "balanced_accuracy": 1.0,
+              "sensitivity": 1.0,
+              "specificity": 1.0,
+              "high_confidence_fraction": 1.0,
+              "high_confidence_accuracy": 1.0
+            },
+            "memory": {
+              "balanced_accuracy": 0.5686119873817035,
+              "sensitivity": 0.7555205047318612,
+              "specificity": 0.38170347003154576,
+              "high_confidence_fraction": 0.007623554153522608,
+              "high_confidence_accuracy": 0.7931034482758621
+            }
+          }
+        },
+        "alarms": {
+          "healthy": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1287,
+            "detection_delay_s": null
+          },
+          "offset": {
+            "onset_s": 29.174955922765733,
+            "false_episodes": 0,
+            "baseline_samples": 611,
+            "detection_delay_s": 0.6449480772342824
+          },
+          "memory": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1287,
+            "detection_delay_s": null
+          },
+          "mixed": {
+            "onset_s": 29.174955922765733,
+            "false_episodes": 0,
+            "baseline_samples": 611,
+            "detection_delay_s": 0.619929077234282
+          }
+        }
+      },
+      "26112012-left": {
+        "eligible": {
+          "healthy": 1287,
+          "offset": 558,
+          "memory": 1287,
+          "mixed": 558
+        },
+        "classifier": {
+          "counts": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1287
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              558
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1287
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              558
+            ]
+          ],
+          "threshold": 0.9,
+          "high_confidence_fraction": 0.0,
+          "high_confidence_accuracy": null,
+          "forced_balanced_accuracy": 0.6325600922375116,
+          "marginal": {
+            "offset": {
+              "balanced_accuracy": 1.0,
+              "sensitivity": 1.0,
+              "specificity": 1.0,
+              "high_confidence_fraction": 1.0,
+              "high_confidence_accuracy": 1.0
+            },
+            "memory": {
+              "balanced_accuracy": 0.67289972899729,
+              "sensitivity": 0.8563685636856369,
+              "specificity": 0.4894308943089431,
+              "high_confidence_fraction": 0.0,
+              "high_confidence_accuracy": null
+            }
+          }
+        },
+        "alarms": {
+          "healthy": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1287,
+            "detection_delay_s": null
+          },
+          "offset": {
+            "onset_s": 28.924895006624336,
+            "false_episodes": 0,
+            "baseline_samples": 601,
+            "detection_delay_s": 1.039646993375662
+          },
+          "memory": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1287,
+            "detection_delay_s": null
+          },
+          "mixed": {
+            "onset_s": 28.924895006624336,
+            "false_episodes": 0,
+            "baseline_samples": 601,
+            "detection_delay_s": 1.063894993375662
+          }
+        }
+      },
+      "26112013-right": {
+        "eligible": {
+          "healthy": 1288,
+          "offset": 600,
+          "memory": 1288,
+          "mixed": 600
+        },
+        "classifier": {
+          "counts": [
+            [
+              0,
+              0,
+              0,
+              0,
+              1288
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              600
+            ],
+            [
+              1,
+              0,
+              83,
+              0,
+              1204
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              600
+            ]
+          ],
+          "threshold": 0.9,
+          "high_confidence_fraction": 0.022245762711864406,
+          "high_confidence_accuracy": 0.9880952380952381,
+          "forced_balanced_accuracy": 0.6069539337474119,
+          "marginal": {
+            "offset": {
+              "balanced_accuracy": 1.0,
+              "sensitivity": 1.0,
+              "specificity": 1.0,
+              "high_confidence_fraction": 0.9870233050847458,
+              "high_confidence_accuracy": 1.0
+            },
+            "memory": {
+              "balanced_accuracy": 0.5733580508474576,
+              "sensitivity": 0.5709745762711864,
+              "specificity": 0.5757415254237288,
+              "high_confidence_fraction": 0.022245762711864406,
+              "high_confidence_accuracy": 0.9880952380952381
+            }
+          }
+        },
+        "alarms": {
+          "healthy": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1288,
+            "detection_delay_s": null
+          },
+          "offset": {
+            "onset_s": 29.146843150466232,
+            "false_episodes": 0,
+            "baseline_samples": 610,
+            "detection_delay_s": 2.7304308495337715
+          },
+          "memory": {
+            "onset_s": null,
+            "false_episodes": 0,
+            "baseline_samples": 1288,
+            "detection_delay_s": null
+          },
+          "mixed": {
+            "onset_s": 29.146843150466232,
+            "false_episodes": 0,
+            "baseline_samples": 610,
+            "detection_delay_s": 0.7401718495337697
+          }
+        }
+      }
+    },
+    "sustained_alarm": {
+      "positive_cases": 6,
+      "detected": 6,
+      "min_delay_s": 0.619929077234282,
+      "max_delay_s": 2.7304308495337715,
+      "false_episodes": 0
+    }
+  },
+  "definitions": {
+    "macro": "Threshold 0.5, balance sensitivity and specificity within each motion, then give each held-out motion equal weight. Only the four predeclared in-scope profiles.",
+    "timing": "Additional descriptive analysis: first rising sustained alarm after injection begins (marginal >=0.90 for five consecutive ADC samples). Onset and labels used only during scoring."
+  }
+}
