@@ -101,7 +101,10 @@ def render_case(case,rig,smoke):
         indices=[0,50,99,120,155] if smoke else range(len(rows))
         for j in indices:
             obs=rows[j];i=ids[j]
-            d.qpos[:]=raw['qpos'][i];d.time=float(obs['t'])
+            # The recorded 50 Hz physics frame can follow the PX4 input by 4 ms.
+            # Deliver the pixel packet on its actual exposure clock.
+            capture_t=obs['t']+(int(raw['us'][i])-int(obs['us']))/1e6
+            d.qpos[:]=raw['qpos'][i];d.time=float(capture_t)
             mujoco.mj_forward(m,d)
             packet=sensor.read(d)
             vis=loc.update(packet)
@@ -109,7 +112,7 @@ def render_case(case,rig,smoke):
             if vis.valid:
                 WU=matrix(enu_body_rotation(obs['rpy_frd_ned']),obs['position'])
                 b=orientation_shape(np.linalg.solve(WU@ub,vis.T_WC),tc)
-            data.append([j,obs['t'],obs['us'],int(raw['us'][i]),int(vis.valid),vis.inliers,
+            data.append([j,capture_t,obs['us'],int(raw['us'][i]),int(vis.valid),vis.inliers,
                          vis.reprojection_px,*b])
             thumbs.append(cv2.resize(packet.rgb,(240,180),interpolation=cv2.INTER_AREA))
             if smoke or j in (0,50,99,120,155):
