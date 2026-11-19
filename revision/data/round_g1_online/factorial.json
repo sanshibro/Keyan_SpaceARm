@@ -1,0 +1,121 @@
+{
+  "supplementary": true,
+  "condition": "pause",
+  "pairs": [
+    {
+      "seed": 241118,
+      "phase_out_phase_back_cm": 15.218447686607206,
+      "phase_out_online_back_cm": 15.758239228980548,
+      "online_out_phase_back_cm": 16.062805266589596,
+      "online_out_online_back_cm": 16.66330946345401,
+      "outward_effect_phase_return_cm": 0.8443575799823897,
+      "outward_effect_online_return_cm": 0.9050702344734614,
+      "return_effect_phase_out_cm": 0.5397915423733419,
+      "return_effect_online_out_cm": 0.6005041968644136,
+      "interaction_cm": 0.06071265449107166,
+      "cells": {
+        "241118-phase_pause": {
+          "minimum_cm": 15.218447686607206,
+          "critical_time_s": 34.708,
+          "return_s": 40.0,
+          "target_time_s": 45.108
+        },
+        "241118-phasebend_pause": {
+          "minimum_cm": 15.758239228980548,
+          "critical_time_s": 34.668,
+          "return_s": 38.404,
+          "target_time_s": 45.828
+        },
+        "241118-onlinebend_pause": {
+          "minimum_cm": 16.062805266589596,
+          "critical_time_s": 34.748,
+          "return_s": 40.0,
+          "target_time_s": 45.108
+        },
+        "241118-online_pause": {
+          "minimum_cm": 16.66330946345401,
+          "critical_time_s": 34.668,
+          "return_s": 38.404,
+          "target_time_s": 45.908
+        }
+      }
+    },
+    {
+      "seed": 241119,
+      "phase_out_phase_back_cm": 15.202092927717452,
+      "phase_out_online_back_cm": 14.895960368703145,
+      "online_out_phase_back_cm": 16.45309532220302,
+      "online_out_online_back_cm": 16.946845531910373,
+      "outward_effect_phase_return_cm": 1.2510023944855675,
+      "outward_effect_online_return_cm": 2.0508851632072282,
+      "return_effect_phase_out_cm": -0.3061325590143067,
+      "return_effect_online_out_cm": 0.49375020970735406,
+      "interaction_cm": 0.7998827687216608,
+      "cells": {
+        "241119-phase_pause": {
+          "minimum_cm": 15.202092927717452,
+          "critical_time_s": 34.64,
+          "return_s": 40.0,
+          "target_time_s": 45.1
+        },
+        "241119-phasebend_pause": {
+          "minimum_cm": 14.895960368703145,
+          "critical_time_s": 34.66,
+          "return_s": 38.404,
+          "target_time_s": 45.84
+        },
+        "241119-onlinebend_pause": {
+          "minimum_cm": 16.45309532220302,
+          "critical_time_s": 34.74,
+          "return_s": 40.0,
+          "target_time_s": 45.1
+        },
+        "241119-online_pause": {
+          "minimum_cm": 16.946845531910373,
+          "critical_time_s": 33.86,
+          "return_s": 38.404,
+          "target_time_s": 45.94
+        }
+      }
+    },
+    {
+      "seed": 241120,
+      "phase_out_phase_back_cm": 15.708300285206914,
+      "phase_out_online_back_cm": 16.001737132211222,
+      "online_out_phase_back_cm": 16.823314875426014,
+      "online_out_online_back_cm": 16.610373755056678,
+      "outward_effect_phase_return_cm": 1.1150145902191007,
+      "outward_effect_online_return_cm": 0.6086366228454558,
+      "return_effect_phase_out_cm": 0.2934368470043083,
+      "return_effect_online_out_cm": -0.21294112036933655,
+      "interaction_cm": -0.5063779673736448,
+      "cells": {
+        "241120-phase_pause": {
+          "minimum_cm": 15.708300285206914,
+          "critical_time_s": 34.624,
+          "return_s": 40.0,
+          "target_time_s": 45.104
+        },
+        "241120-phasebend_pause": {
+          "minimum_cm": 16.001737132211222,
+          "critical_time_s": 34.664,
+          "return_s": 38.404,
+          "target_time_s": 45.764
+        },
+        "241120-onlinebend_pause": {
+          "minimum_cm": 16.823314875426014,
+          "critical_time_s": 33.924,
+          "return_s": 40.0,
+          "target_time_s": 45.104
+        },
+        "241120-online_pause": {
+          "minimum_cm": 16.610373755056678,
+          "critical_time_s": 33.924,
+          "return_s": 38.404,
+          "target_time_s": 45.684
+        }
+      }
+    }
+  ],
+  "interpretation": "Repeated independent SITL starts, matching simulated noise streams and identical base commands. Small run-to-run differences include asynchronous native PX4 transport."
+}

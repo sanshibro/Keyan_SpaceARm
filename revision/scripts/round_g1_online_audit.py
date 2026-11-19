@@ -44,7 +44,7 @@ def native_observations(folder,rows):
                 exact_pos_stamp_count=int(sum(np.isin(tt,t))),exact_att_stamp_count=int(sum(np.isin(at,att_ms))))
 
 
-def replay(folder,geom,route,mode):
+def replay(folder,geom,route,mode,adopt=None):
     rows=records(folder/'timing.jsonl');pr=RollingGateTiming(geom,P)
     wall=pd.read_csv(folder/'hil.csv')
     tm=np.array([r['us'] for r in rows]);wi=np.searchsorted(wall.us.to_numpy(),tm)
@@ -53,6 +53,8 @@ def replay(folder,geom,route,mode):
     np.testing.assert_allclose([r['measured_deg'] for r in rows],wall.net_deg.to_numpy()[wi],atol=1e-7)
     evs=[]
     for q in rows:
+        if adopt is not None:
+            adopt(pr,q['t'],mode)
         obs=(np.array(q['position']),np.array(q['velocity']),np.array(q['rpy_frd_ned']),q['measured_deg'],q['age_pos_s'],q['age_att_s'])
         d=pr.update(q['t'],obs,route.preview(q['t'],pr.times))
         assert all(d[k]==q[k] for k in ('action','reason','candidates')),(folder.name,q['t'])
@@ -87,16 +89,25 @@ def offline_command(t,method,condition,events):
     return float(q)
 
 
-def score_one(folder,env,solids):
+def score_one(folder,env,solids,supplementary=False):
     seed,variant=folder.name.split('-');method,condition=variant.split('_');route=Route(condition)
     outcome=json.loads((folder/'run.json').read_text())
     if outcome['error'] or outcome['release_us'] is None:
         return dict(case=folder.name,seed=int(seed),mode=variant,pass_all=False,failed='flight_transport'),{'error':outcome['error']}
-    events,review=replay(folder,env,route,method)
-    action=applied(method,condition,events)
+    if supplementary:
+        from round_g1_online_split import adopt_phase_bend,split_command,SPLIT
+        events,review=replay(folder,env,route,method,adopt_phase_bend)
+        action={'bend':14. if method=='phasebend' else events.get('bend'),
+                'return':40. if method=='onlinebend' else events.get('return')}
+        proto=SPLIT
+    else:
+        events,review=replay(folder,env,route,method)
+        action=applied(method,condition,events);proto=PROTO
     def fn(t):
-        phase,pos,_=route.base(t);return phase,pos,offline_command(t,method,condition,events)
-    row,detail=score(folder,{},expected_reference=fn,protocol_file=PROTO,plan_file=OLD/'plans.json',trace_dir=DEST/'traces')
+        phase,pos,_=route.base(t)
+        cmd=split_command(t,method,events) if supplementary else offline_command(t,method,condition,events)
+        return phase,pos,cmd
+    row,detail=score(folder,{},expected_reference=fn,protocol_file=proto,plan_file=OLD/'plans.json',trace_dir=DEST/'traces')
     tr=pd.read_csv(DEST/'traces'/(folder.name+'.csv'))
     raw=dict(np.load(str(folder/'physics.npz')));release=outcome['release_us']
     wire=pd.read_csv(folder/'hil.csv')
