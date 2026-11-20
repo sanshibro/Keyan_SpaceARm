@@ -1,0 +1,23 @@
+{
+  "goal_xyz": [
+    1.98,
+    0.25,
+    1.71
+  ],
+  "goal_axis": [
+    0.6109852853641633,
+    0.4616567134559925,
+    -0.6430941299603677
+  ],
+  "exit_time": 36.62,
+  "geometry_checks": 2900,
+  "mechanics_only": false,
+  "case": {
+    "method": "proposed",
+    "material": "differential",
+    "vision": "occluded",
+    "seed": 26112090,
+    "case": "native-qualification-04"
+  },
+  "n_queries": 2900
+}

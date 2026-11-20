@@ -1,0 +1,127 @@
+{
+  "case": {
+    "method": "proposed",
+    "material": "differential",
+    "vision": "occluded",
+    "seed": 26112090,
+    "case": "native-qualification-04"
+  },
+  "success": true,
+  "safe": true,
+  "crossed": true,
+  "dwell_reached": true,
+  "settled_at_s": 43.26,
+  "completion_s": 43.26,
+  "estimated_rear_exit_s": 36.62,
+  "physical_rear_exit_s": 36.6,
+  "body_min_m": 0.08074980383680516,
+  "arm_tool_min_m": 0.08744018560268543,
+  "self_min_m": 0.0009507059402455398,
+  "physical_contact_steps": 0,
+  "hold_s": 0.0,
+  "feedback_hold_s": 0.0,
+  "clearance_hold_s": 0.0,
+  "max_dwell_s": 12.740000000000002,
+  "tip_rmse_m": 0.015199123008404739,
+  "tip_peak_m": 0.02265584373074332,
+  "axis_rmse_deg": 0.14776927784253135,
+  "axis_peak_deg": 0.32826244890934225,
+  "theta_rmse_deg": 0.501573643333634,
+  "phi_rmse_deg": 0.43717856218849066,
+  "theta_blackout_rmse_deg": 1.1963758197578307,
+  "phi_blackout_rmse_deg": 0.7099575647376789,
+  "whole_angle": {
+    "theta_rmse_deg": 0.501573643333634,
+    "phi_rmse_deg": 0.43717856218849066,
+    "theta_peak_deg": 1.9132251330312613,
+    "phi_peak_deg": 3.7399327470985213,
+    "samples": 2750,
+    "available": 2750,
+    "azimuth_samples": 2006
+  },
+  "blackout_angle": {
+    "theta_rmse_deg": 1.1963758197578307,
+    "phi_rmse_deg": 0.7099575647376789,
+    "theta_peak_deg": 1.8632640356844092,
+    "phi_peak_deg": 1.4496324729861954,
+    "samples": 200,
+    "available": 200,
+    "azimuth_samples": 200
+  },
+  "vision_hold_blackout": {
+    "theta_rmse_deg": 27.36548760093337,
+    "phi_rmse_deg": 16.24003434434799,
+    "theta_peak_deg": 40.50080836291664,
+    "phi_peak_deg": 23.85568034968236,
+    "samples": 200,
+    "available": 200,
+    "azimuth_samples": 200
+  },
+  "dynamic_theta_range_deg": 40.52993580591638,
+  "dynamic_phi_range_deg": 24.150099514708256,
+  "true_max_bend_deg": 77.9312515216303,
+  "true_max_total_curvature_deg": 77.95195941619671,
+  "source_valid_coverage": 1.0,
+  "terminal_after_gate_samples": 301,
+  "passed_inside_aperture": true,
+  "sample_period_s": 0.019999999999999574,
+  "physics_samples": 2750,
+  "max_control_alignment_s": 0.0,
+  "witness_bound_width_m": {
+    "body": 9.962325652068671e-05,
+    "arm": 9.99715389901068e-05,
+    "self": 9.994344844554081e-05
+  },
+  "goal_xyz": [
+    1.98,
+    0.25,
+    1.71
+  ],
+  "goal_axis": [
+    0.6109852853641633,
+    0.4616567134559925,
+    -0.6430941299603677
+  ],
+  "body_nearest": {
+    "t": 34.26,
+    "geoms": [
+      "collision_landing_163",
+      "G1_sill"
+    ]
+  },
+  "arm_nearest": {
+    "t": 33.6,
+    "geoms": [
+      "collision_gripper_finger1",
+      "G1_sill"
+    ]
+  },
+  "self_nearest": {
+    "t": 2.9,
+    "geoms": [
+      "geom317",
+      "arm1"
+    ]
+  },
+  "artifacts": {
+    "flight.ulg": "acc3f1b22ee6a7a8b8f2808b690c7b0726ecddc71971acfef48ca5aefe8ffaa6",
+    "flight.bag": "6b28605d523b94cf9d2133a98c3dc2532d4d9c12c3d3bdf9960190182ba03058",
+    "physics.npz": "5dd8f52402a68caf56397cf9e46d5c6f692c36c58e274fc6594b251befa74f1c",
+    "control.npz": "afa48b644716b5a3a63a99b959e8ff9ec7a04a89df7d932feb0957cf18d519cb",
+    "run.json": "e2a39c03b4dc0c326fbdbefb19eefb1fccaec3ca32b5eb68a7bf679558e68b65",
+    "provenance.json": "93e04e443dc8d189d29e83fcacad7ba49452cdf34af985c0bd5f6081c9af27be",
+    "control-summary.json": "2501aa02660f4b94d2fd9407bc7bf272db46b937923ebce85daee6ac640aa144",
+    "score-trace.npz": "c81631ee175efe6579fa1636f6347fec18297f88f3c311007763550270855dfa",
+    "optics/native.csv": "a8098cea1e6f4a8053b975f6acc450e63b584361f5fd2f857989d36615cda4f2",
+    "optics/index.jsonl": "60568f88ddae50f48e27f2fe577d39f78ce0981258448d06d0bf65f88d7461a5",
+    "optics/observations.npz": "5e82420432acbe437c4b1cb47f39a30e607948eb1b4abc3df271e984024d9aa9",
+    "sensors/strain_observations.npz": "a93637d574bbfbe61c90f6905ec94ba0abf24a823d35d9f42fe7c3447d11d978",
+    "sensors/estimate_proposed.npz": "26944ba7549f4e9ddfb207da70b1d0198e1455cc5a96e6e342154df73542756a"
+  },
+  "optics": {
+    "frames": 1151,
+    "valid": 1047,
+    "native_csv_sha256": "a8098cea1e6f4a8053b975f6acc450e63b584361f5fd2f857989d36615cda4f2"
+  },
+  "scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69"
+}

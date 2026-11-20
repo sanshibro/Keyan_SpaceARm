@@ -1,0 +1,26 @@
+{
+  "frames": 1151,
+  "valid": 1047,
+  "processing_wall_median_ms": [
+    31.172118993708864,
+    24.781483982224017,
+    21.828899974934757,
+    78.85612099198624
+  ],
+  "processing_wall_p95_ms": [
+    34.831205499358475,
+    29.794775997288525,
+    581.0693929961417,
+    637.910452001961
+  ],
+  "timing_columns": [
+    "render",
+    "native_including_disk",
+    "anchored_geometry",
+    "total"
+  ],
+  "native_csv_sha256": "a8098cea1e6f4a8053b975f6acc450e63b584361f5fd2f857989d36615cda4f2",
+  "index_sha256": "60568f88ddae50f48e27f2fe577d39f78ce0981258448d06d0bf65f88d7461a5",
+  "observations_sha256": "5e82420432acbe437c4b1cb47f39a30e607948eb1b4abc3df271e984024d9aa9",
+  "frozen_sources_unchanged": true
+}

@@ -1,0 +1,440 @@
+{
+  "inputs": {
+    "revision/protocols/round_gate_feedback.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+    "revision/scripts/gate_feedback_flight.py": "495fb855cc3d8076eb5309591404c519580653d8174977a17a212984caa89251",
+    "revision/scripts/gate_feedback_model.py": "8ca508f5c00ddc6a137b806c2ffc33ab67907b28c54e7d68e5bc5b9f0e3ba257",
+    "revision/scripts/round_f_sitl.py": "d615313a95fb07b05028837cc13bcad32346c0eb06f69be34aea8d2a4cf539e4",
+    "revision/scripts/gate_feedback_scores.py": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+    "revision/scripts/gate_live_optics.py": "4aae1160b31f38539625cdcad32ab03382e44f4a15aa8679364bdcfbeed83def",
+    "revision/scripts/gate_live_orb.cc": "10f61d6ab969722d28d75b76d10062f7c9e6f555ab688b761259dfc60ed57bc1",
+    "revision/scripts/gate_live_shape.py": "e3136c0881d653b81e04a9705ac77248c22b29ac96b9096c9af4d74e9dd7e58b",
+    "revision/scripts/gate_distance_audit.py": "628f6ef1b642f3b5bb5dea6a1ce240d7772e77369c1cb36c5faad40720b23672",
+    "revision/scripts/round_f_plant.py": "e0585590159ec577766c4e6c8511266b650af173aa7b650f1a440f52171e85cf",
+    "revision/scripts/gate_feedback_spec.py": "825744f7a51a795a64258df76e61bb6aae01be5664e6b01cc050fe914c55252b"
+  },
+  "perception_lock": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+  "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+  "cases": [
+    {
+      "case": "26112131-nominal-natural-vision",
+      "seed": 26112131,
+      "method": "vision",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-nominal-occluded-strain",
+      "seed": 26112131,
+      "method": "strain",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-differential-natural-fixed",
+      "seed": 26112131,
+      "method": "fixed",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-differential-occluded-proposed",
+      "seed": 26112131,
+      "method": "proposed",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-occluded-strain",
+      "seed": 26112137,
+      "method": "strain",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-natural-fixed",
+      "seed": 26112137,
+      "method": "fixed",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-nominal-occluded-proposed",
+      "seed": 26112137,
+      "method": "proposed",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112137-nominal-natural-oracle",
+      "seed": 26112137,
+      "method": "oracle",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-natural-fixed",
+      "seed": 26112143,
+      "method": "fixed",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-occluded-proposed",
+      "seed": 26112143,
+      "method": "proposed",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-differential-natural-oracle",
+      "seed": 26112143,
+      "method": "oracle",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112143-differential-occluded-vision",
+      "seed": 26112143,
+      "method": "vision",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-nominal-natural-strain",
+      "seed": 26112131,
+      "method": "strain",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-nominal-occluded-fixed",
+      "seed": 26112131,
+      "method": "fixed",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-differential-natural-proposed",
+      "seed": 26112131,
+      "method": "proposed",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-differential-occluded-oracle",
+      "seed": 26112131,
+      "method": "oracle",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-occluded-fixed",
+      "seed": 26112137,
+      "method": "fixed",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-natural-proposed",
+      "seed": 26112137,
+      "method": "proposed",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-nominal-occluded-oracle",
+      "seed": 26112137,
+      "method": "oracle",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112137-nominal-natural-vision",
+      "seed": 26112137,
+      "method": "vision",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-natural-proposed",
+      "seed": 26112143,
+      "method": "proposed",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-occluded-oracle",
+      "seed": 26112143,
+      "method": "oracle",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-differential-natural-vision",
+      "seed": 26112143,
+      "method": "vision",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112143-differential-occluded-strain",
+      "seed": 26112143,
+      "method": "strain",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-nominal-natural-fixed",
+      "seed": 26112131,
+      "method": "fixed",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-nominal-occluded-proposed",
+      "seed": 26112131,
+      "method": "proposed",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-differential-natural-oracle",
+      "seed": 26112131,
+      "method": "oracle",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-differential-occluded-vision",
+      "seed": 26112131,
+      "method": "vision",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-occluded-proposed",
+      "seed": 26112137,
+      "method": "proposed",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-natural-oracle",
+      "seed": 26112137,
+      "method": "oracle",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-nominal-occluded-vision",
+      "seed": 26112137,
+      "method": "vision",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112137-nominal-natural-strain",
+      "seed": 26112137,
+      "method": "strain",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-natural-oracle",
+      "seed": 26112143,
+      "method": "oracle",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-occluded-vision",
+      "seed": 26112143,
+      "method": "vision",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-differential-natural-strain",
+      "seed": 26112143,
+      "method": "strain",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112143-differential-occluded-fixed",
+      "seed": 26112143,
+      "method": "fixed",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-nominal-natural-proposed",
+      "seed": 26112131,
+      "method": "proposed",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-nominal-occluded-oracle",
+      "seed": 26112131,
+      "method": "oracle",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-differential-natural-vision",
+      "seed": 26112131,
+      "method": "vision",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-differential-occluded-strain",
+      "seed": 26112131,
+      "method": "strain",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-occluded-oracle",
+      "seed": 26112137,
+      "method": "oracle",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-natural-vision",
+      "seed": 26112137,
+      "method": "vision",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-nominal-occluded-strain",
+      "seed": 26112137,
+      "method": "strain",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112137-nominal-natural-fixed",
+      "seed": 26112137,
+      "method": "fixed",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-natural-vision",
+      "seed": 26112143,
+      "method": "vision",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-occluded-strain",
+      "seed": 26112143,
+      "method": "strain",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-differential-natural-fixed",
+      "seed": 26112143,
+      "method": "fixed",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112143-differential-occluded-proposed",
+      "seed": 26112143,
+      "method": "proposed",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-nominal-natural-oracle",
+      "seed": 26112131,
+      "method": "oracle",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-nominal-occluded-vision",
+      "seed": 26112131,
+      "method": "vision",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112131-differential-natural-strain",
+      "seed": 26112131,
+      "method": "strain",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112131-differential-occluded-fixed",
+      "seed": 26112131,
+      "method": "fixed",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-occluded-vision",
+      "seed": 26112137,
+      "method": "vision",
+      "vision": "occluded",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-differential-natural-strain",
+      "seed": 26112137,
+      "method": "strain",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112137-nominal-occluded-fixed",
+      "seed": 26112137,
+      "method": "fixed",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112137-nominal-natural-proposed",
+      "seed": 26112137,
+      "method": "proposed",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-natural-strain",
+      "seed": 26112143,
+      "method": "strain",
+      "vision": "natural",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-nominal-occluded-fixed",
+      "seed": 26112143,
+      "method": "fixed",
+      "vision": "occluded",
+      "material": "nominal"
+    },
+    {
+      "case": "26112143-differential-natural-proposed",
+      "seed": 26112143,
+      "method": "proposed",
+      "vision": "natural",
+      "material": "differential"
+    },
+    {
+      "case": "26112143-differential-occluded-oracle",
+      "seed": 26112143,
+      "method": "oracle",
+      "vision": "occluded",
+      "material": "differential"
+    }
+  ],
+  "registered_utc": "2026-11-20T10:25:59Z"
+}
