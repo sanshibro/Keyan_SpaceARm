@@ -1,0 +1,179 @@
+{
+  "cover": "overview.webp",
+  "files": [
+    {
+      "bytes": 8694,
+      "caption": "左偏航迹中同期的整机姿态与腕部原帧，依次为清晰、局部遮挡、完全遮挡和重锁。",
+      "file": "overview.webp",
+      "kind": "image",
+      "sha256": "c40db91b082f8d2f1eca83460441a885439b5f5cd6e434cbd686abf79f3b5a97",
+      "title": "腕部相机的四个时刻"
+    },
+    {
+      "bytes": 211456,
+      "caption": "上方按曝光时刻选帧。置信度、实际更新增益、两个偏置分量和四方法弯曲误差按估计输出时钟对齐。",
+      "file": "fusion-main.webp",
+      "kind": "curve",
+      "sha256": "513217d4b9c9d2f63393d5bfadbe2f95ca4e25ff4b1fd40faafdf974c642aaaf",
+      "title": "视觉、应变与弯曲误差的同步轨迹"
+    },
+    {
+      "bytes": 85456,
+      "caption": "三趟合并的全程成绩与等时长关键窗口；虚拟动捕独立计分。",
+      "file": "comparison.webp",
+      "kind": "curve",
+      "sha256": "09e43269242f7caaa37f7cac6027200bfd6265957d12f6d8c15792238eb9077c",
+      "title": "三种视觉条件的四方法比较"
+    },
+    {
+      "bytes": 1119931,
+      "caption": "22–41 s。逐帧回看飞机和腕部图像，并联读弯曲角及误差、观测置信度和在线偏置。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "overview.webp",
+      "sha256": "9da44f0355fe16d274c5e51d1efc7fa3bbc5e7a4fa90a1e667437ba16e3da00d",
+      "title": "穿门中视野退化、全黑与恢复的同步回放"
+    },
+    {
+      "bytes": 750896,
+      "caption": "第一页面向同一时刻解释估计机制；第二页给出四种方法的角度、方向、覆盖率、重锁时序和跨遮挡起漂成绩。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "c7217c3abbb6dfb1ad22f10b93e45a32c510d44c38811a3197b480883a344951",
+      "title": "两页组会 PDF"
+    },
+    {
+      "bytes": 433295,
+      "caption": "按应变工况、视觉工况和时段读取角度、方位与覆盖；同时提供四方法共同有效时刻的成绩。",
+      "file": "scores.json",
+      "kind": "data",
+      "sha256": "d10c65f2c68a1e4131c8db70dc24394d27548ac502b791e8ac3615a2247553f3",
+      "title": "三趟总体及逐趟评分"
+    },
+    {
+      "bytes": 34747,
+      "caption": "67 项硬性检查与逐趟明细；记录实际数值、阈值、方向与结果。",
+      "file": "acceptance.json",
+      "kind": "data",
+      "sha256": "f9473ad228b7f1d6b31a3393d3d603c8106dd2bf55cf4c2b2fddc322396d385e",
+      "title": "量化指标及逐趟复核"
+    },
+    {
+      "bytes": 5894,
+      "caption": "记录输入、传感器模型及估计器的文件指纹。",
+      "file": "frozen-settings.json",
+      "kind": "data",
+      "sha256": "16aa7c03c13ccc572b6fe509801d67e3167f735652ffbf2c5f26fa7c08637a3c",
+      "title": "模型与参数冻结记录"
+    },
+    {
+      "bytes": 17966,
+      "caption": "固定协方差基线与增广滤波器在独立标定航迹上的调参记录。",
+      "file": "pilot-selection.json",
+      "kind": "data",
+      "sha256": "ab702600f9bdda15c37ce31e93fe5ca203887167048340b49f3e4eb20152ce8f",
+      "title": "独立标定航迹与基线选择"
+    },
+    {
+      "bytes": 12021,
+      "caption": "各趟、工况的估计先于真值评分封存。",
+      "file": "release-lock.json",
+      "kind": "data",
+      "sha256": "19ef23817b5b0107a3b500d179bea83856bcca9e6600ccccb4bc92f0dfcbf53a",
+      "title": "估计轨迹的封存与因果核验"
+    },
+    {
+      "bytes": 6879,
+      "caption": "RGB-D、视觉标定及不同时段重锁统计，并保留原生二进制指纹。",
+      "file": "optical-audit.json",
+      "kind": "data",
+      "sha256": "4c505e739357fe681ca6e09bee435a0a26ff0b07cbe4044407ef2b458488e276",
+      "title": "原生视觉跟踪与几何校验"
+    },
+    {
+      "bytes": 3613,
+      "caption": "独立动作上的连续应变逆模型精度、方差覆盖和截断复算。",
+      "file": "bench-validation.json",
+      "kind": "data",
+      "sha256": "b941f299ce8ae39c45fc5c2e9551661a68410768cd72fa27c090e6aa1763cf1a",
+      "title": "四段独立台架动作"
+    },
+    {
+      "bytes": 45170,
+      "caption": "可按包名和成员路径核对 SHA-256。",
+      "file": "evidence-index.json",
+      "kind": "data",
+      "sha256": "c3d1de617f33796b16178353feb98cd84664ff29e26ecad16123b6bc480c4cd1",
+      "title": "原始数据包及逐文件指纹"
+    },
+    {
+      "bytes": 31592,
+      "caption": "按工况、时段和算法比较有效样本数、覆盖率、弯曲角及方位角 RMSE。",
+      "file": "full-scores.csv",
+      "kind": "data",
+      "sha256": "488271ae10988acacae7371bc40ecac0f32490bcc747dc3f77276970d4e5fd38",
+      "title": "可筛选的完整指标表"
+    },
+    {
+      "bytes": 4738840,
+      "caption": "训练外台架动作、标定航迹、传感参数和估计输入。",
+      "file": "calibration-and-audit.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "07f2e6618e4ed9e3aab33e55831e26a07795c765a501d9329c7d24cd88accc14",
+      "title": "独立台架、标定和冻结模型"
+    },
+    {
+      "bytes": 11357273,
+      "caption": "原生 ULog、ROS bag、MuJoCo 状态、RGB-D 关键时刻及输入指纹、传感器重放、四方法输出和独立评分真值。",
+      "file": "gate-26112011-straight.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "df4d47cc28563a3d6ad47758e1bff412c96ecb945d2e2a2c20c32b233fc0ed9a",
+      "title": "直行轨迹原始数据"
+    },
+    {
+      "bytes": 11488476,
+      "caption": "原生 ULog、ROS bag、MuJoCo 状态、RGB-D 关键时刻及输入指纹、传感器重放、四方法输出和独立评分真值。",
+      "file": "gate-26112012-left.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "4c15934ab5e571558c633e00111ff1de14463ca565aa055d4e7345a21b9c82a5",
+      "title": "左偏轨迹原始数据"
+    },
+    {
+      "bytes": 11522363,
+      "caption": "原生 ULog、ROS bag、MuJoCo 状态、RGB-D 关键时刻及输入指纹、传感器重放、四方法输出和独立评分真值。",
+      "file": "gate-26112013-right.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "6c03d578003499426e26de3a91cf7a3cea4a67de11c5ab0e55249d9a60d573c8",
+      "title": "右偏轨迹原始数据"
+    }
+  ],
+  "guide": [
+    "先看视频中腕部画面转黑的时刻，并对照偏置在遮挡前的收敛过程。",
+    "比较完整四方法曲线，再打开 PDF 查看三趟同轨统计与重锁延迟。",
+    "逐趟原始日志和输入指纹可以单独下载；离线包收录图、视频、两页报告和指标。"
+  ],
+  "id": "2026-11-20-augmented-fusion",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "d884310872a6d37bbcc158fb2b6b0bee0b1a51bf83a0e8c9d104d4de591b55aa"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "8a0893bc9c79105c6d7596949948d0ffa0967e1919c5371fc183e9e485c566ac"
+    }
+  },
+  "parent_round": "2026-11-20-strain-health",
+  "revision": "45604c8e17d28073916f2eb163050899afa19fa9",
+  "schema": 1,
+  "scope": "三趟留出的 PX4 SITL / MuJoCo 仿真飞行；连续逆模型与协方差在独立数据上标定。估计器按传感器到达顺序回放，虚拟动捕用于独立评分。",
+  "source_note": "主试验在 18–22 s 引入通道偏移。附加试验将同一差模偏移移至 29–33 s，与遮挡重叠，遮挡段误差为 7.06°。",
+  "stage": "G1 · 视觉与应变增广融合",
+  "summary": "三趟 PX4 / MuJoCo 飞行中用可见阶段校准应变偏置。相对贴片反向偏移时，4 秒全遮挡内的弯曲角误差降至 0.40°，覆盖全部 600 个输出时刻。",
+  "title": "面向视觉退化与应变迟滞的连续体臂形态融合",
+  "when": "2026-11-20T16:28:30+08:00"
+}

@@ -1,0 +1,502 @@
+{
+  "case": "241118-online_pause",
+  "labels_sha256": "14ba9c9d27a2407f3b12540ba7bd879c7d40019cbc3dd8be34c7df2553d49c44",
+  "settings": {
+    "acceleration": 4.0,
+    "position_rw": 0.11,
+    "bias_rw": 0.62,
+    "active_bias_rw": 1.6,
+    "initial_bias_sd": 0.38,
+    "fixed_strain_sd": 5.0,
+    "fixed_vision_sd": 0.25,
+    "fixed_acceleration": 1.0,
+    "strain_scale": 1.0,
+    "vision_scale": 0.09,
+    "vision_floor": 0.18,
+    "bias_evidence_tau": 0.48,
+    "bias_deadband": 1.05,
+    "vision_gate": 13.82,
+    "delay": 0.2
+  },
+  "candidates": {
+    "fixed": [
+      {
+        "parameters": {
+          "fixed_strain_sd": 0.5,
+          "fixed_vision_sd": 0.45,
+          "fixed_acceleration": 22
+        },
+        "balanced_loss": 3.7985243863362803,
+        "per_condition": {
+          "nominal/full": 0.4627088962029643,
+          "nominal/steady": 0.4929410112249093,
+          "nominal/gap": 0.5152651665198197,
+          "common/full": 2.6432661689500936,
+          "common/steady": 3.0991381195938477,
+          "common/gap": 3.320461402363418,
+          "differential/full": 6.574672283488427,
+          "differential/steady": 7.365407390487748,
+          "differential/gap": 6.769544989186828,
+          "single/full": 4.645770740896381,
+          "single/steady": 5.15183641060834,
+          "single/gap": 4.541280056512586
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 0.5,
+          "fixed_vision_sd": 0.9,
+          "fixed_acceleration": 22
+        },
+        "balanced_loss": 3.7007377649280664,
+        "per_condition": {
+          "nominal/full": 0.44099717772556657,
+          "nominal/steady": 0.4713621551464675,
+          "nominal/gap": 0.5148747091387025,
+          "common/full": 2.540222393113395,
+          "common/steady": 2.979756685460644,
+          "common/gap": 3.31881515412869,
+          "differential/full": 6.321753550188653,
+          "differential/steady": 7.087375780081928,
+          "differential/gap": 6.766678201429885,
+          "single/full": 4.468430756362783,
+          "single/steady": 4.959155039793171,
+          "single/gap": 4.539431576566901
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 0.9,
+          "fixed_vision_sd": 0.45,
+          "fixed_acceleration": 22
+        },
+        "balanced_loss": 3.989218920654199,
+        "per_condition": {
+          "nominal/full": 0.5019919528233194,
+          "nominal/steady": 0.5310764133281152,
+          "nominal/gap": 0.5164176889238615,
+          "common/full": 2.839865948853611,
+          "common/steady": 3.3277473295900855,
+          "common/gap": 3.3343258234749626,
+          "differential/full": 7.059762911778925,
+          "differential/steady": 7.900615360221737,
+          "differential/gap": 6.795052657932344,
+          "single/full": 4.984731023625563,
+          "single/steady": 5.5212692056228505,
+          "single/gap": 4.557770731675007
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 1.4,
+          "fixed_vision_sd": 0.45,
+          "fixed_acceleration": 22
+        },
+        "balanced_loss": 3.9634395368816016,
+        "per_condition": {
+          "nominal/full": 0.4909223582173322,
+          "nominal/steady": 0.5187473307498438,
+          "nominal/gap": 0.5195274393845983,
+          "common/full": 2.8031976663567413,
+          "common/steady": 3.286723101809047,
+          "common/gap": 3.3556372545436775,
+          "differential/full": 6.974932351049206,
+          "differential/steady": 7.810728718335399,
+          "differential/gap": 6.835162107101592,
+          "single/full": 4.924277704175712,
+          "single/steady": 5.457575297960947,
+          "single/gap": 4.5838431128951065
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 0.5,
+          "fixed_vision_sd": 0.9,
+          "fixed_acceleration": 4
+        },
+        "balanced_loss": 3.6776566902966477,
+        "per_condition": {
+          "nominal/full": 0.4265830854401636,
+          "nominal/steady": 0.4506808011129346,
+          "nominal/gap": 0.5132658346225704,
+          "common/full": 2.504333479179677,
+          "common/steady": 2.9384425610164806,
+          "common/gap": 3.326623804624289,
+          "differential/full": 6.2671605070883984,
+          "differential/steady": 7.027693059106203,
+          "differential/gap": 6.781282114580245,
+          "single/full": 4.429842840598802,
+          "single/steady": 4.9171723359238175,
+          "single/gap": 4.548799860266191
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 0.9,
+          "fixed_vision_sd": 0.45,
+          "fixed_acceleration": 4
+        },
+        "balanced_loss": 3.4064366372986625,
+        "per_condition": {
+          "nominal/full": 0.35654623557794773,
+          "nominal/steady": 0.37726785056966894,
+          "nominal/gap": 0.5220523622445071,
+          "common/full": 2.191037432664968,
+          "common/steady": 2.5804682951451463,
+          "common/gap": 3.379423553146174,
+          "differential/full": 5.51449166240114,
+          "differential/steady": 6.21495299169951,
+          "differential/gap": 6.881685579742745,
+          "single/full": 3.8971065501493323,
+          "single/steady": 4.347912102265433,
+          "single/gap": 4.614295031977378
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 1.4,
+          "fixed_vision_sd": 0.45,
+          "fixed_acceleration": 4
+        },
+        "balanced_loss": 2.9648216899787543,
+        "per_condition": {
+          "nominal/full": 0.2751394828530924,
+          "nominal/steady": 0.29907683643868843,
+          "nominal/gap": 0.5244853950719246,
+          "common/full": 1.7217936011810178,
+          "common/steady": 2.0425299060382516,
+          "common/gap": 3.40180702832391,
+          "differential/full": 4.323716689869084,
+          "differential/steady": 4.928164687654293,
+          "differential/gap": 6.92582878113897,
+          "single/full": 3.0495225138372737,
+          "single/steady": 3.442519882578665,
+          "single/gap": 4.643275474759879
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 3.0,
+          "fixed_vision_sd": 0.25,
+          "fixed_acceleration": 4
+        },
+        "balanced_loss": 2.3650559588145623,
+        "per_condition": {
+          "nominal/full": 0.281451148758228,
+          "nominal/steady": 0.31960277158000394,
+          "nominal/gap": 0.5241851092915419,
+          "common/full": 1.2139960299399168,
+          "common/steady": 1.461757773533317,
+          "common/gap": 3.4000739540038882,
+          "differential/full": 2.6104298097437812,
+          "differential/steady": 3.1170470029959403,
+          "differential/gap": 6.911499514134826,
+          "single/full": 1.7854750363112444,
+          "single/steady": 2.1232125980613623,
+          "single/gap": 4.6319407574207005
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 3.0,
+          "fixed_vision_sd": 0.25,
+          "fixed_acceleration": 1.0
+        },
+        "balanced_loss": 2.3633218742502766,
+        "per_condition": {
+          "nominal/full": 0.41838678609602376,
+          "nominal/steady": 0.46510355507059914,
+          "nominal/gap": 0.533320556291291,
+          "common/full": 1.2521039934260259,
+          "common/steady": 1.4988584842818176,
+          "common/gap": 3.41515540532083,
+          "differential/full": 2.503017393768533,
+          "differential/steady": 3.0065936768916597,
+          "differential/gap": 6.897707174305264,
+          "single/full": 1.7071622040819712,
+          "single/steady": 2.0440362517309025,
+          "single/gap": 4.6184170097384
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 3.0,
+          "fixed_vision_sd": 0.25,
+          "fixed_acceleration": 0.4
+        },
+        "balanced_loss": 2.335715893205061,
+        "per_condition": {
+          "nominal/full": 0.6514312381711149,
+          "nominal/steady": 0.7079589584768105,
+          "nominal/gap": 0.5209324528234323,
+          "common/full": 1.3040799077990481,
+          "common/steady": 1.5364057394021446,
+          "common/gap": 3.2740657586101696,
+          "differential/full": 2.4319981994009923,
+          "differential/steady": 2.910969690163065,
+          "differential/gap": 6.576190052541554,
+          "single/full": 1.697535035848614,
+          "single/steady": 2.0170872512596976,
+          "single/gap": 4.39993643396409
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 5.0,
+          "fixed_vision_sd": 0.25,
+          "fixed_acceleration": 1.0
+        },
+        "balanced_loss": 2.3103880350207024,
+        "per_condition": {
+          "nominal/full": 0.42967699409253823,
+          "nominal/steady": 0.47804179301073485,
+          "nominal/gap": 0.5369156674702262,
+          "common/full": 1.244032719336941,
+          "common/steady": 1.4875936479093832,
+          "common/gap": 3.3569694215189454,
+          "differential/full": 2.422375803419375,
+          "differential/steady": 2.9129242178513715,
+          "differential/gap": 6.731353970499067,
+          "single/full": 1.647747564935144,
+          "single/steady": 1.9754581775452862,
+          "single/gap": 4.501566442659418
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 5.0,
+          "fixed_vision_sd": 0.35,
+          "fixed_acceleration": 4.0
+        },
+        "balanced_loss": 2.3366069071349997,
+        "per_condition": {
+          "nominal/full": 0.3138555131216019,
+          "nominal/steady": 0.3538855484488267,
+          "nominal/gap": 0.5255725041577637,
+          "common/full": 1.2149383063770072,
+          "common/steady": 1.4609771389394695,
+          "common/gap": 3.3961987066842063,
+          "differential/full": 2.5098863493715626,
+          "differential/steady": 3.012758355097774,
+          "differential/gap": 6.888372285778034,
+          "single/full": 1.705925093155424,
+          "single/steady": 2.0420024745277647,
+          "single/gap": 4.614910609960559
+        }
+      },
+      {
+        "parameters": {
+          "fixed_strain_sd": 2.0,
+          "fixed_vision_sd": 0.45,
+          "fixed_acceleration": 1.0
+        },
+        "balanced_loss": 2.4758058603958824,
+        "per_condition": {
+          "nominal/full": 0.4667049567263126,
+          "nominal/steady": 0.5062811945347356,
+          "nominal/gap": 0.5254327797285587,
+          "common/full": 1.268290530658169,
+          "common/steady": 1.511807818438148,
+          "common/gap": 3.4274050293556604,
+          "differential/full": 2.802574481473976,
+          "differential/steady": 3.3216433328568984,
+          "differential/gap": 6.962041555968105,
+          "single/full": 1.9515998513074893,
+          "single/steady": 2.2992897723917958,
+          "single/gap": 4.66659902131074
+        }
+      }
+    ],
+    "augmented": [
+      {
+        "parameters": {
+          "bias_rw": 0.06,
+          "active_bias_rw": 0.7,
+          "bias_deadband": 1.1
+        },
+        "balanced_loss": 0.8182482306804294,
+        "per_condition": {
+          "nominal/full": 0.37614214151112424,
+          "nominal/steady": 0.40166376234757784,
+          "nominal/gap": 0.17242953719626292,
+          "common/full": 1.2428637442997994,
+          "common/steady": 1.431448362823074,
+          "common/gap": 1.1663046612071497,
+          "differential/full": 1.2894710118298716,
+          "differential/steady": 0.8808567722296148,
+          "differential/gap": 0.6693215782687769,
+          "single/full": 1.1161458078412743,
+          "single/steady": 0.6868414712320633,
+          "single/gap": 0.3854899173785643
+        }
+      },
+      {
+        "parameters": {
+          "bias_rw": 0.1,
+          "active_bias_rw": 0.95,
+          "bias_deadband": 1.1
+        },
+        "balanced_loss": 0.7030228632209403,
+        "per_condition": {
+          "nominal/full": 0.3529728862518519,
+          "nominal/steady": 0.373193120074405,
+          "nominal/gap": 0.17234858879756798,
+          "common/full": 1.0827553610538927,
+          "common/steady": 1.2386717779471912,
+          "common/gap": 0.814620943661711,
+          "differential/full": 1.1959772251243828,
+          "differential/steady": 0.7747800506346274,
+          "differential/gap": 0.516636235840016,
+          "single/full": 1.029503669529595,
+          "single/steady": 0.5866792240658285,
+          "single/gap": 0.29813527567021403
+        }
+      },
+      {
+        "parameters": {
+          "bias_rw": 0.16,
+          "active_bias_rw": 1.25,
+          "bias_deadband": 0.85
+        },
+        "balanced_loss": 0.5512059735084085,
+        "per_condition": {
+          "nominal/full": 0.331977447566334,
+          "nominal/steady": 0.34767073583029084,
+          "nominal/gap": 0.1834577223186067,
+          "common/full": 0.859316703614605,
+          "common/steady": 0.9646611453281788,
+          "common/gap": 0.3919547672955073,
+          "differential/full": 1.0272957957064208,
+          "differential/steady": 0.602063966233605,
+          "differential/gap": 0.30967545016606834,
+          "single/full": 0.898632629087818,
+          "single/steady": 0.476533341561294,
+          "single/gap": 0.2212319773921733
+        }
+      },
+      {
+        "parameters": {
+          "bias_rw": 0.22,
+          "active_bias_rw": 1.35,
+          "bias_deadband": 1.05
+        },
+        "balanced_loss": 0.4826127020653013,
+        "per_condition": {
+          "nominal/full": 0.32108161316815065,
+          "nominal/steady": 0.33484390212796705,
+          "nominal/gap": 0.2074315370450227,
+          "common/full": 0.7301031437256992,
+          "common/steady": 0.8067555947864151,
+          "common/gap": 0.2073609901212215,
+          "differential/full": 0.9395503767889009,
+          "differential/steady": 0.5088053336932671,
+          "differential/gap": 0.2296009301604614,
+          "single/full": 0.8450836441059406,
+          "single/steady": 0.4354736418852631,
+          "single/gap": 0.22526171717530608
+        }
+      },
+      {
+        "parameters": {
+          "acceleration": 8.0,
+          "bias_rw": 0.35,
+          "active_bias_rw": 1.35,
+          "bias_deadband": 1.05,
+          "vision_floor": 0.18,
+          "vision_scale": 0.09
+        },
+        "balanced_loss": 0.37256967441619504,
+        "per_condition": {
+          "nominal/full": 0.31074536369352557,
+          "nominal/steady": 0.33088337163852677,
+          "nominal/gap": 0.3755217684451052,
+          "common/full": 0.37857176133941606,
+          "common/steady": 0.408982135226848,
+          "common/gap": 0.35073853247205694,
+          "differential/full": 0.48875380209856045,
+          "differential/steady": 0.315803913419061,
+          "differential/gap": 0.3403787710949825,
+          "single/full": 0.48092382457092653,
+          "single/steady": 0.3362010821732738,
+          "single/gap": 0.3533317668220578
+        }
+      },
+      {
+        "parameters": {
+          "acceleration": 4.0,
+          "bias_rw": 0.62,
+          "active_bias_rw": 1.6,
+          "bias_deadband": 1.05,
+          "vision_floor": 0.18,
+          "vision_scale": 0.09
+        },
+        "balanced_loss": 0.3408450410628503,
+        "per_condition": {
+          "nominal/full": 0.30235479454822595,
+          "nominal/steady": 0.33005974905435204,
+          "nominal/gap": 0.3547919644004973,
+          "common/full": 0.30417229301744253,
+          "common/steady": 0.3415745390970368,
+          "common/gap": 0.35914141075640044,
+          "differential/full": 0.3871597175882415,
+          "differential/steady": 0.3181097042125243,
+          "differential/gap": 0.34627138797439744,
+          "single/full": 0.35224715564332054,
+          "single/steady": 0.33382480645165885,
+          "single/gap": 0.36043297001010627
+        }
+      },
+      {
+        "parameters": {
+          "acceleration": 2.2,
+          "bias_rw": 0.6,
+          "active_bias_rw": 1.55,
+          "bias_deadband": 1.05,
+          "vision_floor": 0.18,
+          "vision_scale": 0.09
+        },
+        "balanced_loss": 0.35510819638915353,
+        "per_condition": {
+          "nominal/full": 0.3249050206747612,
+          "nominal/steady": 0.36245789749489965,
+          "nominal/gap": 0.3577665298177185,
+          "common/full": 0.32919090082583335,
+          "common/steady": 0.3754180594084973,
+          "common/gap": 0.35605542088446374,
+          "differential/full": 0.3698770145769773,
+          "differential/steady": 0.3542252498448951,
+          "differential/gap": 0.3456389550896282,
+          "single/full": 0.3528085262670809,
+          "single/steady": 0.3755730465297517,
+          "single/gap": 0.35738173525533523
+        }
+      },
+      {
+        "parameters": {
+          "acceleration": 6.0,
+          "bias_rw": 0.48,
+          "active_bias_rw": 1.5,
+          "bias_deadband": 1.05,
+          "vision_floor": 0.18,
+          "vision_scale": 0.09
+        },
+        "balanced_loss": 0.3531188408310295,
+        "per_condition": {
+          "nominal/full": 0.30598776845212733,
+          "nominal/steady": 0.3285551313499425,
+          "nominal/gap": 0.36691694977736344,
+          "common/full": 0.3248043720347444,
+          "common/steady": 0.35540020948782913,
+          "common/gap": 0.36226111571947694,
+          "differential/full": 0.4361179951841906,
+          "differential/steady": 0.31342908173636325,
+          "differential/gap": 0.34843665005369345,
+          "single/full": 0.403667840729257,
+          "single/steady": 0.32809794323949903,
+          "single/gap": 0.36375103220786664
+        }
+      }
+    ]
+  },
+  "scoring": "Regular, common, differential and single conditions given equal weight. Each includes full, steady, and a withheld four-second camera interval. Each metric is 70% magnitude RMSE and 30% 2-D vector RMS. Same event clocks and front ends are used for both reviewed filters."
+}
