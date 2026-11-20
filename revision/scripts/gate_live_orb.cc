@@ -24,7 +24,8 @@ int main(int argc,char**argv){
  std::ofstream out(argv[3]);if(!out)return 2;
  ORB_SLAM3::System slam(argv[1],argv[2],ORB_SLAM3::System::RGBD,false);
  out<<"t,state,map_id,matched,features,reproj_px,track_ms,occluded";
- for(int k=0;k<12;k++)out<<",r"<<k;out<<"\n";out.flush();
+ for(int k=0;k<12;k++)out<<",r"<<k;
+ out<<",atlas_id,origin_kf\n";out.flush();
  std::printf("READY\n");std::fflush(stdout);
  std::string line;
  while(std::getline(std::cin,line)){
@@ -37,18 +38,26 @@ int main(int argc,char**argv){
   const auto Tcw=slam.TrackRGBD(rgb,depth,t);
   double ms=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-begin).count();
   const auto key=slam.GetTrackedKeyPointsUn();const auto points=slam.GetTrackedMapPoints();
-  std::map<unsigned long,int> maps;std::vector<double> residual;
+  using FrameOrigin=std::pair<unsigned long,unsigned long>;
+  std::map<FrameOrigin,int> maps;std::vector<double> residual;
   for(size_t i=0;i<std::min(key.size(),points.size());++i){
    auto *point=points[i];if(!point||point->isBad()||point->Observations()<1||!point->GetMap())continue;
    const auto local=Tcw*point->GetWorldPos();if(local.z()<=.0001)continue;
-   ++maps[point->GetMap()->GetId()];
+   auto *owner=point->GetMap();
+   ++maps[{owner->GetId(),owner->GetInitKFid()}];
    residual.push_back(std::hypot(fx*local.x()/local.z()+cx-key[i].pt.x,fy*local.y()/local.z()+cy-key[i].pt.y));
   }
-  long map=-1;int most=0;for(const auto &p:maps)if(p.second>most){map=p.first;most=p.second;}
+  // An in-place active-map reset can reuse its atlas ID with a new origin.
+  long map=-1,atlas=-1,origin=-1;int most=0;
+  for(const auto &p:maps)if(p.second>most){
+    atlas=p.first.first;origin=p.first.second;most=p.second;
+    map=(atlas<<32)|origin;
+  }
   double median=NAN;if(!residual.empty()){auto mid=residual.begin()+residual.size()/2;std::nth_element(residual.begin(),mid,residual.end());median=*mid;}
   bool black=cv::countNonZero(rgb.reshape(1))==0;
   std::ostringstream row;row<<std::setprecision(10)<<t<<','<<slam.GetTrackingState()<<','<<map<<','<<most<<','<<key.size()<<','<<median<<','<<ms<<','<<black;
   const auto pose=Tcw.matrix();for(int i=0;i<3;i++)for(int j=0;j<4;j++)row<<','<<pose(i,j);
+  row<<','<<atlas<<','<<origin;
   out<<row.str()<<"\n";out.flush();
   std::printf("POSE %ld %s\n",id,row.str().c_str());std::fflush(stdout);
  }

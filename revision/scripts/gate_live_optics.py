@@ -57,7 +57,7 @@ class NativeTracker:
             try:self.process.wait(timeout=5)
             except subprocess.TimeoutExpired:self.process.kill();self.process.wait()
             self.log.close();raise
-        self.fields=['t','state','map_id','matched','features','reproj_px','track_ms','occluded']+['r'+str(i) for i in range(12)]
+        self.fields=['t','state','map_id','matched','features','reproj_px','track_ms','occluded']+['r'+str(i) for i in range(12)]+['atlas_id','origin_kf']
     def _read(self,prefix,timeout):
         deadline=time.monotonic()+timeout
         while time.monotonic()<deadline:
@@ -126,6 +126,38 @@ class OpticalEstimator:
         return dict(t=float(t),arrival_t=float(t)+.2,frame=i,b=b,R=R,valid=bool(valid),locked=bool(valid),
                     quality=q,ready=bool(ready),diagnostics=diag)
 
+def textured_gate_box(asset,world,source,folder,seed):
+    """Map the gate finish onto its actual six faces, including vertical faces."""
+    from round_wrist_render import surface_image
+    name=source.get('name')
+    mesh='gate_skin_'+name
+    half=np.fromstring(source.get('size'),sep=' ')
+    # Explicit UVs prevent a vertical gate face sampling a single texture line.
+    vertices=[(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),
+              (-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]
+    faces=[(1,5,8,4),(2,3,7,6),(1,2,6,5),(4,8,7,3),(1,4,3,2),(5,6,7,8)]
+    obj=folder/(mesh+'-uv1.obj')
+    lines=['v %d %d %d'%v for v in vertices]
+    for i,face in enumerate(faces):
+        vertices_world=np.asarray([vertices[k-1] for k in face])*half
+        lengths=np.array([np.linalg.norm(vertices_world[1]-vertices_world[0]),
+                          np.linalg.norm(vertices_world[2]-vertices_world[1])])
+        scale=.80*lengths/lengths.max()
+        offset=np.array([.10*(i%3)/2.,.10*(i//3)])
+        for uv in ([0,0],[1,0],[1,1],[0,1]):
+            tex=offset+scale*np.array(uv)
+            lines.append('vt %.8f %.8f'%tuple(tex))
+        idx=['%d/%d'%(v,i*4+j+1) for j,v in enumerate(face)]
+        lines.extend(('f '+' '.join(idx[:3]),'f '+' '.join([idx[0],idx[2],idx[3]])))
+    if not obj.exists():obj.write_text('\n'.join(lines)+'\n')
+    tex=folder/(mesh+'-finish.png')
+    if not tex.exists():surface_image(tex,seed)
+    ET.SubElement(asset,'texture',name=mesh+'_tex',type='2d',file=str(tex.resolve()))
+    ET.SubElement(asset,'material',name=mesh+'_mat',texture=mesh+'_tex',specular='.03',shininess='.04')
+    ET.SubElement(asset,'mesh',name=mesh,file=str(obj.resolve()),scale=source.get('size'))
+    ET.SubElement(world,'geom',name='live_sensor_'+name,type='mesh',mesh=mesh,pos=source.get('pos'),
+                  contype='0',conaffinity='0',group='5',material=mesh+'_mat',rgba='.75 .77 .77 1')
+
 def add_sensor_canvas(root,folder=None,texture_seed=91105):
     """Add ONLY group-5 visual surfaces. Physics world geoms/materials stay untouched.
     Invoke at the END of scene_update, before compiling the one shared MjModel.
@@ -148,12 +180,10 @@ def add_sensor_canvas(root,folder=None,texture_seed=91105):
         copy.set('contype','0');copy.set('conaffinity','0');copy.set('material','live_mat_floor');copy.set('rgba','.94 .95 .96 1')
         position=np.array([float(v) for v in copy.get('pos','0 0 0').split()]);position[2]+=.0001
         copy.set('pos',' '.join(map(str,position)));world.append(copy)
-    for g in original:
+    for index,g in enumerate(original):
         name=g.get('name','')
         if g.get('type')=='box' and (int(g.get('contype','1'))!=0 or name.startswith(('G1_','gate_','GF_','gatefeedback_','feedback_'))):
-            copy=ET.fromstring(ET.tostring(g));copy.set('name','live_sensor_'+name);copy.set('group','5')
-            copy.set('contype','0');copy.set('conaffinity','0');copy.set('material','live_mat_gate');copy.set('rgba','.55 .59 .60 1')
-            world.append(copy)
+            textured_gate_box(asset,world,g,folder,texture_seed+41*index)
     for kind,pos,axis,size in [
         ('far','3.35 0 1.8','0 1 0 -1.5707963','1.9 2.7 .012'),
         ('rear','-2.7 0 1.8','0 1 0 1.5707963','1.9 2.7 .012'),
@@ -234,7 +264,7 @@ class LiveOptics:
         fraction=0.
         if self.condition!='natural' and blackout_start is not None:
             d=t-float(blackout_start)
-            if -5<=d<0:fraction=.68*float(np.clip((d+5.)/2.,0,1))
+            if -1.6<=d<0:fraction=.68*float(np.clip((d+1.6)/1.6,0,1))
             if self.condition=='occluded' and 0<=d<4:fraction=1.
         width=round(rgb.shape[1]*fraction)
         if width:rgb[:,:width]=0;depth[:,:width]=0

@@ -41,7 +41,7 @@ def dump(p,values):
     temp.replace(p)
 
 
-def prepare(runtime,pitch_i):
+def prepare(runtime,pitch_i,instance=INSTANCE):
     mixer=BUILD/'src/lib/mixer/MultirotorMixer/mixer_multirotor_normalized.generated.h'
     rows=mixer.read_text().split('_config_quad_x[] {')[1].split('};')[0]
     import re
@@ -70,10 +70,10 @@ param set SDLOG_PROFILE 0
                     'actuator_controls_0 4','actuator_outputs 0','vehicle_control_mode 0','vehicle_land_detected 0',
                     'vehicle_command 0','manual_control_setpoint 100'))+'\n')
     link=init/'px4-rc.mavlink'
-    link.write_text('''#!/bin/sh
-mavlink start -u 14586 -o 14546 -t 127.0.0.1 -r 1000000 -m onboard
-mavlink stream -u 14586 -s LOCAL_POSITION_NED -r 50
-mavlink stream -u 14586 -s ATTITUDE -r 20
+    link.write_text(f'''#!/bin/sh
+mavlink start -u {14580+instance} -o {14540+instance} -t 127.0.0.1 -r 1000000 -m onboard
+mavlink stream -u {14580+instance} -s LOCAL_POSITION_NED -r 50
+mavlink stream -u {14580+instance} -s ATTITUDE -r 20
 ''')
     return dict(binary_sha256=digest(BUILD/'bin/px4'),stock_rcS_sha256=digest(init/'rcS'),
                 params_override=params.read_text(),mavlink_override=link.read_text(),native_logger_topics=logger.read_text(),
@@ -109,13 +109,17 @@ class Bag:
 
 
 def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
-        protocol_name='round_f.json',mission_record=None,plant_factory=Plant,shape_policy=None):
+        protocol_name='round_f.json',mission_record=None,plant_factory=Plant,shape_policy=None,
+        flight_loop=None,instance=INSTANCE,wall_limit_s=200):
+    if flight_loop is not None and shape_policy is not None:
+        raise ValueError('Select one flight controller')
+    sysid=instance+1
     out.mkdir(parents=True,exist_ok=False)
     runtime=out/'runtime'
     plant=plant_factory()
     if noise_seed is not None:
         plant.noise=np.random.default_rng(noise_seed)
-    prov=prepare(runtime,pitch_i)
+    prov=prepare(runtime,pitch_i,instance)
     prov.update(tag=tag,protocol_sha256=digest(ROOT/'revision/protocols'/protocol_name),
                 plant_xml_sha256=hashlib.sha256(plant.xml.encode()).hexdigest(),
                 source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=str(ROOT)).decode().strip(),
@@ -128,17 +132,19 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
         prov['mission']=mission_record
     dump(out/'provenance.json',prov)
     server=socket.socket(); server.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-    server.bind(('127.0.0.1',4560+INSTANCE));server.listen(1);server.settimeout(18)
-    ground=mavutil.mavlink_connection('udpin:127.0.0.1:%d'%(14540+INSTANCE),source_system=246,source_component=191)
+    server.bind(('127.0.0.1',4560+instance));server.listen(1);server.settimeout(35 if flight_loop else 18)
+    ground=mavutil.mavlink_connection('udpin:127.0.0.1:%d'%(14540+instance),source_system=246,source_component=191)
     log=(out/'px4-console.txt').open('wb')
     env=dict(os.environ,PX4_SIM_MODEL='iris',PX4_ESTIMATOR='ekf2',PX4_SIM_HOST_ADDR='127.0.0.1')
-    px=subprocess.Popen([str(BUILD/'bin/px4'),'-d','-i',str(INSTANCE),'-w',str(runtime),'-s','etc/init.d-posix/rcS'],
+    px=subprocess.Popen([str(BUILD/'bin/px4'),'-d','-i',str(instance),'-w',str(runtime),'-s','etc/init.d-posix/rcS'],
                         env=env,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
     event_file=(out/'events.jsonl').open('w',buffering=1)
     wire_file=(out/'hil.csv').open('w',newline='',buffering=65536)
     writer=csv.writer(wire_file)
     writer.writerow('us phase released px4_act_us armed flag offboard m1 m2 m3 m4 request_deg issued_deg net_deg total_deg ex ey ez rx ry rz estimator_ms north east down ax ay az gx gy gz mx my mz hpa baro_m'.split())
     bag=Bag(out/'flight.bag'); samples={k:[] for k in ('us','qpos','qvel','rotor_N','tcp','ref','ctrl','ncon')}
+    if flight_loop is not None:
+        samples['contact_steps']=[]
     sock=None
     k=0;released=None; last_phase=''; arm_since=None
     last_mode=False;armed=False;motor=np.zeros(4);flag=0;act_us=0;positions=[]
@@ -156,14 +162,14 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
         while True:
             us=CLOCK_ORIGIN_US+k*round(TICK*1e6)
             sim_t=k*TICK
-            if sim_t>110 or time.monotonic()-ts0>200:
+            if sim_t>110 or time.monotonic()-ts0>wall_limit_s:
                 raise TimeoutError('Qualification sequence did not finish before timeout')
             if px.poll() is not None: raise RuntimeError('PX4 exited during flight')
             while True:
                 msg=ground.recv_match(blocking=False)
                 if msg is None: break
                 typ=msg.get_type()
-                if msg.get_srcSystem()!=SYS: continue
+                if msg.get_srcSystem()!=sysid: continue
                 if typ=='HEARTBEAT':
                     ground_seen=True;last_mode=((msg.custom_mode>>16)&255)==6
                 elif typ=='LOCAL_POSITION_NED':
@@ -189,18 +195,22 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                 vel=None if velocity is None else ENU_NED@velocity
                 theta=shape_policy.command(us,phase_t,ref,theta,xyz,vel,attitude,est_ms,att_ms,
                                            shape['net_bending_deg'])
+            if flight_loop is not None and phase_t is not None:
+                xyz=None if origin is None or estimate is None else LAUNCH+ENU_NED@(np.asarray(estimate)-origin)
+                vel=None if velocity is None else ENU_NED@velocity
+                phase,ref,theta=flight_loop.tick(phase_t,us,xyz,vel,attitude,est_ms,att_ms)
             if phase_t is not None and phase_t>score_end: phase='log_tail'
             if k%10==0 and ground_seen:
                 # A neutral virtual joystick supplies the monitored manual link in this isolated SITL.
-                ground.mav.manual_control_send(SYS,0,0,0,0,0)
+                ground.mav.manual_control_send(sysid,0,0,0,0,0)
                 ref_ned=ENU_NED@ref+(origin if origin is not None else 0.)
-                ground.mav.set_position_target_local_ned_send(us//1000,SYS,1,1,2552,
+                ground.mav.set_position_target_local_ned_send(us//1000,sysid,1,1,2552,
                                             *ref_ned,0,0,0,0,0,0,math.pi/2,0)
             if origin is not None and sim_t>10 and k%FREQ==0:
                 if not last_mode:
-                    ground.mav.command_long_send(SYS,1,176,0,1,6,0,0,0,0,0)
+                    ground.mav.command_long_send(sysid,1,176,0,1,6,0,0,0,0,0)
                 elif not armed:
-                    ground.mav.command_long_send(SYS,1,400,0,1,0,0,0,0,0,0)
+                    ground.mav.command_long_send(sysid,1,400,0,1,0,0,0,0,0,0)
             acc,gyro,mag,press,alt=plant.sensor()
             if k%25==0:
                 lat,lon,h,vel,vn,ve,vd=plant.gps()
@@ -228,6 +238,7 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                     # Paired airborne sensor noise is indexed by time since release.
                     plant.noise=np.random.default_rng([noise_seed,1])
                 released=k;phase_t=0.;phase='liftoff';event('support_removed',thrust_N=12*motor.sum())
+                if flight_loop is not None: flight_loop.start(us)
             if released is not None and (not armed or not last_mode):
                 raise RuntimeError('Arming or OFFBOARD lost in free flight')
             if phase!=last_phase:
@@ -237,8 +248,13 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
             issued=plant.issue(k,us,motor,theta)
             angles=[theta,issued,shape['net_bending_deg'],shape['total_curvature_deg']]
             # Stored qpos and position are at sensor time; thrust is issued for the following 4 ms.
-            if k%5==0:
+            sample_tick = k if flight_loop is None or released is None else k-released
+            if sample_tick%5==0:
                 bag.sample(us,ref,pose,estimate,motor,motor*12,angles)
+                if flight_loop is not None:
+                    samples['contact_steps'].append(plant.contact_count)
+                    if released is not None:
+                        flight_loop.bag_sample(bag.file,us)
                 for key,val in [('us',us),('qpos',plant.d.qpos.copy()),('qvel',plant.d.qvel.copy()),
                                 ('rotor_N',motor*12),('tcp',plant.d.site('tip').xpos.copy()),
                                 ('ref',ref.copy()),('ctrl',plant.d.ctrl.copy()),('ncon',plant.d.ncon)]:
