@@ -1,0 +1,2429 @@
+{
+  "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+  "approved_perception": "881a7996739479874b489ec910d7c78ebb26c075",
+  "trials": 60,
+  "cases_with_verified_raw_members": 60,
+  "total_raw_members": 1560,
+  "different_phystraces": 60,
+  "different_ulogs": 60,
+  "different_rosbags": 60,
+  "verified_black_rgbd_exposures": 3000,
+  "shared_model_xml": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+  "perception_lock": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+  "distinct_px4_executables": 1,
+  "interrupted_acquisitions": [
+    {
+      "case": "26112143-differential-natural-vision",
+      "frames_saved": 926,
+      "reason": "Host reboot interrupted image acquisition before the PX4/MuJoCo run closed.",
+      "archive": "interrupted/26112143-differential-natural-vision-before-20261120T125437Z",
+      "registered_flight_scored": true
+    }
+  ],
+  "conditions": {
+    "nominal-natural": {
+      "vision": {
+        "n": 3,
+        "passed": 0,
+        "safe": 0,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 3,
+        "physical_contact_flights": 3,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.536861822887408,
+            "median": 8.061404616634709,
+            "max": 8.329505539877673
+          },
+          "arm_tool_min_cm": {
+            "min": 7.537344543716143,
+            "median": 8.378330912389515,
+            "max": 8.44818831254632
+          },
+          "self_min_mm": {
+            "min": -1.1479754422045614,
+            "median": -0.9886576771925202,
+            "max": -0.8063669122051257
+          },
+          "tip_rmse_cm": {
+            "min": 1.3947001238469356,
+            "median": 2.001141604343425,
+            "max": 2.759121234160999
+          },
+          "tip_peak_cm": {
+            "min": 2.45647382250071,
+            "median": 3.061281763542225,
+            "max": 4.53862357730423
+          },
+          "axis_rmse_deg": {
+            "min": 2.254893580173659,
+            "median": 2.3410873160442924,
+            "max": 2.9180935719200827
+          },
+          "axis_peak_deg": {
+            "min": 4.898743776609916,
+            "median": 5.266748977087362,
+            "max": 6.736897752260576
+          },
+          "dynamic_theta_range_deg": {
+            "min": 48.631679672140685,
+            "median": 49.1424930403603,
+            "max": 49.4011029637434
+          },
+          "dynamic_phi_range_deg": {
+            "min": 32.63645175864009,
+            "median": 33.19887550351748,
+            "max": 33.3420557601904
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 6.277284117486226,
+            "median": 6.78771281697565,
+            "max": 6.837855154231484
+          },
+          "phi_rmse_deg": {
+            "min": 6.265432199377634,
+            "median": 6.269184783080668,
+            "max": 6.314934063366598
+          },
+          "hold_s": {
+            "min": 4.4599999999999795,
+            "median": 4.6799999999999855,
+            "max": 4.839999999999996
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.9599999999999937,
+            "median": 1.0999999999999943,
+            "max": 1.1000000000000085
+          },
+          "completion_s": null,
+          "true_max_total_curvature_deg": {
+            "min": 82.84170583110185,
+            "median": 82.87961487486048,
+            "max": 83.08780529797794
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 6423,
+            "azimuth_samples": 6013
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "strain": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.421488173004787,
+            "median": 8.10848509854695,
+            "max": 8.30682809057234
+          },
+          "arm_tool_min_cm": {
+            "min": 8.598807111220971,
+            "median": 9.118592918924069,
+            "max": 9.396921370772962
+          },
+          "self_min_mm": {
+            "min": 0.9508172745975245,
+            "median": 0.9525138556221272,
+            "max": 0.9527638778094287
+          },
+          "tip_rmse_cm": {
+            "min": 2.1734941533348877,
+            "median": 2.256867028736951,
+            "max": 3.006613114687895
+          },
+          "tip_peak_cm": {
+            "min": 2.787256981860175,
+            "median": 3.256240185723426,
+            "max": 3.3858923282598763
+          },
+          "axis_rmse_deg": {
+            "min": 0.1959646471335475,
+            "median": 0.22129756736756823,
+            "max": 0.5722657511218474
+          },
+          "axis_peak_deg": {
+            "min": 0.41101134863630523,
+            "median": 0.4408759852775405,
+            "max": 0.7465570088489512
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.38631664452485,
+            "median": 42.20545578751653,
+            "max": 42.36642880037742
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.49060293319303,
+            "median": 24.850220789803135,
+            "max": 24.851531165864202
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 0.2448293898445494,
+            "median": 0.27830192972286466,
+            "max": 0.5208869246578149
+          },
+          "phi_rmse_deg": {
+            "min": 0.36478113864063183,
+            "median": 0.45368414250918476,
+            "max": 0.7580858006889052
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.199999999999996,
+            "median": 43.239999999999995,
+            "max": 43.239999999999995
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.11309004162965,
+            "median": 78.39286634867427,
+            "max": 78.73680728522609
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6018
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "fixed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.312801253831745,
+            "median": 7.963241090353257,
+            "max": 8.217783708313435
+          },
+          "arm_tool_min_cm": {
+            "min": 8.33022182784959,
+            "median": 9.051114322228571,
+            "max": 9.326745831006935
+          },
+          "self_min_mm": {
+            "min": 0.9504967617836816,
+            "median": 0.9506054544895203,
+            "max": 0.9507648199594011
+          },
+          "tip_rmse_cm": {
+            "min": 1.8542704125984035,
+            "median": 2.177594246962932,
+            "max": 2.640482923073531
+          },
+          "tip_peak_cm": {
+            "min": 3.0070693550297474,
+            "median": 3.0466335621060536,
+            "max": 3.3195721700275556
+          },
+          "axis_rmse_deg": {
+            "min": 0.16762678608320847,
+            "median": 0.4518210690397534,
+            "max": 0.45808636407674086
+          },
+          "axis_peak_deg": {
+            "min": 0.20901233283660287,
+            "median": 0.47311575146711654,
+            "max": 0.5080948891465119
+          },
+          "dynamic_theta_range_deg": {
+            "min": 40.77808499132123,
+            "median": 40.84688084169382,
+            "max": 40.89262954619376
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.085438518911012,
+            "median": 24.18454921171321,
+            "max": 24.498478767653044
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 0.8391565475560948,
+            "median": 0.9049178769988184,
+            "max": 0.9080155704095747
+          },
+          "phi_rmse_deg": {
+            "min": 0.6087865952396297,
+            "median": 0.619839909141957,
+            "max": 0.7102048715213777
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.22,
+            "median": 43.239999999999995,
+            "max": 43.28
+          },
+          "true_max_total_curvature_deg": {
+            "min": 77.93129895742345,
+            "median": 78.31070097292418,
+            "max": 78.33083246049941
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6006
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "proposed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.55425438811267,
+            "median": 8.065087822852899,
+            "max": 8.248136690325328
+          },
+          "arm_tool_min_cm": {
+            "min": 8.704061308468994,
+            "median": 9.250131142688495,
+            "max": 9.263890390124352
+          },
+          "self_min_mm": {
+            "min": 0.9505207356132519,
+            "median": 0.9505509175760155,
+            "max": 0.9512541576549094
+          },
+          "tip_rmse_cm": {
+            "min": 1.5980544442559812,
+            "median": 1.9815053959846909,
+            "max": 2.5870894389916264
+          },
+          "tip_peak_cm": {
+            "min": 2.2679787345423494,
+            "median": 2.5607652719464142,
+            "max": 2.809237592283949
+          },
+          "axis_rmse_deg": {
+            "min": 0.13876074715416278,
+            "median": 0.44577636465794535,
+            "max": 0.5011281699485998
+          },
+          "axis_peak_deg": {
+            "min": 0.36504804598557256,
+            "median": 0.5653618660948942,
+            "max": 0.6493282081531887
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.347904012066685,
+            "median": 41.4528369043068,
+            "max": 41.522333822519386
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.426617382092413,
+            "median": 24.685296800248285,
+            "max": 24.789732995417733
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 0.27153629614985303,
+            "median": 0.4310019920862849,
+            "max": 0.4452496954996324
+          },
+          "phi_rmse_deg": {
+            "min": 0.3528626809345665,
+            "median": 0.3931226327266654,
+            "max": 0.4503278007640878
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.18,
+            "median": 43.239999999999995,
+            "max": 43.3
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.136651161525,
+            "median": 78.49510830087212,
+            "max": 78.50642694925624
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6017
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "oracle": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.489005528013859,
+            "median": 8.21659146886009,
+            "max": 8.304185833848692
+          },
+          "arm_tool_min_cm": {
+            "min": 8.523241234809223,
+            "median": 9.154065076077053,
+            "max": 9.284460438851719
+          },
+          "self_min_mm": {
+            "min": 0.950357475004203,
+            "median": 0.9506817048730275,
+            "max": 0.9511732449399222
+          },
+          "tip_rmse_cm": {
+            "min": 1.817560683160722,
+            "median": 2.0370896861971373,
+            "max": 2.0771408794815707
+          },
+          "tip_peak_cm": {
+            "min": 2.5625497258191525,
+            "median": 2.7746741976853584,
+            "max": 3.4247454963754858
+          },
+          "axis_rmse_deg": {
+            "min": 0.08679101314019097,
+            "median": 0.0936918591166218,
+            "max": 0.09615493760531621
+          },
+          "axis_peak_deg": {
+            "min": 0.10654849031969746,
+            "median": 0.11280962299180923,
+            "max": 0.11891409038645476
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.698345087561215,
+            "median": 41.6992078605289,
+            "max": 41.69950394223352
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.796348417418283,
+            "median": 24.798880334239385,
+            "max": 24.79907242990502
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "phi_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.199999999999996,
+            "median": 43.3,
+            "max": 43.339999999999996
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.02356467161496,
+            "median": 78.0236282434847,
+            "max": 78.02385919465114
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8250,
+            "azimuth_samples": 6021
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      }
+    },
+    "nominal-occluded": {
+      "vision": {
+        "n": 3,
+        "passed": 0,
+        "safe": 0,
+        "crossed": 3,
+        "dwelled": 0,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 3,
+        "physical_contact_flights": 3,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.5398606938440915,
+            "median": 7.63009254492244,
+            "max": 7.882798061080432
+          },
+          "arm_tool_min_cm": {
+            "min": 7.2813904094603785,
+            "median": 7.681909266592343,
+            "max": 7.978415310694518
+          },
+          "self_min_mm": {
+            "min": -0.9786847620746651,
+            "median": -0.9024747077218396,
+            "max": -0.699939943894831
+          },
+          "tip_rmse_cm": {
+            "min": 2.7429436409644357,
+            "median": 2.8144171843185113,
+            "max": 2.9198210850539423
+          },
+          "tip_peak_cm": {
+            "min": 3.888949818286901,
+            "median": 3.961316566684819,
+            "max": 4.863608833059499
+          },
+          "axis_rmse_deg": {
+            "min": 2.8486812537213986,
+            "median": 2.8551434966574507,
+            "max": 3.0145100689362723
+          },
+          "axis_peak_deg": {
+            "min": 5.252490933327501,
+            "median": 5.283553190487092,
+            "max": 6.163589781562739
+          },
+          "dynamic_theta_range_deg": {
+            "min": 3.4205325026094755,
+            "median": 7.3678437311093745,
+            "max": 8.001774713173972
+          },
+          "dynamic_phi_range_deg": {
+            "min": 4.970492252314072,
+            "median": 5.828420958885616,
+            "max": 10.68334579305947
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 7.064819456365888,
+            "median": 8.29889790873762,
+            "max": 9.79833879170003
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 9.95027437907838,
+            "median": 11.723484005657292,
+            "max": 12.349044610747011
+          },
+          "theta_rmse_deg": {
+            "min": 6.483931840657069,
+            "median": 6.786053657983276,
+            "max": 7.061580178499955
+          },
+          "phi_rmse_deg": {
+            "min": 5.871336813822991,
+            "median": 5.966557924193833,
+            "max": 6.196880999308452
+          },
+          "hold_s": {
+            "min": 7.560000000000006,
+            "median": 7.819999999999975,
+            "max": 8.879999999999992
+          },
+          "feedback_hold_s": {
+            "min": 4.16,
+            "median": 4.16,
+            "max": 4.16
+          },
+          "clearance_hold_s": {
+            "min": 0.779999999999994,
+            "median": 0.9199999999999946,
+            "max": 1.1399999999999935
+          },
+          "completion_s": null,
+          "true_max_total_curvature_deg": {
+            "min": 82.32711817272268,
+            "median": 82.7803897791789,
+            "max": 82.87161114669176
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 3.637386609413262,
+            "median": 5.678693333377172,
+            "max": 8.530033799614266
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 1.927375070176921,
+            "median": 7.851735171002795,
+            "max": 8.89522082757813
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 7.624427694587908,
+            "median": 8.273777088441136,
+            "max": 8.813926002112549
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 8.082354144621945,
+            "median": 10.746636791892115,
+            "max": 10.752927906966192
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 5799,
+            "azimuth_samples": 5391
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 30,
+            "azimuth_samples": 30
+          }
+        }
+      },
+      "strain": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.476839246141253,
+            "median": 8.150420125253795,
+            "max": 8.442918519806103
+          },
+          "arm_tool_min_cm": {
+            "min": 8.695566919730066,
+            "median": 9.246944403155918,
+            "max": 9.344572343307696
+          },
+          "self_min_mm": {
+            "min": 0.9505767156039907,
+            "median": 0.9509781108685852,
+            "max": 0.9521516044153874
+          },
+          "tip_rmse_cm": {
+            "min": 1.8410485751245556,
+            "median": 2.1095885305669024,
+            "max": 2.5789377572399905
+          },
+          "tip_peak_cm": {
+            "min": 2.342894979874299,
+            "median": 2.84859073147035,
+            "max": 3.0573996813367694
+          },
+          "axis_rmse_deg": {
+            "min": 0.21465190866202166,
+            "median": 0.21684399711219757,
+            "max": 0.5522412772768545
+          },
+          "axis_peak_deg": {
+            "min": 0.4199676169961534,
+            "median": 0.43280067303557473,
+            "max": 0.7317206398301285
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.38547724343746,
+            "median": 42.201204528361586,
+            "max": 42.35647720415008
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.488747163237147,
+            "median": 24.839312233338656,
+            "max": 24.84321318881555
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 0.2467406573907369,
+            "median": 0.2774891503678711,
+            "max": 0.4815566552615606
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 0.3539744761806531,
+            "median": 0.5347151496779473,
+            "max": 0.5665559590802053
+          },
+          "theta_rmse_deg": {
+            "min": 0.24439902553956283,
+            "median": 0.2798575365627146,
+            "max": 0.5155715340493734
+          },
+          "phi_rmse_deg": {
+            "min": 0.36071535865022625,
+            "median": 0.44804764766985067,
+            "max": 0.7591822993852523
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.18,
+            "median": 43.239999999999995,
+            "max": 43.28
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.08879906324802,
+            "median": 78.39211786792308,
+            "max": 78.73216140334563
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 28.45645722018654,
+            "median": 28.55943766521405,
+            "max": 29.13814745128461
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 16.993247481939004,
+            "median": 17.223027346319107,
+            "max": 17.32347801637072
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 41.936236000693455,
+            "median": 42.22115167328629,
+            "max": 42.84547000262155
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 25.17446923857699,
+            "median": 25.516478143413565,
+            "max": 25.59977020616992
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6018
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      },
+      "fixed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 8.082231045359645,
+            "median": 8.620351869694382,
+            "max": 8.762879561238837
+          },
+          "arm_tool_min_cm": {
+            "min": 8.427297308050056,
+            "median": 9.139434642072969,
+            "max": 9.397257852965032
+          },
+          "self_min_mm": {
+            "min": 0.9502455173045822,
+            "median": 0.9503004637151207,
+            "max": 0.9512519944622817
+          },
+          "tip_rmse_cm": {
+            "min": 1.6764258010010562,
+            "median": 1.858753282908824,
+            "max": 2.611711184847355
+          },
+          "tip_peak_cm": {
+            "min": 2.686951141015508,
+            "median": 2.808768206941651,
+            "max": 3.23747789693654
+          },
+          "axis_rmse_deg": {
+            "min": 0.0718895769332971,
+            "median": 0.4494309319632167,
+            "max": 0.5618757876527489
+          },
+          "axis_peak_deg": {
+            "min": 0.15750437739480228,
+            "median": 0.5445126459535228,
+            "max": 0.8293115238777105
+          },
+          "dynamic_theta_range_deg": {
+            "min": 39.21144649406351,
+            "median": 39.832151115391234,
+            "max": 39.94604085676841
+          },
+          "dynamic_phi_range_deg": {
+            "min": 25.241508594954652,
+            "median": 25.640283606487742,
+            "max": 25.696913039035138
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 7.0595439811697425,
+            "median": 7.201047420452391,
+            "max": 7.334180915207451
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 2.575846647997379,
+            "median": 2.685533218890291,
+            "max": 3.286384116487215
+          },
+          "theta_rmse_deg": {
+            "min": 2.196834268151682,
+            "median": 2.257699621075402,
+            "max": 2.453206806944007
+          },
+          "phi_rmse_deg": {
+            "min": 1.0108015778605126,
+            "median": 1.2271116518954706,
+            "max": 1.5348150937479998
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0800000000000125,
+            "max": 0.12000000000001165
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0800000000000125,
+            "max": 0.12000000000001165
+          },
+          "completion_s": {
+            "min": 43.16,
+            "median": 43.199999999999996,
+            "max": 44.28
+          },
+          "true_max_total_curvature_deg": {
+            "min": 77.93125362772344,
+            "median": 78.11925299991962,
+            "max": 78.28082060117956
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 29.595213941206207,
+            "median": 29.675561829429498,
+            "max": 30.0856006583177
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 16.17763673261261,
+            "median": 17.34200441592861,
+            "max": 17.842616042636973
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 39.75315757763014,
+            "median": 40.05802485712302,
+            "max": 40.4606389526358
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 23.555141966996757,
+            "median": 24.99154271463118,
+            "max": 25.278668169215905
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6006
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      },
+      "proposed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.9186013419134405,
+            "median": 8.294237595810033,
+            "max": 8.396317420575416
+          },
+          "arm_tool_min_cm": {
+            "min": 9.349659480437298,
+            "median": 9.402440504620094,
+            "max": 9.603830514975773
+          },
+          "self_min_mm": {
+            "min": 0.9507854848241192,
+            "median": 0.9533772437496335,
+            "max": 0.9552947565815588
+          },
+          "tip_rmse_cm": {
+            "min": 1.8630607896052591,
+            "median": 2.1239111171117178,
+            "max": 2.679699637788455
+          },
+          "tip_peak_cm": {
+            "min": 2.665514784128728,
+            "median": 2.6731627438751087,
+            "max": 3.092973724960349
+          },
+          "axis_rmse_deg": {
+            "min": 0.3280439598891624,
+            "median": 0.45190837980216086,
+            "max": 0.4609799539001694
+          },
+          "axis_peak_deg": {
+            "min": 0.5091346190763152,
+            "median": 0.5667676626793305,
+            "max": 0.6674079776911256
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.13672921609857,
+            "median": 42.29029651161746,
+            "max": 42.301292396152974
+          },
+          "dynamic_phi_range_deg": {
+            "min": 23.800687359307403,
+            "median": 24.25228247826714,
+            "max": 24.301865622729846
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 0.36728204224976724,
+            "median": 0.5777560389776906,
+            "max": 0.9477434228114605
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 0.4434709124204774,
+            "median": 0.4895718324644636,
+            "max": 0.5355913086665585
+          },
+          "theta_rmse_deg": {
+            "min": 0.40867630276267203,
+            "median": 0.4888076219265597,
+            "max": 0.5182265480313757
+          },
+          "phi_rmse_deg": {
+            "min": 0.35969607518758856,
+            "median": 0.46663914540070073,
+            "max": 0.7573411664464407
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.199999999999996,
+            "median": 43.22,
+            "max": 43.3
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.50660268303005,
+            "median": 79.0042297091351,
+            "max": 79.12822454491835
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 28.23331232323954,
+            "median": 28.626335398750772,
+            "max": 29.025219090552778
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 15.776067554163001,
+            "median": 15.980748333394066,
+            "max": 17.050165623748253
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 41.73038905627374,
+            "median": 42.355710805662376,
+            "max": 42.821100040417
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 23.550799544747292,
+            "median": 23.856323207905064,
+            "max": 25.204581016894963
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6017
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      },
+      "oracle": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.626174192356418,
+            "median": 8.281995631780863,
+            "max": 8.286962731348538
+          },
+          "arm_tool_min_cm": {
+            "min": 8.691562781315621,
+            "median": 9.25609217779547,
+            "max": 9.307435521025228
+          },
+          "self_min_mm": {
+            "min": 0.9510164217999698,
+            "median": 0.9510490551899048,
+            "max": 0.9517170441386366
+          },
+          "tip_rmse_cm": {
+            "min": 1.820914791578747,
+            "median": 1.832618062999687,
+            "max": 2.1725939004733723
+          },
+          "tip_peak_cm": {
+            "min": 2.5540897855769313,
+            "median": 2.623479586845662,
+            "max": 2.680220631919816
+          },
+          "axis_rmse_deg": {
+            "min": 0.08284101316247702,
+            "median": 0.09364482270623473,
+            "max": 0.09541601474003986
+          },
+          "axis_peak_deg": {
+            "min": 0.09671259522144186,
+            "median": 0.12006837708008818,
+            "max": 0.12841772820063604
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.69890499480724,
+            "median": 41.69903350674929,
+            "max": 41.700261996909944
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.798896537475112,
+            "median": 24.798925474575814,
+            "max": 24.79957964604292
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "theta_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "phi_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.22,
+            "median": 43.3,
+            "max": 43.339999999999996
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.02348993325104,
+            "median": 78.02373828999842,
+            "max": 78.02422554651133
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 28.238288601992355,
+            "median": 28.23884084150442,
+            "max": 28.246318113644943
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 16.35557239413201,
+            "median": 16.389065544439685,
+            "max": 17.28154156880075
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 41.79162209758925,
+            "median": 41.791765047468004,
+            "max": 41.79990678937988
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 24.344175720442195,
+            "median": 24.38397176763806,
+            "max": 25.444559659420634
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8250,
+            "azimuth_samples": 6021
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      }
+    },
+    "differential-natural": {
+      "vision": {
+        "n": 3,
+        "passed": 0,
+        "safe": 0,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 3,
+        "physical_contact_flights": 3,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.487842483380258,
+            "median": 7.81349439689461,
+            "max": 7.981436746374038
+          },
+          "arm_tool_min_cm": {
+            "min": 7.619324974908828,
+            "median": 7.854175339259073,
+            "max": 8.133334097364257
+          },
+          "self_min_mm": {
+            "min": -1.2633874855251324,
+            "median": -1.0429815826056672,
+            "max": -0.6738246945750413
+          },
+          "tip_rmse_cm": {
+            "min": 1.84333947107433,
+            "median": 2.109482224642642,
+            "max": 2.295999225891387
+          },
+          "tip_peak_cm": {
+            "min": 3.1374023698021163,
+            "median": 3.292774736587773,
+            "max": 3.4630094952280865
+          },
+          "axis_rmse_deg": {
+            "min": 2.405297815728779,
+            "median": 2.407289596415021,
+            "max": 3.3291740072913814
+          },
+          "axis_peak_deg": {
+            "min": 4.481766755596648,
+            "median": 5.389741785924948,
+            "max": 6.110223646602989
+          },
+          "dynamic_theta_range_deg": {
+            "min": 48.26750778744361,
+            "median": 49.02908404220943,
+            "max": 49.68248537977026
+          },
+          "dynamic_phi_range_deg": {
+            "min": 31.16978570188739,
+            "median": 33.51178627299687,
+            "max": 33.84051705328838
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 6.316736922191544,
+            "median": 6.5287088018509865,
+            "max": 6.809346466402259
+          },
+          "phi_rmse_deg": {
+            "min": 6.149774960195596,
+            "median": 6.294166887467574,
+            "max": 6.3188172338056585
+          },
+          "hold_s": {
+            "min": 4.619999999999997,
+            "median": 4.780000000000001,
+            "max": 4.899999999999977
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.9599999999999937,
+            "median": 1.0600000000000023,
+            "max": 1.0999999999999943
+          },
+          "completion_s": null,
+          "true_max_total_curvature_deg": {
+            "min": 82.62173341895618,
+            "median": 83.2528308032608,
+            "max": 83.34146002679724
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 6423,
+            "azimuth_samples": 6014
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "strain": {
+        "n": 3,
+        "passed": 0,
+        "safe": 2,
+        "crossed": 3,
+        "dwelled": 0,
+        "arm_below_red": 1,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.187804238015176,
+            "median": 7.956594826889636,
+            "max": 8.265181394981386
+          },
+          "arm_tool_min_cm": {
+            "min": 5.675429361168835,
+            "median": 6.380919137372154,
+            "max": 6.412549861036346
+          },
+          "self_min_mm": {
+            "min": 0.9509782492202461,
+            "median": 0.9510296406971802,
+            "max": 0.9518669527142499
+          },
+          "tip_rmse_cm": {
+            "min": 3.665683999556212,
+            "median": 4.149456146264775,
+            "max": 4.262498299101872
+          },
+          "tip_peak_cm": {
+            "min": 3.9083820116263457,
+            "median": 4.5218840558123405,
+            "max": 5.034266113135777
+          },
+          "axis_rmse_deg": {
+            "min": 6.317642731240679,
+            "median": 6.67742818702085,
+            "max": 6.913441603441569
+          },
+          "axis_peak_deg": {
+            "min": 6.4723130278282826,
+            "median": 6.757283034927899,
+            "max": 7.1571620778196525
+          },
+          "dynamic_theta_range_deg": {
+            "min": 40.14157031710222,
+            "median": 40.941256379510406,
+            "max": 41.08587808658589
+          },
+          "dynamic_phi_range_deg": {
+            "min": 29.766670543649305,
+            "median": 30.19383879958879,
+            "max": 30.26725369828124
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 5.291206560424713,
+            "median": 5.332428833475807,
+            "max": 5.421883346671697
+          },
+          "phi_rmse_deg": {
+            "min": 2.71728970174062,
+            "median": 3.0665815058785046,
+            "max": 3.1914827827229435
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": null,
+          "true_max_total_curvature_deg": {
+            "min": 73.90577801920168,
+            "median": 74.28785589195026,
+            "max": 74.44603259281594
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6018
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "fixed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.628048177024388,
+            "median": 8.191718665426537,
+            "max": 8.237093953575208
+          },
+          "arm_tool_min_cm": {
+            "min": 8.645143272363667,
+            "median": 9.25774518521722,
+            "max": 9.25916653682507
+          },
+          "self_min_mm": {
+            "min": 0.9505154065895873,
+            "median": 0.9506528833618857,
+            "max": 0.9565500151059393
+          },
+          "tip_rmse_cm": {
+            "min": 1.854032636638742,
+            "median": 1.911982785087779,
+            "max": 2.276589381027789
+          },
+          "tip_peak_cm": {
+            "min": 2.6403976060863785,
+            "median": 2.8289529930282575,
+            "max": 3.141867949995738
+          },
+          "axis_rmse_deg": {
+            "min": 0.060973052000907704,
+            "median": 0.3683517373251393,
+            "max": 0.37639592392573246
+          },
+          "axis_peak_deg": {
+            "min": 0.12695238115865168,
+            "median": 0.3937135557119206,
+            "max": 0.4498229137148512
+          },
+          "dynamic_theta_range_deg": {
+            "min": 40.74029078198893,
+            "median": 40.8578748474963,
+            "max": 40.88574155927713
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.244332295682298,
+            "median": 24.35359090872939,
+            "max": 24.5451247276354
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 0.8436554481251286,
+            "median": 0.8856000179357282,
+            "max": 0.8977602732523328
+          },
+          "phi_rmse_deg": {
+            "min": 0.578451250308718,
+            "median": 0.5988704581128228,
+            "max": 0.6082319013261768
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.22,
+            "median": 43.239999999999995,
+            "max": 43.32
+          },
+          "true_max_total_curvature_deg": {
+            "min": 77.85765677071115,
+            "median": 78.19290868608854,
+            "max": 78.25609724785882
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6006
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "proposed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.629131251096616,
+            "median": 8.221297212365739,
+            "max": 8.287998799416279
+          },
+          "arm_tool_min_cm": {
+            "min": 8.749720727450097,
+            "median": 9.357598427321804,
+            "max": 9.362178798033815
+          },
+          "self_min_mm": {
+            "min": 0.9505182563338865,
+            "median": 0.9507311457741076,
+            "max": 0.9598439645496847
+          },
+          "tip_rmse_cm": {
+            "min": 1.7203280435839483,
+            "median": 1.7750349137050627,
+            "max": 2.4268729704727394
+          },
+          "tip_peak_cm": {
+            "min": 2.235708254974057,
+            "median": 2.296576497193109,
+            "max": 2.862968822800033
+          },
+          "axis_rmse_deg": {
+            "min": 0.42261994128927105,
+            "median": 0.4279727135340888,
+            "max": 0.44047617388859844
+          },
+          "axis_peak_deg": {
+            "min": 0.5317948355681663,
+            "median": 0.6125813748595678,
+            "max": 0.7172645608144983
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.245557148123126,
+            "median": 41.418734356454934,
+            "max": 41.72652814890585
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.275998676047983,
+            "median": 24.69965523231405,
+            "max": 24.738610529956883
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 0.4747725100283007,
+            "median": 0.5021131553763849,
+            "max": 0.7583744185920493
+          },
+          "phi_rmse_deg": {
+            "min": 0.3393298968743353,
+            "median": 0.45047283799419285,
+            "max": 0.7707322440134571
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.18,
+            "median": 43.239999999999995,
+            "max": 43.26
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.25198409784322,
+            "median": 78.43995130155479,
+            "max": 78.45542455871588
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6017
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      },
+      "oracle": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.281098625507269,
+            "median": 8.01785689974841,
+            "max": 8.294553359100263
+          },
+          "arm_tool_min_cm": {
+            "min": 8.31797533771822,
+            "median": 8.950039691994863,
+            "max": 9.272208180847022
+          },
+          "self_min_mm": {
+            "min": 0.9504630689521596,
+            "median": 0.950515670927654,
+            "max": 0.9509741501876032
+          },
+          "tip_rmse_cm": {
+            "min": 1.8271876902119177,
+            "median": 1.9758025890827646,
+            "max": 2.527948486985355
+          },
+          "tip_peak_cm": {
+            "min": 2.764385891554224,
+            "median": 3.038960776699191,
+            "max": 3.269006423756359
+          },
+          "axis_rmse_deg": {
+            "min": 0.08018493390848704,
+            "median": 0.09227388569827535,
+            "max": 0.09695816935188839
+          },
+          "axis_peak_deg": {
+            "min": 0.09995075762974345,
+            "median": 0.10559508066951125,
+            "max": 0.11370151307995177
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.69881501604693,
+            "median": 41.69901163040077,
+            "max": 41.70028813106329
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.797857174198786,
+            "median": 24.798904242190616,
+            "max": 24.798982334150708
+          },
+          "theta_blackout_rmse_deg": null,
+          "phi_blackout_rmse_deg": null,
+          "theta_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "phi_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.28,
+            "median": 43.3,
+            "max": 43.32
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.0236360821299,
+            "median": 78.02371458071299,
+            "max": 78.02380256171703
+          },
+          "vision_hold_theta_rmse_deg": null,
+          "vision_hold_phi_rmse_deg": null,
+          "vision_hold_theta_peak_deg": null,
+          "vision_hold_phi_peak_deg": null,
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8250,
+            "azimuth_samples": 6021
+          },
+          "blackout_angle_counts": {
+            "samples": 0,
+            "available": 0,
+            "azimuth_samples": 0
+          }
+        }
+      }
+    },
+    "differential-occluded": {
+      "vision": {
+        "n": 3,
+        "passed": 0,
+        "safe": 0,
+        "crossed": 3,
+        "dwelled": 1,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 3,
+        "physical_contact_flights": 3,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.463630927850569,
+            "median": 7.505470012976323,
+            "max": 7.733046251203279
+          },
+          "arm_tool_min_cm": {
+            "min": 7.491662706566624,
+            "median": 7.578498482892973,
+            "max": 7.816123607620197
+          },
+          "self_min_mm": {
+            "min": -1.1556445335647063,
+            "median": -0.8884251716838683,
+            "max": -0.6380323025212682
+          },
+          "tip_rmse_cm": {
+            "min": 2.6161090801970945,
+            "median": 2.7442262611338646,
+            "max": 2.7674363540490043
+          },
+          "tip_peak_cm": {
+            "min": 3.7740077806463357,
+            "median": 3.9229316952008015,
+            "max": 4.2997661505677955
+          },
+          "axis_rmse_deg": {
+            "min": 2.2931099254264837,
+            "median": 2.487246619125893,
+            "max": 2.7342990149965405
+          },
+          "axis_peak_deg": {
+            "min": 4.687547765594636,
+            "median": 5.061167762307604,
+            "max": 5.391255682538022
+          },
+          "dynamic_theta_range_deg": {
+            "min": 3.1200396577241705,
+            "median": 5.862222781704382,
+            "max": 7.03037409430538
+          },
+          "dynamic_phi_range_deg": {
+            "min": 5.797485679537874,
+            "median": 7.831087441399994,
+            "max": 10.852501058605515
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 7.079974422008434,
+            "median": 7.33779889191461,
+            "max": 9.864722158881294
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 9.535353590285611,
+            "median": 13.322927816958176,
+            "max": 15.37240538231907
+          },
+          "theta_rmse_deg": {
+            "min": 6.577110597079057,
+            "median": 6.745188855969398,
+            "max": 6.776378374042376
+          },
+          "phi_rmse_deg": {
+            "min": 6.298823324304768,
+            "median": 6.451838989766375,
+            "max": 6.482700646034093
+          },
+          "hold_s": {
+            "min": 7.679999999999996,
+            "median": 7.760000000000009,
+            "max": 7.959999999999997
+          },
+          "feedback_hold_s": {
+            "min": 4.16,
+            "median": 4.16,
+            "max": 4.16
+          },
+          "clearance_hold_s": {
+            "min": 0.7800000000000082,
+            "median": 0.9399999999999977,
+            "max": 1.019999999999996
+          },
+          "completion_s": null,
+          "true_max_total_curvature_deg": {
+            "min": 82.32335634803044,
+            "median": 82.35786864574747,
+            "max": 82.49866640188678
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 3.3637131708029835,
+            "median": 3.3755201299213793,
+            "max": 5.764855576423759
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 9.476158600643346,
+            "median": 9.615592821042139,
+            "max": 9.780084880021743
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 7.3754292037120095,
+            "median": 7.661214378776428,
+            "max": 7.7571192012593
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 9.884800994240805,
+            "median": 10.301573475066618,
+            "max": 10.651010943852867
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 5799,
+            "azimuth_samples": 5390
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 30,
+            "azimuth_samples": 30
+          }
+        }
+      },
+      "strain": {
+        "n": 3,
+        "passed": 0,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 0,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.762716196942257,
+            "median": 7.976664189754759,
+            "max": 8.303559669154511
+          },
+          "arm_tool_min_cm": {
+            "min": 6.209537383382821,
+            "median": 6.536180931410135,
+            "max": 6.559227042951318
+          },
+          "self_min_mm": {
+            "min": 0.9512063345882603,
+            "median": 0.9513924211264827,
+            "max": 0.9524265447954144
+          },
+          "tip_rmse_cm": {
+            "min": 3.3321751856219066,
+            "median": 3.5216429224693675,
+            "max": 4.233522411588612
+          },
+          "tip_peak_cm": {
+            "min": 3.712884152575634,
+            "median": 3.9452188823048213,
+            "max": 4.744502819144234
+          },
+          "axis_rmse_deg": {
+            "min": 6.298938434380163,
+            "median": 6.64260504204726,
+            "max": 6.8961624505019
+          },
+          "axis_peak_deg": {
+            "min": 6.42669410546778,
+            "median": 6.7305194308437075,
+            "max": 7.143994820524899
+          },
+          "dynamic_theta_range_deg": {
+            "min": 40.14094164317572,
+            "median": 40.93967816075613,
+            "max": 41.08097115119349
+          },
+          "dynamic_phi_range_deg": {
+            "min": 29.764229620199167,
+            "median": 30.26873521810978,
+            "max": 30.27030630719544
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 6.386342700333662,
+            "median": 6.808841123081216,
+            "max": 6.922911964706293
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 2.487516179180563,
+            "median": 2.773734236598128,
+            "max": 3.006998179319687
+          },
+          "theta_rmse_deg": {
+            "min": 5.286625420633779,
+            "median": 5.327503066915319,
+            "max": 5.417656845446131
+          },
+          "phi_rmse_deg": {
+            "min": 2.7041128405140897,
+            "median": 3.06310427635357,
+            "max": 3.1593870852770687
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": null,
+          "true_max_total_curvature_deg": {
+            "min": 73.90541870133738,
+            "median": 74.28787539341187,
+            "max": 74.44644943497596
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 27.52461944001951,
+            "median": 27.66374828421844,
+            "max": 28.200714229474965
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 19.333292491526134,
+            "median": 20.023108037635247,
+            "max": 21.49931512229899
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 40.6619579961838,
+            "median": 40.998161583684976,
+            "max": 41.61447375344734
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 28.58528830015075,
+            "median": 29.464536367992423,
+            "max": 31.37677059266622
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6018
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      },
+      "fixed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.408777218229298,
+            "median": 7.870318410995555,
+            "max": 7.952307518810444
+          },
+          "arm_tool_min_cm": {
+            "min": 7.381099016058277,
+            "median": 8.22672216670263,
+            "max": 8.32408031862487
+          },
+          "self_min_mm": {
+            "min": 0.9502995565385719,
+            "median": 0.9506811948625902,
+            "max": 0.9565411882543303
+          },
+          "tip_rmse_cm": {
+            "min": 1.5450873434554828,
+            "median": 1.7155145405390007,
+            "max": 2.3482066125433207
+          },
+          "tip_peak_cm": {
+            "min": 2.0483631832792186,
+            "median": 2.1761179753587165,
+            "max": 2.68663748836392
+          },
+          "axis_rmse_deg": {
+            "min": 0.06063818232317727,
+            "median": 0.35481638278852845,
+            "max": 0.3784268103017569
+          },
+          "axis_peak_deg": {
+            "min": 0.1126977494880352,
+            "median": 0.42039778357254876,
+            "max": 0.42789435206604076
+          },
+          "dynamic_theta_range_deg": {
+            "min": 32.02907933990818,
+            "median": 32.58210600944942,
+            "max": 32.7521688899984
+          },
+          "dynamic_phi_range_deg": {
+            "min": 25.051583414588247,
+            "median": 25.31127210624958,
+            "max": 25.71832959966866
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 8.921450702757827,
+            "median": 9.04000263838666,
+            "max": 9.325427438296241
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 1.8773533091605954,
+            "median": 1.9822907646526178,
+            "max": 2.0495991306826515
+          },
+          "theta_rmse_deg": {
+            "min": 3.0267003113544537,
+            "median": 3.0528089091458415,
+            "max": 3.12772595055181
+          },
+          "phi_rmse_deg": {
+            "min": 0.8244976119588053,
+            "median": 0.8810540279928322,
+            "max": 0.9164509335987547
+          },
+          "hold_s": {
+            "min": 0.4799999999999969,
+            "median": 0.519999999999996,
+            "max": 0.5599999999999881
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.4799999999999969,
+            "median": 0.519999999999996,
+            "max": 0.5599999999999881
+          },
+          "completion_s": {
+            "min": 43.519999999999996,
+            "median": 43.6,
+            "max": 43.66
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.40657931208877,
+            "median": 78.4600257989492,
+            "max": 78.58481695307948
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 24.107037843391353,
+            "median": 24.20184607236938,
+            "max": 24.498449342909733
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 17.13720333605909,
+            "median": 17.310549362550123,
+            "max": 17.953562612606316
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 32.57796754075897,
+            "median": 32.866670230447134,
+            "max": 33.20366224594388
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 25.005813160701223,
+            "median": 25.317496535457565,
+            "max": 25.837404520688665
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6006
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      },
+      "proposed": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.771703881030698,
+            "median": 8.133054456988395,
+            "max": 8.304176056454443
+          },
+          "arm_tool_min_cm": {
+            "min": 8.896055078165057,
+            "median": 9.19092939344992,
+            "max": 9.520715027132386
+          },
+          "self_min_mm": {
+            "min": 0.9514812102915946,
+            "median": 0.9518130097708009,
+            "max": 0.952429511233898
+          },
+          "tip_rmse_cm": {
+            "min": 1.7022022804705166,
+            "median": 1.7664024423511677,
+            "max": 2.2822855446514283
+          },
+          "tip_peak_cm": {
+            "min": 2.3347879740783384,
+            "median": 2.720908508948371,
+            "max": 2.7755300748491822
+          },
+          "axis_rmse_deg": {
+            "min": 0.1242721623441731,
+            "median": 0.4273269336731752,
+            "max": 0.4428351491375711
+          },
+          "axis_peak_deg": {
+            "min": 0.2941114604093286,
+            "median": 0.6221637314550541,
+            "max": 0.6311170787877406
+          },
+          "dynamic_theta_range_deg": {
+            "min": 40.44651956302351,
+            "median": 41.396941852260944,
+            "max": 41.659730885724386
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.24992252257034,
+            "median": 24.2544134347581,
+            "max": 24.509730359641452
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 0.2747658917368339,
+            "median": 0.5897921694506851,
+            "max": 0.7124253763668218
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 0.43027365751621344,
+            "median": 0.4465948017067514,
+            "max": 0.44879052883754444
+          },
+          "theta_rmse_deg": {
+            "min": 0.3918237256397661,
+            "median": 0.4909633541311491,
+            "max": 0.49809876890448973
+          },
+          "phi_rmse_deg": {
+            "min": 0.3090747197676438,
+            "median": 0.35185169924035203,
+            "max": 0.4688564637140831
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.199999999999996,
+            "median": 43.199999999999996,
+            "max": 43.26
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.05448294211317,
+            "median": 78.39698790777474,
+            "max": 78.52158446671248
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 27.850428104125886,
+            "median": 27.97965809111098,
+            "max": 28.686090433149356
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 15.587324502986963,
+            "median": 16.555514111397372,
+            "max": 16.98344758690542
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 41.03189270389909,
+            "median": 41.4422990289465,
+            "max": 42.19715922589857
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 23.314426828095463,
+            "median": 24.67687391216606,
+            "max": 25.005167778630607
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8249,
+            "azimuth_samples": 6017
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      },
+      "oracle": {
+        "n": 3,
+        "passed": 3,
+        "safe": 3,
+        "crossed": 3,
+        "dwelled": 3,
+        "arm_below_red": 0,
+        "body_below_red": 0,
+        "self_zero_or_negative": 0,
+        "physical_contact_flights": 0,
+        "metrics": {
+          "body_min_cm": {
+            "min": 7.669770506229526,
+            "median": 8.109155143433567,
+            "max": 8.24289255956145
+          },
+          "arm_tool_min_cm": {
+            "min": 8.690361284239842,
+            "median": 9.003959189325986,
+            "max": 9.260856652165014
+          },
+          "self_min_mm": {
+            "min": 0.9502022724089387,
+            "median": 0.9507555580297427,
+            "max": 0.9508976409772621
+          },
+          "tip_rmse_cm": {
+            "min": 1.641072613119699,
+            "median": 1.9780961882091552,
+            "max": 2.3066302622327206
+          },
+          "tip_peak_cm": {
+            "min": 2.5153823899803958,
+            "median": 2.5811006432189294,
+            "max": 2.58397682984153
+          },
+          "axis_rmse_deg": {
+            "min": 0.08120980022773588,
+            "median": 0.0914598404343458,
+            "max": 0.09484779760159852
+          },
+          "axis_peak_deg": {
+            "min": 0.10115029466624122,
+            "median": 0.11608858797234167,
+            "max": 0.11734205422785503
+          },
+          "dynamic_theta_range_deg": {
+            "min": 41.69928049122621,
+            "median": 41.699306322738956,
+            "max": 41.70038039551326
+          },
+          "dynamic_phi_range_deg": {
+            "min": 24.79783225976217,
+            "median": 24.798776503771013,
+            "max": 24.79910087450276
+          },
+          "theta_blackout_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "phi_blackout_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "theta_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "phi_rmse_deg": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "feedback_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "clearance_hold_s": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0
+          },
+          "completion_s": {
+            "min": 43.239999999999995,
+            "median": 43.28,
+            "max": 43.32
+          },
+          "true_max_total_curvature_deg": {
+            "min": 78.02371982126951,
+            "median": 78.02408764162065,
+            "max": 78.02429438268364
+          },
+          "vision_hold_theta_rmse_deg": {
+            "min": 28.248158041419305,
+            "median": 28.25052642434202,
+            "max": 28.257941288436033
+          },
+          "vision_hold_phi_rmse_deg": {
+            "min": 16.32051282159539,
+            "median": 16.764128533110316,
+            "max": 17.332409001264043
+          },
+          "vision_hold_theta_peak_deg": {
+            "min": 41.8018783534696,
+            "median": 41.805657964955735,
+            "max": 41.81378918003677
+          },
+          "vision_hold_phi_peak_deg": {
+            "min": 24.301620233441326,
+            "median": 24.831990833957548,
+            "max": 25.50366863094729
+          },
+          "whole_angle_counts": {
+            "samples": 8250,
+            "available": 8250,
+            "azimuth_samples": 6021
+          },
+          "blackout_angle_counts": {
+            "samples": 600,
+            "available": 600,
+            "azimuth_samples": 600
+          }
+        }
+      }
+    }
+  }
+}

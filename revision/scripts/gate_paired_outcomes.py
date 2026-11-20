@@ -16,7 +16,7 @@ def build(stage):
            for v in metrics.values() if v['case']['vision']=='occluded'}
     seeds=s['seeds'];plt=style()
     fig,axes=plt.subplots(1,3,figsize=(9.6,3.95),width_ratios=[1.12,1.14,.91])
-    fig.subplots_adjust(left=.126,right=.99,top=.78,bottom=.22,wspace=.29)
+    fig.subplots_adjust(left=.126,right=.99,top=.78,bottom=.27,wspace=.29)
     keys=[('arm_tool_min_m',100,6.0,'Minimum arm–frame clearance (cm)'),
           ('axis_rmse_deg',1,3.,'Terminal tool-axis RMSE (deg)')]
     for j,(key,factor,threshold,label) in enumerate(keys):
@@ -56,7 +56,7 @@ def build(stage):
     fig.text(.02,.893,'Each horizontal segment pairs two independent flights with the same seed, controller and 4 s shutter.',fontsize=8.4,color=MUTED)
     handles=[Line2D([],[],marker='o',mfc='white',mec=INK,ls='none',label='Baseline material hysteresis'),
              Line2D([],[],marker='o',mfc=INK,mec=INK,ls='none',label='Hysteresis + pre-entry differential offset')]
-    fig.legend(handles=handles,loc='lower left',bbox_to_anchor=(.111,.074),ncol=2,frameon=False,fontsize=8)
+    fig.legend(handles=handles,loc='lower left',bbox_to_anchor=(.111,.071),ncol=2,frameon=False,fontsize=8)
     fig.text(.126,.045,'Rows follow seeds 26112131, 26112137, 26112143. Vision and oracle pairs indicate repeat-flight variation.',size=7.3,color=MUTED)
     fig.text(.126,.014,'Axis RMSE spans 49–55 s. Task completion uses the registered joint 1 s dwell.',size=7.3,color=MUTED)
     save(fig,stage/'review','gate_paired_outcomes');plt.close(fig)

@@ -175,13 +175,24 @@ def build(stage,evidence_commit):
     add('image','keyframes.webp','同视角 3D 过门与门后对准','首行为同步遮挡关键帧，中行为各趟最接近门框的过门时刻，末行为同一时刻的夹爪与目标轴。')
     add('curve','curves.webp','弯曲、方位、三维净空与末端误差','五趟轨迹使用同一时间坐标。灰带覆盖腕部相机的四秒全遮挡。')
     add('curve','paired.webp','加上差模偏移后，净空和对准怎样变化','每段连接同一种子的两趟动态遮挡飞行。空心与实心符号分别对应基础迟滞和进门前已形成差模偏移的工况。纯视觉与真值参考两行给出独立重复飞行的波动。')
-    add('curve','wrist-window.webp','真实腕部画面与保留末帧的动态误差','取自同一趟融合飞行，图像与角度按曝光和交付两种时间戳对齐。',rd/'gate_wrist_window.webp')
+    add('curve','wrist-window.webp','腕部 RGB-D 原帧与保留末帧的角度误差','取自同一趟融合飞行，图像与角度按曝光和交付两种时间戳对齐。',rd/'gate_wrist_window.webp')
     add('curve','methods.webp','五方法独立飞行的完整时序','每列保留该趟自己的目标、真实形态和估计。查看整个飞行区间的净空、位置和工具轴向误差。')
     add('curve','states.webp','逐方法的状态与停顿','比较进入过门与对准阶段的时间，查看因反馈断流或包络保护而暂停的区间。')
     add('video','replay.mp4','五方法同步多机位回放','每列是一趟独立飞行，从两路系统模型视图切到当时送入跟踪器的腕部图像，下方同步显示臂爪净空和末端误差。',rd/'gate_multiview_comparison.mp4',poster='overview.webp')
     add('document','review.pdf','两页审阅 PDF','第一页解释形态反馈、净空与末端对位，第二页汇总三配对种子上的四种工况。',rd/'gate_review.pdf')
     add('data','all-trials.csv','60 趟闭环成绩','成功判据、停顿、工具误差、角度与方位精度，以及每项有效观测的样本数。',rd/'all_trials_metrics.csv')
-    add('data','physical-audit.csv','过门最近点与视觉恢复时间','每趟臂爪最近点附近的弯角偏差、物理欠角、工具高度和曝光到交付的恢复时间。',d/'gate-physical-audit.csv')
+    audit=read(d/'case-evidence-audit.json')
+    seed=read(stage/'protocol.json')['representative_seed']
+    clear=audit[f'{seed}-differential-natural-strain']['arm_at_minimum']
+    shutter=audit[f'{seed}-differential-occluded-strain']['arm_at_minimum']
+    dz=1000*abs(shutter['body_z_m']-clear['body_z_m'])
+    dt=abs(shutter['theta_true_deg']-clear['theta_true_deg'])
+    gaps=read(d/'metrics.json')['cases']
+    a=100*gaps[f'{seed}-differential-natural-strain']['arm_tool_min_m']
+    b=100*gaps[f'{seed}-differential-occluded-strain']['arm_tool_min_m']
+    add('data','physical-audit.csv','过门最近点与视觉恢复时间',
+        f"代表种子的差模纯应变飞行中，清晰组最小臂爪净空为 {a:.2f} cm，遮挡组为 {b:.2f} cm。"
+        f"两趟在各自最近点处的真实弯角相差 {dt:.3f}°，机身高度相差 {dz:.2f} mm。",d/'gate-physical-audit.csv')
     add('data','native-log-audit.json','飞控、ROS 与物理执行的逐趟核对',f"按时间戳配对 {native['exact_timestamp_motor_matches']:,} 条 PX4 电机输出与 HIL 指令。ROS 的二维参考、估计与驱动量各有 {native['matched_shape_samples_per_topic']:,} 个样本逐点核对。",d/'native-log-audit.json')
     add('data','evidence-index.csv','原生飞行日志索引','按配对种子和工况保存原始包的固定 Git 修订地址、字节数和完整 SHA-256。',rd/'evidence-index.csv')
     add('data','cohort-summary.json','配对工况汇总','逐种工况给出三趟的最小值、中位数、最大值、任务通过数和可用观测数。',d/'cohort-summary.json')

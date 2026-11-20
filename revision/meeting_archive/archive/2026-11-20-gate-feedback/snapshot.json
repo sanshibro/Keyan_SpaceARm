@@ -1,0 +1,159 @@
+{
+  "cover": "overview.webp",
+  "files": [
+    {
+      "bytes": 7464,
+      "caption": "取自第 33.50 秒的同步斜视机位。左列为纯应变，右列为增广融合，红线连接各趟实际最近的表面。",
+      "file": "overview.webp",
+      "kind": "image",
+      "sha256": "66631a43b86783df4778d208b3fe3f2c84af3b97d55a2c6c16d0cb3afca1b624",
+      "title": "进门后臂爪与门槛的距离"
+    },
+    {
+      "bytes": 135004,
+      "caption": "首行为同步遮挡关键帧，中行为各趟最接近门框的过门时刻，末行为同一时刻的夹爪与目标轴。",
+      "file": "keyframes.webp",
+      "kind": "image",
+      "sha256": "ab6d08d0942e37c60cb35fd50775360aa5a965c18e54f2cf19801ed4ecbfc783",
+      "title": "同视角 3D 过门与门后对准"
+    },
+    {
+      "bytes": 190012,
+      "caption": "五趟轨迹使用同一时间坐标。灰带覆盖腕部相机的四秒全遮挡。",
+      "file": "curves.webp",
+      "kind": "curve",
+      "sha256": "b3ab86de6377857f1bed934527f179dd9cab2bb4e756f6aba051de37bcacb74f",
+      "title": "弯曲、方位、三维净空与末端误差"
+    },
+    {
+      "bytes": 83336,
+      "caption": "每段连接同一种子的两趟动态遮挡飞行。空心与实心符号分别对应基础迟滞和进门前已形成差模偏移的工况。纯视觉与真值参考两行给出独立重复飞行的波动。",
+      "file": "paired.webp",
+      "kind": "curve",
+      "sha256": "789cb128750ea92e478119039994e62f588fbb42ee9e28851fd3e34bc390d531",
+      "title": "加上差模偏移后，净空和对准怎样变化"
+    },
+    {
+      "bytes": 70336,
+      "caption": "取自同一趟融合飞行，图像与角度按曝光和交付两种时间戳对齐。",
+      "file": "wrist-window.webp",
+      "kind": "curve",
+      "sha256": "fef622c598321e79ced32f551aaf45bb56dc24f8c0ecf39101fa3817fbf26bba",
+      "title": "腕部 RGB-D 原帧与保留末帧的角度误差"
+    },
+    {
+      "bytes": 231840,
+      "caption": "每列保留该趟自己的目标、真实形态和估计。查看整个飞行区间的净空、位置和工具轴向误差。",
+      "file": "methods.webp",
+      "kind": "curve",
+      "sha256": "ce8b82c463ee54f54268b20a9efeeb9c642b827aaeb1fb7b0511eed2eeee2547",
+      "title": "五方法独立飞行的完整时序"
+    },
+    {
+      "bytes": 35260,
+      "caption": "比较进入过门与对准阶段的时间，查看因反馈断流或包络保护而暂停的区间。",
+      "file": "states.webp",
+      "kind": "curve",
+      "sha256": "85e591ecbe3c7d5540d4947dd8196402be6dc482db414fe97ba208272bad6d3c",
+      "title": "逐方法的状态与停顿"
+    },
+    {
+      "bytes": 4140358,
+      "caption": "每列是一趟独立飞行，从两路系统模型视图切到当时送入跟踪器的腕部图像，下方同步显示臂爪净空和末端误差。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "overview.webp",
+      "sha256": "32d2a1df4e7636531b08e72a64f1853dbce913f6385022a08cdb78e7cadb4aa7",
+      "title": "五方法同步多机位回放"
+    },
+    {
+      "bytes": 778629,
+      "caption": "第一页解释形态反馈、净空与末端对位，第二页汇总三配对种子上的四种工况。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "c78f057efb8d0320ac5204c31e4ecf058bc4732974c0903a898a676917652819",
+      "title": "两页审阅 PDF"
+    },
+    {
+      "bytes": 28979,
+      "caption": "成功判据、停顿、工具误差、角度与方位精度，以及每项有效观测的样本数。",
+      "file": "all-trials.csv",
+      "kind": "data",
+      "sha256": "31470b6b26b290837a965aaa4bceddf3798e3a75d9a62a975551e3793f86570d",
+      "title": "60 趟闭环成绩"
+    },
+    {
+      "bytes": 24030,
+      "caption": "代表种子的差模纯应变飞行中，清晰组最小臂爪净空为 5.68 cm，遮挡组为 6.21 cm。两趟在各自最近点处的真实弯角相差 0.005°，机身高度相差 5.51 mm。",
+      "file": "physical-audit.csv",
+      "kind": "data",
+      "sha256": "6be512fc678b04b0b18e6305412a4cf9f29d8fd2de76f8dabf7bc19dbd586ef2",
+      "title": "过门最近点与视觉恢复时间"
+    },
+    {
+      "bytes": 119053,
+      "caption": "按时间戳配对 842,065 条 PX4 电机输出与 HIL 指令。ROS 的二维参考、估计与驱动量各有 174,000 个样本逐点核对。",
+      "file": "native-log-audit.json",
+      "kind": "data",
+      "sha256": "0315c0095ffe07ee57ea7bf303880e89515b9756e4c281787d2d1eaa1a6c026e",
+      "title": "飞控、ROS 与物理执行的逐趟核对"
+    },
+    {
+      "bytes": 25981,
+      "caption": "按配对种子和工况保存原始包的固定 Git 修订地址、字节数和完整 SHA-256。",
+      "file": "evidence-index.csv",
+      "kind": "data",
+      "sha256": "2330e48f9a1622ba07308593f075c298497c1e31e4c3e0b6d6be16f9e2687a0b",
+      "title": "原生飞行日志索引"
+    },
+    {
+      "bytes": 75616,
+      "caption": "逐种工况给出三趟的最小值、中位数、最大值、任务通过数和可用观测数。",
+      "file": "cohort-summary.json",
+      "kind": "data",
+      "sha256": "0fa8507cf0503089187ab0b1dea383813cceb5547464f87c97bc1771d8ecf4c6",
+      "title": "配对工况汇总"
+    },
+    {
+      "bytes": 12928,
+      "caption": "带载机械臂、门框尺寸、目标位姿、许可阈值、遮挡时刻与配对矩阵。",
+      "file": "protocol.json",
+      "kind": "data",
+      "sha256": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+      "title": "注册的窄门与对准协议"
+    },
+    {
+      "bytes": 3306,
+      "caption": "六维增广形态融合与传感器参数逐文件锁定。",
+      "file": "perception-lock.json",
+      "kind": "data",
+      "sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+      "title": "获批感知模块指纹"
+    }
+  ],
+  "guide": [
+    "用同一机位比较五列的物理臂形、最近表面连线和门后目标轴。",
+    "把视频停在 28 至 32 秒，比较真实腕部黑屏、保留末帧与连续应变估计。",
+    "查阅两页报告及逐趟评分表，点击原始日志索引可追溯至同一趟 ULog、ROS bag 和漂移记录。"
+  ],
+  "id": "2026-11-20-gate-feedback",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "de7415c14be9441837ce8a32788858486d4576d53a52053406b6106c1be0ce70"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "449bafdea072b0293f05a425c217f82b01cc234bc54036cdf38a5e544a7e5fa1"
+    }
+  },
+  "parent_round": "2026-11-20-augmented-fusion",
+  "revision": "081ad01c1e9212ad9825690925aad1a0e1c7cd7f",
+  "schema": 1,
+  "scope": "SUPER 机架与 Qingyu 单段臂，末端载荷 45 g。每趟独立运行 PX4 SITL、MuJoCo 和原生 ORB-SLAM3。虚拟动捕提供真值参考和独立评分。",
+  "source_note": "感知冻结于 881a799，闭环协议冻结于 8207e2b。代表种子为 26112131。腕部曝光后 0.20 秒交付。",
+  "stage": "G2 · 单门二维形态闭环",
+  "summary": "进门前形成差模偏移，过门途中完全失视 4 秒。每种反馈源在相同的三个种子上各飞一趟。增广融合完成 3/3 趟，纯应变完成 0/3 趟，固定噪声 KF 完成 3/3 趟。三种子下，增广融合与纯应变的门后工具轴向 RMSE 中位数分别为 0.43° 和 6.64°。",
+  "title": "冻结形态反馈下的受限过门与斜向精细对准",
+  "when": "2026-11-21T00:20:28+08:00"
+}

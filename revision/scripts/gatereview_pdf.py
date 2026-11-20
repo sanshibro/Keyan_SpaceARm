@@ -190,7 +190,7 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
     c.showPage()
 
     scored_n=sum(r["case"] in scored and scored[r["case"]]["success"] is not None for r in rows)
-    header(2,"配对种子上的任务结果与精度","机身与臂爪净空均 ≥6.0 cm，自距为正，整机无接触越门。门后位置 ≤3.5 cm 且轴向 ≤3.0°，连续保持 1.0 s。")
+    header(2,"配对种子上的任务结果与精度","机身与臂爪净空均 ≥6.0 cm，自碰撞间距为正，整机无接触越门。门后位置 ≤3.5 cm 且轴向 ≤3.0°，连续保持 1.0 s。")
     text(L,121,f"五种反馈源 × 两种材料条件 × 两种视野 × 三个配对种子，共评分 {scored_n}/{len(rows)} 趟。",8.6,color=muted)
     widths=[47,31,57,34,46,34,59,59,58,106]
     # Reserve the remaining width for the blackout angle pair.
@@ -198,7 +198,7 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
     xs=[L]
     for w in widths:xs.append(xs[-1]+w)
     centers=[(a+b)/2 for a,b in zip(xs[:-1],xs[1:])]
-    headers=[("方法",""),("成功","趟"),("机身/臂爪","最小 cm"),("自距","最小 mm"),("停顿 s","总/断流"),("用时","s"),("末端位置","RMSE/峰 cm"),("轴向角","RMSE/峰 °"),("全程 θ/φ","RMSE °"),("遮挡 θ/φ","RMSE ° · 有效占比")]
+    headers=[("方法",""),("成功","趟"),("机身/臂爪","最小 cm"),("自碰间距","最小 mm"),("停顿 s","总/断流"),("用时","s"),("末端位置","RMSE/峰 cm"),("轴向角","RMSE/峰 °"),("全程 θ/φ","RMSE °"),("遮挡 θ/φ","RMSE ° · 有效占比")]
     rule(133,.8)
     for i,(a,b) in enumerate(headers):
         text(centers[i],148,a,7.8,True,align="center");text(centers[i],161,b,6.7,color=muted,align="center")
@@ -224,7 +224,9 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
                 for r,e in zip(selected,entries):export_rows.append({**r,**{k:e.get(k) for k in FIELDS}})
                 y+=18
             rule(y-10,.4);y+=9
-    y=wrap(y+2,"净空与自距取组三趟最小值，误差和停顿取逐趟中位数。末端位置与轴向统计窗为 49–55 s。用时计至安全通过并连续对准满 1 秒。* 表示有效试次数少于三趟，— 表示无相应测量。",7.8,12,muted)
+    note="净空与自碰撞间距取每组三趟最小值，误差、停顿和用时取逐趟中位数。末端误差统计窗为 49–55 s。用时计至安全通过并连续对准满 1 秒。"
+    if scored_n<len(rows):note+="* 表示有效试次数少于三趟。"
+    y=wrap(y+2,note+"空项用横线标示。",7.8,12,muted)
     y=wrap(y+2,"遮挡窗为曝光时钟的 28–32 s，有效占比按全部控制样本计算。曝光至交付延迟 0.20 s，使遮挡开始时仍可收到先前的图像。方位 RMSE 在真实与估计弯角均达到 5° 时按圆周差计算。",7.8,12,muted)
     focus={m:[v for v in raw["cases"].values() if v["case"]["material"]=="differential" and v["case"]["vision"]=="occluded" and v["case"]["method"]==m] for m in METHODS}
     if all(len(v)==3 for v in focus.values()):

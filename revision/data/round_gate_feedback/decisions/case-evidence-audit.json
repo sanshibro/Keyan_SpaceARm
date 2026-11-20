@@ -1,0 +1,4622 @@
+{
+  "26112131-nominal-natural-vision": {
+    "archive_sha256": "4e88e82106658907ad08366de935d098d8482fc697836c2d04be4e9537a28329",
+    "member_hashes": 26,
+    "ulog_sha256": "b3ff2b2b2f5a5fddf4d4857c8bd8b5e3c6a2cd4199b6c7e9f7f1cf4cce9553fb",
+    "bag_sha256": "b7bf5ecca69127993d34b2ebc6eb76b04b8302467b0e630e82a4187184b7ea34",
+    "physics_sha256": "aac65f033913be208992809ad5f8f185af5970f1fd6f79a06ab9af71b9dab5fe",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 79.36471598804928,
+      "per_image_wall_p95_ms": 653.53741699073
+    },
+    "arm_at_minimum": {
+      "time_s": 34.4,
+      "body_z_m": 2.149009018347645,
+      "tool_z_m": 1.7976408611316363,
+      "theta_true_deg": 73.34513028552965,
+      "theta_est_deg": 74.22942615021084,
+      "theta_est_minus_true_deg": 0.8842958646811923,
+      "theta_des_minus_true_deg": 4.654869714470351,
+      "nearest_robot_m": [
+        0.9600372742309456,
+        0.06990160978713143,
+        1.7703913490537957
+      ],
+      "nearest_gate_m": [
+        0.9600913240378499,
+        0.06989805387878245,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 44.22,
+      "first_phase": "dock",
+      "minimum_s": 48.44,
+      "minimum_mm": -0.9886576771925202,
+      "pair": [
+        "collision_landing_163",
+        "collision_gripper_finger0"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 1.0999999999999943,
+          "self_contact": 3.579999999999991
+        }
+      },
+      "first_integrated_contact_observed_by_s": 44.22
+    },
+    "score_sha256": "83421d0e7eb819853de426784b061ed026ea3b6b521b55a2e7217802fae77407",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-occluded-strain": {
+    "archive_sha256": "0b5f0d71cf372ae1516351bb20a250098f52799a999db22679f305bad3045379",
+    "member_hashes": 26,
+    "ulog_sha256": "4bfd1a6ce56e17ef656ca476f876b4fc97c457092b0a79e68f18ea161e69732e",
+    "bag_sha256": "e64801eea5d47a2dd5c13bb19b50e36a562ff9d366bedccdb4db140c46f50d59",
+    "physics_sha256": "2104b68f8f3bfd693e1f5cf4529f66675459f9154bbe2cd4f3527ccc09e81598",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 80.61822800664231,
+      "per_image_wall_p95_ms": 677.3655944998609
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.141237596405928,
+      "tool_z_m": 1.8093131234192994,
+      "theta_true_deg": 78.1627408485661,
+      "theta_est_deg": 77.81041267868149,
+      "theta_est_minus_true_deg": -0.3523281698846148,
+      "theta_des_minus_true_deg": -0.16274084856610216,
+      "nearest_robot_m": [
+        0.9446155940300319,
+        0.08769289170777239,
+        1.7817888044502344
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.08769289170777235,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 7.3999999999999995,
+      "minimum_mm": 0.9509781108685852,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "d18fa412a3a7701639e2d594e7791f80439fb051c42e5071cf97edd5e26bbb3d",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-natural-fixed": {
+    "archive_sha256": "f41e8d1d1236a531cdf146e8c54f2541fee341f22bc5be29e9e2e43e03e6c799",
+    "member_hashes": 26,
+    "ulog_sha256": "b71bf8e8130b1d91b31964e025540e61c900ae4dbd5bed266c652734c08329d6",
+    "bag_sha256": "72765eefe45952d2df7a6b17f74bcfa4fd24cada0f071c0938deb154124376a8",
+    "physics_sha256": "059b4208d69cb55a244d2bdb5b92ff0eac190a7faf9d42cb1f2d037b0f1a83dd",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 80.08865499868989,
+      "per_image_wall_p95_ms": 662.3633054987295
+    },
+    "arm_at_minimum": {
+      "time_s": 33.64,
+      "body_z_m": 2.1423884929687786,
+      "tool_z_m": 1.8087555359182224,
+      "theta_true_deg": 77.74661922410735,
+      "theta_est_deg": 77.85490075743185,
+      "theta_est_minus_true_deg": 0.10828153332450086,
+      "theta_des_minus_true_deg": 0.2533807758926514,
+      "nearest_robot_m": [
+        0.944835877654874,
+        0.09318574741672515,
+        1.781304410890999
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09318240703800676,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 6.779999999999999,
+      "minimum_mm": 0.9506528833618857,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "ee857ec8d6cbd680bc7a0a861027b973f35a35e7ad2eb800c2d644863bf39e1d",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-occluded-proposed": {
+    "archive_sha256": "e4abba28b1555d8450d577c0708d80077e3f457a812d3f8b69191bd1e56468a2",
+    "member_hashes": 26,
+    "ulog_sha256": "5c11b126031a3477be8ba6bb8928acee5c1787e8cfe80027cd254dceac53e4cc",
+    "bag_sha256": "fdf01324cecfccb50314eb8533d9cda33915f78cd728d1e4751b2f6bd966b27f",
+    "physics_sha256": "3e23ccda8c799635353f9681e9af82ef5efaaf87a2480670c57bafa2b2c5d34a",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 80.10085902060382,
+      "per_image_wall_p95_ms": 651.7617789941141
+    },
+    "arm_at_minimum": {
+      "time_s": 33.64,
+      "body_z_m": 2.1439834788853687,
+      "tool_z_m": 1.8114277196796948,
+      "theta_true_deg": 78.02624419173998,
+      "theta_est_deg": 77.98251585672571,
+      "theta_est_minus_true_deg": -0.043728335014264985,
+      "theta_des_minus_true_deg": -0.02624419173997694,
+      "nearest_robot_m": [
+        0.9471925793975702,
+        0.09019536779138838,
+        1.7839256007755246
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09019098727808887,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 7.5,
+      "minimum_mm": 0.9514812102915946,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "3599c0d60bd6247a6ef635f5e489b99aadf612c0256a6a92807873c460f415c0",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-occluded-strain": {
+    "archive_sha256": "245b9415f32c5479eb77b2d29af1a52b918cb6860991a545294fa34bcd4776ef",
+    "member_hashes": 26,
+    "ulog_sha256": "263f7c129ec0ca734599305f5788b196af1e0b4a74ca8a50766d62939e564340",
+    "bag_sha256": "266ff96e4c79d76272e6713c51f98a869afdbfdaa628ddb0e0f49d6b79278418",
+    "physics_sha256": "abde9fdc094eee125c24efaf0e1ed4a46c88a23dc47a5d3a9afc169e5e753f18",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 80.07768099196255,
+      "per_image_wall_p95_ms": 652.5900495034875
+    },
+    "arm_at_minimum": {
+      "time_s": 33.74,
+      "body_z_m": 2.146613289734292,
+      "tool_z_m": 1.7872115277468348,
+      "theta_true_deg": 71.39258566139743,
+      "theta_est_deg": 77.86615481920367,
+      "theta_est_minus_true_deg": 6.473569157806239,
+      "theta_des_minus_true_deg": 6.607414338602567,
+      "nearest_robot_m": [
+        0.9473311978599586,
+        0.07863120462009551,
+        1.7605420378192265
+      ],
+      "nearest_gate_m": [
+        0.9499999999999998,
+        0.07863007618961507,
+        1.6950000000000003
+      ],
+      "pair": [
+        "visual_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 12.12,
+      "minimum_mm": 0.9513924211264827,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "5f34e0db6501b598f67a5f3ef0e61cd4e4567ecec57867b0b558745eb3b7822f",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-natural-fixed": {
+    "archive_sha256": "80231a311c1d600dc248bdbb0d5e6fb42a4eca963f818ce35bc3f9dc35f21413",
+    "member_hashes": 26,
+    "ulog_sha256": "e99d9122f68313702780585bb419e2ccb8262a0a7d5a9778c4ba180eb008952d",
+    "bag_sha256": "11e4f39b193b10811f8823203ca07e61d5d8e680fc6048e7679f92e8b3dc2ad1",
+    "physics_sha256": "1ea110367665ea3aa009dca384fad60dacb68166099b4194d917146a0edbb3b9",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 122.37787499907427,
+      "per_image_wall_p95_ms": 910.8804290008266
+    },
+    "arm_at_minimum": {
+      "time_s": 33.62,
+      "body_z_m": 2.1472700974821843,
+      "tool_z_m": 1.8150013521896158,
+      "theta_true_deg": 78.0884634649318,
+      "theta_est_deg": 77.84421851587722,
+      "theta_est_minus_true_deg": -0.2442449490545897,
+      "theta_des_minus_true_deg": -0.0884634649318059,
+      "nearest_robot_m": [
+        0.9454614393452571,
+        0.0988748805423784,
+        1.7874661346581793
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09887488054237838,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 4.3999999999999995,
+      "minimum_mm": 0.9565500151059393,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "1efdcb88722e9dc545da5057026ebbbb08f9ede6f69828809b3da9bfd8e2c5ad",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-occluded-proposed": {
+    "archive_sha256": "455bed9b668d4e10b960aed97c8be3236246eee0a5faa9a8d48414be44c146ff",
+    "member_hashes": 26,
+    "ulog_sha256": "c4877bdcd5819c33335d333e3562e4e6d9a3a40a0876bf1be6f00855d4657f53",
+    "bag_sha256": "ac0dc7d2b2648514d51de7ab7b7a9303c65989026dde413ab35026004dc9eb08",
+    "physics_sha256": "752863ecb4a815e63807f5f682912c234fd0fa21d429f704ea9ce27ba18c1823",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 100.14924299321137,
+      "per_image_wall_p95_ms": 871.6376109950943
+    },
+    "arm_at_minimum": {
+      "time_s": 33.62,
+      "body_z_m": 2.1487696750899907,
+      "tool_z_m": 1.8186274178991986,
+      "theta_true_deg": 78.61482053779504,
+      "theta_est_deg": 78.18272779596869,
+      "theta_est_minus_true_deg": -0.43209274182635227,
+      "theta_des_minus_true_deg": -0.6148205377950404,
+      "nearest_robot_m": [
+        0.9470715131884987,
+        0.0978827748971262,
+        1.7909937240606262
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09788275511028244,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 3.9,
+      "minimum_mm": 0.9552947565815588,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "62421e602e6f5daa52ffdc7aec77dd9167bd935426ab6a74e7846506877a7a53",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-natural-oracle": {
+    "archive_sha256": "be0a551c151f0c864605a008bca8ba047dadc1456e0cceaccbedab8f989edf7a",
+    "member_hashes": 26,
+    "ulog_sha256": "00652fc6f5b75f69673578dc86c3a0a49d45efec5357bbe046ffcd7bae27b09a",
+    "bag_sha256": "30dd9ab76520ef0306239eb3cfe17ef566dec6226cb43c14e52a138ea1f3931e",
+    "physics_sha256": "3256f029306f7de3bf1d239887f5ed0e099b34dc7034bee928e702c11bd560ec",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 84.65774400974624,
+      "per_image_wall_p95_ms": 745.1230504957493
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.147814322886704,
+      "tool_z_m": 1.8151517798985208,
+      "theta_true_deg": 78.00086090459557,
+      "theta_est_deg": 78.00086090459557,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0008609045955694228,
+      "nearest_robot_m": [
+        0.9444299309252087,
+        0.1056761880108525,
+        1.787695739811159
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.1056717069044068,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 8.16,
+      "minimum_mm": 0.9506817048730275,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "ee7691dba97e2a347e02701acf549d8e6b356a4479bb1906fb38a81f1a9894c7",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-natural-fixed": {
+    "archive_sha256": "2b76af0489d831a953faef0c31f521d29e4c862c15056e463fdfea5009fe4441",
+    "member_hashes": 26,
+    "ulog_sha256": "516b7b6c119c5fc9ba18bba0f08ad26d2042a860078899020ba57387daa1c4f1",
+    "bag_sha256": "27b25143e89553ed09ee1ec3d4b660ba49c470f9a29d87957e6438fa96948c65",
+    "physics_sha256": "f341a69e0a3c874b28d6dd67726474c82ce4368bbe8c661251eb686a6b0fa076",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 185.0425550073851,
+      "per_image_wall_p95_ms": 1051.6897329944186
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.1472653272683218,
+      "tool_z_m": 1.8155630608114608,
+      "theta_true_deg": 78.21918070558351,
+      "theta_est_deg": 77.84119787739091,
+      "theta_est_minus_true_deg": -0.3779828281926001,
+      "theta_des_minus_true_deg": -0.21918070558351133,
+      "nearest_robot_m": [
+        0.9433102639375242,
+        0.09227272854175697,
+        1.788034315554265
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09226926085350455,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 13.719999999999999,
+      "minimum_mm": 0.9506054544895203,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "6ed4ca1897e274f96e26cc54e608257ae01fd6f64f88603fdda8aa2fd3caad28",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-occluded-proposed": {
+    "archive_sha256": "7ee8df3f1a00a5d88e8f2918c3ccfb309ec9f80b40cb0be6a9170d9c488ac018",
+    "member_hashes": 26,
+    "ulog_sha256": "f5c9c015ef5ad75ca7e3ff3aa5086f8e6aaddbbb6cd59477f36e946a3f3d5b3d",
+    "bag_sha256": "5b3c87781d7977dd32e835570f9b3b3d9aeb80e606b02e9c7cb4e4f4d3035d71",
+    "physics_sha256": "13e26a7b376d773c286e643cdb6d45e4bb3a8998a5c4d9e7ecc56f5c13252bcb",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.2,
+      "post_window_first_valid_delivery_s": 32.400000000000006,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 325.23570299963467,
+      "per_image_wall_p95_ms": 1666.9618344894843
+    },
+    "arm_at_minimum": {
+      "time_s": 33.58,
+      "body_z_m": 2.147387919177559,
+      "tool_z_m": 1.8158252067218597,
+      "theta_true_deg": 78.25007191188251,
+      "theta_est_deg": 78.01958481983156,
+      "theta_est_minus_true_deg": -0.23048709205095008,
+      "theta_des_minus_true_deg": -0.25007191188251454,
+      "nearest_robot_m": [
+        0.9437881834366066,
+        0.0935499374559544,
+        1.7883082159019785
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09354546781165224,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 8.74,
+      "minimum_mm": 0.9533772437496335,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "8be05be140228d57932839f6381e5fe0e6e5ebc194402c4e178756d4986cdd59",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-natural-oracle": {
+    "archive_sha256": "b46142f668d2e8288cd620878d90e3bfe6d865875ee39830732185f048f7ae15",
+    "member_hashes": 26,
+    "ulog_sha256": "503fc93250b8620b0bd44415cf7bc02935981b67e36db4ec40e9aa86f710e86d",
+    "bag_sha256": "ea0c9aed98cbce74f8d639ae76c980404911eeeb66347239f9350266d970c9b5",
+    "physics_sha256": "e997b40250552bfe0c46e3e1adab7f0a2a1a523c2680fe580968cb0c43c9d7be",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 70.11827902169898,
+      "per_image_wall_p95_ms": 632.009923516307
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.1477721332642226,
+      "tool_z_m": 1.815096630471189,
+      "theta_true_deg": 78.00108689369502,
+      "theta_est_deg": 78.00108689369502,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0010868936950174657,
+      "nearest_robot_m": [
+        0.9452493309112096,
+        0.09640558284272119,
+        1.7876003002052667
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09640558284272115,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 10.02,
+      "minimum_mm": 0.9509741501876032,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "77ad679fa7293bcc52a3d8ae170db14aeb09e0e823c16f50eb9eebcdbeef88c0",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-occluded-vision": {
+    "archive_sha256": "c8c63e22f753960ed666342e66b068e6358827678fa3a02c87cb8656525731f6",
+    "member_hashes": 26,
+    "ulog_sha256": "dc5de0abfa4a256defe0512f7ba1e29285c604382fe476d19e42f937eb0c76aa",
+    "bag_sha256": "d1f801d1139812ab6ba6e184f64aadd3c49192b2a558c54b5937f684f14da969",
+    "physics_sha256": "e6055fdeb0bfa819ce8cb562786bdb127ec767d73cbbb2bc3989d66a05342506",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 68.4344939654693,
+      "per_image_wall_p95_ms": 632.4069344846066
+    },
+    "arm_at_minimum": {
+      "time_s": 38.1,
+      "body_z_m": 2.145902100241625,
+      "tool_z_m": 1.797589120811559,
+      "theta_true_deg": 74.02789325523335,
+      "theta_est_deg": 76.87046336647178,
+      "theta_est_minus_true_deg": 2.8425701112384303,
+      "theta_des_minus_true_deg": 3.9721067447666485,
+      "nearest_robot_m": [
+        0.9322680360600156,
+        0.07257867252792632,
+        1.7711232965641328
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07257867252792628,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 47.0,
+      "first_phase": "dock",
+      "minimum_s": 48.58,
+      "minimum_mm": -0.6380323025212682,
+      "pair": [
+        "collision_landing_163",
+        "d435"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 3.8000000000000007,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.35999999999999943,
+          "clearance": 0.9399999999999977,
+          "self_contact": 2.5799999999999983
+        }
+      },
+      "first_integrated_contact_observed_by_s": 47.0
+    },
+    "score_sha256": "e8422f72243f60b37451d9785e5a314934c1e17207c8cf00dce48b35f42bc43d",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-natural-strain": {
+    "archive_sha256": "5ede3a16a29503c882955b5bc322b2586fb7385e6938f5d63f9e880f9f70e2fb",
+    "member_hashes": 26,
+    "ulog_sha256": "9e68a671278e54a8a0c782b13072e4f4fcb20255c47b6a347f16727049d4fb29",
+    "bag_sha256": "7216d17f2ade903afe970b0c9abdd370d9bedd1c807c67c2a182145bc4436054",
+    "physics_sha256": "4e1f4a0147a0122fded48f588db4e07cde1653137fc9b8bcf18082e729b38ac6",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 70.09447697782889,
+      "per_image_wall_p95_ms": 636.184219038114
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.140388053523409,
+      "tool_z_m": 1.8084651871831772,
+      "theta_true_deg": 78.16248319988463,
+      "theta_est_deg": 77.81042041116474,
+      "theta_est_minus_true_deg": -0.3520627887198913,
+      "theta_des_minus_true_deg": -0.16248319988463322,
+      "nearest_robot_m": [
+        0.9471929537081705,
+        0.08871794743397357,
+        1.7809422414457174
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.0887179474339735,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 13.459999999999999,
+      "minimum_mm": 0.9525138556221272,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "cdacba0ff7aa424749668817cd3f18273d9a6f132ca5836b984e74144029bf87",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-occluded-fixed": {
+    "archive_sha256": "769af66467354b24fac98d995df00f7370e04955dc6edc61727b4ab322effba8",
+    "member_hashes": 26,
+    "ulog_sha256": "ac87a5fcf9a5b716a0c0049f3b8e624c0c6d0d2f6f919c82f32b45446b2f49d2",
+    "bag_sha256": "32bf703529c42561eeee0bb5176a84a599edbb11140d54ee59a30ecb90090b00",
+    "physics_sha256": "13267999a1e934707265ac4e6a449f0c9fd81d72bc981c3bca9e9439d62feae2",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 70.05735102575272,
+      "per_image_wall_p95_ms": 624.2275650147349
+    },
+    "arm_at_minimum": {
+      "time_s": 33.839999999999996,
+      "body_z_m": 2.1475502926680488,
+      "tool_z_m": 1.8065141403176077,
+      "theta_true_deg": 76.2849171945203,
+      "theta_est_deg": 77.7650971724991,
+      "theta_est_minus_true_deg": 1.4801799779787927,
+      "theta_des_minus_true_deg": 1.715082805479696,
+      "nearest_robot_m": [
+        0.94713009811456,
+        0.07255507356657634,
+        1.7792240918917788
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07255507356657626,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 2.46,
+      "minimum_mm": 0.9503004637151207,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0800000000000125,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "99727017e72045f7ada874ddf2148a10a3368e5a56af1c540829b1a6bb16220a",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-natural-proposed": {
+    "archive_sha256": "2799bd319aab7ffe759672d1b95679a30ad7e251fe4822fde164731b03d0f7b8",
+    "member_hashes": 26,
+    "ulog_sha256": "30bdc365c2f2e848fd43054fe597eae39ed0a20437d9be7d7275388ec9f23a83",
+    "bag_sha256": "6fc59d8ce20dd94c2c144b5d393b9d8bf21192f529ed171d010ed89efd0b1954",
+    "physics_sha256": "eac953a0261753703a907c421c78c3eceb6219ac6100e3ac1b1d633ff6724acf",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 69.93512902408838,
+      "per_image_wall_p95_ms": 620.436683006119
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.142107246550888,
+      "tool_z_m": 1.8098213960947325,
+      "theta_true_deg": 78.07489504667946,
+      "theta_est_deg": 77.98002346015205,
+      "theta_est_minus_true_deg": -0.0948715865274039,
+      "theta_des_minus_true_deg": -0.07489504667945823,
+      "nearest_robot_m": [
+        0.9453823841263994,
+        0.09081719823128942,
+        1.7823752762769933
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.0908171982312894,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 4.54,
+      "minimum_mm": 0.9507311457741076,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "1178e388c38c7038bc8d693127ba45efa73dffb939086d5f0ad75bfe1ae348f7",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-occluded-oracle": {
+    "archive_sha256": "9573425c2a9a2d6d030fbf34d9483cdcafa5160c82c4b6c34df28bba3832eacc",
+    "member_hashes": 26,
+    "ulog_sha256": "e3040553167668ca0e13eb4cd7389f78e322096ec1860c022a7bd5619d94703b",
+    "bag_sha256": "a383bbe02ab790bf8a22812b3f3283a1c550e40f112e208d59db8df033e387be",
+    "physics_sha256": "43d6d853dd8a8a9f73d82032448d4df3e7bdd8296585582a7bf4b8c616a0dc36",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 70.60500798979774,
+      "per_image_wall_p95_ms": 629.7848799731582
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.1419279049728273,
+      "tool_z_m": 1.8091627828940908,
+      "theta_true_deg": 78.00068392583147,
+      "theta_est_deg": 78.00068392583147,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.000683925831467036,
+      "nearest_robot_m": [
+        0.9436318079505589,
+        0.10061483967727895,
+        1.7816767084314304
+      ],
+      "nearest_gate_m": [
+        0.9500000000000001,
+        0.10061176656147842,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 9.98,
+      "minimum_mm": 0.9507555580297427,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "c965468a514fda77c89d86ba3e6111ef7bf083a2e90a21bd439aa73effd49c01",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-occluded-fixed": {
+    "archive_sha256": "b2ab0028ddb60974a9488cffdac87902bd34407f24606dbc32fbbf50359e2be2",
+    "member_hashes": 26,
+    "ulog_sha256": "fcc06e1a88602cb02f63d6d78e9bed89a451439aa35f8afe395aa6e3242d1f37",
+    "bag_sha256": "3e7d0243398ac67fb592feed57de585f385c9c64311185f8c5805fba0cce23d6",
+    "physics_sha256": "851b2f3c666e412c292c33fabae1b3250962349b31c9be1f2deb20ed18119961",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 71.77059998502955,
+      "per_image_wall_p95_ms": 646.1583754862659
+    },
+    "arm_at_minimum": {
+      "time_s": 34.72,
+      "body_z_m": 2.1537415381339775,
+      "tool_z_m": 1.8051414475608136,
+      "theta_true_deg": 75.87740605661989,
+      "theta_est_deg": 77.17606013149904,
+      "theta_est_minus_true_deg": 1.2986540748791526,
+      "theta_des_minus_true_deg": 2.12259394338011,
+      "nearest_robot_m": [
+        1.0289466449411706,
+        0.07364404075766996,
+        1.7782591133004955
+      ],
+      "nearest_gate_m": [
+        1.0289693624253986,
+        0.07364301742007072,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 4.8,
+      "minimum_mm": 0.9565411882543303,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.4799999999999969,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "e0a6cbfadd9240805d4fe59eeafc440f898fdb2ba8e13da0a816457bac8027e9",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-natural-proposed": {
+    "archive_sha256": "7243d29f14d7e218278feba9e9e7832e7e7a56b06be51309aed344c259edb64f",
+    "member_hashes": 26,
+    "ulog_sha256": "eb84da6d6f870fff762806a4d7bacf7960f433b795693d61a8b11e747750534c",
+    "bag_sha256": "441aaf02fb67113fc90f8c0fc6a7a3746de796bbcd0042a8ee619779783454aa",
+    "physics_sha256": "f94b7ef260e6d979a03165f86df76771b10522d7289513dec3203e2a85fabed7",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 84.72769398940727,
+      "per_image_wall_p95_ms": 856.8239939922933
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.147420296252827,
+      "tool_z_m": 1.8160577185470712,
+      "theta_true_deg": 78.3053868527316,
+      "theta_est_deg": 78.04403083331357,
+      "theta_est_minus_true_deg": -0.2613560194180309,
+      "theta_des_minus_true_deg": -0.30538685273160127,
+      "nearest_robot_m": [
+        0.9462883283007045,
+        0.09934758306320851,
+        1.7885114815492411
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.099343085802084,
+        1.6950000000000005
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 14.52,
+      "minimum_mm": 0.9598439645496847,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "8729c1b6211a9c9bb6b702a0e3c71426f71024e5246ffe82202b9350b74f8df4",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-occluded-oracle": {
+    "archive_sha256": "2a2075559ef722ec17ba07e2a98aa7b781b155702bcad9b5805733da0f72a0ec",
+    "member_hashes": 26,
+    "ulog_sha256": "e8070f6571eb8e5021ace8bdba63cbcd7c3802516efac3d76c9b500b5a63f57b",
+    "bag_sha256": "5e4beebbe84bcb31568b085960251a2a29ca28a0716ab8ef0f86bbe9519ae977",
+    "physics_sha256": "a02d7bb7d6a7a2d4161a7c9557431eed03c4e728f833ad2aa859d2c3a8d6c192",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 91.07536397641525,
+      "per_image_wall_p95_ms": 865.8777135133278
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.1480839495987905,
+      "tool_z_m": 1.815479385876592,
+      "theta_true_deg": 78.00024803944977,
+      "theta_est_deg": 78.00024803944977,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0002480394497723637,
+      "nearest_robot_m": [
+        0.9459741929891152,
+        0.10368710310695008,
+        1.787987248995308
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.10368710310695002,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 7.08,
+      "minimum_mm": 0.9510164217999698,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "22c796b629bd3e9fc6f786bbe3e1cd00d03bff91f1d3e7ac904c7877c1681228",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-natural-vision": {
+    "archive_sha256": "4ee6ddea0389ad617ad5ada3c9b9a5ad4242c5a651c3601d7dbb3772ad90ded1",
+    "member_hashes": 26,
+    "ulog_sha256": "a477b84f6b3f965fc733d23d6b5fed5c351d79eaccba5c901a09a6c1426785e9",
+    "bag_sha256": "b5c79e815daf7d38468a1c1fcb0a325d2c13a76f55eceaf8d246a999b122dd2e",
+    "physics_sha256": "520475d698d20f2f983bbf783be290ac1c1674426dcd4a355cce7f5b44785bac",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 136.43117400351912,
+      "per_image_wall_p95_ms": 1007.7398105058819
+    },
+    "arm_at_minimum": {
+      "time_s": 34.379999999999995,
+      "body_z_m": 2.154571241980609,
+      "tool_z_m": 1.8062761320780882,
+      "theta_true_deg": 74.20916291421874,
+      "theta_est_deg": 77.08766843861088,
+      "theta_est_minus_true_deg": 2.878505524392139,
+      "theta_des_minus_true_deg": 3.7908370857812628,
+      "nearest_robot_m": [
+        0.9760360053509985,
+        0.06785753479411831,
+        1.7788192011087975
+      ],
+      "nearest_gate_m": [
+        0.9760962109915466,
+        0.06784961299930924,
+        1.6950000000000005
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 44.059999999999995,
+      "first_phase": "dock",
+      "minimum_s": 44.08,
+      "minimum_mm": -0.8063669122051257,
+      "pair": [
+        "collision_landing_163",
+        "d435"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.9599999999999937,
+          "self_contact": 3.499999999999986
+        }
+      },
+      "first_integrated_contact_observed_by_s": 44.059999999999995
+    },
+    "score_sha256": "062f98802cde817c61a533b0162a8a68824c11808c4b19d501096a7ea74fe55e",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-natural-proposed": {
+    "archive_sha256": "9daacecea98985e852c1d8014f1ac621f188dd1dee58092393b6e92965847c51",
+    "member_hashes": 26,
+    "ulog_sha256": "9351a403eace04a584e984c0f52f05aa7fbecc421c5374e54d9d5fb2b6b3982a",
+    "bag_sha256": "2bfca413344f5eb56ee2a4c3bd24439cdb94bc10f2d0110b20af8fd203e9dca2",
+    "physics_sha256": "d1ccc4e3bc76d6828eb9d690679ebabd875869058e23a102bd6eebefef037e43",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 71.80427596904337,
+      "per_image_wall_p95_ms": 723.1412885012105
+    },
+    "arm_at_minimum": {
+      "time_s": 33.58,
+      "body_z_m": 2.14606259868377,
+      "tool_z_m": 1.8149037155573762,
+      "theta_true_deg": 78.34969145977703,
+      "theta_est_deg": 78.032327496289,
+      "theta_est_minus_true_deg": -0.31736396348803453,
+      "theta_des_minus_true_deg": -0.3496914597770342,
+      "nearest_robot_m": [
+        0.9428311515458323,
+        0.09440733093960826,
+        1.787361107225201
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09440733093960826,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 1.92,
+      "minimum_mm": 0.9505509175760155,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "800ac38f0c1b02fe7633afd1691f2a659120d4cfd2bd67345d858c185946861b",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-occluded-oracle": {
+    "archive_sha256": "fb2d8fcb7282a8880bada544e2c377039b7917836960dfa23dd21a97f10e56ed",
+    "member_hashes": 26,
+    "ulog_sha256": "8547a84b42200276a7d355bbe9c45ab8d7489cce49a0a9271741eae6ee94bcf2",
+    "bag_sha256": "c8d61fae0266f226db3fb788a3de33cf274e2f6d09529d60efbbb4027b93aefa",
+    "physics_sha256": "1f90284a1bcc5e8c5624ebda59beafa2321b5ecf048f8f3bfda709137b0cc5f6",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 64.62757603731006,
+      "per_image_wall_p95_ms": 594.4073440041393
+    },
+    "arm_at_minimum": {
+      "time_s": 33.58,
+      "body_z_m": 2.1475168956042237,
+      "tool_z_m": 1.8148032409056727,
+      "theta_true_deg": 78.00034722660325,
+      "theta_est_deg": 78.00034722660325,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0003472266032531479,
+      "nearest_robot_m": [
+        0.943147350958756,
+        0.09475463309510786,
+        1.7873069089586595
+      ],
+      "nearest_gate_m": [
+        0.9499999999999998,
+        0.0947546330951078,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 13.399999999999999,
+      "minimum_mm": 0.9510490551899048,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "141e0fc455c765b86411f1fca02162fd48b006ddaafa1ad4ce2dfe66885e21df",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-natural-vision": {
+    "archive_sha256": "0aa01f0c237f418408ce30b1d19348a0071a2f0a372c4de6baf001dae7e6f01e",
+    "member_hashes": 26,
+    "ulog_sha256": "4e1b714ebc0acbf9ad4bcc03135da95226379e96005975027809683c5ec68693",
+    "bag_sha256": "cc2566fc63758ada29bf7ed15ca7009dd0330289255c2cc547e1271092a7e2a0",
+    "physics_sha256": "3b635536dcd585abff7675144152f6cbe6bead6fab874bea7db72ba8691f5e1b",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 75.63274599999659,
+      "per_image_wall_p95_ms": 616.8484219999755
+    },
+    "arm_at_minimum": {
+      "time_s": 34.5,
+      "body_z_m": 2.1527451005004337,
+      "tool_z_m": 1.803706379938606,
+      "theta_true_deg": 74.1442255465226,
+      "theta_est_deg": 75.3799440520866,
+      "theta_est_minus_true_deg": 1.2357185055639945,
+      "theta_des_minus_true_deg": 3.8557744534773946,
+      "nearest_robot_m": [
+        0.9815223007520182,
+        0.05641881391209609,
+        1.7763697338637787
+      ],
+      "nearest_gate_m": [
+        0.9814714887273168,
+        0.05641992436124097,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 43.3,
+      "first_phase": "dock",
+      "minimum_s": 44.36,
+      "minimum_mm": -1.0429815826056672,
+      "pair": [
+        "collision_landing_163",
+        "d435"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 1.0600000000000023,
+          "self_contact": 3.719999999999999
+        }
+      },
+      "first_integrated_contact_observed_by_s": 43.3
+    },
+    "score_sha256": "df32f185755d6eab49e5b365a7491c9f4d077b5e71317fa2c59ad192e161a03d",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-occluded-strain": {
+    "archive_sha256": "08832dc1210deb8d8daa24e7422b5ac83e0e2bcac18762cb70445411a61d6afe",
+    "member_hashes": 26,
+    "ulog_sha256": "c752f4dfa1a097104a98dc08a44eac54f393eba538b2c0ba2442c7404808dfcc",
+    "bag_sha256": "636831258733eac232c7f61629bf442a8e7eb2d21910d1b78b126da492fc9ef9",
+    "physics_sha256": "730cad5b943c467015ff5de3ea17c03d5560ebf1829a532fd290338b992256d9",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.2,
+      "post_window_first_valid_delivery_s": 32.400000000000006,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 65.11022500001218,
+      "per_image_wall_p95_ms": 546.3344159999792
+    },
+    "arm_at_minimum": {
+      "time_s": 33.76,
+      "body_z_m": 2.1493672494282263,
+      "tool_z_m": 1.7865282886592841,
+      "theta_true_deg": 70.52665793631454,
+      "theta_est_deg": 77.78009255249533,
+      "theta_est_minus_true_deg": 7.253434616180797,
+      "theta_des_minus_true_deg": 7.473342063685465,
+      "nearest_robot_m": [
+        0.9452028825235077,
+        0.07902917999958015,
+        1.7602098528759949
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07902500666135821,
+        1.6950000000000003
+      ],
+      "pair": [
+        "visual_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 14.02,
+      "minimum_mm": 0.9524265447954144,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "82c4898d62f6a301770248eee57fb6b83917c78bd39abe9e9091d6669d7803c3",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-natural-fixed": {
+    "archive_sha256": "e0c4bc1bab9f8a87712b396fd0805ccf91eb96f2e568cdbe8291df64693974c9",
+    "member_hashes": 26,
+    "ulog_sha256": "08b4d4b4e432ed7c1a36983b1e9f27bf47f6d7808901764aa2e53380da047f7e",
+    "bag_sha256": "bdbc54c139f2bdd5e96316664cf8e445e69a7386c73b5aa02fae2e70c70b9613",
+    "physics_sha256": "5a85b719bbdf749c4e2c1ea4dabc74a0360f322925cd75a2822694b5778d89fa",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 72.53933899994536,
+      "per_image_wall_p95_ms": 624.0040135000413
+    },
+    "arm_at_minimum": {
+      "time_s": 33.64,
+      "body_z_m": 2.139011412491596,
+      "tool_z_m": 1.805663390507425,
+      "theta_true_deg": 77.82466490873679,
+      "theta_est_deg": 77.85084566449055,
+      "theta_est_minus_true_deg": 0.026180755753756557,
+      "theta_des_minus_true_deg": 0.17533509126320723,
+      "nearest_robot_m": [
+        0.9464889573072726,
+        0.09413018675655198,
+        1.778228193235995
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09413018675655202,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 5.08,
+      "minimum_mm": 0.9504967617836816,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "99fcde9eaddcebd279c545ed7bc56bd2a7733198da262c638d93935cf9a2dfb4",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-occluded-proposed": {
+    "archive_sha256": "5f174b158986fc15ff96ee5460da07e3407129232f65666dda0ef49ab1942560",
+    "member_hashes": 26,
+    "ulog_sha256": "39c5ee4472a6648e7341e050eb3097d3e60cab1f33d44e661296041d0ba9795f",
+    "bag_sha256": "2b5d5b7b6dba307ab1f37c1999088a5e5fe44b60f7f6decde6d68c64f12b1fce",
+    "physics_sha256": "50026944e27343cbf4b2d7b5f324c6e47cdb983896694c5aae7ec4541cac93d0",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 40.64,
+      "post_window_first_valid_delivery_s": 40.84,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 74.754632000122,
+      "per_image_wall_p95_ms": 1026.4432704999535
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.1454309055319696,
+      "tool_z_m": 1.8165483727666367,
+      "theta_true_deg": 78.88257091752726,
+      "theta_est_deg": 78.07949623177765,
+      "theta_est_minus_true_deg": -0.8030746857496069,
+      "theta_des_minus_true_deg": -0.8825709175272607,
+      "nearest_robot_m": [
+        0.9481445199831269,
+        0.09501555379435,
+        1.7890068062049531
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09501537790593853,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 6.54,
+      "minimum_mm": 0.9507854848241192,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "8e29cf165ad44a814c6e3d5c933df16443e16abf8c7a76c30d83b2db2db9d03a",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-natural-oracle": {
+    "archive_sha256": "5c0fce4171f98060ae79a119314328edacc658f769948f07e644ef46a674e44e",
+    "member_hashes": 26,
+    "ulog_sha256": "a61289ea7b56f60ab4095372a9069bf81d0dcd45d3cc8a7027357c6a5579e943",
+    "bag_sha256": "bcb7888e320368b9f3498c4fb2a10e108faf6adeaf6230462c99ba122479d5d0",
+    "physics_sha256": "aab6288eb963a52fff4bfaf4d615ea4ee0b0a4ccebf9a7ce83bb118f4984426b",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 74.54966800014518,
+      "per_image_wall_p95_ms": 630.1343909999559
+    },
+    "arm_at_minimum": {
+      "time_s": 33.62,
+      "body_z_m": 2.1382019562667196,
+      "tool_z_m": 1.8054464857591541,
+      "theta_true_deg": 78.00121820354127,
+      "theta_est_deg": 78.00121820354127,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0012182035412706682,
+      "nearest_robot_m": [
+        0.9440753926413559,
+        0.0996724420909101,
+        1.7779855461375866
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09966871739154502,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 7.9799999999999995,
+      "minimum_mm": 0.9504630689521596,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "0b55480fde4a59adf3544f0300a0ec03cee783c5558d67c57044e530cadf970a",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-occluded-vision": {
+    "archive_sha256": "71ef702bf86475ce48c9dce5f1d865825be8921169d87f4a41a66d030479c9ae",
+    "member_hashes": 26,
+    "ulog_sha256": "374a1570068b5de7a67c9b4a065a04bde3b08dd4b4ae49af0c90970d81aea6b7",
+    "bag_sha256": "0e99cb30dbdd7d48972ab5a9d755d84cb2001cb01f696a37486c9d445946a055",
+    "physics_sha256": "038eb53e8ca149afae45de9a0345aeb416888f0286a6636b0c228520a45298bb",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 75.34549699994386,
+      "per_image_wall_p95_ms": 646.4229959999557
+    },
+    "arm_at_minimum": {
+      "time_s": 38.6,
+      "body_z_m": 2.1469951984735625,
+      "tool_z_m": 1.7971090945755344,
+      "theta_true_deg": 73.77471403397573,
+      "theta_est_deg": 75.00536904382821,
+      "theta_est_minus_true_deg": 1.2306550098524838,
+      "theta_des_minus_true_deg": 4.225285966024273,
+      "nearest_robot_m": [
+        0.9854204428684499,
+        0.06329828476909241,
+        1.7708006930554496
+      ],
+      "nearest_gate_m": [
+        0.9854442625307765,
+        0.06329515060299679,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 47.62,
+      "first_phase": "dock",
+      "minimum_s": 50.239999999999995,
+      "minimum_mm": -1.1556445335647063,
+      "pair": [
+        "collision_landing_163",
+        "collision_gripper_finger0"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 3.8000000000000007,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.35999999999999943,
+          "clearance": 1.019999999999996,
+          "self_contact": 2.780000000000001
+        }
+      },
+      "first_integrated_contact_observed_by_s": 47.62
+    },
+    "score_sha256": "3c7778452819f85980eb407352f78d5153cb9a62d3e32834eb04d5f2091ff050",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-occluded-proposed": {
+    "archive_sha256": "03235ecdb516098cb278ee7aa3d251928b85b2d4c398a0008b3ba2a963add93f",
+    "member_hashes": 26,
+    "ulog_sha256": "aa5fdfb7a0592c48574971b7f7915e10766eaf143c6f6ef234c2fb75464d6a88",
+    "bag_sha256": "512bc529634bdd0e754b9ac51c8b2716f2ebc8ecf3d4a88a9fcd61221dbad42b",
+    "physics_sha256": "c513d55c176c915462e3117442aae265b4998c28212dccceebe749be4675af32",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 74.25420899971868,
+      "per_image_wall_p95_ms": 631.0154659997806
+    },
+    "arm_at_minimum": {
+      "time_s": 33.62,
+      "body_z_m": 2.148958671612796,
+      "tool_z_m": 1.8177751099297392,
+      "theta_true_deg": 78.35191865976329,
+      "theta_est_deg": 78.15148216564901,
+      "theta_est_minus_true_deg": -0.2004364941142711,
+      "theta_des_minus_true_deg": -0.3519186597632853,
+      "nearest_robot_m": [
+        0.9478803293863877,
+        0.09612059578006203,
+        1.7901880917295732
+      ],
+      "nearest_gate_m": [
+        0.9500000000000001,
+        0.09611847018503301,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 3.2199999999999998,
+      "minimum_mm": 0.952429511233898,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "3aed535474ed437713121ff2341ed278e4844b37b7106817a1c1a99aed4a0e84",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-natural-oracle": {
+    "archive_sha256": "34b09a2d43ac16e21bad631ce4b24e9285a11b2136c88806c31f94b3f630ce51",
+    "member_hashes": 26,
+    "ulog_sha256": "b0e6ae885000c5c71853ffe9423436e528564492c04faa68cbf5a84a74309b26",
+    "bag_sha256": "b0ff43a54ed2e771869138486cc8dcab8eaeedce4ed08c077e08ed42d5450ef5",
+    "physics_sha256": "e20e678d791cb9ba80502222a9a1e918ebf6dfd6e2562d476ff2b30c835d1694",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 77.6272500002051,
+      "per_image_wall_p95_ms": 647.8623444997993
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.144478293025097,
+      "tool_z_m": 1.8118818094779794,
+      "theta_true_deg": 78.0009102883435,
+      "theta_est_deg": 78.0009102883435,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.000910288343504817,
+      "nearest_robot_m": [
+        0.9457997083590399,
+        0.10500177267044182,
+        1.7844216918501286
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.10499708741797932,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 9.459999999999999,
+      "minimum_mm": 0.950515670927654,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "177dc88eed4483627be02dcf39fed9cb44e0c7aa63e4be05f3a82573fa28f220",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-occluded-vision": {
+    "archive_sha256": "ccf7deb94b23b829b84b6b6e40b0c2a9cf72c1236ae647a41d5f21564bd4922c",
+    "member_hashes": 26,
+    "ulog_sha256": "194ac522f55efc05c8b919a1a834e65bed1ccaf448daf8c8f5103abecb0a8053",
+    "bag_sha256": "d014600f878b144c35c470c6821b64aec908b44a108246abd42dc74c578f6b29",
+    "physics_sha256": "b68d04386d87284b6809f18665bf0bdf2019ee696a6a6bd3aefc33e7141916b4",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 77.3375130002023,
+      "per_image_wall_p95_ms": 621.6347710001173
+    },
+    "arm_at_minimum": {
+      "time_s": 38.019999999999996,
+      "body_z_m": 2.1455203401385647,
+      "tool_z_m": 1.7990286520344305,
+      "theta_true_deg": 74.60179088521764,
+      "theta_est_deg": 77.88526622786623,
+      "theta_est_minus_true_deg": 3.283475342648586,
+      "theta_des_minus_true_deg": 3.398209114782361,
+      "nearest_robot_m": [
+        0.9317956371903903,
+        0.07740335963734123,
+        1.772679548541998
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07740335963734123,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 45.879999999999995,
+      "first_phase": "dock",
+      "minimum_s": 49.019999999999996,
+      "minimum_mm": -0.9024747077218396,
+      "pair": [
+        "collision_landing_163",
+        "d435"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 3.8000000000000007,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.35999999999999943,
+          "clearance": 0.779999999999994,
+          "self_contact": 2.8799999999999812
+        }
+      },
+      "first_integrated_contact_observed_by_s": 45.879999999999995
+    },
+    "score_sha256": "bbe5025dc3f4afc68be4dcad6c04a52de4c28ceeb8df209a3e9a38d728105769",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-natural-strain": {
+    "archive_sha256": "fac95042bb69fb7da010a6997eb4dfb333d46491432b7f509c65b6e0d86e8f5f",
+    "member_hashes": 26,
+    "ulog_sha256": "2c83d700e2458419a2c5eb4766c2a0ee0bbb7c17e17cb238a146a555951afd9c",
+    "bag_sha256": "5bc65ae2503c94888f127985c7b60458236d6c96d81b25bb5f7c5756dd5c63dd",
+    "physics_sha256": "ea808678e3c80b8458ab64843db8e384e53588c57b24d33e474baea47029844d",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 78.23325000026671,
+      "per_image_wall_p95_ms": 648.4709570001996
+    },
+    "arm_at_minimum": {
+      "time_s": 33.62,
+      "body_z_m": 2.1469660811627667,
+      "tool_z_m": 1.8164994085289745,
+      "theta_true_deg": 78.49429419093259,
+      "theta_est_deg": 77.70820173641329,
+      "theta_est_minus_true_deg": -0.7860924545193058,
+      "theta_des_minus_true_deg": -0.4942941909325924,
+      "nearest_robot_m": [
+        0.944061215865331,
+        0.08984228250685855,
+        1.7887813625826092
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.08984228250685855,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 13.479999999999999,
+      "minimum_mm": 0.9508172745975245,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "159a7dd327ab85d3ad92b700ae9e2362da5404a63f749934f63b755e79431d91",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-natural-oracle": {
+    "archive_sha256": "a28f7a7f5ceac4ef5c162a89bb241827515e45c3f113f80019ebffd65b52828f",
+    "member_hashes": 26,
+    "ulog_sha256": "fb3933eb42014b89d0f4804399e0e12be49bf871161b6581a34f0ac04d1edb4b",
+    "bag_sha256": "be10cdd67d744144b907e7fdf9c55daa9039cc921b1483e525d316ffff33ae94",
+    "physics_sha256": "2ba4d239a6f7b2d10c16c8d1ecc19d31c0a4cdef21ff3246660779584d77df8c",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 78.39290899983098,
+      "per_image_wall_p95_ms": 647.3580204999507
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.146558998551178,
+      "tool_z_m": 1.8139270698469787,
+      "theta_true_deg": 78.00193324529872,
+      "theta_est_deg": 78.00193324529872,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0019332452987157467,
+      "nearest_robot_m": [
+        0.945613246955058,
+        0.09673225580851237,
+        1.7864354807469622
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09673225580851232,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 10.28,
+      "minimum_mm": 0.950357475004203,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "ab81a4afbdcefc98f687697f97383556a585d760c9d914efd3442fb659a44c14",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-occluded-vision": {
+    "archive_sha256": "42801859611e705669ad86b0d464f2475f856e238470243792df66c7ba78844c",
+    "member_hashes": 26,
+    "ulog_sha256": "ae5a58243cb863d06e57f5d7e18aa21320979e03c8c239f2da9cac08a63b159b",
+    "bag_sha256": "98a42c4dcfa747f39699a0ff5a19dbbb0992a4682e31f21edb482467c190c58d",
+    "physics_sha256": "382fb911e18d63e8fea08e70dd721e1446498c799e090ec3fe8c7c7b7ae6dc6e",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 76.56960199983587,
+      "per_image_wall_p95_ms": 640.8154235000438
+    },
+    "arm_at_minimum": {
+      "time_s": 38.32,
+      "body_z_m": 2.1449240183093314,
+      "tool_z_m": 1.7952631270325372,
+      "theta_true_deg": 74.06951008947566,
+      "theta_est_deg": 75.62496579768025,
+      "theta_est_minus_true_deg": 1.5554557082045903,
+      "theta_des_minus_true_deg": 3.9304899105243436,
+      "nearest_robot_m": [
+        0.9260868829869633,
+        0.06450305593030733,
+        1.7680024623756474
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.06450299361399447,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 46.44,
+      "first_phase": "dock",
+      "minimum_s": 46.44,
+      "minimum_mm": -0.9786847620746651,
+      "pair": [
+        "collision_landing_163",
+        "d435"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 3.8000000000000007,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.35999999999999943,
+          "clearance": 1.1399999999999935,
+          "self_contact": 2.260000000000012
+        }
+      },
+      "first_integrated_contact_observed_by_s": 46.44
+    },
+    "score_sha256": "de892ca934382f2b8e1d5c3cb7ee4ea57f04b12e010cce3290e2449cc75ab966",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-natural-strain": {
+    "archive_sha256": "953cdce277dd6aa90e50d428b7afc1c6039e65ef4b47150738220bccf07e8efe",
+    "member_hashes": 26,
+    "ulog_sha256": "1095db1d4c3c2b2617d92837b939c00536093f333ff8b07ae4451158f8180e77",
+    "bag_sha256": "86d4643f02cd55841230c280f062a5eb759178c382f9750645d20f4f9b4387b3",
+    "physics_sha256": "9e09b3f442c4dc89a6f8fa6d71870e048b6611a1ea19874b56f9f35494980b3b",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 98,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 77.61017100074241,
+      "per_image_wall_p95_ms": 882.688330500514
+    },
+    "arm_at_minimum": {
+      "time_s": 33.76,
+      "body_z_m": 2.1478806028686366,
+      "tool_z_m": 1.7850517609519576,
+      "theta_true_deg": 70.52668024608582,
+      "theta_est_deg": 77.78006578035098,
+      "theta_est_minus_true_deg": 7.253385534265163,
+      "theta_des_minus_true_deg": 7.473319753914183,
+      "nearest_robot_m": [
+        0.9463581544506897,
+        0.07858471975693464,
+        1.758731779387795
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07858025848805907,
+        1.6950000000000003
+      ],
+      "pair": [
+        "visual_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 3.96,
+      "minimum_mm": 0.9518669527142499,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "39bc083d663c0f969a3b819961364e37891387b5374b3db8d4b1905b907762f5",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-occluded-fixed": {
+    "archive_sha256": "2037d5d9fb6a0335cbde5b57755b8f7084174278da0fb8370b86d15feeae1dcc",
+    "member_hashes": 26,
+    "ulog_sha256": "55b9c3e8d0abbd2b445f4072394cb507117c80e3dfab85c2c0cb3454eba28803",
+    "bag_sha256": "18fe1567a6889631ef326ca66329a48505f8874a42bc6caedfd91285e4101b85",
+    "physics_sha256": "b2af9662886cfd2b12d61ef4dda5c4e48010afa38c57ca19750901acddbf7cc4",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 76.80586900005437,
+      "per_image_wall_p95_ms": 638.2173074998718
+    },
+    "arm_at_minimum": {
+      "time_s": 34.059999999999995,
+      "body_z_m": 2.149137893025889,
+      "tool_z_m": 1.7991734712247052,
+      "theta_true_deg": 76.44470356493115,
+      "theta_est_deg": 73.89032333403043,
+      "theta_est_minus_true_deg": -2.554380230900719,
+      "theta_des_minus_true_deg": 1.555296435068854,
+      "nearest_robot_m": [
+        0.9219046680689111,
+        0.06451959108186457,
+        1.7723210714132547
+      ],
+      "nearest_gate_m": [
+        0.9499999999999998,
+        0.06451959108186452,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 9.58,
+      "minimum_mm": 0.9506811948625902,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.5599999999999881,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "e65f6bf1da1eb0a44cd2516c814fbbf31b8b6fd93775311c086df39a93c50ba9",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-natural-proposed": {
+    "archive_sha256": "cb7efe6e68851f2b2631fab3d1c5ead5616fe09417d4a0afc164c064ddcedfe5",
+    "member_hashes": 26,
+    "ulog_sha256": "9d07a5e430c20aab5f20779949e668579099a23a2027dd3910713022912757d2",
+    "bag_sha256": "5c68c673bb65ab710cb910a3a1104c3f88f1a4b5b91303f6a5b0cb0d26f1b926",
+    "physics_sha256": "d274bdb2b534bb503aaf8bd60063446eefc6e772cbca2b5cfd9fc3f04bbfe12f",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 77.8590379995876,
+      "per_image_wall_p95_ms": 641.2155179996262
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.1420511391991828,
+      "tool_z_m": 1.8094653053383591,
+      "theta_true_deg": 78.01262793477366,
+      "theta_est_deg": 77.98185833835234,
+      "theta_est_minus_true_deg": -0.030769596421322376,
+      "theta_des_minus_true_deg": -0.012627934773661309,
+      "nearest_robot_m": [
+        0.9468804765478375,
+        0.09281295870187672,
+        1.781984693478739
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09281295870187671,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 8.32,
+      "minimum_mm": 0.9505207356132519,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "e56bc9043ad3edde7d806f87ecab01b6a4f1b134e20a854f1836b9ae678c6bb5",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-occluded-oracle": {
+    "archive_sha256": "541f065345191732f91565e2b08d5af569ae2661160d922291c6ebb60fddae72",
+    "member_hashes": 26,
+    "ulog_sha256": "11687fc9bdbc2ba4009d7da2bc185db42b9cb6206effe41f56317d2c1abbc002",
+    "bag_sha256": "1a3046849cbc2042e71c56c4ab94a87565ad27c2488aea9d95d1248fb3b466b4",
+    "physics_sha256": "5739c317069b413da98a9ab0412e20885e1b3af113293af6f3bdacd5c3ed73ad",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 71.41636500000459,
+      "per_image_wall_p95_ms": 600.9654904996751
+    },
+    "arm_at_minimum": {
+      "time_s": 33.64,
+      "body_z_m": 2.141926050357052,
+      "tool_z_m": 1.80929350627271,
+      "theta_true_deg": 78.00210712681766,
+      "theta_est_deg": 78.00210712681766,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0021071268176626745,
+      "nearest_robot_m": [
+        0.9455170014844082,
+        0.09987167855449106,
+        1.781799937110947
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09987167855449104,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 8.639999999999999,
+      "minimum_mm": 0.9517170441386366,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "9b2e1e90b127ae11aa33a3b82275e8f9b6c7a38adf2d9b416e34ebfb4f7f39d0",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-natural-vision": {
+    "archive_sha256": "ae782927e9fe19313f01bbec8857855f40cf1e0b1b4cfce4e8f1a6320955f085",
+    "member_hashes": 26,
+    "ulog_sha256": "b61bb8b538273c03bed066f273d5f66a942eda3ef36dbafb24aba50348aa5cc2",
+    "bag_sha256": "e40cb13d4105ccf3f182888f956926f36dd14693f7d759d06dc2ee5b979a799a",
+    "physics_sha256": "507d2dd818918380cee2e6f34331029d0345ca5c09fffc7148f8963107dd2245",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 71.45528000000922,
+      "per_image_wall_p95_ms": 626.8433595000715
+    },
+    "arm_at_minimum": {
+      "time_s": 34.18,
+      "body_z_m": 2.1453861425496648,
+      "tool_z_m": 1.7953863970730666,
+      "theta_true_deg": 73.92988077725248,
+      "theta_est_deg": 78.80837213169062,
+      "theta_est_minus_true_deg": 4.87849135443814,
+      "theta_des_minus_true_deg": 4.070119222747522,
+      "nearest_robot_m": [
+        0.9293799675840505,
+        0.07549503763960438,
+        1.7683671483646426
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.0754917308350339,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 43.78,
+      "first_phase": "dock",
+      "minimum_s": 44.54,
+      "minimum_mm": -0.6738246945750413,
+      "pair": [
+        "collision_landing_163",
+        "collision_gripper_finger0"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.9599999999999937,
+          "self_contact": 3.6600000000000037
+        }
+      },
+      "first_integrated_contact_observed_by_s": 43.78
+    },
+    "score_sha256": "d3400c4e7a407b7e6e63e1ef3b0dbf8fa4a43eb4f158cffa26a38fbf3f66b716",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-occluded-strain": {
+    "archive_sha256": "5f315f16b0775a8866b80abc3f8078161c5c0fe2ad135e7723646d94c7c13fb2",
+    "member_hashes": 26,
+    "ulog_sha256": "af55b5a549928bbbfd4c6b3630c3a96c9fd60ee24010d96ae9fc9aac04eef598",
+    "bag_sha256": "603a14ec657d56f55b37baa335cc738ed5a8bfe0d02dda66ceb133045cba68ed",
+    "physics_sha256": "9d4ff1171856e21a4d537507920bbeef69e336cd2b6cb12d7714c5bfe614a6e1",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": null,
+      "post_window_first_valid_delivery_s": null,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 77.63881699975173,
+      "per_image_wall_p95_ms": 934.3949829999474
+    },
+    "arm_at_minimum": {
+      "time_s": 33.78,
+      "body_z_m": 2.1445761562733776,
+      "tool_z_m": 1.7835229174534148,
+      "theta_true_deg": 70.97322776205446,
+      "theta_est_deg": 77.9037927113744,
+      "theta_est_minus_true_deg": 6.93056494931993,
+      "theta_des_minus_true_deg": 7.026772237945536,
+      "nearest_robot_m": [
+        0.9474554583630613,
+        0.07594617293753274,
+        1.7570437104068695
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07594609235611116,
+        1.6950000000000003
+      ],
+      "pair": [
+        "visual_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 5.9799999999999995,
+      "minimum_mm": 0.9512063345882603,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "d3f29017d76d3d3319f8162ff7a02dfc1e8c5c76453768dc4d971ea17abf5b0b",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-occluded-oracle": {
+    "archive_sha256": "a9f8cdb04fb570ff940096ffe1d121132a907b7f5e058022dc2b2003126e61d2",
+    "member_hashes": 26,
+    "ulog_sha256": "675fbb4313c3beec0aa32c3748ab13076c1f316db6236fbf7ba31d9877272f7d",
+    "bag_sha256": "c65c6cb8dc4de90de985229f946bf3a8fff27b18f0afcf89b626865605ec7e94",
+    "physics_sha256": "7f5d252e1619ee76390d016ae452da2a98e6199feb35f1ab0099a12065762686",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 62.75447799998801,
+      "per_image_wall_p95_ms": 557.9480785004307
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.147614241468926,
+      "tool_z_m": 1.8149699103887458,
+      "theta_true_deg": 78.00021513027006,
+      "theta_est_deg": 78.00021513027006,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0002151302700639235,
+      "nearest_robot_m": [
+        0.9450013129007492,
+        0.09987846809983532,
+        1.787473562278517
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09987846809983526,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 4.24,
+      "minimum_mm": 0.9502022724089387,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "fa42cc89605bca41b5606ab71f6c68ca8e137641b4a7fb12be1bae3514de0fee",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-natural-vision": {
+    "archive_sha256": "5b2045cd48d0099916e9d8b7bf09a6df533f61145cd6410437d3a654d794bb33",
+    "member_hashes": 26,
+    "ulog_sha256": "729422141c00087660630e4b88e81127197c82bf0f424c986e563b0c98dffa29",
+    "bag_sha256": "c637cbfc215ae413979218cad9292bc51dd651f3c327dd598f304fc6f8ca4347",
+    "physics_sha256": "eaa57ca2bb55831ab1f0298780549c22e5c132fd5b75e24c44100dca2c0c46c3",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.24277499970776,
+      "per_image_wall_p95_ms": 569.5786109999972
+    },
+    "arm_at_minimum": {
+      "time_s": 34.199999999999996,
+      "body_z_m": 2.1506770066625105,
+      "tool_z_m": 1.79765740005545,
+      "theta_true_deg": 72.73210473236425,
+      "theta_est_deg": 74.57197750467061,
+      "theta_est_minus_true_deg": 1.8398727723063644,
+      "theta_des_minus_true_deg": 5.267895267635751,
+      "nearest_robot_m": [
+        0.9296220544245745,
+        0.0744615781113791,
+        1.7708686805686684
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07445827469378152,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 44.94,
+      "first_phase": "dock",
+      "minimum_s": 45.76,
+      "minimum_mm": -1.2633874855251324,
+      "pair": [
+        "collision_landing_163",
+        "collision_gripper_finger0"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 1.0999999999999943,
+          "self_contact": 3.799999999999983
+        }
+      },
+      "first_integrated_contact_observed_by_s": 44.94
+    },
+    "score_sha256": "1fa0c680c761cf220fe7a5aea71f4a5858ea0f21eafe786e4b6d74883030c836",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-occluded-strain": {
+    "archive_sha256": "f968c9861f64c4c4463e3f646e618274a0bb33a2a900d9494762d9229c7e0661",
+    "member_hashes": 26,
+    "ulog_sha256": "9182546db1e979e45584284f3573e9e82dd8db4208a10bf071670f20fcfea928",
+    "bag_sha256": "dda2f529cac032fcb6bc2d28a7c4c8c23fb33532d19ad6b74548c940ba99f08a",
+    "physics_sha256": "960fe4070289fcf5c35beb60ccc8476dec600acaf7ac4cb364a6ac2eb757857b",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 62.0280390003245,
+      "per_image_wall_p95_ms": 554.6618405001027
+    },
+    "arm_at_minimum": {
+      "time_s": 33.62,
+      "body_z_m": 2.1464560755918662,
+      "tool_z_m": 1.8158491297443597,
+      "theta_true_deg": 78.49389984384979,
+      "theta_est_deg": 77.70818013641043,
+      "theta_est_minus_true_deg": -0.7857197074393554,
+      "theta_des_minus_true_deg": -0.493899843849789,
+      "nearest_robot_m": [
+        0.9423742303076104,
+        0.08824116442981321,
+        1.788134047826398
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.08824116442981318,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 11.7,
+      "minimum_mm": 0.9521516044153874,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "e63f2d76a83fad50cfaa38bfd2caa82b2e576e82515fab489496a6fe32d15599",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-natural-fixed": {
+    "archive_sha256": "adc6a7e27a0d17696ebe67659f531b2ff04f1d98f852cebd36cc77eb0cdd07f7",
+    "member_hashes": 26,
+    "ulog_sha256": "7e9cc2e65783bf227a05a537a70e693d95cb992bd7c4a3ae2cf7a1fb250eec4c",
+    "bag_sha256": "8e14cc45391b174790548fa46ab7369e3d7d2c4f5774fbb547d854fd972423c4",
+    "physics_sha256": "d8381ef1885b8f8a1fff55df78a5516d40c0800542c6b406521b8df77dbd7bbf",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 62.83066600008169,
+      "per_image_wall_p95_ms": 564.7674864999317
+    },
+    "arm_at_minimum": {
+      "time_s": 33.58,
+      "body_z_m": 2.144657126829898,
+      "tool_z_m": 1.8129403054590558,
+      "theta_true_deg": 78.19952961306726,
+      "theta_est_deg": 77.84923666656583,
+      "theta_est_minus_true_deg": -0.3502929465014262,
+      "theta_des_minus_true_deg": -0.1995296130672557,
+      "nearest_robot_m": [
+        0.9453335037483322,
+        0.09992479041616231,
+        1.7853907675602898
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09992479041616231,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 5.92,
+      "minimum_mm": 0.9507648199594011,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "b6c2215ce29420443e86ccf1cebb802f94a8a67d78ec1213e09f7f993d9bc6e8",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-natural-vision": {
+    "archive_sha256": "13134b4a8e2243c5580c9d1294953e2cad6ee240b6a02180761f4b39554528ba",
+    "member_hashes": 26,
+    "ulog_sha256": "ffb1cc9f831b660b5137954ee26394570056509216b3afbaa7e79218d7ec9c41",
+    "bag_sha256": "77b0dd594fea283f412e84aed3cda60d74a7887da36c3152d3fa231d6c58f64c",
+    "physics_sha256": "0a875c2ee0a45f58d824293fc66e270c0c4444e9b4cc139ad0d88d5e3b360367",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 62.696517999938806,
+      "per_image_wall_p95_ms": 564.1042355005084
+    },
+    "arm_at_minimum": {
+      "time_s": 34.6,
+      "body_z_m": 2.157476119349085,
+      "tool_z_m": 1.8069577523684341,
+      "theta_true_deg": 74.15222294213379,
+      "theta_est_deg": 73.1765094837418,
+      "theta_est_minus_true_deg": -0.9757134583919935,
+      "theta_des_minus_true_deg": 3.8477770578662103,
+      "nearest_robot_m": [
+        0.9770565318881487,
+        0.054231350640577526,
+        1.7795205236104066
+      ],
+      "nearest_gate_m": [
+        0.9769911708675828,
+        0.054231350640577665,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 42.72,
+      "first_phase": "dock",
+      "minimum_s": 48.019999999999996,
+      "minimum_mm": -1.1479754422045614,
+      "pair": [
+        "collision_landing_163",
+        "collision_gripper_finger0"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 1.1000000000000085,
+          "self_contact": 3.739999999999988
+        }
+      },
+      "first_integrated_contact_observed_by_s": 42.72
+    },
+    "score_sha256": "b70c06f17fb05d5ca580b8beb8f668b33d0ad125b43d0daf975c48135ac2101f",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-occluded-strain": {
+    "archive_sha256": "76ed6f80e434273a03d4c9f852af9a14d8f800190e6dd9d2318bbe92aaff5360",
+    "member_hashes": 26,
+    "ulog_sha256": "c036dabe2249ac1420808172d2f9e59fb4af29d2582fc69486bd335f14c66d01",
+    "bag_sha256": "a0e375b2ea40873e05d6b7dd56b97c579306476305301569adbc3b4962184765",
+    "physics_sha256": "cff620e90cb014fdfec97e50138ddae2c17be7100cb58cc8899f77b7c2c9b1c8",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 62.847625000358676,
+      "per_image_wall_p95_ms": 544.3435219995081
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.148463798790987,
+      "tool_z_m": 1.8147627896426737,
+      "theta_true_deg": 77.70913729724538,
+      "theta_est_deg": 77.82275062477797,
+      "theta_est_minus_true_deg": 0.11361332753259035,
+      "theta_des_minus_true_deg": 0.2908627027546231,
+      "nearest_robot_m": [
+        0.9444209954980549,
+        0.08764221615246573,
+        1.7873009901803496
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.0876422161524657,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 3.1399999999999997,
+      "minimum_mm": 0.9505767156039907,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "8960c0cd81262b64b2d45e143fa311bc08e3784ec99b4f812f5d083f4a50517f",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-natural-fixed": {
+    "archive_sha256": "9d173c862b8664e406eb6cf984c9e03ec3523efe743f9a740a71ea12e906dd49",
+    "member_hashes": 26,
+    "ulog_sha256": "64de2e83c7830205fd65c82c5bb2e39f5954dafd27a3dfd20d77a35bb184eee5",
+    "bag_sha256": "f5e3b400a1f00e39453843ddca07bdfdc56a72d4110c13f2256e632502c0ec4c",
+    "physics_sha256": "e52e40c0aa9decbdfb72b607c6995342651410a08023acea4069930456224ae0",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.87374699988868,
+      "per_image_wall_p95_ms": 556.8404385003305
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.146996819636639,
+      "tool_z_m": 1.8149622145422697,
+      "theta_true_deg": 78.13684930847761,
+      "theta_est_deg": 77.83453234277208,
+      "theta_est_minus_true_deg": -0.30231696570552913,
+      "theta_des_minus_true_deg": -0.13684930847760768,
+      "nearest_robot_m": [
+        0.9447993623943194,
+        0.08766300441488704,
+        1.7874454967219093
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.08766300441488704,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 6.8999999999999995,
+      "minimum_mm": 0.9505154065895873,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "4bb6724d6215c6d82ac83abc1968f503c00cfb25921c643e0c016342a379e615",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-occluded-proposed": {
+    "archive_sha256": "a74424a10576e5344d0e13fcdb3aa2f215cc41c03ab3e6edd48a1ac3c25acbba",
+    "member_hashes": 26,
+    "ulog_sha256": "64341568708ebb32347e20d7945bef94e7df7d1e1305730b45f7b7f8f5a1a6c3",
+    "bag_sha256": "ae7f07dc47daed9cacf746474062250d8b2db8e877d5037e85581934bad9d0b1",
+    "physics_sha256": "425df8ca4509f40efc5173f7266893e3f976c780d71c52d279aaff415219fa96",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 62.837175000822754,
+      "per_image_wall_p95_ms": 538.6778484999013
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.1464141288148797,
+      "tool_z_m": 1.8142858442813374,
+      "theta_true_deg": 78.09296843946134,
+      "theta_est_deg": 77.75522243383298,
+      "theta_est_minus_true_deg": -0.337746005628361,
+      "theta_des_minus_true_deg": -0.09296843946134459,
+      "nearest_robot_m": [
+        0.9448163059417337,
+        0.08928648273152996,
+        1.7867629970491838
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.08928648273152995,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 6.819999999999999,
+      "minimum_mm": 0.9518130097708009,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "83b833218fe37ea4c8a24275c703f814cd2dd97ea7edb2f012f917ffb2effcb3",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-natural-oracle": {
+    "archive_sha256": "4f1ba7032b2e0905db2cd00bbda2870ffec5e3ca539cc3a9b183cf9baa4560c7",
+    "member_hashes": 26,
+    "ulog_sha256": "a249098bcfb113149b3f148de1eed9b28374f6061383f1f6df2cddda1b116eef",
+    "bag_sha256": "da9d9b3495500d4e35cf22aed09387922385064f91a09e67b446a144f0d1f4ff",
+    "physics_sha256": "4a8e348eb5e52fe1679343d49c18fec5cf08e0f02b37e45f9ccbf5ed9f93e9ee",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.92157499976747,
+      "per_image_wall_p95_ms": 549.5203765012775
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.14035804476569,
+      "tool_z_m": 1.8075661688967146,
+      "theta_true_deg": 78.00117354672219,
+      "theta_est_deg": 78.00117354672219,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0011735467221853924,
+      "nearest_robot_m": [
+        0.9447863124796618,
+        0.09849621879695085,
+        1.7800728016296368
+      ],
+      "nearest_gate_m": [
+        0.9499999999999998,
+        0.09849621879695084,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 3.5999999999999996,
+      "minimum_mm": 0.9511732449399222,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "9619b39eb1134915b522800d56815adfc099a4c29bdab838cd0cbf6fb8264cce",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-nominal-occluded-vision": {
+    "archive_sha256": "11586a47c4b8ddb3485d8900a90fb0f83930667841235534b571a68bce8e5404",
+    "member_hashes": 26,
+    "ulog_sha256": "43d48b3fa5c95059e9fa73da163e199250640bf7a45c4e40b52bd9c546739e4e",
+    "bag_sha256": "d848f6e97cbbee540c047870f32215a28309dec1da1cd15bacc41ea2c89e7b6d",
+    "physics_sha256": "bd881e9d939bbca01f946a2f5ee501c53dc9e02b47e48f84560509b6cde9d352",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 63.21871900036058,
+      "per_image_wall_p95_ms": 551.9848215008096
+    },
+    "arm_at_minimum": {
+      "time_s": 37.98,
+      "body_z_m": 2.142173687087291,
+      "tool_z_m": 1.7937605968235568,
+      "theta_true_deg": 73.82789423386967,
+      "theta_est_deg": 76.88248277111563,
+      "theta_est_minus_true_deg": 3.0545885372459622,
+      "theta_des_minus_true_deg": 4.172105766130329,
+      "nearest_robot_m": [
+        0.9423597932070874,
+        0.07877309775140755,
+        1.7674127662180692
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07877325149135544,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 46.66,
+      "first_phase": "dock",
+      "minimum_s": 53.62,
+      "minimum_mm": -0.699939943894831,
+      "pair": [
+        "collision_landing_163",
+        "collision_gripper_finger0"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 3.8000000000000007,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.35999999999999943,
+          "clearance": 0.9199999999999946,
+          "self_contact": 3.799999999999997
+        }
+      },
+      "first_integrated_contact_observed_by_s": 46.66
+    },
+    "score_sha256": "51edc36a5df78f629293ecb494d97d61eaa7f2f88c09759f033194fd80fdf440",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-natural-strain": {
+    "archive_sha256": "2508516bb54975498228b64ad75879f2f1759ea2464624c6826359ddcada3e62",
+    "member_hashes": 26,
+    "ulog_sha256": "c21d8bb21dc732f14a040e753b0fbf1cb142d2840cde9942e43334bf9ab5ad5a",
+    "bag_sha256": "88dec5bd01dcf8e57cd1b7e1514393b52e7444bf9b6979110c8888e0f36ce92e",
+    "physics_sha256": "d9d8db357d37b86e6f89bb46de632fa9385d4e8b8f777e53bdd44b57460e7e30",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.57320600000094,
+      "per_image_wall_p95_ms": 541.8383294991145
+    },
+    "arm_at_minimum": {
+      "time_s": 33.78,
+      "body_z_m": 2.139069568932433,
+      "tool_z_m": 1.7780690902793073,
+      "theta_true_deg": 70.97840848874795,
+      "theta_est_deg": 77.90375545257254,
+      "theta_est_minus_true_deg": 6.925346963824595,
+      "theta_des_minus_true_deg": 7.021591511252055,
+      "nearest_robot_m": [
+        0.9457046667439554,
+        0.07512460378970873,
+        1.7515915184067479
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07512460378970871,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 6.739999999999999,
+      "minimum_mm": 0.9510296406971802,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "bf3c9223fafeee173879ffbc1f01f23471c25ed48e980a2776f93781ae9f2a86",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112131-differential-occluded-fixed": {
+    "archive_sha256": "f03f437eb2c8cd34bef1c349daf15baf1186852a8151c4374a790ddb6e2c8336",
+    "member_hashes": 26,
+    "ulog_sha256": "9f7714b35149e7f03e09e87db5ab2405b9c0b3715258c55d4d0c6d913110e051",
+    "bag_sha256": "c0b289885f8872e7f0fb74011590e7874867ab252e7255a1e1442879530c84f8",
+    "physics_sha256": "8033073e50481ace4bc7133307cdc4de86a7700570520b070cea05ce4022912a",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 63.003688999742735,
+      "per_image_wall_p95_ms": 549.4391584998084
+    },
+    "arm_at_minimum": {
+      "time_s": 34.699999999999996,
+      "body_z_m": 2.1475250268418353,
+      "tool_z_m": 1.7955443702748695,
+      "theta_true_deg": 75.35275404108373,
+      "theta_est_deg": 77.82516244414364,
+      "theta_est_minus_true_deg": 2.472408403059916,
+      "theta_des_minus_true_deg": 2.6472459589162725,
+      "nearest_robot_m": [
+        1.0123722099309413,
+        0.07219747110818824,
+        1.768813955068836
+      ],
+      "nearest_gate_m": [
+        1.012367832703924,
+        0.0721968951572649,
+        1.6950000000000005
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 13.24,
+      "minimum_mm": 0.9502995565385719,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.519999999999996,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "2878705dd7ba1caaf89ace5916cd13493d98c72bd40ef129110499f5bd3e76de",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-occluded-vision": {
+    "archive_sha256": "fa71627e945feddd007f6ac2eaaa0e02cd6598b6f47de9be3f7eab0a6c4ea761",
+    "member_hashes": 26,
+    "ulog_sha256": "7f22ae597161eca59bc1c879108a12aa2ed83501b84edbe638548d1b1a78d8fc",
+    "bag_sha256": "fbab301a89bb9b29d6250bf06016933ca57c90cb992b39f28f6206980f3fa146",
+    "physics_sha256": "4301fd9173dd2c486eeb0f321d43e8138ea9e1fbd094d7c8def9a8c80a75ef2a",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 62.55666499964718,
+      "per_image_wall_p95_ms": 559.7835400003532
+    },
+    "arm_at_minimum": {
+      "time_s": 38.04,
+      "body_z_m": 2.1441754998948146,
+      "tool_z_m": 1.7963768846140182,
+      "theta_true_deg": 74.09845205711778,
+      "theta_est_deg": 74.8754878046444,
+      "theta_est_minus_true_deg": 0.777035747526611,
+      "theta_des_minus_true_deg": 3.9015479428822175,
+      "nearest_robot_m": [
+        0.9519323472255871,
+        0.07671507697353862,
+        1.7699166270656665
+      ],
+      "nearest_gate_m": [
+        0.9519323472255871,
+        0.0767150769735386,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": 46.82,
+      "first_phase": "dock",
+      "minimum_s": 49.78,
+      "minimum_mm": -0.8884251716838683,
+      "pair": [
+        "collision_landing_163",
+        "d435"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 3.8000000000000007,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.35999999999999943,
+          "clearance": 0.7800000000000082,
+          "self_contact": 2.8200000000000003
+        }
+      },
+      "first_integrated_contact_observed_by_s": 46.82
+    },
+    "score_sha256": "4ee2cbc58b29bb6632702b3d8a725460f6be07a181484dfd67f1abf76dc2b3d7",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-differential-natural-strain": {
+    "archive_sha256": "cd3f146065de0ed870cf3bef5bb0714809176b596d4b6cda500d64db4dfa711f",
+    "member_hashes": 26,
+    "ulog_sha256": "58f1e6268147c0587fd9d59fe6747df3bae574be0cb8c9c607c1d520a7bc52a2",
+    "bag_sha256": "a8944b15c1ceb1b9b13221d282630a23c7fedde82bb6bac5e6076eb2c837d9ff",
+    "physics_sha256": "119f69c4583a9141556ac9a61797dddc4cda136e9ad231a5fba155c0567b7896",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.93519199991715,
+      "per_image_wall_p95_ms": 544.6859179992316
+    },
+    "arm_at_minimum": {
+      "time_s": 33.699999999999996,
+      "body_z_m": 2.1450038978092114,
+      "tool_z_m": 1.7855755029032545,
+      "theta_true_deg": 71.41484730849628,
+      "theta_est_deg": 77.79046006006038,
+      "theta_est_minus_true_deg": 6.3756127515641055,
+      "theta_des_minus_true_deg": 6.585152691503723,
+      "nearest_robot_m": [
+        0.9446704312749388,
+        0.07852476762297385,
+        1.758903640500621
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.07852476762297382,
+        1.6950000000000003
+      ],
+      "pair": [
+        "visual_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 14.24,
+      "minimum_mm": 0.9509782492202461,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "b55367e55ee41925c4ebf408b970c50888b323630b541e32a62f7f397abc84ef",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-occluded-fixed": {
+    "archive_sha256": "bfe56c6ae67600292448cfd2255bcbab68d0f9b10383acf59b0589feb4f99250",
+    "member_hashes": 26,
+    "ulog_sha256": "b940583c13b5f0f5558718d8c6e2317a5e5b22a6ff5b6df128e0791240972612",
+    "bag_sha256": "70aa657d0b730612085e528f90576bf188c273b521821a88d9a5d4e0e6533919",
+    "physics_sha256": "7e45c31069dc4120691cdf8ab8298b95904e5d4ef3bc5ad4c6e8eb87eb0ec347",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 52.0,
+      "post_window_first_valid_delivery_s": 52.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 64.99192499904893,
+      "per_image_wall_p95_ms": 707.1815605004304
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.1550486973870946,
+      "tool_z_m": 1.8164228541221297,
+      "theta_true_deg": 76.50578429296365,
+      "theta_est_deg": 75.87576037432854,
+      "theta_est_minus_true_deg": -0.6300239186351178,
+      "theta_des_minus_true_deg": 1.4942157070363464,
+      "nearest_robot_m": [
+        0.9425334140416348,
+        0.06387672814099499,
+        1.7886754803010783
+      ],
+      "nearest_gate_m": [
+        0.9500000000000001,
+        0.06387672814099497,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 2.6199999999999997,
+      "minimum_mm": 0.9512519944622817,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "a181d26f0555e8669fc764b1b8a937ec8b824facd662f068712d57c2eed26501",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112137-nominal-natural-proposed": {
+    "archive_sha256": "47b714605014dcfd7b7c7787839e7c529ed6183c6981d37d609846df4fafdd65",
+    "member_hashes": 26,
+    "ulog_sha256": "94704907ef400072c94ec057b2b3912e0f389740025f76326c5e4ca4803dfbd4",
+    "bag_sha256": "82decb906f0e86cfc6587696f9674c4865ee0841d23fd2ede2fde2bfedc91dca",
+    "physics_sha256": "79fd43779c94853cb92abfe298914eb469b635cb1d5c395f228fde170fb44117",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.43007299983583,
+      "per_image_wall_p95_ms": 557.8575269992143
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.1458809840476825,
+      "tool_z_m": 1.8150081278313428,
+      "theta_true_deg": 78.4356247451648,
+      "theta_est_deg": 77.94883920100439,
+      "theta_est_minus_true_deg": -0.4867855441604121,
+      "theta_des_minus_true_deg": -0.43562474516480165,
+      "nearest_robot_m": [
+        0.9466664351193923,
+        0.10000733488472255,
+        1.787441224358402
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.10000733488472258,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 1.98,
+      "minimum_mm": 0.9512541576549094,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "ff40100b324db5ac4dd803b7f9fd70662530cabee3a7236f5374c8a602df9dc4",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-natural-strain": {
+    "archive_sha256": "e94804e1ce8e58515010ac7cb94578b3525faf84895a3fba9ca9ce3b08fdc483",
+    "member_hashes": 26,
+    "ulog_sha256": "03e6f06deb838e809eac0f6f6a9db6e2d4bbcc81c846bab1c75bb6bcd0b691a7",
+    "bag_sha256": "cb3b46f53f3262212c7cafd08bcb5971f0ff14686dcf7e3034363d28ca41d194",
+    "physics_sha256": "3798cf2f148645858c9992954875b703ae0288ef6f5b325c1065d3ef3cdcdeba",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.79768199985847,
+      "per_image_wall_p95_ms": 555.9674955002265
+    },
+    "arm_at_minimum": {
+      "time_s": 33.66,
+      "body_z_m": 2.147226651865188,
+      "tool_z_m": 1.8135461496779055,
+      "theta_true_deg": 77.7095459927757,
+      "theta_est_deg": 77.8180907987537,
+      "theta_est_minus_true_deg": 0.1085448059779992,
+      "theta_des_minus_true_deg": 0.29045400722429804,
+      "nearest_robot_m": [
+        0.945787786613762,
+        0.08626348663644234,
+        1.7860885884208009
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.0862634866364423,
+        1.695
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 8.84,
+      "minimum_mm": 0.9527638778094287,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "d8b5e5d1c6fb1171d9d8d6468d911e4541690e0159266035fb3b0d12fe427b32",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-nominal-occluded-fixed": {
+    "archive_sha256": "586c09ff702547f335dd2927df918c2a90aacfc88f36952a7c7bb078e2121a28",
+    "member_hashes": 26,
+    "ulog_sha256": "9ac606c111c08e3404a044166452043104729d72e36a190b24e06fb594eda759",
+    "bag_sha256": "dd64afadcb3c32d57784adbb143a5aa6ad9a05ef8fc51711389fdb9437c27640",
+    "physics_sha256": "2a5cbb9d8e02fc4a25e285faa80538024cf6a135c65b433f47acecf2175e84e6",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 63.83490900043398,
+      "per_image_wall_p95_ms": 542.4523410001711
+    },
+    "arm_at_minimum": {
+      "time_s": 33.8,
+      "body_z_m": 2.152531166201696,
+      "tool_z_m": 1.8138271820089775,
+      "theta_true_deg": 76.52482335868862,
+      "theta_est_deg": 77.97438937408549,
+      "theta_est_minus_true_deg": 1.4495660153968686,
+      "theta_des_minus_true_deg": 1.4751766413113785,
+      "nearest_robot_m": [
+        0.9677744224824407,
+        0.06184083410185861,
+        1.7863944460251446
+      ],
+      "nearest_gate_m": [
+        0.9677747866167025,
+        0.061840834101858845,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 13.28,
+      "minimum_mm": 0.9502455173045822,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.12000000000001165,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "a4b610ba84dba05891a16c8d9b4aeb7d7294c377d4cc35a32c169a3b0aaeab73",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-natural-proposed": {
+    "archive_sha256": "ec5d7af7f0e02cb98fad6b5f7bd2cf50fb2e67bded30667c854f4a1f2ae20c21",
+    "member_hashes": 26,
+    "ulog_sha256": "93784aef38080024c328b62f08bb79e828c8b1af0aaff5a42cf2c2aa2adb2a97",
+    "bag_sha256": "0e03aeccaba5e59e01eaba7b2a6c32cfca9e4a609ad6e2ac9d68fd86e951ca42",
+    "physics_sha256": "3f6e71c9106da9b5c8138b0820a9089b52ef66d051a179714c9a5c5141268c9a",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 100,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.0,
+      "post_window_first_valid_delivery_s": 32.2,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 0,
+      "per_image_wall_median_ms": 63.40400900080567,
+      "per_image_wall_p95_ms": 566.3166195008671
+    },
+    "arm_at_minimum": {
+      "time_s": 33.6,
+      "body_z_m": 2.147115316565349,
+      "tool_z_m": 1.8159084038521986,
+      "theta_true_deg": 78.3359577055965,
+      "theta_est_deg": 77.96467780168356,
+      "theta_est_minus_true_deg": -0.3712799039129351,
+      "theta_des_minus_true_deg": -0.33595770559649907,
+      "nearest_robot_m": [
+        0.9433224243437365,
+        0.09013043059124785,
+        1.7883833452388076
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09013043059124783,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 12.58,
+      "minimum_mm": 0.9505182563338865,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "a41a99a5ff3908a15e79fe0c0bf22f27ad7085777373e89448f31a3a801930d6",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  },
+  "26112143-differential-occluded-oracle": {
+    "archive_sha256": "c50904f91acffbff7a7ef4fe6d58834b37e94129d9c0b830ca601315c72659a5",
+    "member_hashes": 26,
+    "ulog_sha256": "80367765ad0a5272b337f24882522fe97e726dc9e007f74723d9361c4829705c",
+    "bag_sha256": "e765670fb1dbe53ad58bfe747c109fb63a30e1d545f03e8f736a0a970f6ac9f1",
+    "physics_sha256": "3c2e4ba0686bad632b6b9e10f566e397c541790dcc1f411dc8410f35c68d5f1d",
+    "optics": {
+      "frames": 1151,
+      "valid_shutter_exposures": 0,
+      "shutter_exposures": 100,
+      "post_window_first_valid_exposure_s": 32.160000000000004,
+      "post_window_first_valid_delivery_s": 32.36000000000001,
+      "valid_in_transit_at_shutter_start": 5,
+      "black_exposures": 100,
+      "per_image_wall_median_ms": 63.838709000265226,
+      "per_image_wall_p95_ms": 544.2955825001263
+    },
+    "arm_at_minimum": {
+      "time_s": 33.58,
+      "body_z_m": 2.1449652300908952,
+      "tool_z_m": 1.8123011756317051,
+      "theta_true_deg": 78.00082163381194,
+      "theta_est_deg": 78.00082163381194,
+      "theta_est_minus_true_deg": 0.0,
+      "theta_des_minus_true_deg": -0.0008216338119382272,
+      "nearest_robot_m": [
+        0.9435389623188605,
+        0.09883357861708839,
+        1.7848074779758776
+      ],
+      "nearest_gate_m": [
+        0.95,
+        0.09883357861708837,
+        1.6950000000000003
+      ],
+      "pair": [
+        "collision_gripper_finger1",
+        "G1_sill"
+      ]
+    },
+    "contact_and_holds": {
+      "first_nonpositive_s": null,
+      "first_phase": null,
+      "minimum_s": 14.2,
+      "minimum_mm": 0.9508976409772621,
+      "pair": [
+        "geom317",
+        "arm1"
+      ],
+      "hold_s_by_period": {
+        "before": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "during": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        },
+        "after": {
+          "feedback": 0.0,
+          "clearance": 0.0,
+          "self_contact": 0.0
+        }
+      },
+      "first_integrated_contact_observed_by_s": null
+    },
+    "score_sha256": "bed1e50caf8700508d6e29c1fe8c10dd3fe23ed7e33278e6fac19a2c6c3c52d7",
+    "physical_xml_sha256": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "perception_lock_sha256": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+    "px4_executable_sha256": "ba0a8df9708f2cf00ed7c86cd14b7013a0cc43ea0f5829da16e323059edb0acf",
+    "physical_dt_s": 0.0005,
+    "hil_dt_s": 0.004,
+    "mass_kg": 2.295,
+    "mujoco_version": "3.2.3"
+  }
+}

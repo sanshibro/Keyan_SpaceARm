@@ -1,0 +1,214 @@
+{
+  "file": "gate_multiview_comparison.mp4",
+  "sha256": "32d2a1df4e7636531b08e72a64f1853dbce913f6385022a08cdb78e7cadb4aa7",
+  "bytes": 4140358,
+  "resolution": [
+    1500,
+    950
+  ],
+  "fps": 8,
+  "displayed_start_s": 23,
+  "displayed_end_s": 55,
+  "frames": 257,
+  "verified_wrist_tiles": 1285,
+  "full_black_video_frames_by_method": {
+    "vision": 32,
+    "strain": 32,
+    "fixed": 32,
+    "proposed": 32,
+    "oracle": 32
+  },
+  "wrist_mae_8bit": {
+    "vision": {
+      "mean": 2.4122247098293563,
+      "max": 3.387654538686103
+    },
+    "strain": {
+      "mean": 1.8249558607924983,
+      "max": 2.797194302396207
+    },
+    "fixed": {
+      "mean": 1.8405972528980088,
+      "max": 3.1328493896824
+    },
+    "proposed": {
+      "mean": 1.885216104294397,
+      "max": 2.902221830365015
+    },
+    "oracle": {
+      "mean": 1.734511748588075,
+      "max": 2.88354983444033
+    }
+  },
+  "checkpoints": {
+    "26.00": {
+      "vision": {
+        "exposure_s": 25.8,
+        "arrival_s": 26.0,
+        "rgb_sha256": "58ccf4d8c5c427f0c1279c3da99076e71c8b8a19574d3b16329448072b7b8bf4",
+        "mae_levels": 2.3386625913517114
+      },
+      "strain": {
+        "exposure_s": 25.8,
+        "arrival_s": 26.0,
+        "rgb_sha256": "2b76c6249631df060d621d58043a2af38025f47c4728e9db575c20f81ec8ae65",
+        "mae_levels": 2.0111287446854367
+      },
+      "fixed": {
+        "exposure_s": 25.8,
+        "arrival_s": 26.0,
+        "rgb_sha256": "258e41fc8013b55d2f3d34d192f869d8fc09e88ae092a7b737b8c39cb3cd0f22",
+        "mae_levels": 2.051490037030506
+      },
+      "proposed": {
+        "exposure_s": 25.8,
+        "arrival_s": 26.0,
+        "rgb_sha256": "35aac523f23518d5f524189664edd0ddf3a6fa30311168b79cdac3d88a4c7cd9",
+        "mae_levels": 2.077793452066067
+      },
+      "oracle": {
+        "exposure_s": 25.8,
+        "arrival_s": 26.0,
+        "rgb_sha256": "f1e2022a173ab4d9994a8a8e9ef2a15868dd475090e71350a22409a19cb4ff93",
+        "mae_levels": 2.064705421344462
+      }
+    },
+    "30.00": {
+      "vision": {
+        "exposure_s": 29.8,
+        "arrival_s": 30.0,
+        "rgb_sha256": "62898c10203cc8dfc1b9fa8dc0900f928cb0fa80391c02ece5df8d5eee386e35",
+        "mae_levels": 0.003742236329081683
+      },
+      "strain": {
+        "exposure_s": 29.8,
+        "arrival_s": 30.0,
+        "rgb_sha256": "62898c10203cc8dfc1b9fa8dc0900f928cb0fa80391c02ece5df8d5eee386e35",
+        "mae_levels": 0.0060541938517604185
+      },
+      "fixed": {
+        "exposure_s": 29.8,
+        "arrival_s": 30.0,
+        "rgb_sha256": "62898c10203cc8dfc1b9fa8dc0900f928cb0fa80391c02ece5df8d5eee386e35",
+        "mae_levels": 0.024265757557945883
+      },
+      "proposed": {
+        "exposure_s": 29.8,
+        "arrival_s": 30.0,
+        "rgb_sha256": "62898c10203cc8dfc1b9fa8dc0900f928cb0fa80391c02ece5df8d5eee386e35",
+        "mae_levels": 0.004633711475538314
+      },
+      "oracle": {
+        "exposure_s": 29.8,
+        "arrival_s": 30.0,
+        "rgb_sha256": "62898c10203cc8dfc1b9fa8dc0900f928cb0fa80391c02ece5df8d5eee386e35",
+        "mae_levels": 0.014341973784752837
+      }
+    },
+    "32.25": {
+      "vision": {
+        "exposure_s": 32.04,
+        "arrival_s": 32.24,
+        "rgb_sha256": "b5fac360ea0b3492f7ee5dacae2724c860a79b43f52d6cbc29ad9775ade25d14",
+        "mae_levels": 2.747741922843316
+      },
+      "strain": {
+        "exposure_s": 32.04,
+        "arrival_s": 32.24,
+        "rgb_sha256": "cc2f854f058a299784f2bdbb09e5f99b172016576fad98ae305ad8b26f605c7b",
+        "mae_levels": 2.6755324359803287
+      },
+      "fixed": {
+        "exposure_s": 32.04,
+        "arrival_s": 32.24,
+        "rgb_sha256": "7285c90382e53affa4762d0c1555c010d97386d5af1066c2ded9c683dc0efc62",
+        "mae_levels": 2.9359509394776544
+      },
+      "proposed": {
+        "exposure_s": 32.04,
+        "arrival_s": 32.24,
+        "rgb_sha256": "cc72e04015f2fefc37b03c2e39621dcfc443ca9140b9b28e4c6c98061662929b",
+        "mae_levels": 2.809292893669547
+      },
+      "oracle": {
+        "exposure_s": 32.04,
+        "arrival_s": 32.24,
+        "rgb_sha256": "63c538c5a1dd1439e444fcfa0cd03f9d97ada9425bcd875ce339e81bcc08c32e",
+        "mae_levels": 2.691569192186367
+      }
+    },
+    "43.00": {
+      "vision": {
+        "exposure_s": 42.800000000000004,
+        "arrival_s": 43.00000000000001,
+        "rgb_sha256": "fce3efe151463a565916daed2a92e563c8d5f7109646cb1e20282787dae6dfd6",
+        "mae_levels": 2.3672583710495894
+      },
+      "strain": {
+        "exposure_s": 42.800000000000004,
+        "arrival_s": 43.00000000000001,
+        "rgb_sha256": "ce69fe332563a9b34214f38d641295f766c1ff1d96e989703913f23c0a3388b7",
+        "mae_levels": 1.6964967965673308
+      },
+      "fixed": {
+        "exposure_s": 42.800000000000004,
+        "arrival_s": 43.00000000000001,
+        "rgb_sha256": "cd687eb36f6a36994fb9233848b500cc6a94e883105f54953d477869d33c9550",
+        "mae_levels": 1.6149709046023628
+      },
+      "proposed": {
+        "exposure_s": 42.800000000000004,
+        "arrival_s": 43.00000000000001,
+        "rgb_sha256": "6d21f2a60ca62f94c2dce725c1048db263fbfaa3a213f910df38a46006aaea78",
+        "mae_levels": 1.6628852446168616
+      },
+      "oracle": {
+        "exposure_s": 42.800000000000004,
+        "arrival_s": 43.00000000000001,
+        "rgb_sha256": "00d6d83f755b4112be58b31b30c1a1059ec59e80a24f2898b300902d8c7bf4f4",
+        "mae_levels": 1.5534101373459512
+      }
+    },
+    "52.00": {
+      "vision": {
+        "exposure_s": 51.800000000000004,
+        "arrival_s": 52.00000000000001,
+        "rgb_sha256": "04a88dd76335c68e81f6029fdada378151ea70e4c6f576eedbfca6c94c31cbbf",
+        "mae_levels": 2.0228844609024472
+      },
+      "strain": {
+        "exposure_s": 51.800000000000004,
+        "arrival_s": 52.00000000000001,
+        "rgb_sha256": "fe07cc6e8c0ffd3f02ab903a97a30ce5106465515c290fbd44b4abea278f7e60",
+        "mae_levels": 1.6523344893120946
+      },
+      "fixed": {
+        "exposure_s": 51.800000000000004,
+        "arrival_s": 52.00000000000001,
+        "rgb_sha256": "1cd976172296b60ea7f0e9f96310cd1e45d59b62efbd8b37a62186d26afc26b6",
+        "mae_levels": 1.6120907541291953
+      },
+      "proposed": {
+        "exposure_s": 51.800000000000004,
+        "arrival_s": 52.00000000000001,
+        "rgb_sha256": "4851f9d075e316420d3bdb48c8062c70303c7224b0c19e505978ed01ee533ebd",
+        "mae_levels": 1.6178118693548071
+      },
+      "oracle": {
+        "exposure_s": 51.800000000000004,
+        "arrival_s": 52.00000000000001,
+        "rgb_sha256": "08d3cb588e7a2085b357a3381ccc5c035502d22113b1ea358fc5194a7fee04be",
+        "mae_levels": 1.5356688022884462
+      }
+    }
+  },
+  "renderer_sha256": "1282e204fe45de92e0175ab905e04e67ad65829136a9da94286d0c4139b700dc",
+  "model_archive_sha256": "ff46fd591a94539304003e33aa3e0310f49bce07fe07a6b89203eb02b9a7f8cd",
+  "cases": {
+    "proposed": "26112131-differential-occluded-proposed",
+    "oracle": "26112131-differential-occluded-oracle",
+    "vision": "26112131-differential-occluded-vision",
+    "strain": "26112131-differential-occluded-strain",
+    "fixed": "26112131-differential-occluded-fixed"
+  }
+}

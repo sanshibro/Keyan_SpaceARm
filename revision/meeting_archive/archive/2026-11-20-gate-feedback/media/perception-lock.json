@@ -1,0 +1,50 @@
+{
+  "tag": "perception-approved-20261120",
+  "approved_commit": "881a7996739479874b489ec910d7c78ebb26c075",
+  "classes": [
+    "ContinuousStrainInverse",
+    "AnchoredRGBD",
+    "BendFilter"
+  ],
+  "files": {
+    "revision/data/round_augmented_fusion/frozen-settings.json": "16aa7c03c13ccc572b6fe509801d67e3167f735652ffbf2c5f26fa7c08637a3c",
+    "revision/data/round_augmented_fusion/strain-model/model.json": "33507be5fadb80a726bfff9488926f8dcd929a60c3fdfe35987ac5fbfa2f337a",
+    "revision/data/round_augmented_fusion/strain-model/generation-design.json": "417c00d0c4f5cd55ca19c0a02faa6f3ac66ed85f1267e232c6bb6ab400a1a976",
+    "revision/protocols/round_slim_protocol.json": "55107f648b3577fabcf3ba22e10d003fcfd17f0f5cbc8dd903381ae2b2face8e",
+    "mujoco_closed_loop/slim_sensor.py": "4789124de75affbe5b96b2d7eb4b72d7e344599b059c28db3a25d442abc790a8",
+    "mujoco_closed_loop/augmented_bend_kf.py": "2337d68d78c537cdd59611372081c78d785d92e32cfa8c0724bbeba39f3de95d",
+    "mujoco_closed_loop/continuum_strain_inverse.py": "b6ba4339c761c52449a334daa942aa56d92309b42df59133ea9028c195e30541",
+    "mujoco_closed_loop/anchored_rgbd.py": "2fc9c788abcee6d874e01ee165056c7c81516bb356ed394d06b55f0a05c9a577",
+    "revision/scripts/round_aug_runtime.py": "617f84bb7e3aabdc9d849cda6c9519dd4aad9ed36a7b6eee59c742cc149f04ec",
+    "revision/scripts/round_aug_geometry.py": "0a134b3597c1697b36e4fb01c9e4373c9508a14cf6016ac923aa923dfd4c24b1",
+    "revision/scripts/round_aug_vis.py": "223050f871646f0a517b5ceba1136430cd5e078a22515d7f6357dbd0caa5fbbf",
+    "revision/scripts/round_aug_strain_common.py": "ed6b4284e9d98e492ab755d0069e322148d23116d8ac07f257198c61e576e8fe",
+    "revision/scripts/round_aug_strain_generate.py": "858b2f45599a708c35f50863a4dfa10687cab2604e250f2510cce6552a7b2d12",
+    "revision/scripts/round_aug_calibration.py": "e47128347582553ec4ae17fc0cb9f699ae14d4c383a64f1744c24d872c40ede1",
+    "revision/scripts/round_aug_vis_audit.py": "016b069057d5e2684ec0cacd3cc542da66c17a588211225ecc8e7d5c4767477a",
+    "revision/scripts/round_aug_vis_cov.py": "19858a77ae98d1c9e802941aa7fa7d966d8b83fa9d2a7ebcdc7fff78969ec8d8",
+    "revision/scripts/round_aug_vis_pilot.py": "997035f799e8d4bb6de0e0d5f6b679e84cdd3795e599fe628754df1951f44055",
+    "revision/scripts/round_aug_vis_prefix.py": "ca8394162c4413dfcd1cf75a0e470aff79b49d4d8f9d46963ed95fb9cc029ea1",
+    "revision/data/round_slim_sensor/box-profile.json": "0163ece2bd1fa2fa6bdebc38fc0bba10cd2aa0ac7803678613fa0b66dbfd1e78",
+    "revision/data/round_slim_sensor/stationary-box.npz": "3aa03deab5491e7487260ac02538bc619458a87fbb7daf5bdfaccd0bfb5b5377",
+    "revision/data/round_shape_clearance/pilot/241118-online_pause/packets.npz": "e681838bcda9035be65c8d62d5dc30b477ca03ba425cacfe3be8e20e5f7f2467"
+  },
+  "settings": {
+    "acceleration": 4.0,
+    "position_rw": 0.11,
+    "bias_rw": 0.62,
+    "active_bias_rw": 1.6,
+    "initial_bias_sd": 0.38,
+    "fixed_strain_sd": 5.0,
+    "fixed_vision_sd": 0.25,
+    "fixed_acceleration": 1.0,
+    "strain_scale": 1.0,
+    "vision_scale": 0.09,
+    "vision_floor": 0.18,
+    "bias_evidence_tau": 0.48,
+    "bias_deadband": 1.05,
+    "vision_gate": 13.82,
+    "delay": 0.2
+  },
+  "scope": "Approved estimator, material and camera settings. All physical flights verify these fingerprints before using feedback."
+}

@@ -1,0 +1,2788 @@
+{
+  "trials": 60,
+  "cases": {
+    "26112131-nominal-natural-vision": {
+      "input_sha256": {
+        "hil.csv": "ecb9633821f330887e00f9de5adbcd6f3a88cae5d449d949fcb974b586ff2ad5",
+        "flight.ulg": "b3ff2b2b2f5a5fddf4d4857c8bd8b5e3c6a2cd4199b6c7e9f7f1cf4cce9553fb",
+        "flight.bag": "b7bf5ecca69127993d34b2ebc6eb76b04b8302467b0e630e82a4187184b7ea34",
+        "physics.npz": "aac65f033913be208992809ad5f8f185af5970f1fd6f79a06ab9af71b9dab5fe",
+        "control.npz": "5544d6030f61a6e204fcae9b611a847811cf0ef80e9b128530006774de904a34",
+        "run.json": "bd038a19d47e5b1e9257993e2f99c2a654c90aa74b300e32be4668653e0b31f3"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17926,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14332,
+      "max_px4_pwm_to_hil_residual": 6.246566774947837e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.20899999141693115,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2878,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.246566774947837e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112131-nominal-occluded-strain": {
+      "input_sha256": {
+        "hil.csv": "4c80120004b9c5ae441e9e471a358fa7723905df3c63a2c8dd7a267402de0795",
+        "flight.ulg": "4bfd1a6ce56e17ef656ca476f876b4fc97c457092b0a79e68f18ea161e69732e",
+        "flight.bag": "e64801eea5d47a2dd5c13bb19b50e36a562ff9d366bedccdb4db140c46f50d59",
+        "physics.npz": "2104b68f8f3bfd693e1f5cf4529f66675459f9154bbe2cd4f3527ccc09e81598",
+        "control.npz": "cae60059e03e588bd34676951b7b5ee41b71d5cea1bcaaf150c2b8fd24a58318",
+        "run.json": "32e3f291ee16362c0f7dc921b026b27be0df4eb54fabe80ba1303c7dee262213"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17918,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14324,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1390000283718109,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2872,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-differential-natural-fixed": {
+      "input_sha256": {
+        "hil.csv": "06559e7f9df10bc7a1252237e571d6ef45cdd2a873d4fae581f27791aa0cb81e",
+        "flight.ulg": "b71bf8e8130b1d91b31964e025540e61c900ae4dbd5bed266c652734c08329d6",
+        "flight.bag": "72765eefe45952d2df7a6b17f74bcfa4fd24cada0f071c0938deb154124376a8",
+        "physics.npz": "059b4208d69cb55a244d2bdb5b92ff0eac190a7faf9d42cb1f2d037b0f1a83dd",
+        "control.npz": "129f99c87af02eefc86c287991c55ff2e1416579dca9be45f001b5352dc2f5f2",
+        "run.json": "5cb232f1ab7908c1031677ff3e4fc4d41a244aeb8910f10c2cad1ec3d18bc825"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 18025,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14329,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2873,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-differential-occluded-proposed": {
+      "input_sha256": {
+        "hil.csv": "3f2fbc957b0efc14295637d9bd5a483942858e2874159fdd10a9a2be482b943d",
+        "flight.ulg": "5c11b126031a3477be8ba6bb8928acee5c1787e8cfe80027cd254dceac53e4cc",
+        "flight.bag": "fdf01324cecfccb50314eb8533d9cda33915f78cd728d1e4751b2f6bd966b27f",
+        "physics.npz": "3e23ccda8c799635353f9681e9af82ef5efaaf87a2480670c57bafa2b2c5d34a",
+        "control.npz": "f56667512f26bda21daae01ac1abb42c7a297b8f2a8b563e208ead61dc5616b6",
+        "run.json": "13f260105a80ada713ee633b7dde8d7174c7fc2fb3cd23c2665b2654e475e366"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17980,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14373,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13300001621246338,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2884,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112137-differential-occluded-strain": {
+      "input_sha256": {
+        "hil.csv": "0dd85ad42f4605ba0616b225317fcaa5efc37d12fc1896ce17b20ef00bb57143",
+        "flight.ulg": "263f7c129ec0ca734599305f5788b196af1e0b4a74ca8a50766d62939e564340",
+        "flight.bag": "266ff96e4c79d76272e6713c51f98a869afdbfdaa628ddb0e0f49d6b79278418",
+        "physics.npz": "abde9fdc094eee125c24efaf0e1ed4a46c88a23dc47a5d3a9afc169e5e753f18",
+        "control.npz": "1ea7bdcf9080f9948d6cd4c9189dd5c0d38462e33a2cf01bf3c1fbc91c190986",
+        "run.json": "82a6d4bfe2907df3a9733b7fcf4b5a8d58bae1c9eafcb70268c3c961a0f4dd6c"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17926,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14327,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.132999986410141,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2868,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-differential-natural-fixed": {
+      "input_sha256": {
+        "hil.csv": "5f0bdb694e73d2a445a8c456ad902abdc2aeaf5669a8ef73042e93a88a054599",
+        "flight.ulg": "e99d9122f68313702780585bb419e2ccb8262a0a7d5a9778c4ba180eb008952d",
+        "flight.bag": "11e4f39b193b10811f8823203ca07e61d5d8e680fc6048e7679f92e8b3dc2ad1",
+        "physics.npz": "1ea110367665ea3aa009dca384fad60dacb68166099b4194d917146a0edbb3b9",
+        "control.npz": "0a5b8bec70ee12c1f189b91a7f33e04919510167565eb2d63cbfdcfb50353ace",
+        "run.json": "f8dfcf65d0a823b3efae0c03729764b073c21516bae44174a1478df988b8977c"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17782,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14175,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2848,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.9996488764044944,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          58464000,
+          4000
+        ],
+        [
+          61704000,
+          4000
+        ],
+        [
+          64664000,
+          4000
+        ],
+        [
+          64704000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-occluded-proposed": {
+      "input_sha256": {
+        "hil.csv": "6b5de1b86dab5536fa02025270eb6901c1946908ed80c7cc077d5ef265dd87a8",
+        "flight.ulg": "c4877bdcd5819c33335d333e3562e4e6d9a3a40a0876bf1be6f00855d4657f53",
+        "flight.bag": "ac0dc7d2b2648514d51de7ab7b7a9303c65989026dde413ab35026004dc9eb08",
+        "physics.npz": "752863ecb4a815e63807f5f682912c234fd0fa21d429f704ea9ce27ba18c1823",
+        "control.npz": "217299a83642c31a9af69f47ff0b022cd17e7ca921d96a6455eef93ff4ef4ad8",
+        "run.json": "52478f305aed46c16d0d275128975501b490e534a1294ba74b7b7882eb333106"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17833,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14233,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13100001215934753,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2861,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.999650471862985,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          63664000,
+          4000
+        ],
+        [
+          73744000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-natural-oracle": {
+      "input_sha256": {
+        "hil.csv": "7c426bfd917cc3dcf9a4136b55ad5eb8e07e574497cc77b12aa67b207856673a",
+        "flight.ulg": "00652fc6f5b75f69673578dc86c3a0a49d45efec5357bbe046ffcd7bae27b09a",
+        "flight.bag": "30dd9ab76520ef0306239eb3cfe17ef566dec6226cb43c14e52a138ea1f3931e",
+        "physics.npz": "3256f029306f7de3bf1d239887f5ed0e099b34dc7034bee928e702c11bd560ec",
+        "control.npz": "936dce503b77a9750a32996d45f481d38752d0705c61156e7c19225cf21c6f61",
+        "run.json": "b7fa3f33c747ce41d958007b55e457d807c4b0ef9ffca85c6fbc8132db25f2f5"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17886,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14295,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12799999117851257,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2866,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.9996510816468946,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          60104000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112143-nominal-natural-fixed": {
+      "input_sha256": {
+        "hil.csv": "b96f797ad620db73d3c848b712b4259a1ca81e42246ab75d7290083e003313eb",
+        "flight.ulg": "516b7b6c119c5fc9ba18bba0f08ad26d2042a860078899020ba57387daa1c4f1",
+        "flight.bag": "27b25143e89553ed09ee1ec3d4b660ba49c470f9a29d87957e6438fa96948c65",
+        "physics.npz": "f341a69e0a3c874b28d6dd67726474c82ce4368bbe8c661251eb686a6b0fa076",
+        "control.npz": "a0b6f8fde2f13e35d6cdb67c1098b547cf51e7f8f12e3878b3b66d20b7712b37",
+        "run.json": "8e47df43d340b6407a07003a1c2df8567f3766869013ea633266a3b65c685020"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17705,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14008,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2826,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.9992922859164898,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          52664000,
+          4000
+        ],
+        [
+          64864000,
+          4000
+        ],
+        [
+          66744000,
+          4000
+        ],
+        [
+          67584000,
+          4000
+        ],
+        [
+          67984000,
+          4000
+        ],
+        [
+          68824000,
+          4000
+        ],
+        [
+          70784000,
+          4000
+        ],
+        [
+          72704000,
+          4000
+        ],
+        [
+          73184000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112143-nominal-occluded-proposed": {
+      "input_sha256": {
+        "hil.csv": "a7226639f4a937835f6886c1e8fc405064545c921554a2dea447a423cf65ba6c",
+        "flight.ulg": "f5c9c015ef5ad75ca7e3ff3aa5086f8e6aaddbbb6cd59477f36e946a3f3d5b3d",
+        "flight.bag": "5b3c87781d7977dd32e835570f9b3b3d9aeb80e606b02e9c7cb4e4f4d3035d71",
+        "physics.npz": "13e26a7b376d773c286e643cdb6d45e4bb3a8998a5c4d9e7ecc56f5c13252bcb",
+        "control.npz": "18220b65e8f710dccf14d80afce7745b333a6731ec9309258a6f0e084dfad8c9",
+        "run.json": "26517fbb16bf29ea5f06e49ebca3822d94433d911732a10e3939d4a5c6e09c74"
+      },
+      "armed_offboard_status_samples": 121,
+      "px4_sets": {
+        "actuator_outputs": 17784,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 149
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14082,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13100001215934753,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2782,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.9881550610193827,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          53548000,
+          4000
+        ],
+        [
+          53568000,
+          4000
+        ],
+        [
+          53708000,
+          4000
+        ],
+        [
+          55028000,
+          4000
+        ],
+        [
+          55668000,
+          4000
+        ],
+        [
+          55688000,
+          4000
+        ],
+        [
+          56788000,
+          4000
+        ],
+        [
+          56828000,
+          4000
+        ],
+        [
+          56848000,
+          4000
+        ],
+        [
+          58728000,
+          4000
+        ],
+        [
+          58988000,
+          4000
+        ],
+        [
+          59028000,
+          4000
+        ],
+        [
+          59188000,
+          4000
+        ],
+        [
+          59228000,
+          4000
+        ],
+        [
+          59408000,
+          4000
+        ],
+        [
+          59428000,
+          4000
+        ],
+        [
+          59548000,
+          4000
+        ],
+        [
+          59628000,
+          4000
+        ],
+        [
+          59848000,
+          4000
+        ],
+        [
+          59908000,
+          4000
+        ],
+        [
+          60068000,
+          4000
+        ],
+        [
+          60128000,
+          4000
+        ],
+        [
+          60148000,
+          4000
+        ],
+        [
+          60168000,
+          4000
+        ],
+        [
+          60548000,
+          4000
+        ],
+        [
+          61008000,
+          4000
+        ],
+        [
+          61108000,
+          4000
+        ],
+        [
+          61308000,
+          4000
+        ],
+        [
+          61628000,
+          4000
+        ],
+        [
+          64028000,
+          4000
+        ],
+        [
+          64188000,
+          4000
+        ],
+        [
+          65388000,
+          4000
+        ],
+        [
+          65468000,
+          4000
+        ],
+        [
+          65488000,
+          4000
+        ],
+        [
+          65508000,
+          4000
+        ],
+        [
+          66348000,
+          4000
+        ],
+        [
+          67028000,
+          4000
+        ],
+        [
+          67048000,
+          4000
+        ],
+        [
+          67148000,
+          4000
+        ],
+        [
+          67788000,
+          4000
+        ],
+        [
+          68168000,
+          4000
+        ],
+        [
+          68308000,
+          4000
+        ],
+        [
+          68668000,
+          4000
+        ],
+        [
+          68708000,
+          4000
+        ],
+        [
+          72308000,
+          4000
+        ],
+        [
+          72328000,
+          4000
+        ],
+        [
+          72668000,
+          4000
+        ],
+        [
+          72788000,
+          4000
+        ],
+        [
+          72828000,
+          4000
+        ],
+        [
+          73508000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 12.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-natural-oracle": {
+      "input_sha256": {
+        "hil.csv": "92a771f2077e5adf0a3f0152656a5f1ef6477256d81f1d19da44ab76797a24a5",
+        "flight.ulg": "503fc93250b8620b0bd44415cf7bc02935981b67e36db4ec40e9aa86f710e86d",
+        "flight.bag": "ea0c9aed98cbce74f8d639ae76c980404911eeeb66347239f9350266d970c9b5",
+        "physics.npz": "e997b40250552bfe0c46e3e1adab7f0a2a1a523c2680fe580968cb0c43c9d7be",
+        "control.npz": "f68947b5990f25087ad55ea4c359789ca3190816ab790a6af30c1e65fab76b78",
+        "run.json": "4b022b5397412553e28707f59d50446b70c7d66796051a0f4cff7df5ddc36ab7"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 18006,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14394,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12799999117851257,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2885,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-occluded-vision": {
+      "input_sha256": {
+        "hil.csv": "8d365a90f697be2c619890cde4976d6d4f264e47210349722bfc510a3568d6a3",
+        "flight.ulg": "dc5de0abfa4a256defe0512f7ba1e29285c604382fe476d19e42f937eb0c76aa",
+        "flight.bag": "d1f801d1139812ab6ba6e184f64aadd3c49192b2a558c54b5937f684f14da969",
+        "physics.npz": "e6055fdeb0bfa819ce8cb562786bdb127ec767d73cbbb2bc3989d66a05342506",
+        "control.npz": "d8a1b796d6babdc07f0cdc9d06353a1bcad7570cbb8c33927c612770c5af3850",
+        "run.json": "d668272d59082a32f9fb5ebecb91998e3553949aa61fdbec8911e0e1a999fa8c"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 18010,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14396,
+      "max_px4_pwm_to_hil_residual": 6.246566774947837e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1680000126361847,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2881,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112131-nominal-natural-strain": {
+      "input_sha256": {
+        "hil.csv": "040525c0238f20b57c0156d2e4ee7cd7b1a6482c583970fdd796deccc3a0ecfa",
+        "flight.ulg": "9e68a671278e54a8a0c782b13072e4f4fcb20255c47b6a347f16727049d4fb29",
+        "flight.bag": "7216d17f2ade903afe970b0c9abdd370d9bedd1c807c67c2a182145bc4436054",
+        "physics.npz": "4e1f4a0147a0122fded48f588db4e07cde1653137fc9b8bcf18082e729b38ac6",
+        "control.npz": "68731894b13ad669405c98ddec0de174f81bcc0520ed2e3ff0fab48d8f4cde7e",
+        "run.json": "034ce2ad7c4f121037083e290b3b7411ea36be37705942eda3f4a8748b6db088"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17977,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14370,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.14000001549720764,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2878,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-nominal-occluded-fixed": {
+      "input_sha256": {
+        "hil.csv": "3f889614b2ec02d537a95fc58fc18c351bda70eb4c180d4a1f499c060dbf5104",
+        "flight.ulg": "ac87a5fcf9a5b716a0c0049f3b8e624c0c6d0d2f6f919c82f32b45446b2f49d2",
+        "flight.bag": "32bf703529c42561eeee0bb5176a84a599edbb11140d54ee59a30ecb90090b00",
+        "physics.npz": "13267999a1e934707265ac4e6a449f0c9fd81d72bc981c3bca9e9439d62feae2",
+        "control.npz": "1c053bb11d81a9c608df9d9eefad05d656d85a7379a63f662a6735959ea092fd",
+        "run.json": "e468f3fe33ea4d3139a0c2d872ebdc6827eca463687598b080ff285d3ea85071"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 18002,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14388,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1390000283718109,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2889,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-differential-natural-proposed": {
+      "input_sha256": {
+        "hil.csv": "9338618e24f60e1bef92cec3174d2288bcced056c9d9b0120fa13054418b329b",
+        "flight.ulg": "30bdc365c2f2e848fd43054fe597eae39ed0a20437d9be7d7275388ec9f23a83",
+        "flight.bag": "6fc59d8ce20dd94c2c144b5d393b9d8bf21192f529ed171d010ed89efd0b1954",
+        "physics.npz": "eac953a0261753703a907c421c78c3eceb6219ac6100e3ac1b1d633ff6724acf",
+        "control.npz": "93f53053026ca7ce79fe52f9c07a50a0005dce4032a220eb2faed72eddab3788",
+        "run.json": "c96738dcc1565cded59f832f50d5df04c469162f596a0632dffdb1ead98ff1f8"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 18070,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14368,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13300001621246338,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2877,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112131-differential-occluded-oracle": {
+      "input_sha256": {
+        "hil.csv": "a3ca47f6b503813a9becc05c6452594f671a1c7b7f705470a10bc91a72b9fe83",
+        "flight.ulg": "e3040553167668ca0e13eb4cd7389f78e322096ec1860c022a7bd5619d94703b",
+        "flight.bag": "a383bbe02ab790bf8a22812b3f3283a1c550e40f112e208d59db8df033e387be",
+        "physics.npz": "43d6d853dd8a8a9f73d82032448d4df3e7bdd8296585582a7bf4b8c616a0dc36",
+        "control.npz": "276602d1200501f7ec27c40796f566ae0fdbec8897ae784823f8308823148b76",
+        "run.json": "49b71d27e26dae9761536e2d6931e6fb8f8180dd5d9e102d3a9f91d7bb13f05d"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17982,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14379,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2882,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112137-differential-occluded-fixed": {
+      "input_sha256": {
+        "hil.csv": "d1d4820b76f1c02bb4874cbdb84c0e8aba09fb002fd7c663ea6529560fc8ad5b",
+        "flight.ulg": "fcc06e1a88602cb02f63d6d78e9bed89a451439aa35f8afe395aa6e3242d1f37",
+        "flight.bag": "3e7d0243398ac67fb592feed57de585f385c9c64311185f8c5805fba0cce23d6",
+        "physics.npz": "851b2f3c666e412c292c33fabae1b3250962349b31c9be1f2deb20ed18119961",
+        "control.npz": "d836bbd5153c6abaaee3d724afc3654e292ff963899d039c3d671824f8242a7c",
+        "run.json": "44db0f9ec4f4a8b5b4a962eb14c308757037e8a62d10b5868a49d17a63acb9c1"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17972,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14354,
+      "max_px4_pwm_to_hil_residual": 6.198883051311554e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.16699999570846558,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2872,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.055831913709397e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-differential-natural-proposed": {
+      "input_sha256": {
+        "hil.csv": "b28a757e0352a92f28914aafe5410765eade05acb788794be31ae418e4113c2a",
+        "flight.ulg": "eb84da6d6f870fff762806a4d7bacf7960f433b795693d61a8b11e747750534c",
+        "flight.bag": "441aaf02fb67113fc90f8c0fc6a7a3746de796bbcd0042a8ee619779783454aa",
+        "physics.npz": "f94b7ef260e6d979a03165f86df76771b10522d7289513dec3203e2a85fabed7",
+        "control.npz": "199237b5681de8ac2c5b5ab439fc9f2b6a2fa30219461edb4f53c78e8bebfc9e",
+        "run.json": "f4c963049868eb50818b7bb66417d1d41268a0fd9663fed82416a64ae8430b94"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17874,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14262,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12999999523162842,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2862,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.9993011879804332,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          60664000,
+          4000
+        ],
+        [
+          73684000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-occluded-oracle": {
+      "input_sha256": {
+        "hil.csv": "f823528c9aa377cdfcb7eccec1fd854d42aca1d9bdc4b3c48f22c73331c76731",
+        "flight.ulg": "e8070f6571eb8e5021ace8bdba63cbcd7c3802516efac3d76c9b500b5a63f57b",
+        "flight.bag": "5e4beebbe84bcb31568b085960251a2a29ca28a0716ab8ef0f86bbe9519ae977",
+        "physics.npz": "a02d7bb7d6a7a2d4161a7c9557431eed03c4e728f833ad2aa859d2c3a8d6c192",
+        "control.npz": "8fab8096da71f49dc80e59930fb5c50413f0dffe4157b4b4dae7d0670b17d789",
+        "run.json": "91bf2668b98aa90b40eb27bfbe173846becfffab07cb687324e14c9a0035b322"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17848,
+        "trajectory_setpoint": 2037,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14246,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12799999117851257,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2843,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.9989451476793249,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          65104000,
+          4000
+        ],
+        [
+          69304000,
+          4000
+        ],
+        [
+          72604000,
+          4000
+        ],
+        [
+          72624000,
+          4000
+        ],
+        [
+          72784000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-natural-vision": {
+      "input_sha256": {
+        "hil.csv": "7d0031286cbb7db83a0c843d191303d1bf75cc89e608fef05b936bc9aeff93e0",
+        "flight.ulg": "a477b84f6b3f965fc733d23d6b5fed5c351d79eaccba5c901a09a6c1426785e9",
+        "flight.bag": "b5c79e815daf7d38468a1c1fcb0a325d2c13a76f55eceaf8d246a999b122dd2e",
+        "physics.npz": "520475d698d20f2f983bbf783be290ac1c1674426dcd4a355cce7f5b44785bac",
+        "control.npz": "395d643058938555f29fdf97aa3d60303ee23644c268901922e3fc6bcb1560d9",
+        "run.json": "c2710569b617e69ebe9674ea66230643fae28ac7177a5facc8bd56b16fe6325f"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17579,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13874,
+      "max_px4_pwm_to_hil_residual": 6.437301636186277e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.2150000035762787,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2787,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 0.9946236559139785,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          42904000,
+          4000
+        ],
+        [
+          45384000,
+          4000
+        ],
+        [
+          45704000,
+          4000
+        ],
+        [
+          47884000,
+          4000
+        ],
+        [
+          47904000,
+          4000
+        ],
+        [
+          47964000,
+          4000
+        ],
+        [
+          48144000,
+          4000
+        ],
+        [
+          50844000,
+          4000
+        ],
+        [
+          50884000,
+          4000
+        ],
+        [
+          51104000,
+          4000
+        ],
+        [
+          51124000,
+          4000
+        ],
+        [
+          51164000,
+          4000
+        ],
+        [
+          55664000,
+          4000
+        ],
+        [
+          55724000,
+          4000
+        ],
+        [
+          55744000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.437301636186277e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112143-nominal-natural-proposed": {
+      "input_sha256": {
+        "hil.csv": "d060e68d85a18d81b77ae9dbdfed6cc0fa183820fa9c41e842ef5d175ad21646",
+        "flight.ulg": "9351a403eace04a584e984c0f52f05aa7fbecc421c5374e54d9d5fb2b6b3982a",
+        "flight.bag": "2bfca413344f5eb56ee2a4c3bd24439cdb94bc10f2d0110b20af8fd203e9dca2",
+        "physics.npz": "d1ccc4e3bc76d6828eb9d690679ebabd875869058e23a102bd6eebefef037e43",
+        "control.npz": "90987f0a836b979b560db19bbd3a2ec6e4e9b9bda4552ef9d45622197eb8ea18",
+        "run.json": "5c55f045c163dced387fbf4ba86bf0aa4cafcc1baaf45cda102ae8dd9a42acba"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17479,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13916,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13100001215934753,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2794,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [
+        [
+          53988000,
+          4000
+        ]
+      ],
+      "max_actuation_source_age_ms": 4.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-nominal-occluded-oracle": {
+      "input_sha256": {
+        "hil.csv": "12ed114de2fe45146ff7f7c079dc1030f231161218484767128690d29718c1b6",
+        "flight.ulg": "8547a84b42200276a7d355bbe9c45ab8d7489cce49a0a9271741eae6ee94bcf2",
+        "flight.bag": "c8d61fae0266f226db3fb788a3de33cf274e2f6d09529d60efbbb4027b93aefa",
+        "physics.npz": "1f90284a1bcc5e8c5624ebda59beafa2321b5ecf048f8f3bfda709137b0cc5f6",
+        "control.npz": "1b4103e710c37dd239d21fa534595871959d82a27ee0dcc007482f28efb33879",
+        "run.json": "d28124a9c2b6d6466bc555386de106b4ab851dd5becc2a7b6dc08527cd7480e3"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17058,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13611,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12799999117851257,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3653,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2730,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3382,
+      "ros_shape_time_start_us": 16056000,
+      "ros_shape_time_end_us": 74036000
+    },
+    "26112143-differential-natural-vision": {
+      "input_sha256": {
+        "hil.csv": "0074627680a88271f293794e957007dbb6168ecdfcc641420337ba0951ed6786",
+        "flight.ulg": "4e1b714ebc0acbf9ad4bcc03135da95226379e96005975027809683c5ec68693",
+        "flight.bag": "cc2566fc63758ada29bf7ed15ca7009dd0330289255c2cc547e1271092a7e2a0",
+        "physics.npz": "3b635536dcd585abff7675144152f6cbe6bead6fab874bea7db72ba8691f5e1b",
+        "control.npz": "409e27e7023facbbe2cc2a718dff6c06093b2ad1ed0bc4497bf9d06f608184f1",
+        "run.json": "09ce5ecafdaeb1269553e3ee47f670e8aa01fa10c134063b32eecca048c4dc3b"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17984,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14379,
+      "max_px4_pwm_to_hil_residual": 6.437301636186277e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.203000009059906,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2880,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.437301636186277e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-occluded-strain": {
+      "input_sha256": {
+        "hil.csv": "9637b47dadaf5d34b71f118aacb1815339bef063c0d97560f9eaed748075bde5",
+        "flight.ulg": "c752f4dfa1a097104a98dc08a44eac54f393eba538b2c0ba2442c7404808dfcc",
+        "flight.bag": "636831258733eac232c7f61629bf442a8e7eb2d21910d1b78b126da492fc9ef9",
+        "physics.npz": "730cad5b943c467015ff5de3ea17c03d5560ebf1829a532fd290338b992256d9",
+        "control.npz": "10867e61b0cebcff888707cc282abf6a49a3c96202c170a78f54f07125c0db00",
+        "run.json": "acfe30b4804fcdf97fa6e069f806c77e700a0b9d545e3ffc3e687eb81be0f7f6"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17507,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13909,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13699999451637268,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2784,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112131-nominal-natural-fixed": {
+      "input_sha256": {
+        "hil.csv": "d6c7b226e59926e537379492f73155b791090da05a8fbed30887a2c7aa085d31",
+        "flight.ulg": "08b4d4b4e432ed7c1a36983b1e9f27bf47f6d7808901764aa2e53380da047f7e",
+        "flight.bag": "bdbc54c139f2bdd5e96316664cf8e445e69a7386c73b5aa02fae2e70c70b9613",
+        "physics.npz": "5a85b719bbdf749c4e2c1ea4dabc74a0360f322925cd75a2822694b5778d89fa",
+        "control.npz": "3070c7b851d2f369cf654126447a48d9c2aadbe5739efb411a4cea60e79b0301",
+        "run.json": "9252186192cf0515fea96b7d454fd260852e0231d99b8aefbd5be9aab5909fa2"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17297,
+        "trajectory_setpoint": 2034,
+        "vehicle_attitude": 3590,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13851,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3653,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2780,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3393,
+      "ros_shape_time_start_us": 16044000,
+      "ros_shape_time_end_us": 74024000
+    },
+    "26112131-nominal-occluded-proposed": {
+      "input_sha256": {
+        "hil.csv": "ac25b6a276235a98cca62dbc031d0b48af12c78285183fbfd2bc361ca074f48b",
+        "flight.ulg": "39c5ee4472a6648e7341e050eb3097d3e60cab1f33d44e661296041d0ba9795f",
+        "flight.bag": "2b5d5b7b6dba307ab1f37c1999088a5e5fe44b60f7f6decde6d68c64f12b1fce",
+        "physics.npz": "50026944e27343cbf4b2d7b5f324c6e47cdb983896694c5aae7ec4541cac93d0",
+        "control.npz": "a0006826b75cd7ad150e9e6d16b47e325645cfc0bbbaeaae25296001b31d77ed",
+        "run.json": "899802f1c4df52f6e280206bee90e6e118353abec3f7d6803758980fd5b47065"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17984,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14369,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13300001621246338,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2882,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-differential-natural-oracle": {
+      "input_sha256": {
+        "hil.csv": "b7454d3e3917d0a8cee3192dea97326bf39a38910cc4ff809c44226e2bbd4e57",
+        "flight.ulg": "a61289ea7b56f60ab4095372a9069bf81d0dcd45d3cc8a7027357c6a5579e943",
+        "flight.bag": "bcb7888e320368b9f3498c4fb2a10e108faf6adeaf6230462c99ba122479d5d0",
+        "physics.npz": "aab6288eb963a52fff4bfaf4d615ea4ee0b0a4ccebf9a7ce83bb118f4984426b",
+        "control.npz": "44bcc8a571e791a8cd15e7c7df97110ac8850534f541dbd9f47607e242da64c8",
+        "run.json": "7a410ec3a4dafe3ecf8603761c6569f4f3bda908652ebac4ad7fff21f7c6d1c1"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17960,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14350,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2873,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-differential-occluded-vision": {
+      "input_sha256": {
+        "hil.csv": "5b2a38fc0d75c65b1bb689cd6b02c6b1e2bb6c10adb15176d4e52f371bb44cce",
+        "flight.ulg": "374a1570068b5de7a67c9b4a065a04bde3b08dd4b4ae49af0c90970d81aea6b7",
+        "flight.bag": "0e99cb30dbdd7d48972ab5a9d755d84cb2001cb01f696a37486c9d445946a055",
+        "physics.npz": "038eb53e8ca149afae45de9a0345aeb416888f0286a6636b0c228520a45298bb",
+        "control.npz": "5dcd90a058370539d3ccec4da9cc4a070d23531a3f7528e72070870243e0e569",
+        "run.json": "ca3d70d568d2aac694ef5ed984511043ca10f8cf111e1e21de1a520c59cc9a88"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17972,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14365,
+      "max_px4_pwm_to_hil_residual": 6.246566774947837e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.17599999904632568,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2867,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.246566774947837e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112137-differential-occluded-proposed": {
+      "input_sha256": {
+        "hil.csv": "f26adf5f2303b5e1a8d771db47e963aa20811dd1aff8d2a1f3149869c521cadf",
+        "flight.ulg": "aa5fdfb7a0592c48574971b7f7915e10766eaf143c6f6ef234c2fb75464d6a88",
+        "flight.bag": "512bc529634bdd0e754b9ac51c8b2716f2ebc8ecf3d4a88a9fcd61221dbad42b",
+        "physics.npz": "c513d55c176c915462e3117442aae265b4998c28212dccceebe749be4675af32",
+        "control.npz": "6b7efbb7ef522edf4be06144254b18230fd2a23b4728227ad124f529a7052dd3",
+        "run.json": "c118f8dc79fd3a693ee6ed3b23f65f8d5f7dea4a4652c61931bb519587ba642a"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 18009,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14397,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13100001215934753,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2881,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-differential-natural-oracle": {
+      "input_sha256": {
+        "hil.csv": "91f0e70ccec02cf62fd72df1c739ed5c64e364bdf78372644eb143c981aa67d0",
+        "flight.ulg": "b0e6ae885000c5c71853ffe9423436e528564492c04faa68cbf5a84a74309b26",
+        "flight.bag": "b0ff43a54ed2e771869138486cc8dcab8eaeedce4ed08c077e08ed42d5450ef5",
+        "physics.npz": "e20e678d791cb9ba80502222a9a1e918ebf6dfd6e2562d476ff2b30c835d1694",
+        "control.npz": "9ddb7b07744ce6d51e660c15a0f07e70a5f540b2a2acd63daf040c9572170ab9",
+        "run.json": "f231610445c8207236ac9fcbfe7224874fe11562c01915c7f4d2e8df70476cd3"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17980,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14367,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12799999117851257,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2877,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-occluded-vision": {
+      "input_sha256": {
+        "hil.csv": "82c908df31b2337d51232caeb16fe6cfbc1d5333ace9bf35aa61f6c9259d7824",
+        "flight.ulg": "194ac522f55efc05c8b919a1a834e65bed1ccaf448daf8c8f5103abecb0a8053",
+        "flight.bag": "d014600f878b144c35c470c6821b64aec908b44a108246abd42dc74c578f6b29",
+        "physics.npz": "b68d04386d87284b6809f18665bf0bdf2019ee696a6a6bd3aefc33e7141916b4",
+        "control.npz": "b654e23449f028bb93ff7e0a2073c541f8fabf56bdbdf870138f7df7a9123617",
+        "run.json": "862e020d645ad3ceb9bb4449b51bb10d629dfc24878136b4f80be761dbdeb714"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17995,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14384,
+      "max_px4_pwm_to_hil_residual": 6.246566774947837e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.17400002479553223,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2882,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-natural-strain": {
+      "input_sha256": {
+        "hil.csv": "b1e09e4f53fac8ff517c357cd1f8a0c0566115c544ac68db5908b72c309632cb",
+        "flight.ulg": "2c83d700e2458419a2c5eb4766c2a0ee0bbb7c17e17cb238a146a555951afd9c",
+        "flight.bag": "5bc65ae2503c94888f127985c7b60458236d6c96d81b25bb5f7c5756dd5c63dd",
+        "physics.npz": "ea808678e3c80b8458ab64843db8e384e53588c57b24d33e474baea47029844d",
+        "control.npz": "d9cb9b92adcb45620cdfca3b6f430df2f7fb44f7080f425b91706d442cbd17ed",
+        "run.json": "c0b67d2c7cc5ed12f7e402af9f374bbcdfaef804e1fc991c95d568fafdee7960"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17963,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14361,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.14100000262260437,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2874,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112143-nominal-natural-oracle": {
+      "input_sha256": {
+        "hil.csv": "711bb15c0f0b26d96dde9183be87a2baa59f9567672858b6bde585306e93355a",
+        "flight.ulg": "fb3933eb42014b89d0f4804399e0e12be49bf871161b6581a34f0ac04d1edb4b",
+        "flight.bag": "be10cdd67d744144b907e7fdf9c55daa9039cc921b1483e525d316ffff33ae94",
+        "physics.npz": "2ba4d239a6f7b2d10c16c8d1ecc19d31c0a4cdef21ff3246660779584d77df8c",
+        "control.npz": "e070f9f63c81480d9fc9448ef019be5dd701b226c85749d2616d56301447756f",
+        "run.json": "26703dff171baa85dd9aace3b6ef9c41a1ea4fee14c01cc9b313c7c77e76bfae"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17987,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14375,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2874,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-nominal-occluded-vision": {
+      "input_sha256": {
+        "hil.csv": "baa1c430b06123ebff9cd0659866534fe9ee0d4b54550b08ff7ce204bfbf00e4",
+        "flight.ulg": "ae5a58243cb863d06e57f5d7e18aa21320979e03c8c239f2da9cac08a63b159b",
+        "flight.bag": "98a42c4dcfa747f39699a0ff5a19dbbb0992a4682e31f21edb482467c190c58d",
+        "physics.npz": "382fb911e18d63e8fea08e70dd721e1446498c799e090ec3fe8c7c7b7ae6dc6e",
+        "control.npz": "871ecec8c12d8fd95be1412c4dabd00f538ba81cf0dc75f794523713f8f94c1e",
+        "run.json": "9f426689cf9ba518dafd2b36eda63c7e98c235021277dc6a27771fa96d613248"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17993,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14384,
+      "max_px4_pwm_to_hil_residual": 6.437301636186277e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.203000009059906,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2883,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.437301636186277e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-natural-strain": {
+      "input_sha256": {
+        "hil.csv": "99a16da7fe960a4490ff13de85967e2c6c5c29593733626636cda6d953d06e50",
+        "flight.ulg": "1095db1d4c3c2b2617d92837b939c00536093f333ff8b07ae4451158f8180e77",
+        "flight.bag": "86d4643f02cd55841230c280f062a5eb759178c382f9750645d20f4f9b4387b3",
+        "physics.npz": "9e09b3f442c4dc89a6f8fa6d71870e048b6611a1ea19874b56f9f35494980b3b",
+        "control.npz": "0aec4a0a93978df95b49a7afc011243657f37ab5c14462f689c367855895ad6f",
+        "run.json": "8170aeae4ecd2bae83fcbded4285751b76e4ee566fa429a9de0527b251f33cd5"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17871,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14256,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13700002431869507,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2856,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-occluded-fixed": {
+      "input_sha256": {
+        "hil.csv": "15a2ff025eddff81f3669c2c7ef79a4bcf377481b493cbc26b7199e71f3e8365",
+        "flight.ulg": "55b9c3e8d0abbd2b445f4072394cb507117c80e3dfab85c2c0cb3454eba28803",
+        "flight.bag": "18fe1567a6889631ef326ca66329a48505f8874a42bc6caedfd91285e4101b85",
+        "physics.npz": "b2af9662886cfd2b12d61ef4dda5c4e48010afa38c57ca19750901acddbf7cc4",
+        "control.npz": "a223cb7d9c37a097bf1825dce35a6a99cd2c111f2fb1ba50edca92c1aa5d0e65",
+        "run.json": "e7335432a5a97d2a851977b675c4361cf9e25e7de492cff43adfba8aed50653b"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17999,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14382,
+      "max_px4_pwm_to_hil_residual": 6.198883051311554e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1680000126361847,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2885,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112131-nominal-natural-proposed": {
+      "input_sha256": {
+        "hil.csv": "5ae47b0755208c8e1289521b5ed9a09cc205b8bcb39e24b313a534872edd4740",
+        "flight.ulg": "9d07a5e430c20aab5f20779949e668579099a23a2027dd3910713022912757d2",
+        "flight.bag": "5c68c673bb65ab710cb910a3a1104c3f88f1a4b5b91303f6a5b0cb0d26f1b926",
+        "physics.npz": "d274bdb2b534bb503aaf8bd60063446eefc6e772cbca2b5cfd9fc3f04bbfe12f",
+        "control.npz": "2f365949eb69558d036a329b18e8f676af51fb8961e21673e63fb022816e419d",
+        "run.json": "ce08c39182f301ec574287052cbe7a9f169e01f604388543a0899bdeff293d49"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17996,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14384,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13199999928474426,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2881,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-nominal-occluded-oracle": {
+      "input_sha256": {
+        "hil.csv": "e4be4103fb38de386116a190752af2d2e7202641c916d9637cd9aa4f96f86e36",
+        "flight.ulg": "11687fc9bdbc2ba4009d7da2bc185db42b9cb6206effe41f56317d2c1abbc002",
+        "flight.bag": "1a3046849cbc2042e71c56c4ab94a87565ad27c2488aea9d95d1248fb3b466b4",
+        "physics.npz": "5739c317069b413da98a9ab0412e20885e1b3af113293af6f3bdacd5c3ed73ad",
+        "control.npz": "66f7cfd16d68fee7a0e29d9da131117a24566e3cdab1f0ada94599d56eb0ea77",
+        "run.json": "61e1c727e417ecbc8956965339f3d0f4e6f8d8289f1e352f20e2eb488580eab5"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17535,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13911,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2798,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-differential-natural-vision": {
+      "input_sha256": {
+        "hil.csv": "175490f1b5a4fdb5dbafb59cac868c65f9a437ab3ccd7543e55e20cb088b4d8d",
+        "flight.ulg": "b61bb8b538273c03bed066f273d5f66a942eda3ef36dbafb24aba50348aa5cc2",
+        "flight.bag": "e40cb13d4105ccf3f182888f956926f36dd14693f7d759d06dc2ee5b979a799a",
+        "physics.npz": "507d2dd818918380cee2e6f34331029d0345ca5c09fffc7148f8963107dd2245",
+        "control.npz": "19ac51c878a1e59bc01212a02f2405560f4bbdffe5572a6b9e6a270d8ce60c60",
+        "run.json": "d266c9345fd52d91ced16759eee4658252169b204dbdf9b2c19981f11ab7bcbb"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17242,
+        "trajectory_setpoint": 2034,
+        "vehicle_attitude": 3589,
+        "vehicle_local_position": 3610,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13817,
+      "max_px4_pwm_to_hil_residual": 6.246566774947837e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.203000009059906,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3653,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2783,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3393,
+      "ros_shape_time_start_us": 16044000,
+      "ros_shape_time_end_us": 74024000
+    },
+    "26112131-differential-occluded-strain": {
+      "input_sha256": {
+        "hil.csv": "e091cdb287db0fdcd5d5e10a11274a91fb289cf10a37124cf55618ae7cf7a852",
+        "flight.ulg": "af55b5a549928bbbfd4c6b3630c3a96c9fd60ee24010d96ae9fc9aac04eef598",
+        "flight.bag": "603a14ec657d56f55b37baa335cc738ed5a8bfe0d02dda66ceb133045cba68ed",
+        "physics.npz": "9d4ff1171856e21a4d537507920bbeef69e336cd2b6cb12d7714c5bfe614a6e1",
+        "control.npz": "337cfa54e5d1518cc50595db1dc48522afdd3eebf3d61dc54eece680d98706dd",
+        "run.json": "78c256200a345184c59248dc50b2df23095223f05cfada66b003a08ac7cedf15"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17752,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 14141,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13300004601478577,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2849,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-differential-occluded-oracle": {
+      "input_sha256": {
+        "hil.csv": "e4cb70011e2a916db13106919ffaa2609199a0e89d37b6120653adfaacdf0853",
+        "flight.ulg": "675fbb4313c3beec0aa32c3748ab13076c1f316db6236fbf7ba31d9877272f7d",
+        "flight.bag": "c65c6cb8dc4de90de985229f946bf3a8fff27b18f0afcf89b626865605ec7e94",
+        "physics.npz": "7f5d252e1619ee76390d016ae452da2a98e6199feb35f1ab0099a12065762686",
+        "control.npz": "ea1d4404dafb5e760498420a19caed57bb08c6a4f161e8bb3f726d47e687abe7",
+        "run.json": "64712c9b265b8b30161eda9f2265f0fee343a1c6b1dfde9799f218a52f9f3893"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17188,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13671,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2752,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-differential-natural-vision": {
+      "input_sha256": {
+        "hil.csv": "f1c1277f5ccf2cd15285c24b4a2d71784ac20fcceea1a432ea84d27c8962276f",
+        "flight.ulg": "729422141c00087660630e4b88e81127197c82bf0f424c986e563b0c98dffa29",
+        "flight.bag": "c637cbfc215ae413979218cad9292bc51dd651f3c327dd598f304fc6f8ca4347",
+        "physics.npz": "eaa57ca2bb55831ab1f0298780549c22e5c132fd5b75e24c44100dca2c0c46c3",
+        "control.npz": "555d296c794a3da2a81b5de843624ebd84a287f5f7b4f38d11fc1845c64f34bf",
+        "run.json": "97a33d083cea872514a6816bab74fe0c95c0898776644611d819b0128354a5a4"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17122,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13648,
+      "max_px4_pwm_to_hil_residual": 6.246566774947837e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.19900000095367432,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2756,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.246566774947837e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-occluded-strain": {
+      "input_sha256": {
+        "hil.csv": "6acc1f9b33077800dbf28d49887bd5524385d2ff6995ce2dd6f9a369a2dcff8f",
+        "flight.ulg": "9182546db1e979e45584284f3573e9e82dd8db4208a10bf071670f20fcfea928",
+        "flight.bag": "dda2f529cac032fcb6bc2d28a7c4c8c23fb33532d19ad6b74548c940ba99f08a",
+        "physics.npz": "960fe4070289fcf5c35beb60ccc8476dec600acaf7ac4cb364a6ac2eb757857b",
+        "control.npz": "473718331b7043ab9b24f7b4196c7652a941425fc25958f0dee5bda61c2d8719",
+        "run.json": "070506ae724b45c60b70f7c4bbe748e7a35f9281ba3b870276b360af89c08c93"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17059,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13675,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.14100000262260437,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2750,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-natural-fixed": {
+      "input_sha256": {
+        "hil.csv": "720483df4b9a14597b078d0c37b91b068a67011b23634547d53bdc823652a0bb",
+        "flight.ulg": "7e9cc2e65783bf227a05a537a70e693d95cb992bd7c4a3ae2cf7a1fb250eec4c",
+        "flight.bag": "8e14cc45391b174790548fa46ab7369e3d7d2c4f5774fbb547d854fd972423c4",
+        "physics.npz": "d8381ef1885b8f8a1fff55df78a5516d40c0800542c6b406521b8df77dbd7bbf",
+        "control.npz": "e58abab7cbb36f4b0fb3bb6764f2a276980532d8af69f4dde9e7eaa631863f35",
+        "run.json": "1c19822916c497826a2983da398ada9eb02a397457c5e35a8551a74827406057"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17114,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13681,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2748,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112143-nominal-natural-vision": {
+      "input_sha256": {
+        "hil.csv": "fcd7f3b4496589f0f46a7b4fb37e0ce4ac7fea0759f6d35bfc28a2e7f34129fd",
+        "flight.ulg": "ffb1cc9f831b660b5137954ee26394570056509216b3afbaa7e79218d7ec9c41",
+        "flight.bag": "77b0dd594fea283f412e84aed3cda60d74a7887da36c3152d3fa231d6c58f64c",
+        "physics.npz": "0a875c2ee0a45f58d824293fc66e270c0c4444e9b4cc139ad0d88d5e3b360367",
+        "control.npz": "5e5a2e9b6976fc6e6fc623fc8f72ba0c9eadb3f6251f0538b57aa9cd0a4b120b",
+        "run.json": "8c9a97dc4de88c2a117321ba7ed3d4d552943bb0e04316c0e510fa6a8131a46e"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17340,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13767,
+      "max_px4_pwm_to_hil_residual": 6.437301636186277e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.218999981880188,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2747,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-nominal-occluded-strain": {
+      "input_sha256": {
+        "hil.csv": "73d062f56373b01dde0abbca5b5ef89451ce06bb534c03cf7f236a7c7084a891",
+        "flight.ulg": "c036dabe2249ac1420808172d2f9e59fb4af29d2582fc69486bd335f14c66d01",
+        "flight.bag": "a0e375b2ea40873e05d6b7dd56b97c579306476305301569adbc3b4962184765",
+        "physics.npz": "cff620e90cb014fdfec97e50138ddae2c17be7100cb58cc8899f77b7c2c9b1c8",
+        "control.npz": "eaeaa0d6a138e098f4635b443de868f779531481fd7f477ed653c529ce833a01",
+        "run.json": "f56201a6d5a6c71af6d630bcff450a4cab08ed393b29bac76279eb3d0e011eb4"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17185,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13617,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.14400002360343933,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2743,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-natural-fixed": {
+      "input_sha256": {
+        "hil.csv": "d3518e23acc1fdda2643b2f30754245fddb31551903d25413f10257c9cdf8111",
+        "flight.ulg": "64de2e83c7830205fd65c82c5bb2e39f5954dafd27a3dfd20d77a35bb184eee5",
+        "flight.bag": "f5e3b400a1f00e39453843ddca07bdfdc56a72d4110c13f2256e632502c0ec4c",
+        "physics.npz": "e52e40c0aa9decbdfb72b607c6995342651410a08023acea4069930456224ae0",
+        "control.npz": "0a11eb6e93bb6ac2f803db72a6c66a985144d41e0ff225a0aeea8602b550116c",
+        "run.json": "5d2d33cfcb4178bff175c051f81f5ad83f632370f668d5c0482bc8acef744a9b"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 16968,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13521,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2738,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-occluded-proposed": {
+      "input_sha256": {
+        "hil.csv": "2ed6ab148c738fecfbceeca02b19127e237495e271c37da9caebdc7468bf3161",
+        "flight.ulg": "64341568708ebb32347e20d7945bef94e7df7d1e1305730b45f7b7f8f5a1a6c3",
+        "flight.bag": "ae7f07dc47daed9cacf746474062250d8b2db8e877d5037e85581934bad9d0b1",
+        "physics.npz": "425df8ca4509f40efc5173f7266893e3f976c780d71c52d279aaff415219fa96",
+        "control.npz": "5b3ef8f27f4230e5b85482f551b6ef0a8ec13c7f618e7575f4b56f05fc51627d",
+        "run.json": "3271ad79352223ee0a24fc4a3ee27610bcd45c07d6f9d924221df0930a61e908"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17114,
+        "trajectory_setpoint": 2034,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13563,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1300000250339508,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3653,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2738,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3393,
+      "ros_shape_time_start_us": 16052000,
+      "ros_shape_time_end_us": 74032000
+    },
+    "26112131-nominal-natural-oracle": {
+      "input_sha256": {
+        "hil.csv": "898e7fe58ee4d704069afb3baa71a1b3fa7302a27d66d1e9ef150c037339fc19",
+        "flight.ulg": "a249098bcfb113149b3f148de1eed9b28374f6061383f1f6df2cddda1b116eef",
+        "flight.bag": "da9d9b3495500d4e35cf22aed09387922385064f91a09e67b446a144f0d1f4ff",
+        "physics.npz": "4a8e348eb5e52fe1679343d49c18fec5cf08e0f02b37e45f9ccbf5ed9f93e9ee",
+        "control.npz": "0a19cea238b87cd0bff22916a411501c968269625ad1cece257084cd9192be3f",
+        "run.json": "10f9fbe78b2ed019cffa020cc57511c7a2d1851c0ab035f64b7f39fe6cff9074"
+      },
+      "armed_offboard_status_samples": 121,
+      "px4_sets": {
+        "actuator_outputs": 16933,
+        "trajectory_setpoint": 2034,
+        "vehicle_attitude": 3589,
+        "vehicle_local_position": 3609,
+        "vehicle_status": 149
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13559,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1290000081062317,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3652,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2775,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3392,
+      "ros_shape_time_start_us": 16040000,
+      "ros_shape_time_end_us": 74020000
+    },
+    "26112131-nominal-occluded-vision": {
+      "input_sha256": {
+        "hil.csv": "2a9ade49eca69a84395278c0c8e69088f98afc91bd0e208f92bc465046abd41d",
+        "flight.ulg": "43d48b3fa5c95059e9fa73da163e199250640bf7a45c4e40b52bd9c546739e4e",
+        "flight.bag": "d848f6e97cbbee540c047870f32215a28309dec1da1cd15bacc41ea2c89e7b6d",
+        "physics.npz": "bd881e9d939bbca01f946a2f5ee501c53dc9e02b47e48f84560509b6cde9d352",
+        "control.npz": "6a96aa69412a42279be051f3cede852d2f9fcbb317dd867b49a429290be813e5",
+        "run.json": "847248fa5a2f83bc032e780b2f46ddde2cb769bf1a44287bd40421c176eb9192"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17057,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13666,
+      "max_px4_pwm_to_hil_residual": 6.198883051311554e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.17800000309944153,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3654,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2786,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3394,
+      "ros_shape_time_start_us": 16080000,
+      "ros_shape_time_end_us": 74060000
+    },
+    "26112131-differential-natural-strain": {
+      "input_sha256": {
+        "hil.csv": "e48be8451f1ef336ea6449928f1ada4b7b7c8f742c9fa3c1493dfaba51648542",
+        "flight.ulg": "c21d8bb21dc732f14a040e753b0fbf1cb142d2840cde9942e43334bf9ab5ad5a",
+        "flight.bag": "88dec5bd01dcf8e57cd1b7e1514393b52e7444bf9b6979110c8888e0f36ce92e",
+        "physics.npz": "d9d8db357d37b86e6f89bb46de632fa9385d4e8b8f777e53bdd44b57460e7e30",
+        "control.npz": "ad94c975dc61dd2ddebe5741d60285663983527753c90f11f5e791df26c0481a",
+        "run.json": "965d399cd59af8fe9e88ce24fa04805d809a4b0a4167593ae06c35e0624e94cb"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17105,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3614,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13639,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13300004601478577,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2779,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112131-differential-occluded-fixed": {
+      "input_sha256": {
+        "hil.csv": "ddb8ad513c0f5a9b2451fde91e8476e43bc938f64992d3749402422a1e7a7ce5",
+        "flight.ulg": "9f7714b35149e7f03e09e87db5ab2405b9c0b3715258c55d4d0c6d913110e051",
+        "flight.bag": "c0b289885f8872e7f0fb74011590e7874867ab252e7255a1e1442879530c84f8",
+        "physics.npz": "8033073e50481ace4bc7133307cdc4de86a7700570520b070cea05ce4022912a",
+        "control.npz": "5a2a613df7815e0533cf3e50abcc6747515895fa247c481c142b8facc934dc97",
+        "run.json": "bf8aa179a509d1a763ac11542e38879746b22ec84610c00dc567db3f7a39c384"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 16827,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13497,
+      "max_px4_pwm_to_hil_residual": 6.198883051311554e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.16699999570846558,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2713,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.055831913709397e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16092000,
+      "ros_shape_time_end_us": 74072000
+    },
+    "26112137-differential-occluded-vision": {
+      "input_sha256": {
+        "hil.csv": "c6e4006e3bebb4250b7881e0f10f74bbafb9845565cfa7a0390c21ab24ea7646",
+        "flight.ulg": "7f22ae597161eca59bc1c879108a12aa2ed83501b84edbe638548d1b1a78d8fc",
+        "flight.bag": "fbab301a89bb9b29d6250bf06016933ca57c90cb992b39f28f6206980f3fa146",
+        "physics.npz": "4301fd9173dd2c486eeb0f321d43e8138ea9e1fbd094d7c8def9a8c80a75ef2a",
+        "control.npz": "114ddda772f52136524954f8a7ced243415e52e6e1242855c075e7b5c19f8d74",
+        "run.json": "877afdc94c04811a19fc01a04a2c88cbc2e121dc2fac94575ec73e2a7b63fccf"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17151,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3611,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13659,
+      "max_px4_pwm_to_hil_residual": 6.198883051311554e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.16300001740455627,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2756,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-differential-natural-strain": {
+      "input_sha256": {
+        "hil.csv": "821d6a56e182dabbf5748a22f8714ba1a11290e619b6cf35f7474f1063077585",
+        "flight.ulg": "58f1e6268147c0587fd9d59fe6747df3bae574be0cb8c9c607c1d520a7bc52a2",
+        "flight.bag": "a8944b15c1ceb1b9b13221d282630a23c7fedde82bb6bac5e6076eb2c837d9ff",
+        "physics.npz": "119f69c4583a9141556ac9a61797dddc4cda136e9ad231a5fba155c0567b7896",
+        "control.npz": "ecdc927707d0bd7ca9fdd7c13cbed16201d87e8e60fdda6b3663df8cf97fd684",
+        "run.json": "f34441b457a1c28a2b6e527c7e225b48f58a47cd847a16bb62f8bd0c28939b78"
+      },
+      "armed_offboard_status_samples": 121,
+      "px4_sets": {
+        "actuator_outputs": 16969,
+        "trajectory_setpoint": 2033,
+        "vehicle_attitude": 3589,
+        "vehicle_local_position": 3609,
+        "vehicle_status": 149
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13569,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13199999928474426,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3652,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2734,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3392,
+      "ros_shape_time_start_us": 16040000,
+      "ros_shape_time_end_us": 74020000
+    },
+    "26112137-nominal-occluded-fixed": {
+      "input_sha256": {
+        "hil.csv": "8c28edbb9e27e5b8abf945cedf715c253a328861f16f392a34d5277943209e5f",
+        "flight.ulg": "b940583c13b5f0f5558718d8c6e2317a5e5b22a6ff5b6df128e0791240972612",
+        "flight.bag": "70aa657d0b730612085e528f90576bf188c273b521821a88d9a5d4e0e6533919",
+        "physics.npz": "7e45c31069dc4120691cdf8ab8298b95904e5d4ef3bc5ad4c6e8eb87eb0ec347",
+        "control.npz": "359b2ca1dfe147a1d260317584922cb294954aef79b58fe0d75d204bb91c7a44",
+        "run.json": "f0875a082d981d5f5de8007061f4f699a7e27fa54cabdaa671d812fbd9a959b2"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17102,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3593,
+        "vehicle_local_position": 3614,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13658,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13699999451637268,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2750,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112137-nominal-natural-proposed": {
+      "input_sha256": {
+        "hil.csv": "a7dc803fb9ab44ad7b2fbf1eb3ef55ed2a9dbd9b4bac5918268295dba8d2a071",
+        "flight.ulg": "94704907ef400072c94ec057b2b3912e0f389740025f76326c5e4ca4803dfbd4",
+        "flight.bag": "82decb906f0e86cfc6587696f9674c4865ee0841d23fd2ede2fde2bfedc91dca",
+        "physics.npz": "79fd43779c94853cb92abfe298914eb469b635cb1d5c395f228fde170fb44117",
+        "control.npz": "8798d6dbb9035f9f33c799a768732569a51bb871181c4835a326705f29c4299e",
+        "run.json": "0aae9bc4b95263b0e689cd697541050c5bbc9a2c08d36f9d852a99bfd81a0fae"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17064,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13634,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12999999523162842,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2753,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16084000,
+      "ros_shape_time_end_us": 74064000
+    },
+    "26112143-nominal-natural-strain": {
+      "input_sha256": {
+        "hil.csv": "ad5c8375ea97e1ac4c7bef46711eaaa24ab54d42b402a16475529294293a4fd0",
+        "flight.ulg": "03e6f06deb838e809eac0f6f6a9db6e2d4bbcc81c846bab1c75bb6bcd0b691a7",
+        "flight.bag": "cb3b46f53f3262212c7cafd08bcb5971f0ff14686dcf7e3034363d28ca41d194",
+        "physics.npz": "3798cf2f148645858c9992954875b703ae0288ef6f5b325c1065d3ef3cdcdeba",
+        "control.npz": "8318e15722ef61159ed70e4627cd6effc13f3459e80dea8fbc1a918363ac20de",
+        "run.json": "50ea3677ae75394d6cacf26f2deb1bde9e0addaff4c23b8ab370b023b84473a9"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17058,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13659,
+      "max_px4_pwm_to_hil_residual": 6.008148190073115e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.14400002360343933,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2741,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.008148190073115e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-nominal-occluded-fixed": {
+      "input_sha256": {
+        "hil.csv": "5b946203ecabe75f7b2c325b09b76473ac38b0b8e0f234224d0bf05ac62dca7d",
+        "flight.ulg": "9ac606c111c08e3404a044166452043104729d72e36a190b24e06fb594eda759",
+        "flight.bag": "dd64afadcb3c32d57784adbb143a5aa6ad9a05ef8fc51711389fdb9437c27640",
+        "physics.npz": "2a5cbb9d8e02fc4a25e285faa80538024cf6a135c65b433f47acecf2175e84e6",
+        "control.npz": "1f74ed1e274eb5a540cc381ebd6725366883f0f843cdc42a20e770105aaa1bcf",
+        "run.json": "e7b559d7b8ce69b745348e7b996795a3d7b21211981357bf3e67d3198dcd6f3e"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 16976,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13577,
+      "max_px4_pwm_to_hil_residual": 6.198883051311554e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.13499999046325684,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3654,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2742,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 6.198883051311554e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3394,
+      "ros_shape_time_start_us": 16080000,
+      "ros_shape_time_end_us": 74060000
+    },
+    "26112143-differential-natural-proposed": {
+      "input_sha256": {
+        "hil.csv": "1c4b4550adce3129d7eb8b27d06349b6ffbef60701fb26d956a5b009b0903ae1",
+        "flight.ulg": "93784aef38080024c328b62f08bb79e828c8b1af0aaff5a42cf2c2aa2adb2a97",
+        "flight.bag": "0e03aeccaba5e59e01eaba7b2a6c32cfca9e4a609ad6e2ac9d68fd86e951ca42",
+        "physics.npz": "3f6e71c9106da9b5c8138b0820a9089b52ef66d051a179714c9a5c5141268c9a",
+        "control.npz": "63016b8743a840f03aa2ed6be9654e72fb5a6ca7091ab12f722bbec60b64f1f2",
+        "run.json": "f9ee9db8d69dc0072442010a0213eb6792ee7ea9ce56cf74ab501f1ff0b758d7"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 17272,
+        "trajectory_setpoint": 2036,
+        "vehicle_attitude": 3592,
+        "vehicle_local_position": 3613,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13764,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.1300000250339508,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2754,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    },
+    "26112143-differential-occluded-oracle": {
+      "input_sha256": {
+        "hil.csv": "52519d0dc0b8fa80e81b56a5974d2f44dbd5fdf70c9276005d72d03cb9225692",
+        "flight.ulg": "80367765ad0a5272b337f24882522fe97e726dc9e007f74723d9361c4829705c",
+        "flight.bag": "e765670fb1dbe53ad58bfe747c109fb63a30e1d545f03e8f736a0a970f6ac9f1",
+        "physics.npz": "3c2e4ba0686bad632b6b9e10f566e397c541790dcc1f411dc8410f35c68d5f1d",
+        "control.npz": "4850d8bc8a2b7b2c300cd7df880333cb5c75ab77676e674aa02a20e27df619eb",
+        "run.json": "5bd33d412d95bdc0fcc5383f309791857f5c0304bbd556f749af88f7f1cc2cdb"
+      },
+      "armed_offboard_status_samples": 122,
+      "px4_sets": {
+        "actuator_outputs": 16857,
+        "trajectory_setpoint": 2035,
+        "vehicle_attitude": 3591,
+        "vehicle_local_position": 3612,
+        "vehicle_status": 150
+      },
+      "armed_release_motor_packets": 14501,
+      "exact_timestamp_motor_matches": 13623,
+      "max_px4_pwm_to_hil_residual": 5.817413328834675e-08,
+      "px4_motor_fraction_in_float32_precision": 1.0,
+      "min_hil_channel_span": 0.12799999117851257,
+      "ros_shape_samples_per_topic": 2900,
+      "ros_shape_arrays_match": true,
+      "ros_thrust_samples": 3655,
+      "ros_vs_mujoco_max_thrust_err_N": 0.0,
+      "ros_hil_motors_paired_to_ulog": 2731,
+      "ros_pwm_match_fraction": 1.0,
+      "ros_pwm_same_tick_match_fraction": 1.0,
+      "ros_motor_source_lag_exceptions_us": [],
+      "max_actuation_source_age_ms": 0.0,
+      "max_ulog_to_ros_hil_motor_residual": 5.817413328834675e-08,
+      "ros_hil_to_rotor_load_max_residual_N": 0.0,
+      "ros_local_position_samples": 3395,
+      "ros_shape_time_start_us": 16088000,
+      "ros_shape_time_end_us": 74068000
+    }
+  },
+  "distance_certificates": {
+    "26112131-differential-occluded-vision": {
+      "sha256": "e0b40d4721c872e07294e8c553f9df151593bfd8a9198c92cfd2946349ce3c9b",
+      "case": "26112131-differential-occluded-vision",
+      "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+      "additional_solver_sha256": "f799b07a805241908a275db3f1f7b7753b75535fc2e6979ce5e8be33379376ca",
+      "primary_scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+      "inputs": {
+        "physics.npz": "038eb53e8ca149afae45de9a0345aeb416888f0286a6636b0c228520a45298bb",
+        "flight.ulg": "374a1570068b5de7a67c9b4a065a04bde3b08dd4b4ae49af0c90970d81aea6b7",
+        "flight.bag": "0e99cb30dbdd7d48972ab5a9d755d84cb2001cb01f696a37486c9d445946a055",
+        "control.npz": "5dcd90a058370539d3ccec4da9cc4a070d23531a3f7528e72070870243e0e569",
+        "run.json": "ca3d70d568d2aac694ef5ed984511043ca10f8cf111e1e21de1a520c59cc9a88"
+      },
+      "solutions": [
+        {
+          "pose_index": 2467,
+          "geom_a": "collision_landing_163",
+          "geom_b": "d435",
+          "original": "Unresolved convex distance ('collision_landing_163', 'd435', 0.0, 0.0028691787473022405, 'GJK stalled')",
+          "lower_m": 0.0027905916698025843,
+          "upper_m": 0.002790592069802585,
+          "witness_a_m": [
+            1.9467406254336816,
+            0.21745203366851654,
+            1.7973087028518013
+          ],
+          "witness_b_m": [
+            1.9489917754085657,
+            0.21697666005811977,
+            1.7988878629782377
+          ],
+          "requested_precision_m": 0.0001,
+          "qpos_sha256": "38bb7a8e3ac0d20674690c8bdaa319a94d6faa07647bd7c2c20347395b114ad2"
+        },
+        {
+          "pose_index": 2491,
+          "geom_a": "collision_landing_163",
+          "geom_b": "d435",
+          "original": "Unresolved convex distance ('collision_landing_163', 'd435', 0.0029837631398533545, 0.006566151679602364, 'GJK stalled')",
+          "lower_m": 0.0062729731567975665,
+          "upper_m": 0.006272973556797572,
+          "witness_a_m": [
+            1.955409643499609,
+            0.22713815447407293,
+            1.8026572404450847
+          ],
+          "witness_b_m": [
+            1.9603632914740483,
+            0.22603453626990383,
+            1.806344189500856
+          ],
+          "requested_precision_m": 0.0001,
+          "qpos_sha256": "383d1d603e7f5e8ebae627dcd62f649b78f78e7fa2d3b13ceb21c0e6e3cf0a13"
+        }
+      ]
+    },
+    "26112143-nominal-occluded-vision": {
+      "sha256": "099c4dc82c8516d9399f007c75e1012a93947f680f1e7dd42d2e1faa3638ef22",
+      "case": "26112143-nominal-occluded-vision",
+      "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+      "additional_solver_sha256": "904bf4a8efcd5bd91bd82efb1a8f0d68e7f729031986e683eae0239cd232f001",
+      "primary_scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+      "inputs": {
+        "physics.npz": "382fb911e18d63e8fea08e70dd721e1446498c799e090ec3fe8c7c7b7ae6dc6e",
+        "flight.ulg": "ae5a58243cb863d06e57f5d7e18aa21320979e03c8c239f2da9cac08a63b159b",
+        "flight.bag": "98a42c4dcfa747f39699a0ff5a19dbbb0992a4682e31f21edb482467c190c58d",
+        "control.npz": "871ecec8c12d8fd95be1412c4dabd00f538ba81cf0dc75f794523713f8f94c1e",
+        "run.json": "9f426689cf9ba518dafd2b36eda63c7e98c235021277dc6a27771fa96d613248"
+      },
+      "solutions": [
+        {
+          "pose_index": 1934,
+          "geom_a": "visual_gripper_housing",
+          "geom_b": "G1_sill",
+          "original": "Unresolved convex distance ('visual_gripper_housing', 'G1_sill', 0.12391823421209391, 0.12416919611800217, 'GJK stalled')",
+          "solver": "secondary support direction / separated GJK",
+          "lower_m": 0.12405581885114056,
+          "upper_m": 0.12405581885114131,
+          "witness_a_m": [
+            0.9363524974589867,
+            0.03662779140367781,
+            1.8183028461359276
+          ],
+          "witness_b_m": [
+            0.9499999999999998,
+            0.03662779140367754,
+            1.695
+          ],
+          "requested_precision_m": 0.0001,
+          "qpos_sha256": "395c854a20c0dce25c5ab9cd863c877d7a8156b1cbee22111160ab2f184c1db1"
+        },
+        {
+          "pose_index": 1934,
+          "geom_a": "collision_gripper_housing",
+          "geom_b": "G1_sill",
+          "original": "Unresolved convex distance ('collision_gripper_housing', 'G1_sill', 0.12391823421209391, 0.12416919611800217, 'GJK stalled')",
+          "solver": "secondary support direction / separated GJK",
+          "lower_m": 0.12405581885114056,
+          "upper_m": 0.12405581885114131,
+          "witness_a_m": [
+            0.9363524974589867,
+            0.03662779140367781,
+            1.8183028461359276
+          ],
+          "witness_b_m": [
+            0.9499999999999998,
+            0.03662779140367754,
+            1.695
+          ],
+          "requested_precision_m": 0.0001,
+          "qpos_sha256": "395c854a20c0dce25c5ab9cd863c877d7a8156b1cbee22111160ab2f184c1db1"
+        }
+      ]
+    },
+    "26112143-nominal-natural-vision": {
+      "sha256": "ee2f2f62bc5225f302df405444c4100004c92952a6b2aecf5161f72e5ce25540",
+      "case": "26112143-nominal-natural-vision",
+      "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+      "additional_solver_sha256": "904bf4a8efcd5bd91bd82efb1a8f0d68e7f729031986e683eae0239cd232f001",
+      "primary_scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+      "inputs": {
+        "physics.npz": "0a875c2ee0a45f58d824293fc66e270c0c4444e9b4cc139ad0d88d5e3b360367",
+        "flight.ulg": "ffb1cc9f831b660b5137954ee26394570056509216b3afbaa7e79218d7ec9c41",
+        "flight.bag": "77b0dd594fea283f412e84aed3cda60d74a7887da36c3152d3fa231d6c58f64c",
+        "control.npz": "5e5a2e9b6976fc6e6fc623fc8f72ba0c9eadb3f6251f0538b57aa9cd0a4b120b",
+        "run.json": "8c9a97dc4de88c2a117321ba7ed3d4d552943bb0e04316c0e510fa6a8131a46e"
+      },
+      "solutions": [
+        {
+          "pose_index": 2401,
+          "geom_a": "collision_landing_163",
+          "geom_b": "collision_gripper_housing",
+          "original": "Unresolved convex distance ('collision_landing_163', 'collision_gripper_housing', 0.0037666225471026413, 0.003909253957327587, 'GJK stalled')",
+          "solver": "secondary support direction / separated GJK",
+          "lower_m": 0.003768447456806756,
+          "upper_m": 0.0038493707922646276,
+          "witness_a_m": [
+            1.9542613772620956,
+            0.23884169913255937,
+            1.7622264250976996
+          ],
+          "witness_b_m": [
+            1.954216118646674,
+            0.2351528196313772,
+            1.7611274368448833
+          ],
+          "requested_precision_m": 0.0001,
+          "qpos_sha256": "052c0a397f8013ae60c0ebeb3559962070273ffe73f26e8ca9097a58855f4406"
+        }
+      ]
+    },
+    "26112137-differential-occluded-vision": {
+      "sha256": "a46e11bb11ee4f60795323e454b09a07a0cb853b03fbba95a1b394ee03022cd8",
+      "case": "26112137-differential-occluded-vision",
+      "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+      "additional_solver_sha256": "904bf4a8efcd5bd91bd82efb1a8f0d68e7f729031986e683eae0239cd232f001",
+      "primary_scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+      "inputs": {
+        "physics.npz": "4301fd9173dd2c486eeb0f321d43e8138ea9e1fbd094d7c8def9a8c80a75ef2a",
+        "flight.ulg": "7f22ae597161eca59bc1c879108a12aa2ed83501b84edbe638548d1b1a78d8fc",
+        "flight.bag": "fbab301a89bb9b29d6250bf06016933ca57c90cb992b39f28f6206980f3fa146",
+        "control.npz": "114ddda772f52136524954f8a7ced243415e52e6e1242855c075e7b5c19f8d74",
+        "run.json": "877afdc94c04811a19fc01a04a2c88cbc2e121dc2fac94575ec73e2a7b63fccf"
+      },
+      "solutions": [
+        {
+          "pose_index": 2422,
+          "geom_a": "collision_landing_163",
+          "geom_b": "collision_gripper_housing",
+          "original": "Unresolved convex distance ('collision_landing_163', 'collision_gripper_housing', 0.00488634732426268, 0.005038852199941854, 'GJK stalled')",
+          "solver": "secondary support direction / separated GJK",
+          "lower_m": 0.004912337386486126,
+          "upper_m": 0.004957857857467959,
+          "witness_a_m": [
+            1.9002719651770337,
+            0.21266676827317638,
+            1.7805123734618642
+          ],
+          "witness_b_m": [
+            1.900206673720587,
+            0.20789317874745006,
+            1.779174862863608
+          ],
+          "requested_precision_m": 0.0001,
+          "qpos_sha256": "3b81bfc1a6558a064490fbf325d7ed4ed84a7d58063505b4106b84c7ae3b92f3"
+        }
+      ]
+    }
+  },
+  "exact_timestamp_motor_matches": 842065,
+  "matched_shape_samples_per_topic": 174000,
+  "all_ros_shape_arrays_match": true,
+  "min_fraction_of_matching_pwm_values": 1.0,
+  "ros_hil_motors_paired_to_ulog": 169113,
+  "min_ulog_vs_ros_pwm_match_fraction": 1.0,
+  "maximum_ros_vs_physics_thrust_error_N": 0.0,
+  "offboard_active_in_every_flight": true
+}

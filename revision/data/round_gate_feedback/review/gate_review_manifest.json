@@ -1,0 +1,75 @@
+{
+  "pages": 2,
+  "registered_trials": 60,
+  "scored_trials": 60,
+  "font": "C:\\Windows\\Fonts\\msyh.ttc",
+  "inputs": [
+    {
+      "path": "protocol.json",
+      "sha256": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0"
+    },
+    {
+      "path": "decisions/metrics.json",
+      "sha256": "b802a99b3a793a8e27c24bb42a065ad31a30af0361c414ce47c5c7a36ac2dd7c"
+    },
+    {
+      "path": "review/visual_manifest.json",
+      "sha256": "1640e21a0afffee50c24b6b075bf361d5fd2bae60ec42da5b0411a85138874ca"
+    },
+    {
+      "path": "review/gate_keyframes.pdf",
+      "sha256": "b36ca9a552fcad6c18417742593dd9c54b555aea2c2ae0f3e5dc6c0c91433e65"
+    },
+    {
+      "path": "review/gate_four_metrics.pdf",
+      "sha256": "a3ea574790ce47ed3888b00a7ec959de626d70a1e49fed70e879dcf38dbc57f6"
+    },
+    {
+      "path": "decisions/case-evidence-audit.json",
+      "sha256": "3105e0188361262281c88a8e0dd9ff4651569d021ff1fbf5225b9a04aaca5789"
+    }
+  ],
+  "metrics_mapping": {
+    "success": "success",
+    "body_min_m": "body_min_m",
+    "arm_tool_min_m": "arm_tool_min_m",
+    "self_min_m": "self_min_m",
+    "hold_s": "hold_s",
+    "completion_s": "completion_s",
+    "tip_rmse_m": "tip_rmse_m",
+    "tip_peak_m": "tip_peak_m",
+    "axis_rmse_deg": "axis_rmse_deg",
+    "axis_peak_deg": "axis_peak_deg",
+    "theta_rmse_deg": "theta_rmse_deg",
+    "phi_rmse_deg": "phi_rmse_deg",
+    "theta_blackout_rmse_deg": "theta_blackout_rmse_deg",
+    "phi_blackout_rmse_deg": "phi_blackout_rmse_deg",
+    "safe": "safe",
+    "crossed": "crossed",
+    "dwell_reached": "dwell_reached",
+    "max_continuous_dwell_s": "max_dwell_s",
+    "physical_contact_steps": "physical_contact_steps",
+    "inside_aperture": "passed_inside_aperture",
+    "feedback_hold_s": "feedback_hold_s",
+    "clearance_hold_s": "clearance_hold_s",
+    "whole_samples": "whole_angle.samples",
+    "whole_estimates": "whole_angle.available",
+    "whole_azimuth_samples": "whole_angle.azimuth_samples",
+    "black_samples": "blackout_angle.samples",
+    "black_estimates": "blackout_angle.available",
+    "black_azimuth_samples": "blackout_angle.azimuth_samples",
+    "dynamic_theta_deg": "dynamic_theta_range_deg",
+    "dynamic_phi_deg": "dynamic_phi_range_deg",
+    "held_theta_rmse_deg": "vision_hold_blackout.theta_rmse_deg",
+    "held_phi_rmse_deg": "vision_hold_blackout.phi_rmse_deg",
+    "held_theta_peak_deg": "vision_hold_blackout.theta_peak_deg",
+    "held_phi_peak_deg": "vision_hold_blackout.phi_peak_deg",
+    "measured_max_bend_deg": "true_max_bend_deg",
+    "maximum_integrated_curvature_deg": "true_max_total_curvature_deg",
+    "terminal_samples_after_gate": "terminal_after_gate_samples"
+  },
+  "output": "review/gate_review.pdf",
+  "output_sha256": "c78f057efb8d0320ac5204c31e4ecf058bc4732974c0903a898a676917652819",
+  "vector_figures": true,
+  "no_outcome_recomputation": true
+}
