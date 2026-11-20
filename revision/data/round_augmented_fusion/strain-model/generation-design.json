@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "preload": 0.3,
+  "temperature_C": 25.0,
+  "nominal_material": {
+    "half_width": [
+      0.018,
+      0.02,
+      0.022,
+      0.019
+    ],
+    "tau_s": [
+      1.7,
+      2.0,
+      2.3,
+      1.9
+    ],
+    "play_weight": [
+      0.46,
+      0.5,
+      0.54,
+      0.48
+    ],
+    "transient_weight": [
+      0.018,
+      0.02,
+      0.022,
+      0.019
+    ]
+  },
+  "calibration_material_fractional_variation": 0.06,
+  "heldout_material_fractional_variation": 0.15,
+  "formal_ramp_s": [
+    18.0,
+    22.0
+  ],
+  "late_ramp_s": [
+    29.0,
+    33.0
+  ],
+  "visual_occlusion_s": [
+    31.0,
+    35.0
+  ],
+  "visual_delay_s": 0.2,
+  "offset_ratio": {
+    "nominal": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "common": null,
+    "differential": [
+      0.018,
+      -0.0045,
+      -0.018,
+      0.0045
+    ],
+    "single": null,
+    "late": [
+      0.018,
+      -0.0045,
+      -0.018,
+      0.0045
+    ]
+  },
+  "adc_offset_counts": {
+    "common": [
+      40.0,
+      40.0,
+      40.0,
+      40.0
+    ],
+    "single": [
+      40.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "rationale": "Fixed before target scoring. Ratio drift times installed gain gives ADC counts. Ramps are smooth quintics; all regular faults reach plateau nine seconds before occlusion. Late repeats the differential amplitude across the blackout boundary as a stress control.",
+  "scope": "Four simulated SLIM channels use an empirical three-channel box noise/timing pool. Dynamic material law is a conditional simulator model, not a newly measured four-strip law."
+}

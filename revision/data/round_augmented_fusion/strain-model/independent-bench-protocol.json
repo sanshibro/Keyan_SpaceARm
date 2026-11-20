@@ -1,0 +1,17 @@
+{
+  "headings_deg": [
+    13.0,
+    107.0,
+    221.0,
+    307.0
+  ],
+  "peak_deg": [
+    58.0,
+    77.0,
+    96.0,
+    105.0
+  ],
+  "observation": "New virtual mount/tool marker clusters at 25 micrometer noise; score only.",
+  "freeze_sha256": "33507be5fadb80a726bfff9488926f8dcd929a60c3fdfe35987ac5fbfa2f337a",
+  "use": "Fresh post-freeze test; no refit or selected removal."
+}

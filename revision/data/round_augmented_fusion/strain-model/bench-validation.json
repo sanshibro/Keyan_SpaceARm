@@ -1,0 +1,154 @@
+{
+  "model_sha256": "33507be5fadb80a726bfff9488926f8dcd929a60c3fdfe35987ac5fbfa2f337a",
+  "validation": {
+    "validation-00": {
+      "n": 1561,
+      "theta_rmse_deg": 0.428670768045798,
+      "b_vector_rmse_deg": 0.6139883378104016,
+      "b_component_rmse_deg": [
+        0.2520663243767528,
+        0.5598609176236305
+      ],
+      "theta_p95_abs_deg": 0.859769249150847
+    },
+    "validation-01": {
+      "n": 1316,
+      "theta_rmse_deg": 0.5006705532631608,
+      "b_vector_rmse_deg": 0.6464881487548801,
+      "b_component_rmse_deg": [
+        0.4537143139198191,
+        0.4605325697763193
+      ],
+      "theta_p95_abs_deg": 1.0239089950214768
+    },
+    "validation-02": {
+      "n": 1185,
+      "theta_rmse_deg": 0.462102993550148,
+      "b_vector_rmse_deg": 0.5307172600209574,
+      "b_component_rmse_deg": [
+        0.2101353202794497,
+        0.4873437772817106
+      ],
+      "theta_p95_abs_deg": 1.0157646113363374
+    }
+  },
+  "nominal_diagnostic_by_motion": {
+    "test-00": {
+      "n": 1440,
+      "theta_rmse_deg": 0.35389120355636766,
+      "b_vector_rmse_deg": 0.44004386916580596,
+      "b_component_rmse_deg": [
+        0.2589241735830104,
+        0.35580455186066395
+      ],
+      "theta_p95_abs_deg": 0.7304500799634229
+    },
+    "test-01": {
+      "n": 1386,
+      "theta_rmse_deg": 0.4308619587102144,
+      "b_vector_rmse_deg": 0.5772571721683056,
+      "b_component_rmse_deg": [
+        0.33979753487718767,
+        0.4666513453437543
+      ],
+      "theta_p95_abs_deg": 0.8712693283437836
+    },
+    "test-02": {
+      "n": 1359,
+      "theta_rmse_deg": 0.3977863810546445,
+      "b_vector_rmse_deg": 0.5372676911660624,
+      "b_component_rmse_deg": [
+        0.3424939791879854,
+        0.41394981119803803
+      ],
+      "theta_p95_abs_deg": 0.7864751383538833
+    }
+  },
+  "diagnostic_material_perturbation_15_percent_by_motion": {
+    "test-00": {
+      "n": 1440,
+      "theta_rmse_deg": 0.3517044182449893,
+      "b_vector_rmse_deg": 0.5049840793976929,
+      "b_component_rmse_deg": [
+        0.3709676416046003,
+        0.34262505647931857
+      ],
+      "theta_p95_abs_deg": 0.708098679004902
+    },
+    "test-01": {
+      "n": 1386,
+      "theta_rmse_deg": 0.42892097671381896,
+      "b_vector_rmse_deg": 0.5831054520737164,
+      "b_component_rmse_deg": [
+        0.3304753507024755,
+        0.4804144157039517
+      ],
+      "theta_p95_abs_deg": 0.8410796600362939
+    },
+    "test-02": {
+      "n": 1359,
+      "theta_rmse_deg": 0.4598875678574779,
+      "b_vector_rmse_deg": 0.651944935511936,
+      "b_component_rmse_deg": [
+        0.35800588677347295,
+        0.5448522588511511
+      ],
+      "theta_p95_abs_deg": 0.9091302059211006
+    }
+  },
+  "pooled_diagnostic_nominal": {
+    "n": 4185,
+    "theta_rmse_deg": 0.39491511109054805,
+    "b_vector_rmse_deg": 0.5203102863507485,
+    "b_component_rmse_deg": [
+      0.3152759555350233,
+      0.41391287240659197
+    ],
+    "theta_p95_abs_deg": 0.7994856058241423
+  },
+  "same_static_shape_map_without_material_inverse": {
+    "n": 4185,
+    "theta_rmse_deg": 4.271389171743469,
+    "b_vector_rmse_deg": 4.834295104338899,
+    "b_component_rmse_deg": [
+      3.0406627367363495,
+      3.758294729961727
+    ],
+    "theta_p95_abs_deg": 6.362458823660966
+  },
+  "by_motion_phase": {
+    "hold": {
+      "n": 1410,
+      "theta_rmse_deg": 0.41743643099918926,
+      "b_vector_rmse_deg": 0.5289611848290284,
+      "b_component_rmse_deg": [
+        0.3377383100489946,
+        0.4071028972888537
+      ],
+      "theta_p95_abs_deg": 0.7769432288205959
+    },
+    "motion": {
+      "n": 2775,
+      "theta_rmse_deg": 0.3829647383174696,
+      "b_vector_rmse_deg": 0.5158591136690402,
+      "b_component_rmse_deg": [
+        0.3032257863564132,
+        0.4173305016937328
+      ],
+      "theta_p95_abs_deg": 0.8063283511891578
+    },
+    "return": {
+      "n": 1316,
+      "theta_rmse_deg": 0.40774951185414465,
+      "b_vector_rmse_deg": 0.5511831657128807,
+      "b_component_rmse_deg": [
+        0.30799281095572134,
+        0.4571031727792601
+      ],
+      "theta_p95_abs_deg": 0.8512042490474492
+    }
+  },
+  "nominal_joint95_coverage": 0.9753882915173238,
+  "causal_prefix_max_abs": 0.0,
+  "scope": "Synthetic development diagnostics on prior test-00..02 with empirical box noise/timing. These motions exposed the ADC-rail defect and are not untouched tests. Fresh post-freeze evidence is independent-bench-validation.json. Generated material law is conditional and is not an identification of new physical strips. No target flight scores used."
+}

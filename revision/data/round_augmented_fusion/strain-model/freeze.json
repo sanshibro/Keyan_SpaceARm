@@ -1,0 +1,47 @@
+{
+  "model_sha256": "33507be5fadb80a726bfff9488926f8dcd929a60c3fdfe35987ac5fbfa2f337a",
+  "configuration_sha256": "417c00d0c4f5cd55ca19c0a02faa6f3ac66ed85f1267e232c6bb6ab400a1a976",
+  "material_parameter_fit": "Grid width/time plus continuous linear amplitudes on training ADC and geometry only.",
+  "fit_mse_ratio2": [
+    6.708621476963932e-07,
+    1.026197342384015e-06,
+    2.3862839760125455e-07,
+    6.813985719521762e-07
+  ],
+  "training": [
+    "train-00",
+    "train-01",
+    "train-02",
+    "train-03",
+    "train-04",
+    "train-05",
+    "train-06",
+    "train-07"
+  ],
+  "validation": [
+    "validation-00",
+    "validation-01",
+    "validation-02"
+  ],
+  "inputs": {
+    "train-00/reference.npz": "c678bc79a47636276cd858b2332b4beeb4f0be913dccfa0175ee2fea2f60e4f5",
+    "train-01/reference.npz": "b8573ae18b2d859fd454917364015e1a3f816274f5814f65b29d034ed8ba202f",
+    "train-02/reference.npz": "50be13209f59ac4374a92e0aef5cb61f8cd345c2f3aaa5b998f45edd20820120",
+    "train-03/reference.npz": "8cec3c6ed2bc0978522cbb6cf25477895beb07f29a838703dfa5bcb9bd06375a",
+    "train-04/reference.npz": "b9746e545f6c92c0e38548d3673f0d3159666cd0638b9c8a9d7a34df9dfe319e",
+    "train-05/reference.npz": "38b525a4bf86e4364d2c141d6a4f17295ff6837d929c63121e0b525dacdd0dfd",
+    "train-06/reference.npz": "8351f7ba617220a6a32613f5b4e7f9529757bef6da62592edc50ce0b9aba1190",
+    "train-07/reference.npz": "e3b767ddb951fc30d8dbef020505189b19bb2f7a91dcc8576b9040ab3b80ad19",
+    "validation-00/reference.npz": "348e1ea410e033c454ed5567081f1416caa18d2e20a344e784dc1245661b2d12",
+    "validation-01/reference.npz": "bfb97de15f963c7f3b4827df51571f3c6f0c65ed3e09d9b4aa7fb627009ee807",
+    "validation-02/reference.npz": "146e9df9cb21adf9858447184cc7e075a2bc0d9c1ddad58b9c7df6ae144e8e59"
+  },
+  "code": {
+    "round_aug_strain_calibrate.py": "eb889da8c90ed1a83a48fc6d86c4ed2d5988097ff8b4af9cfb595718ea022116",
+    "continuum_strain_inverse.py": "b6ba4339c761c52449a334daa942aa56d92309b42df59133ea9028c195e30541",
+    "round_aug_strain_common.py": "ed6b4284e9d98e492ab755d0069e322148d23116d8ac07f257198c61e576e8fe"
+  },
+  "forbidden_target_inputs": "No target flight, target mocap, flight label, target error or future ADC was opened.",
+  "validation_covariance_scale": 1.012750290535203,
+  "covariance_units": "radian squared; second moment includes systematic residuals; consecutive samples can remain correlated"
+}

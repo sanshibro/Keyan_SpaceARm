@@ -1,0 +1,86 @@
+{
+  "id": "2026-11-20-augmented-angle",
+  "previous": "8ef957ac52d2eb56388694e11df189a2c9f51843",
+  "cases": [
+    "26112011-straight",
+    "26112012-left",
+    "26112013-right"
+  ],
+  "pilot": "241118-online_pause",
+  "sources": [
+    "nominal",
+    "common",
+    "differential",
+    "single",
+    "late"
+  ],
+  "primary_offsets": [
+    "common",
+    "differential",
+    "single"
+  ],
+  "conditions": [
+    "natural",
+    "graded",
+    "occluded"
+  ],
+  "methods": [
+    "vision",
+    "strain",
+    "fixed",
+    "proposed"
+  ],
+  "phases": {
+    "all": [
+      14,
+      46
+    ],
+    "steady": [
+      24,
+      46
+    ],
+    "degraded": [
+      26.2,
+      31.2
+    ],
+    "blind": [
+      31.2,
+      35.2
+    ],
+    "recovered": [
+      36,
+      46
+    ]
+  },
+  "delay_s": 0.2,
+  "angle_units": "2D Cartesian bend rad; metrics deg, wrap phi; truth bending >=5 deg and estimate >=5 deg for phi. Report denominators and method coverage.",
+  "sensor_clock": "release seconds; platform us only for the 50 Hz output clock. Exact original irregular ADC times and optical exposure times are processed on their own clocks.",
+  "sensor_conditions": "All streams have physical play and relaxation with episode variation. Common, differential and single-channel offsets use the same fixed 18–22 s smooth ramp for a measured bias before the 31–35 s visual blackout. Additional late-ramp 29–33 s stress is reported separately. No offset/time label enters estimators.",
+  "physical": "25 mm SLIM M, 30% prestrain, 32.5 mm mounted at middle of arc; observed four raw box channels simulated with empirical sample intervals and quiet noise, historical fourth-channel effective gain estimated.",
+  "baseline": "Vision only: native RGB-D + accepted optical anchors at camera exposures, motion-predicted to release time causally using optical velocity only, invalid immediately upon delivery of a missing frame. Report raw original optical RMSE also at exposure. Strain only: continuous inverse from most recent available ADC. Fixed KF: same inputs, fixed validation-chosen covariances and timing, no bias state. Proposed: b, velocity and 2D random-walk bias estimated online with validity, NIS gating and state-dependent R. No output holding for invalid vision-only samples. Separate same-valid denominators.",
+  "acceptance": {
+    "healthy_all_theta": 0.9,
+    "normal_strain_upper": 1.2,
+    "normal_and_recovered_vision_target_upper": 1.8,
+    "steady_drift_theta": 1.5,
+    "absent_vision_coverage": 0,
+    "proposed_blind_coverage": 1,
+    "blind_reduction_each_baseline_each_drift": 0.5,
+    "blind_theta_target": 2,
+    "first_after_uncover_lt_s": 0.6,
+    "restore_jump": "Report 20 ms per-step theta residual increment compared to mocap within 0.6 s after return; 2 degrees used as the predeclared diagnostic bound.",
+    "prefix": "Released outputs must reproduce on sensor and time truncated streams. Use identical causal operations; score exact equality and maximum difference.",
+    "decision": "Inspect every main drift family separately and report per flight, pooled by samples and common-valid. Never average RMSE. Preserve any failed gates. Terminal metrics available only to isolated scorer after model, numerical settings, all input features and release traces freeze. No fitting on test, no change to existing manuscript/archived results; publish only when all hard checks pass and pause for user review."
+  },
+  "representative": {
+    "case": "26112012-left",
+    "source": "differential",
+    "condition": "occluded",
+    "exposure_s": [
+      26,
+      30.6,
+      33,
+      38
+    ]
+  }
+}

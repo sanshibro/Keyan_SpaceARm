@@ -1,0 +1,34 @@
+{
+  "pages": 2,
+  "pdf": "D:\\Ro_Arm_ALL\\中期考核\\论文思考\\滚动规划论文改进_20261117\\视觉应变增广融合_周期几何锚定_20261120\\review\\review.pdf",
+  "font": "C:\\Windows\\Fonts\\msyh.ttc",
+  "inputs": [
+    {
+      "path": "D:\\Ro_Arm_ALL\\中期考核\\论文思考\\滚动规划论文改进_20261117\\视觉应变增广融合_周期几何锚定_20261120\\scores.json",
+      "sha256": "d10c65f2c68a1e4131c8db70dc24394d27548ac502b791e8ac3615a2247553f3"
+    },
+    {
+      "path": "D:\\Ro_Arm_ALL\\中期考核\\论文思考\\滚动规划论文改进_20261117\\视觉应变增广融合_周期几何锚定_20261120\\acceptance.json",
+      "sha256": "f9473ad228b7f1d6b31a3393d3d603c8106dd2bf55cf4c2b2fddc322396d385e"
+    },
+    {
+      "path": "D:\\Ro_Arm_ALL\\中期考核\\论文思考\\滚动规划论文改进_20261117\\视觉应变增广融合_周期几何锚定_20261120\\review\\fusion_main.png",
+      "sha256": "d446d3903f88c72ebf96d0ca84d7c6bf03bc1d5a82d722494509012b593d50d4"
+    },
+    {
+      "path": "D:\\Ro_Arm_ALL\\中期考核\\论文思考\\滚动规划论文改进_20261117\\视觉应变增广融合_周期几何锚定_20261120\\review\\visual_manifest.json",
+      "sha256": "fa86e8d4a871def33ed762916a7287dba9af1832365d7db0d58627259bd753f7"
+    }
+  ],
+  "metric_units": {
+    "theta": "degree RMSE",
+    "phi": "circular degree RMSE",
+    "coverage": "valid/n"
+  },
+  "drift_pool": [
+    "common",
+    "differential",
+    "single"
+  ],
+  "truth_reads": "none; uses scorer summaries"
+}

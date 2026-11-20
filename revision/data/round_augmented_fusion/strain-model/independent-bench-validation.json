@@ -1,0 +1,110 @@
+{
+  "model_sha256": "33507be5fadb80a726bfff9488926f8dcd929a60c3fdfe35987ac5fbfa2f337a",
+  "pooled_nominal": {
+    "n": 5823,
+    "theta_rmse_deg": 0.43386497285003617,
+    "b_vector_rmse_deg": 0.5985716601809037,
+    "b_component_rmse_deg": [
+      0.340880446490747,
+      0.4920249521843304
+    ],
+    "theta_p95_abs_deg": 0.8788475112923352
+  },
+  "motions": {
+    "test-independent-00": {
+      "nominal": {
+        "n": 1304,
+        "theta_rmse_deg": 0.38694022836753894,
+        "b_vector_rmse_deg": 0.6210495243189812,
+        "b_component_rmse_deg": [
+          0.315867474158785,
+          0.5347244621535301
+        ],
+        "theta_p95_abs_deg": 0.8206787690416842
+      },
+      "material_transfer": {
+        "n": 1304,
+        "theta_rmse_deg": 0.42636558553556314,
+        "b_vector_rmse_deg": 0.7305025137440666,
+        "b_component_rmse_deg": [
+          0.3252645295928622,
+          0.6540924310639393
+        ],
+        "theta_p95_abs_deg": 0.9030249319626734
+      },
+      "geometry_sha256": "ac92104c0eb2aae06e9f005f9e0bb02a50b7c4b4dcd62f7cc7e68e2bac75d2cf"
+    },
+    "test-independent-01": {
+      "nominal": {
+        "n": 1404,
+        "theta_rmse_deg": 0.46777573897983177,
+        "b_vector_rmse_deg": 0.59474448054076,
+        "b_component_rmse_deg": [
+          0.3518185949324237,
+          0.47952546688729003
+        ],
+        "theta_p95_abs_deg": 0.9854605247874793
+      },
+      "material_transfer": {
+        "n": 1404,
+        "theta_rmse_deg": 0.6613671838012696,
+        "b_vector_rmse_deg": 0.8295677418994277,
+        "b_component_rmse_deg": [
+          0.5317597939488299,
+          0.6367214147016056
+        ],
+        "theta_p95_abs_deg": 1.2557840822631026
+      },
+      "geometry_sha256": "1d19a31c56785bed0238e10c3b5318f582aa872cfdf9da46c8fc9e4464c5ae17"
+    },
+    "test-independent-02": {
+      "nominal": {
+        "n": 1507,
+        "theta_rmse_deg": 0.440627284145749,
+        "b_vector_rmse_deg": 0.5729271339746747,
+        "b_component_rmse_deg": [
+          0.2694460413076765,
+          0.5056128278317868
+        ],
+        "theta_p95_abs_deg": 0.8986997296276326
+      },
+      "material_transfer": {
+        "n": 1507,
+        "theta_rmse_deg": 0.424407900099808,
+        "b_vector_rmse_deg": 0.5953834434776867,
+        "b_component_rmse_deg": [
+          0.2952173296472865,
+          0.5170378835668358
+        ],
+        "theta_p95_abs_deg": 0.7939104562700026
+      },
+      "geometry_sha256": "15a263cfa94bf8664f85480e5e52ef61e9e3147560f7d14057e49eae6066479a"
+    },
+    "test-independent-03": {
+      "nominal": {
+        "n": 1608,
+        "theta_rmse_deg": 0.4327062796759523,
+        "b_vector_rmse_deg": 0.6067944931648387,
+        "b_component_rmse_deg": [
+          0.404679266099753,
+          0.45214405726951534
+        ],
+        "theta_p95_abs_deg": 0.7826960556588356
+      },
+      "material_transfer": {
+        "n": 1608,
+        "theta_rmse_deg": 0.5295019799504269,
+        "b_vector_rmse_deg": 0.7001831516212519,
+        "b_component_rmse_deg": [
+          0.55708482604509,
+          0.424161457943294
+        ],
+        "theta_p95_abs_deg": 0.9437112997876139
+      },
+      "geometry_sha256": "2138651406a8d057630712a2b88bb1cc38834de660086ad54f066ed512ee2ed5"
+    }
+  },
+  "nominal_joint95_coverage": 0.9732096857290057,
+  "causal_prefix_max_abs": 0.0,
+  "scope": "Fresh post-freeze simulated bench motions with empirical box acquisition noise. Previous test-00..02 were development diagnostics after detecting a converter-rail bug. These four new motions did not train shape, material, or covariance parameters."
+}

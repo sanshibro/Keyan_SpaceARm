@@ -1,0 +1,1414 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "metric": "healthy proposed theta RMSE",
+      "value": 0.2985874260633154,
+      "operation": "le",
+      "limit": 0.9,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "healthy strain theta RMSE",
+      "value": 0.4687323123122011,
+      "operation": "le",
+      "limit": 1.2,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "vision natural all theta RMSE at release",
+      "value": 0.27701105773019213,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "vision occluded recovered theta RMSE at release",
+      "value": 0.25743472306218196,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common steady proposed RMSE",
+      "value": 0.3250230634046619,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed RMSE",
+      "value": 0.2987039907948178,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs strain",
+      "value": 0.9076599397115837,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than strain",
+      "value": 0.3250230634046619,
+      "operation": "lt",
+      "limit": 2.715480505679019,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs fixed",
+      "value": 0.9074257471303462,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than fixed",
+      "value": 0.3250230634046619,
+      "operation": "lt",
+      "limit": 0.3447952363515743,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential steady proposed RMSE",
+      "value": 0.29575631181102097,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed RMSE",
+      "value": 0.39587214316743824,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs strain",
+      "value": 0.9414167448616491,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than strain",
+      "value": 0.29575631181102097,
+      "operation": "lt",
+      "limit": 6.756064948112286,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs fixed",
+      "value": 0.9417854049635441,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than fixed",
+      "value": 0.29575631181102097,
+      "operation": "lt",
+      "limit": 0.45125150403691583,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single steady proposed RMSE",
+      "value": 0.2955080571728636,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed RMSE",
+      "value": 0.32026359717726327,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs strain",
+      "value": 0.9300414139589313,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than strain",
+      "value": 0.2955080571728636,
+      "operation": "lt",
+      "limit": 4.9287173931310795,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs fixed",
+      "value": 0.9303563054186511,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than fixed",
+      "value": 0.2955080571728636,
+      "operation": "lt",
+      "limit": 0.42682098706092075,
+      "scope": "pooled",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "healthy proposed theta RMSE",
+      "value": 0.27244363703662267,
+      "operation": "le",
+      "limit": 0.9,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "healthy strain theta RMSE",
+      "value": 0.5647261043862772,
+      "operation": "le",
+      "limit": 1.2,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "vision natural all theta RMSE at release",
+      "value": 0.24506457659739872,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "vision occluded recovered theta RMSE at release",
+      "value": 0.21076957717089043,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady proposed RMSE",
+      "value": 0.3107682984077231,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed RMSE",
+      "value": 0.35593716755635507,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs strain",
+      "value": 0.893483439867997,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than strain",
+      "value": 0.3107682984077231,
+      "operation": "lt",
+      "limit": 2.5268524096233516,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs fixed",
+      "value": 0.8927634067141517,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than fixed",
+      "value": 0.3107682984077231,
+      "operation": "lt",
+      "limit": 0.30992048412009054,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": false
+    },
+    {
+      "metric": "differential blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady proposed RMSE",
+      "value": 0.27758501800782587,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed RMSE",
+      "value": 0.5033334738386519,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs strain",
+      "value": 0.9220799405104514,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than strain",
+      "value": 0.27758501800782587,
+      "operation": "lt",
+      "limit": 6.737758657641991,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs fixed",
+      "value": 0.9227522768181847,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than fixed",
+      "value": 0.27758501800782587,
+      "operation": "lt",
+      "limit": 0.40663266757830524,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady proposed RMSE",
+      "value": 0.2752755324650803,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed RMSE",
+      "value": 0.4115786073106224,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs strain",
+      "value": 0.9064181900393855,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than strain",
+      "value": 0.2752755324650803,
+      "operation": "lt",
+      "limit": 5.13921289998039,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs fixed",
+      "value": 0.9073101752268055,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than fixed",
+      "value": 0.2752755324650803,
+      "operation": "lt",
+      "limit": 0.3850930089459556,
+      "scope": "26112011-straight",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "healthy proposed theta RMSE",
+      "value": 0.3388774787371108,
+      "operation": "le",
+      "limit": 0.9,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "healthy strain theta RMSE",
+      "value": 0.5063123401399277,
+      "operation": "le",
+      "limit": 1.2,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "vision natural all theta RMSE at release",
+      "value": 0.30402894038385236,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "vision occluded recovered theta RMSE at release",
+      "value": 0.3154050927442465,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady proposed RMSE",
+      "value": 0.35941965832336814,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed RMSE",
+      "value": 0.22762315413572673,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs strain",
+      "value": 0.9301856335554467,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than strain",
+      "value": 0.35941965832336814,
+      "operation": "lt",
+      "limit": 3.1385583593967374,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs fixed",
+      "value": 0.9307179018913063,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than fixed",
+      "value": 0.35941965832336814,
+      "operation": "lt",
+      "limit": 0.351382791126125,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": false
+    },
+    {
+      "metric": "differential blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady proposed RMSE",
+      "value": 0.3380632805476568,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed RMSE",
+      "value": 0.30542649052209714,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs strain",
+      "value": 0.9543617814281671,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than strain",
+      "value": 0.3380632805476568,
+      "operation": "lt",
+      "limit": 6.6563640665477495,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs fixed",
+      "value": 0.9543300456535784,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than fixed",
+      "value": 0.3380632805476568,
+      "operation": "lt",
+      "limit": 0.47869643670006684,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady proposed RMSE",
+      "value": 0.3307294823615638,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed RMSE",
+      "value": 0.2251761111625018,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs strain",
+      "value": 0.9506748895302126,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than strain",
+      "value": 0.3307294823615638,
+      "operation": "lt",
+      "limit": 4.622391130315696,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs fixed",
+      "value": 0.9504983646300379,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than fixed",
+      "value": 0.3307294823615638,
+      "operation": "lt",
+      "limit": 0.45044009193795986,
+      "scope": "26112012-left",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "healthy proposed theta RMSE",
+      "value": 0.27999977152202016,
+      "operation": "le",
+      "limit": 0.9,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "healthy strain theta RMSE",
+      "value": 0.2895896805194519,
+      "operation": "le",
+      "limit": 1.2,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "vision natural all theta RMSE at release",
+      "value": 0.2787743442654097,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "vision occluded recovered theta RMSE at release",
+      "value": 0.23433677202800302,
+      "operation": "le",
+      "limit": 1.8,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "nominal blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady proposed RMSE",
+      "value": 0.3019280529370106,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind proposed RMSE",
+      "value": 0.2986112101102607,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs strain",
+      "value": 0.9036018776164129,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than strain",
+      "value": 0.3019280529370106,
+      "operation": "lt",
+      "limit": 2.426102111373275,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common blind reduction vs fixed",
+      "value": 0.9027202165586392,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "common steady lower than fixed",
+      "value": 0.3019280529370106,
+      "operation": "lt",
+      "limit": 0.370311615609606,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady proposed RMSE",
+      "value": 0.2665992574091775,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind proposed RMSE",
+      "value": 0.351446061592405,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs strain",
+      "value": 0.9505321835221856,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than strain",
+      "value": 0.2665992574091775,
+      "operation": "lt",
+      "limit": 6.872311578666723,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential blind reduction vs fixed",
+      "value": 0.9510498625540346,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "differential steady lower than fixed",
+      "value": 0.2665992574091775,
+      "operation": "lt",
+      "limit": 0.46517024285259956,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind visual coverage",
+      "value": 0.0,
+      "operation": "eq",
+      "limit": 0.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed coverage",
+      "value": 1.0,
+      "operation": "eq",
+      "limit": 1.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady proposed RMSE",
+      "value": 0.2771577642519867,
+      "operation": "le",
+      "limit": 1.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind proposed RMSE",
+      "value": 0.29598156023094097,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs strain",
+      "value": 0.9378608247408554,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than strain",
+      "value": 0.2771577642519867,
+      "operation": "lt",
+      "limit": 5.0098659094942235,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single blind reduction vs fixed",
+      "value": 0.9383267777327617,
+      "operation": "ge",
+      "limit": 0.5,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "single steady lower than fixed",
+      "value": 0.2771577642519867,
+      "operation": "lt",
+      "limit": 0.4419678303031212,
+      "scope": "26112013-right",
+      "required": false,
+      "passed": true
+    },
+    {
+      "metric": "nominal optical reacquisition s",
+      "value": 0.49200000000000443,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal first accepted s",
+      "value": 0.49199999999999733,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal post-lock step residual degrees",
+      "value": 0.2971973689441697,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common optical reacquisition s",
+      "value": 0.49200000000000443,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common first accepted s",
+      "value": 0.49199999999999733,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common post-lock step residual degrees",
+      "value": 0.18682461230949687,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential optical reacquisition s",
+      "value": 0.49200000000000443,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential first accepted s",
+      "value": 0.49199999999999733,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential post-lock step residual degrees",
+      "value": 0.24475835991278386,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single optical reacquisition s",
+      "value": 0.49200000000000443,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single first accepted s",
+      "value": 0.49199999999999733,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single post-lock step residual degrees",
+      "value": 0.18522209471676693,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112011-straight",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal optical reacquisition s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal first accepted s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal post-lock step residual degrees",
+      "value": 0.49859586260724104,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common optical reacquisition s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common first accepted s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common post-lock step residual degrees",
+      "value": 0.5679933307456325,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential optical reacquisition s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential first accepted s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential post-lock step residual degrees",
+      "value": 0.3090435124820895,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single optical reacquisition s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single first accepted s",
+      "value": 0.5640000000000001,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single post-lock step residual degrees",
+      "value": 0.5721439153086805,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112012-left",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal optical reacquisition s",
+      "value": 0.3240000000000052,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal first accepted s",
+      "value": 0.32399999999999807,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "nominal post-lock step residual degrees",
+      "value": 0.3040047708236855,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common optical reacquisition s",
+      "value": 0.3240000000000052,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common first accepted s",
+      "value": 0.32399999999999807,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "common post-lock step residual degrees",
+      "value": 0.2624921318463732,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential optical reacquisition s",
+      "value": 0.3240000000000052,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential first accepted s",
+      "value": 0.32399999999999807,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "differential post-lock step residual degrees",
+      "value": 0.2764347661800296,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single optical reacquisition s",
+      "value": 0.3240000000000052,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single first accepted s",
+      "value": 0.32399999999999807,
+      "operation": "lt",
+      "limit": 0.6,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "single post-lock step residual degrees",
+      "value": 0.2781043619217338,
+      "operation": "le",
+      "limit": 2.0,
+      "scope": "26112013-right",
+      "required": true,
+      "passed": true
+    },
+    {
+      "metric": "fused prefix equality",
+      "passed": true,
+      "required": true
+    }
+  ]
+}

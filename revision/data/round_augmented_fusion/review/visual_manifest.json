@@ -1,0 +1,78 @@
+{
+  "case": "26112012-left",
+  "source": "differential",
+  "condition": "occluded",
+  "timebase": "score t is release time; CAD/wrist pairs use the same capture time",
+  "gains": "per-source per-update; not complementary normalized weights",
+  "inputs": [
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/scores.json",
+      "sha256": "d10c65f2c68a1e4131c8db70dc24394d27548ac502b791e8ac3615a2247553f3"
+    },
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/scored/26112012-left/differential-occluded.npz",
+      "sha256": "51608fb5e2303bf33a8d9e806d11180d147763e81f279b16c36eb1b3bbfac1a3"
+    },
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/vision_inputs/26112012-left/occluded/frames.txt",
+      "sha256": "8393622e453901ff739026fe4c336be010db416b6f5f7082b533750efe13ba3d"
+    },
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/review/phases.json",
+      "sha256": "1e1bc2e2c9e1d01a4a0584b47b3cb7050220d55a5f79a6af37eaef90fa0c101a"
+    }
+  ],
+  "epochs": [
+    {
+      "capture_s": 26.004,
+      "release_s": 26.204,
+      "rgb": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/vision_inputs/26112012-left/occluded/r0350.png",
+      "frame_id": "350",
+      "sha256": "42908c6027777ed28a288b819583a5a45b5764b074cce2ef8eef6c6c51a0f7c4"
+    },
+    {
+      "capture_s": 30.604,
+      "release_s": 30.804,
+      "rgb": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/vision_inputs/26112012-left/occluded/r0465.png",
+      "frame_id": "465",
+      "sha256": "76faae582eaeb4cb8cace05acb8a95f25fd4c92db733d45c1cbccd21163a17f8"
+    },
+    {
+      "capture_s": 33.004,
+      "release_s": 33.204,
+      "rgb": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/vision_inputs/26112012-left/occluded/r0525.png",
+      "frame_id": "525",
+      "sha256": "78d2a49665610e5908ae816cd2da4ec9b047d701a53c04c3194a3b380f311b3e"
+    },
+    {
+      "capture_s": 38.004,
+      "release_s": 38.204,
+      "rgb": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/vision_inputs/26112012-left/occluded/r0650.jpg",
+      "frame_id": "650",
+      "sha256": "da7fa651abbebada47abe7d998ae00db86642fd266efae9e9b8c0fc5ac3a001e"
+    }
+  ],
+  "truth_access": "only scorer-exported truth in this round's scored NPZ",
+  "outputs": [
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/review/fusion_matrix.svg",
+      "sha256": "919accbc0679421b59735236fdc608ea2bf8bd6af638519757ba3705f6d036ef"
+    },
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/review/fusion_matrix.png",
+      "sha256": "2163a1ebbb3ec5f56ba786eae27cea83c38f478ca7dd10154160268dc72d2e48"
+    },
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/review/fusion_main.svg",
+      "sha256": "875482f21c86a9c5e67f56588d56750a2e07251330895d2b48199faa89160028"
+    },
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/review/fusion_main.png",
+      "sha256": "d446d3903f88c72ebf96d0ca84d7c6bf03bc1d5a82d722494509012b593d50d4"
+    },
+    {
+      "path": "/home/uav/paper_revision_20261117/revision/data/round_augmented_fusion/review/fusion_replay.mp4",
+      "sha256": "9da44f0355fe16d274c5e51d1efc7fa3bbc5e7a4fa90a1e667437ba16e3da00d"
+    }
+  ]
+}
