@@ -135,6 +135,21 @@ def evidence(stage, case, m, item, protocol, design, refs):
                      nearest_gate_m=q['arm_near_gate'][nearest].tolist(),pair=m['arm_nearest']['geoms'])
             if abs(float(t[nearest])-m['arm_nearest']['t'])>1.e-6:
                 raise ValueError('Closest point time differs')
+            first_self=np.flatnonzero(q['self_lower']<=0.)
+            nearest_self=int(np.argmin(q['self_clearance']))
+            sample_s=np.diff(t,append=protocol['deadline'])
+            portions={'before':t<s,'during':(t>=s)&(t<e),'after':t>=e}
+            holds={name:{reason:float(sample_s[mask&(q['hold_reason']==reason)].sum()) for reason in
+                   ('feedback','clearance','self_contact')} for name,mask in portions.items()}
+            self_event=dict(first_nonpositive_s=float(t[first_self[0]]) if len(first_self) else None,
+                            first_phase=str(q['phase'][first_self[0]]) if len(first_self) else None,
+                            minimum_s=float(t[nearest_self]),minimum_mm=float(1000*q['self_clearance'][nearest_self]),
+                            pair=m['self_nearest']['geoms'],hold_s_by_period=holds)
+        with np.load(BytesIO(z.read('physics.npz')),allow_pickle=False) as ph:
+            t_phys=(ph['us']-run['release_us'])*1e-6
+            total=ph['contact_steps']
+            new=np.flatnonzero((np.diff(total,prepend=0)>0)&(t_phys>=0.)&(t_phys<=protocol['deadline']))
+            self_event['first_integrated_contact_observed_by_s']=float(t_phys[new[0]]) if len(new) else None
         a=json.loads(z.read('optics/complete.json'))
         if not a['frozen_sources_unchanged']:
             raise ValueError('Perception manifest changed')
@@ -144,7 +159,7 @@ def evidence(stage, case, m, item, protocol, design, refs):
             op['per_image_wall_p95_ms']=a['processing_wall_p95_ms'][timing]
         return dict(archive_sha256=checksum,member_hashes=len(files),ulog_sha256=files['flight.ulg'],
                     bag_sha256=files['flight.bag'],physics_sha256=files['physics.npz'],optics=op,
-                    arm_at_minimum=geo,score_sha256=files['metrics.json'],physical_xml_sha256=refs['model'],
+                    arm_at_minimum=geo,contact_and_holds=self_event,score_sha256=files['metrics.json'],physical_xml_sha256=refs['model'],
                     perception_lock_sha256=mission['perception_lock_sha256'],px4_executable_sha256=pr['binary_sha256'],
                     physical_dt_s=pr['physics_dt_s'],hil_dt_s=pr['hil_dt_s'],mass_kg=pr['mass_kg'],
                     mujoco_version=pr['mujoco'])
@@ -203,6 +218,10 @@ def main():
                      'true_undershoot_at_arm_minimum_deg':a['arm_at_minimum']['theta_des_minus_true_deg'],
                      'tool_z_at_minimum_m':a['arm_at_minimum']['tool_z_m'],
                      'body_z_at_minimum_m':a['arm_at_minimum']['body_z_m'],
+                     'first_nonpositive_self_s':a['contact_and_holds']['first_nonpositive_s'],
+                     'first_nonpositive_self_phase':a['contact_and_holds']['first_phase'],
+                     'self_minimum_pair':' | '.join(a['contact_and_holds']['pair']),
+                     'first_integrated_contact_observed_by_s':a['contact_and_holds']['first_integrated_contact_observed_by_s'],
                      **a['optics']})
     groups={}
     for material,visual in CONDITIONS:

@@ -235,6 +235,13 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         audit=readj(root/"decisions/case-evidence-audit.json")
         undershoot=np.median([audit[v["case"]["case"]]["arm_at_minimum"]["theta_des_minus_true_deg"] for v in focus["strain"]])
         y=wrap(y+5,f"差模偏移与动态遮挡并存时，纯应变在臂爪最接近门框处的实际欠弯中位数为 {undershoot:.2f}°。融合与纯应变的最小净空中位数分别为 {nominal:.2f} 与 {biased:.2f} cm。纯应变有 {crossed}/3 趟跌破红线，门后轴向 RMSE 中位数为 {angles:.2f}°。固定 KF 和增广融合分别完成 {kf}/3 和 {proposed}/3 趟。",8.3,12,ink)
+        clear=[v for v in raw['cases'].values() if (v['case']['material'],v['case']['vision'],v['case']['method'])==('differential','natural','vision')]
+        if len(clear)==3:
+            visual=focus['vision']
+            clear_hold=np.median([v['feedback_hold_s'] for v in clear])
+            dark_hold=np.median([v['feedback_hold_s'] for v in visual])
+            dock_contact=sum(audit[v['case']['case']]['contact_and_holds']['first_phase']=='dock' for v in clear+visual)
+            y=wrap(y+2,f"同为差模偏移时，清晰与遮挡条件下纯视觉因反馈断流停顿的中位数为 {clear_hold:.2f} 与 {dark_hold:.2f} s。六趟中有 {dock_contact} 趟在门后对准阶段首次触及自碰撞边界。",8.1,12,ink)
     if y>795:raise ValueError(f"Page 2 overflow ({y:.1f} pt)")
     c.showPage();c.save();template.seek(0)
     paper=PdfReader(template);writer=PdfWriter()

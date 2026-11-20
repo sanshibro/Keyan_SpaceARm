@@ -35,6 +35,7 @@ details{margin-top:24px;border-top:1px solid var(--rule);padding-top:12px}summar
 <h2>配对飞行比较</h2><p>每格三趟。通过要求机身与臂爪净空均达到 6.0 cm，越门后工具在 3.5 cm 和 3.0° 以内连续保持 1 秒。</p>
 <div class="scroll"><table><thead><tr><th>反馈源</th><th>迟滞 · 清晰</th><th>迟滞 · 遮挡</th><th>差模 · 清晰</th><th>差模 · 遮挡</th></tr></thead><tbody id="summary"></tbody></table></div>
 <small>格内为通过数 / 已评分数。挡板在飞行第 28–32 秒覆盖腕部视野。</small>
+__CAD_COMPARISON__
 <h2>腕部失视时的真实变形</h2><figure><a href="wrist-window.webp"><img src="wrist-window.webp" width="900" alt="原生腕部 RGB-D 三帧与同步的真实弯曲角和方位角"></a><figcaption>种子 26112131，进门前差模偏移。三帧分别取自视野清晰、完全遮挡和视觉恢复的时刻。灰带内的虚线给出这趟融合飞行中保留最后视觉观测的结果。</figcaption></figure>
 <h2>逐趟记录</h2><fieldset><label>材料　<select id="material"><option value="">全部</option><option value="nominal">基础迟滞</option><option value="differential">迟滞与差模偏移</option></select></label><label>视野　<select id="view"><option value="">全部</option><option value="natural">清晰</option><option value="occluded">动态遮挡</option></select></label></fieldset>
 <div class="scroll"><table><thead><tr><th>种子 / 方法</th><th>工况</th><th>评价</th><th>臂爪净空</th><th>保护停顿</th><th>原始记录</th></tr></thead><tbody id="list"></tbody></table></div>
@@ -140,7 +141,22 @@ def restore_public_media(stage):
 def build(stage):
     dist=stage/'site-cache/dist'
     dest=dist/'gate-live';dest.mkdir(exist_ok=True)
-    (dest/'index.html').write_text(PAGE.replace('__HOST__',HOST),encoding='utf-8')
+    plate=stage/'review/gate_keyframes.png'
+    release=stage/'qa/final/release-ready.json'
+    if plate.is_file() and release.is_file():
+        caption='五种反馈源各自独立飞行。'
+    else:
+        plate=stage/'pilot/原生闭环_前三种反馈对照/gate_keyframes.png'
+        caption='此处展示纯视觉、增广融合和真值参考三趟已归档的独立飞行。'
+    comparison=''
+    if plate.is_file():
+        with Image.open(plate) as im:
+            im.thumbnail((1900,1280),Image.Resampling.LANCZOS)
+            im.convert('RGB').save(dest/'feedback-views.webp','WEBP',quality=92,method=6)
+        comparison=('<h2>同一机位下的过门与工具对准</h2><figure><a href="feedback-views.webp"><img '
+            'src="feedback-views.webp" width="1000" alt="原生物理姿态的同视角过门与斜向工具对准"></a><figcaption>'
+            +caption+'第一行取第 31.4 秒。第二行分别取臂爪最接近门框的时刻。第三行取第 52 秒，虚线为目标轴。</figcaption></figure>')
+    (dest/'index.html').write_text(PAGE.replace('__HOST__',HOST).replace('__CAD_COMPARISON__',comparison),encoding='utf-8')
     metric=json.loads((stage/'decisions/metrics.json').read_bytes())
     keep=('case','success','safe','crossed','dwell_reached','arm_tool_min_m','hold_s')
     # Every five formally scored flights are committed and made publicly downloadable.

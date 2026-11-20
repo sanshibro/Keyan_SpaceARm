@@ -69,7 +69,7 @@ def confirm(url,path):
 def summary_text(groups):
     v=groups['differential-occluded']
     p,s,f = (v[m] for m in ('proposed','strain','fixed'))
-    return (f"在进门前形成差模偏移、过门途中完全失视 4 秒的三趟配对飞行中，"
+    return (f"进门前形成差模偏移，过门途中完全失视 4 秒。每种反馈源在相同的三个种子上各飞一趟。"
             f"增广融合完成 {p['passed']}/3 趟，纯应变完成 {s['passed']}/3 趟，固定噪声 KF 完成 {f['passed']}/3 趟。"
             f"三种子下，增广融合与纯应变的门后工具轴向 RMSE 中位数分别为 "
             f"{p['metrics']['axis_rmse_deg']['median']:.2f}° 和 {s['metrics']['axis_rmse_deg']['median']:.2f}°。")

@@ -44,13 +44,18 @@ def flight(folder, signature):
     bag_times = {k: [] for k in shapes}
     vectors = {k: [] for k in shapes}
     thrust_us, rotor = [], []
+    hil_topic='/f/px4/hil_motor_channels'
+    ros_motor_time, ros_motors=[], []
     with rosbag.Bag(str(folder/'flight.bag')) as bag:
         topics = bag.get_type_and_topic_info().topics
-        for topic, msg, at in bag.read_messages(topics=['/gate/shape/'+k for k in shapes]+['/f/plant/rotor_thrust_N']):
+        for topic, msg, at in bag.read_messages(topics=['/gate/shape/'+k for k in shapes]+['/f/plant/rotor_thrust_N',hil_topic]):
             stamp = at.to_nsec()//1000
             if topic == '/f/plant/rotor_thrust_N':
                 thrust_us.append(stamp)
                 rotor.append(msg.data)
+            elif topic == hil_topic:
+                ros_motor_time.append(stamp)
+                ros_motors.append(msg.data)
             else:
                 key = topic.rsplit('/',1)[1]
                 bag_times[key].append(stamp)
@@ -65,6 +70,14 @@ def flight(folder, signature):
     if not np.array_equal(physics_us, thrust_us):
         raise ValueError('Different ROS / physics clocks: '+folder.name)
     thrust_error = float(np.max(np.abs(np.asarray(rotor)-thrust)))
+    if not np.array_equal(physics_us,ros_motor_time):
+        raise ValueError('ROS actuator and physics clocks differ: '+folder.name)
+    ros_pwm_time=physics_us-clock_origin
+    ros_ix=np.minimum(np.searchsorted(act['timestamp'],ros_pwm_time),len(act['timestamp'])-1)
+    paired=(physics_us>=recorded['release_us'])&(act['timestamp'][ros_ix]==ros_pwm_time)
+    ros_motors=np.asarray(ros_motors)
+    ros_motor_error=np.abs((pwm[ros_ix[paired]]-1000.)/1000.-ros_motors[paired])
+    if not len(ros_motor_error):raise ValueError('Native ULog and ROS have no matching actuator packets')
     finite_active = np.all(np.isfinite(motors),axis=1) & (np.ptp(motors,axis=1)>0)
     if not np.any(finite_active) or not len(native['trajectory_setpoint']['timestamp']):
         raise ValueError('Missing independent motor actuation or PX4 setpoints: '+folder.name)
@@ -78,6 +91,10 @@ def flight(folder, signature):
                 min_hil_channel_span=float(np.min(np.ptp(motors,axis=0))),
                 ros_shape_samples_per_topic=len(control_us), ros_shape_arrays_match=True,
                 ros_thrust_samples=len(rotor), ros_vs_mujoco_max_thrust_err_N=thrust_error,
+                ros_hil_motors_paired_to_ulog=int(paired.sum()),
+                ros_pwm_match_fraction=float(np.mean(np.max(ros_motor_error,axis=1)<2e-6)),
+                max_ulog_to_ros_hil_motor_residual=float(np.max(ros_motor_error)),
+                ros_hil_to_rotor_load_max_residual_N=float(np.max(np.abs(thrust-12.*ros_motors))),
                 ros_local_position_samples=topics['/f/px4/local_position_ned'].message_count,
                 ros_shape_time_start_us=int(control_us[0]), ros_shape_time_end_us=int(control_us[-1]))
 
@@ -99,12 +116,12 @@ def main():
         if any(result[case]['artifacts'].get(n, h)!=h for n,h in signature.items()):
             raise ValueError('Raw source differs from its independent score: '+case)
         old=before.get(case,{})
-        audited[case]=old if old.get('input_sha256')==signature else flight(folder,signature)
+        audited[case]=old if old.get('input_sha256')==signature and 'ros_pwm_match_fraction' in old else flight(folder,signature)
         extra=result[case].get('distance_certificate')
         if extra:
             receipt=args.stage/'distance-certificates'/(case+'.json')
             if extra['file']!='distance-certificates/'+receipt.name or sha(receipt)!=extra['sha256']:
-                raise IOError('Offline box-distance receipt differs: '+case)
+                raise IOError('Offline convex-distance receipt differs: '+case)
             proof=json.loads(receipt.read_bytes())
             if (proof['inputs']!={n:signature[n] for n in proof['inputs']} or
                 len(proof['solutions'])!=extra['certified_queries'] or
@@ -117,6 +134,8 @@ def main():
                matched_shape_samples_per_topic=sum(x['ros_shape_samples_per_topic'] for x in audited.values()),
                all_ros_shape_arrays_match=all(x['ros_shape_arrays_match'] for x in audited.values()),
                min_fraction_of_matching_pwm_values=min(x['px4_motor_fraction_in_float32_precision'] for x in audited.values()),
+               ros_hil_motors_paired_to_ulog=sum(x['ros_hil_motors_paired_to_ulog'] for x in audited.values()),
+               min_ulog_vs_ros_pwm_match_fraction=min(x['ros_pwm_match_fraction'] for x in audited.values()),
                maximum_ros_vs_physics_thrust_error_N=max(x['ros_vs_mujoco_max_thrust_err_N'] for x in audited.values()),
                offboard_active_in_every_flight=all(x['armed_offboard_status_samples']>0 for x in audited.values()))
     args.output.parent.mkdir(exist_ok=True,parents=True)

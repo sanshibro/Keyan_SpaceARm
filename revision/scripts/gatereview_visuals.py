@@ -177,7 +177,7 @@ class NativeViews:
         self.m.geom_group[self.m.geom("floor").id]=5
         self.d=mujoco.MjData(self.m)
         self.ren=mujoco.Renderer(self.m,width=size[0],height=size[1])
-        self.cameras=cameras;self.flights=flights;self.records={};self.targets={}
+        self.cameras=cameras;self.flights=flights;self.records={};self.targets={};self.rotor_loads={}
         for name in ("side","oblique"):
             for key in ("lookat","azimuth","elevation","distance"):
                 if key not in cameras[name]:raise ValueError(f"Fixed camera {name} missing {key}")
@@ -187,6 +187,7 @@ class NativeViews:
             release=readj(run.folder/"run.json")["release_us"]
             with np.load(run.folder/"physics.npz",allow_pickle=False) as ph:
                 tt=(ph["us"].copy()-release)/1e6;qq=ph["qpos"].copy()
+                self.rotor_loads[method]=ph["rotor_N"].copy()
             if qq.shape[1]!=self.m.nq:raise ValueError("Recorded qpos does not match the new gate native model")
             self.records[method]=(tt,qq)
 
@@ -397,6 +398,15 @@ def keyframes(flights,renderer,out,epochs):
             if im is None:missing(a,"No physical state at this time");continue
             a.imshow(im)
             a.set_xlim(-.5,im.width-.5);a.set_ylim(im.height-.5,-.5)
+            if j==0 and row==1:
+                camera=renderer.ren.scene.camera[0]
+                span=camera.frustum_top-camera.frustum_bottom
+                bar_px=im.height*.05/span
+                x0,y0=.045*im.width,.895*im.height
+                a.plot([x0,x0+bar_px],[y0,y0],color="white",lw=3.2,solid_capstyle="butt")
+                a.plot([x0,x0+bar_px],[y0,y0],color=INK,lw=1.1,solid_capstyle="butt")
+                a.text(x0,y0-.023*im.height,"5 cm",fontsize=6.1,color=INK,ha="left",va="bottom",
+                       bbox=dict(facecolor="white",alpha=.86,edgecolor="none",pad=.5))
             if row<2:
                 if uv is not None:
                     a.plot(uv[:,0],uv[:,1],color=RED,lw=1.2);a.scatter(uv[:,0],uv[:,1],s=9,color=RED)
@@ -474,6 +484,10 @@ def video(flights,renderer,out,start,end,fps=8.):
                                 for px,py in ends[:1] if dock else ends:
                                     ink.ellipse((px-3,py-3,px+3,py+3),fill=color)
                         frame.thumbnail((colw,180));im.paste(frame,(x+(colw-frame.width)//2,y))
+                motor_t=renderer.records[m][0]
+                motor_index=int(np.clip(np.searchsorted(motor_t,now,side="right")-1,0,len(motor_t)-1))
+                thrust=renderer.rotor_loads[m][motor_index]
+                d.text((x,481),"M1–M4 thrust (N)  "+" / ".join(f"{v:.1f}" for v in thrust),font=small,fill=MUTED)
                 row=wrist[m].at(now)
                 if row is not None:
                     frame=wrist[m].image(row);frame.thumbnail((colw,165));im.paste(frame,(x+(colw-frame.width)//2,501))

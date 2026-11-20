@@ -1,0 +1,57 @@
+{
+  "case": "26112143-nominal-occluded-vision",
+  "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+  "additional_solver_sha256": "904bf4a8efcd5bd91bd82efb1a8f0d68e7f729031986e683eae0239cd232f001",
+  "primary_scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+  "inputs": {
+    "physics.npz": "382fb911e18d63e8fea08e70dd721e1446498c799e090ec3fe8c7c7b7ae6dc6e",
+    "flight.ulg": "ae5a58243cb863d06e57f5d7e18aa21320979e03c8c239f2da9cac08a63b159b",
+    "flight.bag": "98a42c4dcfa747f39699a0ff5a19dbbb0992a4682e31f21edb482467c190c58d",
+    "control.npz": "871ecec8c12d8fd95be1412c4dabd00f538ba81cf0dc75f794523713f8f94c1e",
+    "run.json": "9f426689cf9ba518dafd2b36eda63c7e98c235021277dc6a27771fa96d613248"
+  },
+  "solutions": [
+    {
+      "pose_index": 1934,
+      "geom_a": "visual_gripper_housing",
+      "geom_b": "G1_sill",
+      "original": "Unresolved convex distance ('visual_gripper_housing', 'G1_sill', 0.12391823421209391, 0.12416919611800217, 'GJK stalled')",
+      "solver": "secondary support direction / separated GJK",
+      "lower_m": 0.12405581885114056,
+      "upper_m": 0.12405581885114131,
+      "witness_a_m": [
+        0.9363524974589867,
+        0.03662779140367781,
+        1.8183028461359276
+      ],
+      "witness_b_m": [
+        0.9499999999999998,
+        0.03662779140367754,
+        1.695
+      ],
+      "requested_precision_m": 0.0001,
+      "qpos_sha256": "395c854a20c0dce25c5ab9cd863c877d7a8156b1cbee22111160ab2f184c1db1"
+    },
+    {
+      "pose_index": 1934,
+      "geom_a": "collision_gripper_housing",
+      "geom_b": "G1_sill",
+      "original": "Unresolved convex distance ('collision_gripper_housing', 'G1_sill', 0.12391823421209391, 0.12416919611800217, 'GJK stalled')",
+      "solver": "secondary support direction / separated GJK",
+      "lower_m": 0.12405581885114056,
+      "upper_m": 0.12405581885114131,
+      "witness_a_m": [
+        0.9363524974589867,
+        0.03662779140367781,
+        1.8183028461359276
+      ],
+      "witness_b_m": [
+        0.9499999999999998,
+        0.03662779140367754,
+        1.695
+      ],
+      "requested_precision_m": 0.0001,
+      "qpos_sha256": "395c854a20c0dce25c5ab9cd863c877d7a8156b1cbee22111160ab2f184c1db1"
+    }
+  ]
+}

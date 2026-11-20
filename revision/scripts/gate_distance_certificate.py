@@ -1,4 +1,4 @@
-"""Certify unresolved box distances on recorded poses with the full Minkowski hull.
+"""Certify unresolved convex distances on recorded poses with support bounds and explicit hulls.
 
 The registered scorer remains the first evaluator on every pair. This offline
 continuation runs only when that evaluator has reported an unresolved distance.
@@ -11,7 +11,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import numpy as np
 from scipy.spatial import ConvexHull
-from gate_distance_audit import DistanceAudit, closest_simplex
+from gate_distance_audit import DistanceAudit, closest_simplex, convex_distance
 
 SIGNS = np.array(list(itertools.product((-1.,1.),repeat=3)))
 
@@ -62,16 +62,60 @@ def boxes(c1,r1,h1,c2,r2,h2,tolerance):
 
 class CertifiedDistance(DistanceAudit):
     records=[]
+    def hull_vertices(self,k,origin):
+        if k in self.mesh:local=self.mesh[k]
+        elif self.m.geom_type[k]==self.mj.mjtGeom.mjGEOM_BOX:local=SIGNS*self.m.geom_size[k]
+        else:return None
+        return (self.d.geom_xpos[k]-origin)+local@self.d.geom_xmat[k].reshape(3,3).T
+
+    def recover(self,a,b,lower):
+        p=self.d.geom_xpos;R=self.d.geom_xmat.reshape(-1,3,3);h=self.m.geom_size
+        if all(self.m.geom_type[k]==self.mj.mjtGeom.mjGEOM_BOX for k in (a,b)):
+            return boxes(p[a],R[a],h[a],p[b],R[b],h[b],self.tolerance)
+        support=lambda d:(self.support(a,d),self.support(b,-d))
+        # Different initial search directions retain the original support-plane
+        # lower bound and feasible witness upper bound for the same convex sets.
+        directions=[*(R[b].T),*(-R[b].T),p[a]-p[b],*SIGNS]
+        for d in directions:
+            res=convex_distance(support,d,lower,self.tolerance,256)
+            if res['converged'] and res['upper']-res['lower']<=self.tolerance:
+                res['status']='secondary support direction / '+res['status']
+                return res
+        origin=(p[a]+p[b])*.5
+        va=self.hull_vertices(a,origin);vb=self.hull_vertices(b,origin)
+        if va is None or vb is None:raise ArithmeticError('Unresolved smooth support shapes')
+        w=(va[:,None,:]-vb[None,:,:]).reshape(-1,3)
+        hull=ConvexHull(w);offsets=hull.equations[:,3]
+        maximum=float(offsets.max())
+        faces=hull.simplices[offsets>=(-1.e-10 if maximum>0 else maximum-1.e-9)]
+        tris=w[faces]
+        broad=np.linalg.norm(np.maximum(np.maximum(tris.min(axis=1),-tris.max(axis=1)),0.),axis=1)
+        best=np.inf
+        for k in np.argsort(broad):
+            if broad[k]>best+1e-10:break
+            face=faces[k]
+            _,_,u,v=closest_simplex(va[face//len(vb)],vb[face%len(vb)])
+            g=float(np.linalg.norm(u-v))
+            if g>=best:continue
+            best=g
+            if maximum>0:
+                norm=(u-v)/g
+                lo=max(maximum,float(np.min(va@norm)-np.max(vb@norm)))-2e-10;hi=g+2e-10
+            else:
+                lo=min(maximum,-g)-2e-10;hi=max(maximum,-g)+2e-10
+            if 0<=hi-lo<=self.tolerance:
+                return dict(lower=lo,upper=hi,distance=.5*(lo+hi),a=u+origin,b=v+origin,
+                            converged=True,iterations=len(faces),status='complete convex Minkowski hull')
+        raise ArithmeticError('No explicit-hull witness reached registered precision')
+
     def pair(self,a,b,lower=0.):
         try:
             return super().pair(a,b,lower)
         except ArithmeticError as err:
             if not str(err).startswith('Unresolved convex distance'):raise
-            if any(self.m.geom_type[k]!=self.mj.mjtGeom.mjGEOM_BOX for k in (a,b)):raise
-            p=self.d.geom_xpos;R=self.d.geom_xmat.reshape(-1,3,3);h=self.m.geom_size
-            v=boxes(p[a],R[a],h[a],p[b],R[b],h[b],self.tolerance)
+            v=self.recover(a,b,lower)
             self.records.append(dict(pose_index=self.calls,geom_a=self.names[a],geom_b=self.names[b],
-                         original=str(err),lower_m=v['lower'],upper_m=v['upper'],
+                         original=str(err),solver=v['status'],lower_m=v['lower'],upper_m=v['upper'],
                          witness_a_m=v['a'].tolist(),witness_b_m=v['b'].tolist(),
                          requested_precision_m=self.tolerance,
                          qpos_sha256=hashlib.sha256(self.d.qpos.tobytes()).hexdigest()))
@@ -140,7 +184,7 @@ def main():
             dump(stage/'metrics.json',scored)
             (stage/'score-trace.npz').replace(folder/'score-trace.npz')
             (stage/'metrics.json').replace(folder/'metrics.json')
-        print('Certified offline:',c,len(receipt['solutions']),'box pairs; original integrator and flight logs retained')
+        print('Certified offline:',c,len(receipt['solutions']),'convex queries; original integrator and flight logs retained')
 
 
 if __name__=='__main__':
