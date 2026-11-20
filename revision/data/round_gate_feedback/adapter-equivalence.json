@@ -1,0 +1,60 @@
+{
+  "model_sha256": "33507be5fadb80a726bfff9488926f8dcd929a60c3fdfe35987ac5fbfa2f337a",
+  "adapter_sha256": "e3136c0881d653b81e04a9705ac77248c22b29ac96b9096c9af4d74e9dd7e58b",
+  "reference_commit": "881a799",
+  "source": "Independent old pilot sensor packets and sanitized geometry; no truth fields read.",
+  "inverse": {
+    "b": 0.0,
+    "R": 2.6237692574149207e-17,
+    "point_b": 6.661338147750939e-16,
+    "common_residual": 1.6653345369377348e-16,
+    "material_corrected_ratio": 0.0,
+    "speed_rad_s": 0.0,
+    "reversal_score": 0.0,
+    "estimated_strain": 0.0
+  },
+  "inverse_ms_per_adc": 0.40115496139329215,
+  "physical_nominal": {
+    "t": 0.0,
+    "adc": 0.0,
+    "tare": 0.0
+  },
+  "physical_differential": {
+    "t": 0.0,
+    "adc": 0.0,
+    "tare": 0.0
+  },
+  "filter_ms_per_query": 0.5995245155268867,
+  "fixed": {
+    "b": 0.0,
+    "cov": 0.0,
+    "bias": 0.0,
+    "state": 0.0,
+    "P": 0.0,
+    "gain_v": 0.0,
+    "gain_s": 0.0,
+    "confidence_v": 0.0,
+    "confidence_s": 0.0,
+    "accepted": 0.0,
+    "nis": 0.0
+  },
+  "proposed": {
+    "b": 0.0,
+    "cov": 0.0,
+    "bias": 0.0,
+    "state": 0.0,
+    "P": 0.0,
+    "gain_v": 0.0,
+    "gain_s": 0.0,
+    "confidence_v": 0.0,
+    "confidence_s": 0.0,
+    "accepted": 0.0,
+    "nis": 0.0
+  },
+  "vision": 0.0,
+  "strain": 0.0,
+  "n_adc": 1865,
+  "n_query": 2318,
+  "n_visual": 850,
+  "complexity": "One physical/material transition per physics step; one inverse per fresh ADC; master advances each ADC once and live replays only the fixed transport-delay interval per arriving image. Append-only records are linear storage, never refitted or rescanned in the flight loop."
+}

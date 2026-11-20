@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "prefix_frames": 175,
+  "full_frames": 200,
+  "fields": {
+    "t": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "arrival_t": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "b": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "R": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "valid": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "locked": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "quality": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "ready": {
+      "exact_equal": true,
+      "max_abs_difference": 0.0
+    }
+  },
+  "verified_black_frames": 100,
+  "future_pixels_opened": false,
+  "new_stream": true,
+  "scope": "sealed native online CSV plus matching current-flight pixels and supplied PX4 attitudes",
+  "native_not_recomputed": true,
+  "frozen_sources": {
+    "mujoco_closed_loop/anchored_rgbd.py": "2fc9c788abcee6d874e01ee165056c7c81516bb356ed394d06b55f0a05c9a577",
+    "revision/scripts/round_aug_vis.py": "223050f871646f0a517b5ceba1136430cd5e078a22515d7f6357dbd0caa5fbbf",
+    "revision/scripts/round_aug_vis_cov.py": "19858a77ae98d1c9e802941aa7fa7d966d8b83fa9d2a7ebcdc7fff78969ec8d8"
+  }
+}
