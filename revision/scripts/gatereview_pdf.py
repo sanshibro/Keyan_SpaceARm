@@ -33,9 +33,21 @@ import numpy as np
 
 from gatereview_visuals import METHODS,CN,COLORS,readj,digest,protocol_cases
 
-FIELDS=("success","body_min_m","arm_tool_min_m","self_min_m","hold_s","completion_s",
+MAIN_FIELDS=("success","body_min_m","arm_tool_min_m","self_min_m","hold_s","completion_s",
         "tip_rmse_m","tip_peak_m","axis_rmse_deg","axis_peak_deg","theta_rmse_deg",
         "phi_rmse_deg","theta_blackout_rmse_deg","phi_blackout_rmse_deg")
+DETAIL_FIELDS={
+    "safe":"safe","crossed":"crossed","dwell_reached":"dwell_reached","max_continuous_dwell_s":"max_dwell_s",
+    "physical_contact_steps":"physical_contact_steps","inside_aperture":"passed_inside_aperture",
+    "feedback_hold_s":"feedback_hold_s","clearance_hold_s":"clearance_hold_s",
+    "whole_samples":"whole_angle.samples","whole_estimates":"whole_angle.available","whole_azimuth_samples":"whole_angle.azimuth_samples",
+    "black_samples":"blackout_angle.samples","black_estimates":"blackout_angle.available","black_azimuth_samples":"blackout_angle.azimuth_samples",
+    "dynamic_theta_deg":"dynamic_theta_range_deg","dynamic_phi_deg":"dynamic_phi_range_deg",
+    "held_theta_rmse_deg":"vision_hold_blackout.theta_rmse_deg","held_phi_rmse_deg":"vision_hold_blackout.phi_rmse_deg",
+    "held_theta_peak_deg":"vision_hold_blackout.theta_peak_deg","held_phi_peak_deg":"vision_hold_blackout.phi_peak_deg",
+    "measured_max_bend_deg":"true_max_bend_deg","maximum_integrated_curvature_deg":"true_max_total_curvature_deg",
+    "terminal_samples_after_gate":"terminal_after_gate_samples"}
+FIELDS=MAIN_FIELDS+tuple(DETAIL_FIELDS)
 
 
 def lookup(obj,path):
@@ -50,7 +62,7 @@ def read_metrics(path,field_map=None):
     raw=readj(path);rows=raw.get("cases",raw.get("runs",raw))
     if isinstance(rows,list):rows={str(r["case"]):r for r in rows}
     if not isinstance(rows,dict):raise ValueError("Metrics require a case-keyed mapping or list")
-    mapping=field_map or {}
+    mapping={**DETAIL_FIELDS,**(field_map or {})}
     result={}
     for case,r in rows.items():
         if not isinstance(r,dict):continue
@@ -165,20 +177,20 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
     fus=representative.get("theta_blackout_rmse_deg")
     if all(v is not None for v in (dyn,rot,vh,fus)):
         y=wrap(y+12,f"图 1　同一趟融合飞行的 4 秒遮挡内，真实 θ 变化 {dyn:.1f}°、φ 变化 {rot:.1f}°。仅保留最后视觉帧时，θ 的 RMSE 为 {vh:.2f}°，融合为 {fus:.2f}°。",8.5,12)
-    y=wrap(y+5,"上排连线连接臂爪与门框的三维最近点。下排比较实际工具轴与目标轴。过门后，位置误差须在 3.5 cm 内、轴向误差须在 3.0° 内，同时连续保持 1.0 s。",8.4,12,muted)
+    y=wrap(y+5,"三行模型依次对应遮挡中的同一时刻、各趟最接近门框的过门时刻、门后同一时刻。红线连接臂爪与门框最近点。蓝绿实线与赭色虚线分别表示实际工具轴和目标轴。",8.4,12,muted)
     if y>795:raise ValueError(f"Page 1 overflow ({y:.1f} pt)")
     c.showPage()
 
     scored_n=sum(r["case"] in scored and scored[r["case"]]["success"] is not None for r in rows)
-    header(2,"配对种子上的任务结果与精度","表中值由独立评分器导入。成功按完整任务判据计数；净空报告组内最小值，其余连续指标为逐趟统计量的中位数。")
-    text(L,121,f"注册 {len(rows)} 趟 / 已评 {scored_n} 趟；五方法 × 两材料条件 × 两视觉条件。",8.6,color=muted)
-    widths=[54,33,48,33,33,36,62,60,57,115]
+    header(2,"配对种子上的任务结果与精度","机身与臂爪净空均须达到 6.0 cm，整机从门内通过且自间距为正、全程无接触。门后位置与轴向误差须同时进入 3.5 cm 和 3.0°，连续保持 1.0 s。")
+    text(L,121,f"五种反馈源 × 两种材料条件 × 两种视野 × 三个配对种子，共评分 {scored_n}/{len(rows)} 趟。",8.6,color=muted)
+    widths=[47,31,57,34,46,34,59,59,58,106]
     # Reserve the remaining width for the blackout angle pair.
     widths[-1]=R-L-sum(widths[:-1])
     xs=[L]
     for w in widths:xs.append(xs[-1]+w)
     centers=[(a+b)/2 for a,b in zip(xs[:-1],xs[1:])]
-    headers=[("方法",""),("成功","次/次"),("机身/臂爪","min cm"),("自距","min mm"),("保持","s"),("用时","s"),("末端位置","RMSE/峰 cm"),("轴向角","RMSE/峰 °"),("全程 θ/φ","RMSE °"),("遮挡 θ/φ","RMSE °")]
+    headers=[("方法",""),("成功","趟"),("机身/臂爪","最小 cm"),("自距","最小 mm"),("停顿 s","总/断流"),("用时","s"),("末端位置","RMSE/峰 cm"),("轴向角","RMSE/峰 °"),("全程 θ/φ","RMSE °"),("遮挡 θ/φ","RMSE ° · 有效占比")]
     rule(133,.8)
     for i,(a,b) in enumerate(headers):
         text(centers[i],148,a,7.8,True,align="center");text(centers[i],161,b,6.7,color=muted,align="center")
@@ -196,13 +208,25 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
                     val,n=aggregate(entries,key,how,scale);return show(val)+( "*" if n<len(selected) and n else "")
                 def pair(a,b,scale=1,how="median"):
                     return one(a,scale,how)+"/"+one(b,scale,how)
-                vals=[CN[method],success,pair("body_min_m","arm_tool_min_m",100,"min"),one("self_min_m",1000,"min"),one("hold_s"),one("completion_s"),pair("tip_rmse_m","tip_peak_m",100),pair("axis_rmse_deg","axis_peak_deg"),pair("theta_rmse_deg","phi_rmse_deg"),pair("theta_blackout_rmse_deg","phi_blackout_rmse_deg")]
+                exposed=sum(r.get("black_samples") or 0 for r in entries)
+                available=sum(r.get("black_estimates") or 0 for r in entries)
+                black_text=(pair("theta_blackout_rmse_deg","phi_blackout_rmse_deg")+f" · {available/exposed:.0%}") if exposed else "—"
+                vals=[CN[method],success,pair("body_min_m","arm_tool_min_m",100,"min"),one("self_min_m",1000,"min"),pair("hold_s","feedback_hold_s"),one("completion_s"),pair("tip_rmse_m","tip_peak_m",100),pair("axis_rmse_deg","axis_peak_deg"),pair("theta_rmse_deg","phi_rmse_deg"),black_text]
                 for i,value in enumerate(vals):text(centers[i],y,value,7.7,method=="proposed",COLORS[method] if i==0 else ink,"center")
                 for r,e in zip(selected,entries):export_rows.append({**r,**{k:e.get(k) for k in FIELDS}})
                 y+=18
             rule(y-10,.4);y+=9
-    y=wrap(y+2,"三种子内取最小净空与最小自距，其余连续指标取逐趟中位数。用时计至安全通过且连续对准满 1 秒。星号表示有有效测量的试次数少于三趟，破折号表示无对应测量。",7.8,12,muted)
-    y=wrap(y+2,"真值来自 MuJoCo 独立积分。φ 使用圆周误差，两弯角均达到 5° 时统计方位。图像按曝光后 0.20 秒交付，全黑期间有积压影像的到达时刻单独记录。",7.8,12,muted)
+    y=wrap(y+2,"净空与自距取组三趟最小值，误差和停顿取逐趟中位数。末端位置与轴向统计窗为 49–55 s。用时计至安全通过并连续对准满 1 秒。* 表示有效试次数少于三趟，— 表示无相应测量。",7.8,12,muted)
+    y=wrap(y+2,"遮挡窗为曝光时钟的 28–32 s，有效占比按全部控制样本计算。曝光至交付延迟 0.20 s，使遮挡开始时仍可收到先前的图像。方位 RMSE 在真实与估计弯角均达到 5° 时按圆周差计算。",7.8,12,muted)
+    focus={m:[v for v in raw["cases"].values() if v["case"]["material"]=="differential" and v["case"]["vision"]=="occluded" and v["case"]["method"]==m] for m in METHODS}
+    if all(len(v)==3 for v in focus.values()):
+        nominal=np.median([v["arm_tool_min_m"]*100 for v in focus["proposed"]])
+        biased=np.median([v["arm_tool_min_m"]*100 for v in focus["strain"]])
+        crossed=sum(v["arm_tool_min_m"]<.06 for v in focus["strain"])
+        angles=np.median([v["axis_rmse_deg"] for v in focus["strain"]])
+        kf=sum(v["success"] for v in focus["fixed"])
+        proposed=sum(v["success"] for v in focus["proposed"])
+        y=wrap(y+5,f"差模偏移与动态遮挡并存时，融合与纯应变的臂爪最小净空中位数分别为 {nominal:.2f} 与 {biased:.2f} cm。纯应变有 {crossed}/3 趟跌破净空红线，门后轴向 RMSE 中位数为 {angles:.2f}°。固定 KF 和增广融合分别完成 {kf}/3 和 {proposed}/3 趟。",8.3,12,ink)
     if y>795:raise ValueError(f"Page 2 overflow ({y:.1f} pt)")
     c.showPage();c.save()
     csvpath=output.parent/"all_trials_metrics.csv"
@@ -211,7 +235,7 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         w=csv.DictWriter(f,fieldnames=cols,extrasaction="ignore");w.writeheader();w.writerows(export_rows)
     manifest={"pages":2,"registered_trials":len(rows),"scored_trials":scored_n,"font":font_used,
         "inputs":[{"path":str(p.resolve()),"sha256":digest(p)} for p in (protocol,metrics,vm_path,*pictures)],
-        "metrics_mapping":readj(metric_map) if metric_map else {k:k for k in FIELDS},
+        "metrics_mapping":{**{k:k for k in MAIN_FIELDS},**DETAIL_FIELDS,**(readj(metric_map) if metric_map else {})},
         "output":str(output.resolve()),"no_outcome_recomputation":True}
     (output.parent/"gate_review_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     return output

@@ -1,0 +1,38 @@
+{
+  "case": "26112131-differential-occluded-proposed",
+  "exposures": [
+    26.36,
+    30.0,
+    32.160000000000004
+  ],
+  "deliveries": [
+    26.56,
+    30.2,
+    32.36000000000001
+  ],
+  "rgb_sha256": [
+    "06c6baedc292878484782c2518fb446bca86e25ec35912468ab3050e26d56c80",
+    "62898c10203cc8dfc1b9fa8dc0900f928cb0fa80391c02ece5df8d5eee386e35",
+    "7d14ef5b7de9b2f882bb797de5f3bac8fe58dd4fca4d09958418d1393e21c4a8"
+  ],
+  "blackout": {
+    "theta_rmse_deg": 0.2747658917368339,
+    "phi_rmse_deg": 0.44879052883754444,
+    "theta_peak_deg": 0.5102507135691781,
+    "phi_peak_deg": 1.0093172465226985,
+    "samples": 200,
+    "available": 200,
+    "azimuth_samples": 200
+  },
+  "vision_hold": {
+    "theta_rmse_deg": 27.97965809111098,
+    "phi_rmse_deg": 16.555514111397372,
+    "theta_peak_deg": 41.4422990289465,
+    "phi_peak_deg": 24.67687391216606,
+    "samples": 200,
+    "available": 200,
+    "azimuth_samples": 200
+  },
+  "true_theta_range_deg": 41.396941852260944,
+  "true_phi_range_deg": 24.509730359641452
+}

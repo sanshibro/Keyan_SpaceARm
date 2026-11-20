@@ -27,6 +27,8 @@ import hashlib
 import importlib
 import json
 import math
+import os
+import shutil
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
@@ -164,6 +166,9 @@ class NativeViews:
         self.mj=mujoco;self.size=size
         module=importlib.import_module(model_module)
         self.plant=module.make_plant();self.m=self.plant.m
+        # A floor-free world view retains the physical gate in group 4.
+        # The observer model is private to this recording renderer.
+        self.m.geom_group[self.m.geom("floor").id]=5
         self.d=mujoco.MjData(self.m)
         self.ren=mujoco.Renderer(self.m,width=size[0],height=size[1])
         self.cameras=cameras;self.flights=flights;self.records={};self.targets={}
@@ -179,15 +184,18 @@ class NativeViews:
             if qq.shape[1]!=self.m.nq:raise ValueError("Recorded qpos does not match the new gate native model")
             self.records[method]=(tt,qq)
 
-    def image(self, method, stamp, view, points=None):
+    def image(self, method, stamp, view, points=None, region=None):
         from PIL import Image
         tt,qq=self.records[method]
         if stamp<tt[0] or stamp>tt[-1]:return None, None
         i=int(np.argmin(abs(tt-stamp)));self.d.qpos[:]=qq[i]
         self.mj.mj_forward(self.m,self.d)
         cfg=self.cameras[view];cam=self.mj.MjvCamera()
-        cam.lookat[:]=cfg["lookat"];cam.azimuth=cfg["azimuth"];cam.elevation=cfg["elevation"]
+        cam.lookat[:]=cfg["lookat"] if region is None else region[0]
+        cam.azimuth=cfg["azimuth"];cam.elevation=cfg["elevation"]
         cam.distance=cfg["distance"];cam.orthographic=int(cfg.get("orthographic",True))
+        # In orthographic mode the projection span is in metres and is independent of distance.
+        if cam.orthographic:self.m.vis.global_.fovy=cfg.get("span_m",1.9) if region is None else region[1]
         option=self.mj.MjvOption()
         option.geomgroup[:]=cfg.get("geomgroup",[1,1,1,0,1,0])
         option.geomgroup[5]=0  # Sensor-only texture canvas must not appear in world-view CAD.
@@ -313,15 +321,29 @@ def curves(flights,out):
         twin.plot(t[dock],z["axis_error_deg"][dock],color=c,lw=.8,ls="--",alpha=.8)
     if "proposed" in flights:
         f=flights["proposed"]
-        for row in (0,1):axs[row].plot(f.t,angle(f.z["des_b"])[row],color="#758185",lw=.9,ls=":")
+        black=f.z["blackout"].astype(bool)
+        for row in (0,1):
+            axs[row].plot(f.t,angle(f.z["des_b"])[row],color="#38484E",lw=.95,ls=":")
+            axs[row].plot(f.t[black],angle(f.z["vision_hold_b"])[row][black],color="#98613c",lw=1.05,ls="-.")
     # Shade only when every paired run has exactly the same registered blackout.
     intervals=[contiguous(f.t,f.z["blackout"]) for f in flights.values()]
     shared=bool(intervals) and all(len(v)==len(intervals[0]) and np.allclose(v,intervals[0],atol=.03) for v in intervals[1:])
     for a in axs:
-        a.set_xlim(0,max_t);a.grid(axis="y",color=PALE,lw=.45)
+        a.set_xlim(24,max_t);a.grid(axis="y",color=PALE,lw=.45)
         if shared:
             for lo,hi in intervals[0]:a.axvspan(lo,hi,color="#E8ECEF",zorder=-4)
+    # The plate focuses on the task interval and the near-frame / alignment
+    # ranges. The supplementary matrix retains all times and full error ranges.
+    for j in (0,1):
+        segments=[angle(f.z[key])[j][f.t>=24] for f in flights.values() for key in ("true_b","est_b","des_b")]
+        vals=np.concatenate(segments);vals=vals[np.isfinite(vals)]
+        if len(vals):
+            margin=max(2.,.06*(vals.max()-vals.min()))
+            axs[j].set_ylim(vals.min()-margin,vals.max()+margin)
+    axs[2].set_ylim(0,32)
+    axs[3].set_ylim(0,16);twin.set_ylim(0,16)
     axs[2].axhline(6.,color=RED,lw=.85,ls="--")
+    axs[2].text(.993,6.65,"6.0 cm",va="bottom",ha="right",color=RED,fontsize=7,transform=axs[2].get_yaxis_transform())
     axs[3].axhline(3.5,color="#65797F",lw=.8,ls=":")
     twin.axhline(3.,color=RED,lw=.8,ls="--")
     for a,label in zip(axs,(r"$\theta$ (deg)",r"$\phi$ (deg)","Clearance (cm)","Position error (cm)")):a.set_ylabel(label)
@@ -329,47 +351,57 @@ def curves(flights,out):
     axs[3].set_xlabel("Time after release (s)")
     handles=[Line2D([],[],color=COLORS[m],lw=1.4,label=NAMES[m]) for m in METHODS]
     fig.legend(handles=handles,ncol=5,loc="upper center",bbox_to_anchor=(.51,.995),frameon=False,fontsize=8)
-    fig.text(.095,.913,"θ/φ: physical —, estimate --, Proposed desired ···. Clearance: arm/tool —, body ···.",fontsize=7.7,color=MUTED)
-    fig.text(.095,.025,"Post-gate alignment. Solid lines show position error (cm), dashed lines show tool-axis error (degrees).",fontsize=7.4,color=MUTED)
+    fig.text(.095,.918,"θ/φ: physical —, estimated --, fusion reference ···, last visual pose on the fusion flight –·–.",fontsize=7.55,color=MUTED)
+    fig.text(.095,.025,"Clearance: arm/tool —, body ···.  After passage: position — (cm), axis -- (deg).  Gray band: 4 s optical occlusion.",fontsize=7.3,color=MUTED)
     save(fig,out,"gate_four_metrics");plt.close(fig)
 
 
 def keyframes(flights,renderer,out,epochs):
     import matplotlib.pyplot as plt
-    fig,ax=plt.subplots(len(epochs),5,figsize=(8.2,1.85*len(epochs)),squeeze=False)
-    fig.subplots_adjust(left=.025,right=.985,top=.84,bottom=.11,wspace=.045,hspace=.23)
+    fig,ax=plt.subplots(3,5,figsize=(9.15,4.16),squeeze=False)
+    fig.subplots_adjust(left=.035,right=.986,top=.86,bottom=.09,wspace=.035,hspace=.26)
     for j,m in enumerate(METHODS):
-        ax[0,j].set_title(NAMES[m],color=COLORS[m],fontsize=9.5,pad=9)
+        ax[0,j].set_title(NAMES[m],color=COLORS[m],fontsize=9.4,pad=3)
         f=flights.get(m)
-        for row,stamp in enumerate(epochs):
+        stamps=[epochs[0],None,epochs[-1]]
+        if f is not None:
+            passage=(f.t>=27.6)&~f.z["gate_exit"].astype(bool)
+            ids=np.flatnonzero(passage)
+            if len(ids):stamps[1]=float(f.t[ids[np.argmin(f.z["arm_tool_clearance"][ids])]])
+        for row,stamp in enumerate(stamps):
             a=ax[row,j];a.set_xticks([]);a.set_yticks([])
             for s in a.spines.values():s.set_visible(False)
-            idx=None if f is None else f.index(stamp)
+            idx=None if f is None or stamp is None else f.index(stamp)
             if idx is None:missing(a,"Outside recorded interval");continue
             goal,axis=renderer.targets[m]
-            if row==0:
+            if row<2:
                 points=np.stack([f.z["arm_near_robot"][idx],f.z["arm_near_gate"][idx]])
             else:
                 tip=f.z["tip"][idx];tool_axis=f.z["tool_axis"][idx]
                 points=np.stack([goal,goal+.18*axis,tip,tip+.18*tool_axis])
-            im,uv=renderer.image(m,stamp,"oblique",points)
+            # All five controllers share the same projection and crop in each row.
+            # The last row resolves the actual tool, its tip, and both axes at scale.
+            region=(([.74,.015,1.99],1.19),([1.0,.01,1.82],.60),([1.87,.205,1.76],.62))[row]
+            im,uv=renderer.image(m,stamp,"oblique",points,region)
             if im is None:missing(a,"No physical state at this time");continue
             a.imshow(im)
             a.set_xlim(-.5,im.width-.5);a.set_ylim(im.height-.5,-.5)
-            if row==0:
+            if row<2:
                 if uv is not None:
                     a.plot(uv[:,0],uv[:,1],color=RED,lw=1.2);a.scatter(uv[:,0],uv[:,1],s=9,color=RED)
-                a.set_xlabel(f"Arm clearance  {100*f.z['arm_tool_clearance'][idx]:.1f} cm",fontsize=8)
+                a.set_xlabel(f"{stamp:.1f} s    |    {100*f.z['arm_tool_clearance'][idx]:.1f} cm",fontsize=7.7,labelpad=1)
             else:
                 if uv is not None:
                     a.plot(uv[:2,0],uv[:2,1],color="#A06A36",ls="--",lw=1.25)
                     a.scatter(*uv[0],marker="+",s=34,color="#A06A36")
                     a.plot(uv[2:,0],uv[2:,1],color="#2F7779",lw=1.2)
                     a.scatter(*uv[2],marker="o",s=10,color="#2F7779")
-                a.set_xlabel(f"{100*f.z['tip_error'][idx]:.1f} cm   |   {f.z['axis_error_deg'][idx]:.1f}°",fontsize=8)
-    fig.text(.025,.975,"Same-seed closed-loop flights in the same gate geometry",fontsize=10.5,weight="bold")
-    fig.text(.025,.921,f"Passage at {epochs[0]:g} s and oblique alignment at {epochs[-1]:g} s after release. Fixed camera and scale across methods.",fontsize=8.5,color=MUTED)
-    fig.text(.025,.021,"Upper row: closest arm–frame points. Lower row: measured tool axis (teal) and prescribed target axis (ochre).",fontsize=8,color=MUTED)
+                    if not (0<=uv[2,0]<im.width and 0<=uv[2,1]<im.height):
+                        a.text(.5,.91,"Tool outside target view",ha="center",va="top",transform=a.transAxes,fontsize=6.8,color=RED)
+                a.set_xlabel(f"{100*f.z['tip_error'][idx]:.1f} cm   |   {f.z['axis_error_deg'][idx]:.1f}°",fontsize=7.7,labelpad=1)
+    fig.text(.035,.965,"Gate passage and oblique tool alignment",fontsize=11,weight="bold")
+    fig.text(.035,.918,f"Top: dynamic occlusion at {epochs[0]:g} s. Middle: closest arm–frame approach in each flight. Bottom: target alignment at {epochs[-1]:g} s.",fontsize=8.2,color=MUTED)
+    fig.text(.035,.013,"Rust segments connect the nearest surfaces. Teal and ochre indicate the measured tool axis and prescribed target direction.",fontsize=7.7,color=MUTED)
     save(fig,out,"gate_keyframes");plt.close(fig)
 
 
@@ -381,7 +413,11 @@ def video(flights,renderer,out,start,end,fps=8.):
     width,height,colw=1500,900,292
     wrist={m:WristFrames(f.folder) for m,f in flights.items()}
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
-    p=subprocess.Popen(["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s",f"{width}x{height}","-r",str(fps),"-i","-","-an","-c:v","libx264","-preset","medium","-crf","21","-pix_fmt","yuv420p","-movflags","+faststart",str(out/"gate_multiview_comparison.mp4")],stdin=subprocess.PIPE)
+    encoder=os.environ.get("GATE_FFMPEG") or shutil.which("ffmpeg")
+    if not encoder:
+        from imageio_ffmpeg import get_ffmpeg_exe
+        encoder=get_ffmpeg_exe()
+    p=subprocess.Popen([encoder,"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s",f"{width}x{height}","-r",str(fps),"-i","-","-an","-c:v","libx264","-preset","medium","-crf","21","-pix_fmt","yuv420p","-movflags","+faststart",str(out/"gate_multiview_comparison.mp4")],stdin=subprocess.PIPE)
     def bar(draw,x,y,value,limit,maximum,label,unit):
         draw.text((x,y),f"{label}: {value:.2f} {unit}" if math.isfinite(value) else f"{label}: —",font=small,fill=INK)
         draw.rectangle((x,y+19,x+265,y+24),fill=PALE)
@@ -393,15 +429,32 @@ def video(flights,renderer,out,start,end,fps=8.):
         for now in np.arange(start,end+1e-8,1/fps):
             im=Image.new("RGB",(width,height),"white");d=ImageDraw.Draw(im)
             d.text((17,12),f"Gate feedback comparison   |   time after release {now:.2f} s",font=title,fill=INK)
-            d.text((17,41),"Two fixed native-CAD views + actual released wrist input. Each column is an independently flown controller.",font=normal,fill=MUTED)
+            d.text((17,41),"Side and oblique CAD views / delivered wrist RGB.   Rust: nearest surfaces.   Teal: measured tool axis.   Ochre: target axis.",font=normal,fill=MUTED)
             for j,m in enumerate(METHODS):
                 x=16+j*298;f=flights.get(m);d.text((x,77),NAMES[m],font=title,fill=COLORS[m])
                 idx=None if f is None else f.index(now)
                 if idx is None:
                     d.text((x,115),"No recorded state at this time",font=small,fill=MUTED);continue
                 for view,y in (("side",111),("oblique",301)):
-                    frame,_=renderer.image(m,now,view)
+                    dock=now>=40
+                    if dock:
+                        goal,target_axis=renderer.targets[m];tip=f.z["tip"][idx]
+                        points=np.stack((goal,goal+.16*target_axis,tip,tip+.16*f.z["tool_axis"][idx]))
+                    else:
+                        points=np.stack((f.z["arm_near_robot"][idx],f.z["arm_near_gate"][idx]))
+                    # The camera stays fixed across methods at each time. The
+                    # second row uses a common instrument view after 40 s.
+                    region=(([1.86,.205,1.77],.72) if dock else ([.83,.01,1.96],1.04)) if view=="oblique" else None
+                    frame,uv=renderer.image(m,now,view,points,region)
                     if frame is not None:
+                        if uv is not None and (dock or f.z["arm_tool_clearance"][idx]<.48):
+                            ink=ImageDraw.Draw(frame)
+                            pairs=((0,1,"#b5793f"),(2,3,"#268778")) if dock else ((0,1,RED),)
+                            for left,right,color in pairs:
+                                ends=[tuple(np.rint(uv[k]).astype(int)) for k in (left,right)]
+                                ink.line(ends,fill=color,width=3)
+                                for px,py in ends[:1] if dock else ends:
+                                    ink.ellipse((px-3,py-3,px+3,py+3),fill=color)
                         frame.thumbnail((colw,180));im.paste(frame,(x+(colw-frame.width)//2,y))
                 row=wrist[m].at(now)
                 if row is not None:
