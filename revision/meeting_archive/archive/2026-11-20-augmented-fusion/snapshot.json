@@ -18,11 +18,11 @@
       "title": "视觉、应变与弯曲误差的同步轨迹"
     },
     {
-      "bytes": 85456,
+      "bytes": 128440,
       "caption": "三趟合并的全程成绩与等时长关键窗口；虚拟动捕独立计分。",
       "file": "comparison.webp",
       "kind": "curve",
-      "sha256": "09e43269242f7caaa37f7cac6027200bfd6265957d12f6d8c15792238eb9077c",
+      "sha256": "f33d3a8d5ab6d568fe231bba17b64d1a54ddb9f93240e1c227d8afd5d7544eb8",
       "title": "三种视觉条件的四方法比较"
     },
     {
@@ -39,7 +39,7 @@
       "caption": "第一页面向同一时刻解释估计机制；第二页给出四种方法的角度、方向、覆盖率、重锁时序和跨遮挡起漂成绩。",
       "file": "review.pdf",
       "kind": "document",
-      "sha256": "c7217c3abbb6dfb1ad22f10b93e45a32c510d44c38811a3197b480883a344951",
+      "sha256": "ba65e335b519f731dabac83b3ff1756da18eb46dfcea17eb770cccba2b1485c4",
       "title": "两页组会 PDF"
     },
     {
@@ -160,11 +160,11 @@
   "outputs": {
     "pack": {
       "file": "meeting.zip",
-      "sha256": "d884310872a6d37bbcc158fb2b6b0bee0b1a51bf83a0e8c9d104d4de591b55aa"
+      "sha256": "d800f171bb4e03fec1ab8fac9f591a717bc8ab675fcd2a96643ad3a813bb3a44"
     },
     "page": {
       "file": "index.html",
-      "sha256": "8a0893bc9c79105c6d7596949948d0ffa0967e1919c5371fc183e9e485c566ac"
+      "sha256": "aabda9e1149dadac6a00c34d53ca8d1fe4399b969f88bfe94ad952d9ee973c79"
     }
   },
   "parent_round": "2026-11-20-strain-health",
@@ -175,5 +175,5 @@
   "stage": "G1 · 视觉与应变增广融合",
   "summary": "三趟 PX4 / MuJoCo 飞行中用可见阶段校准应变偏置。相对贴片反向偏移时，4 秒全遮挡内的弯曲角误差降至 0.40°，覆盖全部 600 个输出时刻。",
   "title": "面向视觉退化与应变迟滞的连续体臂形态融合",
-  "when": "2026-11-20T16:28:30+08:00"
+  "when": "2026-11-20T16:42:15+08:00"
 }

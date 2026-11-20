@@ -37,7 +37,7 @@ def make_images(rd):
 
 def build(stage, revision):
     u = utilities(stage)
-    work, rd = stage/'canonical', stage/'review'
+    work, rd = stage/'canonical-release', stage/'review'
     src = work/'sources'
     src.mkdir(parents=True,exist_ok=True)
     make_images(rd)
@@ -88,12 +88,12 @@ def publish(stage, revision):
     u = utilities(stage)
     repo = stage/'site-cache'
     dist = repo/'dist'
-    orig = stage/'canonical/dist/archive'/TAG
+    orig = stage/'canonical-release/dist/archive'/TAG
     route = 'archive/'+TAG+'/'
     dest = dist/route
     previous = {p:u.digest(p) for p in (dist/'archive').glob('*/snapshot.json') if p.parent!=dest}
     assert (dist/'archive'/PREVIOUS/'snapshot.json') in previous
-    snap,spec = u.read(orig/'snapshot.json'),u.read(stage/'canonical/round.json')
+    snap,spec = u.read(orig/'snapshot.json'),u.read(stage/'canonical-release/round.json')
     raw = RAW+revision+'/revision/meeting_archive/'+route
     media = CDN+revision+'/revision/meeting_archive/'+route+'media/'
     urls = {}
@@ -156,8 +156,8 @@ def publish(stage, revision):
     key='<section><h2>阶段文件</h2><p>'
     item='<a href="'+href('review.pdf')+'" target="_blank">视觉与应变增广融合审阅</a>　'
     assert key in html
-    if item not in html:
-        html=html.replace(key,key+item,1)
+    html=re.sub(r'<a href="[^"]+" target="_blank">视觉与应变增广融合审阅</a>　','',html)
+    html=html.replace(key,key+item,1)
     html=html.replace("$(id).src=REMOTE+url+'?v='+s.updated","$(id).src=/^https:\\/\\//.test(url)?url:REMOTE+url+'?v='+s.updated")
     home.write_bytes(html.encode())
     state=u.read(dist/'status_public.json')

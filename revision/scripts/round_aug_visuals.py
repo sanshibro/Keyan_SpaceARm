@@ -351,22 +351,65 @@ def main_plate(trace, frames, body, out, epochs=DEFAULT_EPOCHS, source="differen
 
 def matrix_plot(scores, out):
     import matplotlib.pyplot as plt
-    # Each point is an existing scorer statistic, never a mean of case RMSEs.
-    fig, axs = plt.subplots(2, 3, figsize=(9.1, 5.25), sharey="row")
-    fig.subplots_adjust(left=.10, right=.98, bottom=.12, top=.87, wspace=.28, hspace=.38)
-    for row, phase in enumerate(("all", "blind")):
-        for col, source in enumerate(("nominal", "common", "differential")):
-            a = axs[row, col]
-            for j, method in enumerate(METHODS):
-                vals = [score_value(score_entry(scores, source, c, phase, method), "theta") for c in CONDITIONS]
-                a.plot(range(3), [np.nan if x is None else x for x in vals], color=COLORS[j], ls=STYLES[j],
-                       marker=("o", "s", "^", "D")[j], ms=4, lw=1.1, label=NAMES[j])
-            a.set_xticks(range(3));a.set_xticklabels(("Natural", "Graded", "Occluded"),fontsize=7.6)
-            a.set_title(f"{source.capitalize()} / {phase}", loc="left", fontsize=9)
-            a.grid(axis="y", color=RULE, lw=.5); a.set_ylim(bottom=0)
-            if col == 0: a.set_ylabel(r"$\theta$ RMSE (deg)")
-    fig.legend(*axs[0, 0].get_legend_handles_labels(), loc="upper center", ncol=4, frameon=False)
-    fig.text(.10, .025, "Full interval, 14–46 s. Four-second interval, 31.2–35.2 s on the release clock.", fontsize=7.3, color=MUTED)
+    from matplotlib.colors import LinearSegmentedColormap, LogNorm
+    from matplotlib.patches import Rectangle
+    from matplotlib.cm import ScalarMappable
+    sources = ("nominal", "common", "differential", "single")
+    phases = ("all", "blind")
+    rows = [(s, c) for s in sources for c in CONDITIONS]
+    values = np.full((2, len(rows), len(METHODS)), np.nan)
+    for i, phase in enumerate(phases):
+        for j, (s, c) in enumerate(rows):
+            for k, method in enumerate(METHODS):
+                rec = score_entry(scores, s, c, phase, method)
+                if rec is None:
+                    raise ValueError(f"Missing matrix record for {s}/{c}/{phase}/{method}")
+                value = score_value(rec, "theta")
+                if rec["valid"]:
+                    if value is None or value <= 0:
+                        raise ValueError("Expected positive RMSE for the scored panel")
+                    values[i, j, k] = value
+                elif value is not None:
+                    raise ValueError("An absent observation cannot carry an RMSE")
+    lo = min(.2, np.nanmin(values)); hi = max(8., np.nanmax(values))
+    norm = LogNorm(lo, hi)
+    cmap = LinearSegmentedColormap.from_list("bend_rmse",
+                ["#f1f6f7", "#c6dce0", "#8bb5bf", "#477e90", "#17445c"])
+    fig, axs = plt.subplots(1, 2, figsize=(10, 5.95))
+    fig.subplots_adjust(left=.229, right=.985, top=.835, bottom=.16, wspace=.18)
+    col_labels = ("Vision", "Strain", "Fixed KF", "Proposed")
+    groups = ("Base hysteresis", "Common drift", "Differential drift", "Single channel")
+    for i, ax in enumerate(axs):
+        ax.set(xlim=(-.5, 3.5), ylim=(12.56, -.50))
+        ax.set_axis_off()
+        ax.set_title(("a   Full interval   14–46 s", "b   Matched window   31.2–35.2 s")[i],
+                     loc="left", fontsize=11, fontweight="bold", pad=29)
+        for k, label in enumerate(col_labels):
+            ax.text(k, -.91, label, ha="center", va="center", fontsize=9,
+                    color=INK, fontweight="bold" if k==3 else "normal", clip_on=False)
+        for j, (_, c) in enumerate(rows):
+            y = j + .34*(j//3)
+            if i == 0:
+                ax.text(-.59, y, {"natural":"Natural","graded":"Graded","occluded":"Occluded"}[c],
+                        ha="right", va="center", fontsize=8.5, color=MUTED, clip_on=False)
+                if j%3 == 1:
+                    ax.text(-1.55, y, groups[j//3], ha="right", va="center",
+                            fontsize=9.1, fontweight="bold", clip_on=False)
+            for k, value in enumerate(values[i,j]):
+                finite = np.isfinite(value)
+                background = cmap(norm(value)) if finite else "#eef0f0"
+                ax.add_patch(Rectangle((k-.489, y-.484),.978,.968,fc=background,ec="none"))
+                label = f"{value:.2f}" if finite else "no pose"
+                fg = ("white" if norm(value)>.62 else INK) if finite else MUTED
+                ax.text(k, y, label, ha="center", va="center", fontsize=9,
+                        color=fg, fontweight="bold" if k==3 and finite else "normal")
+    bar_ax = fig.add_axes([.229,.075,.32,.017])
+    bar = fig.colorbar(ScalarMappable(norm=norm,cmap=cmap), cax=bar_ax, orientation="horizontal")
+    ticks = [.2,.5,1.,2.,4.,8.]
+    bar.set_ticks(ticks);bar.set_ticklabels([f"{n:g}" for n in ticks])
+    bar.ax.minorticks_off();bar.outline.set_visible(False)
+    fig.text(.112,.08,r"$\theta$ RMSE (deg)",fontsize=9,color=INK,va="center")
+    fig.text(.60,.08,"Grey cells mark zero visual coverage in the 4 s blackout.",fontsize=8.3,color=MUTED,va="center")
     save_plot(fig, out, "fusion_matrix"); plt.close(fig)
 
 
@@ -458,6 +501,19 @@ def main():
     inputs, epoch_rows = [], []
     if a.matrix:
         matrix_plot(read_scores(a.root), out); inputs.append(a.root / "scores.json")
+        if not a.main and not a.video and (out/"visual_manifest.json").exists():
+            manifest = read_json(out/"visual_manifest.json")
+            if sha256(inputs[0]) not in {x["sha256"] for x in manifest["inputs"]}:
+                raise ValueError("Matrix scores differ from the existing synchronized plate")
+            for item in manifest["outputs"]:
+                name = Path(item["path"]).name
+                path = out/name
+                if name in ("fusion_matrix.png", "fusion_matrix.svg"):
+                    item["sha256"] = sha256(path)
+                elif sha256(path) != item["sha256"]:
+                    raise ValueError("Existing visual changed outside matrix rendering: "+name)
+            (out/"visual_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+            return
     if a.main or a.video:
         if not a.frame_manifest and not a.frames_txt:
             a.frames_txt = a.root / "vision_inputs" / a.case / a.condition / "frames.txt"
