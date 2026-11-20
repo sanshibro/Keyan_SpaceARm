@@ -9,7 +9,9 @@ from xml.etree import ElementTree as ET
 import mujoco
 
 def make_plant():
-    package=Path(os.environ.get('GATE_REGISTERED_CAD',str(Path(__file__).resolve().parents[1]/'records/registered-cad-assets.tgz')))
+    here=Path(__file__).resolve().parents[1]
+    local=here/'records/registered-cad-assets.tgz'
+    package=Path(os.environ.get('GATE_REGISTERED_CAD',str(local if local.is_file() else here/'data/round_gate_feedback/registered-cad-assets.tgz')))
     with tarfile.open(package,'r:gz') as archive:
         source=archive.extractfile('source-model.xml').read()
         manifest=json.loads(archive.extractfile('asset-hashes.json').read())

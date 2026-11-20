@@ -1,10 +1,12 @@
 """Prepare the single-gate progress view in the existing group site checkout."""
 import argparse
+import io
 from pathlib import Path
 from PIL import Image
 import json
 import hashlib
 import shutil
+import struct
 import subprocess
 from tempfile import TemporaryDirectory
 
@@ -57,14 +59,18 @@ def restore_public_media(stage):
     """Keep historic root bookmarks working and retain byte-identical archive originals."""
     from pypdf import PdfReader,PdfWriter
     from pypdf.filters import ASCII85Decode
-    from pypdf.generic import NameObject
+    from pypdf.generic import DictionaryObject,NameObject,NumberObject
     dist=stage/'site-cache/dist'
     main=dist/'model_paper_page.pdf'
     original=dist/'archive/2026-11-17-c2/media/paper.pdf'
     qa=stage/'qa'/'historic-media.json'
     art=main.read_bytes()
     orig_sha=hashlib.sha256(original.read_bytes()).hexdigest()
-    if hashlib.sha256(art).hexdigest()==orig_sha:
+    current=hashlib.sha256(art).hexdigest()
+    before=json.loads(qa.read_bytes()) if qa.is_file() else {}
+    if current not in (orig_sha,before.get('web_sha256')):
+        raise ValueError('Unrecognized live PDF revision')
+    if current==orig_sha or before.get('version')!=2:
         writer=PdfWriter(clone_from=str(original))
         changed=0
         for o in writer._objects:
@@ -75,6 +81,31 @@ def restore_public_media(stage):
             o[NameObject('/Filter')]=NameObject('/FlateDecode')
             changed+=1
         if not changed:raise ValueError('Historic PDF contains no recognized transport encoding')
+        # Encode unchanged RGB pixels with per-scanline PNG predictors. Keeping
+        # the old immutable PDF lets us test both decoded assets and all pages.
+        rgb_streams=0
+        for o in writer._objects:
+            if (not hasattr(o,'_data') or o.get('/Subtype')!='/Image' or o.get('/Filter')!='/FlateDecode'
+                or o.get('/DecodeParms') is not None or o.get('/BitsPerComponent')!=8 or o.get('/ColorSpace')!='/DeviceRGB'):
+                continue
+            width,height=int(o['/Width']),int(o['/Height']);pixels=o.get_data()
+            if len(pixels)!=width*height*3:continue
+            tmp_png=io.BytesIO()
+            Image.frombytes('RGB',(width,height),pixels).save(tmp_png,format='PNG',compress_level=6)
+            tmp_png.seek(8);parts=[]
+            for header in iter(lambda:tmp_png.read(8),b''):
+                n,kind=struct.unpack('>I4s',header)
+                chunk=tmp_png.read(n);tmp_png.read(4)
+                if kind==b'IDAT':parts.append(chunk)
+            compressed=b''.join(parts)
+            if not compressed or len(compressed)>=len(o._data):continue
+            o._data=compressed
+            o[NameObject('/DecodeParms')]=DictionaryObject({
+                NameObject('/Predictor'):NumberObject(15),NameObject('/Colors'):NumberObject(3),
+                NameObject('/Columns'):NumberObject(width),NameObject('/BitsPerComponent'):NumberObject(8)})
+            o.decoded_self=None
+            if o.get_data()!=pixels:raise ValueError('Historical embedded image differs')
+            rgb_streams+=1
         with TemporaryDirectory(dir=stage/'qa') as tmp:
             candidate=Path(tmp)/'compacted.pdf'
             writer.write(candidate)
@@ -82,19 +113,18 @@ def restore_public_media(stage):
             if len(PdfReader(str(candidate)).pages)!=pages:raise ValueError('Historic page count changed')
             pixel_hash=[]
             for i in range(1,pages+1):
-                args=['pdftoppm','-r','144','-f',str(i),'-l',str(i),'-singlefile']
+                args=['pdftoppm','-q','-r','144','-f',str(i),'-l',str(i),'-singlefile']
                 rasters=[subprocess.check_output(args+[str(p)]) for p in (original,candidate)]
                 if any(not x.startswith(b'P6') or len(x)<100000 for x in rasters):raise IOError('Historic render missing')
                 pixels=[hashlib.sha256(x).hexdigest() for x in rasters]
                 if pixels[0]!=pixels[1]:raise ValueError('Historic page pixels changed')
                 pixel_hash.append(pixels[0])
             result=candidate.read_bytes()
-            if len(result)>=len(art)-1024*1024:raise ValueError('Insufficient room for the group archive')
+            if len(result)>=original.stat().st_size-6*1024*1024:raise ValueError('Insufficient room for the group archive')
             main.write_bytes(result)
-            qa.write_text(json.dumps(dict(original_sha256=orig_sha,web_sha256=hashlib.sha256(result).hexdigest(),
-                        matched_page_rasters_144dpi=pixel_hash,original_bytes=len(art),web_bytes=len(result)),indent=2)+'\n',encoding='utf8')
-    elif not qa.is_file() or json.loads(qa.read_bytes())['web_sha256']!=hashlib.sha256(art).hexdigest():
-        raise ValueError('Unrecognized live PDF revision')
+            qa.write_text(json.dumps(dict(version=2,original_sha256=orig_sha,web_sha256=hashlib.sha256(result).hexdigest(),
+                        matched_images=rgb_streams,matched_page_rasters_144dpi=pixel_hash,original_bytes=original.stat().st_size,
+                        web_bytes=len(result)),indent=2)+'\n',encoding='utf8')
     aliases={'super_hover_review.mp4':'archive/2026-11-17-c2/media/hover.mp4',
              'model_checkpoint.pdf':'archive/2026-11-17-c2/media/review.pdf',
              'replay.json':'archive/2026-11-17-a/media/replay.json'}

@@ -33,7 +33,7 @@ from pathlib import Path
 
 import numpy as np
 
-from gatereview_visuals import METHODS,CN,COLORS,readj,digest,protocol_cases
+from gatereview_visuals import METHODS,CN,COLORS,readj,digest,protocol_cases,logical_name
 
 MAIN_FIELDS=("success","body_min_m","arm_tool_min_m","self_min_m","hold_s","completion_s",
         "tip_rmse_m","tip_peak_m","axis_rmse_deg","axis_peak_deg","theta_rmse_deg",
@@ -172,15 +172,17 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         placements.append((pa,transform))
         return top+height
 
-    header(1,"形态反馈驱动的过门与斜向对准","五种反馈源共用飞控参数、二维形态伺服与门框。每一列取自该方法独立飞出的轨迹。")
+    header(1,"形态反馈驱动的过门与斜向对准","二维弯曲估计修正带载机械臂的驱动量，并更新全身包络。整机后缘越门后，机身与夹爪协同对准侧偏 25 cm 的目标。五列为同一种子下的独立飞行。")
     y=figure(pictures[0],112,245)
     y=figure(pictures[1],y+8,355)
     representative=raw.get("cases",{}).get(vm.get("cases",{}).get("proposed",""),{})
     dyn=representative.get("dynamic_theta_range_deg");rot=representative.get("dynamic_phi_range_deg")
     vh=representative.get("vision_hold_blackout",{}).get("theta_rmse_deg")
     fus=representative.get("theta_blackout_rmse_deg")
-    if all(v is not None for v in (dyn,rot,vh,fus)):
-        y=wrap(y+12,f"图 1　同一趟融合飞行的 4 秒遮挡内，真实 θ 变化 {dyn:.1f}°、φ 变化 {rot:.1f}°。仅保留最后视觉帧时，θ 的 RMSE 为 {vh:.2f}°，融合为 {fus:.2f}°。",8.5,12)
+    vp=representative.get("vision_hold_blackout",{}).get("phi_rmse_deg")
+    fp=representative.get("phi_blackout_rmse_deg")
+    if all(v is not None for v in (dyn,rot,vh,fus,vp,fp)):
+        y=wrap(y+12,f"图 1　同一趟融合飞行的 4 秒遮挡内，真实 θ 与 φ 分别变化 {dyn:.1f}° 和 {rot:.1f}°。沿该轨迹保留最后一次视觉观测，两个角的 RMSE 为 {vh:.2f}° 和 {vp:.2f}°，增广融合为 {fus:.2f}° 和 {fp:.2f}°。",8.5,12)
     y=wrap(y+5,"三行模型依次对应遮挡中的同一时刻、各趟最接近门框的过门时刻、门后同一时刻。红线连接臂爪与门框最近点。蓝绿实线与赭色虚线分别表示实际工具轴和目标轴。",8.4,12,muted)
     if y>795:raise ValueError(f"Page 1 overflow ({y:.1f} pt)")
     c.showPage()
@@ -230,7 +232,9 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         angles=np.median([v["axis_rmse_deg"] for v in focus["strain"]])
         kf=sum(v["success"] for v in focus["fixed"])
         proposed=sum(v["success"] for v in focus["proposed"])
-        y=wrap(y+5,f"差模偏移与动态遮挡并存时，融合与纯应变的臂爪最小净空中位数分别为 {nominal:.2f} 与 {biased:.2f} cm。纯应变有 {crossed}/3 趟跌破净空红线，门后轴向 RMSE 中位数为 {angles:.2f}°。固定 KF 和增广融合分别完成 {kf}/3 和 {proposed}/3 趟。",8.3,12,ink)
+        audit=readj(root/"decisions/case-evidence-audit.json")
+        undershoot=np.median([audit[v["case"]["case"]]["arm_at_minimum"]["theta_des_minus_true_deg"] for v in focus["strain"]])
+        y=wrap(y+5,f"差模偏移与动态遮挡并存时，纯应变在臂爪最接近门框处的实际欠弯中位数为 {undershoot:.2f}°。融合与纯应变的最小净空中位数分别为 {nominal:.2f} 与 {biased:.2f} cm。纯应变有 {crossed}/3 趟跌破红线，门后轴向 RMSE 中位数为 {angles:.2f}°。固定 KF 和增广融合分别完成 {kf}/3 和 {proposed}/3 趟。",8.3,12,ink)
     if y>795:raise ValueError(f"Page 2 overflow ({y:.1f} pt)")
     c.showPage();c.save();template.seek(0)
     paper=PdfReader(template);writer=PdfWriter()
@@ -244,10 +248,13 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
     with csvpath.open("w",encoding="utf-8-sig",newline="") as f:
         cols=["case","method","material","vision","seed",*FIELDS]
         w=csv.DictWriter(f,fieldnames=cols,extrasaction="ignore");w.writeheader();w.writerows(export_rows)
+    audited=root/"decisions/case-evidence-audit.json"
+    used=[protocol,metrics,vm_path,*pictures]
+    if audited.is_file():used.append(audited)
     manifest={"pages":2,"registered_trials":len(rows),"scored_trials":scored_n,"font":font_used,
-        "inputs":[{"path":str(p.resolve()),"sha256":digest(p)} for p in (protocol,metrics,vm_path,*pictures)],
+        "inputs":[{"path":logical_name(p,root),"sha256":digest(p)} for p in used],
         "metrics_mapping":{**{k:k for k in MAIN_FIELDS},**DETAIL_FIELDS,**(readj(metric_map) if metric_map else {})},
-        "output":str(output.resolve()),"output_sha256":digest(output),"vector_figures":True,"no_outcome_recomputation":True}
+        "output":logical_name(output,root),"output_sha256":digest(output),"vector_figures":True,"no_outcome_recomputation":True}
     (output.parent/"gate_review_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     return output
 

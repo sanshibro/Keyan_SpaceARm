@@ -7,5 +7,9 @@ export MUJOCO_GL=egl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg PYT
 gate_out="$PWD/revision/data/round_gate_feedback"
 exec >> "$gate_out/campaign.log" 2>&1
 /usr/bin/python3 -u revision/scripts/gate_recover_boot.py
-/usr/bin/python3 -u revision/scripts/gate_feedback_campaign.py
+until /usr/bin/python3 -u revision/scripts/gate_feedback_campaign.py; do
+    # Continue an unresolved offline geometry query using the completed flight.
+    # Other failures are returned to the operator with their original records.
+    /usr/bin/python3 -u revision/scripts/gate_distance_certificate.py --pending || exit 1
+done
 /usr/bin/python3 -c 'import json, pathlib; p=pathlib.Path("revision/data/round_gate_feedback"); assert json.loads((p/"campaign-progress.json").read_bytes())["completed"]==60; (p/"campaign.finished").touch()'

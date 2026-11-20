@@ -1,0 +1,55 @@
+{
+  "case": "26112131-differential-occluded-vision",
+  "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+  "additional_solver_sha256": "f799b07a805241908a275db3f1f7b7753b75535fc2e6979ce5e8be33379376ca",
+  "primary_scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+  "inputs": {
+    "physics.npz": "038eb53e8ca149afae45de9a0345aeb416888f0286a6636b0c228520a45298bb",
+    "flight.ulg": "374a1570068b5de7a67c9b4a065a04bde3b08dd4b4ae49af0c90970d81aea6b7",
+    "flight.bag": "0e99cb30dbdd7d48972ab5a9d755d84cb2001cb01f696a37486c9d445946a055",
+    "control.npz": "5dcd90a058370539d3ccec4da9cc4a070d23531a3f7528e72070870243e0e569",
+    "run.json": "ca3d70d568d2aac694ef5ed984511043ca10f8cf111e1e21de1a520c59cc9a88"
+  },
+  "solutions": [
+    {
+      "pose_index": 2467,
+      "geom_a": "collision_landing_163",
+      "geom_b": "d435",
+      "original": "Unresolved convex distance ('collision_landing_163', 'd435', 0.0, 0.0028691787473022405, 'GJK stalled')",
+      "lower_m": 0.0027905916698025843,
+      "upper_m": 0.002790592069802585,
+      "witness_a_m": [
+        1.9467406254336816,
+        0.21745203366851654,
+        1.7973087028518013
+      ],
+      "witness_b_m": [
+        1.9489917754085657,
+        0.21697666005811977,
+        1.7988878629782377
+      ],
+      "requested_precision_m": 0.0001,
+      "qpos_sha256": "38bb7a8e3ac0d20674690c8bdaa319a94d6faa07647bd7c2c20347395b114ad2"
+    },
+    {
+      "pose_index": 2491,
+      "geom_a": "collision_landing_163",
+      "geom_b": "d435",
+      "original": "Unresolved convex distance ('collision_landing_163', 'd435', 0.0029837631398533545, 0.006566151679602364, 'GJK stalled')",
+      "lower_m": 0.0062729731567975665,
+      "upper_m": 0.006272973556797572,
+      "witness_a_m": [
+        1.955409643499609,
+        0.22713815447407293,
+        1.8026572404450847
+      ],
+      "witness_b_m": [
+        1.9603632914740483,
+        0.22603453626990383,
+        1.806344189500856
+      ],
+      "requested_precision_m": 0.0001,
+      "qpos_sha256": "383d1d603e7f5e8ebae627dcd62f649b78f78e7fa2d3b13ceb21c0e6e3cf0a13"
+    }
+  ]
+}

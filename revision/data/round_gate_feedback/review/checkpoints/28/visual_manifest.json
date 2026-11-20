@@ -1,0 +1,96 @@
+{
+  "split": "formal",
+  "seed": "26112131",
+  "material": "differential",
+  "vision": "occluded",
+  "cases": {
+    "proposed": "26112131-differential-occluded-proposed",
+    "oracle": "26112131-differential-occluded-oracle",
+    "vision": "26112131-differential-occluded-vision"
+  },
+  "epochs": [
+    31.4,
+    52.0
+  ],
+  "clock": "release seconds; each method has an independent flight",
+  "thresholds": {
+    "external_clearance_m": 0.06,
+    "tip_position_m": 0.035,
+    "tool_axis_deg": 3.0,
+    "continuous_dwell_s": 1.0
+  },
+  "inputs": [
+    {
+      "path": "protocol.json",
+      "sha256": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-proposed/score-trace.npz",
+      "sha256": "0182034532832a5c13b3da452f9aeaee4714122ca6d8a0734cb89f76bba2926e"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-oracle/score-trace.npz",
+      "sha256": "8b8d2a24baaa89df8ed1bb1d7eb4cc21c48d804a3ee2ef9c8305d0209428969a"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-vision/score-trace.npz",
+      "sha256": "58209ce3ba0c3272313110113ae7930b988964abff50185b5c36fe7d480d9459"
+    },
+    {
+      "path": "qa/cameras.json",
+      "sha256": "6f66d61fe36830151382dd239c51af7fbd2f5ff7a7bc7903d0f928b7b0bd504a"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-proposed/physics.npz",
+      "sha256": "3e23ccda8c799635353f9681e9af82ef5efaaf87a2480670c57bafa2b2c5d34a"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-proposed/run.json",
+      "sha256": "13f260105a80ada713ee633b7dde8d7174c7fc2fb3cd23c2665b2654e475e366"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-proposed/optics/index.jsonl",
+      "sha256": "a06e47e8b9d270282b7d3df06a22c53f05c3e8de93245007e5cae762b9a50c9f"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-oracle/physics.npz",
+      "sha256": "43d6d853dd8a8a9f73d82032448d4df3e7bdd8296585582a7bf4b8c616a0dc36"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-oracle/run.json",
+      "sha256": "49b71d27e26dae9761536e2d6931e6fb8f8180dd5d9e102d3a9f91d7bb13f05d"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-oracle/optics/index.jsonl",
+      "sha256": "e6e0ed626620c7fdf46312c1a0b1523378236b0cef6fe51b0a1eb704daf66070"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-vision/physics.npz",
+      "sha256": "038eb53e8ca149afae45de9a0345aeb416888f0286a6636b0c228520a45298bb"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-vision/run.json",
+      "sha256": "ca3d70d568d2aac694ef5ed984511043ca10f8cf111e1e21de1a520c59cc9a88"
+    },
+    {
+      "path": "formal/26112131-differential-occluded-vision/optics/index.jsonl",
+      "sha256": "e5fe5d844e251c974b8e8bd2fd3326093d3e3ae7d68d8eb4647128f7e13c5155"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "pilot/原生闭环_前三种反馈对照/gate_keyframes.pdf",
+      "sha256": "7ebf5bedadf90a08fe1683daa26be753cca50b269323da7f0276afc05264d139"
+    },
+    {
+      "path": "pilot/原生闭环_前三种反馈对照/gate_keyframes.png",
+      "sha256": "fb445ba7f9898068c9d604fd416d92a9e0fd32ae313531392b990079a8ff21ef"
+    },
+    {
+      "path": "pilot/原生闭环_前三种反馈对照/gate_keyframes.svg",
+      "sha256": "f889bd20d7d425c93e783c34bce037b14d3c818013563f5d7c862fb65e8493f8"
+    }
+  ],
+  "model_module": "gate_portable_model",
+  "outcome_source": "independent scorer; no success claims created by visualization"
+}

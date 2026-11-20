@@ -57,6 +57,12 @@ def digest(path):
     return h.hexdigest()
 
 
+def logical_name(path,root):
+    path,root=Path(path).resolve(),Path(root).resolve()
+    try:return path.relative_to(root).as_posix()
+    except ValueError:return path.name
+
+
 def angle(v, phi_min_deg=5.):
     v = np.asarray(v); theta = np.degrees(np.linalg.norm(v, axis=-1))
     phi = np.degrees(np.arctan2(v[..., 1], v[..., 0]))
@@ -100,7 +106,7 @@ def load_flight(folder, meta):
     folder = Path(folder)
     with np.load(folder/"score-trace.npz", allow_pickle=False) as f:
         z = {k:f[k].copy() for k in ("t", *VECTORS, *SERIES)}
-        for k in ("near_robot", "near_gate", "arm_near_robot", "arm_near_gate", "tip", "tool_axis", "dwell_s"):
+        for k in ("near_robot", "near_gate", "arm_near_robot", "arm_near_gate", "tip", "tool_axis", "dwell_s","hold_reason","shape_valid","true_exit"):
             if k in f: z[k] = f[k].copy()
     n = len(z["t"])
     if z["t"].shape != (n,) or not np.isfinite(z["t"]).all() or not (np.diff(z["t"])>0).all():
@@ -332,6 +338,10 @@ def curves(flights,out):
         a.set_xlim(24,max_t);a.grid(axis="y",color=PALE,lw=.45)
         if shared:
             for lo,hi in intervals[0]:a.axvspan(lo,hi,color="#E8ECEF",zorder=-4)
+    if shared and intervals[0]:
+        lo,hi=intervals[0][0]
+        axs[0].text((lo+hi)/2,.92,"4 s blackout",transform=axs[0].get_xaxis_transform(),
+                    ha="center",va="top",color=MUTED,fontsize=6.8)
     # The plate focuses on the task interval and the near-frame / alignment
     # ranges. The supplementary matrix retains all times and full error ranges.
     for j in (0,1):
@@ -349,18 +359,19 @@ def curves(flights,out):
     for a,label in zip(axs,(r"$\theta$ (deg)",r"$\phi$ (deg)","Clearance (cm)","Position error (cm)")):a.set_ylabel(label)
     twin.set_ylabel("Axis error (deg)",color=RED);twin.tick_params(axis="y",colors=RED,labelsize=7.5)
     axs[3].set_xlabel("Time after release (s)")
-    handles=[Line2D([],[],color=COLORS[m],lw=1.4,label=NAMES[m]) for m in METHODS]
+    handles=[Line2D([],[],color=COLORS[m],lw=1.4,label=NAMES[m]) for m in METHODS if m in flights]
     fig.legend(handles=handles,ncol=5,loc="upper center",bbox_to_anchor=(.51,.995),frameon=False,fontsize=8)
     fig.text(.095,.918,"θ/φ: physical —, estimated --, fusion reference ···, last visual pose on the fusion flight –·–.",fontsize=7.55,color=MUTED)
-    fig.text(.095,.025,"Clearance: arm/tool —, body ···.  After passage: position — (cm), axis -- (deg).  Gray band: 4 s optical occlusion.",fontsize=7.3,color=MUTED)
+    fig.text(.095,.025,"Clearance ≥ 6.0 cm: arm/tool —, body ···.  After passage: position ≤ 3.5 cm (—) and axis ≤ 3.0° (--) for 1 s.",fontsize=7.3,color=MUTED)
     save(fig,out,"gate_four_metrics");plt.close(fig)
 
 
 def keyframes(flights,renderer,out,epochs):
     import matplotlib.pyplot as plt
-    fig,ax=plt.subplots(3,5,figsize=(9.15,4.16),squeeze=False)
+    display=[m for m in METHODS if m in flights]
+    fig,ax=plt.subplots(3,len(display),figsize=(9.15 if len(display)==5 else max(6.5,len(display)*1.80),4.16),squeeze=False)
     fig.subplots_adjust(left=.035,right=.986,top=.86,bottom=.09,wspace=.035,hspace=.26)
-    for j,m in enumerate(METHODS):
+    for j,m in enumerate(display):
         ax[0,j].set_title(NAMES[m],color=COLORS[m],fontsize=9.4,pad=3)
         f=flights.get(m)
         stamps=[epochs[0],None,epochs[-1]]
@@ -390,6 +401,11 @@ def keyframes(flights,renderer,out,epochs):
                 if uv is not None:
                     a.plot(uv[:,0],uv[:,1],color=RED,lw=1.2);a.scatter(uv[:,0],uv[:,1],s=9,color=RED)
                 a.set_xlabel(f"{stamp:.1f} s    |    {100*f.z['arm_tool_clearance'][idx]:.1f} cm",fontsize=7.7,labelpad=1)
+                if row==0 and f.z["hold"][idx]:
+                    reason=str(f.z["hold_reason"][idx]) if "hold_reason" in f.z else ""
+                    label={"feedback":"Feedback hold","clearance":"Clearance hold","self_contact":"Self-contact hold"}.get(reason,"Protective hold")
+                    a.text(.02,.95,label,transform=a.transAxes,ha="left",va="top",fontsize=7,color=RED,
+                           bbox=dict(facecolor="white",alpha=.9,edgecolor="none",pad=.8))
             else:
                 if uv is not None:
                     a.plot(uv[:2,0],uv[:2,1],color="#A06A36",ls="--",lw=1.25)
@@ -400,8 +416,10 @@ def keyframes(flights,renderer,out,epochs):
                         a.text(.5,.91,"Tool outside target view",ha="center",va="top",transform=a.transAxes,fontsize=6.8,color=RED)
                 a.set_xlabel(f"{100*f.z['tip_error'][idx]:.1f} cm   |   {f.z['axis_error_deg'][idx]:.1f}°",fontsize=7.7,labelpad=1)
     fig.text(.035,.965,"Gate passage and oblique tool alignment",fontsize=11,weight="bold")
-    fig.text(.035,.918,f"Top: dynamic occlusion at {epochs[0]:g} s. Middle: closest arm–frame approach in each flight. Bottom: target alignment at {epochs[-1]:g} s.",fontsize=8.2,color=MUTED)
-    fig.text(.035,.013,"Rust segments connect the nearest surfaces. Teal and ochre indicate the measured tool axis and prescribed target direction.",fontsize=7.7,color=MUTED)
+    top=(f"Top: dynamic occlusion at {epochs[0]:g} s. Middle: closest arm–frame approach in each flight. Bottom: target alignment at {epochs[-1]:g} s."
+         if len(display)==5 else f"Rows: {epochs[0]:g} s during blackout  /  closest gate approach  /  tool alignment at {epochs[-1]:g} s.")
+    fig.text(.035,.918,top,fontsize=8.2,color=MUTED)
+    fig.text(.035,.013,"Rust: closest arm–frame surfaces. Teal: measured tool axis. Ochre: target axis.",fontsize=7.7,color=MUTED)
     save(fig,out,"gate_keyframes");plt.close(fig)
 
 
@@ -533,8 +551,8 @@ def main():
     manifest={"split":a.split,"seed":a.seed,"material":a.material,"vision":a.vision,
         "cases":{m:f.case for m,f in flights.items()},"epochs":a.epochs,"clock":"release seconds; each method has an independent flight",
         "thresholds":{"external_clearance_m":CLEARANCE_M,"tip_position_m":TIP_M,"tool_axis_deg":AXIS_DEG,"continuous_dwell_s":DWELL_S},
-        "inputs":[{"path":str(x.resolve()),"sha256":digest(x)} for x in inputs],
-        "outputs":[{"path":str(x.resolve()),"sha256":digest(x)} for x in out.glob("gate_*") if x.is_file() and x.stem in stems],
+        "inputs":[{"path":logical_name(x,a.root),"sha256":digest(x)} for x in inputs],
+        "outputs":[{"path":logical_name(x,a.root),"sha256":digest(x)} for x in out.glob("gate_*") if x.is_file() and x.stem in stems],
         "model_module":a.model_module,"outcome_source":"independent scorer; no success claims created by visualization"}
     (out/"visual_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
 

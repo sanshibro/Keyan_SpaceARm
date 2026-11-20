@@ -137,6 +137,9 @@ def build(stage,evidence_commit):
     root=stage/'canonical-release';src=root/'sources';src.mkdir(parents=True,exist_ok=True)
     rd=stage/'review';d=stage/'decisions';cohort=read(d/'cohort-summary.json')
     if cohort['trials']!=60 or cohort['cases_with_verified_raw_members']!=60:raise ValueError('Complete audited cohort required')
+    native=read(d/'native-log-audit.json')
+    if native['trials']!=60 or set(native['cases'])!=set(read(d/'metrics.json')['cases']):
+        raise ValueError('The native motor/shape audit must cover the same sixty flights')
     if read(rd/'gate_review_manifest.json')['pages']!=2:raise ValueError('Expected two review pages')
     conditions=cohort['conditions'];lead=summary_text(conditions);raw=RAW+evidence_commit+'/revision/data/round_gate_feedback/evidence/'
     rows=table_rows(read(d/'metrics.json'),raw)
@@ -179,6 +182,7 @@ def build(stage,evidence_commit):
     add('document','review.pdf','两页审阅 PDF','第一页解释形态反馈、净空与末端对位，第二页汇总三配对种子上的四种工况。',rd/'gate_review.pdf')
     add('data','all-trials.csv','60 趟闭环成绩','成功判据、停顿、工具误差、角度与方位精度，以及每项有效观测的样本数。',rd/'all_trials_metrics.csv')
     add('data','physical-audit.csv','过门最近点与视觉恢复时间','每趟臂爪最近点附近的弯角偏差、物理欠角、工具高度和曝光到交付的恢复时间。',d/'gate-physical-audit.csv')
+    add('data','native-log-audit.json','飞控、ROS 与物理执行的逐趟核对',f"按时间戳配对 {native['exact_timestamp_motor_matches']:,} 条 PX4 电机输出与 HIL 指令。ROS 的二维参考、估计与驱动量各有 {native['matched_shape_samples_per_topic']:,} 个样本逐点核对。",d/'native-log-audit.json')
     add('data','evidence-index.csv','原生飞行日志索引','按配对种子和工况保存原始包的固定 Git 修订地址、字节数和完整 SHA-256。',rd/'evidence-index.csv')
     add('data','cohort-summary.json','配对工况汇总','逐种工况给出三趟的最小值、中位数、最大值、任务通过数和可用观测数。',d/'cohort-summary.json')
     add('data','protocol.json','注册的窄门与对准协议','带载机械臂、门框尺寸、目标位姿、许可阈值、遮挡时刻与配对矩阵。',stage/'protocol.json')
@@ -191,9 +195,16 @@ def build(stage,evidence_commit):
                 '查阅两页报告及逐趟评分表，点击原始日志索引可追溯至同一趟 ULog、ROS bag 和漂移记录。'],
          scope='SUPER 机架与 Qingyu 单段臂，末端载荷 45 g。每趟独立运行 PX4 SITL、MuJoCo 和原生 ORB-SLAM3。虚拟动捕提供真值参考和独立评分。',
          source_note=f"感知冻结于 {cohort['approved_perception'][:7]}，闭环协议冻结于 {cohort['design_commit'][:7]}。代表种子为 26112131。腕部曝光后 0.20 秒交付。"))
-    dist=root/'dist';gen(stage,'add',dist,'--spec',specpath,'--source',src);gen(stage,'verify',dist)
+    dist=root/'dist';gen(stage,'add',dist,'--spec',specpath,'--source',src)
     target=dist/'archive'/TAG
     shutil.copyfile(root/'flights.html',target/'flights.html')
+    page=(target/'index.html').read_text(encoding='utf8')
+    if 'href="flights.html"' not in page:
+        page=page.replace('</header>','<p><a href="flights.html">打开 60 趟独立飞行的成绩、日志与校验值</a></p></header>',1)
+        (target/'index.html').write_bytes(page.encode())
+        snap=read(target/'snapshot.json');snap['outputs']['page']['sha256']=digest(target/'index.html')
+        save(target/'snapshot.json',snap)
+    gen(stage,'verify',dist)
     shutil.copyfile(target/'meeting.zip',stage/'组会离线包.zip')
     with tarfile.open(root/'meeting-mirror.tar.gz','w:gz') as tar:
         for f in sorted(target.rglob('*')):
@@ -208,8 +219,8 @@ def publish(stage,media_commit):
     if (dist/'archive'/PREVIOUS/'snapshot.json') not in previous:raise ValueError('Previous reviewed stage missing')
     snap=read(orig/'snapshot.json');spec=read(root/'round.json')
     prefix='revision/meeting_archive/archive/'+TAG+'/'
-    # Preserve direct on-site media paths for images, report and small tables.
-    # Only the large playback and offline package use an immutable external revision.
+    # The research Git keeps a byte-identical independent copy of the video. Host
+    # the verified replay on the group site's own origin whenever it fits.
     remote=RAW+media_commit+'/'+prefix
     cdn=CDN+media_commit+'/'+prefix+'media/'
     ext={'replay.mp4':(cdn+'replay.mp4',orig/'media/replay.mp4'),'meeting.zip':(remote+'meeting.zip',orig/'meeting.zip')}
@@ -220,16 +231,18 @@ def publish(stage,media_commit):
     save(stage/'public-media-verification.json',proof)
     entries={row['file']:row for row in spec['files']}
     page=(orig/'index.html').read_text(encoding='utf-8')
+    outside=sum(p.stat().st_size for p in dist.rglob('*') if p.is_file() and dest not in p.parents)
+    native_size=outside+sum(r['bytes'] for r in snap['files'])
+    native_video=native_size<255*1024**2
     for f in snap['files']:
         n=f['file']
-        if n in proof:
+        if n in proof and not (n=='replay.mp4' and native_video):
             if proof[n]['sha256']!=f['sha256']:raise ValueError(n)
             url=proof[n]['external_url'];f['external_url']=entries[n]['external_url']=url
             page=page.replace('"media/'+n+'"','"'+html.escape(url,quote=True)+'"')
         else:
             shutil.copyfile(orig/'media'/n,media/n)
     page=page.replace('href="meeting.zip"','href="'+proof['meeting.zip']['external_url']+'"')
-    page=page.replace('</header>','<p><a href="flights.html">打开 60 趟独立飞行的成绩、日志与校验值</a></p></header>',1)
     page=page.replace('打开对应飞行的原始日志与验收记录','上一轮获批的视觉与应变融合模块')
     (dest/'index.html').write_bytes(page.encode())
     shutil.copyfile(orig/'flights.html',dest/'flights.html')
@@ -243,8 +256,9 @@ def publish(stage,media_commit):
     attr.write_bytes(rules.encode())
     gen(stage,'index',dist)
     route='archive/'+TAG+'/';home=dist/'index.html';page=home.read_text(encoding='utf-8')
+    replay=route+'media/replay.mp4' if native_video else proof['replay.mp4']['external_url']
     video=(f'<section id="reviewVideo"><h2>{TITLE}</h2><video controls playsinline preload="metadata" poster="{route}media/overview.webp" '
-           f'style="display:block;width:100%;max-height:600px;background:white"><source src="{proof["replay.mp4"]["external_url"]}" type="video/mp4"></video>'
+           f'style="display:block;width:100%;max-height:600px;background:white"><source src="{replay}" type="video/mp4"></video>'
            f'<p><a href="{route}media/review.pdf">两页审阅</a> · <a href="{route}index.html">实验图、曲线与视频</a> · '
            f'<a href="{route}flights.html">逐趟原始日志</a></p></section>')
     page,n=re.subn(r'<section id="reviewVideo">.*?</section>',lambda _:video,page,count=1,flags=re.S)
