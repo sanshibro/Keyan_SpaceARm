@@ -136,7 +136,8 @@ def textured_gate_box(asset,world,source,folder,seed):
     vertices=[(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),
               (-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]
     faces=[(1,5,8,4),(2,3,7,6),(1,2,6,5),(4,8,7,3),(1,4,3,2),(5,6,7,8)]
-    obj=folder/(mesh+'-uv1.obj')
+    shape_key=hashlib.sha256(half.tobytes()).hexdigest()[:10]
+    obj=folder/(mesh+'-uv1-'+shape_key+'.obj')
     lines=['v %d %d %d'%v for v in vertices]
     for i,face in enumerate(faces):
         vertices_world=np.asarray([vertices[k-1] for k in face])*half

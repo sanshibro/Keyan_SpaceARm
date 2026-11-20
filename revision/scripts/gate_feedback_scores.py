@@ -1,7 +1,9 @@
 """Score each independent trajectory from integrated robot geometry and the native clock."""
 import argparse
 import json
+import hashlib
 from pathlib import Path
+import mujoco
 import numpy as np
 from gate_feedback_model import OUT,P,digest,dump,make_plant
 from gate_distance_audit import DistanceAudit
@@ -57,12 +59,30 @@ def score(folder,plant=None):
     if min(indices)<0:raise ValueError('No control observation at scoring time')
     if max(t-ctl['t'][indices])>.02001:raise ValueError('Flight/control clocks disagree')
     c={k:ctl[k][indices] for k in ctl.files}
-    plant=plant or make_plant(canvas=False)
-    audit=DistanceAudit(plant.m)
-    m=plant.m;d=audit.d;axis=np.asarray(info['goal_axis']);target=np.asarray(info['goal_xyz'])
+    provenance=json.loads((folder/'provenance.json').read_text())
+    xml_path=next((f for f in (folder/'model.xml',folder/'optics/sensor-canvas.xml') if f.exists()),None)
+    if xml_path is not None:
+        xml=xml_path.read_bytes()
+        if hashlib.sha256(xml).hexdigest()!=provenance['plant_xml_sha256']:raise ValueError('Model fingerprint differs from flight')
+        model=mujoco.MjModel.from_xml_string(xml.decode())
+    else:
+        plant=plant or make_plant(canvas=False)
+        if hashlib.sha256(plant.xml.encode()).hexdigest()!=provenance['plant_xml_sha256']:raise ValueError('Flight model required')
+        model=plant.m
+    audit=DistanceAudit(model)
+    m=model;d=audit.d;axis=np.asarray(info['goal_axis']);target=np.asarray(info['goal_xyz'])
+    if (folder/'protocol.json').exists():
+        path=folder/'protocol.json'
+        if digest(path)!=provenance['protocol_sha256']:raise ValueError('Scene protocol differs from the flying copy')
+        registered=json.loads(path.read_text())
+        if 'target_axis_enu' in registered:
+            fixed_axis=np.asarray(registered['target_axis_enu']);fixed_target=np.asarray(registered['target'])
+            if not np.allclose(fixed_axis,axis,rtol=0.,atol=1e-9) or not np.array_equal(fixed_target,target):
+                raise ValueError('Controller goal differs from the registered score reference')
+            axis,target=fixed_axis,fixed_target
     series={k:[] for k in ('true_b','tip_error','axis_error_deg','body_clearance','arm_tool_clearance',
                              'self_clearance','near_robot','near_gate','body_lower','arm_lower','self_lower',
-                             'body_upper','arm_upper','self_upper','rear','tip','tool_axis','body_pose',
+                             'body_upper','arm_upper','self_upper','rear','tip','tool_axis','body_pose','inside_aperture',
                              'body_pair','arm_pair','self_pair','arm_near_robot','arm_near_gate')}
     red=P['thresholds']['external_m']
     for q in qpos:
@@ -75,7 +95,14 @@ def score(folder,plant=None):
             finally:audit.tolerance=tol
         tip=d.site('tip').xpos.copy();tool_axis=d.site('tip').xmat.reshape(3,3)[:,2].copy()
         shape=bend(d.body('mount').xmat.reshape(3,3).T@d.body('tool').xmat.reshape(3,3))
-        lo,_=audit.bounds()
+        lo,hi=audit.bounds()
+        gate=m.geom('G1_sill');lintel=m.geom('G1_lintel')
+        gx=d.geom_xpos[gate.id,0];thickness=gate.size[0]
+        intersect=audit.robot[(hi[audit.robot,0]>=gx-thickness)&(lo[audit.robot,0]<=gx+thickness)]
+        aperture=bool(np.all(lo[intersect,1]>=d.geom_xpos[m.geom('G1_jamb_negative').id,1]+m.geom('G1_jamb_negative').size[1])
+                      and np.all(hi[intersect,1]<=d.geom_xpos[m.geom('G1_jamb_positive').id,1]-m.geom('G1_jamb_positive').size[1])
+                      and np.all(lo[intersect,2]>=d.geom_xpos[gate.id,2]+gate.size[2])
+                      and np.all(hi[intersect,2]<=d.geom_xpos[lintel.id,2]-lintel.size[2]))
         lower=lambda g:dis['details'][g]['lower']
         high=lambda g:dis['details'][g]['upper']
         pair=lambda g:[dis['details'][g]['geom_a'],dis['details'][g]['geom_b']]
@@ -85,7 +112,7 @@ def score(folder,plant=None):
                body_lower=lower('body'),arm_lower=lower('arm_tool'),self_lower=lower('self'),
                body_upper=high('body'),arm_upper=high('arm_tool'),self_upper=high('self'),
                tip=tip,tool_axis=tool_axis,body_pose=q[:7].copy(),body_pair=pair('body'),arm_pair=pair('arm_tool'),self_pair=pair('self'),
-               rear=float(lo[audit.robot,0].min()-P['gate']['center_x']-P['gate']['thickness']/2))
+               inside_aperture=aperture,rear=float(lo[audit.robot,0].min()-gx-thickness))
         for name,val in s.items():series[name].append(val)
     series={k:np.asarray(v) for k,v in series.items()}
     view=info['case']['vision'];cut=(t>=P['window']['blackout_start']-1e-9)&(t<P['window']['blackout_end']-1e-9)
@@ -100,7 +127,8 @@ def score(folder,plant=None):
     hold_diagnostic=errors(c['vision_hold_b'],series['true_b'],blind)
     difference=np.diff(t,append=P['deadline']);holds=c['hold']!='none'
     contact=int(raw['contact_steps'][keep][-1]) if 'contact_steps' in raw.files else int(run['contact_integration_steps'])
-    safe=bool(series['body_lower'].min()>=red and series['arm_lower'].min()>=red and series['self_lower'].min()>0 and contact==0)
+    safe=bool(series['body_lower'].min()>=red and series['arm_lower'].min()>=red and series['self_lower'].min()>0
+              and contact==0 and series['inside_aperture'].all())
     dt=float(np.median(np.diff(t)))
     s=dict(case=info['case'],success=bool(safe and len(done)),safe=safe,
            crossed=bool(true_exit.any() and estimated_exit.any()),dwell_reached=bool(len(done)),
@@ -120,6 +148,7 @@ def score(folder,plant=None):
            dynamic_phi_range_deg=float(np.rad2deg(np.ptp(np.unwrap(np.deg2rad(azimuth(series['true_b'][cut])))))),
            true_max_bend_deg=float(magnitude(series['true_b']).max()),true_max_total_curvature_deg=run['max_total_curvature_deg'],
            source_valid_coverage=float(np.mean(c['shape_valid'])),terminal_after_gate_samples=int((terminal&dock).sum()),
+           passed_inside_aperture=bool(series['inside_aperture'].all()),
            sample_period_s=dt,physics_samples=int(len(t)),max_control_alignment_s=float(max(t-ctl['t'][indices])),
            witness_bound_width_m={g:float(np.max(series[g+'_upper']-series[g+'_lower'])) for g in ('body','arm','self')},
            goal_xyz=target.tolist(),goal_axis=axis.tolist())

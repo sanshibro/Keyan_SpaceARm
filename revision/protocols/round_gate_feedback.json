@@ -461,6 +461,8 @@
     "center_x": 1,
     "thickness": 0.1,
     "half_width": 0.38,
+    "beam_depth_z": 0.12,
+    "post_width_y": 0.085,
     "sill_z": 1.695,
     "lintel_z": 2.385
   },
@@ -469,6 +471,7 @@
     0.25,
     1.71
   ],
+  "target_axis_enu": [0.6109852853641633, 0.4616567134559925, -0.6430941299603677],
   "final_deg": [
     50,
     143
@@ -481,6 +484,9 @@
     36,
     191
   ],
+  "survey_deg": [74, 163],
+  "survey_body_x": 0.49,
+  "survey_clock_s": [14.0, 18.0, 20.4, 24.0],
   "servo": {
     "kp": 0.48,
     "ki": 1.15,
@@ -491,7 +497,9 @@
   "pose": {
     "hover_z": 2.16,
     "staging_x": 0.34,
-    "exit_x": 1.63
+    "exit_x": 1.63,
+    "shape_lead_s": 0.9,
+    "translation_s": 11.0
   },
   "payload_kg": 0.045,
   "phi_min_deg": 5,
@@ -503,6 +511,11 @@
     "rate_hz": 25,
     "delay_s": 0.2,
     "start_s": 12
+  },
+  "review_epochs_s": [31.4, 52.0],
+  "review_cameras": {
+    "side": {"lookat": [1.00, 0.00, 1.98], "azimuth": 90, "elevation": -5, "distance": 3.1, "orthographic": true},
+    "oblique": {"lookat": [1.20, 0.07, 1.99], "azimuth": 127, "elevation": -15, "distance": 3.3, "orthographic": true}
   },
   "clock": "evaluations in seconds since removal of launch support",
   "actuation": "One shared body controller and two-dimensional arm servo across methods. World enclosure is computed from PX4 EKF and the declared source; simulated body transforms are available to the acquisition layer and independent scorer, and feed the controller only for the designated oracle arm source.",

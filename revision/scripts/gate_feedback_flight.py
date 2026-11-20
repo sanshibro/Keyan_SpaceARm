@@ -33,7 +33,9 @@ class GateControl:
     """Uses only a declared shape observation, measured PX4 state and the surveyed gate."""
     def __init__(self, geometry):
         self.g = geometry
-        self.axis = geometry.world_axis_for(cart(*P['final_deg']))
+        self.axis = np.asarray(P['target_axis_enu'])
+        if not np.allclose(self.axis,geometry.world_axis_for(cart(*P['final_deg'])),atol=1e-9,rtol=0.):
+            raise ValueError('Surveyed task axis and registered mount disagree')
         self.integral = np.zeros(2)
         self.issued = np.zeros(2)
         self.ref = HOVER.copy()
@@ -57,6 +59,7 @@ class GateControl:
         hold = 'none'
         body_gap = arm_gap = rear = np.nan
         forecast_body = forecast_arm = np.nan
+        self_contact=False
         estimate = np.asarray(obs['b'], dtype=float)
         if obs['valid']:
             self.last_valid_b = estimate.copy()
@@ -72,34 +75,45 @@ class GateControl:
             ahead = g.info(xyz, R, estimate, advance)
             forecast_body = min(body_gap,mid[0],ahead[0])
             forecast_arm = min(arm_gap,mid[1],ahead[1])
+            self_contact=g.has_self_contact()
             self.checked += 1
 
         if t < 27.6:
-            self.phase = 'takeoff' if t < 12 else 'neutral_anchor' if t < 14 else 'prebend'
-            fraction = ramp((t-14.)/7.)
-            self.des = cart(P['pre_deg'][0]*fraction, P['pre_deg'][1])
-            if fresh:
-                self.ref = HOVER+(STAGE-HOVER)*ramp((t-15.)/8.)
+            s0,s1,s2,s3=P['survey_clock_s']
+            self.phase = 'takeoff' if t < 12 else 'neutral_anchor' if t < s0 else 'view_survey' if t < s2 else 'prebend'
+            survey=P['survey_deg']
+            if t<s2:
+                self.des=cart(survey[0]*ramp((t-s0)/(s1-s0)),survey[1])
+            else:
+                self.des=interpolate_angles(survey,P['pre_deg'],ramp((t-s2)/(s3-s2)))
+            if t>=s0 and self.checked and (not fresh or self_contact):
+                hold='self_contact' if self_contact else 'feedback'
+            if fresh and not self_contact:
+                survey_pose=HOVER+[P['survey_body_x'],0.,0.]
+                if t<s2:
+                    self.ref=HOVER+(survey_pose-HOVER)*ramp((t-13.)/(s1-13.))
+                else:
+                    self.ref=survey_pose+(STAGE-survey_pose)*ramp((t-s2)/(s3-s2))
         elif self.exit_time is None:
             self.phase = 'cross'
-            if not fresh:
-                hold = 'feedback'
+            if not fresh or self_contact:
+                hold = 'self_contact' if self_contact else 'feedback'
             else:
                 self.shaping += DT
                 self.des = interpolate_angles(P['pre_deg'], P['gate_deg'], ramp(self.shaping/4.2))
                 if min(forecast_body,forecast_arm) < P['thresholds']['external_m']:
                     hold = 'clearance'
-                else:
+                elif self.shaping>=P['pose']['shape_lead_s']:
                     self.advance += DT
-                    self.ref = STAGE+(EXIT-STAGE)*ramp(self.advance/10.)
+                    self.ref = STAGE+(EXIT-STAGE)*ramp(self.advance/P['pose']['translation_s'])
                 if rear >= .02 and xyz[0] > P['gate']['center_x']:
                     self.exit_time = t
                     self.dock_origin = self.ref.copy()
                     self.exit_shape = self.des.copy()
         else:
             self.phase = 'dock'
-            if not fresh:
-                hold = 'feedback'
+            if not fresh or self_contact:
+                hold = 'self_contact' if self_contact else 'feedback'
             elif min(body_gap,arm_gap) < P['thresholds']['external_m']:
                 hold = 'clearance'
             else:
@@ -114,7 +128,7 @@ class GateControl:
             # Brake from the measured aircraft position when its flying reference leads it.
             self.ref[0]=xyz[0]
         self.previous_hold=hold
-        if fresh:
+        if fresh and not self_contact:
             error = self.des-estimate
             s=self.servo
             self.integral = limit_vector(self.integral+DT*s['ki']*error,np.deg2rad(s['i_limit_deg']))
@@ -125,7 +139,7 @@ class GateControl:
                     integral_b=self.integral.copy(),px4_xyz=np.asarray(xyz if xyz is not None else [np.nan]*3),
                     px4_rpy=np.asarray(rpy if rpy is not None else [np.nan]*3),ref_world=self.ref.copy(),
                     age_p=age_p,age_r=age_r,shape_age=obs['age'],est_body=body_gap,est_arm=arm_gap,
-                    predicted_body=forecast_body,predicted_arm=forecast_arm,est_rear=rear,
+                    predicted_body=forecast_body,predicted_arm=forecast_arm,est_rear=rear,est_self_contact=self_contact,
                     gate_exit=self.exit_time is not None)
 
 class FlightLoop:

@@ -117,6 +117,9 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
     out.mkdir(parents=True,exist_ok=False)
     runtime=out/'runtime'
     plant=plant_factory()
+    if flight_loop is not None:
+        (out/'model.xml').write_text(plant.xml)
+        shutil.copyfile(ROOT/'revision/protocols'/protocol_name,out/'protocol.json')
     if noise_seed is not None:
         plant.noise=np.random.default_rng(noise_seed)
     prov=prepare(runtime,pitch_i,instance)

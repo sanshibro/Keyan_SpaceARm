@@ -1,33 +1,15 @@
 """Registered stepped dynamics and a private estimator FK copy for the oblique single-gate task."""
-import hashlib
-import json
-from pathlib import Path
 from xml.etree import ElementTree as ET
 from types import SimpleNamespace
 import mujoco
 import numpy as np
 from scipy.spatial.transform import Rotation
 from arm_command import ArmCommand
-from model import SimArmBridge
-from round_f_plant import Plant, LAUNCH, ROOT
+from round_f_plant import Plant, LAUNCH
+from gate_feedback_spec import ROOT, SPECFILE, P, OUT, digest, dump, verify_frozen
 from round_g1_model import Geometry
 from round_aug_vis import bend
 
-SPECFILE=ROOT/'revision/protocols/round_gate_feedback.json'
-P=json.loads(SPECFILE.read_bytes())
-OUT=ROOT/'revision/data/round_gate_feedback'
-def digest(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-def dump(path,obj):
-    path.parent.mkdir(parents=True,exist_ok=True)
-    tmp=path.with_suffix(path.suffix+'.tmp')
-    tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
-    tmp.replace(path)
-def verify_frozen():
-    path=ROOT/'revision/protocols/gate_feedback_perception_lock.json'
-    lock=json.loads(path.read_bytes())
-    for name,h in lock['files'].items():
-        if digest(ROOT/name)!=h:raise RuntimeError('Frozen input differs: '+name)
-    return digest(path)
 def cart(theta,phi):
     return np.deg2rad(theta)*np.array([np.cos(np.deg2rad(phi)),np.sin(np.deg2rad(phi))])
 def limit_vector(v,r):
@@ -35,7 +17,9 @@ def limit_vector(v,r):
     return v*(r/n) if n>r else v
 def boxes():
     g=P['gate'];x=g['center_x'];half=g['thickness']/2;w=g['half_width'];s=g['sill_z'];l=g['lintel_z']
-    sections=[('sill',-1.5,1.5,0,s),('lintel',-1.5,1.5,l,3.3),('jamb_negative',-1.5,-w,s,l),('jamb_positive',w,1.5,s,l)]
+    beam=g['beam_depth_z'];post=g['post_width_y']
+    sections=[('sill',-w,w,s-beam,s),('lintel',-w,w,l,l+beam),
+              ('jamb_negative',-w-post,-w,0,l+beam),('jamb_positive',w,w+post,0,l+beam)]
     return [(n,np.array([x-half,a,c],float),np.array([x+half,b,d],float)) for n,a,b,c,d in sections]
 class FlightPlant(Plant):
     def issue(self,k,us,controls,theta):
@@ -90,6 +74,10 @@ class ObserverGeometry(Geometry):
     def world_axis_for(self,b):
         self.place_estimate(np.zeros(3),np.eye(3),b)
         return self.tip()[1]
+    def has_self_contact(self):
+        mujoco.mj_forward(self.m,self.d)
+        return any(c.dist<=0 and self.m.geom_bodyid[c.geom1] and self.m.geom_bodyid[c.geom2]
+                   for c in self.d.contact[:self.d.ncon])
     def geom_axis_bend(self,R,axis):
         v=self.local_mount.T@R.T@axis
         return np.arctan2(np.linalg.norm(v[:2]),v[2])*v[:2]/max(np.linalg.norm(v[:2]),1e-12)
