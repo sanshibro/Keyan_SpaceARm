@@ -1,0 +1,80 @@
+{
+  "stage": "2026-11-20-gate-feedback",
+  "state": "awaiting_review",
+  "approved_perception": "881a7996739479874b489ec910d7c78ebb26c075",
+  "control_design": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+  "raw_flights_revision": "081ad01c1e9212ad9825690925aad1a0e1c7cd7f",
+  "research_artifacts_revision": "9cbf998d2d4a9cc31cccbc028fba77ecab1b3833",
+  "trials": 60,
+  "published_version": 23,
+  "site_source": "bdd0e98d937a63ca8ca075f3aa91ddd52b7dd901",
+  "public_url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site",
+  "verified_at": "2026-11-20 16:31:18 UTC",
+  "public_clients": [
+    "NUC",
+    "Windows"
+  ],
+  "endpoints": {
+    "home": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/index.html",
+      "status": 200,
+      "content_type": "text/html",
+      "verified_source_sha256": "bbe3071c973375e013dbfc1d43a977ff866fd75f8f7a7a7ac82e907d68c5d48a"
+    },
+    "round": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/2026-11-20-gate-feedback/index.html",
+      "status": 200,
+      "content_type": "text/html",
+      "verified_source_sha256": "e9b00adf4a846a6ec4a28b1e456a71d876496ca154b8a51f5124859e02f06a44"
+    },
+    "table": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/2026-11-20-gate-feedback/flights.html",
+      "status": 200,
+      "content_type": "text/html",
+      "verified_source_sha256": "86d79ba940ca563fd27a3c033a253556bc233fab1e91239c5a90a6253c2030ab"
+    },
+    "pdf": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/2026-11-20-gate-feedback/media/review.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "verified_source_sha256": "c78f057efb8d0320ac5204c31e4ecf058bc4732974c0903a898a676917652819"
+    },
+    "video": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/2026-11-20-gate-feedback/media/replay.mp4",
+      "status": 200,
+      "content_type": "video/mp4",
+      "verified_source_sha256": "32d2a1df4e7636531b08e72a64f1853dbce913f6385022a08cdb78e7cadb4aa7"
+    },
+    "frozen_module": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/2026-11-20-augmented-fusion/snapshot.json",
+      "status": 200,
+      "content_type": "application/json",
+      "verified_source_sha256": "0e525e2c8786016234040dc230b0a5cefb70bbc077fbf1a0761763a8c546ff2f"
+    },
+    "checkpoint": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/gate-live/checkpoint.json",
+      "status": 200,
+      "content_type": "application/json",
+      "verified_source_sha256": "1dd5de5a5013eae5e37aebc6b935ab406890ebbfe7bb7c68966a97bbb3755f6a"
+    },
+    "status": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/status_public.json",
+      "status": 200,
+      "content_type": "application/json",
+      "verified_source_sha256": "cd4c61d1cd4d3c25b722c0b44e79c5aa57b4d360f83008459335d7c659d6a25f"
+    },
+    "usage": {
+      "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/usage_public.json",
+      "status": 200,
+      "content_type": "application/json",
+      "verified_source_sha256": "baf9a5e8f5027b3f90c517f2322f4b63b6627a77ee1ca9aa8169a8b9bddc370e"
+    }
+  },
+  "representative_independent_raw_check": {
+    "status": 200,
+    "bytes": 7704839,
+    "sha256": "e4abba28b1555d8450d577c0708d80077e3f457a812d3f8b69191bd1e56468a2",
+    "members": 27,
+    "source": "https://raw.githubusercontent.com/sanshibro/Keyan_SpaceARm/081ad01c1e9212ad9825690925aad1a0e1c7cd7f/revision/data/round_gate_feedback/evidence/26112131-differential-occluded-proposed.zip"
+  }
+}
