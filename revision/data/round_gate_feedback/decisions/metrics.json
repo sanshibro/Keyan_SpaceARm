@@ -3816,6 +3816,647 @@
         "native_csv_sha256": "7de2f576ea76e7386d75312b6984cd2161f38f879c343cef8837bd894258ade0"
       },
       "scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69"
+    },
+    "26112137-nominal-occluded-vision": {
+      "case": {
+        "case": "26112137-nominal-occluded-vision",
+        "seed": 26112137,
+        "method": "vision",
+        "vision": "occluded",
+        "material": "nominal"
+      },
+      "success": false,
+      "safe": false,
+      "crossed": true,
+      "dwell_reached": false,
+      "settled_at_s": null,
+      "completion_s": null,
+      "estimated_rear_exit_s": 41.56,
+      "physical_rear_exit_s": 41.559999999999995,
+      "body_min_m": 0.0763009254492244,
+      "arm_tool_min_m": 0.07978415310694519,
+      "self_min_m": -0.0009024747077218396,
+      "physical_contact_steps": 1811,
+      "hold_s": 7.819999999999975,
+      "feedback_hold_s": 4.16,
+      "clearance_hold_s": 0.779999999999994,
+      "max_dwell_s": 0.740000000000002,
+      "tip_rmse_m": 0.028144171843185115,
+      "tip_peak_m": 0.03888949818286901,
+      "axis_rmse_deg": 2.8486812537213986,
+      "axis_peak_deg": 5.283553190487092,
+      "theta_rmse_deg": 6.483931840657069,
+      "phi_rmse_deg": 5.871336813822991,
+      "theta_blackout_rmse_deg": 7.064819456365888,
+      "phi_blackout_rmse_deg": 11.723484005657292,
+      "whole_angle": {
+        "theta_rmse_deg": 6.483931840657069,
+        "phi_rmse_deg": 5.871336813822991,
+        "theta_peak_deg": 16.294400719474233,
+        "phi_peak_deg": 15.618231006200858,
+        "samples": 2750,
+        "available": 1933,
+        "azimuth_samples": 1797
+      },
+      "blackout_angle": {
+        "theta_rmse_deg": 7.064819456365888,
+        "phi_rmse_deg": 11.723484005657292,
+        "theta_peak_deg": 10.691655444624423,
+        "phi_peak_deg": 14.287393223490085,
+        "samples": 200,
+        "available": 10,
+        "azimuth_samples": 10
+      },
+      "vision_hold_blackout": {
+        "theta_rmse_deg": 5.678693333377172,
+        "phi_rmse_deg": 7.851735171002795,
+        "theta_peak_deg": 8.273777088441136,
+        "phi_peak_deg": 8.082354144621945,
+        "samples": 200,
+        "available": 200,
+        "azimuth_samples": 200
+      },
+      "dynamic_theta_range_deg": 7.3678437311093745,
+      "dynamic_phi_range_deg": 5.828420958885616,
+      "true_max_bend_deg": 82.26713614869489,
+      "true_max_total_curvature_deg": 82.32711817272268,
+      "source_valid_coverage": 0.7029090909090909,
+      "terminal_after_gate_samples": 301,
+      "passed_inside_aperture": true,
+      "sample_period_s": 0.019999999999999574,
+      "physics_samples": 2750,
+      "max_control_alignment_s": 0.0,
+      "witness_bound_width_m": {
+        "body": 9.948724446440238e-05,
+        "arm": 9.984446688138249e-05,
+        "self": 9.991970559991071e-05
+      },
+      "goal_xyz": [
+        1.98,
+        0.25,
+        1.71
+      ],
+      "goal_axis": [
+        0.6109852853641633,
+        0.4616567134559925,
+        -0.6430941299603677
+      ],
+      "body_nearest": {
+        "t": 39.339999999999996,
+        "geoms": [
+          "collision_landing_163",
+          "G1_sill"
+        ]
+      },
+      "arm_nearest": {
+        "t": 38.019999999999996,
+        "geoms": [
+          "collision_gripper_finger1",
+          "G1_sill"
+        ]
+      },
+      "self_nearest": {
+        "t": 49.019999999999996,
+        "geoms": [
+          "collision_landing_163",
+          "d435"
+        ]
+      },
+      "artifacts": {
+        "flight.ulg": "194ac522f55efc05c8b919a1a834e65bed1ccaf448daf8c8f5103abecb0a8053",
+        "flight.bag": "d014600f878b144c35c470c6821b64aec908b44a108246abd42dc74c578f6b29",
+        "physics.npz": "b68d04386d87284b6809f18665bf0bdf2019ee696a6a6bd3aefc33e7141916b4",
+        "control.npz": "b654e23449f028bb93ff7e0a2073c541f8fabf56bdbdf870138f7df7a9123617",
+        "run.json": "862e020d645ad3ceb9bb4449b51bb10d629dfc24878136b4f80be761dbdeb714",
+        "provenance.json": "e0dc019850ec1f4fbff64a0d1d303cf40e2d407e6947b013533e4ca40968cde6",
+        "control-summary.json": "ea0440e94ff90195d02ae8a683047a6b898ac36e6d358f34dbd6abee6dd6a02e",
+        "score-trace.npz": "d9cd183bfbd7892d7b011455d69894bebc9ee6c3a11a7408f8dae4d90aa28567",
+        "optics/native.csv": "16720e6384fd9bffa1ee4ff523a0af1919c2eba8c3589ffc8459b1122d7d385e",
+        "optics/index.jsonl": "ce76e71fb52f4b08facbb3a6370962433f1554ca9f84d3a44f819e850f83b707",
+        "optics/observations.npz": "03c1246eec386b5a113fa90eb269fc043c1fdc72817e7660ff5225d540f67bcc",
+        "sensors/strain_observations.npz": "5097bac6e682db388342fa16009de40e705873dfa74e8401e356786f4c780bc0",
+        "sensors/estimate_proposed.npz": "66ab93ba4b356ed19a118c5d841d7b653ccaa8b5c3933518d3149b9f4f77d425"
+      },
+      "optics": {
+        "frames": 1151,
+        "valid": 1047,
+        "native_csv_sha256": "16720e6384fd9bffa1ee4ff523a0af1919c2eba8c3589ffc8459b1122d7d385e"
+      },
+      "scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69"
+    },
+    "26112137-nominal-natural-strain": {
+      "case": {
+        "case": "26112137-nominal-natural-strain",
+        "seed": 26112137,
+        "method": "strain",
+        "vision": "natural",
+        "material": "nominal"
+      },
+      "success": true,
+      "safe": true,
+      "crossed": true,
+      "dwell_reached": true,
+      "settled_at_s": 43.239999999999995,
+      "completion_s": 43.239999999999995,
+      "estimated_rear_exit_s": 36.58,
+      "physical_rear_exit_s": 36.58,
+      "body_min_m": 0.0810848509854695,
+      "arm_tool_min_m": 0.09396921370772962,
+      "self_min_m": 0.0009508172745975245,
+      "physical_contact_steps": 0,
+      "hold_s": 0.0,
+      "feedback_hold_s": 0.0,
+      "clearance_hold_s": 0.0,
+      "max_dwell_s": 12.760000000000005,
+      "tip_rmse_m": 0.03006613114687895,
+      "tip_peak_m": 0.03385892328259876,
+      "axis_rmse_deg": 0.5722657511218474,
+      "axis_peak_deg": 0.7465570088489512,
+      "theta_rmse_deg": 0.5208869246578149,
+      "phi_rmse_deg": 0.7580858006889052,
+      "theta_blackout_rmse_deg": null,
+      "phi_blackout_rmse_deg": null,
+      "whole_angle": {
+        "theta_rmse_deg": 0.5208869246578149,
+        "phi_rmse_deg": 0.7580858006889052,
+        "theta_peak_deg": 1.4519964382740724,
+        "phi_peak_deg": 7.72792642089783,
+        "samples": 2750,
+        "available": 2750,
+        "azimuth_samples": 2006
+      },
+      "blackout_angle": {
+        "theta_rmse_deg": null,
+        "phi_rmse_deg": null,
+        "theta_peak_deg": null,
+        "phi_peak_deg": null,
+        "samples": 0,
+        "available": 0,
+        "azimuth_samples": 0
+      },
+      "vision_hold_blackout": {
+        "theta_rmse_deg": null,
+        "phi_rmse_deg": null,
+        "theta_peak_deg": null,
+        "phi_peak_deg": null,
+        "samples": 0,
+        "available": 0,
+        "azimuth_samples": 0
+      },
+      "dynamic_theta_range_deg": 42.36642880037742,
+      "dynamic_phi_range_deg": 24.850220789803135,
+      "true_max_bend_deg": 78.71257668404094,
+      "true_max_total_curvature_deg": 78.73680728522609,
+      "source_valid_coverage": 1.0,
+      "terminal_after_gate_samples": 301,
+      "passed_inside_aperture": true,
+      "sample_period_s": 0.019999999999999574,
+      "physics_samples": 2750,
+      "max_control_alignment_s": 0.0,
+      "witness_bound_width_m": {
+        "body": 9.97050019380108e-05,
+        "arm": 9.993415268794159e-05,
+        "self": 9.99471904835743e-05
+      },
+      "goal_xyz": [
+        1.98,
+        0.25,
+        1.71
+      ],
+      "goal_axis": [
+        0.6109852853641633,
+        0.4616567134559925,
+        -0.6430941299603677
+      ],
+      "body_nearest": {
+        "t": 34.3,
+        "geoms": [
+          "collision_landing_163",
+          "G1_sill"
+        ]
+      },
+      "arm_nearest": {
+        "t": 33.62,
+        "geoms": [
+          "collision_gripper_finger1",
+          "G1_sill"
+        ]
+      },
+      "self_nearest": {
+        "t": 13.479999999999999,
+        "geoms": [
+          "geom317",
+          "arm1"
+        ]
+      },
+      "artifacts": {
+        "flight.ulg": "2c83d700e2458419a2c5eb4766c2a0ee0bbb7c17e17cb238a146a555951afd9c",
+        "flight.bag": "5bc65ae2503c94888f127985c7b60458236d6c96d81b25bb5f7c5756dd5c63dd",
+        "physics.npz": "ea808678e3c80b8458ab64843db8e384e53588c57b24d33e474baea47029844d",
+        "control.npz": "d9cb9b92adcb45620cdfca3b6f430df2f7fb44f7080f425b91706d442cbd17ed",
+        "run.json": "c0b67d2c7cc5ed12f7e402af9f374bbcdfaef804e1fc991c95d568fafdee7960",
+        "provenance.json": "1450a10298573a192e9e65ebda307dbe2273fc0cd88c3367f745c7682d719865",
+        "control-summary.json": "5639a40423b27c0a060d0aeec54f6ba6fbc2f85471f226b87cd97212f27915c2",
+        "score-trace.npz": "140710e360f33515fa9e63856055f151972502eb9a3e87a4ac80baf66a2fc322",
+        "optics/native.csv": "d0096f304c0e8ed37aa14fd6aa73a990c6568b2453a76e3f5bc1ee1ad688d872",
+        "optics/index.jsonl": "cc872401fe65a572a9da56c59fcfcd9f9872a84ba089e05ee05801055b631801",
+        "optics/observations.npz": "8bfac0fc39173ef207401eaf80026c0b2204772915d16eb4c691ec62c3201c76",
+        "sensors/strain_observations.npz": "cb0f91b3d81cfac86e9dcfc597a9457f4cc0b618806c34a5cffc24fc9c3d87a5",
+        "sensors/estimate_proposed.npz": "7c5c3c69094a00484e6979d063065cfc0fd97cbdac8f528844e6fdb51f079414"
+      },
+      "optics": {
+        "frames": 1151,
+        "valid": 1151,
+        "native_csv_sha256": "d0096f304c0e8ed37aa14fd6aa73a990c6568b2453a76e3f5bc1ee1ad688d872"
+      },
+      "scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69"
+    },
+    "26112143-nominal-natural-oracle": {
+      "case": {
+        "case": "26112143-nominal-natural-oracle",
+        "seed": 26112143,
+        "method": "oracle",
+        "vision": "natural",
+        "material": "nominal"
+      },
+      "success": true,
+      "safe": true,
+      "crossed": true,
+      "dwell_reached": true,
+      "settled_at_s": 43.3,
+      "completion_s": 43.3,
+      "estimated_rear_exit_s": 36.6,
+      "physical_rear_exit_s": 36.6,
+      "body_min_m": 0.08216591468860089,
+      "arm_tool_min_m": 0.09154065076077053,
+      "self_min_m": 0.0009503574750042029,
+      "physical_contact_steps": 0,
+      "hold_s": 0.0,
+      "feedback_hold_s": 0.0,
+      "clearance_hold_s": 0.0,
+      "max_dwell_s": 6.18,
+      "tip_rmse_m": 0.01817560683160722,
+      "tip_peak_m": 0.03424745496375486,
+      "axis_rmse_deg": 0.09615493760531621,
+      "axis_peak_deg": 0.10654849031969746,
+      "theta_rmse_deg": 0.0,
+      "phi_rmse_deg": 0.0,
+      "theta_blackout_rmse_deg": null,
+      "phi_blackout_rmse_deg": null,
+      "whole_angle": {
+        "theta_rmse_deg": 0.0,
+        "phi_rmse_deg": 0.0,
+        "theta_peak_deg": 0.0,
+        "phi_peak_deg": 0.0,
+        "samples": 2750,
+        "available": 2750,
+        "azimuth_samples": 2007
+      },
+      "blackout_angle": {
+        "theta_rmse_deg": null,
+        "phi_rmse_deg": null,
+        "theta_peak_deg": null,
+        "phi_peak_deg": null,
+        "samples": 0,
+        "available": 0,
+        "azimuth_samples": 0
+      },
+      "vision_hold_blackout": {
+        "theta_rmse_deg": null,
+        "phi_rmse_deg": null,
+        "theta_peak_deg": null,
+        "phi_peak_deg": null,
+        "samples": 0,
+        "available": 0,
+        "azimuth_samples": 0
+      },
+      "dynamic_theta_range_deg": 41.698345087561215,
+      "dynamic_phi_range_deg": 24.798880334239385,
+      "true_max_bend_deg": 78.00287339380812,
+      "true_max_total_curvature_deg": 78.02385919465114,
+      "source_valid_coverage": 1.0,
+      "terminal_after_gate_samples": 301,
+      "passed_inside_aperture": true,
+      "sample_period_s": 0.019999999999999574,
+      "physics_samples": 2750,
+      "max_control_alignment_s": 0.0,
+      "witness_bound_width_m": {
+        "body": 9.990075971166856e-05,
+        "arm": 9.987405294098473e-05,
+        "self": 9.998628702213158e-05
+      },
+      "goal_xyz": [
+        1.98,
+        0.25,
+        1.71
+      ],
+      "goal_axis": [
+        0.6109852853641633,
+        0.4616567134559925,
+        -0.6430941299603677
+      ],
+      "body_nearest": {
+        "t": 34.26,
+        "geoms": [
+          "collision_landing_163",
+          "G1_sill"
+        ]
+      },
+      "arm_nearest": {
+        "t": 33.6,
+        "geoms": [
+          "collision_gripper_finger1",
+          "G1_sill"
+        ]
+      },
+      "self_nearest": {
+        "t": 10.28,
+        "geoms": [
+          "geom317",
+          "arm1"
+        ]
+      },
+      "artifacts": {
+        "flight.ulg": "fb3933eb42014b89d0f4804399e0e12be49bf871161b6581a34f0ac04d1edb4b",
+        "flight.bag": "be10cdd67d744144b907e7fdf9c55daa9039cc921b1483e525d316ffff33ae94",
+        "physics.npz": "2ba4d239a6f7b2d10c16c8d1ecc19d31c0a4cdef21ff3246660779584d77df8c",
+        "control.npz": "e070f9f63c81480d9fc9448ef019be5dd701b226c85749d2616d56301447756f",
+        "run.json": "26703dff171baa85dd9aace3b6ef9c41a1ea4fee14c01cc9b313c7c77e76bfae",
+        "provenance.json": "4b8948f86e914f387bd9d66bf4726b4c35656234cf26ef41abf6e9b31273d6bc",
+        "control-summary.json": "5966d8bebee496d37267e315cd0b31a361d16d9bec5573b35dcc9932e75c84ad",
+        "score-trace.npz": "95b44b150db8b783d0e58f239f809eceed7c38164a48d19c56e04bec29e2d118",
+        "optics/native.csv": "2993361973434d323485d22965c771807f3f4c0e93ae6498488f0f8f00d014b5",
+        "optics/index.jsonl": "49fdc2498205b0578dab478b558108cb6967a7007fc619076e9af1bdfd013942",
+        "optics/observations.npz": "69b26a2cd4d1c6b840e27802a93f5717ac6fb34207c2e661cb6cb5e60d2b3f35",
+        "sensors/strain_observations.npz": "4fb8f862cda7bacf1a0d28033b3d3eeed5de89b82ccfc4701a732bb698ad6263",
+        "sensors/estimate_proposed.npz": "d6ce35967cd7d5d98612de1106328ed5b45ec0040efdf4fbd9e3f6bfa2f490fe"
+      },
+      "optics": {
+        "frames": 1151,
+        "valid": 1151,
+        "native_csv_sha256": "2993361973434d323485d22965c771807f3f4c0e93ae6498488f0f8f00d014b5"
+      },
+      "scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69"
+    },
+    "26112143-nominal-occluded-vision": {
+      "case": {
+        "case": "26112143-nominal-occluded-vision",
+        "seed": 26112143,
+        "method": "vision",
+        "vision": "occluded",
+        "material": "nominal"
+      },
+      "success": false,
+      "safe": false,
+      "crossed": true,
+      "dwell_reached": false,
+      "settled_at_s": null,
+      "completion_s": null,
+      "estimated_rear_exit_s": 41.96,
+      "physical_rear_exit_s": 41.94,
+      "body_min_m": 0.07882798061080432,
+      "arm_tool_min_m": 0.07681909266592343,
+      "self_min_m": -0.0009786847620746652,
+      "physical_contact_steps": 391,
+      "hold_s": 7.560000000000006,
+      "feedback_hold_s": 4.16,
+      "clearance_hold_s": 1.1399999999999935,
+      "max_dwell_s": 0.9399999999999977,
+      "tip_rmse_m": 0.029198210850539422,
+      "tip_peak_m": 0.04863608833059499,
+      "axis_rmse_deg": 3.0145100689362723,
+      "axis_peak_deg": 6.163589781562739,
+      "theta_rmse_deg": 7.061580178499955,
+      "phi_rmse_deg": 5.966557924193833,
+      "theta_blackout_rmse_deg": 8.29889790873762,
+      "phi_blackout_rmse_deg": 12.349044610747011,
+      "whole_angle": {
+        "theta_rmse_deg": 7.061580178499955,
+        "phi_rmse_deg": 5.966557924193833,
+        "theta_peak_deg": 16.206217068785655,
+        "phi_peak_deg": 19.674594155361888,
+        "samples": 2750,
+        "available": 1933,
+        "azimuth_samples": 1797
+      },
+      "blackout_angle": {
+        "theta_rmse_deg": 8.29889790873762,
+        "phi_rmse_deg": 12.349044610747011,
+        "theta_peak_deg": 12.37983598058732,
+        "phi_peak_deg": 19.28316636680995,
+        "samples": 200,
+        "available": 10,
+        "azimuth_samples": 10
+      },
+      "vision_hold_blackout": {
+        "theta_rmse_deg": 8.530033799614266,
+        "phi_rmse_deg": 1.927375070176921,
+        "theta_peak_deg": 8.813926002112549,
+        "phi_peak_deg": 10.746636791892115,
+        "samples": 200,
+        "available": 200,
+        "azimuth_samples": 200
+      },
+      "dynamic_theta_range_deg": 8.001774713173972,
+      "dynamic_phi_range_deg": 4.970492252314072,
+      "true_max_bend_deg": 82.75417467782648,
+      "true_max_total_curvature_deg": 82.7803897791789,
+      "source_valid_coverage": 0.7029090909090909,
+      "terminal_after_gate_samples": 301,
+      "passed_inside_aperture": true,
+      "sample_period_s": 0.019999999999999574,
+      "physics_samples": 2750,
+      "max_control_alignment_s": 0.0,
+      "witness_bound_width_m": {
+        "body": 9.999853906267342e-05,
+        "arm": 9.964853204935675e-05,
+        "self": 9.98249205207294e-05
+      },
+      "goal_xyz": [
+        1.98,
+        0.25,
+        1.71
+      ],
+      "goal_axis": [
+        0.6109852853641633,
+        0.4616567134559925,
+        -0.6430941299603677
+      ],
+      "body_nearest": {
+        "t": 39.66,
+        "geoms": [
+          "collision_landing_163",
+          "G1_sill"
+        ]
+      },
+      "arm_nearest": {
+        "t": 38.32,
+        "geoms": [
+          "collision_gripper_finger1",
+          "G1_sill"
+        ]
+      },
+      "self_nearest": {
+        "t": 46.44,
+        "geoms": [
+          "collision_landing_163",
+          "d435"
+        ]
+      },
+      "artifacts": {
+        "flight.ulg": "ae5a58243cb863d06e57f5d7e18aa21320979e03c8c239f2da9cac08a63b159b",
+        "flight.bag": "98a42c4dcfa747f39699a0ff5a19dbbb0992a4682e31f21edb482467c190c58d",
+        "physics.npz": "382fb911e18d63e8fea08e70dd721e1446498c799e090ec3fe8c7c7b7ae6dc6e",
+        "control.npz": "871ecec8c12d8fd95be1412c4dabd00f538ba81cf0dc75f794523713f8f94c1e",
+        "run.json": "9f426689cf9ba518dafd2b36eda63c7e98c235021277dc6a27771fa96d613248",
+        "provenance.json": "7825154653b2a354b5c453b03524c8740b1fbe6c32d22c2e8ec77bb6449aa6fb",
+        "control-summary.json": "7b7f40d38f098402b98b8f7671aa96a1eefb95056b2a2820ff94d0c2532886d2",
+        "score-trace.npz": "1fa6cf25435d68e2a1bf886a459f7dc698772ed298e35ea50eb2279e1093c448",
+        "optics/native.csv": "f9a244ba7658087a90048489997368fcaff63e222ca2abef51d5d42041a2f698",
+        "optics/index.jsonl": "c1770d5455f794478afafc6734a4b42b2e3717322c0acb69a3ba09a6fe00c027",
+        "optics/observations.npz": "506a9c09d6c027992c1d95ca127ea4819de093e03280f053b297db7129b9e0e0",
+        "sensors/strain_observations.npz": "1aff56c83f802e7a8fc4227003067f6729be92830d66d79bd5074753d961bb50",
+        "sensors/estimate_proposed.npz": "055e009eeebcc90c9421e01440e63e86c94d9ca24ab6051d3727e2036be744d1"
+      },
+      "optics": {
+        "frames": 1151,
+        "valid": 1047,
+        "native_csv_sha256": "f9a244ba7658087a90048489997368fcaff63e222ca2abef51d5d42041a2f698"
+      },
+      "scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+      "distance_certificate": {
+        "file": "distance-certificates/26112143-nominal-occluded-vision.json",
+        "sha256": "099c4dc82c8516d9399f007c75e1012a93947f680f1e7dd42d2e1faa3638ef22",
+        "solver_sha256": "904bf4a8efcd5bd91bd82efb1a8f0d68e7f729031986e683eae0239cd232f001",
+        "certified_queries": 2
+      }
+    },
+    "26112143-differential-natural-strain": {
+      "case": {
+        "case": "26112143-differential-natural-strain",
+        "seed": 26112143,
+        "method": "strain",
+        "vision": "natural",
+        "material": "differential"
+      },
+      "success": false,
+      "safe": true,
+      "crossed": true,
+      "dwell_reached": false,
+      "settled_at_s": null,
+      "completion_s": null,
+      "estimated_rear_exit_s": 36.54,
+      "physical_rear_exit_s": 36.5,
+      "body_min_m": 0.08265181394981387,
+      "arm_tool_min_m": 0.06380919137372154,
+      "self_min_m": 0.0009518669527142499,
+      "physical_contact_steps": 0,
+      "hold_s": 0.0,
+      "feedback_hold_s": 0.0,
+      "clearance_hold_s": 0.0,
+      "max_dwell_s": 0.0,
+      "tip_rmse_m": 0.03665683999556212,
+      "tip_peak_m": 0.039083820116263455,
+      "axis_rmse_deg": 6.317642731240679,
+      "axis_peak_deg": 6.4723130278282826,
+      "theta_rmse_deg": 5.291206560424713,
+      "phi_rmse_deg": 2.71728970174062,
+      "theta_blackout_rmse_deg": null,
+      "phi_blackout_rmse_deg": null,
+      "whole_angle": {
+        "theta_rmse_deg": 5.291206560424713,
+        "phi_rmse_deg": 2.71728970174062,
+        "theta_peak_deg": 11.924329200244905,
+        "phi_peak_deg": 5.900942261349826,
+        "samples": 2750,
+        "available": 2749,
+        "azimuth_samples": 2006
+      },
+      "blackout_angle": {
+        "theta_rmse_deg": null,
+        "phi_rmse_deg": null,
+        "theta_peak_deg": null,
+        "phi_peak_deg": null,
+        "samples": 0,
+        "available": 0,
+        "azimuth_samples": 0
+      },
+      "vision_hold_blackout": {
+        "theta_rmse_deg": null,
+        "phi_rmse_deg": null,
+        "theta_peak_deg": null,
+        "phi_peak_deg": null,
+        "samples": 0,
+        "available": 0,
+        "azimuth_samples": 0
+      },
+      "dynamic_theta_range_deg": 40.14157031710222,
+      "dynamic_phi_range_deg": 29.766670543649305,
+      "true_max_bend_deg": 73.8746103959623,
+      "true_max_total_curvature_deg": 73.90577801920168,
+      "source_valid_coverage": 0.9996363636363637,
+      "terminal_after_gate_samples": 301,
+      "passed_inside_aperture": true,
+      "sample_period_s": 0.019999999999999574,
+      "physics_samples": 2750,
+      "max_control_alignment_s": 0.0,
+      "witness_bound_width_m": {
+        "body": 9.996243801907445e-05,
+        "arm": 9.969220691663505e-05,
+        "self": 9.97073031918619e-05
+      },
+      "goal_xyz": [
+        1.98,
+        0.25,
+        1.71
+      ],
+      "goal_axis": [
+        0.6109852853641633,
+        0.4616567134559925,
+        -0.6430941299603677
+      ],
+      "body_nearest": {
+        "t": 34.28,
+        "geoms": [
+          "collision_landing_163",
+          "G1_sill"
+        ]
+      },
+      "arm_nearest": {
+        "t": 33.76,
+        "geoms": [
+          "visual_gripper_finger1",
+          "G1_sill"
+        ]
+      },
+      "self_nearest": {
+        "t": 3.96,
+        "geoms": [
+          "geom317",
+          "arm1"
+        ]
+      },
+      "artifacts": {
+        "flight.ulg": "1095db1d4c3c2b2617d92837b939c00536093f333ff8b07ae4451158f8180e77",
+        "flight.bag": "86d4643f02cd55841230c280f062a5eb759178c382f9750645d20f4f9b4387b3",
+        "physics.npz": "9e09b3f442c4dc89a6f8fa6d71870e048b6611a1ea19874b56f9f35494980b3b",
+        "control.npz": "0aec4a0a93978df95b49a7afc011243657f37ab5c14462f689c367855895ad6f",
+        "run.json": "8170aeae4ecd2bae83fcbded4285751b76e4ee566fa429a9de0527b251f33cd5",
+        "provenance.json": "be2b1d9f0042e2989c877bd4425294eb5ae9f81a0d78e8f614f6244c89e87b14",
+        "control-summary.json": "113f63597aab01710f598e03e7a8c4c1598971a126c08d5b076615e21e5a7453",
+        "score-trace.npz": "22ce9806b8c1db3340bf17d2f43b35b4f493adb7cc127321a8c25c1f85307aed",
+        "optics/native.csv": "7c09623209c4a11c1eab0c364a5032bf035b42a01c4b1dd1cbcd76458b802fc0",
+        "optics/index.jsonl": "06a7c3e557abbfafe31cf891d5f80f58c9ec6856911aa4c28a14b5809d8d7bdd",
+        "optics/observations.npz": "3e73f994d6ea2f8c7d250256397d396ac6006f65aae919c545efc6a574259d5c",
+        "sensors/strain_observations.npz": "985901d2e82b453fac35c7309f4ada77ae269bdc151a533d1b413f2c00d7e6b1",
+        "sensors/estimate_proposed.npz": "6b678b9d4983c5bd9826d7637c9c45f4baf6ffd9e97a5c556f70fafb0046fa52"
+      },
+      "optics": {
+        "frames": 1151,
+        "valid": 1122,
+        "native_csv_sha256": "7c09623209c4a11c1eab0c364a5032bf035b42a01c4b1dd1cbcd76458b802fc0"
+      },
+      "scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69"
     }
   },
   "evidence": {
@@ -3968,6 +4609,31 @@
       "file": "26112137-differential-natural-oracle.zip",
       "bytes": 7649597,
       "sha256": "34b09a2d43ac16e21bad631ce4b24e9285a11b2136c88806c31f94b3f630ce51"
+    },
+    "26112137-nominal-occluded-vision": {
+      "file": "26112137-nominal-occluded-vision.zip",
+      "bytes": 7645642,
+      "sha256": "ccf7deb94b23b829b84b6b6e40b0c2a9cf72c1236ae647a41d5f21564bd4922c"
+    },
+    "26112137-nominal-natural-strain": {
+      "file": "26112137-nominal-natural-strain.zip",
+      "bytes": 7835008,
+      "sha256": "fac95042bb69fb7da010a6997eb4dfb333d46491432b7f509c65b6e0d86e8f5f"
+    },
+    "26112143-nominal-natural-oracle": {
+      "file": "26112143-nominal-natural-oracle.zip",
+      "bytes": 7646510,
+      "sha256": "a28f7a7f5ceac4ef5c162a89bb241827515e45c3f113f80019ebffd65b52828f"
+    },
+    "26112143-nominal-occluded-vision": {
+      "file": "26112143-nominal-occluded-vision.zip",
+      "bytes": 7702044,
+      "sha256": "42801859611e705669ad86b0d464f2475f856e238470243792df66c7ba78844c"
+    },
+    "26112143-differential-natural-strain": {
+      "file": "26112143-differential-natural-strain.zip",
+      "bytes": 7701428,
+      "sha256": "953cdce277dd6aa90e50d428b7afc1c6039e65ef4b47150738220bccf07e8efe"
     }
   }
 }
