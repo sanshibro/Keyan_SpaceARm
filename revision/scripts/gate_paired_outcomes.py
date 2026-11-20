@@ -57,7 +57,8 @@ def build(stage):
     handles=[Line2D([],[],marker='o',mfc='white',mec=INK,ls='none',label='Baseline material hysteresis'),
              Line2D([],[],marker='o',mfc=INK,mec=INK,ls='none',label='Hysteresis + pre-entry differential offset')]
     fig.legend(handles=handles,loc='lower left',bbox_to_anchor=(.111,.074),ncol=2,frameon=False,fontsize=8)
-    fig.text(.126,.035,'Rows within a method follow seeds 26112131, 26112137, 26112143.  Axis RMSE is measured over 49–55 s; task counts use the registered joint 1 s dwell.',size=7.3,color=MUTED)
+    fig.text(.126,.045,'Rows follow seeds 26112131, 26112137, 26112143. Vision and oracle pairs indicate repeat-flight variation.',size=7.3,color=MUTED)
+    fig.text(.126,.014,'Axis RMSE spans 49–55 s. Task completion uses the registered joint 1 s dwell.',size=7.3,color=MUTED)
     save(fig,stage/'review','gate_paired_outcomes');plt.close(fig)
 
 if __name__=='__main__':

@@ -22,6 +22,7 @@ def flight(folder, signature):
     with (folder/'hil.csv').open(newline='') as stream:
         rows = [r for r in csv.DictReader(stream) if r['armed'] == '1' and r['released'] == '1']
     hil_time = np.array([int(r['px4_act_us']) for r in rows], dtype=np.int64)
+    tick_time = np.array([int(r['us']) for r in rows], dtype=np.int64)
     motors = np.array([[float(r[k]) for k in ('m1','m2','m3','m4')] for r in rows])
     with np.load(folder/'physics.npz', allow_pickle=False) as p:
         physics_us = p['us']
@@ -72,11 +73,20 @@ def flight(folder, signature):
     thrust_error = float(np.max(np.abs(np.asarray(rotor)-thrust)))
     if not np.array_equal(physics_us,ros_motor_time):
         raise ValueError('ROS actuator and physics clocks differ: '+folder.name)
-    ros_pwm_time=physics_us-clock_origin
-    ros_ix=np.minimum(np.searchsorted(act['timestamp'],ros_pwm_time),len(act['timestamp'])-1)
-    paired=(physics_us>=recorded['release_us'])&(act['timestamp'][ros_ix]==ros_pwm_time)
     ros_motors=np.asarray(ros_motors)
-    ros_motor_error=np.abs((pwm[ros_ix[paired]]-1000.)/1000.-ros_motors[paired])
+    released=physics_us>=recorded['release_us']
+    bag_ticks=physics_us[released]
+    tick_ix=np.searchsorted(tick_time,bag_ticks)
+    if not np.array_equal(tick_time[tick_ix],bag_ticks):raise ValueError('HIL tick log lost a ROS sample')
+    sources=hil_time[tick_ix]
+    motor_lag=bag_ticks-sources
+    def compare(log_time):
+        px_time=log_time-clock_origin
+        idx=np.minimum(np.searchsorted(act['timestamp'],px_time),len(act['timestamp'])-1)
+        paired=act['timestamp'][idx]==px_time
+        return np.abs((pwm[idx[paired]]-1000.)/1000.-ros_motors[released][paired])
+    ros_motor_error=compare(sources)
+    same_tick_error=compare(bag_ticks)
     if not len(ros_motor_error):raise ValueError('Native ULog and ROS have no matching actuator packets')
     finite_active = np.all(np.isfinite(motors),axis=1) & (np.ptp(motors,axis=1)>0)
     if not np.any(finite_active) or not len(native['trajectory_setpoint']['timestamp']):
@@ -91,8 +101,11 @@ def flight(folder, signature):
                 min_hil_channel_span=float(np.min(np.ptp(motors,axis=0))),
                 ros_shape_samples_per_topic=len(control_us), ros_shape_arrays_match=True,
                 ros_thrust_samples=len(rotor), ros_vs_mujoco_max_thrust_err_N=thrust_error,
-                ros_hil_motors_paired_to_ulog=int(paired.sum()),
+                ros_hil_motors_paired_to_ulog=len(ros_motor_error),
                 ros_pwm_match_fraction=float(np.mean(np.max(ros_motor_error,axis=1)<2e-6)),
+                ros_pwm_same_tick_match_fraction=float(np.mean(np.max(same_tick_error,axis=1)<2e-6)),
+                ros_motor_source_lag_exceptions_us=[[int(t),int(lag)] for t,lag in zip(bag_ticks,motor_lag) if lag],
+                max_actuation_source_age_ms=float(np.max(tick_time-hil_time)/1000),
                 max_ulog_to_ros_hil_motor_residual=float(np.max(ros_motor_error)),
                 ros_hil_to_rotor_load_max_residual_N=float(np.max(np.abs(thrust-12.*ros_motors))),
                 ros_local_position_samples=topics['/f/px4/local_position_ned'].message_count,
@@ -116,7 +129,7 @@ def main():
         if any(result[case]['artifacts'].get(n, h)!=h for n,h in signature.items()):
             raise ValueError('Raw source differs from its independent score: '+case)
         old=before.get(case,{})
-        audited[case]=old if old.get('input_sha256')==signature and 'ros_pwm_match_fraction' in old else flight(folder,signature)
+        audited[case]=old if old.get('input_sha256')==signature and 'ros_pwm_same_tick_match_fraction' in old else flight(folder,signature)
         extra=result[case].get('distance_certificate')
         if extra:
             receipt=args.stage/'distance-certificates'/(case+'.json')
