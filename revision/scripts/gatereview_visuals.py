@@ -265,7 +265,7 @@ def phase_barcode(flights,out):
     ax.legend(handles=handles,ncol=min(5,len(handles)),fontsize=6.7,frameon=False,loc="lower left",bbox_to_anchor=(0,1.04))
     ax.set_yticks(range(5),[NAMES[m] for m in METHODS]);ax.set_ylim(4.6,-.6)
     ax.set_xlabel("Time after release (s)");ax.spines[["left","bottom"]].set_visible(False)
-    fig.text(.15,.02,"Dark lower stripe: actual black pixels. Rust stripe: recorded protective hold. Each row is an independent closed-loop flight.",fontsize=7.5,color=MUTED)
+    fig.text(.15,.02,"The dark stripe marks black wrist exposures. The rust stripe marks a protective hold. Each row is an independent flight.",fontsize=7.5,color=MUTED)
     save(fig,out,"gate_state_barcode");plt.close(fig)
 
 
@@ -303,8 +303,8 @@ def detailed_curves(flights,out):
     for row,label in enumerate((r"$\theta$ (deg)",r"$\phi$ (deg)","External clearance (cm)","Tip position error (cm)")):axes[row,0].set_ylabel(label)
     handles,labels=next((axes[0,j].get_legend_handles_labels() for j,m in enumerate(METHODS) if m in flights))
     fig.legend(handles,labels,ncol=4,loc="upper center",bbox_to_anchor=(.51,.983),frameon=False,fontsize=8)
-    fig.text(.065,.045,"Gray: this flight's actual blackout; dotted background: recorded protective hold. No-output estimates remain gaps; φ is omitted below 5° bending.",fontsize=8,color=MUTED)
-    fig.text(.065,.022,"Thresholds: external clearance ≥ 6.0 cm; tip position ≤ 3.5 cm and tool-axis error ≤ 3.0° continuously for 1.0 s. Axis error uses the rust right scale.",fontsize=8,color=MUTED)
+    fig.text(.065,.045,"Gray shading marks wrist occlusion. Hatching marks a protective hold. Gaps mark unavailable estimates. Azimuth is reported from 5° bending.",fontsize=8,color=MUTED)
+    fig.text(.065,.022,"External clearance ≥ 6.0 cm. Alignment requires position ≤ 3.5 cm and axis error ≤ 3.0° for 1.0 s. The right scale gives axis error.",fontsize=8,color=MUTED)
     save(fig,out,"gate_method_details");plt.close(fig)
 
 
@@ -362,8 +362,12 @@ def curves(flights,out):
     axs[3].set_xlabel("Time after release (s)")
     handles=[Line2D([],[],color=COLORS[m],lw=1.4,label=NAMES[m]) for m in METHODS if m in flights]
     fig.legend(handles=handles,ncol=5,loc="upper center",bbox_to_anchor=(.51,.995),frameon=False,fontsize=8)
-    fig.text(.095,.918,"θ/φ: physical —, estimated --, fusion reference ···, last visual pose on the fusion flight –·–.",fontsize=7.55,color=MUTED)
-    fig.text(.095,.025,"Clearance ≥ 6.0 cm: arm/tool —, body ···.  After passage: position ≤ 3.5 cm (—) and axis ≤ 3.0° (--) for 1 s.",fontsize=7.3,color=MUTED)
+    shape_keys=[Line2D([],[],lw=1.1,ls=ls,color=color,label=label) for ls,color,label in
+                (("-",INK,"Physical shape"),("--",INK,"Estimated shape"),(":",INK,"Proposed reference"),
+                 ("-.","#98613c","Last visual pose on Proposed flight"))]
+    fig.legend(handles=shape_keys,ncol=4,loc="upper center",bbox_to_anchor=(.51,.945),frameon=False,
+               handlelength=2.2,columnspacing=1.5,fontsize=7.1)
+    fig.text(.095,.025,"Clearance ≥ 6.0 cm for arm/tool (solid) and body (dotted). Docking requires position ≤ 3.5 cm (solid) and axis ≤ 3.0° (dashed) for 1 s.",fontsize=7.3,color=MUTED)
     save(fig,out,"gate_four_metrics");plt.close(fig)
 
 
@@ -426,10 +430,10 @@ def keyframes(flights,renderer,out,epochs):
                         a.text(.5,.91,"Tool outside target view",ha="center",va="top",transform=a.transAxes,fontsize=6.8,color=RED)
                 a.set_xlabel(f"{100*f.z['tip_error'][idx]:.1f} cm   |   {f.z['axis_error_deg'][idx]:.1f}°",fontsize=7.7,labelpad=1)
     fig.text(.035,.965,"Gate passage and oblique tool alignment",fontsize=11,weight="bold")
-    top=(f"Top: dynamic occlusion at {epochs[0]:g} s. Middle: closest arm–frame approach in each flight. Bottom: target alignment at {epochs[-1]:g} s."
-         if len(display)==5 else f"Rows: {epochs[0]:g} s during blackout  /  closest gate approach  /  tool alignment at {epochs[-1]:g} s.")
+    top=(f"Dynamic occlusion at {epochs[0]:g} s (top), closest arm–frame approach per flight (middle), and tool alignment at {epochs[-1]:g} s (bottom)."
+         if len(display)==5 else f"Rows show {epochs[0]:g} s during blackout, closest gate approach, and tool alignment at {epochs[-1]:g} s.")
     fig.text(.035,.918,top,fontsize=8.2,color=MUTED)
-    fig.text(.035,.013,"Rust: closest arm–frame surfaces. Teal: measured tool axis. Ochre: target axis.",fontsize=7.7,color=MUTED)
+    fig.text(.035,.013,"The rust segment joins the nearest surfaces. Teal and ochre show the measured and target tool axes.",fontsize=7.7,color=MUTED)
     save(fig,out,"gate_keyframes");plt.close(fig)
 
 
@@ -457,7 +461,7 @@ def video(flights,renderer,out,start,end,fps=8.):
         for now in np.arange(start,end+1e-8,1/fps):
             im=Image.new("RGB",(width,height),"white");d=ImageDraw.Draw(im)
             d.text((17,12),f"Gate feedback comparison   |   time after release {now:.2f} s",font=title,fill=INK)
-            d.text((17,41),"Side and oblique CAD views / delivered wrist RGB.   Rust: nearest surfaces.   Teal: measured tool axis.   Ochre: target axis.",font=normal,fill=MUTED)
+            d.text((17,41),"Side and oblique CAD views with delivered wrist RGB. The rust segment joins the nearest surfaces. Teal and ochre show the measured and target axes.",font=normal,fill=MUTED)
             for j,m in enumerate(METHODS):
                 x=16+j*298;f=flights.get(m);d.text((x,77),NAMES[m],font=title,fill=COLORS[m])
                 idx=None if f is None else f.index(now)

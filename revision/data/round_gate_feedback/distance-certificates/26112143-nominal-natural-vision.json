@@ -1,0 +1,36 @@
+{
+  "case": "26112143-nominal-natural-vision",
+  "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+  "additional_solver_sha256": "904bf4a8efcd5bd91bd82efb1a8f0d68e7f729031986e683eae0239cd232f001",
+  "primary_scorer_sha256": "427a4e87144eae7538c8d4feb03d7ac2a55e9154c0e4d8677dd6df6f2b4f7e69",
+  "inputs": {
+    "physics.npz": "0a875c2ee0a45f58d824293fc66e270c0c4444e9b4cc139ad0d88d5e3b360367",
+    "flight.ulg": "ffb1cc9f831b660b5137954ee26394570056509216b3afbaa7e79218d7ec9c41",
+    "flight.bag": "77b0dd594fea283f412e84aed3cda60d74a7887da36c3152d3fa231d6c58f64c",
+    "control.npz": "5e5a2e9b6976fc6e6fc623fc8f72ba0c9eadb3f6251f0538b57aa9cd0a4b120b",
+    "run.json": "8c9a97dc4de88c2a117321ba7ed3d4d552943bb0e04316c0e510fa6a8131a46e"
+  },
+  "solutions": [
+    {
+      "pose_index": 2401,
+      "geom_a": "collision_landing_163",
+      "geom_b": "collision_gripper_housing",
+      "original": "Unresolved convex distance ('collision_landing_163', 'collision_gripper_housing', 0.0037666225471026413, 0.003909253957327587, 'GJK stalled')",
+      "solver": "secondary support direction / separated GJK",
+      "lower_m": 0.003768447456806756,
+      "upper_m": 0.0038493707922646276,
+      "witness_a_m": [
+        1.9542613772620956,
+        0.23884169913255937,
+        1.7622264250976996
+      ],
+      "witness_b_m": [
+        1.954216118646674,
+        0.2351528196313772,
+        1.7611274368448833
+      ],
+      "requested_precision_m": 0.0001,
+      "qpos_sha256": "052c0a397f8013ae60c0ebeb3559962070273ffe73f26e8ca9097a58855f4406"
+    }
+  ]
+}

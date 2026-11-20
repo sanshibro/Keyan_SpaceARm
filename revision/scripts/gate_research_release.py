@@ -10,7 +10,8 @@ DATA=PurePosixPath('revision/data/round_gate_feedback')
 ARCH=PurePosixPath('revision/meeting_archive/archive/2026-11-20-gate-feedback')
 DEC=('cohort-summary.json','case-evidence-audit.json','gate-physical-audit.csv','native-log-audit.json')
 FIGURES=('gate_keyframes','gate_four_metrics','gate_method_details','gate_paired_outcomes','gate_state_barcode')
-REVIEW=('gate_review_manifest.json','visual_manifest.json','video-verification.json','wrist-window.json',
+REVIEW=('gate_review.pdf','gate_multiview_comparison.mp4','all_trials_metrics.csv','evidence-index.csv',
+        'gate_wrist_window.webp','gate_review_manifest.json','visual_manifest.json','video-verification.json','wrist-window.json',
         'gate_overview.png',*[stem+ext for stem in FIGURES for ext in ('.png','.pdf','.svg')])
 
 

@@ -118,6 +118,7 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
     metrics=Path(metrics or root/"decisions/metrics.json");vd=Path(visual_dir or root/"review")
     output=Path(output or vd/"gate_review.pdf");rows=protocol_cases(protocol)
     scored,raw=read_metrics(metrics,readj(metric_map) if metric_map else None)
+    approved=readj(protocol).get("approved","")[:7];registered=raw.get("design_commit","")[:7]
     if not allow_incomplete:
         missing=[r["case"] for r in rows if r["case"] not in scored or scored[r["case"]]["success"] is None]
         if missing:raise ValueError(f"Missing independent outcome scores for {len(missing)} registered flights")
@@ -163,6 +164,7 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         text(R,28,"PX4 SITL + MuJoCo",8,color=muted,align="right");rule(40,.8)
         text(L,71,title,18,True);wrap(93,subtitle,8.5,12,muted)
         rule(804);text(L,823,"SUPER 机架与 Qingyu 连续体臂　·　受限空间斜向检视",8,color=muted)
+        if approved and registered:text(R-32,823,f"感知 {approved}　/　闭环 {registered}",7.2,color=muted,align="right")
         text(R,823,f"{page} / 2",8,color=muted,align="right")
     def figure(path,top,max_height):
         src=PdfReader(str(path));pa=src.pages[0];box=pa.mediabox
@@ -234,8 +236,12 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         proposed=sum(v["success"] for v in focus["proposed"])
         audit=readj(root/"decisions/case-evidence-audit.json")
         undershoot=np.median([audit[v["case"]["case"]]["arm_at_minimum"]["theta_des_minus_true_deg"] for v in focus["strain"]])
-        gate_result="三趟纯应变均守住 6.0 cm 净空红线" if crossed==0 else f"纯应变有 {crossed}/3 趟低于 6.0 cm 净空红线"
-        y=wrap(y+5,f"差模偏移与动态遮挡并存时，纯应变在臂爪最接近门框处的实际欠弯中位数为 {undershoot:.2f}°。融合与纯应变的最小净空中位数分别为 {nominal:.2f} 与 {biased:.2f} cm。{gate_result}，门后轴向 RMSE 中位数为 {angles:.2f}°。固定 KF 和增广融合分别完成 {kf}/3 和 {proposed}/3 趟。",8.3,12,ink)
+        gate_result="遮挡组三趟纯应变均守住 6.0 cm" if crossed==0 else f"遮挡组纯应变有 {crossed}/3 趟低于 6.0 cm"
+        clear_strain=[v['arm_tool_min_m']*100 for v in raw['cases'].values() if
+                     (v['case']['material'],v['case']['vision'],v['case']['method'])==('differential','natural','strain')]
+        if len(clear_strain)==3:
+            gate_result+=f"，清晰组最低 {min(clear_strain):.2f} cm，{sum(v<6. for v in clear_strain)}/3 趟低于红线"
+        y=wrap(y+5,f"差模偏移与遮挡并存时，纯应变在臂爪最接近门框处的实际欠弯中位数为 {undershoot:.2f}°。融合与纯应变的最小净空中位数为 {nominal:.2f} 与 {biased:.2f} cm。{gate_result}。遮挡组纯应变门后轴向 RMSE 中位数为 {angles:.2f}°，固定 KF 和增广融合分别完成 {kf}/3 和 {proposed}/3 趟。",8.3,12,ink)
         clear=[v for v in raw['cases'].values() if (v['case']['material'],v['case']['vision'],v['case']['method'])==('differential','natural','vision')]
         if len(clear)==3:
             visual=focus['vision']
