@@ -25,8 +25,10 @@ from __future__ import annotations
 
 import argparse
 import csv
+from io import BytesIO
 import json
 import math
+import re
 from pathlib import Path
 
 import numpy as np
@@ -107,9 +109,8 @@ def font_setup(font=None,bold=None):
 
 
 def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,font_bold=None,metric_map=None,allow_incomplete=False):
-    from PIL import Image
+    from pypdf import PdfReader, PdfWriter, Transformation
     from reportlab.lib.colors import HexColor
-    from reportlab.lib.utils import ImageReader
     from reportlab.pdfbase import pdfmetrics
     from reportlab.pdfgen.canvas import Canvas
 
@@ -132,14 +133,15 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         if any(s!=paired_seed_sets[0] for s in paired_seed_sets):raise ValueError("Formal condition cells do not share the same paired seeds")
     vm_path=vd/"visual_manifest.json";vm=readj(vm_path)
     declared={x.get("sha256") for x in vm.get("outputs",[])}
-    pictures=[vd/"gate_keyframes.png",vd/"gate_four_metrics.png"]
+    pictures=[vd/"gate_keyframes.pdf",vd/"gate_four_metrics.pdf"]
     for path in pictures:
         if digest(path) not in declared:raise ValueError(f"Figure is not bound to the current visual manifest: {path}")
     if not allow_incomplete and vm.get("split")!="formal":raise ValueError("Formal report cannot silently use development example figures")
     regular,bold,font_used=font_setup(font,font_bold)
     W,H,L,R=595.276,841.89,32.,563.276
     output.parent.mkdir(parents=True,exist_ok=True)
-    c=Canvas(str(output),pagesize=(W,H),pageCompression=1)
+    template=BytesIO();placements=[]
+    c=Canvas(template,pagesize=(W,H),pageCompression=1)
     c.setTitle("冻结形态反馈的受限过门与双自由度作业闭环");c.setAuthor("空中连续体操作研究组")
     ink,muted,accent="#293B42","#65767A","#478B7A"
     def text(x,y,value,size=9,weight=False,color=ink,align="left"):
@@ -149,10 +151,11 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         c.setStrokeColor(HexColor(color));c.setLineWidth(width);c.line(L,H-y,R,H-y)
     def wrap(y,value,size=8.7,leading=13,color=ink):
         line=""
-        for char in value:
-            if char=="\n" or pdfmetrics.stringWidth(line+char,regular,size)>R-L:
-                text(L,y,line,size,color=color);y+=leading;line="" if char=="\n" else char
-            else:line+=char
+        tokens=re.findall(r"[0-9]+(?:[./–-][0-9]+)*(?:\s?(?:cm|mm|ms|s|°|%))?|[A-Za-z]+|\n|.",value)
+        for token in tokens:
+            if token=="\n" or (line and pdfmetrics.stringWidth(line+token,regular,size)>R-L):
+                text(L,y,line.rstrip(),size,color=color);y+=leading;line="" if token=="\n" else token.lstrip()
+            else:line+=token
         if line:text(L,y,line,size,color=color);y+=leading
         return y
     def header(page,title,subtitle):
@@ -162,10 +165,11 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         rule(804);text(L,823,"SUPER 机架与 Qingyu 连续体臂　·　受限空间斜向检视",8,color=muted)
         text(R,823,f"{page} / 2",8,color=muted,align="right")
     def figure(path,top,max_height):
-        with Image.open(path) as src:
-            im=src.convert("RGB");height=(R-L)*im.height/im.width
-            if height>max_height:raise ValueError(f"{path.name} exceeds allocated figure height; regenerate its layout")
-            c.drawImage(ImageReader(im),L,H-top-height,R-L,height)
+        src=PdfReader(str(path));pa=src.pages[0];box=pa.mediabox
+        scale=(R-L)/float(box.width);height=float(box.height)*scale
+        if height>max_height:raise ValueError(f"{path.name} exceeds allocated figure height; regenerate its layout")
+        transform=Transformation().translate(-float(box.left),-float(box.bottom)).scale(scale).translate(L,H-top-height)
+        placements.append((pa,transform))
         return top+height
 
     header(1,"形态反馈驱动的过门与斜向对准","五种反馈源共用飞控参数、二维形态伺服与门框。每一列取自该方法独立飞出的轨迹。")
@@ -182,7 +186,7 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
     c.showPage()
 
     scored_n=sum(r["case"] in scored and scored[r["case"]]["success"] is not None for r in rows)
-    header(2,"配对种子上的任务结果与精度","机身与臂爪净空均须达到 6.0 cm，整机从门内通过且自间距为正、全程无接触。门后位置与轴向误差须同时进入 3.5 cm 和 3.0°，连续保持 1.0 s。")
+    header(2,"配对种子上的任务结果与精度","机身与臂爪净空均 ≥6.0 cm，自距为正，整机无接触越门。门后位置 ≤3.5 cm 且轴向 ≤3.0°，连续保持 1.0 s。")
     text(L,121,f"五种反馈源 × 两种材料条件 × 两种视野 × 三个配对种子，共评分 {scored_n}/{len(rows)} 趟。",8.6,color=muted)
     widths=[47,31,57,34,46,34,59,59,58,106]
     # Reserve the remaining width for the blackout angle pair.
@@ -228,7 +232,14 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
         proposed=sum(v["success"] for v in focus["proposed"])
         y=wrap(y+5,f"差模偏移与动态遮挡并存时，融合与纯应变的臂爪最小净空中位数分别为 {nominal:.2f} 与 {biased:.2f} cm。纯应变有 {crossed}/3 趟跌破净空红线，门后轴向 RMSE 中位数为 {angles:.2f}°。固定 KF 和增广融合分别完成 {kf}/3 和 {proposed}/3 趟。",8.3,12,ink)
     if y>795:raise ValueError(f"Page 2 overflow ({y:.1f} pt)")
-    c.showPage();c.save()
+    c.showPage();c.save();template.seek(0)
+    paper=PdfReader(template);writer=PdfWriter()
+    writer.append(paper);writer.add_metadata(dict(paper.metadata))
+    for page,transform in placements:
+        writer.pages[0].merge_transformed_page(page,transform,over=True,expand=False)
+    temp=output.with_suffix(".building")
+    with temp.open("wb") as stream:writer.write(stream)
+    temp.replace(output)
     csvpath=output.parent/"all_trials_metrics.csv"
     with csvpath.open("w",encoding="utf-8-sig",newline="") as f:
         cols=["case","method","material","vision","seed",*FIELDS]
@@ -236,7 +247,7 @@ def build(root,protocol=None,metrics=None,visual_dir=None,output=None,font=None,
     manifest={"pages":2,"registered_trials":len(rows),"scored_trials":scored_n,"font":font_used,
         "inputs":[{"path":str(p.resolve()),"sha256":digest(p)} for p in (protocol,metrics,vm_path,*pictures)],
         "metrics_mapping":{**{k:k for k in MAIN_FIELDS},**DETAIL_FIELDS,**(readj(metric_map) if metric_map else {})},
-        "output":str(output.resolve()),"no_outcome_recomputation":True}
+        "output":str(output.resolve()),"output_sha256":digest(output),"vector_figures":True,"no_outcome_recomputation":True}
     (output.parent/"gate_review_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     return output
 

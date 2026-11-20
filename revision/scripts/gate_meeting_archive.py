@@ -15,7 +15,7 @@ from pathlib import Path
 import time
 from urllib.request import Request, urlopen
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 TAG = "2026-11-20-gate-feedback"
 PREVIOUS = "2026-11-20-augmented-fusion"
@@ -144,20 +144,34 @@ def build(stage,evidence_commit):
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     (root/'flights.html').write_bytes(flight_page(rows,False,lead).encode())
     (stage/'组会预览.html').write_bytes(flight_page(rows,True,lead).encode())
-    for original,name,width in [('gate_keyframes','keyframes',2050),('gate_four_metrics','curves',2000),
+    for original,name,width in [('gate_keyframes','keyframes',2050),('gate_four_metrics','curves',2000),('gate_paired_outcomes','paired',1800),
                                 ('gate_method_details','methods',2300),('gate_state_barcode','states',1600)]:
         with Image.open(rd/(original+'.png')) as im:
             im=im.convert('RGB');im.thumbnail((width,1600),Image.Resampling.LANCZOS);im.save(src/(name+'.webp'),quality=92,method=6)
-    with Image.open(rd/'gate_keyframes.png') as im:
-        im=im.convert('RGB');im=im.crop((int(.61*im.width),int(.13*im.height),int(.981*im.width),int(.67*im.height)))
-        im.thumbnail((690,360),Image.Resampling.LANCZOS);im.save(src/'overview.webp',quality=85,method=6)
+    from matplotlib.font_manager import findfont
+    overview=Image.new('RGB',(520,211),'white');pen=ImageDraw.Draw(overview)
+    font=ImageFont.truetype(findfont('DejaVu Sans'),14)
+    poster_frame=stage/'qa/final/video-33.50.png'
+    if not poster_frame.is_file():
+        import imageio_ffmpeg
+        proof=read(rd/'video-verification.json')
+        i=round((33.5-proof['displayed_start_s'])*proof['fps'])
+        subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),'-v','error','-i',str(rd/'gate_multiview_comparison.mp4'),
+                        '-vf',f'select=eq(n\\,{i})','-frames:v','1','-y',str(poster_frame)],check=True)
+    with Image.open(poster_frame) as frame:
+        for i,(j,label,color) in enumerate(((1,'Strain only','#936e3c'),(3,'Augmented fusion','#267967'))):
+            x=16+j*298+26
+            overview.paste(frame.crop((x,301,x+240,481)),(8+i*260,25))
+            pen.text((12+i*260,3),label,fill=color,font=font)
+    overview.save(src/'overview.webp',quality=89,method=6)
     files=[]
     def add(kind,name,title,caption,source=None,**extra):
         if source is not None:shutil.copyfile(source,src/name)
         files.append(dict(kind=kind,file=name,title=title,caption=caption,**extra))
-    add('image','overview.webp','增广融合与真值反馈的门槛最近点','相同机位和比例绘制门框、实际臂形与最近表面连线。')
+    add('image','overview.webp','进门后臂爪与门槛的距离','取自第 33.50 秒的同步斜视机位。左列为纯应变，右列为增广融合，红线连接各趟实际最近的表面。')
     add('image','keyframes.webp','同视角 3D 过门与门后对准','首行为同步遮挡关键帧，中行为各趟最接近门框的过门时刻，末行为同一时刻的夹爪与目标轴。')
     add('curve','curves.webp','弯曲、方位、三维净空与末端误差','五趟轨迹使用同一时间坐标。灰带覆盖腕部相机的四秒全遮挡。')
+    add('curve','paired.webp','加上差模偏移后，净空和对准怎样变化','每段只连接同一种子的两趟动态遮挡飞行。空心与实心符号分别对应基础迟滞和进门前已形成差模偏移的工况。')
     add('curve','wrist-window.webp','真实腕部画面与保留末帧的动态误差','取自同一趟融合飞行，图像与角度按曝光和交付两种时间戳对齐。',rd/'gate_wrist_window.webp')
     add('curve','methods.webp','五方法独立飞行的完整时序','每列保留该趟自己的目标、真实形态和估计。查看整个飞行区间的净空、位置和工具轴向误差。')
     add('curve','states.webp','逐方法的状态与停顿','比较进入过门与对准阶段的时间，查看因反馈断流或包络保护而暂停的区间。')
@@ -170,7 +184,6 @@ def build(stage,evidence_commit):
     add('data','protocol.json','注册的窄门与对准协议','带载机械臂、门框尺寸、目标位姿、许可阈值、遮挡时刻与配对矩阵。',stage/'protocol.json')
     add('data','perception-lock.json','获批感知模块指纹','六维增广形态融合与传感器参数逐文件锁定。',stage/'source/gate_feedback_perception_lock.json')
     specpath=root/'round.json';when=read(specpath)['when'] if specpath.exists() else datetime.now(timezone(timedelta(hours=8))).isoformat(timespec='seconds')
-    window=read(rd/'wrist-window.json')
     save(specpath,dict(schema=1,id=TAG,stage='G2 · 单门二维形态闭环',when=when,revision=evidence_commit,title=TITLE,summary=lead,
          cover='overview.webp',files=files,parent_round=PREVIOUS,
          guide=['用同一机位比较五列的物理臂形、最近表面连线和门后目标轴。',
@@ -253,7 +266,6 @@ def publish(stage,media_commit):
                  commits=[cohort['approved_perception'][:7]+' · 冻结感知',cohort['design_commit'][:7]+' · 注册闭环',
                           spec['revision'][:7]+' · 60 趟原始记录',media_commit[:7]+' · 图表与视频'])
     # The historical homepage supports local and absolute resource paths.
-    home_text=home.read_text(encoding='utf-8')
     for key in ('geometry','rolling'):
         if state[key].startswith(route):
             state[key]='https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/'+state[key]

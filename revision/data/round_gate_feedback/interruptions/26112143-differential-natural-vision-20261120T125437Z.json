@@ -1,0 +1,25 @@
+{
+  "case": "26112143-differential-natural-vision",
+  "reason": "Host reboot interrupted image acquisition before the PX4/MuJoCo run closed.",
+  "design_commit": "8207e2ba1dd600031fd2e2e57e6070bd9c5b924e",
+  "completed_before_restart": 22,
+  "current_boot_id": "2ea1c844-25c8-4ecd-a7e7-2a68cbc61a31",
+  "current_boot_utc": "20261120T125437Z",
+  "last_write_utc": "2026-11-20T12:54:11Z",
+  "rgb_images": 926,
+  "depth_images": 926,
+  "retained_files": 2116,
+  "total_bytes": 106009648,
+  "hashes": {
+    "flight.bag": "76ad0c90a84fc905d44e7aa43a5ece1b887ba1b8b298460e262d15557d909896",
+    "hil.csv": "8d0b22d16873c925164a2f2be283f888d70a965dfe03b6280f84e6eb07842031",
+    "progress.json": "cf9e24f100f11cfcc498bd21e64a60a466b5cea399279b0351dff8210776f8a3",
+    "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+    "model.xml": "3b30b64cf28e11e485b0389104a1ba4a9ac72328050d17d328b2b2e4c88be8d9",
+    "provenance.json": "241776ccd058e3644be93e2d07cac8ee44df1b38dfaa41cdea66269acf6e9292",
+    "optics/index.jsonl": "b3c8cbebc74ebc3225f65c84c7b5c454756c3e1b9ea69c5a134e3dbf98e87d5e",
+    "optics/native.csv": "288fbecc696baafde6a6b7e46021d17e2c09b475458419aadfd6dc8d43317ecc",
+    "optics/optical.jsonl": "dacdc9d10ca2a08aef9e2984e62e60f4e8a8c21f0d3c83a194874d947048be7a"
+  },
+  "retained_folder": "interrupted/26112143-differential-natural-vision-before-20261120T125437Z"
+}

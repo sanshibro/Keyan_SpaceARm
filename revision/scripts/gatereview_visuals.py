@@ -410,7 +410,7 @@ def video(flights,renderer,out,start,end,fps=8.):
     from matplotlib.font_manager import findfont
     font=lambda s:ImageFont.truetype(findfont("DejaVu Sans"),s)
     small,normal,title=font(12),font(14),font(18)
-    width,height,colw=1500,900,292
+    width,height,colw=1500,950,292
     wrist={m:WristFrames(f.folder) for m,f in flights.items()}
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     encoder=os.environ.get("GATE_FFMPEG") or shutil.which("ffmpeg")
@@ -444,7 +444,7 @@ def video(flights,renderer,out,start,end,fps=8.):
                         points=np.stack((f.z["arm_near_robot"][idx],f.z["arm_near_gate"][idx]))
                     # The camera stays fixed across methods at each time. The
                     # second row uses a common instrument view after 40 s.
-                    region=(([1.86,.205,1.77],.72) if dock else ([.83,.01,1.96],1.04)) if view=="oblique" else None
+                    region=(([1.86,.205,1.77],.72) if dock else ([.83,.01,1.96],1.04)) if view=="oblique" else (renderer.cameras["side"]["lookat"],1.52)
                     frame,uv=renderer.image(m,now,view,points,region)
                     if frame is not None:
                         if uv is not None and (dock or f.z["arm_tool_clearance"][idx]<.48):
@@ -466,10 +466,11 @@ def video(flights,renderer,out,start,end,fps=8.):
                 badge="NO ESTIMATOR OUTPUT" if not valid else ("PROTECTIVE HOLD" if f.z["hold"][idx] else "Estimator output present")
                 d.text((x,721),badge,font=small,fill=RED if not valid or f.z["hold"][idx] else COLORS[m])
                 if "dwell_s" in f.z:d.text((x,736),f"Recorded alignment dwell: {f.z['dwell_s'][idx]:.2f} / 1.00 s",font=small,fill=MUTED)
-                bar(d,x,750,100*f.z["arm_tool_clearance"][idx],6.,18.,"Arm/tool clearance","cm")
-                bar(d,x,790,100*f.z["tip_error"][idx],3.5,15.,"Tool position error","cm")
-                bar(d,x,830,float(f.z["axis_error_deg"][idx]),3.,15.,"Tool axis error","deg")
-            d.text((17,878),"Safety ≥ 6.0 cm. Alignment ≤ 3.5 cm and ≤ 3.0 deg for 1.0 continuous second; final outcomes come from the independent scorer.",font=small,fill=MUTED)
+                bar(d,x,755,100*f.z["body_clearance"][idx],6.,18.,"Body clearance","cm")
+                bar(d,x,795,100*f.z["arm_tool_clearance"][idx],6.,18.,"Arm/tool clearance","cm")
+                bar(d,x,835,100*f.z["tip_error"][idx],3.5,15.,"Tool position error","cm")
+                bar(d,x,875,float(f.z["axis_error_deg"][idx]),3.,15.,"Tool axis error","deg")
+            d.text((17,927),"Safety ≥ 6.0 cm. Alignment ≤ 3.5 cm and ≤ 3.0 deg for 1.0 continuous second. Black wrist exposures 28–32 s, delivered 0.20 s later.",font=small,fill=MUTED)
             p.stdin.write(im.tobytes())
     except Exception:p.kill();raise
     finally:p.stdin.close();code=p.wait()

@@ -5,6 +5,7 @@ import hashlib
 from io import BytesIO
 import json
 from pathlib import Path
+import tarfile
 import zipfile
 
 import numpy as np
@@ -48,7 +49,26 @@ def phase_optics(z, spec):
                     valid_in_transit_at_shutter_start=int(np.sum(valid & (capture<start-1.e-8) & (delivery>=start-1.e-8))))
 
 
-def evidence(stage, case, m, item, protocol):
+def image_references(stage, protocol):
+    from PIL import Image
+    k=next(r['case'] for r in protocol['cases'] if r['seed']==protocol['representative_seed'] and
+           (r['method'],r['material'],r['vision'])==('proposed','differential','occluded'))
+    optics=stage/'formal'/k/'optics'
+    frames=[json.loads(s) for s in (optics/'index.jsonl').read_text().splitlines()]
+    row=next(r for r in frames if abs(r['t']-30.)<1.e-7)
+    refs={}
+    for key in ('rgb','depth'):
+        asset=optics/row[key]
+        with Image.open(asset) as im:
+            if np.asarray(im).max()!=0:raise ValueError('Reference shutter image contains a return')
+        refs[key]=hashlib.sha256(asset.read_bytes()).hexdigest()
+        if refs[key]!=row[key+'_sha256']:raise IOError('Reference shutter image hash')
+    with tarfile.open(stage/'records/registered-cad-assets.tgz','r:gz') as a:
+        refs['model']=hashlib.sha256(a.extractfile('source-model.xml').read()).hexdigest()
+    return refs
+
+
+def evidence(stage, case, m, item, protocol, design, refs):
     path = stage/'evidence'/item['file']
     checksum = hashlib.sha256(path.read_bytes()).hexdigest()
     if path.stat().st_size != item['bytes'] or checksum != item['sha256']:
@@ -71,6 +91,16 @@ def evidence(stage, case, m, item, protocol):
         run = json.loads(z.read('run.json'))
         if run['error'] is not None or json.loads(z.read('control-summary.json'))['mechanics_only']:
             raise ValueError('Unqualified flight: '+case)
+        pr=json.loads(z.read('provenance.json'));mission=pr['mission']
+        registered=design['inputs']
+        if (pr['plant_xml_sha256']!=refs['model'] or files['model.xml']!=refs['model'] or
+            pr['protocol_sha256']!=files['protocol.json'] or
+            mission['perception_lock_sha256']!=design['perception_lock'] or
+            mission['controller_sha256']!=registered['revision/scripts/gate_feedback_flight.py'] or
+            mission['model_builder_sha256']!=registered['revision/scripts/gate_feedback_model.py'] or
+            m['scorer_sha256']!=registered['revision/scripts/gate_feedback_scores.py'] or
+            mission['case']!=m['case']):
+            raise ValueError('Registered plant, feedback, protocol, or scorer identity changed: '+case)
         with z.open('flight.ulg') as f:
             if not f.read(8).startswith(b'ULog\x01\x12\x35'):
                 raise IOError('Native ULog signature: '+case)
@@ -88,6 +118,8 @@ def evidence(stage, case, m, item, protocol):
             raise ValueError('Unexpected physical image occlusion: '+case)
         if black and op['valid_shutter_exposures']:
             raise ValueError('Native geometry accepted a full black image: '+case)
+        if black and any(row['rgb_sha256']!=refs['rgb'] or row['depth_sha256']!=refs['depth'] for row in masked):
+            raise ValueError('Exposure does not match true optical black and zero depth: '+case)
         op['black_exposures']=black
         with np.load(BytesIO(z.read('score-trace.npz')),allow_pickle=False) as q:
             t=q['t']
@@ -112,7 +144,10 @@ def evidence(stage, case, m, item, protocol):
             op['per_image_wall_p95_ms']=a['processing_wall_p95_ms'][timing]
         return dict(archive_sha256=checksum,member_hashes=len(files),ulog_sha256=files['flight.ulg'],
                     bag_sha256=files['flight.bag'],physics_sha256=files['physics.npz'],optics=op,
-                    arm_at_minimum=geo,score_sha256=files['metrics.json'])
+                    arm_at_minimum=geo,score_sha256=files['metrics.json'],physical_xml_sha256=refs['model'],
+                    perception_lock_sha256=mission['perception_lock_sha256'],px4_executable_sha256=pr['binary_sha256'],
+                    physical_dt_s=pr['physics_dt_s'],hil_dt_s=pr['hil_dt_s'],mass_kg=pr['mass_kg'],
+                    mujoco_version=pr['mujoco'])
 
 
 def group_metrics(members):
@@ -152,11 +187,11 @@ def main():
         raise ValueError('Cohort identity mismatch')
     if not args.partial and set(cases)!=set(expected):
         raise ValueError('All 60 registered flights are required')
-    audit={}; rows=[]
+    audit={}; rows=[];refs=image_references(stage,p0)
     for case,m in cases.items():
         if m['case']!=expected[case]:
             raise ValueError(case)
-        a=evidence(stage,case,m,items[case],p0);audit[case]=a
+        a=evidence(stage,case,m,items[case],p0,design,refs);audit[case]=a
         rows.append({'case':case,**m['case'], 'success':m['success'],'safe':m['safe'],'crossed':m['crossed'],
                      'dwell_reached':m['dwell_reached'], 'body_min_cm':m['body_min_m']*100,
                      'arm_min_cm':m['arm_tool_min_m']*100,'self_min_mm':m['self_min_m']*1000,
@@ -176,11 +211,22 @@ def main():
             sel={k:v for k,v in cases.items() if (v['case']['material'],v['case']['vision'],v['case']['method'])==(material,visual,method)}
             groups[material+'-'+visual][method]=group_metrics(sel)
     out=stage/('qa' if args.partial else 'decisions');out.mkdir(exist_ok=True,parents=True)
+    incidents=[json.loads(p.read_bytes()) for p in sorted((stage/'records/interruptions').glob('*.json'))
+               if p.name.startswith(tuple(str(seed)+'-' for seed in p0['seeds']))]
+    for item in incidents:
+        if item['design_commit']!=d['design_commit'] or item['case'] not in expected:
+            raise ValueError('Unregistered interruption record')
     summary=dict(design_commit=d['design_commit'],approved_perception=p0['approved'],trials=len(cases),
                  cases_with_verified_raw_members=len(audit),total_raw_members=sum(v['member_hashes'] for v in audit.values()),
                  different_phystraces=len(set(v['physics_sha256'] for v in audit.values())),
                  different_ulogs=len(set(v['ulog_sha256'] for v in audit.values())),
                  different_rosbags=len(set(v['bag_sha256'] for v in audit.values())),
+                 verified_black_rgbd_exposures=sum(v['optics']['black_exposures'] for v in audit.values()),
+                 shared_model_xml=refs['model'],perception_lock=design['perception_lock'],
+                 distinct_px4_executables=len({v['px4_executable_sha256'] for v in audit.values()}),
+                 interrupted_acquisitions=[{'case':v['case'],'frames_saved':v['rgb_images'],
+                                             'reason':v['reason'],'archive':v['retained_folder'],
+                                             'registered_flight_scored':v['case'] in cases} for v in incidents],
                  conditions=groups)
     for filename,value in [('cohort-summary.json',summary),('case-evidence-audit.json',audit)]:
         (out/filename).write_text(json.dumps(value,indent=2,ensure_ascii=False,allow_nan=False)+'\n',encoding='utf-8')

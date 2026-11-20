@@ -1,0 +1,13 @@
+[Unit]
+Description=Registered single-gate PX4 and MuJoCo campaign
+ConditionPathExists=!/home/uav/paper_revision_20261117/revision/data/round_gate_feedback/campaign.finished
+
+[Service]
+Type=simple
+WorkingDirectory=/home/uav/paper_revision_20261117
+ExecStart=/bin/bash /home/uav/paper_revision_20261117/revision/scripts/gate_resume_campaign.sh
+Restart=no
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target
