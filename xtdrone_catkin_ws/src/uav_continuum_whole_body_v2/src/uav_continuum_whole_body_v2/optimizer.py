@@ -388,6 +388,9 @@ class WholeBodyOptimizer:
         )
         durations[:] = np.clip(max(float(durations[0]), dynamic_dt * 1.08),
                                self.config.dt_min, self.config.dt_max)
+        clock_initializer = getattr(self, 'initial_span_clock', None)
+        if clock_initializer is not None:
+            durations = clock_initializer(seed, durations)
         conditioned_initial_rate = None
         if initial_rate is not None and len(seed) >= 2:
             conditioned_initial_rate = np.asarray(initial_rate, dtype=float).reshape(6)

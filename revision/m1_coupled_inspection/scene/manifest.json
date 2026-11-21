@@ -1,18 +1,18 @@
 {
   "meshes": 93,
   "parts": 370,
-  "scene_sha256": "bd39bb3f54e071a9ea608f1acd5e660448312c7aed70ef0996adf5d8584bbef8",
+  "scene_sha256": "26f00d25df7d4a039fa6607ca579517aee6521675ecd10d756b85178a1673e07",
   "files": {
-    "cell.xml": "d538c8ec59aebb4ea8fd163c0c0940ae4dbdce6fb24f4755cfb44898a38fc32b",
+    "cell.xml": "aa929de8ecd0d67c40b9c760f10341aa754a6682f30941d3440d054059abb942",
     "concrete.png": "1da56b8b5d00346bfaf4d5cb8a930cbd4e029943b3b82fa49a6be2ded337be3d",
     "deck.png": "d7d00624ff725e6d7a51a5c451d87c1da954cecfdcc17026eb7fe45b39689a9c",
     "M1_approach_deck_001.obj": "302ec458e73ae3892124d10228e0eafc55af47c6e2a7d47e6c445cf5035ce41a",
     "M1_approach_deck_002.obj": "969e0e9a4f0d6ac82abf20814a89784ad7b91ca22daa4d5a756e441ad54cdf96",
-    "M1_asymmetric_riser_083.obj": "1e6db5e9318d539af3d1b7a4c712bb46b6fc8769613261a7d9bc735a72c7a144",
-    "M1_asymmetric_riser_084.obj": "2be62c092102177f913eac0eaca6cafea7d3299a41a5907e438b21f5623602f2",
-    "M1_asymmetric_riser_085.obj": "b576705a7c2e9200abc7bbb5940f25fc7b31ca8eecc222a776c00902ad7a5e27",
-    "M1_exit_baffle_077.obj": "6e3d7bffafa92b501b7a1e150eaf913d61c05c6cb3b66975509411213fe09e3a",
-    "M1_exit_baffle_078.obj": "12d25c2df16e259bb16ab13b9fa48bfe01992ca8c18a445e0166379e2d4f0fd2",
+    "M1_asymmetric_riser_083.obj": "324b9aab19f21d350055a661233969a50562b60acbc01a0908febd0eae22737a",
+    "M1_asymmetric_riser_084.obj": "0a31c83f8c9b65420bcd599e62e9fbdd650cb5afebaacbb8e32b555846ea7d9c",
+    "M1_asymmetric_riser_085.obj": "e7f493db0644d4f459ca9535fff4e11dcc79378be3c44aa2450ad8cee5669e6c",
+    "M1_exit_baffle_077.obj": "72ca9c270919b4b9d444e186f11293f5c24e51987a8beeabbf763dfcdb681ebd",
+    "M1_exit_baffle_078.obj": "cb653e8ddfebe63b8ea858f97002586f1316e6c4ebaaeafcf198467b34910b24",
     "M1_flange_back_066.obj": "c216af9c5eb5c3379438b19c1e8818c140af3d6e3c898600d6b2bf1f460133f8",
     "M1_flange_back_067.obj": "e4a073ec005ccc24e1f7e7f72f7fcbc3edf6c09746c1fa4a6ea25a7a365d8760",
     "M1_flange_back_068.obj": "b4d1693ebf096bc57cb675ca4b3b7b85d4ff121e28e687deb7967d5079ebb37c",
@@ -64,11 +64,11 @@
     "M1_lintel_048.obj": "2a02b651e104fbcbb48562440bc80d13b5089238a4515c6f89f7328d45f2a60c",
     "M1_lintel_049.obj": "d462340b985eabca133e290f65b1e78658a567c17d6c37ec54c06b386391c613",
     "M1_near_guard_081.obj": "1d4c3ea2d6651c78acd87f422a7b78ead015df9bf62b44d99c43e8e4dd77ed78",
-    "M1_return_cabinet_079.obj": "7575702e330b2a6417eb380a15285b70ab93f582eb9ca43afd9bba9ab85a3651",
-    "M1_return_cabinet_080.obj": "c84dcbb448dd8957f24bf7313cd5070fa2abb4ac162c664292c618f226223b02",
-    "M1_riser_return_086.obj": "446987ab30e7f9c19aef89383cbf7f4adcdf8a7619b2dd2687b21a0037721493",
-    "M1_riser_return_087.obj": "058f29dfc893e732666e1577d650bd0711f9535a42e71f5aeb0f3bc34810ae7a",
-    "M1_riser_return_088.obj": "8ca6e555667aba9ea23d3eb677779192671692baf237733c064cdf3d43e2af3d",
+    "M1_return_cabinet_079.obj": "11b2ae0e081b096ca9cdf371b257197d00777db8ceacfa1bd2bbcd88dd0e5163",
+    "M1_return_cabinet_080.obj": "22d42690e6e026ae8384543c376b26789b083fc6a34441528c890052ee389696",
+    "M1_riser_return_086.obj": "225b183c4645917844dab137ffae3df5337e221d94e4989191bf52f3293279b7",
+    "M1_riser_return_087.obj": "073b102348827ce46f5185d68d7dd14bad12a98973eaa20dce1e0d92048c8798",
+    "M1_riser_return_088.obj": "c55d33fdeb6948e3114fc528177b00cc2a4c4fbed0bb747ab7ec0a42843454f2",
     "M1_roof_082.obj": "684c3e5ff61dfa84d2e32fbc40346e306ede55043884f1ce6ca2b5b781cc7d0b",
     "M1_service_deck_003.obj": "319deff20d653b6b9d19ead203473784b2d24e0808b2d621f2a01f09cb473dcc",
     "M1_service_deck_004.obj": "442a979c231433a49e5c33ef86d8c630bfbf391af941ca817b4387d6c6617c1f",
@@ -333,24 +333,24 @@
       "exit_baffle": [
         [
           2.44,
-          0.2,
+          0.29,
           1.32
         ],
         [
           2.59,
           0.745,
-          1.895
+          1.845
         ]
       ],
       "return_cabinet": [
         [
-          2.79,
+          2.92,
           -0.615,
           1.27
         ],
         [
-          2.98,
-          -0.19,
+          3.07,
+          -0.245,
           2.08
         ]
       ]
@@ -358,25 +358,25 @@
     "pipes": {
       "asymmetric_riser": [
         [
-          1.72,
-          0.09,
+          1.77,
+          0.135,
           1.265
         ],
         [
-          1.72,
-          0.09,
+          1.77,
+          0.135,
           2.515
         ],
         0.047
       ],
       "riser_return": [
         [
-          1.72,
-          0.092,
+          1.77,
+          0.137,
           2.463
         ],
         [
-          1.72,
+          1.77,
           0.735,
           2.463
         ],

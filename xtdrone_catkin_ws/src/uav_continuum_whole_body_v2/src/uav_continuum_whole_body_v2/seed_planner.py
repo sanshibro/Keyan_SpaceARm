@@ -412,7 +412,9 @@ class WholeBodySeedPlanner:
                     cost += self._node_cost(candidate, reference[index], index in risk_knots)
                     next_beams.append((cost, path + [candidate]))
             next_beams.sort(key=lambda item: item[0])
-            beams = next_beams[: self.config.seed_beam_width]
+            selector = getattr(self, 'select_layer', None)
+            beams = (selector(next_beams, index) if selector is not None else
+                     next_beams[: self.config.seed_beam_width])
         if not beams:
             raise RuntimeError("whole-body seed search produced no candidates")
         best_cost, best_path = beams[0]

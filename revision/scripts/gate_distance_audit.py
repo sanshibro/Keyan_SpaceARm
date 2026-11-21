@@ -97,14 +97,14 @@ def convex_distance(support,initial_direction=None,lower=0.,tolerance=1e-4,max_i
 
 
 class DistanceAudit:
-    def __init__(self,model,tolerance_m=1e-4,strict=True):
+    def __init__(self,model,tolerance_m=1e-4,strict=True,obstacle_prefix="G1_"):
         import mujoco
         self.m=model;self.d=mujoco.MjData(model);self.mj=mujoco
         self.tolerance=float(tolerance_m);self.strict=bool(strict);self.mesh={};self.warm={}
         self.names=[model.geom(i).name or ('geom%d'%i) for i in range(model.ngeom)]
         self.body_names=[model.body(i).name or ('body%d'%i) for i in range(model.nbody)]
-        self.gates=np.asarray([i for i,n in enumerate(self.names) if n.startswith('G1_')],int)
-        if not len(self.gates):raise ValueError('No registered G1 gate geoms')
+        self.gates=np.asarray([i for i,n in enumerate(self.names) if n.startswith(obstacle_prefix)],int)
+        if not len(self.gates):raise ValueError('No registered obstacle geoms')
         root=int(model.body('uav').id);robot_bodies=[]
         for b in range(model.nbody):
             k=b

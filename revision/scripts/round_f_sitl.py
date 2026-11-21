@@ -165,7 +165,7 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
         while True:
             us=CLOCK_ORIGIN_US+k*round(TICK*1e6)
             sim_t=k*TICK
-            if sim_t>110 or time.monotonic()-ts0>wall_limit_s:
+            if sim_t>max(110.,score_end+45.) or time.monotonic()-ts0>wall_limit_s:
                 raise TimeoutError('Qualification sequence did not finish before timeout')
             if px.poll() is not None: raise RuntimeError('PX4 exited during flight')
             while True:
@@ -208,7 +208,7 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                 ground.mav.manual_control_send(sysid,0,0,0,0,0)
                 ref_ned=ENU_NED@ref+(origin if origin is not None else 0.)
                 ground.mav.set_position_target_local_ned_send(us//1000,sysid,1,1,2552,
-                                            *ref_ned,0,0,0,0,0,0,math.pi/2,0)
+                                            *ref_ned,0,0,0,0,0,0,math.remainder(math.pi/2-getattr(flight_loop,"yaw_enu",0.),2*math.pi),0)
             if origin is not None and sim_t>10 and k%FREQ==0:
                 if not last_mode:
                     ground.mav.command_long_send(sysid,1,176,0,1,6,0,0,0,0,0)
