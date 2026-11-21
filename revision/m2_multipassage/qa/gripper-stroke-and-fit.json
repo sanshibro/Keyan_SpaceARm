@@ -1,7 +1,7 @@
 {
   "registered_pairs": 1948,
-  "nonconnected_pairs": 1947,
-  "assembly_fit_pairs": 1,
+  "nonconnected_pairs": 1944,
+  "assembly_fit_pairs": 4,
   "mount_neutral_interval_mm": [
     0.9999999999999672,
     1.000000000000112

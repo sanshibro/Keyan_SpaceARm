@@ -1,0 +1,12 @@
+{
+  "parent_commit": "cf373b3d834b531756d5c527d4f3714f4e6a1983",
+  "geometry_count_before": 44,
+  "geometry_count_current": 45,
+  "added": [
+    "COL_entry_deck"
+  ],
+  "removed": [],
+  "modified": [
+    "COL_deck"
+  ]
+}

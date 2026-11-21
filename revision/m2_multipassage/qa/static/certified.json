@@ -1,5 +1,5 @@
 {
-  "scene_sha256": "b1cfbf74f31eae7261e973553cf1e21bbfe5f551e17ce5ca5812e4029009d445",
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
   "registry_sha256": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
   "static_only": true,
   "method": "independent support-plane and feasible-witness convex bounds, tolerance 10 micrometres",
@@ -21,11 +21,11 @@
         "COL_gate1_lintel"
       ],
       "hazard_pair": [
-        "geom391",
+        "geom503",
         "arm2"
       ],
       "fit_pair": [
-        "geom391",
+        "geom503",
         "arm1"
       ]
     },
@@ -50,7 +50,7 @@
         "arm7"
       ],
       "fit_pair": [
-        "geom391",
+        "geom503",
         "arm1"
       ]
     },
@@ -71,11 +71,11 @@
         "COL_gate3_lintel"
       ],
       "hazard_pair": [
-        "geom391",
+        "geom503",
         "arm2"
       ],
       "fit_pair": [
-        "geom391",
+        "geom503",
         "arm1"
       ]
     }
@@ -135,8 +135,8 @@
       "converged": true,
       "iterations": 3,
       "status": "separated GJK",
-      "geom_a": 132,
-      "geom_b": 55,
+      "geom_a": 244,
+      "geom_b": 183,
       "name_a": "collision_landing_163",
       "name_b": "COL_flange_bolt_4",
       "pairs_refined": 18
@@ -158,8 +158,8 @@
       "converged": true,
       "iterations": 2,
       "status": "separated GJK",
-      "geom_a": 458,
-      "geom_b": 53,
+      "geom_a": 570,
+      "geom_b": 182,
       "name_a": "alignment_probe_load",
       "name_b": "COL_flange_bolt_3",
       "pairs_refined": 73
@@ -181,8 +181,8 @@
       "converged": true,
       "iterations": 2,
       "status": "separated GJK",
-      "geom_a": 132,
-      "geom_b": 417,
+      "geom_a": 244,
+      "geom_b": 529,
       "name_a": "collision_landing_163",
       "name_b": "d435",
       "pairs_refined": 21
@@ -204,24 +204,48 @@
       "converged": true,
       "iterations": 6,
       "status": "separated GJK",
-      "geom_a": 391,
-      "geom_b": 397,
-      "name_a": "geom391",
+      "geom_a": 503,
+      "geom_b": 509,
+      "name_a": "geom503",
       "name_b": "arm1",
       "pairs_refined": 4
     }
   },
   "detailed_evidence": "preflight.json",
   "flight_authorization": false,
+  "launch_preflight": {
+    "initial_qpos0_xyz": [
+      0.0,
+      0.0,
+      1.5
+    ],
+    "hover_xyz": [
+      0.0,
+      -0.1,
+      2.12
+    ],
+    "maximum_translation_sample_spacing_m": 0.01,
+    "interpolation_external_lower_m": 0.4157424400000004,
+    "static_translation_path_only": true,
+    "phase_count": 2,
+    "sample_count": 75,
+    "zero_physical_contact": true,
+    "body_lower_m": 0.44998734033890936,
+    "arm_lower_m": 0.4207424400000004,
+    "hazard_lower_m": 0.035999999999999366,
+    "fit_lower_m": 0.0009999999999994458,
+    "passed": true
+  },
+  "model_source": "portable frozen native XML",
   "target_optics": {
-    "scene_sha256": "b1cfbf74f31eae7261e973553cf1e21bbfe5f551e17ce5ca5812e4029009d445",
+    "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
     "face_uv": [
       239.5,
       179.50000000000122
     ],
     "optical_depth_m": 0.1679999999999995,
-    "native_depth_at_face_m": 0.1679997593164444,
-    "camera_center_depth_m": 0.1679997593164444,
+    "native_depth_at_face_m": 0.16813983023166656,
+    "camera_center_depth_m": 0.16813983023166656,
     "valid_depth_fraction": 1.0,
     "desired_axis_error_deg": 1.7075472925031877e-06,
     "stand_off_pass": true,

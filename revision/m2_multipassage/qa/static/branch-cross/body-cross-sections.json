@@ -1,0 +1,835 @@
+{
+  "scene": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "sections": [
+    {
+      "x": 2.75,
+      "cases": [
+        {
+          "y": -0.3306832166599124,
+          "z": 1.9417049180241848,
+          "yaw_deg": -146.87112448136227,
+          "body_lower_m": 0.04741983822361344,
+          "body_upper_m": 0.04742528162874033,
+          "nearest": [
+            "collision_landing_210",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.035597471124979935,
+            "sample_min_m": 0.03737070539024881,
+            "unsampled_motion_m": 0.0017732342652688718,
+            "outer_rigid_radius_m": 0.542556521455795,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 41,
+            "far_pairs": 13549,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 45.0,
+              "pair": [
+                "collision_landing_210",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            0,
+            -180.0,
+            -120.0
+          ]
+        },
+        {
+          "y": -0.5378074800084094,
+          "z": 1.8366952267557954,
+          "yaw_deg": -89.5439465913299,
+          "body_lower_m": 0.07254544608299546,
+          "body_upper_m": 0.07256471780500316,
+          "nearest": [
+            "collision_rotor_sweep3",
+            "COL_near_guard"
+          ],
+          "tilt": {
+            "lower_m": 0.06340240468410836,
+            "sample_min_m": 0.06517563894937724,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 45,
+            "far_pairs": 13545,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 135.0,
+              "pair": [
+                "collision_landing_152",
+                "COL_low_service_plinth"
+              ]
+            }
+          },
+          "search": [
+            0,
+            -120.0,
+            -60.0
+          ]
+        },
+        {
+          "y": -0.4475966112386328,
+          "z": 1.947686359955031,
+          "yaw_deg": -33.86796367538945,
+          "body_lower_m": 0.03793859804085065,
+          "body_upper_m": 0.03795296857703849,
+          "nearest": [
+            "collision_landing_255",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.02612739401310608,
+            "sample_min_m": 0.027900628278374952,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 37,
+            "far_pairs": 13553,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 180.0,
+              "pair": [
+                "collision_landing_210",
+                "COL_branch_negative"
+              ]
+            }
+          },
+          "search": [
+            0,
+            -60.0,
+            0.0
+          ]
+        },
+        {
+          "y": -0.29255826131395285,
+          "z": 1.9523910026676874,
+          "yaw_deg": 47.160422667151174,
+          "body_lower_m": 0.04474722339748188,
+          "body_upper_m": 0.044761118562565455,
+          "nearest": [
+            "collision_landing_198",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.03241160923266563,
+            "sample_min_m": 0.0341848434979345,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 42,
+            "far_pairs": 13548,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 90.0,
+              "pair": [
+                "collision_landing_198",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            0,
+            0.0,
+            60.0
+          ]
+        },
+        {
+          "y": -0.5377297318195501,
+          "z": 1.8382425149668449,
+          "yaw_deg": 90.23939850700103,
+          "body_lower_m": 0.07295192385823228,
+          "body_upper_m": 0.07301358615164347,
+          "nearest": [
+            "collision_landing_255",
+            "COL_branch_negative"
+          ],
+          "tilt": {
+            "lower_m": 0.0638454458849324,
+            "sample_min_m": 0.06561868015020128,
+            "unsampled_motion_m": 0.0017732342652688716,
+            "outer_rigid_radius_m": 0.5425565214557949,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 47,
+            "far_pairs": 13543,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 5.0,
+              "pair": [
+                "collision_landing_255",
+                "COL_branch_negative"
+              ]
+            }
+          },
+          "search": [
+            0,
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "y": -0.435887120728811,
+          "z": 1.9500986432372736,
+          "yaw_deg": 144.45158526298295,
+          "body_lower_m": 0.0358816029459274,
+          "body_upper_m": 0.03588941940037011,
+          "nearest": [
+            "collision_landing_166",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.023821999400743348,
+            "sample_min_m": 0.02559523366601222,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 38,
+            "far_pairs": 13552,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 75.0,
+              "pair": [
+                "collision_landing_166",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            0,
+            120.0,
+            180.0
+          ]
+        },
+        {
+          "y": 0.4160696547064757,
+          "z": 1.8380940801834744,
+          "yaw_deg": -158.26998063235425,
+          "body_lower_m": 0.06699297876701611,
+          "body_upper_m": 0.06704204063585699,
+          "nearest": [
+            "visual_super_prop",
+            "COL_offset_riser_positive"
+          ],
+          "tilt": {
+            "lower_m": 0.05823217948355446,
+            "sample_min_m": 0.06000541374882333,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 45,
+            "far_pairs": 13545,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 175.0,
+              "pair": [
+                "collision_landing_210",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            -180.0,
+            -120.0
+          ]
+        },
+        {
+          "y": 0.3565163099204145,
+          "z": 1.96792520409376,
+          "yaw_deg": -60.336294076803995,
+          "body_lower_m": 0.10422199107313261,
+          "body_upper_m": 0.10422199107313272,
+          "nearest": [
+            "collision_rotor_sweep1",
+            "COL_offset_riser_positive"
+          ],
+          "tilt": {
+            "lower_m": 0.09205101210351915,
+            "sample_min_m": 0.09382424636878803,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 15,
+            "far_pairs": 13575,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 145.0,
+              "pair": [
+                "collision_landing_255",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            -120.0,
+            -60.0
+          ]
+        },
+        {
+          "y": 0.3469560883404832,
+          "z": 1.9369023098130083,
+          "yaw_deg": -55.68985669069689,
+          "body_lower_m": 0.10526194183330659,
+          "body_upper_m": 0.1053083239590202,
+          "nearest": [
+            "collision_rotor_sweep1",
+            "COL_offset_riser_positive"
+          ],
+          "tilt": {
+            "lower_m": 0.09347224311356729,
+            "sample_min_m": 0.09524547737883617,
+            "unsampled_motion_m": 0.0017732342652688705,
+            "outer_rigid_radius_m": 0.5425565214557946,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 14,
+            "far_pairs": 13576,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 245.0,
+              "pair": [
+                "collision_landing_162",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            -60.0,
+            0.0
+          ]
+        },
+        {
+          "y": 0.4186328252983899,
+          "z": 1.8429344728441728,
+          "yaw_deg": 21.66220710771589,
+          "body_lower_m": 0.06931643359248225,
+          "body_upper_m": 0.06936701940679584,
+          "nearest": [
+            "collision_rotor_sweep0",
+            "COL_offset_riser_positive"
+          ],
+          "tilt": {
+            "lower_m": 0.060464831340696516,
+            "sample_min_m": 0.062238065605965384,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 41,
+            "far_pairs": 13549,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 175.0,
+              "pair": [
+                "collision_landing_198",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            0.0,
+            60.0
+          ]
+        },
+        {
+          "y": 0.3553605095685104,
+          "z": 1.9656813579020682,
+          "yaw_deg": 119.83857889809349,
+          "body_lower_m": 0.10393220720136839,
+          "body_upper_m": 0.1039322861672162,
+          "nearest": [
+            "collision_landing_166",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.09162278972657231,
+            "sample_min_m": 0.09339602399184119,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 14,
+            "far_pairs": 13576,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 150.0,
+              "pair": [
+                "collision_landing_166",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "y": 0.34646085097033474,
+          "z": 1.9360055245505352,
+          "yaw_deg": 124.38254681061146,
+          "body_lower_m": 0.10560075267507701,
+          "body_upper_m": 0.10562791551891862,
+          "nearest": [
+            "collision_rotor_sweep3",
+            "COL_offset_riser_positive"
+          ],
+          "tilt": {
+            "lower_m": 0.09378960032920694,
+            "sample_min_m": 0.09556283459447582,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 14,
+            "far_pairs": 13576,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 245.0,
+              "pair": [
+                "collision_landing_152",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            120.0,
+            180.0
+          ]
+        }
+      ],
+      "qualifying_nominal": 4,
+      "seconds": 4.361218254001869
+    },
+    {
+      "x": 2.9,
+      "cases": [
+        {
+          "y": -0.32012040011307463,
+          "z": 1.9476443787541495,
+          "yaw_deg": -148.6719654501454,
+          "body_lower_m": 0.03833016621863655,
+          "body_upper_m": 0.03834829007333756,
+          "nearest": [
+            "collision_landing_166",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.026222827236110215,
+            "sample_min_m": 0.027996061501379087,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 24,
+            "far_pairs": 13566,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 265.0,
+              "pair": [
+                "collision_landing_198",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            0,
+            -180.0,
+            -120.0
+          ]
+        },
+        {
+          "y": -0.48500784092939264,
+          "z": 1.861759371617176,
+          "yaw_deg": -60.08512380785867,
+          "body_lower_m": 0.08996680386725942,
+          "body_upper_m": 0.08996749224649525,
+          "nearest": [
+            "collision_landing_166",
+            "COL_branch_negative"
+          ],
+          "tilt": {
+            "lower_m": 0.08076491528158801,
+            "sample_min_m": 0.08253814954685688,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 25,
+            "far_pairs": 13565,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 5.0,
+              "pair": [
+                "collision_landing_166",
+                "COL_branch_negative"
+              ]
+            }
+          },
+          "search": [
+            0,
+            -120.0,
+            -60.0
+          ]
+        },
+        {
+          "y": -0.47824832284899754,
+          "z": 1.9007896665837793,
+          "yaw_deg": -54.76846550147522,
+          "body_lower_m": 0.09392599361192777,
+          "body_upper_m": 0.09393544522273119,
+          "nearest": [
+            "collision_landing_210",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.0834831394022855,
+            "sample_min_m": 0.08525637366755437,
+            "unsampled_motion_m": 0.0017732342652688705,
+            "outer_rigid_radius_m": 0.5425565214557946,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 18,
+            "far_pairs": 13572,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 0.0,
+              "pair": [
+                "collision_landing_166",
+                "COL_branch_negative"
+              ]
+            }
+          },
+          "search": [
+            0,
+            -60.0,
+            0.0
+          ]
+        },
+        {
+          "y": -0.5273073577545707,
+          "z": 1.8153209724620774,
+          "yaw_deg": 25.1111704600588,
+          "body_lower_m": 0.0511929730130926,
+          "body_upper_m": 0.05119548689071998,
+          "nearest": [
+            "collision_landing_255",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.04202970346515012,
+            "sample_min_m": 0.04380293773041899,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 85,
+            "far_pairs": 13505,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 250.0,
+              "pair": [
+                "collision_landing_152",
+                "COL_low_service_plinth"
+              ]
+            }
+          },
+          "search": [
+            0,
+            0.0,
+            60.0
+          ]
+        },
+        {
+          "y": -0.4885324302003651,
+          "z": 1.8579928025018408,
+          "yaw_deg": 117.67543378436989,
+          "body_lower_m": 0.08654843777507115,
+          "body_upper_m": 0.08655077432968837,
+          "nearest": [
+            "collision_landing_255",
+            "COL_branch_negative"
+          ],
+          "tilt": {
+            "lower_m": 0.07742618958896177,
+            "sample_min_m": 0.07919942385423065,
+            "unsampled_motion_m": 0.0017732342652688716,
+            "outer_rigid_radius_m": 0.5425565214557949,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 25,
+            "far_pairs": 13565,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 5.0,
+              "pair": [
+                "collision_landing_255",
+                "COL_branch_negative"
+              ]
+            }
+          },
+          "search": [
+            0,
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "y": -0.4784205144961086,
+          "z": 1.8650701901814357,
+          "yaw_deg": 124.97205346628026,
+          "body_lower_m": 0.09382836924860813,
+          "body_upper_m": 0.09384753838729838,
+          "nearest": [
+            "collision_landing_255",
+            "COL_branch_negative"
+          ],
+          "tilt": {
+            "lower_m": 0.08462377055108503,
+            "sample_min_m": 0.0863970048163539,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 23,
+            "far_pairs": 13567,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 5.0,
+              "pair": [
+                "collision_landing_255",
+                "COL_branch_negative"
+              ]
+            }
+          },
+          "search": [
+            0,
+            120.0,
+            180.0
+          ]
+        },
+        {
+          "y": 0.4140359778995952,
+          "z": 1.885403012516286,
+          "yaw_deg": -120.01812746522779,
+          "body_lower_m": 0.11065745885920353,
+          "body_upper_m": 0.11066916121588748,
+          "nearest": [
+            "collision_rotor_sweep2",
+            "COL_offset_riser_positive"
+          ],
+          "tilt": {
+            "lower_m": 0.1008924030982704,
+            "sample_min_m": 0.10266563736353927,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 11,
+            "far_pairs": 13579,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 110.0,
+              "pair": [
+                "collision_landing_255",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            -180.0,
+            -120.0
+          ]
+        },
+        {
+          "y": 0.38841785500498127,
+          "z": 1.8944784233587286,
+          "yaw_deg": -114.00273635341817,
+          "body_lower_m": 0.12015558796528394,
+          "body_upper_m": 0.12025088827218271,
+          "nearest": [
+            "collision_landing_255",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.10642474946349445,
+            "sample_min_m": 0.11213647859853432,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 13,
+            "far_pairs": 13577,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 95.0,
+              "pair": [
+                "collision_landing_255",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            -120.0,
+            -60.0
+          ]
+        },
+        {
+          "y": 0.48556758735824734,
+          "z": 1.8498893151221105,
+          "yaw_deg": -37.16445456870753,
+          "body_lower_m": 0.08583013323058811,
+          "body_upper_m": 0.08584389595295551,
+          "nearest": [
+            "collision_landing_162",
+            "COL_low_service_plinth"
+          ],
+          "tilt": {
+            "lower_m": 0.07510217828157348,
+            "sample_min_m": 0.07687541254684235,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 34,
+            "far_pairs": 13556,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 165.0,
+              "pair": [
+                "collision_landing_198",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            -60.0,
+            0.0
+          ]
+        },
+        {
+          "y": 0.41359334576300877,
+          "z": 1.9067575273809396,
+          "yaw_deg": 59.891895433277625,
+          "body_lower_m": 0.11106502045901788,
+          "body_upper_m": 0.11107388622953165,
+          "nearest": [
+            "collision_rotor_sweep0",
+            "COL_offset_riser_positive"
+          ],
+          "tilt": {
+            "lower_m": 0.100572512131512,
+            "sample_min_m": 0.10234574639052584,
+            "unsampled_motion_m": 0.0017732342590138393,
+            "outer_rigid_radius_m": 0.5425565195419426,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 11,
+            "far_pairs": 13579,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 105.0,
+              "pair": [
+                "collision_landing_166",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            0.0,
+            60.0
+          ]
+        },
+        {
+          "y": 0.387132595927134,
+          "z": 1.945381248159946,
+          "yaw_deg": 65.35745403930734,
+          "body_lower_m": 0.12174838506856098,
+          "body_upper_m": 0.12176830476245139,
+          "nearest": [
+            "collision_landing_157",
+            "COL_branch_cross"
+          ],
+          "tilt": {
+            "lower_m": 0.09705900563827363,
+            "sample_min_m": 0.11185605133932569,
+            "unsampled_motion_m": 0.0017732342590138386,
+            "outer_rigid_radius_m": 0.5425565195419424,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 15,
+            "far_pairs": 13575,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 210.0,
+              "pair": [
+                "collision_landing_210",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "y": 0.48530164667394843,
+          "z": 1.85295116600651,
+          "yaw_deg": 143.9231460576693,
+          "body_lower_m": 0.08653548732876454,
+          "body_upper_m": 0.08654618755472632,
+          "nearest": [
+            "collision_rotor_sweep3",
+            "COL_far_wall"
+          ],
+          "tilt": {
+            "lower_m": 0.07600919015482244,
+            "sample_min_m": 0.07778242442009131,
+            "unsampled_motion_m": 0.0017732342652688712,
+            "outer_rigid_radius_m": 0.5425565214557948,
+            "cells": 721,
+            "cover_rad": 0.003268295531182844,
+            "near_pairs": 28,
+            "far_pairs": 13562,
+            "witness": {
+              "tilt_deg": 2.0,
+              "bearing_deg": 160.0,
+              "pair": [
+                "collision_landing_210",
+                "COL_branch_cross"
+              ]
+            }
+          },
+          "search": [
+            1,
+            120.0,
+            180.0
+          ]
+        }
+      ],
+      "qualifying_nominal": 10,
+      "seconds": 4.358998138995958
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "legacy_infinite_floor_rgba": [
+    1,
+    1,
+    1,
+    0
+  ],
+  "studio_skybox_rgb": [
+    1,
+    1,
+    1
+  ],
+  "legacy_floor_physical_contact_retained": true,
+  "industrial_entry_and_main_decks_visible": true,
+  "shared_all_cameras": true,
+  "observer_cameras": [
+    [
+      "observer_oblique",
+      [
+        6.65,
+        -6.9,
+        4.75
+      ],
+      [
+        2.55,
+        0,
+        1.97
+      ],
+      32
+    ],
+    [
+      "observer_side",
+      [
+        2.55,
+        -8.0,
+        2.32
+      ],
+      [
+        2.55,
+        0,
+        1.99
+      ],
+      27
+    ],
+    [
+      "observer_dock",
+      [
+        4.55,
+        -0.72,
+        2.32
+      ],
+      [
+        4.95,
+        0.18,
+        1.65
+      ],
+      46
+    ],
+    [
+      "observer_end",
+      [
+        5.98,
+        -0.03,
+        2.25
+      ],
+      [
+        1.95,
+        0.02,
+        2.03
+      ],
+      52
+    ]
+  ]
+}

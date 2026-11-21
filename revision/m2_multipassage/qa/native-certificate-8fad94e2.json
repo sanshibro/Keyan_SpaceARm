@@ -1,0 +1,255 @@
+{
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "registry_sha256": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
+  "static_only": true,
+  "method": "independent support-plane and feasible-witness convex bounds, tolerance 10 micrometres",
+  "gate_witnesses": [
+    {
+      "gate": "gate1",
+      "external_lower_m": 0.11955303986706736,
+      "hazard_lower_m": 0.035777659015926076,
+      "fit_lower_m": 0.0014018124083564998,
+      "xyz": [
+        1.15,
+        -0.1,
+        2.26
+      ],
+      "theta_deg": 70,
+      "phi_deg": 160,
+      "external_pair": [
+        "collision_central_equipment",
+        "COL_gate1_lintel"
+      ],
+      "hazard_pair": [
+        "geom503",
+        "arm2"
+      ],
+      "fit_pair": [
+        "geom503",
+        "arm1"
+      ]
+    },
+    {
+      "gate": "gate2",
+      "external_lower_m": 0.12165120076452199,
+      "hazard_lower_m": 0.02092341722374667,
+      "fit_lower_m": 0.0015208804717579741,
+      "xyz": [
+        2.55,
+        0.12,
+        1.94
+      ],
+      "theta_deg": 80,
+      "phi_deg": 90,
+      "external_pair": [
+        "collision_landing_162",
+        "COL_branch_cross"
+      ],
+      "hazard_pair": [
+        "collision_landing_168",
+        "arm7"
+      ],
+      "fit_pair": [
+        "geom503",
+        "arm1"
+      ]
+    },
+    {
+      "gate": "gate3",
+      "external_lower_m": 0.11955304101718643,
+      "hazard_lower_m": 0.035771905949471265,
+      "fit_lower_m": 0.0013963596933062499,
+      "xyz": [
+        3.95,
+        -0.11000000000000001,
+        2.23
+      ],
+      "theta_deg": 70,
+      "phi_deg": 160,
+      "external_pair": [
+        "collision_central_equipment",
+        "COL_gate3_lintel"
+      ],
+      "hazard_pair": [
+        "geom503",
+        "arm2"
+      ],
+      "fit_pair": [
+        "geom503",
+        "arm1"
+      ]
+    }
+  ],
+  "external_static_pass": true,
+  "self_static_pass": true,
+  "task": {
+    "body": [
+      4.662946098965787,
+      0.006928285036025689,
+      2.119383934882359
+    ],
+    "tool": [
+      4.837881908622765,
+      0.13910870392102045,
+      1.6853948100723903
+    ],
+    "axis": [
+      0.6109852853641633,
+      0.4616567134559925,
+      -0.6430941299603677
+    ],
+    "theta_deg": 50.0,
+    "phi_deg": 143.0,
+    "yaw_deg": 0.0,
+    "camera": [
+      4.847354472058821,
+      0.10244167213939326,
+      1.7580398138333415
+    ],
+    "camera_axis": [
+      0.6109852853641634,
+      0.46165671345599246,
+      -0.6430941299603679
+    ],
+    "tool_axis": [
+      0.6109852853641633,
+      0.4616567134559925,
+      -0.6430941299603677
+    ]
+  },
+  "task_bounds": {
+    "body": {
+      "lower": 0.13915209482357194,
+      "upper": 0.13915209482357208,
+      "distance": 0.139152094823572,
+      "a": [
+        4.8129587586253155,
+        0.1689382900804357,
+        1.745344060192813
+      ],
+      "b": [
+        4.897978623934558,
+        0.23317876258178788,
+        1.6558561297809993
+      ],
+      "converged": true,
+      "iterations": 3,
+      "status": "separated GJK",
+      "geom_a": 244,
+      "geom_b": 183,
+      "name_a": "collision_landing_163",
+      "name_b": "COL_flange_bolt_4",
+      "pairs_refined": 18
+    },
+    "arm_tool": {
+      "lower": 0.08855169045585248,
+      "upper": 0.08855261067632096,
+      "distance": 0.08855215056608673,
+      "a": [
+        4.843677909822371,
+        0.14556805068315526,
+        1.6771072766938355
+      ],
+      "b": [
+        4.885504708728972,
+        0.19372240907066124,
+        1.61568056003808
+      ],
+      "converged": true,
+      "iterations": 2,
+      "status": "separated GJK",
+      "geom_a": 570,
+      "geom_b": 182,
+      "name_a": "alignment_probe_load",
+      "name_b": "COL_flange_bolt_3",
+      "pairs_refined": 73
+    },
+    "hazardous": {
+      "lower": 0.012354231857983183,
+      "upper": 0.012354231857983532,
+      "distance": 0.012354231857983358,
+      "a": [
+        4.8129561032004355,
+        0.14491827199162366,
+        1.7693582089537505
+      ],
+      "b": [
+        4.822730303837722,
+        0.1401697099872242,
+        1.7752355557695558
+      ],
+      "converged": true,
+      "iterations": 2,
+      "status": "separated GJK",
+      "geom_a": 244,
+      "geom_b": 529,
+      "name_a": "collision_landing_163",
+      "name_b": "d435",
+      "pairs_refined": 21
+    },
+    "fit": {
+      "lower": 0.0012029187095003006,
+      "upper": 0.001209074194951368,
+      "distance": 0.0012059964522258344,
+      "a": [
+        4.663132500200036,
+        0.00677456595071129,
+        2.018983934882359
+      ],
+      "b": [
+        4.6631324769259965,
+        0.006774627717739468,
+        2.0177748606892094
+      ],
+      "converged": true,
+      "iterations": 7,
+      "status": "separated GJK",
+      "geom_a": 503,
+      "geom_b": 509,
+      "name_a": "geom503",
+      "name_b": "arm1",
+      "pairs_refined": 4
+    }
+  },
+  "detailed_evidence": "preflight.json",
+  "flight_authorization": false,
+  "launch_preflight": {
+    "initial_qpos0_xyz": [
+      0.0,
+      0.0,
+      1.5
+    ],
+    "hover_xyz": [
+      0.0,
+      -0.1,
+      2.12
+    ],
+    "maximum_translation_sample_spacing_m": 0.01,
+    "interpolation_external_lower_m": 0.4157424400000004,
+    "static_translation_path_only": true,
+    "phase_count": 2,
+    "sample_count": 75,
+    "zero_physical_contact": true,
+    "body_lower_m": 0.44998734033890936,
+    "arm_lower_m": 0.4207424400000004,
+    "hazard_lower_m": 0.035999999999999366,
+    "fit_lower_m": 0.0009999999999994458,
+    "passed": true
+  },
+  "model_source": "native build",
+  "target_optics": {
+    "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+    "face_uv": [
+      239.5,
+      179.5000000000012
+    ],
+    "optical_depth_m": 0.1679999999999995,
+    "native_depth_at_face_m": 0.16813965141773224,
+    "camera_center_depth_m": 0.16813965141773224,
+    "valid_depth_fraction": 1.0,
+    "desired_axis_error_deg": 1.9090959104164224e-06,
+    "stand_off_pass": true,
+    "depth_center_pass": true,
+    "view_specific_geometry": false
+  }
+}

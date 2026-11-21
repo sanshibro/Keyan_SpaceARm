@@ -1,0 +1,2427 @@
+{
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "model_source": "portable frozen native XML",
+  "initial_qpos0_xyz": [
+    0.0,
+    0.0,
+    1.5
+  ],
+  "hover_xyz": [
+    0.0,
+    -0.1,
+    2.12
+  ],
+  "maximum_translation_sample_spacing_m": 0.01,
+  "interpolation_external_lower_m": 0.4157424400000004,
+  "static_translation_path_only": true,
+  "phase_count": 2,
+  "sample_count": 75,
+  "zero_physical_contact": true,
+  "all_samples": [
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.4207424400000004,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5098412698412698
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.43058370984127015,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5196825396825397
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.44042497968254013,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5295238095238095
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.4502662495238099,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5393650793650793
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.46010751936507965,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5492063492063493
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.46994878920634964,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.559047619047619
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.4797900590476194,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.568888888888889
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.4896313288888894,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5787301587301588
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.49947259873015915,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5885714285714285
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.5093138685714289,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.5984126984126985
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.5191551384126989,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "alignment_probe_load",
+          "COL_entry_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.6082539682539683
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.618095238095238
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.44998734033890936,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.627936507936508
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4500042111381696,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.6377777777777778
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4501969967755077,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.6476190476190475
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4506046857427831,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.6574603174603175
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4512266959581573,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.6673015873015873
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4520621421014235,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.677142857142857
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.45310984443250985,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.686984126984127
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.45436833358632384,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.6968253968253968
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4558358650157976,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7066666666666668
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4575104256160811,
+      "arm_lower_m": 0.5270000000000001,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7165079365079365
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4593897531339349,
+      "arm_lower_m": 0.5270786985900993,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7263492063492063
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4614713439266966,
+      "arm_lower_m": 0.5273405658786975,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7361904761904763
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4637524765119037,
+      "arm_lower_m": 0.5277858386876959,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.746031746031746
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.46623021965583156,
+      "arm_lower_m": 0.5284140533724112,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.755873015873016
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.46890145915117387,
+      "arm_lower_m": 0.5292245584511606,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7657142857142858
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.47176290540042254,
+      "arm_lower_m": 0.5302165179606984,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7755555555555556
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.47481112250450225,
+      "arm_lower_m": 0.5313889157228315,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7853968253968255
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.47804253455114304,
+      "arm_lower_m": 0.5327405604719647,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.7952380952380953
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4814534561622548,
+      "arm_lower_m": 0.534270091784162,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.805079365079365
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4850400968013085,
+      "arm_lower_m": 0.5359759867403652,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.814920634920635
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.4887985920436812,
+      "arm_lower_m": 0.5378565672497982,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.8247619047619048
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.49272500535965713,
+      "arm_lower_m": 0.5399100079544207,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.8346031746031746
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.496815359518905,
+      "arm_lower_m": 0.5421343446315922,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.8444444444444446
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.501065635466089,
+      "arm_lower_m": 0.5445274830098906,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.8542857142857143
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.505471803427869,
+      "arm_lower_m": 0.547087207912253,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.864126984126984
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5100298186577976,
+      "arm_lower_m": 0.5498111926412013,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.873968253968254
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5147356519652156,
+      "arm_lower_m": 0.5526970085227828,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.8838095238095238
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5195852822510333,
+      "arm_lower_m": 0.5557421345288687,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.8936507936507936
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5245747263109402,
+      "arm_lower_m": 0.5589439669014692,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.9034920634920636
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.529700028204998,
+      "arm_lower_m": 0.5622998287075818,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.9133333333333333
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5349572882960374,
+      "arm_lower_m": 0.5658069792586321,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.9231746031746033
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5403426495896603,
+      "arm_lower_m": 0.5694626233346293,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.933015873015873
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5458523260503807,
+      "arm_lower_m": 0.5732639201595674,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.9428571428571428
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5514825861144512,
+      "arm_lower_m": 0.5772079920812335,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.9526984126984128
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5572297803822782,
+      "arm_lower_m": 0.5812919329152618,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.9625396825396826
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5630903225470146,
+      "arm_lower_m": 0.5855128159198997,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.9723809523809526
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5690607165952178,
+      "arm_lower_m": 0.5898677013743988,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.982222222222222
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5751375354134249,
+      "arm_lower_m": 0.5943536437401228,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        1.992063492063492
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5813174476441874,
+      "arm_lower_m": 0.5989676983893056,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.001904761904762
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.587597194235529,
+      "arm_lower_m": 0.6037069278918215,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.011746031746032
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.593973615100833,
+      "arm_lower_m": 0.6085684078553184,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.0215873015873016
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6004436238667312,
+      "arm_lower_m": 0.6135492323185731,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_162",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.0314285714285716
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6070042344770434,
+      "arm_lower_m": 0.6186465187019494,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_landing_163",
+          "COL_deck"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.041269841269841
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6238574123223587,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep0",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.051111111111111
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6291790904831749,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.060952380952381
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6346087661521058,
+      "hazard_lower_m": 0.03600000000000003,
+      "fit_lower_m": 0.001000000000000112,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.070793650793651
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6401436912421605,
+      "hazard_lower_m": 0.03599999999999981,
+      "fit_lower_m": 0.0009999999999998899,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.0806349206349206
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6457811595125365,
+      "hazard_lower_m": 0.03599999999999981,
+      "fit_lower_m": 0.0009999999999998899,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.0904761904761906
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6515185091075704,
+      "hazard_lower_m": 0.03599999999999981,
+      "fit_lower_m": 0.0009999999999998899,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.10031746031746
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6573531247528405,
+      "hazard_lower_m": 0.03599999999999981,
+      "fit_lower_m": 0.0009999999999998899,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.11015873015873
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6632824396281523,
+      "hazard_lower_m": 0.03599999999999959,
+      "fit_lower_m": 0.0009999999999998899,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "d435",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "vertical_departure",
+      "xyz": [
+        0.0,
+        0.0,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.6691123138117449,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        0.0,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6111562701,
+      "arm_lower_m": 0.669112313811745,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep1",
+          "COL_far_wall"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.010000000000000002,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.6011563539,
+      "arm_lower_m": 0.6691123138117449,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.020000000000000004,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5911563539,
+      "arm_lower_m": 0.6691123138117449,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.030000000000000006,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5811563539,
+      "arm_lower_m": 0.6691123138117449,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.04000000000000001,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5711563539,
+      "arm_lower_m": 0.6691123138117449,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.05,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5611563539,
+      "arm_lower_m": 0.669112313811745,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.06000000000000001,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5511563539,
+      "arm_lower_m": 0.6691123138117449,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.07,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5411563538999999,
+      "arm_lower_m": 0.669112313811745,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.08000000000000002,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5311563538999999,
+      "arm_lower_m": 0.6691123138117449,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "visual_gripper_finger0",
+          "COL_deck"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.09000000000000001,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5211563538999999,
+      "arm_lower_m": 0.6649999999999998,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "d435",
+          "COL_near_guard"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    },
+    {
+      "phase": "hover_lateral_alignment",
+      "xyz": [
+        0.0,
+        -0.1,
+        2.12
+      ],
+      "physical_contacts": [],
+      "contact_count": 0,
+      "body_lower_m": 0.5111563538999999,
+      "arm_lower_m": 0.6549999999999999,
+      "hazard_lower_m": 0.035999999999999366,
+      "fit_lower_m": 0.0009999999999994458,
+      "nearest_pairs": {
+        "body": [
+          "collision_rotor_sweep2",
+          "COL_near_guard"
+        ],
+        "arm": [
+          "d435",
+          "COL_near_guard"
+        ],
+        "hazard": [
+          "geom503",
+          "arm2"
+        ],
+        "fit": [
+          "geom503",
+          "arm1"
+        ]
+      }
+    }
+  ],
+  "body_lower_m": 0.44998734033890936,
+  "arm_lower_m": 0.4207424400000004,
+  "hazard_lower_m": 0.035999999999999366,
+  "fit_lower_m": 0.0009999999999994458,
+  "passed": true
+}

@@ -1,0 +1,7 @@
+{
+  "identical_registered_collision_geoms": 45,
+  "physical_baseline_sha256": "ff5a702327555b95265764382c6f0732395b64277829f9753baabde28a077ea2",
+  "gate_dimensions_identical": true,
+  "target_pose_identical": true,
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5"
+}

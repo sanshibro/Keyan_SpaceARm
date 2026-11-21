@@ -6,8 +6,8 @@ External pair scans include original physical and CAD-envelope geometry.
 import argparse,hashlib,itertools,json,sys,time
 from pathlib import Path
 import mujoco,numpy as np
-from m2_plant import portable,place,option,task_pose,STAGE
-from m2_scene import GATES
+from m2_plant import build,portable,place,option,task_pose,STAGE
+from m2_scene import GATES,HOVER
 
 def original_pairs(m):
     rid=m.body('uav').id;rb=[]
@@ -54,8 +54,35 @@ class NativeScan:
         return dict(record or {'distance_m':best},pairs_refined=count)
     def external_score(self):return self.scan(self.external)
 
-def audit(out=STAGE/'qa/static'):
-    out=Path(out);out.mkdir(parents=True,exist_ok=True);plant=portable();m,d=plant.m,plant.d;scanner=NativeScan(m,d)
+def launch_audit(plant,independent,hazard,fit):
+    m,d=plant.m,mujoco.MjData(plant.m);start=m.qpos0[:3].copy();high=start.copy();high[2]=HOVER[2]
+    poses=[]
+    for phase,a,b in [('vertical_departure',start,high),('hover_lateral_alignment',high,HOVER)]:
+        count=max(1,int(np.ceil(np.linalg.norm(b-a)/.01)))
+        for u in np.linspace(0,1,count+1):poses.append((phase,a+(b-a)*u))
+    records=[]
+    for phase,xyz in poses:
+        d.qpos[:]=m.qpos0;place(m,d,xyz,0,0);mujoco.mj_fwdPosition(m,d)
+        physical=[]
+        for c in d.contact[:d.ncon]:
+            if c.dist<=0:physical.append(dict(a=m.geom(int(c.geom1)).name,b=m.geom(int(c.geom2)).name,distance_m=float(c.dist)))
+        independent.d.qpos[:]=d.qpos;mujoco.mj_kinematics(m,independent.d);lo,hi=independent.bounds()
+        gaps={k:independent._scan('launch_'+k,pairs,lo,hi) for k,pairs in
+            [('body',independent.external['body']),('arm',independent.external['arm_tool']),('hazard',hazard),('fit',fit)]}
+        records.append(dict(phase=phase,xyz=xyz.tolist(),physical_contacts=physical,contact_count=len(physical),
+            **{k+'_lower_m':float(v['lower']) for k,v in gaps.items()},
+            nearest_pairs={k:[v['name_a'],v['name_b']] for k,v in gaps.items()}))
+    minima={k+'_lower_m':min(r[k+'_lower_m'] for r in records) for k in ('body','arm','hazard','fit')}
+    # Translation Hausdorff distance bounds between 10 mm-spaced FK samples.
+    # This certifies the interpolation geometry, not dynamic flight tracking.
+    tube=min(minima['body_lower_m'],minima['arm_lower_m'])-.005
+    return dict(initial_qpos0_xyz=start.tolist(),hover_xyz=HOVER.tolist(),maximum_translation_sample_spacing_m=.01,
+      interpolation_external_lower_m=tube,static_translation_path_only=True,phase_count=2,sample_count=len(records),
+      zero_physical_contact=not any(r['contact_count'] for r in records),all_samples=records,
+      **minima,passed=bool(tube>=.105 and minima['hazard_lower_m']>=.015 and minima['fit_lower_m']>=0 and not any(r['contact_count'] for r in records)))
+
+def audit(out=STAGE/'qa/static',native=False):
+    out=Path(out);out.mkdir(parents=True,exist_ok=True);plant=build() if native else portable();m,d=plant.m,plant.d;scanner=NativeScan(m,d)
     # Root-owned explicit physical-fit classification; every original pair remains audited.
     try:
         from m2_self_registry import partition
@@ -123,17 +150,25 @@ def audit(out=STAGE/'qa/static'):
         self_static_pass=all(r['self_hazardous']['lower']>=.015 and (r['self_fit'] is None or r['self_fit']['lower']>=0) for r in results),
         task=task,task_bounds=task_parts,detailed_evidence='preflight.json',flight_authorization=False)
     (out/'certified.json').write_text(json.dumps(certified,indent=2),encoding='utf-8')
+    launch=launch_audit(plant,independent,hazard,fit)
+    (out/'launch-clearance.json').write_text(json.dumps(dict(scene_sha256=plant.scene_digest,model_source='native build' if native else 'portable frozen native XML',**launch),indent=2),encoding='utf-8')
+    certified['launch_preflight']={k:v for k,v in launch.items() if k!='all_samples'}
+    certified['model_source']='native build' if native else 'portable frozen native XML'
+    (out/'certified.json').write_text(json.dumps(certified,indent=2),encoding='utf-8')
     return result
 
-def render(out=STAGE/'qa/static'):
+def render(out=STAGE/'qa/static',native=False):
     from PIL import Image,ImageDraw,ImageFont
-    out=Path(out);record=json.loads((out/'preflight.json').read_text());p=portable();r=mujoco.Renderer(p.m,height=720,width=1280)
+    out=Path(out);record=json.loads((out/'preflight.json').read_text());p=build() if native else portable();r=mujoco.Renderer(p.m,height=720,width=1280)
     frames=[]
     for row in record['gate_witnesses']:
         place(p.m,p.d,row['xyz'],row['theta_deg'],row['phi_deg']);r.update_scene(p.d,camera='observer_oblique',scene_option=option());pixels=r.render().copy()
         Image.fromarray(pixels).save(out/(row['gate']+'-oblique.png'))
         r.update_scene(p.d,camera='observer_side',scene_option=option());side=r.render().copy();Image.fromarray(side).save(out/(row['gate']+'-side.png'))
         r.update_scene(p.d,camera='wrist_rgbd',scene_option=option());wrist=r.render().copy();Image.fromarray(wrist).save(out/(row['gate']+'-wrist.png'))
+        close=mujoco.MjvCamera();close.type=mujoco.mjtCamera.mjCAMERA_FREE
+        close.lookat[:]=np.asarray(row['xyz'])+[.05,0,-.15];close.distance=1.75;close.azimuth=-150;close.elevation=-13
+        r.update_scene(p.d,camera=close,scene_option=option());Image.fromarray(r.render().copy()).save(out/(row['gate']+'-closeup.png'))
         frames.append((pixels,side,row))
     r.close();sheet=Image.new('RGB',(2560,3*780),(255,255,255));draw=ImageDraw.Draw(sheet)
     try:font=ImageFont.truetype('C:/Windows/Fonts/times.ttf',28)
@@ -142,6 +177,8 @@ def render(out=STAGE/'qa/static'):
         sheet.paste(Image.fromarray(oblique),(0,j*780+60));sheet.paste(Image.fromarray(side),(1280,j*780+60))
         draw.text((24,j*780+14),'Static %s | shape %.0f / %.0f deg | native external clearance %.1f mm | no flight'%(row['gate'],row['theta_deg'],row['phi_deg'],row['external']['distance_m']*1000),font=font,fill=(25,33,39))
     sheet.save(out/'three-gate-static-review.png')
+    (out/'closeup-cameras.json').write_text(json.dumps(dict(scene_sha256=p.scene_digest,shared_visibility=True,
+       cameras=[dict(gate=row['gate'],lookat=(np.asarray(row['xyz'])+[.05,0,-.15]).tolist(),distance=1.75,azimuth=-150,elevation=-13) for row in record['gate_witnesses']]),indent=2),encoding='utf-8')
     # Exact registered wrist view and native metric depth at the terminal pose.
     task=record['task'];place(p.m,p.d,task['body'],task['theta_deg'],task['phi_deg'])
     wrist=mujoco.Renderer(p.m,height=360,width=480)
@@ -159,7 +196,9 @@ def render(out=STAGE/'qa/static'):
     (out/'target-optics.json').write_text(json.dumps(evidence,indent=2),encoding='utf-8')
     certified=json.loads((out/'certified.json').read_text());certified['target_optics']=evidence
     (out/'certified.json').write_text(json.dumps(certified,indent=2),encoding='utf-8')
+    from m2_scene_review import make as compose_review
+    compose_review(out,native)
     return evidence
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--render',action='store_true');ap.add_argument('--output',type=Path,default=STAGE/'qa/static');a=ap.parse_args()
-    print(json.dumps(render(a.output) if a.render else audit(a.output)))
+    ap=argparse.ArgumentParser();ap.add_argument('--render',action='store_true');ap.add_argument('--native',action='store_true');ap.add_argument('--output',type=Path,default=STAGE/'qa/static');a=ap.parse_args()
+    print(json.dumps(render(a.output,a.native) if a.render else audit(a.output,a.native)))

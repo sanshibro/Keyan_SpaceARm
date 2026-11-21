@@ -17,7 +17,10 @@ GATES=(dict(name='gate1',x=1.15,y=-.10,z=2.13,width=.86,height=.74),
 def boxes():
     out=[]
     def add(n,lo,hi,material):out.append((n,np.asarray(lo,float),np.asarray(hi,float),material))
-    add('deck',[-.55,-.82,1.15],[5.45,.82,1.25],'deck')
+    # Native launch is at x=0,z=1.5: the lowered entry platform leaves the
+    # straight arm and landing gear free throughout the vertical departure.
+    add('entry_deck',[-.55,-.82,.41],[.60,.82,.55],'deck')
+    add('deck',[.60,-.82,.41],[5.45,.82,1.25],'deck')
     add('far_wall',[-.55,.80,1.25],[5.45,.84,2.82],'wall')
     # A permanently transparent inspection guard is identical in every camera.
     add('near_guard',[-.55,-.84,1.25],[5.45,-.80,2.82],'glass')
@@ -47,5 +50,5 @@ def pipes():
 CAMERAS=(
  ('observer_oblique',[6.65,-6.9,4.75],[2.55,0,1.97],32),
  ('observer_side',[2.55,-8.0,2.32],[2.55,0,1.99],27),
- ('observer_dock',[5.48,-1.58,2.92],[4.84,.12,1.75],32),
+ ('observer_dock',[4.55,-.72,2.32],[4.95,.18,1.65],46),
  ('observer_end',[5.98,-.03,2.25],[1.95,.02,2.03],52))

@@ -1,0 +1,55 @@
+{
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "physical_geometry_unchanged": true,
+  "static_pose_instances": 3,
+  "simultaneous_flight": false,
+  "overview_camera": {
+    "lookat": [
+      2.47,
+      0.0,
+      1.66
+    ],
+    "distance": 8,
+    "azimuth": 57,
+    "elevation": -35,
+    "orthographic_height_m": 4.9
+  },
+  "closeups": [
+    {
+      "gate": "gate1",
+      "lookat": [
+        1.18,
+        -0.1,
+        2.11
+      ],
+      "distance": 2.3,
+      "azimuth": 57.0,
+      "elevation": -12.0,
+      "orthographic_height_m": 1.1
+    },
+    {
+      "gate": "gate2",
+      "lookat": [
+        2.5799999999999996,
+        0.12,
+        1.79
+      ],
+      "distance": 2.3,
+      "azimuth": 57.0,
+      "elevation": -12.0,
+      "orthographic_height_m": 1.1
+    },
+    {
+      "gate": "gate3",
+      "lookat": [
+        3.98,
+        -0.11000000000000001,
+        2.08
+      ],
+      "distance": 2.3,
+      "azimuth": 57.0,
+      "elevation": -12.0,
+      "orthographic_height_m": 1.1
+    }
+  ]
+}

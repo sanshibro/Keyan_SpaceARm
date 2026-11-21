@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "checks": [
+    "native simulator model",
+    "identical visual and physical scene",
+    "identical self-collision registry",
+    "registered witness gate1",
+    "paired clearance gate1",
+    "registered witness gate2",
+    "paired clearance gate2",
+    "registered witness gate3",
+    "paired clearance gate3",
+    "three passage centres",
+    "zero static launch contacts",
+    "zero static launch contacts",
+    "168 mm optical datum",
+    "native and local wrist depth agree"
+  ],
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "registered_solids": 45,
+  "witnesses": [
+    {
+      "gate": "gate1",
+      "external_m": 0.11955303986706736,
+      "hazard_m": 0.035777659015926076,
+      "fit_m": 0.0014018124083564998,
+      "largest_difference_m": 3.247274519570763e-08
+    },
+    {
+      "gate": "gate2",
+      "external_m": 0.12165120076452199,
+      "hazard_m": 0.02092341722374667,
+      "fit_m": 0.0015208804717579741,
+      "largest_difference_m": 1.725696227129498e-06
+    },
+    {
+      "gate": "gate3",
+      "external_m": 0.11955304101718643,
+      "hazard_m": 0.035771905949471265,
+      "fit_m": 0.0013963596933062499,
+      "largest_difference_m": 5.687486562079569e-06
+    }
+  ],
+  "native_launch_samples": 75,
+  "native_launch_zero_contact": true,
+  "native_optics": {
+    "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+    "face_uv": [
+      239.5,
+      179.5000000000012
+    ],
+    "optical_depth_m": 0.1679999999999995,
+    "native_depth_at_face_m": 0.16813965141773224,
+    "camera_center_depth_m": 0.16813965141773224,
+    "valid_depth_fraction": 1.0,
+    "desired_axis_error_deg": 1.9090959104164224e-06,
+    "stand_off_pass": true,
+    "depth_center_pass": true,
+    "view_specific_geometry": false
+  },
+  "local_optics": {
+    "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+    "face_uv": [
+      239.5,
+      179.50000000000122
+    ],
+    "optical_depth_m": 0.1679999999999995,
+    "native_depth_at_face_m": 0.16813983023166656,
+    "camera_center_depth_m": 0.16813983023166656,
+    "valid_depth_fraction": 1.0,
+    "desired_axis_error_deg": 1.7075472925031877e-06,
+    "stand_off_pass": true,
+    "depth_center_pass": true,
+    "view_specific_geometry": false
+  },
+  "local_evidence_sha256": "166ea37e6d896fe7188faafbc9297884655a428642bcfe8bf350b2f8396c8b74",
+  "native_evidence_sha256": "1a4028858b204f57f51d631110fdfd7f07f74205fd5aa0699bded430296b8b15"
+}

@@ -18,6 +18,12 @@ def option():
     return opt
 def install(root,assets=SCENE,robot_setup=True):
     assets=Path(assets);world=root.find('worldbody');vehicle=world.find("body[@name='uav']")
+    policy=assets/'visual-policy.json'
+    if policy.exists():
+        visual_policy=json.loads(policy.read_text());floor=world.find("geom[@name='floor']")
+        if floor is not None:floor.set('rgba',vec(visual_policy['legacy_infinite_floor_rgba']))
+        for sky in root.findall("./asset/texture[@type='skybox']"):
+            sky.set('rgb1',vec(visual_policy.get('studio_skybox_rgb',[1,1,1])));sky.set('rgb2',vec(visual_policy.get('studio_skybox_rgb',[1,1,1])))
     if robot_setup:
         for geom in vehicle.iter('geom'):
             if geom.get('name','').startswith(('visual_','qingyu_rviz_')) and geom.get('contype')=='0':
@@ -72,7 +78,7 @@ def portable(assets=SCENE,robot_xml=None,cad_archive=None):
     # Only the frozen native robot and the original lighting survive; replace the old environment.
     for e in list(world):
         if e.tag=='body' and e.get('name')=='uav':continue
-        if e.tag=='light':continue
+        if e.tag=='light' or (e.tag=='geom' and e.get('name')=='floor'):continue
         world.remove(e)
     for e in list(asset):
         if e.get('name','').startswith(('M1_','M0_')):asset.remove(e)

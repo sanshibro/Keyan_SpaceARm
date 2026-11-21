@@ -1,12 +1,12 @@
 {
-  "scene_sha256": "b1cfbf74f31eae7261e973553cf1e21bbfe5f551e17ce5ca5812e4029009d445",
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
   "face_uv": [
     239.5,
     179.50000000000122
   ],
   "optical_depth_m": 0.1679999999999995,
-  "native_depth_at_face_m": 0.1679997593164444,
-  "camera_center_depth_m": 0.1679997593164444,
+  "native_depth_at_face_m": 0.16813983023166656,
+  "camera_center_depth_m": 0.16813983023166656,
   "valid_depth_fraction": 1.0,
   "desired_axis_error_deg": 1.7075472925031877e-06,
   "stand_off_pass": true,

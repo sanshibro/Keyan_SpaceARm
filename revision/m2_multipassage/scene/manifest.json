@@ -1,15 +1,171 @@
 {
-  "scene_sha256": "b1cfbf74f31eae7261e973553cf1e21bbfe5f551e17ce5ca5812e4029009d445",
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "collision_geometry_sha256": "9beb41859cd85437de37a731c5ff6531d46ef9468d6d5a723d05cfdbe9912f15",
+  "authorized_collision_predecessor": "1b88313ef540c3aa2984b3675b84dbffd1656a176f40d003ed4ab4e24d296e2d",
+  "collision_count": 45,
+  "visual_meshes": 154,
+  "parts": 626,
   "files": {
-    "bulkhead.png": "574dc4152b8673972babcdb468022ecd9bc621dede4fa3d2ddb8e6f0ad0b47b9",
-    "cell.xml": "262bbedebefe6e0b3bd52d61dbe9d7066318cedfa1481e6df02d383c7384a314",
-    "copper.png": "d664ce7ed1075cb8a5f4449c9fa6e5404d8aeacc0488f1cbec6b799ce85c9264",
-    "deck.png": "5b5ea388ac9445792b636b87c25f5b879a4714f5440a2d57e28c9287fbcd4752",
-    "duct.png": "752ca859269cfc68d4849ee132d75fa359298b8c78b597ec02d4f1b6b630d70d",
-    "flange.png": "77503704b6e3065201599a237d0fce8b299c3cbc1d152a266f3268221535d9d1",
-    "glass.png": "7cfbe26f370b903d7f35ddd28b94f4f440bd906b60ebde18f88832327b8332ed",
-    "steel.png": "be42ba841c51eda2660d8b7a37280994ee09f404e882c3bf6f35d37c712e4486",
-    "wall.png": "d36cdc2eee153a0d7b7393e3908799db9137d5e767402d76f8ffd81f283e4f0c"
+    "M2_branch_cross_124.obj": "379ad7020e1b4b6cf1bf67284098978bc5b0f75d23cce4dcf0d311b670908b2f",
+    "M2_branch_cross_125.obj": "00196f1be5de6fac844b79bec84ed05889df5dcef575fe44b95994792bd99613",
+    "M2_branch_cross_126.obj": "80118ea8acdbda6f8eab4478b79dab9495237e32d46cb3df7204dba1c21941d7",
+    "M2_branch_cross_127.obj": "a37e1ada40d771fad054d7b12788f02a497ee3eb527c3317493f3b765c2eb172",
+    "M2_branch_negative_120.obj": "fd152eb1ce6c22949987b763f3b5ae76d5c90c8297794f6f58cc335cc63bfa41",
+    "M2_branch_negative_121.obj": "83e7817df8155ab1510296a4ae3f5ddf1ca52bda29410f3d28e651f653d32bbb",
+    "M2_branch_negative_122.obj": "fe824f8cacc0e64a224adbec26c66140e1414ffdc8320b35382da1dfd7c55638",
+    "M2_branch_negative_123.obj": "9f28fb9dd7845c444ce29c056539d4866ef5710daa369b35e7d4bdabb919db02",
+    "M2_deck_004.obj": "bfa1fa8fdcaf8b2644b107259e768a8019dc8343d1e234eae6d3e7d1b6dcedf4",
+    "M2_deck_005.obj": "3e93cc5412d8b8066faaec8f1a41ce99a2290dd5b0275f35ed2367018f7af321",
+    "M2_deck_006.obj": "e2cd843c1076caaf4fdc49f807527713c38c4f74ce0f22e6056974606282c85a",
+    "M2_deck_007.obj": "f47de38a218c44867f2a4b710d8e5f4265d4b942e778168e9b0d0d33a76bdd9d",
+    "M2_deck_008.obj": "7179be7f87a136c21b54508f33f49a5bc5f9e1eadb24c6f923583cdba01d2414",
+    "M2_duct_rib_0_102.obj": "fee285881710de13d1e7327f3329f8ff859d924ebf828020696d29c5aa3a5a86",
+    "M2_duct_rib_0_103.obj": "57a4db0c34165e521c825049f3fdf655a89976950af014b1c14f95b32150ab31",
+    "M2_duct_rib_1_104.obj": "aa70078f8e8af07e7458a717f254af185f1f0e3cbe7b8caccfa14bb3a5e6014e",
+    "M2_duct_rib_1_105.obj": "7a83dfc8b940042c5b5e047702a45acabcaab285493c4b8544b033bc4c251fe6",
+    "M2_duct_rib_2_106.obj": "a187d0e2052d732a5d865a7db8e0ebb2c59453a61bf883a7eaf59c19a7b64c87",
+    "M2_duct_rib_2_107.obj": "0470e20f5b29a010db011f630c4747cf104c7487ee2f3158db21bfa321b4d7e4",
+    "M2_duct_rib_3_108.obj": "06a948e2d3c173315731f6516556a24f68e1b690508b859caa57ce9fdc6a5222",
+    "M2_duct_rib_3_109.obj": "c5308de78d387dfbd8b14985f05cee7decd57bf5b73c37a0a2fe98cb96b5977b",
+    "M2_duct_rib_4_110.obj": "3e83e5f4be67c4f70e0c1207454867b3c5629aaf26f73032dfb4acf3bafb9e1f",
+    "M2_duct_rib_4_111.obj": "0dffe1f1cd9219cce6afbf0f3a64c3e4e3a815726ccde72f619c71e47817c764",
+    "M2_entry_deck_000.obj": "8af7b3d6b94d8533cdd69eb9604d1bafbf657aa46b25256d2da3fcc450aabfe5",
+    "M2_entry_deck_001.obj": "18e6b97fb50e6f50a7044a4597b5869f5b3fbfd762b9bb8942be8a97e4eda344",
+    "M2_entry_deck_002.obj": "1e9bbd523483faa368b5e1e494cccfbae77b3aaf7f28d5665271882c3737c639",
+    "M2_entry_deck_003.obj": "398be09bac689330d70bc1b396d592c60a25dcdf0a6bb17f403b54e50d75ffb8",
+    "M2_far_header_128.obj": "3c7fa8e9302302b273f31b36804d48539e3df3be44ec804294cf3da46f114167",
+    "M2_far_header_129.obj": "7f2a78aa470db9f1e2bce9f3a6fdb656414e7de93ff377f014da126c4a177cad",
+    "M2_far_header_130.obj": "278639dd467e4c6a6b19a62218d7b3715916358cf300914e85f0bd3db076900a",
+    "M2_far_header_131.obj": "7dec3202d6c709d18359feca8fcbc1ef22abc0c0fbf427a05ac7d85057cb7692",
+    "M2_far_wall_013.obj": "2a211269da9cda3b849577132ce7bd91255f52dcdef42d1ba8de185875592bce",
+    "M2_far_wall_014.obj": "e5da47bc7913f4ded2bb5a13c2c5449253e964aa90a22179f3b5cac85ed64dc6",
+    "M2_far_wall_015.obj": "20ed1a737cc18fa20b1d36ebb4840d63690cafbd1a78da3253a25942a121658d",
+    "M2_flange_back_137.obj": "8ec2b2b3889d4344e4804072c01133d2476858b525b473b47f8443b456553b5a",
+    "M2_flange_back_138.obj": "4f06a71421d4bf12f1d343341152b22499aa66a8afb38ff3d9cb56dfd5f3e699",
+    "M2_flange_back_139.obj": "509a8e658e2e5ccf7df4de665ef8efa14af2fdac0f3d95fc372649c0d46c45b2",
+    "M2_flange_back_140.obj": "c72c54af3e6003c2e055e4c55b247b3adfce7bc4e138e92b42820556426e9081",
+    "M2_flange_back_141.obj": "f972578c8640fc1a50d0eda2d6dd18e2f6b3466715cc89f2b626aab1747653de",
+    "M2_flange_bracket_150.obj": "3f19041aeb4e0f387bca18df7f9ff6201f13bac8766a8a15af1a7be39cf1705a",
+    "M2_flange_bracket_151.obj": "3fbcb718114b850e700f984e55307a5dfb5c7f4cc3e9dde27e0cdff93954c612",
+    "M2_flange_bracket_152.obj": "94ba909c2d96485dbbac0b57cd1c8404f94827b61d09ece3fb8b39d0a4fdcc8c",
+    "M2_flange_bracket_153.obj": "a87e74449a9f9d5899bb3e5e3f619d74811c525a39ac11473d9698c4f2f9280d",
+    "M2_flange_face_142.obj": "564183aca1a783343ccd778d2533307ecb4841c68d705d761dbe288d96f3c598",
+    "M2_flange_face_143.obj": "6873afda2d6c09f48753211ff012edbe4fbcdaabdaeadd6a2fb27c86c61df6d7",
+    "M2_flange_face_144.obj": "ffb6a808bf832577554fc83c4e2e25ee175833c1f885a55249a50cd854f8a1cd",
+    "M2_flange_face_145.obj": "173838da93a6e0654bc78bf883993c1facba628d00fc76a6a85af51f4203a846",
+    "M2_flange_face_146.obj": "a11f6cf1a9a3594d0f940f36761b5cd64105d204134543f4c4053fac6223aa1e",
+    "M2_flange_fasteners_147.obj": "0d8be63b621c0be8812b621bc7c5aea27f0b89e46e2e943c31911f4579fe268e",
+    "M2_flange_fasteners_148.obj": "d8aed80db32b3ec82875013960796a4e6166da274e541bbde987d8ce541671c8",
+    "M2_flange_fasteners_149.obj": "47b13c2c57e3ae9799ce77e0e87d3ed8447a6b5a2631376c77843fb39730f6cf",
+    "M2_flange_lip_132.obj": "378e6eba83b4bc64666ef3ce19f2518432622478da4677205373a1c362cd0c7e",
+    "M2_flange_lip_133.obj": "1f5ccc990861ddd8d66f463dbe4282bbcb7fd1d31dc43af41792cd0ac380ea2a",
+    "M2_flange_lip_134.obj": "13baac54b85c8d043e80dfef453ceb60514dc98018db665ad3d5344d259d819a",
+    "M2_flange_lip_135.obj": "e263e424300d9ddd011c19e7995dd1939bbddd073b8dd5f1f1f414e92253bf69",
+    "M2_flange_tube_136.obj": "0e21c86c76250a56df390a318feb65e842ad1381797c626c7bef3ba1abdd3845",
+    "M2_gate1_bolt_-1_1.48_058.obj": "b334f291c7ad3f55709bff34ff1d52eb00632a41dae6559f434158e5cacf3274",
+    "M2_gate1_bolt_-1_2.68_059.obj": "6c1e007c85238e04884354c108e9ea41735af54fbdf47bf99d081c4a9cac5a3a",
+    "M2_gate1_bolt_1_1.48_060.obj": "336658e7a5db9db84b97a690104c522ef50b865190bdec50d933bc6111fe9648",
+    "M2_gate1_bolt_1_2.68_061.obj": "e897cd322a87c2844587529ad71ab87f3bbec54df3a25047770e61fcafe1aa69",
+    "M2_gate1_lintel_026.obj": "4f7b7707b164dcff42462fc6563f55266234fcca3f710a602caa51527c6c8589",
+    "M2_gate1_lintel_031.obj": "854135f1c3dbfd16d442476af60adcef32821e3e6afec69053be83e4963e2800",
+    "M2_gate1_lintel_035.obj": "6913ad6c5638f213a3e0fb3e63b0760fa4daf8670222f474f8e68358871d2333",
+    "M2_gate1_lintel_039.obj": "457b98628b58e7a9d2d38d6eb269baad53a3a389eb2b6715ff3fc7edbfc3a719",
+    "M2_gate1_lintel_043.obj": "2de6d1dedbe3d015d74ea630fb9522ba93f37ea012a251ac7109fbe53ec9bd6d",
+    "M2_gate1_lintel_047.obj": "6fc25b7f6c14a66f7bcf838f7225ebc8a848fe53909d630b8c66e043c69684cd",
+    "M2_gate1_lintel_048.obj": "b616a5e4275b58f5d42ccef617bb6fd733f89f98df792758b94e800204f5e52c",
+    "M2_gate1_negative_027.obj": "4467905a65404eb39bc4838b83762e3cbf0468fc61dfffc791f8d9d45449914b",
+    "M2_gate1_negative_032.obj": "c950aee566c40c2746217db16af16ae5db284bd2742f11120b861e6ee73c439d",
+    "M2_gate1_negative_036.obj": "f9e6a6683cde17683327848a43bbf60d5a3de363b1e56b760d7ccfeefda1e6dc",
+    "M2_gate1_negative_040.obj": "2d250212b98d190db43fe64432fe434ae7cc0c1081f3ba8250e1c429cca1549e",
+    "M2_gate1_negative_044.obj": "617df91e14a7ff4a982b62329df18300553d4a1f999ea7517b4089d0556d33d8",
+    "M2_gate1_negative_049.obj": "2f37888b42f32846fbc6c723e8b503e7c06023f134004f300ac4a0bee2bbe710",
+    "M2_gate1_negative_050.obj": "93ebdb4253061bd46108d248e41267051647a099dd44518a4247a540018e355c",
+    "M2_gate1_negative_053.obj": "2700664c75d83da6e64399d40e9ebfe3788cd9536c15bbfd1e94ec2ef4a8f35e",
+    "M2_gate1_negative_054.obj": "7cb99b90df91525baeb9b4544243f6a9a49044ab195ed6bbd4fdcbab932986d0",
+    "M2_gate1_positive_028.obj": "2106713d03f6745e0f68b7cd5cd7b9e6c2cbf4eca7fc4ac403f80a509528eaa1",
+    "M2_gate1_positive_030.obj": "2dea378eacec605dee54401097549bb332bb0ccb70002a97138af14a153c6369",
+    "M2_gate1_positive_034.obj": "053ba5c8f779e8527a09a5ad15cc8abd66b239ad4cda84182f913d878cedc73d",
+    "M2_gate1_positive_038.obj": "c46458b0e12c043af43c06d97cd172410ec945ea7bd938d85fef7512c0bdce56",
+    "M2_gate1_positive_042.obj": "8b419d3a4672470e9164090096e171ed09b1fb187b34f4ea2bc280da7a2f13a8",
+    "M2_gate1_positive_051.obj": "99e6cdadbf96708f3d8b6d096f657216c048ce265f0de18fd24d98ec95438942",
+    "M2_gate1_positive_052.obj": "42c1fb15d04a4d851d29590efd9369790dfb71c2e4ea71d30c532f2de8d10993",
+    "M2_gate1_positive_056.obj": "8ca00bd6ee1ff3ea22d47a13dc35e50601997eda34cc8713605c04fd9372dba8",
+    "M2_gate1_positive_057.obj": "f9fafa7f83225dae3aba2fd416c968c4b38c80a8e5ab1b08e7d8d3f7dd90dc0f",
+    "M2_gate1_sill_025.obj": "deedefbf62f872ac70cd9513217c511789e8665f074b092560b8eeb029374df9",
+    "M2_gate1_sill_029.obj": "2def84cffe95bebe16e5712432cf8d4705d9fc5d3f5488d361422aecb43e4caa",
+    "M2_gate1_sill_033.obj": "67efa313ef9e096e1c3cacfc8e2d853e407d2fe63a9e616544ddd43295112b67",
+    "M2_gate1_sill_037.obj": "39b36813ee7bd8e98d0c6929b0cb6cc1f3a47b32996405ca45b7cf9e336b9a07",
+    "M2_gate1_sill_041.obj": "76ab7663efb6499ce73bd9433ca419cb1c1ccfbfd9ec90299b83f60aafde4881",
+    "M2_gate1_sill_045.obj": "6b008204ddb8295097c69f46761a7c87c9a44c608f76aa2c391abe36d5433b30",
+    "M2_gate1_sill_046.obj": "151dd3996b6f5d2c0b8566b3aa4feba2d54d2ca2063b349e47b7931ca5326813",
+    "M2_gate1_sill_055.obj": "350805dd03e023685818ca2b01b430fcab8aba6960d3f449192532675f5cc38b",
+    "M2_gate3_bolt_-1_1.48_095.obj": "74f11b3a32c43dad668a10791c5e707ec35847ffcbc805ffcc9619e4c4051f8d",
+    "M2_gate3_bolt_-1_2.68_096.obj": "494633b8144e0809f708dbc6991850ace840575bdf0ba80036437cc9eff51ce6",
+    "M2_gate3_bolt_1_1.48_097.obj": "ce7dbeadf2e77d98e9e32228c660c90201f254f6b04730c3dbfd0f95b01c3eb9",
+    "M2_gate3_bolt_1_2.68_098.obj": "a1753da2b3feccc14ccbe01f4bfa2b98f38bd62a113da85cd014cf5e23c1346f",
+    "M2_gate3_lintel_063.obj": "24c6ac9d276ed147a60a079abfbed55b8523e9fa02d58833efd2e37265308181",
+    "M2_gate3_lintel_068.obj": "74144cda5220633466103947176287f99f9739ec587c6d8658a89cc72e0c4a23",
+    "M2_gate3_lintel_072.obj": "21ab62d0887a467bd283cffd23e77e94f9e7d58ec867793a29bc876ca9475283",
+    "M2_gate3_lintel_076.obj": "5f05c7f3e561ef8b08a4e80fc83b6bb47a3f4d76a8df690b3f59ed0fe69ac9e0",
+    "M2_gate3_lintel_080.obj": "37d8756cfe9e5dc9694ade14899e9ce1123ca4ee4b5757439f205e065c7e6201",
+    "M2_gate3_lintel_084.obj": "a975586df2a86263cfe8615267cc64cfd42b33822bd93a4ea14e67f37650bd27",
+    "M2_gate3_lintel_085.obj": "8c656c1ab3bbcc22e08292624204e1f73df0efe0d0895b130f4a230bc98c70fc",
+    "M2_gate3_negative_064.obj": "d9020685126cd551abaad806c2b8afa922ebb0990fac85c3231ee12bf8731b65",
+    "M2_gate3_negative_069.obj": "cddfe5e6be5b8d19ff317320210c1a35c7449c7f5306531d00342b96591dbf3f",
+    "M2_gate3_negative_073.obj": "98f53ce40ed184da38ca235978136a71f2a94233815e9240f72bf776736e7a3c",
+    "M2_gate3_negative_077.obj": "f5feff68fc053300f4ae1e4d80904f7ebe6d795c35f53f11ffffc8d8b7b814c8",
+    "M2_gate3_negative_081.obj": "9cea9133d8877a623927d8ff6b5d925136f3eccac87df3de4bdc6b4566d24f8b",
+    "M2_gate3_negative_086.obj": "ceca5bcd25d6de5064758974201ecc8693897afcc4a9427191dca074935ac746",
+    "M2_gate3_negative_087.obj": "28b9d159edc1c23006356679a6914aa9868524781194ec53857bb0029292fe50",
+    "M2_gate3_negative_090.obj": "cbc6bf88d5126ed3568c3b45b230fff3fb97d6a4822fae893cec64e86061b442",
+    "M2_gate3_negative_091.obj": "a0a5757475a0523f4a99b1dd26ff846a0d4950c4dd394d1a99fd061a70f45726",
+    "M2_gate3_positive_065.obj": "3ca4680d6308d12acd9a0988c51b838195515742ba1761523a32bcc51f2c43a0",
+    "M2_gate3_positive_067.obj": "be30b853a41ffe4d7f383e7a7f9f61ecfbedf74c83ffbbeca8de043c78d94db0",
+    "M2_gate3_positive_071.obj": "14908921308d448f9c3692ef952aad4635e6c6af6b30c7e41cd330970065b768",
+    "M2_gate3_positive_075.obj": "d91a0bf0b6049e1de954f3b2513610e347984b6892d88346963655d0c397e342",
+    "M2_gate3_positive_079.obj": "2e4317a28e5ad0b1e64675fbb1b130c0f5c6f37dbf9eb4e3a2e0ce6031b67388",
+    "M2_gate3_positive_088.obj": "f614716b7020197d4987a70174fc6c798458fbdd8028f452d4809824bf1481b8",
+    "M2_gate3_positive_089.obj": "2d36ba3fb6ae2e599cd10dc64f1dc221400efb539be286e26e100712c01b8352",
+    "M2_gate3_positive_093.obj": "3a763c08aa29c159883df03182b1f8bff6efb42b8e3550f51117031e196091a8",
+    "M2_gate3_positive_094.obj": "ea3198654e7cb7f982881d0d899afe37682a22fa2a4f051da1bce9f22deff643",
+    "M2_gate3_sill_062.obj": "0cc0e703676e2faa803ce8e8a7b11379543c4b5240573f60c145e113d7547b21",
+    "M2_gate3_sill_066.obj": "285387be23757f56f311b653e7365fc0260446ea5b756694e9feb83b745a7622",
+    "M2_gate3_sill_070.obj": "218d90bbd4c234b5888dc862c9974669c9a05eeab8c2c4861a2e49459e9737bb",
+    "M2_gate3_sill_074.obj": "4fca5e87683c8378f85ef99e245ff4f48074247df74944275f8249ced05a2a8a",
+    "M2_gate3_sill_078.obj": "93dc4c64adc8dd4d6b7a6c8afe95e5cec7cb28f49a63314d5c369f12c2410be8",
+    "M2_gate3_sill_082.obj": "085255791c440914a27c17f6a6a1b1609cd4f125dc8e23650ba58b5c66b647e5",
+    "M2_gate3_sill_083.obj": "b4e0e139f5d945eccc1954944783083efdff480ec114acd14586046df838c870",
+    "M2_gate3_sill_092.obj": "5471e9d9f67d033cf332763436c87f2cb9de4f685368f85ee0c5cbaa80b48217",
+    "M2_low_service_plinth_009.obj": "778a77f832f5556066db07f6b828270465faae13f49c005e3ec35da1387d2b1e",
+    "M2_low_service_plinth_010.obj": "62e7f3ee89af2a55148afda670856d3a0d94720e88e396b8d538e2ae01bbbd60",
+    "M2_low_service_plinth_011.obj": "4fe0df817fc72237bd3f4b2548475a12b2ca750fe3b89596390243afe8da9e5a",
+    "M2_low_service_plinth_012.obj": "76b065f32f44480f4cd46cbf2e98f888c33829e4b3af79cbacb06446adbdb39f",
+    "M2_near_guard_016.obj": "7ce965d49473ea01a096ca1d02ebde9ea2f641693d99dc0ed7379c2ebabe9e33",
+    "M2_near_guard_017.obj": "efdd7c7d9b4da2ae0f4b9719fbbfe8806ed3b00075cc735f7100bc37373a4090",
+    "M2_near_guard_018.obj": "a2f4a1175e3ba0a19306e736c712dd63b2b2d63e8e306584c9a57eb0ebd09365",
+    "M2_near_guard_019.obj": "0c6e1e23d28e6ffc133525146c98f63b40281ebbcc4a308985000a76cefaaad9",
+    "M2_offset_riser_negative_112.obj": "c689732fcaa9870e1c8a59addcdfe36360aac3cc7c7dc694c2e0986431abb72b",
+    "M2_offset_riser_negative_113.obj": "db5e1889995dd8838d79cd25f1db67e896c804a510681e7c103346bb382d39e9",
+    "M2_offset_riser_negative_114.obj": "116472e095fe07b9e882580726ad880adfa40d6a7b67aaae1ad7620258a307ad",
+    "M2_offset_riser_negative_115.obj": "46e15d30d7327311c6fa6ed6a9e514e2d9f8d23fad8a130638948be784f3c885",
+    "M2_offset_riser_positive_116.obj": "78fd40a4b87c330f9780d83ae1c8276c9ff61b81bd33072a3561cc19fc186c65",
+    "M2_offset_riser_positive_117.obj": "2cebf3788d1119f9b06d92f9ce7eff32251ab5deda7815b1b6e723dda3181983",
+    "M2_offset_riser_positive_118.obj": "4514773a0808d243167e6061045f3425e76e9a3a85a3d4252223fac13bb936a5",
+    "M2_offset_riser_positive_119.obj": "50a3e69d4bd31fb627f881db1c67c8771ed1676c584391e510596dbbf4e626f2",
+    "M2_overhead_duct_099.obj": "8e057188386b3f69c22e7b6420f93e72c7e2d656d10bd0740730d7d9d3491256",
+    "M2_overhead_duct_100.obj": "c8c27b52e3219b72817460bfcd6521b0482950ba036ace5bded039a09fefdb67",
+    "M2_overhead_duct_101.obj": "c0ff96cd5e4becee52ceb493647997b45e294e8a378fb5afb12cf5635c854891",
+    "M2_roof_edge_far_021.obj": "df479d302b668cecdf0a0935d0e9adbd1f8f19e0f18d29052ff8b9ee04943e6b",
+    "M2_roof_edge_far_022.obj": "19857aa6b70807cecc61cafaac6d1b85858837033bb7ef1c73bd64bf63ffa7c4",
+    "M2_roof_edge_near_023.obj": "7cd1a7ce7a539748bc653a854b452bb5f7367077d533352db63000caba1fe81d",
+    "M2_roof_edge_near_024.obj": "dd283d6c6ae2389358bc11c2631d97146b7dd58ef74d43ac4d9208d99e8f9912",
+    "M2_terminal_panel_020.obj": "63d604ce430acb216ffac1d5f2120af995b863b1308094a2f4f4f902b1e0babb",
+    "cell.xml": "3fa3803c5ab29c675770c6c1b39bde3340d69547ec74928934baf74f8e86a762",
+    "concrete.png": "da583ea24baf1700e61a1825aa78656171d5c28c55824a9e131f2d3416de73cc",
+    "deck.png": "86764413060d4c36e7dbeaca5ce9d6b17998a6af23c12171321cab7c1fdbff3a",
+    "pipe.png": "2a2f6050db787e16cc9592663c8d67285e0dcfdae4e464e93e0fc58502536d0a",
+    "steel.png": "e749a3737877a7f3c1017e01fa985f771708b8b05c770fd096dee9f19eff85ee",
+    "visual-policy.json": "170d0e110b1304b4928bd5351219d1978b106c8f65cc3e5edecff787072672bf"
   },
   "gates": [
     {
@@ -47,341 +203,4215 @@
     0.4616567134559925,
     -0.6430941299603677
   ],
+  "optical_working_distance_m": 0.168,
   "shared_views": true,
   "view_specific_geometry": false,
-  "texture": "fixed-seed natural brushed/coated metal",
-  "box_geometry": [
-    {
-      "name": "deck",
-      "lo": [
-        -0.55,
-        -0.82,
-        1.15
+  "observer_camera_definitions": [
+    [
+      "observer_oblique",
+      [
+        6.65,
+        -6.9,
+        4.75
       ],
-      "hi": [
-        5.45,
-        0.82,
-        1.25
+      [
+        2.55,
+        0,
+        1.97
       ],
-      "material": "deck"
-    },
-    {
-      "name": "far_wall",
-      "lo": [
-        -0.55,
-        0.8,
-        1.25
+      32
+    ],
+    [
+      "observer_side",
+      [
+        2.55,
+        -8.0,
+        2.32
       ],
-      "hi": [
-        5.45,
-        0.84,
-        2.82
+      [
+        2.55,
+        0,
+        1.99
       ],
-      "material": "wall"
-    },
-    {
-      "name": "near_guard",
-      "lo": [
-        -0.55,
-        -0.84,
-        1.25
-      ],
-      "hi": [
-        5.45,
-        -0.8,
-        2.82
-      ],
-      "material": "glass"
-    },
-    {
-      "name": "roof_edge_far",
-      "lo": [
-        -0.55,
-        0.72,
-        2.76
-      ],
-      "hi": [
-        5.45,
-        0.8,
-        2.82
-      ],
-      "material": "steel"
-    },
-    {
-      "name": "roof_edge_near",
-      "lo": [
-        -0.55,
-        -0.8,
-        2.76
-      ],
-      "hi": [
-        5.45,
+      27
+    ],
+    [
+      "observer_dock",
+      [
+        4.55,
         -0.72,
-        2.82
+        2.32
       ],
-      "material": "steel"
-    },
-    {
-      "name": "gate1_sill",
-      "lo": [
-        1.095,
-        -0.8,
-        1.25
-      ],
-      "hi": [
-        1.2049999999999998,
-        0.8,
-        1.7599999999999998
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "gate1_lintel",
-      "lo": [
-        1.095,
-        -0.8,
-        2.5
-      ],
-      "hi": [
-        1.2049999999999998,
-        0.8,
-        2.82
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "gate1_negative",
-      "lo": [
-        1.095,
-        -0.8,
-        1.7599999999999998
-      ],
-      "hi": [
-        1.2049999999999998,
-        -0.53,
-        2.5
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "gate1_positive",
-      "lo": [
-        1.095,
-        0.32999999999999996,
-        1.7599999999999998
-      ],
-      "hi": [
-        1.2049999999999998,
-        0.8,
-        2.5
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "gate3_sill",
-      "lo": [
-        3.895,
-        -0.8,
-        1.25
-      ],
-      "hi": [
-        4.005,
-        0.8,
-        1.73
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "gate3_lintel",
-      "lo": [
-        3.895,
-        -0.8,
-        2.47
-      ],
-      "hi": [
-        4.005,
-        0.8,
-        2.82
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "gate3_negative",
-      "lo": [
-        3.895,
-        -0.8,
-        1.73
-      ],
-      "hi": [
-        4.005,
-        -0.5700000000000001,
-        2.47
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "gate3_positive",
-      "lo": [
-        3.895,
-        0.29,
-        1.73
-      ],
-      "hi": [
-        4.005,
-        0.8,
-        2.47
-      ],
-      "material": "bulkhead"
-    },
-    {
-      "name": "overhead_duct",
-      "lo": [
-        2.18,
-        -0.8,
-        2.23
-      ],
-      "hi": [
-        2.94,
-        0.8,
-        2.68
-      ],
-      "material": "duct"
-    },
-    {
-      "name": "low_service_plinth",
-      "lo": [
-        2.13,
-        -0.8,
-        1.25
-      ],
-      "hi": [
-        2.94,
-        0.8,
-        1.39
-      ],
-      "material": "steel"
-    },
-    {
-      "name": "terminal_panel",
-      "lo": [
-        5.25,
-        -0.8,
-        1.25
-      ],
-      "hi": [
-        5.3,
-        0.8,
-        2.82
-      ],
-      "material": "wall"
-    }
-  ],
-  "pipe_geometry": [
-    {
-      "name": "offset_riser_negative",
-      "a": [
-        2.44,
-        -0.36,
-        1.39
-      ],
-      "b": [
-        2.44,
-        -0.36,
-        2.23
-      ],
-      "radius": 0.045,
-      "material": "copper"
-    },
-    {
-      "name": "offset_riser_positive",
-      "a": [
-        2.67,
-        0.7,
-        1.39
-      ],
-      "b": [
-        2.67,
-        0.7,
-        2.23
-      ],
-      "radius": 0.045,
-      "material": "copper"
-    },
-    {
-      "name": "branch_negative",
-      "a": [
-        2.44,
-        -0.36,
-        1.66
-      ],
-      "b": [
-        2.83,
-        -0.36,
-        1.66
-      ],
-      "radius": 0.026,
-      "material": "steel"
-    },
-    {
-      "name": "branch_cross",
-      "a": [
-        2.83,
-        -0.36,
-        1.66
-      ],
-      "b": [
-        2.83,
-        0.25,
-        1.66
-      ],
-      "radius": 0.026,
-      "material": "steel"
-    },
-    {
-      "name": "far_header",
-      "a": [
-        0.05,
-        0.72,
-        2.64
-      ],
-      "b": [
-        5.08,
-        0.72,
-        2.64
-      ],
-      "radius": 0.036,
-      "material": "copper"
-    },
-    {
-      "name": "inspection_flange",
-      "a": [
+      [
         4.95,
         0.18,
         1.65
       ],
-      "b": [
-        5.086249718636209,
-        0.2829494471006863,
-        1.506590009018838
+      46
+    ],
+    [
+      "observer_end",
+      [
+        5.98,
+        -0.03,
+        2.25
       ],
-      "radius": 0.1075,
-      "material": "flange"
+      [
+        1.95,
+        0.02,
+        2.03
+      ],
+      52
+    ]
+  ],
+  "observer_camera_sha256": "7171b5c46de4f823783d14ac73eed203865e70dd537cfd6a6c0485d3e11778a3",
+  "visual_nodes": [
+    "M2_entry_deck_000",
+    "M2_entry_deck_001",
+    "M2_entry_deck_002",
+    "M2_entry_deck_003",
+    "M2_deck_004",
+    "M2_deck_005",
+    "M2_deck_006",
+    "M2_deck_007",
+    "M2_deck_008",
+    "M2_low_service_plinth_009",
+    "M2_low_service_plinth_010",
+    "M2_low_service_plinth_011",
+    "M2_low_service_plinth_012",
+    "M2_far_wall_013",
+    "M2_far_wall_014",
+    "M2_far_wall_015",
+    "M2_near_guard_016",
+    "M2_near_guard_017",
+    "M2_near_guard_018",
+    "M2_near_guard_019",
+    "M2_terminal_panel_020",
+    "M2_roof_edge_far_021",
+    "M2_roof_edge_far_022",
+    "M2_roof_edge_near_023",
+    "M2_roof_edge_near_024",
+    "M2_gate1_sill_025",
+    "M2_gate1_lintel_026",
+    "M2_gate1_negative_027",
+    "M2_gate1_positive_028",
+    "M2_gate1_sill_029",
+    "M2_gate1_positive_030",
+    "M2_gate1_lintel_031",
+    "M2_gate1_negative_032",
+    "M2_gate1_sill_033",
+    "M2_gate1_positive_034",
+    "M2_gate1_lintel_035",
+    "M2_gate1_negative_036",
+    "M2_gate1_sill_037",
+    "M2_gate1_positive_038",
+    "M2_gate1_lintel_039",
+    "M2_gate1_negative_040",
+    "M2_gate1_sill_041",
+    "M2_gate1_positive_042",
+    "M2_gate1_lintel_043",
+    "M2_gate1_negative_044",
+    "M2_gate1_sill_045",
+    "M2_gate1_sill_046",
+    "M2_gate1_lintel_047",
+    "M2_gate1_lintel_048",
+    "M2_gate1_negative_049",
+    "M2_gate1_negative_050",
+    "M2_gate1_positive_051",
+    "M2_gate1_positive_052",
+    "M2_gate1_negative_053",
+    "M2_gate1_negative_054",
+    "M2_gate1_sill_055",
+    "M2_gate1_positive_056",
+    "M2_gate1_positive_057",
+    "M2_gate1_bolt_-1_1.48_058",
+    "M2_gate1_bolt_-1_2.68_059",
+    "M2_gate1_bolt_1_1.48_060",
+    "M2_gate1_bolt_1_2.68_061",
+    "M2_gate3_sill_062",
+    "M2_gate3_lintel_063",
+    "M2_gate3_negative_064",
+    "M2_gate3_positive_065",
+    "M2_gate3_sill_066",
+    "M2_gate3_positive_067",
+    "M2_gate3_lintel_068",
+    "M2_gate3_negative_069",
+    "M2_gate3_sill_070",
+    "M2_gate3_positive_071",
+    "M2_gate3_lintel_072",
+    "M2_gate3_negative_073",
+    "M2_gate3_sill_074",
+    "M2_gate3_positive_075",
+    "M2_gate3_lintel_076",
+    "M2_gate3_negative_077",
+    "M2_gate3_sill_078",
+    "M2_gate3_positive_079",
+    "M2_gate3_lintel_080",
+    "M2_gate3_negative_081",
+    "M2_gate3_sill_082",
+    "M2_gate3_sill_083",
+    "M2_gate3_lintel_084",
+    "M2_gate3_lintel_085",
+    "M2_gate3_negative_086",
+    "M2_gate3_negative_087",
+    "M2_gate3_positive_088",
+    "M2_gate3_positive_089",
+    "M2_gate3_negative_090",
+    "M2_gate3_negative_091",
+    "M2_gate3_sill_092",
+    "M2_gate3_positive_093",
+    "M2_gate3_positive_094",
+    "M2_gate3_bolt_-1_1.48_095",
+    "M2_gate3_bolt_-1_2.68_096",
+    "M2_gate3_bolt_1_1.48_097",
+    "M2_gate3_bolt_1_2.68_098",
+    "M2_overhead_duct_099",
+    "M2_overhead_duct_100",
+    "M2_overhead_duct_101",
+    "M2_duct_rib_0_102",
+    "M2_duct_rib_0_103",
+    "M2_duct_rib_1_104",
+    "M2_duct_rib_1_105",
+    "M2_duct_rib_2_106",
+    "M2_duct_rib_2_107",
+    "M2_duct_rib_3_108",
+    "M2_duct_rib_3_109",
+    "M2_duct_rib_4_110",
+    "M2_duct_rib_4_111",
+    "M2_offset_riser_negative_112",
+    "M2_offset_riser_negative_113",
+    "M2_offset_riser_negative_114",
+    "M2_offset_riser_negative_115",
+    "M2_offset_riser_positive_116",
+    "M2_offset_riser_positive_117",
+    "M2_offset_riser_positive_118",
+    "M2_offset_riser_positive_119",
+    "M2_branch_negative_120",
+    "M2_branch_negative_121",
+    "M2_branch_negative_122",
+    "M2_branch_negative_123",
+    "M2_branch_cross_124",
+    "M2_branch_cross_125",
+    "M2_branch_cross_126",
+    "M2_branch_cross_127",
+    "M2_far_header_128",
+    "M2_far_header_129",
+    "M2_far_header_130",
+    "M2_far_header_131",
+    "M2_flange_lip_132",
+    "M2_flange_lip_133",
+    "M2_flange_lip_134",
+    "M2_flange_lip_135",
+    "M2_flange_tube_136",
+    "M2_flange_back_137",
+    "M2_flange_back_138",
+    "M2_flange_back_139",
+    "M2_flange_back_140",
+    "M2_flange_back_141",
+    "M2_flange_face_142",
+    "M2_flange_face_143",
+    "M2_flange_face_144",
+    "M2_flange_face_145",
+    "M2_flange_face_146",
+    "M2_flange_fasteners_147",
+    "M2_flange_fasteners_148",
+    "M2_flange_fasteners_149",
+    "M2_flange_bracket_150",
+    "M2_flange_bracket_151",
+    "M2_flange_bracket_152",
+    "M2_flange_bracket_153"
+  ],
+  "architecture": {
+    "primitive_library": "M0/M1 Piece, brick, turning, facets, basis",
+    "aperture_registration": "Four inner faces preserved; all detail remains inside registered COL solids",
+    "pipe_registration": "Native radii preserved; coupling grooves cut inward",
+    "launch_deck": "Entry x<=0.60 m, top 0.55 m; raised main deck starts at x=0.60 m"
+  },
+  "flange": {
+    "face_enu_m": [
+      4.95,
+      0.18,
+      1.65
+    ],
+    "axis_enu": [
+      0.6109852853641633,
+      0.4616567134559925,
+      -0.6430941299603677
+    ],
+    "optical_distance_m": 0.168,
+    "socket_count": 8,
+    "graduation_count": 36,
+    "source_geometry": "M0 inspection_scene turned shell and M1 surveyed-face design",
+    "pieces": 79,
+    "triangles": 21876,
+    "all_inside_registered_collision_solids": true,
+    "part_covers": [
+      {
+        "name": "rolled annular rim",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0002199999999996094
+      },
+      {
+        "name": "bronze insert",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0028559999999996214
+      },
+      {
+        "name": "face index ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003355799999999657
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999782
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999771
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999995748
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248700000000035
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998523
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997625
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248700000000116
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997057
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998996
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997808
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997938
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999823
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998523
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999909
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999999113
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998545
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999879
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999999234
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997617
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999661
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999734
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999999443
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999803
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999996754
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997938
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999724
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997023
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999571
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999952
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999996394
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999947
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999759
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999907
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.00324869999999967
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998744
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999931
+      },
+      {
+        "name": "bored inspection sleeve",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.009579999999999644
+      },
+      {
+        "name": "recessed instrument face",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.03909999999999947
+      },
+      {
+        "name": "instrument face engraving",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.08150799999999951
+      },
+      {
+        "name": "instrument face engraving",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.10166799999999955
+      },
+      {
+        "name": "instrument face engraving",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.06134799999999943
+      },
+      {
+        "name": "flange rear barrel",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0002319999999994271
+      },
+      {
+        "name": "surveyed face",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0003499999999996514
+      },
+      {
+        "name": "copper target ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 6.999999999967805e-05
+      },
+      {
+        "name": "silver gauge ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 6.999999999966416e-05
+      },
+      {
+        "name": "copper centre ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 6.999999999969001e-05
+      },
+      {
+        "name": "centre dimple",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.00013999999999968413
+      },
+      {
+        "name": "counterbored shoulder 00",
+        "cover": "COL_flange_bolt_0",
+        "vertex_min_slack_m": 7.999999999945204e-05
+      },
+      {
+        "name": "recessed hex wall 00",
+        "cover": "COL_flange_bolt_0",
+        "vertex_min_slack_m": 0.0002999999999995396
+      },
+      {
+        "name": "hex socket floor 00",
+        "cover": "COL_flange_bolt_0",
+        "vertex_min_slack_m": 0.00366999999999979
+      },
+      {
+        "name": "counterbored shoulder 01",
+        "cover": "COL_flange_bolt_1",
+        "vertex_min_slack_m": 7.999999999945204e-05
+      },
+      {
+        "name": "recessed hex wall 01",
+        "cover": "COL_flange_bolt_1",
+        "vertex_min_slack_m": 0.00029999999999958234
+      },
+      {
+        "name": "hex socket floor 01",
+        "cover": "COL_flange_bolt_1",
+        "vertex_min_slack_m": 0.003669999999999714
+      },
+      {
+        "name": "counterbored shoulder 02",
+        "cover": "COL_flange_bolt_2",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 02",
+        "cover": "COL_flange_bolt_2",
+        "vertex_min_slack_m": 0.00029999999999960673
+      },
+      {
+        "name": "hex socket floor 02",
+        "cover": "COL_flange_bolt_2",
+        "vertex_min_slack_m": 0.003669999999999791
+      },
+      {
+        "name": "counterbored shoulder 03",
+        "cover": "COL_flange_bolt_3",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 03",
+        "cover": "COL_flange_bolt_3",
+        "vertex_min_slack_m": 0.0002999999999995583
+      },
+      {
+        "name": "hex socket floor 03",
+        "cover": "COL_flange_bolt_3",
+        "vertex_min_slack_m": 0.003669999999999695
+      },
+      {
+        "name": "counterbored shoulder 04",
+        "cover": "COL_flange_bolt_4",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 04",
+        "cover": "COL_flange_bolt_4",
+        "vertex_min_slack_m": 0.00029999999999956147
+      },
+      {
+        "name": "hex socket floor 04",
+        "cover": "COL_flange_bolt_4",
+        "vertex_min_slack_m": 0.003669999999999724
+      },
+      {
+        "name": "counterbored shoulder 05",
+        "cover": "COL_flange_bolt_5",
+        "vertex_min_slack_m": 7.999999999947112e-05
+      },
+      {
+        "name": "recessed hex wall 05",
+        "cover": "COL_flange_bolt_5",
+        "vertex_min_slack_m": 0.0002999999999995394
+      },
+      {
+        "name": "hex socket floor 05",
+        "cover": "COL_flange_bolt_5",
+        "vertex_min_slack_m": 0.0036699999999997394
+      },
+      {
+        "name": "counterbored shoulder 06",
+        "cover": "COL_flange_bolt_6",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 06",
+        "cover": "COL_flange_bolt_6",
+        "vertex_min_slack_m": 0.0002999999999995115
+      },
+      {
+        "name": "hex socket floor 06",
+        "cover": "COL_flange_bolt_6",
+        "vertex_min_slack_m": 0.003669999999999683
+      },
+      {
+        "name": "counterbored shoulder 07",
+        "cover": "COL_flange_bolt_7",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 07",
+        "cover": "COL_flange_bolt_7",
+        "vertex_min_slack_m": 0.00029999999999947777
+      },
+      {
+        "name": "hex socket floor 07",
+        "cover": "COL_flange_bolt_7",
+        "vertex_min_slack_m": 0.003670000000000025
+      },
+      {
+        "name": "central cantilever",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.005999999999999659
+      },
+      {
+        "name": "diagonal gusset",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.008017655169849251
+      },
+      {
+        "name": "diagonal gusset",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.0080176551698481
+      },
+      {
+        "name": "anchor collar",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.00199999999999953
+      },
+      {
+        "name": "anchor collar",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.001999999999999412
+      }
+    ]
+  },
+  "architecture_enclosure_checks": [
+    {
+      "group": "entry_deck",
+      "name": "structural plinth",
+      "cover": "COL_entry_deck",
+      "vertex_min_slack_m": 0.013999999999999901
     },
     {
-      "name": "flange_support",
-      "a": [
-        5.072197057072833,
-        0.2723313426911985,
-        1.5213811740079264
+      "group": "entry_deck",
+      "name": "machined tread plate",
+      "cover": "COL_entry_deck",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "entry_deck",
+      "name": "front section rail",
+      "cover": "COL_entry_deck",
+      "vertex_min_slack_m": 0.00029999999999985594
+    },
+    {
+      "group": "entry_deck",
+      "name": "cut surface index",
+      "cover": "COL_entry_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "structural plinth",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.01399999999999979
+    },
+    {
+      "group": "deck",
+      "name": "machined tread plate",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": -4.440892098500626e-16
+    },
+    {
+      "group": "deck",
+      "name": "front section rail",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.00029999999999985594
+    },
+    {
+      "group": "deck",
+      "name": "cut surface index",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "recessed service panel",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed service panel",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed service panel",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed service panel",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed service panel",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed service panel",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 0.0010000000000000009
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "deck",
+      "name": "recessed ventilation cut",
+      "cover": "COL_deck",
+      "vertex_min_slack_m": 9.999999999987796e-05
+    },
+    {
+      "group": "low_service_plinth",
+      "name": "structural plinth",
+      "cover": "COL_low_service_plinth",
+      "vertex_min_slack_m": 0.013999999999999957
+    },
+    {
+      "group": "low_service_plinth",
+      "name": "machined tread plate",
+      "cover": "COL_low_service_plinth",
+      "vertex_min_slack_m": -2.220446049250313e-16
+    },
+    {
+      "group": "low_service_plinth",
+      "name": "front section rail",
+      "cover": "COL_low_service_plinth",
+      "vertex_min_slack_m": 0.00029999999999996696
+    },
+    {
+      "group": "low_service_plinth",
+      "name": "cut surface index",
+      "cover": "COL_low_service_plinth",
+      "vertex_min_slack_m": 0.001000000000000112
+    },
+    {
+      "group": "far_wall",
+      "name": "shared industrial skin",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": -1.2836953722228372e-16
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "folded vertical frame",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "far_wall",
+      "name": "lower cut edge",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "far_wall",
+      "name": "upper cut edge",
+      "cover": "COL_far_wall",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "near_guard",
+      "name": "shared industrial skin",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": -1.2836953722228372e-16
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "folded vertical frame",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": 0.0019999999999998734
+    },
+    {
+      "group": "near_guard",
+      "name": "lower cut edge",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "near_guard",
+      "name": "upper cut edge",
+      "cover": "COL_near_guard",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "terminal_panel",
+      "name": "shared industrial skin",
+      "cover": "COL_terminal_panel",
+      "vertex_min_slack_m": -3.5388358909926865e-16
+    },
+    {
+      "group": "roof_edge_far",
+      "name": "rolled roof channel",
+      "cover": "COL_roof_edge_far",
+      "vertex_min_slack_m": -2.498001805406602e-16
+    },
+    {
+      "group": "roof_edge_far",
+      "name": "channel recessed line",
+      "cover": "COL_roof_edge_far",
+      "vertex_min_slack_m": 0.0009999999999999662
+    },
+    {
+      "group": "roof_edge_near",
+      "name": "rolled roof channel",
+      "cover": "COL_roof_edge_near",
+      "vertex_min_slack_m": -2.498001805406602e-16
+    },
+    {
+      "group": "roof_edge_near",
+      "name": "channel recessed line",
+      "cover": "COL_roof_edge_near",
+      "vertex_min_slack_m": 0.0009999999999999662
+    },
+    {
+      "group": "gate1_sill",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.0
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": -1.3877787807814457e-16
+    },
+    {
+      "group": "gate1_negative",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "gate1_positive",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "gate1_sill",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
       ],
-      "b": [
-        5.24,
-        0.53,
-        1.38
+      "vertex_min_slack_m": 6.245004513516506e-17
+    },
+    {
+      "group": "gate1_positive",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
       ],
-      "radius": 0.04,
-      "material": "steel"
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "gate1_negative",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "gate1_sill",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000113
+    },
+    {
+      "group": "gate1_positive",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000085
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000085
+    },
+    {
+      "group": "gate1_negative",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000085
+    },
+    {
+      "group": "gate1_sill",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_positive",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_negative",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_sill",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "press formed web cassette",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.012000000000000073
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "press formed web cassette",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.012000000000000073
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000113
+    },
+    {
+      "group": "gate1_positive",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000085
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000085
+    },
+    {
+      "group": "gate1_negative",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.002000000000000085
+    },
+    {
+      "group": "gate1_sill",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_positive",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_negative",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate1_sill",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate1_sill",
+        "COL_gate1_lintel",
+        "COL_gate1_negative",
+        "COL_gate1_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_negative",
+      "name": "press formed web cassette",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.012000000000000073
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "press formed web cassette",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.012000000000000073
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate1_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate1_positive",
+      "vertex_min_slack_m": 0.00020000000000004042
+    },
+    {
+      "group": "gate1_bolt_-1_1.48",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate1_bolt_-1_1.48",
+      "vertex_min_slack_m": -2.220446049250313e-16
+    },
+    {
+      "group": "gate1_bolt_-1_2.68",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate1_bolt_-1_2.68",
+      "vertex_min_slack_m": -2.220446049250313e-16
+    },
+    {
+      "group": "gate1_bolt_1_1.48",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate1_bolt_1_1.48",
+      "vertex_min_slack_m": -2.220446049250313e-16
+    },
+    {
+      "group": "gate1_bolt_1_2.68",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate1_bolt_1_2.68",
+      "vertex_min_slack_m": -2.220446049250313e-16
+    },
+    {
+      "group": "gate3_sill",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.0
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.0
+    },
+    {
+      "group": "gate3_negative",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "gate3_positive",
+      "name": "folded bulkhead substrate",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "gate3_sill",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": -1.5959455978986625e-16
+    },
+    {
+      "group": "gate3_positive",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": -1.5959455978986625e-16
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": -1.5959455978986625e-16
+    },
+    {
+      "group": "gate3_negative",
+      "name": "registered aperture liner",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": -1.5959455978986625e-16
+    },
+    {
+      "group": "gate3_sill",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_positive",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000003904
+    },
+    {
+      "group": "gate3_negative",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_sill",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00199999999999962
+    },
+    {
+      "group": "gate3_positive",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00199999999999962
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00199999999999962
+    },
+    {
+      "group": "gate3_negative",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00199999999999962
+    },
+    {
+      "group": "gate3_sill",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_negative",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "press formed web cassette",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.011999999999999851
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "press formed web cassette",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.011999999999999851
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00019999999999981838
+    },
+    {
+      "group": "gate3_sill",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_positive",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000003904
+    },
+    {
+      "group": "gate3_negative",
+      "name": "machined shoulder",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_sill",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_positive",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000642
+    },
+    {
+      "group": "gate3_negative",
+      "name": "folded satin bezel",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.0020000000000000018
+    },
+    {
+      "group": "gate3_sill",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_negative",
+      "name": "teal registered reveal",
+      "cover": [
+        "COL_gate3_sill",
+        "COL_gate3_lintel",
+        "COL_gate3_negative",
+        "COL_gate3_positive"
+      ],
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_sill",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_sill",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_lintel",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_lintel",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_positive",
+      "name": "flush countersunk ring",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed hex socket",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00010000000000005144
+    },
+    {
+      "group": "gate3_negative",
+      "name": "press formed web cassette",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.011999999999999851
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_negative",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_negative",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 9.999999999916326e-05
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 9.999999999916326e-05
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 9.999999999916326e-05
+    },
+    {
+      "group": "gate3_positive",
+      "name": "press formed web cassette",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.011999999999999851
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_positive",
+      "name": "recessed web louvre",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.0005000000000000074
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 9.999999999916326e-05
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 9.999999999916326e-05
+    },
+    {
+      "group": "gate3_sill",
+      "name": "sill index engraving",
+      "cover": "COL_gate3_sill",
+      "vertex_min_slack_m": 9.999999999916326e-05
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_positive",
+      "name": "metric reveal engraving",
+      "cover": "COL_gate3_positive",
+      "vertex_min_slack_m": 0.00020000000000070656
+    },
+    {
+      "group": "gate3_bolt_-1_1.48",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate3_bolt_-1_1.48",
+      "vertex_min_slack_m": -4.683753385137379e-17
+    },
+    {
+      "group": "gate3_bolt_-1_2.68",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate3_bolt_-1_2.68",
+      "vertex_min_slack_m": -4.683753385137379e-17
+    },
+    {
+      "group": "gate3_bolt_1_1.48",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate3_bolt_1_1.48",
+      "vertex_min_slack_m": -4.683753385137379e-17
+    },
+    {
+      "group": "gate3_bolt_1_2.68",
+      "name": "registered bulkhead fastener",
+      "cover": "COL_gate3_bolt_1_2.68",
+      "vertex_min_slack_m": -4.683753385137379e-17
+    },
+    {
+      "group": "overhead_duct",
+      "name": "folded duct body",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": -8.326672684688674e-17
+    },
+    {
+      "group": "overhead_duct",
+      "name": "duct service cassette",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.001000000000000112
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "duct service cassette",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.001000000000000112
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "duct service cassette",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.001000000000000112
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "duct service cassette",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.001000000000000112
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "overhead_duct",
+      "name": "recessed duct louvre",
+      "cover": "COL_overhead_duct",
+      "vertex_min_slack_m": 0.00019999999999997797
+    },
+    {
+      "group": "duct_rib_0",
+      "name": "rolled duct seam",
+      "cover": "COL_duct_rib_0",
+      "vertex_min_slack_m": -8.326672684688674e-17
+    },
+    {
+      "group": "duct_rib_0",
+      "name": "seam cut face",
+      "cover": "COL_duct_rib_0",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "duct_rib_1",
+      "name": "rolled duct seam",
+      "cover": "COL_duct_rib_1",
+      "vertex_min_slack_m": -8.326672684688674e-17
+    },
+    {
+      "group": "duct_rib_1",
+      "name": "seam cut face",
+      "cover": "COL_duct_rib_1",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "duct_rib_2",
+      "name": "rolled duct seam",
+      "cover": "COL_duct_rib_2",
+      "vertex_min_slack_m": -8.326672684688674e-17
+    },
+    {
+      "group": "duct_rib_2",
+      "name": "seam cut face",
+      "cover": "COL_duct_rib_2",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "duct_rib_3",
+      "name": "rolled duct seam",
+      "cover": "COL_duct_rib_3",
+      "vertex_min_slack_m": -8.326672684688674e-17
+    },
+    {
+      "group": "duct_rib_3",
+      "name": "seam cut face",
+      "cover": "COL_duct_rib_3",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "duct_rib_4",
+      "name": "rolled duct seam",
+      "cover": "COL_duct_rib_4",
+      "vertex_min_slack_m": -8.326672684688674e-17
+    },
+    {
+      "group": "duct_rib_4",
+      "name": "seam cut face",
+      "cover": "COL_duct_rib_4",
+      "vertex_min_slack_m": -1.1102230246251565e-16
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "registered pipe skin",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": -2.0122792321330962e-16
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 0.00014999999999980307
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 0.00014999999999980307
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 0.00014999999999980307
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 0.00014999999999980307
+    },
+    {
+      "group": "offset_riser_negative",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_negative",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "registered pipe skin",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": -2.0122792321330962e-16
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 0.00014999999999981
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 0.00014999999999981
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 0.00014999999999981
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "recessed coupling groove",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 0.00014999999999981
+    },
+    {
+      "group": "offset_riser_positive",
+      "name": "machined groove index",
+      "cover": "COL_offset_riser_positive",
+      "vertex_min_slack_m": 4.9999999999855715e-05
+    },
+    {
+      "group": "branch_negative",
+      "name": "registered pipe skin",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": -1.0061396160665481e-16
+    },
+    {
+      "group": "branch_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 0.00014999999999990715
+    },
+    {
+      "group": "branch_negative",
+      "name": "machined groove index",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 4.9999999999911227e-05
+    },
+    {
+      "group": "branch_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 0.00014999999999990715
+    },
+    {
+      "group": "branch_negative",
+      "name": "machined groove index",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 4.9999999999911227e-05
+    },
+    {
+      "group": "branch_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 0.00014999999999990715
+    },
+    {
+      "group": "branch_negative",
+      "name": "machined groove index",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 4.9999999999911227e-05
+    },
+    {
+      "group": "branch_negative",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 0.00014999999999990715
+    },
+    {
+      "group": "branch_negative",
+      "name": "machined groove index",
+      "cover": "COL_branch_negative",
+      "vertex_min_slack_m": 4.9999999999911227e-05
+    },
+    {
+      "group": "branch_cross",
+      "name": "registered pipe skin",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": -1.6653345369377348e-16
+    },
+    {
+      "group": "branch_cross",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 0.00014999999999981348
+    },
+    {
+      "group": "branch_cross",
+      "name": "machined groove index",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 4.999999999987306e-05
+    },
+    {
+      "group": "branch_cross",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 0.00014999999999981348
+    },
+    {
+      "group": "branch_cross",
+      "name": "machined groove index",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 4.999999999987306e-05
+    },
+    {
+      "group": "branch_cross",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 0.00014999999999981348
+    },
+    {
+      "group": "branch_cross",
+      "name": "machined groove index",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 4.999999999987306e-05
+    },
+    {
+      "group": "branch_cross",
+      "name": "recessed coupling groove",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 0.00014999999999981348
+    },
+    {
+      "group": "branch_cross",
+      "name": "machined groove index",
+      "cover": "COL_branch_cross",
+      "vertex_min_slack_m": 4.999999999987306e-05
+    },
+    {
+      "group": "far_header",
+      "name": "registered pipe skin",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": -1.942890293094024e-16
+    },
+    {
+      "group": "far_header",
+      "name": "recessed coupling groove",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 0.00014999999999981695
+    },
+    {
+      "group": "far_header",
+      "name": "machined groove index",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 4.999999999981408e-05
+    },
+    {
+      "group": "far_header",
+      "name": "recessed coupling groove",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 0.00014999999999981695
+    },
+    {
+      "group": "far_header",
+      "name": "machined groove index",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 4.999999999981408e-05
+    },
+    {
+      "group": "far_header",
+      "name": "recessed coupling groove",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 0.00014999999999981695
+    },
+    {
+      "group": "far_header",
+      "name": "machined groove index",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 4.999999999981408e-05
+    },
+    {
+      "group": "far_header",
+      "name": "recessed coupling groove",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 0.00014999999999981695
+    },
+    {
+      "group": "far_header",
+      "name": "machined groove index",
+      "cover": "COL_far_header",
+      "vertex_min_slack_m": 4.999999999981408e-05
     }
   ],
-  "registration_status": "development: static feasibility must be audited before flight"
+  "minimum_architecture_slack_m": -4.440892098500626e-16,
+  "source_hashes": {
+    "m2_scene_build.py": "ff2b910d0b5c595dffd56368fcfa6b69791793c4bca50f1e70adec04f7208817",
+    "m2_architecture.py": "c3ad41fd4d7d9d9f22d8c3d95ea126078a4780c4b9f81e5c40847171e6ed9933",
+    "m2_flange.py": "8b7d4ab42b0e109fc65fd53a4a00cad9aced595b199c94405cef883afbe6dbbf",
+    "m2_collision_lock.json": "750bcfaac29d67a59fde11869fcdeb42a2057f7236f210dce374b5275c04d826"
+  }
 }

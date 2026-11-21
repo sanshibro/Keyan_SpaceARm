@@ -1,0 +1,39 @@
+{
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "shared_visibility": true,
+  "cameras": [
+    {
+      "gate": "gate1",
+      "lookat": [
+        1.2,
+        -0.1,
+        2.11
+      ],
+      "distance": 1.75,
+      "azimuth": -150,
+      "elevation": -13
+    },
+    {
+      "gate": "gate2",
+      "lookat": [
+        2.5999999999999996,
+        0.12,
+        1.79
+      ],
+      "distance": 1.75,
+      "azimuth": -150,
+      "elevation": -13
+    },
+    {
+      "gate": "gate3",
+      "lookat": [
+        4.0,
+        -0.11000000000000001,
+        2.08
+      ],
+      "distance": 1.75,
+      "azimuth": -150,
+      "elevation": -13
+    }
+  ]
+}

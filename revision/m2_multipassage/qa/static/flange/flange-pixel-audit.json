@@ -1,0 +1,576 @@
+{
+  "scene": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "qpos_sha256": "eb41ace38a1169385e2be4d83d5e554f7b35d5e91c790030d736b2a434f92d5f",
+  "model_sha256": "49842da002666299af33d040c9555be5fdabdb298992bd84740f9cffb72c530f",
+  "source": "static FK, native MuJoCo camera render",
+  "camera": "wrist_rgbd",
+  "pinhole": {
+    "width": 480,
+    "height": 360,
+    "fx_px": 261.9016251610401,
+    "cx_px": 239.5,
+    "cy_px": 179.5
+  },
+  "center": {
+    "uv": [
+      239.49999999999997,
+      179.50000000000168
+    ],
+    "geom": "M2_flange_face_146",
+    "expected_depth_m": 0.1681399999999994,
+    "actual_depth_m": 0.16813954710960388,
+    "rgb": [
+      85,
+      107,
+      111
+    ]
+  },
+  "bolts": [
+    {
+      "uv": [
+        347.4521277242803,
+        97.93203807098598
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999936,
+      "actual_depth_m": 0.1606699377298355,
+      "rgb": [
+        52,
+        72,
+        76
+      ]
+    },
+    {
+      "uv": [
+        373.51094056492775,
+        198.15642254978275
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999964,
+      "actual_depth_m": 0.1606699675321579,
+      "rgb": [
+        54,
+        74,
+        78
+      ]
+    },
+    {
+      "uv": [
+        321.06796192901544,
+        287.45212772428124
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999964,
+      "actual_depth_m": 0.16066987812519073,
+      "rgb": [
+        56,
+        77,
+        81
+      ]
+    },
+    {
+      "uv": [
+        220.84357745021813,
+        313.51094056492883
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999958,
+      "actual_depth_m": 0.1606699526309967,
+      "rgb": [
+        54,
+        75,
+        79
+      ]
+    },
+    {
+      "uv": [
+        131.54787227572007,
+        261.06796192901595
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999978,
+      "actual_depth_m": 0.16067002713680267,
+      "rgb": [
+        54,
+        74,
+        78
+      ]
+    },
+    {
+      "uv": [
+        105.48905943507214,
+        160.84357745021939
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999953,
+      "actual_depth_m": 0.1606699824333191,
+      "rgb": [
+        55,
+        76,
+        80
+      ]
+    },
+    {
+      "uv": [
+        157.93203807098456,
+        71.54787227572083
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999953,
+      "actual_depth_m": 0.16066981852054596,
+      "rgb": [
+        51,
+        70,
+        74
+      ]
+    },
+    {
+      "uv": [
+        258.1564225497819,
+        45.48905943507333
+      ],
+      "geom": "M2_flange_fasteners_149",
+      "expected_depth_m": 0.16065999999999958,
+      "actual_depth_m": 0.1606699675321579,
+      "rgb": [
+        52,
+        72,
+        76
+      ]
+    }
+  ],
+  "socket_centers_depth_verified": 8,
+  "flange_pixels": 79301,
+  "copper_pixels": 6754,
+  "raw_rgb_sha256": "4f3f052b058e44140ac1460603c1bd47d9cdc70d6c0d3eb87291df62b7bbcd80",
+  "stand_off_to_datum_m": 0.1679999999999995,
+  "observer": "observer_dock",
+  "fit": {
+    "face_enu_m": [
+      4.95,
+      0.18,
+      1.65
+    ],
+    "axis_enu": [
+      0.6109852853641633,
+      0.4616567134559925,
+      -0.6430941299603677
+    ],
+    "optical_distance_m": 0.168,
+    "socket_count": 8,
+    "graduation_count": 36,
+    "source_geometry": "M0 inspection_scene turned shell and M1 surveyed-face design",
+    "pieces": 79,
+    "triangles": 21876,
+    "all_inside_registered_collision_solids": true,
+    "part_covers": [
+      {
+        "name": "rolled annular rim",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0002199999999996094
+      },
+      {
+        "name": "bronze insert",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0028559999999996214
+      },
+      {
+        "name": "face index ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003355799999999657
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999782
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999771
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999995748
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248700000000035
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998523
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997625
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248700000000116
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997057
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998996
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997808
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997938
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999823
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998523
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999909
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999999113
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998545
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999879
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999999234
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997617
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999661
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999734
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999999443
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999803
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999996754
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997938
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999724
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999997023
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999571
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999952
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999996394
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999947
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999759
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999907
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.00324869999999967
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0032486999999998744
+      },
+      {
+        "name": "engraved scale",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.003248699999999931
+      },
+      {
+        "name": "bored inspection sleeve",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.009579999999999644
+      },
+      {
+        "name": "recessed instrument face",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.03909999999999947
+      },
+      {
+        "name": "instrument face engraving",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.08150799999999951
+      },
+      {
+        "name": "instrument face engraving",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.10166799999999955
+      },
+      {
+        "name": "instrument face engraving",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.06134799999999943
+      },
+      {
+        "name": "flange rear barrel",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0002319999999994271
+      },
+      {
+        "name": "surveyed face",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.0003499999999996514
+      },
+      {
+        "name": "copper target ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 6.999999999967805e-05
+      },
+      {
+        "name": "silver gauge ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 6.999999999966416e-05
+      },
+      {
+        "name": "copper centre ring",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 6.999999999969001e-05
+      },
+      {
+        "name": "centre dimple",
+        "cover": "COL_inspection_flange",
+        "vertex_min_slack_m": 0.00013999999999968413
+      },
+      {
+        "name": "counterbored shoulder 00",
+        "cover": "COL_flange_bolt_0",
+        "vertex_min_slack_m": 7.999999999945204e-05
+      },
+      {
+        "name": "recessed hex wall 00",
+        "cover": "COL_flange_bolt_0",
+        "vertex_min_slack_m": 0.0002999999999995396
+      },
+      {
+        "name": "hex socket floor 00",
+        "cover": "COL_flange_bolt_0",
+        "vertex_min_slack_m": 0.00366999999999979
+      },
+      {
+        "name": "counterbored shoulder 01",
+        "cover": "COL_flange_bolt_1",
+        "vertex_min_slack_m": 7.999999999945204e-05
+      },
+      {
+        "name": "recessed hex wall 01",
+        "cover": "COL_flange_bolt_1",
+        "vertex_min_slack_m": 0.00029999999999958234
+      },
+      {
+        "name": "hex socket floor 01",
+        "cover": "COL_flange_bolt_1",
+        "vertex_min_slack_m": 0.003669999999999714
+      },
+      {
+        "name": "counterbored shoulder 02",
+        "cover": "COL_flange_bolt_2",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 02",
+        "cover": "COL_flange_bolt_2",
+        "vertex_min_slack_m": 0.00029999999999960673
+      },
+      {
+        "name": "hex socket floor 02",
+        "cover": "COL_flange_bolt_2",
+        "vertex_min_slack_m": 0.003669999999999791
+      },
+      {
+        "name": "counterbored shoulder 03",
+        "cover": "COL_flange_bolt_3",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 03",
+        "cover": "COL_flange_bolt_3",
+        "vertex_min_slack_m": 0.0002999999999995583
+      },
+      {
+        "name": "hex socket floor 03",
+        "cover": "COL_flange_bolt_3",
+        "vertex_min_slack_m": 0.003669999999999695
+      },
+      {
+        "name": "counterbored shoulder 04",
+        "cover": "COL_flange_bolt_4",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 04",
+        "cover": "COL_flange_bolt_4",
+        "vertex_min_slack_m": 0.00029999999999956147
+      },
+      {
+        "name": "hex socket floor 04",
+        "cover": "COL_flange_bolt_4",
+        "vertex_min_slack_m": 0.003669999999999724
+      },
+      {
+        "name": "counterbored shoulder 05",
+        "cover": "COL_flange_bolt_5",
+        "vertex_min_slack_m": 7.999999999947112e-05
+      },
+      {
+        "name": "recessed hex wall 05",
+        "cover": "COL_flange_bolt_5",
+        "vertex_min_slack_m": 0.0002999999999995394
+      },
+      {
+        "name": "hex socket floor 05",
+        "cover": "COL_flange_bolt_5",
+        "vertex_min_slack_m": 0.0036699999999997394
+      },
+      {
+        "name": "counterbored shoulder 06",
+        "cover": "COL_flange_bolt_6",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 06",
+        "cover": "COL_flange_bolt_6",
+        "vertex_min_slack_m": 0.0002999999999995115
+      },
+      {
+        "name": "hex socket floor 06",
+        "cover": "COL_flange_bolt_6",
+        "vertex_min_slack_m": 0.003669999999999683
+      },
+      {
+        "name": "counterbored shoulder 07",
+        "cover": "COL_flange_bolt_7",
+        "vertex_min_slack_m": 7.999999999945898e-05
+      },
+      {
+        "name": "recessed hex wall 07",
+        "cover": "COL_flange_bolt_7",
+        "vertex_min_slack_m": 0.00029999999999947777
+      },
+      {
+        "name": "hex socket floor 07",
+        "cover": "COL_flange_bolt_7",
+        "vertex_min_slack_m": 0.003670000000000025
+      },
+      {
+        "name": "central cantilever",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.005999999999999659
+      },
+      {
+        "name": "diagonal gusset",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.008017655169849251
+      },
+      {
+        "name": "diagonal gusset",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.0080176551698481
+      },
+      {
+        "name": "anchor collar",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.00199999999999953
+      },
+      {
+        "name": "anchor collar",
+        "cover": "COL_flange_support",
+        "vertex_min_slack_m": 0.001999999999999412
+      }
+    ]
+  },
+  "pose": {
+    "body": [
+      4.662946098965787,
+      0.006928285036025689,
+      2.119383934882359
+    ],
+    "theta_deg": 50.0,
+    "phi_deg": 143.0,
+    "yaw_deg": 0.0
+  },
+  "true_tcp_error_m": 2.237726045655905e-16,
+  "optical_datum_offset_px": 1.2221335055073723e-12
+}
