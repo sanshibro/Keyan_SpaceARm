@@ -11,7 +11,9 @@ import numpy as np
 from scipy.optimize import minimize
 from m2_geometry import Geometry,wrap
 from m2_body_batch import BodyBatch
-from uav_continuum_whole_body_v2.trajectory import SplineTrajectory,resample_states
+from m2_lattice import LocalLattice
+from scipy.interpolate import BSpline
+from m2_spline import VectorSpline as SplineTrajectory,moving_boundary
 from uav_continuum_whole_body_v2.types import ValidationResult
 
 FIXED_THETA=np.deg2rad(80.);FIXED_PHI=np.pi
@@ -71,232 +73,43 @@ class Kernel:
         self.settings=settings or Settings();self.method=method;self.goal=goal;self.coupled=method!='unregularized'
         lim=SimpleNamespace(body_margin=self.settings.body_margin,arm_margin=self.settings.arm_margin,tilt_max=0.)
         self.geometry=Geometry(plant,lim);self.geometry.plan_self_margin=self.settings.self_margin
+        from m2_path_batch import PathBatch
+        self.geometry.path_batch=PathBatch(self.geometry)
         self.fine=self.geometry;self.validator=Validator(self.geometry);self.snapshot=None
-        self.catalog=np.array([(np.deg2rad(t),np.deg2rad(p)) for t in (40,70,85,110) for p in range(0,360,30)]+[(0.,np.pi)])
+        self.roadmap=LocalLattice(self)
         self.last_curve=None
         self.last_opt=None;self.warm_points=None;self.warm_used=0
-    def shapes(self,start):
-        if self.method=='straight':return np.array([[0.,start[5]]])
-        if self.method=='fixed':return np.array([[FIXED_THETA,FIXED_PHI]])
-        candidates=np.vstack((start[4:6],self.catalog));valid=[]
-        for theta,phi in candidates:
-            r=self.geometry.self_report(theta,phi)
-            if r['hazardous']>=self.settings.self_margin and r['assembly_min']>=0:valid.append([theta,phi])
-        return np.asarray(valid)
     def seed(self,start,end,final=False):
-        g=self.geometry;c=self.settings;shapes=self.shapes(start);n=c.knots
-        xs=np.linspace(start[0],end[0],n);beam=[(0.,[start.copy()])];layers=[];self.seed_diagnostics=layers
-        # A workspace sampling grid is fixed before observing any gate. Every
-        # retained point is certified against the current snapshot only.
-        ys=np.arange(-.48,.481,.04);zs=np.arange(1.86,2.401,.04)
-        bodycomp=g.local(0.,0.)[0];bodycomp=np.ascontiguousarray(bodycomp[bodycomp[:,7]==0])
-        last_valid=None
-        for k,x in enumerate(xs[1:],1):
-            alpha=k/(n-1);line=(1-alpha)*start+alpha*end
-            warm=None
-            if self.warm_points is not None and self.warm_points[0,0]<=x<=self.warm_points[-1,0]:
-                warm=np.array([np.interp(x,self.warm_points[:,0],self.warm_points[:,j]) for j in range(6)])
-                line[1:]=warm[1:];self.warm_used+=1
-            if final and k==n-1:positions=np.array([end[:4]])
-            else:
-                yy=np.unique(np.r_[ys,line[1],start[1]]);zz=np.unique(np.r_[zs,line[2],start[2]])
-                poses=np.array([[x,y,z,psi] for y in yy for z in zz for psi in (0.,)])
-                gaps=self.body_batch.query(np.column_stack((poses,np.zeros((len(poses),2)))),reject_below=.085)
-                feasible=np.flatnonzero(gaps>=c.body_margin+.011)
-                costs=2*(poses[:,1]-line[1])**2+1.2*(poses[:,2]-line[2])**2+20*np.maximum(0.,.125-gaps)**2
-                look=poses.copy();look[:,0]+=.30
-                ahead=self.body_batch.query(np.column_stack((look,np.zeros((len(look),2)))),reject_below=.085)
-                expanded=len(feasible)<3 or float(np.max(ahead))<.125
-                if expanded:
-                    # The seed is genuinely 6D: when rigid-body passage narrows,
-                    # expand vehicle yaw before attempting arm adaptation.
-                    roots=poses
-                    extra=np.array([np.r_[p[:3],yaw] for p in roots for yaw in np.deg2rad(np.arange(-180,180,30)) if abs(yaw)>1e-8])
-                    extra_gaps=self.body_batch.query(np.column_stack((extra,np.zeros((len(extra),2)))),reject_below=.085)
-                    poses=np.vstack((poses,extra));gaps=np.r_[gaps,extra_gaps]
-                    refined=np.array([np.r_[p[:3],p[3]+delta] for p in poses[np.argsort(gaps)[-36:]] for delta in np.deg2rad([-10,-5,5,10])])
-                    refined_gaps=self.body_batch.query(np.column_stack((refined,np.zeros((len(refined),2)))),reject_below=.085)
-                    poses=np.vstack((poses,refined));gaps=np.r_[gaps,refined_gaps]
-                    costs=2*(poses[:,1]-line[1])**2+1.2*(poses[:,2]-line[2])**2+.02*(poses[:,3]-line[3])**2+20*np.maximum(0.,.125-gaps)**2
-                    feasible=np.flatnonzero(gaps>=c.body_margin+.011)
-                if len(feasible)<3:
-                    possible=np.flatnonzero(gaps>-.03)
-                    for j in possible[np.argsort(gaps[possible])[::-1][:48]]:
-                        exact=g.convex_map.query(np.r_[poses[j],0.,0.],groups=(0,))[0]['lower']
-                        gaps[j]=max(gaps[j],exact)
-                    feasible=np.flatnonzero(gaps>=c.body_margin+.011)
-                    costs=2*(poses[:,1]-line[1])**2+1.2*(poses[:,2]-line[2])**2+20*np.maximum(0.,.125-gaps)**2
-                    if len(feasible):g.tight_search=True
-                order=feasible[np.argsort(costs[feasible])];selected=[];keys=set()
-                if expanded:
-                    # Keep a low-cost member of each yaw stratum before filling
-                    # by cost. A currently wider straight branch can terminate
-                    # inside this same observed map while a turning branch survives.
-                    yawkeys=[];first=[]
-                    for j in order:
-                        yy=int(round(poses[j,3]/(np.pi/6)))
-                        if yy not in yawkeys:yawkeys.append(yy);first.append(j)
-                    order=np.r_[first,order]
-                for j in order:
-                    key=(round(poses[j,1]/.06),round(poses[j,2]/.05),round(poses[j,3]/.3))
-                    if key in keys:continue
-                    # A short geometric support tube anticipates spline corner
-                    # rounding without consulting an obstacle label or next map.
-                    lead=np.r_[poses[j],0.,0.];lead[0]+=.10
-                    trail=lead.copy();trail[0]-=.20
-                    clearance=self.body_batch.query(np.array([lead,trail])).tolist()
-                    if g.tight_search:
-                        clearance=[max(old,g.convex_map.query(s,groups=(0,))[0]['lower']) if old<c.body_margin+.011 else old for old,s in zip(clearance,(lead,trail))]
-                    if min(clearance)<c.body_margin+.011:continue
-                    keys.add(key);selected.append(j)
-                    if len(selected)>=(14 if expanded else 7):break
-                positions=poses[selected]
-                if not len(positions):
-                    # The seed's extra corner-rounding reserve is not a hard
-                    # constraint. At a tight local slice, refine the leading
-                    # native candidates and retain those meeting the registered
-                    # 85 mm constraint; the final spline remains independently
-                    # certified at the same strict margin.
-                    chosen=[]
-                    for j in np.argsort(gaps)[::-1][:72]:
-                        exact=g.convex_map.query(np.r_[poses[j],0.,0.],groups=(0,))[0]['lower']
-                        if exact>=c.body_margin+.0001:chosen.append(int(j))
-                        if len(chosen)>=7:break
-                    positions=poses[chosen]
-                    if len(chosen):g.tight_search=True
-                if warm is not None:
-                    lead=warm.copy();lead[0]+=.10;trail=warm.copy();trail[0]-=.10
-                    if min(g.query(bodycomp,lead)[0][0],g.query(bodycomp,trail)[0][0])>=c.body_margin+.011:
-                        positions=np.vstack((warm[:4],positions))
-                if self.method=='sequential':positions=positions[:1]
-            candidates=[]
-            for p in positions:
-                local_shapes=shapes
-                if warm is not None and self.method not in ('straight','fixed'):
-                    sr=g.self_report(*warm[4:6])
-                    if sr['hazardous']>=c.self_margin and sr['assembly_min']>=0:local_shapes=np.vstack((warm[4:6],shapes))
-                candidates.extend(np.r_[p,shape] for shape in (end[None,4:6] if final and k==n-1 else local_shapes))
-            candidates=np.asarray(candidates)
-            feasible=[];byshape={}
-            for q in candidates:byshape.setdefault(tuple(q[4:]),[]).append(q)
-            for shape,states in byshape.items():
-                states=np.asarray(states);components=g.local(*shape)[0];gaps=g.query_batch(components,states)
-                for q,gap in zip(states,gaps):
-                    if not g.known(components,q):continue
-                    if np.min(gap)<min(c.body_margin,c.arm_margin):
-                        exact=g.convex_map.query(q,groups=tuple(np.flatnonzero(gap<min(c.body_margin,c.arm_margin))))
-                        for group,res in exact.items():gap[group]=max(gap[group],res['lower'])
-                    reserve=0. if (g.tight_search or (final and k==n-1)) else .007
-                    if min(gap)>=min(c.body_margin,c.arm_margin)+reserve:feasible.append((q,float(min(gap))))
-            proposals=[]
-            for q,gap in feasible:
-                bq=bend(q);node=.08*np.sum((q[1:3]-line[1:3])**2)+5*max(0.,.125-gap)**2
-                if self.coupled:node+=.35*g.physical_coupling(q)['com_offset']**2
-                options=[]
-                for cost,path in beam:
-                    prev=path[-1];delta=q-prev;db=bq-bend(prev)
-                    edge=2*np.sum(delta[1:3]**2)+.04*np.dot(db,db)+.02*delta[3]**2
-                    # Search connectivity is geometric; actual rate limits are
-                    # imposed by positive span timing and dense validation.
-                    # Rejecting a >.20 m or >.85 rad transition here eliminated
-                    # every side-bending branch before it could be retimed.
-                    if np.linalg.norm(delta[1:3])>.40 or np.linalg.norm(db)>2.2:continue
-                    options.append((cost+edge+node,path))
-                for cost,path in sorted(options,key=lambda z:z[0])[:2]:
-                    proposals.append((cost,path,q))
-            proposals.sort(key=lambda z:z[0]);nextbeam=[];seen=set();edge_cache={};edge_failures=[]
-            # Retain directional morphology branches rather than filling the
-            # tiny beam with five nearly identical straight-arm body poses.
-            def append(item):
-                cost,path,q=item;key=q.tobytes()
-                if key in seen:return False
-                edgekey=(path[-1].tobytes(),key)
-                if edgekey not in edge_cache:
-                    edge_cache[edgekey]=g.edge(path[-1],q)
-                    if not edge_cache[edgekey] and len(edge_failures)<12:edge_failures.append(g.last_edge_failure)
-                if not edge_cache[edgekey]:return False
-                nextbeam.append((cost,path+[q.copy()]));seen.add(key);return True
-            for item in proposals:
-                if append(item):break
-            # Position/yaw branches matter independently of bend direction.
-            # Preserve early sideways/yaw choices before morphology quadrants.
-            for yawbin in (-3,-2,-1,1,2,3):
-                if len(nextbeam)>=c.beam-4:break
-                for item in proposals:
-                    q=item[2]
-                    if int(np.clip(np.round(wrap(q[3])/(np.pi/6)),-3,3))==yawbin and append(item):break
-            for quadrant in range(4):
-                if len(nextbeam)>=c.beam:break
-                for item in proposals:
-                    q=item[2]
-                    if q[4]>.15 and int(np.floor((q[5]%(2*np.pi)+np.pi/4)/(np.pi/2)))%4==quadrant and append(item):break
-            for item in proposals:
-                if len(nextbeam)>=c.beam:break
-                append(item)
-            layers.append(dict(x=float(x),body_candidates=len(positions),whole_candidates=len(feasible),survivors=len(nextbeam),proposals=len(proposals),edge_failures=edge_failures,beam_before=[p[-1].tolist() for _,p in beam],beam_after=[p[-1].tolist() for _,p in nextbeam]))
-            if not nextbeam:break
-            beam=nextbeam;last_valid=beam[0][1]
-        if last_valid is None or len(last_valid)<4:
-            raise RuntimeError('No connected local whole-body seed; '+str(layers[-1] if layers else {}))
-        route=np.asarray(last_valid);reached=len(route)==n
-        nonzero=np.flatnonzero(route[:,4]>.015)
-        if len(nonzero):route[:nonzero[0],5]=route[nonzero[0],5] # the zero-bend chart has no physical azimuth
-        route[:,3]=np.unwrap(route[:,3]);route[:,5]=np.unwrap(route[:,5])
-        return route,layers,reached
+        return self.roadmap.search(start,end,final)
     def make_curve(self,route,rate,final,spans=None,stationary_start=True):
-        K=self.settings.knots;control=resample_states(route,K)
+        K=self.settings.knots;delta=np.diff(route,axis=0);length=np.linalg.norm(delta[:,:3],axis=1)
+        mag=np.minimum(1.,np.maximum(route[:-1,4],route[1:,4])/.12)
+        demand=np.maximum.reduce([length/self.settings.speed,abs(delta[:,3])/.64,abs(delta[:,4])/.70,abs(delta[:,5])*mag/.86])
+        tau=np.r_[0.,np.cumsum(np.maximum(.04,demand))]
         if spans is None:
-            delta=np.diff(control,axis=0);length=np.linalg.norm(delta[:,:3],axis=1)
-            demand=np.maximum.reduce([length/self.settings.speed,abs(delta[:,3])/.5,abs(delta[:,4])/.65,
-                                      abs(delta[:,5])*np.minimum(1.,np.maximum(control[:-1,4],control[1:,4])/.1)/.8])
-            # Cubic spans each integrate about three adjacent polygon segments.
-            spans=np.array([max(.20,float(np.mean(demand[max(0,i-1):min(len(demand),i+3)]))) for i in range(K-3)])
-            spans*=len(demand)/(K-3)
-        if not stationary_start:control[1]=control[0]+np.asarray(rate)*spans[0]/3.
+            knots=np.interp(np.linspace(0.,1.,K-2),.34*np.linspace(0.,1.,len(tau))+.66*tau/tau[-1],tau)
+            spans=np.diff(knots)
+        u=np.r_[np.zeros(4),np.cumsum(spans)[:-1],np.full(4,np.sum(spans))]
+        tau=tau*(np.sum(spans)/tau[-1])
+        B=BSpline(u,np.eye(K),3)(tau)
+        greville=np.array([np.mean(u[j+1:j+4]) for j in range(K)])
+        initial=np.column_stack([np.interp(greville,tau,route[:,j]) for j in range(6)])
+        fixed=[0,K-1] if stationary_start else [0,1,K-1]
+        if not stationary_start:initial[1]=initial[0]+np.asarray(rate)*spans[0]/3.
+        free=np.setdiff1d(np.arange(K),fixed)
+        # Fit the interior path by collocation. Ridge regularization suppresses
+        # overshoot on underdetermined short prefixes while preserving endpoints.
+        regular=.43
+        mat=np.vstack((B[:,free],regular*np.eye(len(free))))
+        rhs=np.vstack((route-B[:,fixed]@initial[fixed],regular*initial[free]))
+        control=initial.copy();control[free]=np.linalg.lstsq(mat,rhs,rcond=None)[0]
+        control[:,4]=np.clip(control[:,4],0.,self.geometry.theta_max)
+        if not stationary_start:moving_boundary(control,spans,rate)
         return SplineTrajectory(control,np.asarray(spans),stationary_start=stationary_start,stationary_end=True,
-                                boundary_ramp_duration=.65)
+                                boundary_ramp_duration=1.)
     def optimize(self,seed,rate,final,stationary_start):
-        c=self.settings;started=time.monotonic();base=self.make_curve(seed,rate,final,stationary_start=stationary_start)
-        points=base.control_states.copy();dur=base.span_durations.copy();K=len(points);count=K-3
-        # A spatial mode in all five non-progress coordinates and three smooth
-        # log-duration modes give a small actual L-BFGS-B problem. All K-3 spans
-        # retain distinct positive durations; the modes couple their changes.
-        u=np.linspace(0,1,K);basis=np.sin(np.pi*u)[:,None];basis[:2]=0;basis[-1]=0
-        hcoord=np.linspace(-1,1,count);clock_basis=np.column_stack((np.ones(count),hcoord,np.sin(np.pi*(hcoord+1)/2)))
-        dim=5;initial=self.last_opt.copy() if self.last_opt is not None else np.zeros(dim+3);best=[np.inf,base,initial.copy()];calls=[0]
-        def decode(v):
-            p=points.copy();deformation=basis@v[:dim].reshape(1,dim)
-            deformation[:,3:]*=np.minimum(1.,points[:,4,None]/.3)
-            p[:,1:6]+=deformation
-            if self.method=='straight':p[:,4:6]=points[:,4:6]
-            if self.method=='fixed':p[:,4:6]=[FIXED_THETA,FIXED_PHI]
-            if self.method=='sequential':p[:,:4]=points[:,:4]
-            h=dur*np.exp(clock_basis@v[dim:]);
-            if not stationary_start:p[1]=p[0]+np.asarray(rate)*h[0]/3
-            return SplineTrajectory(p,h,stationary_start=stationary_start,stationary_end=True,boundary_ramp_duration=.65)
-        def objective(v):
-            if time.monotonic()-started>c.optimize_budget:raise TimeoutError('L-BFGS-B wall deadline')
-            curve=decode(v);t=np.linspace(0,curve.duration,K+3);q=curve.evaluate(t,0);vel=curve.evaluate(t,1);acc=curve.evaluate(t,2)
-            if np.min(q[:,4])<0 or np.max(q[:,4])>self.geometry.theta_max:
-                return 1e6+1e5*np.sum(np.maximum(0.,-q[:,4])**2+np.maximum(0.,q[:,4]-self.geometry.theta_max)**2)
-            gaps=np.array([[r['body'],r['arm']] if r['known'] else [-1,-1] for r in (self.geometry.state(s,check_self=False) for s in q)])
-            penalty=2e4*np.mean(np.maximum(0.,.089-gaps)**2)+2e3*np.mean(np.maximum(0.,q[:,4]-self.geometry.theta_max)**2+np.maximum(0.,-q[:,4])**2)
-            cost=.10*curve.duration+5*np.mean((q[:,1:3]-np.linspace(points[0,1:3],points[-1,1:3],len(q)))**2)+.01*np.mean(acc[:,:3]**2)+penalty
-            cost+=.6*np.mean((np.maximum(0.,np.array([.11,.14])-gaps)/.05)**2)
-            if self.coupled:
-                cp=np.array([self.geometry.physical_coupling(s)['com_offset'] for s in q])
-                cost+=.8*np.mean((cp/.08)**2)+.14*curve.duration*np.mean(vel[:,4:6]**2)+.05*np.mean(acc[:,4:6]**2)+.15*np.mean(np.diff(curve.span_durations)**2)
-            calls[0]+=1
-            if cost<best[0]:best[:]=[cost,curve,v.copy()]
-            return cost
-        bounds=[(-.06,.06),(-.06,.06),(-.18,.18),(-.18,.18),(-.28,.28)]+[(-.12,.25)]*3
-        status='complete'
-        try:
-            result=minimize(objective,initial,method='L-BFGS-B',bounds=bounds,options=dict(maxiter=5,maxfun=140,ftol=1e-5,eps=3e-4));status=str(result.message)
-        except TimeoutError:status='wall_budget'
-        was_warm=self.last_opt is not None;self.last_opt=best[2].copy()
-        return best[1],base,dict(wall_s=time.monotonic()-started,calls=calls[0],status=status,algorithm='L-BFGS-B',
-                               warm_coefficients=was_warm,initial=initial.tolist(),best=best[2].tolist())
+        from m2_refine import refine
+        return refine(self,seed,rate,final,stationary_start)
     def solve(self,snapshot,start,rate,accel,request_id=0,warm=None):
         started=time.monotonic();self.current_phase='snapshot';self.seed_diagnostics=[]
         try:return self._solve(snapshot,start,rate,accel,request_id,warm)
@@ -336,21 +149,20 @@ class Kernel:
         self.current_phase='optimization'
         curve,base,opt=self.optimize(route,rate,final or self.method=='stop',stationary)
         self.current_phase='validation'
-        t=time.monotonic();proof=self.validator.validate(curve)
-        if not proof.feasible and proof.status=='geometry_rejected':
-            curve=base;proof=self.validator.validate(curve)
-        # Dynamic feasibility is repaired inside the planner, identically for
-        # all methods, by minimum uniform clock scaling; no execution slow play.
-        repair=1.
-        if not proof.feasible and proof.status=='dynamics_rejected':
-            peaks=proof.metrics['peaks'];bounds=proof.metrics['limits']
-            ratios=[(peaks[k]/bounds[k])**(1/(3 if k=='jerk' else 2 if 'acceleration' in k else 1)) for k in peaks]
-            repair=max(1.,max(ratios)*1.025)
-            controls=curve.control_states.copy();h=curve.span_durations*repair
-            if not stationary:controls[1]=controls[0]+rate*h[0]/3
-            curve=SplineTrajectory(controls,h,stationary_start=stationary,stationary_end=True,
-                                   boundary_ramp_duration=curve.boundary_ramp_duration*repair)
-            proof=self.validator.validate(curve)
+        t=time.monotonic()
+        for candidate in (curve,base):
+            curve=candidate;repair=1.
+            for retry in range(6):
+                proof=self.validator.validate(curve)
+                if proof.feasible or proof.status!='dynamics_rejected':break
+                peaks=proof.metrics['peaks'];bounds=proof.metrics['limits']
+                ratios=[(peaks[k]/bounds[k])**(1/(3 if k=='jerk' else 2 if 'acceleration' in k else 1)) for k in peaks]
+                scale=max(1.,max(ratios)*1.025);repair*=scale
+                controls=curve.control_states.copy();h=curve.span_durations*scale
+                if not stationary:moving_boundary(controls,h,rate)
+                curve=SplineTrajectory(controls,h,stationary_start=stationary,stationary_end=True,
+                                       boundary_ramp_duration=curve.boundary_ramp_duration*scale)
+            if proof.feasible:break
         timing=dict(seed_s=seedwall,optimization_s=opt['wall_s'],validation_s=time.monotonic()-t,total_s=time.monotonic()-wall,
                     wall_started_s=wall,wall_completed_s=time.monotonic(),clock_repair=repair,optimizer=opt,warm_seed_layers=self.warm_used)
         if not proof.feasible:raise PlanRejected(proof,timing,layers)

@@ -305,6 +305,26 @@ class Geometry:
                 return False
         return True
     def proof(self,spline,dt=.04,dp=.01,da=np.deg2rad(.5)):
+        if self.limits.tilt_max==0:
+            from m2_path_batch import PathBatch
+            if not hasattr(self,'path_batch'):self.path_batch=PathBatch(self)
+            ts=sampled_times(spline,dt,dp,da);states=spline.evaluate(ts,0)
+            gaps,pairs=self.path_batch.evaluate(states)
+            bad=(gaps[:,0]<self.limits.body_margin)|(gaps[:,1]<self.limits.arm_margin)|(gaps[:,2]<self.plan_self_margin)|(gaps[:,3]<0)|(gaps[:,4]<-1.e-10)|(states[:,4]<-1.e-9)|(states[:,4]>self.theta_max+1.e-9)
+            refused=np.flatnonzero(bad);first=None
+            if len(refused):
+                i=int(refused[0]);r=self.state(states[i],True)
+                reasons=('body_environment','arm_environment','self_collision','assembly_fit','unknown_space')
+                required=np.array([self.limits.body_margin,self.limits.arm_margin,self.plan_self_margin,0.,-1e-10])
+                failing=np.flatnonzero(gaps[i]<required)
+                first=dict(r,index=i,time_s=float(ts[i]),state=states[i].tolist(),reason=reasons[int(failing[0])] if len(failing) else 'command_range',
+                           lower_m=gaps[i].tolist())
+            idx=np.argmin(gaps,axis=0)
+            return dict(accepted=first is None,first=first,samples=len(ts),body_min=float(gaps[idx[0],0]),arm_min=float(gaps[idx[1],1]),
+                        body_pair=self.path_batch.names(pairs[idx[0],0]),arm_pair=self.path_batch.names(pairs[idx[1],1]),
+                        self_min=float(gaps[idx[2],2]),fit_min=float(gaps[idx[3],3]),self_gap_m=self.plan_self_margin,
+                        map_hash=self.map_hash,max_time_step_s=dt,translation_step_m=dp,angular_step_deg=float(np.rad2deg(da)),tilt_bound_rad=0.,
+                        acceptance='Dense native convex support lower bounds, causal snapshot, open registered tool')
         ts=sampled_times(spline,dt,dp,da);states=spline.evaluate(ts,0);first=None;body=arm=np.inf;bp=ap=None;count=0;selfmin=np.inf
         for i,(t,s) in enumerate(zip(ts,states)):
             r=self.state(s,True);count+=1

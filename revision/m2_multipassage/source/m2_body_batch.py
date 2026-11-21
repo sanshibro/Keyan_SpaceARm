@@ -33,17 +33,19 @@ def native_batch():
 
 class BodyBatch:
     """Uses the same body IDs, mesh support points and obstacle primitives as ConvexMap."""
-    def __init__(self,g):
+    def __init__(self,g,group='body',shape=(0.,0.)):
         self.g = g
         self.snapshot = g.snapshot
         if self.snapshot is None:
             raise ValueError('A causal map snapshot is required')
         cm = g.convex_map
-        body = np.flatnonzero(g.groups)
+        if group not in ('body','arm'):
+            raise ValueError('Expected body or arm component group')
+        body = np.flatnonzero(g.groups if group=='body' else ~g.groups)
         if not len(body):
             raise ValueError('No registered rigid-body geometry')
         data=g.w
-        g.place(data,np.zeros(6))
+        g.place(data,np.r_[np.zeros(4),shape])
         mujoco.mj_kinematics(g.m,data)
         geo=g.ids[body]
         ctr=data.geom_xpos[geo]+np.einsum('nij,nj->ni',data.geom_xmat[geo].reshape(-1,3,3),g.m.geom_aabb[geo,:3])
