@@ -1,0 +1,3585 @@
+{
+  "physical_model": "registered G1; native body kinematics on archived qpos",
+  "source_archives": 60,
+  "successful_flights": 42,
+  "recorded_states": 153500,
+  "interpolated_intervals": 153458,
+  "static_mesh_parts": 339,
+  "covers": {
+    "foundation": {
+      "kind": "box",
+      "lo": [
+        -1.1,
+        -1.22,
+        -0.085
+      ],
+      "hi": [
+        2.95,
+        1.12,
+        0.0
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "approach_deck": {
+      "kind": "box",
+      "lo": [
+        -0.55,
+        -0.82,
+        0
+      ],
+      "hi": [
+        0.585,
+        0.82,
+        0.825
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "service_deck": {
+      "kind": "box",
+      "lo": [
+        0.58,
+        -0.82,
+        0
+      ],
+      "hi": [
+        2.57,
+        0.82,
+        1.265
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "sidewall": {
+      "kind": "box",
+      "lo": [
+        -0.54,
+        0.712,
+        0.77
+      ],
+      "hi": [
+        2.57,
+        0.82,
+        2.66
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "sill": {
+      "kind": "box",
+      "lo": [
+        0.95,
+        -0.825,
+        0
+      ],
+      "hi": [
+        1.05,
+        0.825,
+        1.695
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "lintel": {
+      "kind": "box",
+      "lo": [
+        0.95,
+        -0.825,
+        2.385
+      ],
+      "hi": [
+        1.05,
+        0.825,
+        2.665
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "jambminus": {
+      "kind": "box",
+      "lo": [
+        0.95,
+        -0.825,
+        0
+      ],
+      "hi": [
+        1.05,
+        -0.38,
+        2.665
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "jambplus": {
+      "kind": "box",
+      "lo": [
+        0.95,
+        0.38,
+        0
+      ],
+      "hi": [
+        1.05,
+        0.825,
+        2.665
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    },
+    "flange_lip": {
+      "kind": "annular",
+      "rin": 0.087,
+      "rout": 0.151,
+      "zmin": 0,
+      "zmax": 0.066,
+      "frame": [
+        [
+          -0.6028525301997294,
+          0.5130943460030092,
+          0.6109852853641637
+        ],
+        [
+          0.7978526347840085,
+          0.38769092340320144,
+          0.46165671345599285
+        ],
+        [
+          8.326672684688674e-17,
+          0.7657871375326939,
+          -0.6430941299603682
+        ]
+      ],
+      "origin": [
+        1.98,
+        0.25,
+        1.71
+      ]
+    },
+    "flange_tube": {
+      "kind": "annular",
+      "rin": 0.08,
+      "rout": 0.14,
+      "zmin": 0.049,
+      "zmax": 0.168,
+      "frame": [
+        [
+          -0.6028525301997294,
+          0.5130943460030092,
+          0.6109852853641637
+        ],
+        [
+          0.7978526347840085,
+          0.38769092340320144,
+          0.46165671345599285
+        ],
+        [
+          8.326672684688674e-17,
+          0.7657871375326939,
+          -0.6430941299603682
+        ]
+      ],
+      "origin": [
+        1.98,
+        0.25,
+        1.71
+      ]
+    },
+    "flange_back": {
+      "kind": "annular",
+      "rin": 0,
+      "rout": 0.143,
+      "zmin": 0.145,
+      "zmax": 0.324,
+      "frame": [
+        [
+          -0.6028525301997294,
+          0.5130943460030092,
+          0.6109852853641637
+        ],
+        [
+          0.7978526347840085,
+          0.38769092340320144,
+          0.46165671345599285
+        ],
+        [
+          8.326672684688674e-17,
+          0.7657871375326939,
+          -0.6430941299603682
+        ]
+      ],
+      "origin": [
+        1.98,
+        0.25,
+        1.71
+      ]
+    },
+    "support": {
+      "kind": "box",
+      "lo": [
+        2.08,
+        0.335,
+        1.28
+      ],
+      "hi": [
+        2.38,
+        0.775,
+        1.57
+      ],
+      "frame": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "minimum_separating_bounds_m": {
+    "foundation": [
+      0.9685339574114153,
+      "26112143-nominal-occluded-fixed",
+      "alignment_probe_load"
+    ],
+    "approach_deck": [
+      0.1435339574114154,
+      "26112143-nominal-occluded-fixed",
+      "alignment_probe_load"
+    ],
+    "service_deck": [
+      0.3680256006965552,
+      "26112131-nominal-natural-strain",
+      "alignment_probe_load"
+    ],
+    "sidewall": [
+      0.37676361551529547,
+      "26112137-nominal-occluded-fixed",
+      "collision_rotor_sweep0"
+    ],
+    "sill": [
+      0.05378120490197036,
+      "26112131-differential-occluded-fixed",
+      "visual_gripper_finger1"
+    ],
+    "lintel": [
+      0.09891535588622213,
+      "26112137-nominal-occluded-fixed",
+      "collision_central_equipment"
+    ],
+    "jambminus": [
+      0.16290836962560284,
+      "26112143-differential-occluded-oracle",
+      "visual_super_prop"
+    ],
+    "jambplus": [
+      0.14764935720669645,
+      "26112137-nominal-natural-oracle",
+      "collision_rotor_sweep0"
+    ],
+    "flange_lip": [
+      0.0008563851872615644,
+      "26112137-nominal-occluded-fixed",
+      "visual_gripper_finger0"
+    ],
+    "flange_tube": [
+      0.025820476097109794,
+      "26112137-nominal-occluded-fixed",
+      "alignment_probe_load"
+    ],
+    "flange_back": [
+      0.11185066347510109,
+      "26112143-nominal-natural-oracle",
+      "alignment_probe_load"
+    ],
+    "support": [
+      0.09432181443292653,
+      "26112137-nominal-occluded-proposed",
+      "visual_gripper_finger1"
+    ]
+  },
+  "cases": [
+    {
+      "case": "26112131-differential-natural-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "5cb232f1ab7908c1031677ff3e4fc4d41a244aeb8910f10c2cad1ec3d18bc825",
+        "control-summary.json": "2ca2e0a0c8e75965d84a4b1989ead76b589840e05bfcfb3b50b7c00d0f843fc3",
+        "metrics.json": "ee857ec8d6cbd680bc7a0a861027b973f35a35e7ad2eb800c2d644863bf39e1d",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "059b4208d69cb55a244d2bdb5b92ff0eac190a7faf9d42cb1f2d037b0f1a83dd"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686280733137496,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1436280733137496,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3741404367041023,
+          "release_s": 1.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39022260576686957,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07211408500866079,
+          "release_s": 33.16,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.1085410804491933,
+          "release_s": 36.3,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16669534637633554,
+          "release_s": 37.3,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16002704308744142,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.007228164561011136,
+          "release_s": 49.32,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03011646677247689,
+          "release_s": 49.3,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11805265736106221,
+          "release_s": 47.44,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09904989024464661,
+          "release_s": 51.38,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-differential-natural-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "c96738dcc1565cded59f832f50d5df04c469162f596a0632dffdb1ead98ff1f8",
+        "control-summary.json": "4ca1b771d446c471def0ecf89935058f6ecf4c5082360aae51020a3ac70a21f8",
+        "metrics.json": "1178e388c38c7038bc8d693127ba45efa73dffb939086d5f0ad75bfe1ae348f7",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "eac953a0261753703a907c421c78c3eceb6219ac6100e3ac1b1d633ff6724acf"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687760102937685,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14377601029376852,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37448584237248134,
+          "release_s": 1.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39071653601394224,
+          "release_s": 41.24,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07314544066398021,
+          "release_s": 33.18,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10833849709504939,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17265073220287877,
+          "release_s": 34.84,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16093703078298938,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.011989077680451474,
+          "release_s": 44.1,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.034106480447823474,
+          "release_s": 49.28,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11823898627572776,
+          "release_s": 49.3,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09478452687418737,
+          "release_s": 49.3,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-differential-natural-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "7a410ec3a4dafe3ecf8603761c6569f4f3bda908652ebac4ad7fff21f7c6d1c1",
+        "control-summary.json": "319396552912b69e7f5b6dff6633c7a354f8fd8de7ec77cc8892aac5af770a2a",
+        "metrics.json": "0b55480fde4a59adf3544f0300a0ec03cee783c5558d67c57044e530cadf970a",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "aab6288eb963a52fff4bfaf4d615ea4ee0b0a4ccebf9a7ce83bb118f4984426b"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687074454272975,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14370744542729752,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.368925419659885,
+          "release_s": 15.54,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3885840245274103,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06484573761621337,
+          "release_s": 18.0,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.11149650689473445,
+          "release_s": 36.32,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1666320240990629,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15326745541200607,
+          "release_s": 33.22,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.009409917065944004,
+          "release_s": 47.92,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03217416106381731,
+          "release_s": 47.9,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11882014787144096,
+          "release_s": 50.2,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09630411447159776,
+          "release_s": 51.4,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112137-differential-natural-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "f8dfcf65d0a823b3efae0c03729764b073c21516bae44174a1478df988b8977c",
+        "control-summary.json": "97e1e5577762b603abee40f84ade66e4b1c1b600348b5d7a82b0d85d5def39c8",
+        "metrics.json": "1efdcb88722e9dc545da5057026ebbbb08f9ede6f69828809b3da9bfd8e2c5ad",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "1ea110367665ea3aa009dca384fad60dacb68166099b4194d917146a0edbb3b9"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688325994547065,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1438325994547065,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37573486884962537,
+          "release_s": 1.12,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38634021517794837,
+          "release_s": 31.44,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.07169325533423332,
+          "release_s": 18.0,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10354829965803258,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1663889647761406,
+          "release_s": 37.3,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15388480654130018,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.008533284355485102,
+          "release_s": 52.34,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.031292275262576476,
+          "release_s": 52.32,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12053897149646084,
+          "release_s": 50.72,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09666532532109584,
+          "release_s": 51.8,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-differential-natural-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "f4c963049868eb50818b7bb66417d1d41268a0fd9663fed82416a64ae8430b94",
+        "control-summary.json": "8bb847646ae1fd23b267b06e7174f5efd1106d7658bfa9b1e36e9c45707a8d09",
+        "metrics.json": "8729c1b6211a9c9bb6b702a0e3c71426f71024e5246ffe82202b9350b74f8df4",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "f94b7ef260e6d979a03165f86df76771b10522d7289513dec3203e2a85fabed7"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688280997013047,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14382809970130472,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3758644127807384,
+          "release_s": 1.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39125637088735055,
+          "release_s": 31.52,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06650447495258716,
+          "release_s": 18.1,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10281524547211562,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17057679961444294,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15245475814071963,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.006941474127075686,
+          "release_s": 48.82,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.02970990283866637,
+          "release_s": 48.82,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12158915244485671,
+          "release_s": 50.88,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09694200470648862,
+          "release_s": 51.82,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-differential-natural-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "f231610445c8207236ac9fcbfe7224874fe11562c01915c7f4d2e8df70476cd3",
+        "control-summary.json": "7cf5c041f82ccc4e140a8d2d7eef5995681fa8a9a3f876dcd32003d5b85c63df",
+        "metrics.json": "177dc88eed4483627be02dcf39fed9cb44e0c7aa63e4be05f3a82573fa28f220",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "e20e678d791cb9ba80502222a9a1e918ebf6dfd6e2562d476ff2b30c835d1694"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688181007626255,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14381810076262558,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3754225194637968,
+          "release_s": 15.52,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3841866395779506,
+          "release_s": 31.56,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06535379473605618,
+          "release_s": 18.0,
+          "part": "visual_gripper_finger2"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10382020140674575,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.165773723708317,
+          "release_s": 37.34,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.14782366801043878,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.006946816000398315,
+          "release_s": 48.32,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029492719992458505,
+          "release_s": 48.3,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11443386961449761,
+          "release_s": 50.6,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.0957847300903567,
+          "release_s": 51.42,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112143-differential-natural-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "5d2d33cfcb4178bff175c051f81f5ad83f632370f668d5c0482bc8acef744a9b",
+        "control-summary.json": "b724334d31b495dc0bb374b2adfa82a9eb556628d8c953964becaebabd3ea2b8",
+        "metrics.json": "4bb6724d6215c6d82ac83abc1968f503c00cfb25921c643e0c016342a379e615",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "e52e40c0aa9decbdfb72b607c6995342651410a08023acea4069930456224ae0"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687602957648351,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14376029576483518,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3744437911599682,
+          "release_s": 1.24,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3977021769745139,
+          "release_s": 41.24,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07737900047714152,
+          "release_s": 33.08,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10259560086253083,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1708251948468501,
+          "release_s": 34.9,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16254300064243177,
+          "release_s": 33.12,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.0071192508947905825,
+          "release_s": 48.86,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029648844642970844,
+          "release_s": 48.84,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.1163952660103896,
+          "release_s": 47.48,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10186695950813474,
+          "release_s": 50.8,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-differential-natural-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "f9ee9db8d69dc0072442010a0213eb6792ee7ea9ce56cf74ab501f1ff0b758d7",
+        "control-summary.json": "8e88c461fd112baa434f505251b21fc591a83cf5d59fb9e4a5350b8ad6a0fe00",
+        "metrics.json": "a41a99a5ff3908a15e79fe0c0bf22f27ad7085777373e89448f31a3a801930d6",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3f6e71c9106da9b5c8138b0820a9089b52ef66d051a179714c9a5c5141268c9a"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688059528223093,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14380595282230935,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3743133068908996,
+          "release_s": 1.3,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.387725237906185,
+          "release_s": 41.3,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07155778233298271,
+          "release_s": 18.04,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10157925489736597,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1670739874458937,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16072560912761424,
+          "release_s": 33.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.01244367437109653,
+          "release_s": 43.4,
+          "part": "visual_gripper_finger0"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029136572137780554,
+          "release_s": 48.98,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11319142785910624,
+          "release_s": 48.46,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10077863950532517,
+          "release_s": 49.88,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-differential-natural-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "4b022b5397412553e28707f59d50446b70c7d66796051a0f4cff7df5ddc36ab7",
+        "control-summary.json": "2508a17eb23d0408d35f3a405191112bcbee6251282f5339621e3a9d20dc7bd7",
+        "metrics.json": "77ad679fa7293bcc52a3d8ae170db14aeb09e0e823c16f50eb9eebcdbeef88c0",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "e997b40250552bfe0c46e3e1adab7f0a2a1a523c2680fe580968cb0c43c9d7be"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.968761941700121,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14376194170012102,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3747874714363003,
+          "release_s": 1.24,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3905082285948738,
+          "release_s": 41.3,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06743066457278857,
+          "release_s": 18.02,
+          "part": "visual_gripper_finger2"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10197546691504389,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16343377150615584,
+          "release_s": 37.36,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15400273228877726,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.007426149609856547,
+          "release_s": 48.58,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029456931336899243,
+          "release_s": 48.52,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11813716227046105,
+          "release_s": 48.86,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10003573893415574,
+          "release_s": 50.84,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "bf8aa179a509d1a763ac11542e38879746b22ec84610c00dc567db3f7a39c384",
+        "control-summary.json": "76f0729f0af1830829362ded9a2ee053e71873a9ec00a00d14aaa52c6db49759",
+        "metrics.json": "2878705dd7ba1caaf89ace5916cd13493d98c72bd40ef129110499f5bd3e76de",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "8033073e50481ace4bc7133307cdc4de86a7700570520b070cea05ce4022912a"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688993526785439,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14389935267854392,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37096023738330286,
+          "release_s": 15.48,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3920680231138812,
+          "release_s": 41.64,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.05378120490197036,
+          "release_s": 33.92,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.11010998817269435,
+          "release_s": 36.74,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17109863392174218,
+          "release_s": 37.72,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1789358750721453,
+          "release_s": 17.44,
+          "part": "visual_gripper_finger1"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.010863212205219241,
+          "release_s": 47.26,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03373416153729564,
+          "release_s": 47.26,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.1246919121877486,
+          "release_s": 48.56,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.1009733298183142,
+          "release_s": 49.58,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "13f260105a80ada713ee633b7dde8d7174c7fc2fb3cd23c2665b2654e475e366",
+        "control-summary.json": "e568bc67d4563a87b0d61ea3790dd44a201701e37089f3bf2080ff214547ab30",
+        "metrics.json": "3599c0d60bd6247a6ef635f5e489b99aadf612c0256a6a92807873c460f415c0",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3e23ccda8c799635353f9681e9af82ef5efaaf87a2480670c57bafa2b2c5d34a"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687670363224251,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14376703632242516,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37454981839139834,
+          "release_s": 1.16,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3860468585558041,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07435034909625204,
+          "release_s": 33.12,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10699802024245653,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17465631392634415,
+          "release_s": 34.66,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15906467926950119,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.008402714644175663,
+          "release_s": 49.46,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03127692985157824,
+          "release_s": 49.46,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.1199329093251506,
+          "release_s": 48.2,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09912403760842148,
+          "release_s": 49.48,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "49b71d27e26dae9761536e2d6931e6fb8f8180dd5d9e102d3a9f91d7bb13f05d",
+        "control-summary.json": "ee350c5911432b773ccc0bd87e7376837eea5a03e48004554f5a0c3def9ff903",
+        "metrics.json": "c965468a514fda77c89d86ba3e6111ef7bf083a2e90a21bd439aa73effd49c01",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "43d6d853dd8a8a9f73d82032448d4df3e7bdd8296585582a7bf4b8c616a0dc36"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688205880201751,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14382058802017517,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37324364016730693,
+          "release_s": 15.52,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38777911601531667,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06582683819450441,
+          "release_s": 18.16,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10785622047733545,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1682700613171653,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15238110507945807,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.00880508152773092,
+          "release_s": 50.44,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.031641002024992815,
+          "release_s": 46.0,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12043894166046755,
+          "release_s": 48.84,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09935211648280531,
+          "release_s": 51.94,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "44db0f9ec4f4a8b5b4a962eb14c308757037e8a62d10b5868a49d17a63acb9c1",
+        "control-summary.json": "79a3e9c357074ff4bc28402efd008c0dcdc45a17ac91381d513f037e0ded98dc",
+        "metrics.json": "e0a6cbfadd9240805d4fe59eeafc440f898fdb2ba8e13da0a816457bac8027e9",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "851b2f3c666e412c292c33fabae1b3250962349b31c9be1f2deb20ed18119961"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688262381170955,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1438262381170955,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3756044120764275,
+          "release_s": 1.12,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3843772762055233,
+          "release_s": 31.42,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06253227458661503,
+          "release_s": 33.9,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10525673294726934,
+          "release_s": 36.68,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16974680841135642,
+          "release_s": 37.68,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.171391298809333,
+          "release_s": 17.48,
+          "part": "visual_gripper_finger1"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.007221446925686895,
+          "release_s": 52.64,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03215233543367666,
+          "release_s": 52.06,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12420869054628715,
+          "release_s": 49.48,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09990741815192816,
+          "release_s": 51.32,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "c118f8dc79fd3a693ee6ed3b23f65f8d5f7dea4a4652c61931bb519587ba642a",
+        "control-summary.json": "318f6eb9b2cacecd458b5c8a7e71f3db4557ba31c43f7e7910122985fbbde470",
+        "metrics.json": "3aed535474ed437713121ff2341ed278e4844b37b7106817a1c1a99aed4a0e84",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "c513d55c176c915462e3117442aae265b4998c28212dccceebe749be4675af32"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688203515138559,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14382035151385597,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37354769223987194,
+          "release_s": 15.5,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39134720854214367,
+          "release_s": 41.24,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06557112619550098,
+          "release_s": 18.14,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10246529823194228,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16876861805886623,
+          "release_s": 37.34,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15485964312712655,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.007126074473742652,
+          "release_s": 51.96,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029961684535431875,
+          "release_s": 51.96,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12127769808399883,
+          "release_s": 49.3,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09798350441541293,
+          "release_s": 52.34,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "64712c9b265b8b30161eda9f2265f0fee343a1c6b1dfde9799f218a52f9f3893",
+        "control-summary.json": "83efd2483b1362a425d64f5e2b152f4363211db502997ccca045f3d43409decc",
+        "metrics.json": "fa42cc89605bca41b5606ab71f6c68ca8e137641b4a7fb12be1bae3514de0fee",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "7f5d252e1619ee76390d016ae452da2a98e6199feb35f1ab0099a12065762686"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688399014858975,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14383990148589754,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3759205468942441,
+          "release_s": 1.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38716494494655845,
+          "release_s": 31.54,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06494269940500252,
+          "release_s": 18.0,
+          "part": "visual_gripper_finger2"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10287292899569334,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1657526138455969,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15126779935066237,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.008380771341659793,
+          "release_s": 48.56,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03193245939151501,
+          "release_s": 49.2,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12276637241304968,
+          "release_s": 52.2,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09790978513620274,
+          "release_s": 52.24,
+          "part": "alignment_probe_load"
+        }
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "e7335432a5a97d2a851977b675c4361cf9e25e7de492cff43adfba8aed50653b",
+        "control-summary.json": "42d0fa241b25c587a774fb65474ad3a3fdbdb410cfdd304fcf99f5c8f92d08cc",
+        "metrics.json": "e65f6bf1da1eb0a44cd2516c814fbbf31b8b6fd93775311c086df39a93c50ba9",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "b2af9662886cfd2b12d61ef4dda5c4e48010afa38c57ca19750901acddbf7cc4"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687954439870707,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14379544398707078,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3745148576512326,
+          "release_s": 1.24,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.391208104128599,
+          "release_s": 41.68,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.061152121039216745,
+          "release_s": 33.92,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10624405871159892,
+          "release_s": 36.76,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.170255263253218,
+          "release_s": 34.76,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1664639573037032,
+          "release_s": 17.4,
+          "part": "visual_gripper_finger1"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.012209682133821509,
+          "release_s": 52.2,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.035261508464918746,
+          "release_s": 52.16,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12420095269998008,
+          "release_s": 50.84,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.0984601984898299,
+          "release_s": 50.88,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-proposed",
+      "states": 3653,
+      "intervals": 3652,
+      "inputs": {
+        "run.json": "3271ad79352223ee0a24fc4a3ee27610bcd45c07d6f9d924221df0930a61e908",
+        "control-summary.json": "248c21d4979a7c32aeea94ff92ca7712418798bbf3ee6f172ba74afdc5ecd49b",
+        "metrics.json": "83b833218fe37ea4c8a24275c703f814cd2dd97ea7edb2f012f917ffb2effcb3",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "425df8ca4509f40efc5173f7266893e3f976c780d71c52d279aaff415219fa96"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688495400840853,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14384954008408535,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37434668579938546,
+          "release_s": 1.24,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39493542693489664,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07131809903405983,
+          "release_s": 18.16,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10333745252189974,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1710237873995146,
+          "release_s": 34.88,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16142900945158206,
+          "release_s": 33.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.012567846605040373,
+          "release_s": 43.36,
+          "part": "visual_gripper_finger0"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.030600800183949835,
+          "release_s": 51.24,
+          "part": "visual_gripper_finger1"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11494218989712329,
+          "release_s": 51.24,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09842694886778647,
+          "release_s": 50.34,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "5bd33d412d95bdc0fcc5383f309791857f5c0304bbd556f749af88f7f1cc2cdb",
+        "control-summary.json": "f102c7ae92db7e620ab333a14aba00c92d32db63782c820edc105bc2db022d14",
+        "metrics.json": "bed1e50caf8700508d6e29c1fe8c10dd3fe23ed7e33278e6fac19a2c6c3c52d7",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3c2e4ba0686bad632b6b9e10f566e397c541790dcc1f411dc8410f35c68d5f1d"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687969044493284,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14379690444932847,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37460068093594057,
+          "release_s": 1.26,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39041895646365127,
+          "release_s": 41.3,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06703594954053682,
+          "release_s": 18.16,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10292899603045536,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16290836962560284,
+          "release_s": 37.36,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15236410647133475,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.010064406448589733,
+          "release_s": 49.12,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03258056471922506,
+          "release_s": 45.78,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12054194386976985,
+          "release_s": 47.72,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10077957079706493,
+          "release_s": 51.32,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-strain",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "034ce2ad7c4f121037083e290b3b7411ea36be37705942eda3f4a8748b6db088",
+        "control-summary.json": "ea3f6bccfe6d521c8b585aa6eb099d04970c0e787be70ed202b0f954fd194ba3",
+        "metrics.json": "cdacba0ff7aa424749668817cd3f18273d9a6f132ca5836b984e74144029bf87",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "4e1f4a0147a0122fded48f588db4e07cde1653137fc9b8bcf18082e729b38ac6"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686337213242283,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14363372132422836,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3680256006965552,
+          "release_s": 15.54,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38887795689303056,
+          "release_s": 41.26,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06859159662969427,
+          "release_s": 18.02,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.11012029477759233,
+          "release_s": 36.3,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17010758792230452,
+          "release_s": 34.9,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16113191496379375,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.006955651328492629,
+          "release_s": 50.12,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029620512050060603,
+          "release_s": 50.12,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11688600700381746,
+          "release_s": 48.96,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09939921641428229,
+          "release_s": 48.78,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-fixed",
+      "states": 3653,
+      "intervals": 3652,
+      "inputs": {
+        "run.json": "9252186192cf0515fea96b7d454fd260852e0231d99b8aefbd5be9aab5909fa2",
+        "control-summary.json": "1f4c566cef7ea20e4576d46df30697c3fd074277f24280acc1ebf79b06e92462",
+        "metrics.json": "99fcde9eaddcebd279c545ed7bc56bd2a7733198da262c638d93935cf9a2dfb4",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "5a85b719bbdf749c4e2c1ea4dabc74a0360f322925cd75a2822694b5778d89fa"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686563194841473,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14365631948414737,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3684123784909945,
+          "release_s": 15.48,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38892643736686955,
+          "release_s": 41.24,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06904080352003272,
+          "release_s": 33.16,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.11138060879484923,
+          "release_s": 36.32,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16918285024881866,
+          "release_s": 37.4,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15903513301283229,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.007418587715849717,
+          "release_s": 49.16,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03040558876794386,
+          "release_s": 49.16,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11773281556570807,
+          "release_s": 51.3,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09496143809210811,
+          "release_s": 51.46,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "ce08c39182f301ec574287052cbe7a9f169e01f604388543a0899bdeff293d49",
+        "control-summary.json": "e8e2dea2b496cb72f6d3c3880944efa234323922515cdba983e8fbf066181e46",
+        "metrics.json": "e56bc9043ad3edde7d806f87ecab01b6a4f1b134e20a854f1836b9ae678c6bb5",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "d274bdb2b534bb503aaf8bd60063446eefc6e772cbca2b5cfd9fc3f04bbfe12f"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686459456809264,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14364594568092648,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37347272261010733,
+          "release_s": 15.54,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3886598030157899,
+          "release_s": 41.2,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07294455160476465,
+          "release_s": 33.16,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10920358004655428,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17040940538574997,
+          "release_s": 37.34,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15911207883818335,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.010303948296926144,
+          "release_s": 44.26,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.033814412777584166,
+          "release_s": 48.58,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11788346586930736,
+          "release_s": 48.54,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.097864201913169,
+          "release_s": 48.7,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-oracle",
+      "states": 3652,
+      "intervals": 3651,
+      "inputs": {
+        "run.json": "10f9fbe78b2ed019cffa020cc57511c7a2d1851c0ab035f64b7f39fe6cff9074",
+        "control-summary.json": "bd07ae426862467e7f2ac278a1f9c31d974a05e807b247d30b0dcb6fe0d91a81",
+        "metrics.json": "9619b39eb1134915b522800d56815adfc099a4c29bdab838cd0cbf6fb8264cce",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "4a8e348eb5e52fe1679343d49c18fec5cf08e0f02b37e45f9ccbf5ed9f93e9ee"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9685938163096811,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14359381630968115,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37373659768845235,
+          "release_s": 15.52,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3870635464471896,
+          "release_s": 31.52,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06682595421030402,
+          "release_s": 18.0,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10908788756582632,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16742642577459746,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1524041705884258,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.0075784073185514444,
+          "release_s": 50.38,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.030471901863956076,
+          "release_s": 50.38,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11982964023001283,
+          "release_s": 47.92,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09904859837741142,
+          "release_s": 50.12,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-strain",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "c0b67d2c7cc5ed12f7e402af9f374bbcdfaef804e1fc991c95d568fafdee7960",
+        "control-summary.json": "5639a40423b27c0a060d0aeec54f6ba6fbc2f85471f226b87cd97212f27915c2",
+        "metrics.json": "159a7dd327ab85d3ad92b700ae9e2362da5404a63f749934f63b755e79431d91",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "ea808678e3c80b8458ab64843db8e384e53588c57b24d33e474baea47029844d"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688295903271251,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14382959032712517,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3752726008074071,
+          "release_s": 1.16,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38872135751653464,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.0711213323406229,
+          "release_s": 18.12,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10393032360696797,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17353478521406376,
+          "release_s": 35.14,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16051928858998538,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.00500736702723667,
+          "release_s": 53.14,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.027784396072704706,
+          "release_s": 53.14,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11277286605571316,
+          "release_s": 51.3,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09497900130287973,
+          "release_s": 52.26,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "1c19822916c497826a2983da398ada9eb02a397457c5e35a8551a74827406057",
+        "control-summary.json": "8c4a207e5c500159c9ee307dee83cae58464f8aef3271db000774126fde8a118",
+        "metrics.json": "b6c2215ce29420443e86ccf1cebb802f94a8a67d78ec1213e09f7f993d9bc6e8",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "d8381ef1885b8f8a1fff55df78a5516d40c0800542c6b406521b8df77dbd7bbf"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688097354843093,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1438097354843093,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3757648820262013,
+          "release_s": 1.12,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3878147992675353,
+          "release_s": 31.44,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.0759781510459987,
+          "release_s": 33.06,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10541548917679933,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16585281829323567,
+          "release_s": 37.2,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15299201465422596,
+          "release_s": 33.16,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.0065298207442146955,
+          "release_s": 53.08,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029099623517732202,
+          "release_s": 48.04,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11511234485141324,
+          "release_s": 50.36,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09549248325561854,
+          "release_s": 52.28,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "0aae9bc4b95263b0e689cd697541050c5bbc9a2c08d36f9d852a99bfd81a0fae",
+        "control-summary.json": "e414c969e5e26c76f88a9b7f38ddb1f9ade8a040c6f0783f03f8d98c98112718",
+        "metrics.json": "ff40100b324db5ac4dd803b7f9fd70662530cabee3a7236f5374c8a602df9dc4",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "79fd43779c94853cb92abfe298914eb469b635cb1d5c395f228fde170fb44117"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688110578418235,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14381105784182358,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37478527503013703,
+          "release_s": 15.52,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39103666368727297,
+          "release_s": 41.3,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06570566538675437,
+          "release_s": 18.04,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10432078315716309,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16941073432068407,
+          "release_s": 37.34,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15233132322602838,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.006292865275141529,
+          "release_s": 53.62,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029304833003236684,
+          "release_s": 53.18,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11778860753780064,
+          "release_s": 50.88,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09732006341855315,
+          "release_s": 52.26,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "b7fa3f33c747ce41d958007b55e457d807c4b0ef9ffca85c6fbc8132db25f2f5",
+        "control-summary.json": "0a2d9cf998c394c0ededc414567569564818e35f1dd809c8a45ad6c65e32a131",
+        "metrics.json": "ee7691dba97e2a347e02701acf549d8e6b356a4479bb1906fb38a81f1a9894c7",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3256f029306f7de3bf1d239887f5ed0e099b34dc7034bee928e702c11bd560ec"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688394162714384,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14383941627143848,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3732174582219856,
+          "release_s": 15.52,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3849051827044457,
+          "release_s": 31.56,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06624876043636263,
+          "release_s": 18.04,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10212205060728996,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1648529899311821,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.14764935720669645,
+          "release_s": 33.22,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.008151316350014579,
+          "release_s": 48.3,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03212136431387774,
+          "release_s": 49.32,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12231364450837563,
+          "release_s": 51.34,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09784753573428295,
+          "release_s": 51.22,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-strain",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "50ea3677ae75394d6cacf26f2deb1bde9e0addaff4c23b8ab370b023b84473a9",
+        "control-summary.json": "c3f16b3a2eeaafad0e20eb0f83f08b5106d91d5032e3fc068b7efa9f627d6766",
+        "metrics.json": "d8b5e5d1c6fb1171d9d8d6468d911e4541690e0159266035fb3b0d12fe427b32",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3798cf2f148645858c9992954875b703ae0288ef6f5b325c1065d3ef3cdcdeba"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.968804468951332,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14380446895133203,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37449294235016894,
+          "release_s": 1.28,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3896232776491671,
+          "release_s": 41.22,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07112626898807428,
+          "release_s": 18.12,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10169695822503533,
+          "release_s": 36.22,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16631958120627213,
+          "release_s": 35.02,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16317892815881216,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.009807877320134613,
+          "release_s": 44.58,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.033666493677474894,
+          "release_s": 52.06,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11891466396047749,
+          "release_s": 51.46,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.0996961187811587,
+          "release_s": 49.44,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "8e47df43d340b6407a07003a1c2df8567f3766869013ea633266a3b65c685020",
+        "control-summary.json": "cd8e8318f77ce392f4fb4e694ed6a111983af16aab45cccfeec3db002fc09592",
+        "metrics.json": "6ed4ca1897e274f96e26cc54e608257ae01fd6f64f88603fdda8aa2fd3caad28",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "f341a69e0a3c874b28d6dd67726474c82ce4368bbe8c661251eb686a6b0fa076"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686627074609622,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1436627074609622,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3742961311194126,
+          "release_s": 1.24,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3910830337942093,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07841911270664226,
+          "release_s": 33.08,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10251956514401162,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1644367352963306,
+          "release_s": 37.34,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1608280296701005,
+          "release_s": 33.16,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.006265567933725971,
+          "release_s": 48.62,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.02827387081300746,
+          "release_s": 48.34,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11633341043142091,
+          "release_s": 47.48,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10092710809688721,
+          "release_s": 50.46,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "5c55f045c163dced387fbf4ba86bf0aa4cafcc1baaf45cda102ae8dd9a42acba",
+        "control-summary.json": "a30c168a89b962bde98cf22c9addad5abb7b285970ed8e936c84f85840d3eadd",
+        "metrics.json": "800ac38f0c1b02fe7633afd1691f2a659120d4cfd2bd67345d858c185946861b",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "d1ccc4e3bc76d6828eb9d690679ebabd875869058e23a102bd6eebefef037e43"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688234659001165,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14382346590011652,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3742366875935843,
+          "release_s": 1.3,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.39128208747768195,
+          "release_s": 41.16,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07203621712683095,
+          "release_s": 18.04,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.1014828581687457,
+          "release_s": 36.22,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17133165079207838,
+          "release_s": 37.24,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15900597342384315,
+          "release_s": 33.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.010745802827846485,
+          "release_s": 50.26,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.0337784793851215,
+          "release_s": 50.26,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11933885005727643,
+          "release_s": 48.46,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10034405844795247,
+          "release_s": 52.06,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "26703dff171baa85dd9aace3b6ef9c41a1ea4fee14c01cc9b313c7c77e76bfae",
+        "control-summary.json": "5966d8bebee496d37267e315cd0b31a361d16d9bec5573b35dcc9932e75c84ad",
+        "metrics.json": "ab81a4afbdcefc98f687697f97383556a585d760c9d914efd3442fb659a44c14",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "2ba4d239a6f7b2d10c16c8d1ecc19d31c0a4cdef21ff3246660779584d77df8c"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687679364377816,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14376793643778163,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37475427394715044,
+          "release_s": 1.24,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3905539855163144,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.0675638795750475,
+          "release_s": 18.02,
+          "part": "visual_gripper_finger2"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10218323782155059,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16642806368098878,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15393568050785356,
+          "release_s": 33.16,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.008234766917810651,
+          "release_s": 45.78,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.027855430367609468,
+          "release_s": 49.12,
+          "part": "visual_gripper_finger0"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11185066347510109,
+          "release_s": 49.12,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09722903189159915,
+          "release_s": 50.82,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-strain",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "32e3f291ee16362c0f7dc921b026b27be0df4eb54fabe80ba1303c7dee262213",
+        "control-summary.json": "1f0113dff0ec17595b0a3b146e04a19ad2ef9c54e69f1fa863d0266693cff88d",
+        "metrics.json": "d18fa412a3a7701639e2d594e7791f80439fb051c42e5071cf97edd5e26bbb3d",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "2104b68f8f3bfd693e1f5cf4529f66675459f9154bbe2cd4f3527ccc09e81598"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686504855118969,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14365048551189696,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37142237570246395,
+          "release_s": 15.5,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3900215374675429,
+          "release_s": 41.26,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06568840809301046,
+          "release_s": 18.02,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.11029662337847768,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1688802946057901,
+          "release_s": 34.9,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.16210730321258082,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.007854066836179757,
+          "release_s": 50.46,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.030831530199338937,
+          "release_s": 50.66,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11584565611995312,
+          "release_s": 49.86,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09594070471998539,
+          "release_s": 48.56,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "e468f3fe33ea4d3139a0c2d872ebdc6827eca463687598b080ff285d3ea85071",
+        "control-summary.json": "0a3d0b380cc21b46486245fc20864c341ca45b1927705f1575b65a4884f691b6",
+        "metrics.json": "99727017e72045f7ada874ddf2148a10a3368e5a56af1c540829b1a6bb16220a",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "13267999a1e934707265ac4e6a449f0c9fd81d72bc981c3bca9e9439d62feae2"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686370454516838,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14363704545168388,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37414231753332605,
+          "release_s": 1.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38433205400773396,
+          "release_s": 31.4,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.07452203015789749,
+          "release_s": 33.8,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10585032481194423,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17276316224484536,
+          "release_s": 37.3,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.17548854384672435,
+          "release_s": 17.48,
+          "part": "visual_gripper_finger1"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.008510614251293028,
+          "release_s": 50.34,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03127955987299822,
+          "release_s": 50.34,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11950298312439527,
+          "release_s": 49.08,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09614717931143124,
+          "release_s": 49.94,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "899802f1c4df52f6e280206bee90e6e118353abec3f7d6803758980fd5b47065",
+        "control-summary.json": "c8ad5e180a61904278d9fa9c0fc488fd6d3c00077be748850f484470b21de6c4",
+        "metrics.json": "8e29cf165ad44a814c6e3d5c933df16443e16abf8c7a76c30d83b2db2db9d03a",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "50026944e27343cbf4b2d7b5f324c6e47cdb983896694c5aae7ec4541cac93d0"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9686425781446953,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1436425781446954,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37105760247228603,
+          "release_s": 15.52,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3868983529940175,
+          "release_s": 41.24,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.07044582793321796,
+          "release_s": 18.02,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10591589127831336,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17539853801926078,
+          "release_s": 37.36,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15772539612447145,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.005522833760347942,
+          "release_s": 46.34,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.029728009735301927,
+          "release_s": 46.96,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.1234994508368219,
+          "release_s": 47.82,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09515239194360925,
+          "release_s": 51.26,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "61e1c727e417ecbc8956965339f3d0f4e6f8d8289f1e352f20e2eb488580eab5",
+        "control-summary.json": "931e84152d73d5304d5e320a5b18deeaee1fc6e9e24cdc8a3d029b165e5a40c5",
+        "metrics.json": "9b2e1e90b127ae11aa33a3b82275e8f9b6c7a38adf2d9b416e34ebfb4f7f39d0",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "5739c317069b413da98a9ab0412e20885e1b3af113293af6f3bdacd5c3ed73ad"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687033309987773,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1437033309987773,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.370079261397539,
+          "release_s": 15.52,
+          "part": "alignment_probe_load"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.389553419920766,
+          "release_s": 41.24,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.06637215003679897,
+          "release_s": 18.02,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10795011464510029,
+          "release_s": 36.3,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16650607738732767,
+          "release_s": 37.36,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15290289796534784,
+          "release_s": 33.22,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.00895711343450066,
+          "release_s": 50.38,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.031293914741326395,
+          "release_s": 45.96,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12024950672979745,
+          "release_s": 47.38,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10007516727938859,
+          "release_s": 48.48,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-strain",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "070506ae724b45c60b70f7c4bbe748e7a35f9281ba3b870276b360af89c08c93",
+        "control-summary.json": "dca3f7ba0f982a71e2acfbe59d7f1e61eaf24a41f4e5b89514817bbc975cecd8",
+        "metrics.json": "e63f2d76a83fad50cfaa38bfd2caa82b2e576e82515fab489496a6fe32d15599",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "960fe4070289fcf5c35beb60ccc8476dec600acaf7ac4cb364a6ac2eb757857b"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688319809419552,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14383198094195526,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37535372822599894,
+          "release_s": 1.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.38720537449564046,
+          "release_s": 41.32,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.0709534286303799,
+          "release_s": 18.0,
+          "part": "visual_gripper_finger2"
+        },
+        "lintel": {
+          "lower_bound_m": 0.1033422653462801,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.17005665623549282,
+          "release_s": 34.96,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1608422618516595,
+          "release_s": 33.18,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.00785429399455713,
+          "release_s": 53.76,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.030636780952925755,
+          "release_s": 53.76,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11528757729539858,
+          "release_s": 51.04,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09828118325627208,
+          "release_s": 51.2,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-fixed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "f0875a082d981d5f5de8007061f4f699a7e27fa54cabdaa671d812fbd9a959b2",
+        "control-summary.json": "40e6dba1f8563fbb66942e2e0f537c0e190fa4879497a9dc7d9c6ff5d7572bd3",
+        "metrics.json": "a181d26f0555e8669fc764b1b8a937ec8b824facd662f068712d57c2eed26501",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "7e45c31069dc4120691cdf8ab8298b95904e5d4ef3bc5ad4c6e8eb87eb0ec347"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688073403142871,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1438073403142871,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37576110439744825,
+          "release_s": 1.12,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.37676361551529547,
+          "release_s": 31.38,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.07663243307773726,
+          "release_s": 33.24,
+          "part": "visual_gripper_finger1"
+        },
+        "lintel": {
+          "lower_bound_m": 0.09891535588622213,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16910172205989973,
+          "release_s": 37.28,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1732620874315585,
+          "release_s": 17.52,
+          "part": "visual_gripper_finger1"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.0008563851872615644,
+          "release_s": 43.08,
+          "part": "visual_gripper_finger0"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.025820476097109794,
+          "release_s": 52.76,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11751409565357449,
+          "release_s": 51.38,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.0945123856321739,
+          "release_s": 52.2,
+          "part": "alignment_probe_load"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "52478f305aed46c16d0d275128975501b490e534a1294ba74b7b7882eb333106",
+        "control-summary.json": "54239d5e7a62ea11b5d648249b828094f37e81f6f084f8d878f308cf107f6347",
+        "metrics.json": "62421e602e6f5daa52ffdc7aec77dd9167bd935426ab6a74e7846506877a7a53",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "752863ecb4a815e63807f5f682912c234fd0fa21d429f704ea9ce27ba18c1823"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688201104735065,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1438201104735065,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37588330155028016,
+          "release_s": 1.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3925749497266158,
+          "release_s": 41.34,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07059285845397534,
+          "release_s": 18.0,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10129409192889227,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16673055947363166,
+          "release_s": 37.34,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1536841321252386,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.005677882623054062,
+          "release_s": 53.18,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.028541466854116328,
+          "release_s": 53.18,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11707431131377799,
+          "release_s": 51.64,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09432181443292653,
+          "release_s": 52.76,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-oracle",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "91bf2668b98aa90b40eb27bfbe173846becfffab07cb687324e14c9a0035b322",
+        "control-summary.json": "e7fe3330ebeb70ac2981d04e98a57444604a5bd205fc705c8ddf46473450b9f2",
+        "metrics.json": "22c796b629bd3e9fc6f786bbe3e1cd00d03bff91f1d3e7ac904c7877c1681228",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "a02d7bb7d6a7a2d4161a7c9557431eed03c4e728f833ad2aa859d2c3a8d6c192"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688236414179154,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14382364141791548,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3760633697459954,
+          "release_s": 1.12,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3864632548931326,
+          "release_s": 31.56,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06744273325690298,
+          "release_s": 18.2,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10219019047256195,
+          "release_s": 36.28,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1657575899962103,
+          "release_s": 37.3,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1480519808337153,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.007599262583262545,
+          "release_s": 48.8,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.031098803930496008,
+          "release_s": 50.12,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12483914050811665,
+          "release_s": 56.02,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09860461827308353,
+          "release_s": 50.9,
+          "part": "visual_gripper_finger1"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-strain",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "f56201a6d5a6c71af6d630bcff450a4cab08ed393b29bac76279eb3d0e011eb4",
+        "control-summary.json": "0c9d923d69fb353c626d78c2017847447ad8022ee5e31893706d8c3c81059eea",
+        "metrics.json": "8960c0cd81262b64b2d45e143fa311bc08e3784ec99b4f812f5d083f4a50517f",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "cff620e90cb014fdfec97e50138ddae2c17be7100cb58cc8899f77b7c2c9b1c8"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687763122689625,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1437763122689626,
+          "release_s": 0.26,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37464823572120864,
+          "release_s": 1.22,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3901606263156083,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07047741053630885,
+          "release_s": 18.2,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10067033981619122,
+          "release_s": 36.22,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1685298965135341,
+          "release_s": 34.88,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1632072505021904,
+          "release_s": 33.2,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.010261426465211656,
+          "release_s": 44.8,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.0314112755987291,
+          "release_s": 52.02,
+          "part": "visual_gripper_finger0"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11540346155695694,
+          "release_s": 52.0,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10040969426083834,
+          "release_s": 50.32,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-fixed",
+      "states": 3654,
+      "intervals": 3653,
+      "inputs": {
+        "run.json": "e7b559d7b8ce69b745348e7b996795a3d7b21211981357bf3e67d3198dcd6f3e",
+        "control-summary.json": "0e756fe2658c9bd91c1aac55765cf715ea8d5faa3ce0e2dd41ce21d050e4b808",
+        "metrics.json": "a4b610ba84dba05891a16c8d9b4aeb7d7294c377d4cc35a32c169a3b0aaeab73",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "2a5cbb9d8e02fc4a25e285faa80538024cf6a135c65b433f47acecf2175e84e6"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9685339574114153,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.1435339574114154,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37489577920192396,
+          "release_s": 1.22,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.3882576163405551,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07174590276666593,
+          "release_s": 18.0,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.09977838663201899,
+          "release_s": 36.26,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1641733212919754,
+          "release_s": 34.36,
+          "part": "collision_rotor_sweep3"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.1738593224395871,
+          "release_s": 17.4,
+          "part": "visual_gripper_finger1"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.008736931332427547,
+          "release_s": 48.74,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03142718004310361,
+          "release_s": 48.72,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.12066616175472998,
+          "release_s": 47.76,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.10119179012066071,
+          "release_s": 50.28,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-proposed",
+      "states": 3655,
+      "intervals": 3654,
+      "inputs": {
+        "run.json": "26517fbb16bf29ea5f06e49ebca3822d94433d911732a10e3939d4a5c6e09c74",
+        "control-summary.json": "2c741be8947ab9bf0f76252d891b5f62f49d5a848e99a1ed54ac3953ca292efa",
+        "metrics.json": "8be05be140228d57932839f6381e5fe0e6e5ebc194402c4e178756d4986cdd59",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "13e26a7b376d773c286e643cdb6d45e4bb3a8998a5c4d9e7ecc56f5c13252bcb"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9687886295255049,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14378862952550497,
+          "release_s": 0.24,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.37432586223971626,
+          "release_s": 1.3,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.395716893869024,
+          "release_s": 41.28,
+          "part": "collision_rotor_sweep1"
+        },
+        "sill": {
+          "lower_bound_m": 0.07097016847972126,
+          "release_s": 18.16,
+          "part": "alignment_probe_load"
+        },
+        "lintel": {
+          "lower_bound_m": 0.10189254302068784,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.1718157396294169,
+          "release_s": 37.38,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15782934800324389,
+          "release_s": 33.14,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.010393114271645507,
+          "release_s": 49.04,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.033249745948439935,
+          "release_s": 49.04,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11924519212929803,
+          "release_s": 51.18,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09736468222016059,
+          "release_s": 50.82,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-oracle",
+      "states": 3653,
+      "intervals": 3652,
+      "inputs": {
+        "run.json": "d28124a9c2b6d6466bc555386de106b4ab851dd5becc2a7b6dc08527cd7480e3",
+        "control-summary.json": "adc1e47b3c93946a40f874b61b5a07115e05da372dc4fc13248cd0969234dacc",
+        "metrics.json": "141e0fc455c765b86411f1fca02162fd48b006ddaafa1ad4ce2dfe66885e21df",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "1f90284a1bcc5e8c5624ebda59beafa2321b5ecf048f8f3bfda709137b0cc5f6"
+      },
+      "covers": {
+        "foundation": {
+          "lower_bound_m": 0.9688997538588715,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "approach_deck": {
+          "lower_bound_m": 0.14389975385887155,
+          "release_s": 0.22,
+          "part": "alignment_probe_load"
+        },
+        "service_deck": {
+          "lower_bound_m": 0.3751137681530466,
+          "release_s": 1.22,
+          "part": "collision_rotor_sweep0"
+        },
+        "sidewall": {
+          "lower_bound_m": 0.391018527850275,
+          "release_s": 31.54,
+          "part": "collision_rotor_sweep0"
+        },
+        "sill": {
+          "lower_bound_m": 0.06747717373227091,
+          "release_s": 18.02,
+          "part": "visual_gripper_finger2"
+        },
+        "lintel": {
+          "lower_bound_m": 0.1019829990113057,
+          "release_s": 36.24,
+          "part": "collision_central_equipment"
+        },
+        "jambminus": {
+          "lower_bound_m": 0.16339557185218723,
+          "release_s": 37.36,
+          "part": "visual_super_prop"
+        },
+        "jambplus": {
+          "lower_bound_m": 0.15433079549420625,
+          "release_s": 33.16,
+          "part": "collision_rotor_sweep0"
+        },
+        "flange_lip": {
+          "lower_bound_m": 0.010483632940945037,
+          "release_s": 49.34,
+          "part": "visual_gripper_finger2"
+        },
+        "flange_tube": {
+          "lower_bound_m": 0.03163835919680856,
+          "release_s": 45.94,
+          "part": "alignment_probe_load"
+        },
+        "flange_back": {
+          "lower_bound_m": 0.11667009797724938,
+          "release_s": 47.64,
+          "part": "alignment_probe_load"
+        },
+        "support": {
+          "lower_bound_m": 0.09844726466341625,
+          "release_s": 50.92,
+          "part": "visual_gripper_finger2"
+        }
+      }
+    }
+  ],
+  "certified": true
+}
