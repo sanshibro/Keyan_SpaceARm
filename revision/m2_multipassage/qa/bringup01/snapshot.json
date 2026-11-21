@@ -1,0 +1,76 @@
+{
+  "progress": {
+    "tag": "coupled-26112207",
+    "sim_s": 86.0,
+    "phase": "log_tail",
+    "armed": true,
+    "offboard": true,
+    "actuator_packets": 21374,
+    "world_relative_enu_m": [
+      2.6309,
+      0.2784,
+      0.392
+    ],
+    "bend_deg": 82.12,
+    "rotor_N": [
+      3.756,
+      7.488,
+      3.78,
+      7.476
+    ],
+    "wall_s": 176.7
+  },
+  "release_us": 16216000,
+  "frames": [
+    {
+      "frame": 200,
+      "t": 20.0,
+      "arrival_t": 20.2,
+      "rgb": "pixels/r000200.jpg",
+      "depth": "pixels/d000200.png",
+      "rgb_sha256": "231298d8b1ddeae8c3b7c92fb95d67a48c0816bee1a3883190ba1e032936c56e",
+      "depth_sha256": "432d0b17fba23747b9aefad144c12c466632d93334d9a09b6324f40226e91cb9",
+      "mask_fraction": 0.0,
+      "rpy_frd_ned": [
+        -0.00309177883900702,
+        0.0003320381511002779,
+        1.5708880424499512
+      ],
+      "sensor_qpos_sha256": "cf265deb5244094a25d4220e4bfc94321427680b3603b5a7ca0c3f5486fdb19a"
+    },
+    {
+      "frame": 837,
+      "t": 45.480000000000004,
+      "arrival_t": 45.68000000000001,
+      "rgb": "pixels/r000837.jpg",
+      "depth": "pixels/d000837.png",
+      "rgb_sha256": "acb3827061c3ffae060eaea81848e8483def8bc60b1de7cf53dacd3ccaf9cea4",
+      "depth_sha256": "f18cc0f1eec16fa6ce0b46d6da0f038ab056c36658276382c5c2d804cd7a5e6b",
+      "mask_fraction": 0.0,
+      "rpy_frd_ned": [
+        0.0020866787526756525,
+        -0.0022266630548983812,
+        1.7452034950256348
+      ],
+      "sensor_qpos_sha256": "489120f7294c4f80865cf433f44c94996bf28bd333e7ac49de4b6499d319888e"
+    },
+    {
+      "frame": 1475,
+      "t": 71.0,
+      "arrival_t": 71.2,
+      "rgb": "pixels/r001475.jpg",
+      "depth": "pixels/d001475.png",
+      "rgb_sha256": "b4b494eaaba68b8d85595020bf2a6e42aff2700b9e6fac8be4042947c4635c91",
+      "depth_sha256": "f759b8e4762633235e0a5f7efe4ff0719777b26ce751321834d858bffaa2a7bb",
+      "mask_fraction": 0.0,
+      "rpy_frd_ned": [
+        0.001379962544888258,
+        -0.0018329874146729708,
+        1.7453551292419434
+      ],
+      "sensor_qpos_sha256": "74b3d39bb16ea213fc4da4e8d1ee6a5fb6b314bbc3a5d346c9520012b9ee2e39"
+    }
+  ],
+  "last_exposure_s": 71.0,
+  "hil_samples": 17751
+}

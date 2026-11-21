@@ -1,0 +1,228 @@
+{
+  "strategy": "coupled",
+  "seed": 26112207,
+  "identity": {
+    "source": {
+      "m2_flight.py": "c6b159d7c0e16fb13e279034aa1c9101040083da7f59f52beea0845ba5b7cfe8",
+      "m2_gate.py": "f31471bcd496e81172edfddabaa39b8c36df52d7933e107c9f852718d89ef242",
+      "m2_geometry.py": "4edaa4982ee918d9d9c06a16ac94c50cfde7b60acc6792c0d99d8a89862c081e",
+      "m2_handoff.py": "6de863cb2a77f1b010e1b5c91a406a81ec8fdcea97789ce05cba73231fc55a43",
+      "m2_inspection_ik.py": "7e21a8b8bd714e3506cab11526785af7ef5ef45f88f7d41d0b404bb711dd7318",
+      "m2_planner.py": "3397edff19af0f84c72936deb800cb786d7e3f95249b0fcf7623bbde480d50e1",
+      "m2_plant.py": "22eb347b2919a4c1baecd7a9b9e9b60181ed0f9262722e81f8dca3d0f4db7e91",
+      "m2_rolling.py": "1033fd3229c0872e4efbbaec7ba2b9a43f2a4db40c7d9014068765ac5c888ffc",
+      "m2_rolling_inspection.json": "9af46636cdd82858713b4918740d53b80a86e7fabc5e336b05e8dc1ace832c9e",
+      "m2_scene.py": "e94f0cdfaf32321626fb3fb611be5cac72e06271e58ca425c87fff4c8ce03779",
+      "m2_scene_lock.py": "c4437417d6ae77bedf20d1e0ac022b8c44101eda70ed222da6dbf117dcc268b1",
+      "m2_self.cc": "ee1004ff3bb754ec021f3278a1e606b034cfbb0d6a4ebdb4b89b8ea68edd5c6f",
+      "m2_self_registry.py": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
+      "m2_servo.py": "9335396d527d79835bd7d5037957090275378ee836c9153a4cc8d8de6ce37bd1"
+    },
+    "scene": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+    "registry": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
+    "perception": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235"
+  },
+  "development": true,
+  "native_logs_verified": true,
+  "synchronized_rgbd": true,
+  "rgbd_count": 1476,
+  "external_lower_m": -0.0008488580647063004,
+  "hazard_lower_m": 0.035691282686604424,
+  "fit_lower_m": 0.000990334352917811,
+  "certificates": {
+    "body": {
+      "lower_m": -0.0008488580647063004,
+      "upper_m": -0.0008060460137803357,
+      "t_s": 37.42,
+      "names": [
+        "collision_landing_198",
+        "COL_branch_cross"
+      ],
+      "crosscheck": [
+        -0.0008325535186189686,
+        -0.0007994399320109605
+      ]
+    },
+    "arm": {
+      "lower_m": 0.058439035947278735,
+      "upper_m": 0.05843903594727973,
+      "t_s": 28.64,
+      "names": [
+        "d435",
+        "COL_gate1_sill"
+      ],
+      "crosscheck": [
+        0.05843903594727995,
+        0.058493403664387524
+      ]
+    },
+    "hazard": {
+      "lower_m": 0.035691282686604424,
+      "upper_m": 0.03569727015675343,
+      "t_s": 37.6,
+      "names": [
+        "geom503",
+        "arm2"
+      ],
+      "crosscheck": [
+        0.03569646759463154,
+        0.03569727015675328
+      ]
+    },
+    "mount_fit": {
+      "lower_m": 0.000990334352917811,
+      "upper_m": 0.0010001692021878303,
+      "t_s": 24.84,
+      "names": [
+        "geom503",
+        "arm1"
+      ],
+      "crosscheck": [
+        0.0009797782291212191,
+        0.0010026897945088233
+      ]
+    },
+    "finger_fit": {
+      "lower_m": 0.01105735585315433,
+      "upper_m": 0.01105735585315433,
+      "t_s": 37.44,
+      "names": [
+        "collision_gripper_finger1",
+        "collision_gripper_finger2"
+      ],
+      "crosscheck": [
+        0.011057355853154408,
+        0.01105735585315441
+      ]
+    }
+  },
+  "contact_steps": 92,
+  "gripper_open_command": true,
+  "grip_stroke_mm": {
+    "min": [
+      -0.14207186179497566,
+      -0.01601604379177603,
+      -0.019213447190857574
+    ],
+    "max": [
+      0.023785726909063398,
+      0.20828259273524294,
+      0.01813786500450545
+    ],
+    "below_limit": [
+      0.14207186179497566,
+      0.01601604379177603,
+      0.019213447190857574
+    ],
+    "above_limit": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "pose_dwell_s": 0.0,
+  "task_depth_dwell_s": 0.0,
+  "eligible_depth_count": 0,
+  "verified_depth_count": 0,
+  "control_inspect_request_s": null,
+  "elapsed_motion_observation_s": 50.0,
+  "motion_to_inspect_s": null,
+  "position_tracking_peak_m": 0.13827814512207634,
+  "thrust_diff_rms_N": 6.106335209899059,
+  "peak_roll_pitch_reaction_Nm": 0.890926287199881,
+  "max_theta_deg": 82.90168636646884,
+  "end_body_m": [
+    2.630750732351702,
+    0.2791495056827726,
+    1.8928668168143208
+  ],
+  "terminal_error_m": null,
+  "terminal_axis_deg": null,
+  "terminal_optical_m": null,
+  "success": false,
+  "solve_wall_s": [
+    1.4131791649997467,
+    1.241084449000482,
+    1.714249604003271,
+    0.7791330340041895,
+    0.26458625099621713,
+    0.22894356900360435,
+    0.25604960700002266,
+    0.22392430100444471,
+    0.23684151400084374,
+    0.2606634240000858,
+    0.23496496499865316,
+    0.23216772900195792,
+    0.23430372599978,
+    0.2315494040012709,
+    0.24571337000088533,
+    0.250245414004894,
+    0.22498970800370444,
+    0.2515846419992158,
+    0.22619585400389042,
+    0.22940404299879447,
+    0.25013628500164486,
+    0.2749264200028847,
+    0.23210728299454786
+  ],
+  "request_wall_latency_s": [
+    1.413890967000043,
+    1.242335646005813,
+    1.715990150005382
+  ],
+  "submitted_windows": 23,
+  "activated_replans": 2,
+  "rolling_verified": true,
+  "causal_map_verified": true,
+  "async_coverage": true,
+  "switches": [
+    {
+      "window": 1,
+      "source": 0,
+      "release_s": 27.060000000000002,
+      "kind": "C2_quintic",
+      "bridge_s": 0.5,
+      "acceleration_jump_m_s2": 0.0,
+      "bend_rate_jump_rad_s": 0.0
+    },
+    {
+      "window": 2,
+      "source": 1,
+      "release_s": 31.38,
+      "kind": "C2_quintic",
+      "bridge_s": 0.5,
+      "acceleration_jump_m_s2": 0.0,
+      "bend_rate_jump_rad_s": 0.0
+    }
+  ],
+  "planning_diagnosis": [
+    "RuntimeError: No connected local whole-body seed; {'x': 2.788140488318831, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.762522214851543, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.772182198746585, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7679298516673945, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7670560042261547, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.767887369811482, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7682175145202885, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.768880708309684, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.768862198358179, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7685475725314306, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.768546315415286, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.76890067044708, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7689553549993593, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.768677207215213, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7686757550293217, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7690252766662846, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7690058780637123, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7689861326704794, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7693777676982783, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}",
+    "RuntimeError: No connected local whole-body seed; {'x': 2.7689430005820785, 'body_candidates': 0, 'whole_candidates': 0, 'survivors': 0}"
+  ],
+  "planner_pause_s": 34.019999999999996,
+  "abnormal_stall_s": 0.0,
+  "handoff_accel_jump_m_s2": 0.0,
+  "handoff_brate_jump_rad_s": 0.0,
+  "evaluation_sources": {
+    "m2_score.py": "c3d41b832aa1ef61c6356c59c17063d7ebc0976677116ec893a1ee7589e1e320",
+    "m2_rolling_audit.py": "eb1e7bbb1f35d5993c216ae6467a4013c6dbeed64a92cf6f878c5653354f1987"
+  }
+}
