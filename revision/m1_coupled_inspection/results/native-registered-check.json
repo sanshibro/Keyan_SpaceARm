@@ -1,0 +1,53 @@
+{
+  "case": {
+    "method": "proposed",
+    "strategy": "coupled",
+    "seed": 26112161,
+    "case": "coupled-26112161"
+  },
+  "checks": [
+    "task_success",
+    "collision_steps",
+    "task_dwell_s",
+    "optical_dwell_s",
+    "tracked_frames",
+    "matching_exposures",
+    "final_pos_m",
+    "final_axis_deg",
+    "final_optical_m",
+    "peak_mount_reaction_Nm",
+    "peak_front_rear_N",
+    "rms_front_rear_N",
+    "peak_tracking_m"
+  ],
+  "max_abs_difference": 7.077505707581144e-05,
+  "differences": {
+    "task_success": 0.0,
+    "collision_steps": 0.0,
+    "task_dwell_s": 0.0,
+    "optical_dwell_s": 0.0,
+    "tracked_frames": 0.0,
+    "matching_exposures": 0.0,
+    "final_pos_m": 0.0,
+    "final_axis_deg": 1.1294298829511717e-12,
+    "final_optical_m": 0.0,
+    "peak_mount_reaction_Nm": 0.0,
+    "peak_front_rear_N": 0.0,
+    "rms_front_rear_N": 0.0,
+    "peak_tracking_m": 0.0,
+    "self_clearance_50Hz_m": 7.900912204419235e-06,
+    "minimum_body_m": 0.0,
+    "minimum_arm_tool_m": 1.6698474671977825e-05,
+    "external_exact": 7.077505707581144e-05,
+    "self_exact": 2.0220884179317916e-09,
+    "mount_reaction": 7.771561172376096e-16,
+    "rotors": 0.0,
+    "tracking": 0.0,
+    "uv": 5.820766091346741e-10,
+    "actual_b": 4.440892098500626e-16
+  },
+  "signed_distance_tolerance_m": 0.00015,
+  "linux_broad_phase": "component boxes and cylindrical axes",
+  "workstation_broad_phase": "independent global AABBs",
+  "exact_evaluator": "same signed convex GJK/EPA and native MuJoCo 3.2.3 dynamics"
+}

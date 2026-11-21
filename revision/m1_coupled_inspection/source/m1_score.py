@@ -1,15 +1,15 @@
 """Replay the saved states with external, self, task and synchronized real-image witnesses."""
 import argparse,hashlib,json,math,time
 from pathlib import Path
-import cv2,mujoco,numpy as np
-from m1_plant import build,task_pose,FACE,AXIS
-from m1_geometry import GalleryGeometry
-from gate_feedback_model import truth_bend
+import mujoco,numpy as np
+from PIL import Image
+from m1_layout import FACE,AXIS
+from m1_replay import build,clean,writej
 from gate_distance_audit import DistanceAudit
-from gate_live_optics import clean
-from uav_continuum_whole_body_v2.types import Limits
-from round_aug_vis import bend
-from m1_plan import writej
+
+def bend(R):
+    tangent=R[:,2];radial=np.linalg.norm(tangent[:2])
+    return np.arctan2(radial,tangent[2])*tangent[:2]/max(1e-12,radial)
 
 def dwell(t,valid):
     best=0.;first=None;start=None;limit=None
@@ -23,7 +23,13 @@ def dwell(t,valid):
 
 def evaluate(folder,output):
     f=Path(folder);out=Path(output);out.mkdir(exist_ok=True,parents=True)
-    p=build();task=task_pose(p);g=GalleryGeometry(p,Limits(body_margin=.06,arm_margin=.06,tilt_max=0.))
+    p=build();g=None
+    if hasattr(p,'task'):task=p.task
+    else:
+        from m1_plant import task_pose
+        from m1_geometry import GalleryGeometry
+        from uav_continuum_whole_body_v2.types import Limits
+        task=task_pose(p);g=GalleryGeometry(p,Limits(body_margin=.06,arm_margin=.06,tilt_max=0.))
     run=json.loads((f/'run.json').read_text());prov=json.loads((f/'provenance.json').read_text());assert prov['mission']['scene']==p.scene_digest
     if run['error'] or not (f/'flight.ulg').is_file():raise ValueError('Incomplete registered flight')
     c=np.load(f/'control.npz');phys=np.load(f/'physics.npz')
@@ -45,10 +51,22 @@ def evaluate(folder,output):
         tip=p.d.site('tip').xmat.reshape(3,3)[:,2]
         actual=bend(p.d.body('mount').xmat.reshape(3,3).T@p.d.body('tool').xmat.reshape(3,3))
         com=p.d.subtree_com[p.base]-q[:3];moment=np.cross(com,[0,0,-p.mass*9.81])
-        pm=g.components(p.d,q[:3]);pm[:,6]=0
-        lower,ids=g.query(pm,np.r_[q[:3],0.,0.,0.])
+        if g is None:
+            # Independent workstation broad phase. The box lower bound is used only
+            # for candidate ordering; the signed convex verifier supplies the score.
+            audit.d.qpos[:]=q;mujoco.mj_kinematics(p.m,audit.d);lo,hi=audit.bounds()
+            lower=[]
+            for group in ('body','arm_tool'):
+                first,second=audit.external[group].T
+                gap=np.maximum(lo[first]-hi[second],lo[second]-hi[first])
+                signed=np.linalg.norm(np.maximum(0.,gap),axis=1)+np.minimum(0.,np.max(gap,axis=1))
+                lower.append(signed.min())
+            rear=min(lo[audit.robot,0])
+        else:
+            pm=g.components(p.d,q[:3]);pm[:,6]=0
+            lower,_=g.query(pm,np.r_[q[:3],0.,0.,0.])
+            rear=q[0]+np.min(pm[:,0]-pm[:,3])
         rigid=p.d.body('uav').xmat.reshape(3,3);yaw=np.arctan2(rigid[1,0],rigid[0,0])
-        rear=q[0]+np.min(pm[:,0]-pm[:,3])
         rows.append([*lower,float(np.rad2deg(np.arccos(np.clip(tip@AXIS,-1,1)))),z,*uv,*actual,*moment[:2],
                      float(np.rad2deg(np.arccos(np.clip(rigid[2,2],-1,1)))),yaw,rear,*com])
     A=np.asarray(rows)
@@ -100,7 +118,8 @@ def evaluate(folder,output):
         if abs(t[n]-o['t'])>1e-6:raise ValueError('Wrist/flight time mismatch')
         if hashlib.sha256(np.asarray(Q[n],np.float64).tobytes()).hexdigest()!=o['sensor_qpos_sha256']:raise ValueError('Camera pose identity mismatch')
         if not eligible[n]:continue
-        depth=cv2.imread(str(f/'optics'/o['depth']),cv2.IMREAD_UNCHANGED);u,v=np.rint(A[n,4:6]).astype(int)
+        with Image.open(f/'optics'/o['depth']) as im:depth=np.asarray(im)
+        u,v=np.rint(A[n,4:6]).astype(int)
         patch=depth[max(v-2,0):v+3,max(u-2,0):u+3]
         good=patch[patch>0];vis_count+=1
         if len(good) and abs(np.median(good)*.001-A[n,3])<.015:

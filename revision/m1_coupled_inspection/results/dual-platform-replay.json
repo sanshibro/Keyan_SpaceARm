@@ -1,0 +1,24 @@
+{
+  "development_seed": 26112107,
+  "checks": [
+    "task_success",
+    "collision_steps",
+    "task_dwell_s",
+    "optical_dwell_s",
+    "tracked_frames",
+    "matching_exposures",
+    "final_pos_m",
+    "final_axis_deg",
+    "final_optical_m",
+    "peak_mount_reaction_Nm",
+    "peak_front_rear_N",
+    "rms_front_rear_N",
+    "peak_tracking_m",
+    "self_clearance_50Hz_m"
+  ],
+  "max_abs_difference": 7.470732876424524e-05,
+  "signed_distance_tolerance_m": 0.00015,
+  "linux_broad_phase": "component boxes and cylindrical axes",
+  "workstation_broad_phase": "independent global AABBs",
+  "exact_evaluator": "same signed convex GJK/EPA and native MuJoCo 3.2.3 dynamics"
+}

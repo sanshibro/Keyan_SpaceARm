@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "id": "2026-11-21-m1-coupled",
+  "parent_round": "2026-11-21-m0-cutaway",
+  "stage": "M1 · 六维全身联合规划",
+  "when": "2026-11-21T12:43:33+08:00",
+  "revision": "ff5aaf16de677e0bb331a94a4ee576561a1444a3",
+  "title": "跨越低梁与侧管，斜向检视法兰",
+  "summary": "十五趟独立闭环。完整法在三个配对种子上均降低变形期机身跟踪峰值。按六厘米净空和持续检视验收，完整法通过 1/3，时序消融通过 2/3。",
+  "cover": "m1_hero.webp",
+  "files": [
+    {
+      "kind": "image",
+      "file": "m1_hero.webp",
+      "title": "穿越检修舱的四个姿态",
+      "caption": "两条流线分别给出机身与夹爪的物理轨迹。"
+    },
+    {
+      "kind": "image",
+      "file": "m1_sections.webp",
+      "title": "同机位近景与三个实测横截面",
+      "caption": "剖切真实连杆几何。每一列使用同一相机、比例和剖切平面。"
+    },
+    {
+      "kind": "curve",
+      "file": "m1_curves.webp",
+      "title": "六维运动与机臂反作用",
+      "caption": "同一配对种子的机身位置、偏航、双弯曲变量、臂根力矩、前后桨推力差及三维净空。"
+    },
+    {
+      "kind": "image",
+      "file": "wrist.webp",
+      "title": "腕部相机依次看到了什么",
+      "caption": "三张原始曝光依次显示低梁检修窗、非对称支管和螺栓法兰。每帧下方标出曝光及交付时刻。"
+    },
+    {
+      "kind": "poster",
+      "file": "poster.webp",
+      "title": "检视帧",
+      "caption": "录像中的实体法兰。"
+    },
+    {
+      "kind": "video",
+      "file": "replay.mp4",
+      "title": "五方法配对飞行",
+      "caption": "1920 × 1080；每章在同一个释放时钟上比较两趟飞行，同时显示注册外部视角、原生腕部曝光和交付时刻。",
+      "poster": "poster.webp"
+    },
+    {
+      "kind": "video",
+      "file": "continuous.mp4",
+      "title": "完整联合飞行的连续双视角",
+      "caption": "从首帧腕部曝光持续到最后一帧，2 倍速。同步显示弯曲幅值、方位角及终端检视误差。",
+      "poster": "poster.webp",
+      "separate": true
+    },
+    {
+      "kind": "document",
+      "file": "review.pdf",
+      "title": "打开两页审阅",
+      "caption": "第一页阅读三关几何和腕部视野，第二页比较耦合时序与成绩表。"
+    },
+    {
+      "kind": "data",
+      "file": "flights.csv",
+      "title": "十五趟逐趟数据",
+      "caption": "每行一个预登记方法与种子，含求解时间、任务验收和实际动态响应。"
+    },
+    {
+      "kind": "data",
+      "file": "registered.json",
+      "title": "配对试验登记",
+      "caption": "场景摘要、源提交、固定种子、感知锁定和统一评分阈值。"
+    },
+    {
+      "kind": "data",
+      "file": "evidence.json",
+      "title": "原始飞行与传感数据指纹",
+      "caption": "每趟 ULog、ROS bag、物理与控制日志，以及全部 RGB、深度曝光的指纹。"
+    },
+    {
+      "kind": "data",
+      "file": "wrist-stations.json",
+      "title": "三次关键曝光",
+      "caption": "含原始腕部图像的 SHA-256、曝光与交付时刻、目标在图像中的位置。"
+    },
+    {
+      "kind": "data",
+      "file": "video-verification.json",
+      "title": "视频与原生曝光核验",
+      "caption": "从高清成片抽取腕部区域，与原生相机记录核对。"
+    },
+    {
+      "kind": "data",
+      "file": "lateral-check.json",
+      "title": "横向位置的反事实复算",
+      "caption": "同一飞行姿态仅恢复机身参考线的横向位置，按 5 Hz 在侧管与回旋区重算三维净空。"
+    },
+    {
+      "kind": "data",
+      "file": "execution.json",
+      "title": "十五趟结束原因与守门记录",
+      "caption": "按外障、自碰、接触、末端和深度逐项验收，并列出各次守门的实际物理间隙。"
+    },
+    {
+      "kind": "data",
+      "file": "mechanism.json",
+      "title": "按管廊纵向位置配对的动力学读数",
+      "caption": "逐种子对齐飞行位置，比较局部跟踪、推力、弯曲方位与横向位移。"
+    },
+    {
+      "kind": "data",
+      "file": "flight-packs.json",
+      "title": "逐趟日志包索引",
+      "caption": "十五个独立压缩包的名称、字节数和 SHA-256 指纹。"
+    },
+    {
+      "kind": "data",
+      "file": "print.tar.gz",
+      "title": "高清主图与矢量文件",
+      "caption": "三组图，各含 PNG、PDF 和 SVG。",
+      "separate": true
+    }
+  ],
+  "guide": [
+    "沿两条轨迹区分机身侧移与柔性臂转向。",
+    "在同一剖面比较各方法实际达到的位置。",
+    "对照成对飞行的反力矩、推力和净空，再查看腕部检视画面。"
+  ],
+  "scope": "在已测绘的三维管廊上独立规划并闭环飞行，比较五种空间及时序策略。",
+  "source_note": "3 个配对种子，15 个原生 PX4 SITL / MuJoCo 飞行记录；冻结增广感知 881a799。"
+}

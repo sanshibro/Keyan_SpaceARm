@@ -1,0 +1,2167 @@
+{
+  "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+  "source_commit": "ff5aaf16de677e0bb331a94a4ee576561a1444a3",
+  "native_flight_count": 15,
+  "trials": [
+    {
+      "case": "straight-26112161",
+      "exposures": 1088,
+      "rgb_ordered_sha256": "415d3ca0b272e2418d113ee8fce15708ff08f64ad4cd39f2746e1050a320cc8b",
+      "depth_ordered_sha256": "fe9f9b7b92a3e608e8ab27f2c76d1a6b22ec8d7f0c36db349ab3f8e817aa8e1a",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "b3dc6de0879feb782280c643cd9df3746b7e440799968ae69ed28d89eade4025",
+          "bytes": 22926
+        },
+        "flight/run.json": {
+          "sha256": "7ff2c33cc8d363d05a8bbf28acc27e0ca9b07d3fcaf2a4726df4b72b7cd9c3f4",
+          "bytes": 452
+        },
+        "flight/provenance.json": {
+          "sha256": "d5c398bdb727f7023b8f29fcaa5f679dfbd0851f2120b285fd7ad20832dbac73",
+          "bytes": 3291
+        },
+        "flight/events.jsonl": {
+          "sha256": "40f21786f120a8bcd4f511e14236f5d69f6d4dce2fc78e4106cd60ae4a811abf",
+          "bytes": 1311
+        },
+        "flight/control-summary.json": {
+          "sha256": "813ddaab5516138ba2d53648d860cb048c73e51e9aa49ada461a03e7d5dd0a98",
+          "bytes": 953
+        },
+        "flight/physics.npz": {
+          "sha256": "02c8f0d3d2308f1ebdcb38ba64aca52c133267c028fe57f979b134c701bcbd44",
+          "bytes": 1430177
+        },
+        "flight/control.npz": {
+          "sha256": "a5ce6d57190ed4c863aef9735a7ae1aa471bca39fcd70d9a89620027b6773663",
+          "bytes": 225647
+        },
+        "flight/flight.ulg": {
+          "sha256": "87a664248b6bcf984966aceea015053cb3c21f01eab6e4f5c8e3121d313d12f6",
+          "bytes": 5297757
+        },
+        "flight/flight.bag": {
+          "sha256": "ccc0f8e0c1cbc6ac5de46d2b2e8e2e53b0f67f39fb0c0bd51949539b529a764b",
+          "bytes": 813663
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "9e82171409f009a2665c6e582e37deb0aaf280cc4e2c4715c20dbfb49f0ad202",
+          "bytes": 23534
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "3a86e105bde4c0e5ec6928700a26c25efb97bde1bbcc7548bd98f7dfcf7ead19",
+          "bytes": 516307
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "2d7b94ae12d7ea3f15bcd4f9207acaab8643bc3727f328230888d571f2cb4b41",
+          "bytes": 2172
+        },
+        "audit/series.npz": {
+          "sha256": "405046285a307e0fa782d9b54278a7528752cc402e51698b2160fc0b1f973007",
+          "bytes": 1112360
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "12e649daba7a6810f20a45cd3868aa288c484fe2d4f830da8d77f0976e7cbd5b",
+          "bytes": 1251
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "45db3ddb726f0b7f7bed2fefb04e37ba2cef7c71801b77ddc2a8f9e0118b8ad3",
+          "bytes": 342391
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "36a2a186a4ddecba6308fade9d86da6cd40eb9672a27c285e75cd2a3da881007",
+          "bytes": 160645
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "a1c297697e6fe707e8691f2e8d3544d4a5803ac99d6fe718df261b88ac132f49",
+          "bytes": 55430
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "d9e5698d82e3d355aa2a67b21cbea59881420525cf7b8cfebec3daff037c0a1b",
+          "bytes": 112119
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "7c18173daf5f40e68ec33554e71edfdc70d8591866c3258837f3476643aa21c0",
+          "bytes": 288132
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "68d5141ec6b91405d0dbf4d353d955f32edb6fc4f8ef3edaf197158dad64f993",
+          "bytes": 49988
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "7764cb50eb9aeaa3664cd6e018f96ceb9cd361c770237bfe86f26f2576a86017",
+          "bytes": 23258
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "34c95dcd9d67189f0be34d7d31e70aa374093dd369d4af367404ca78a0b68f8b",
+          "bytes": 816429
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "6e341e302cbb791b5585e85407295b344bf07d42960da295f44383ce60db5940",
+          "bytes": 341911
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "279fb2b7f5d7a15c99e022995fcc21ea3b617f671e106f73754958f813f75cb1",
+          "bytes": 12079
+        },
+        "plan/seed.npy": {
+          "sha256": "6078ee6a26e50348c094edef69e1941df6bf01974850441a8e8ec7900a77acdc",
+          "bytes": 416
+        },
+        "plan/body-reference.npy": {
+          "sha256": "9bad8d8ed0efae654a58c1ecc706e0607ad441ce98b4e29467cdb2c38d439874",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "c9421e2b6daed3ddb92724a24cb628720be260edc7288838c8ef169c529e4216",
+          "bytes": 242763
+        },
+        "flight/optics/native.log": {
+          "sha256": "22ada3f3ab680418fd903b565eda37812c1ec69fe80e0e5c35e5c4472d0cc220",
+          "bytes": 1827
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "023aeea802615e8a5a0f8bf69d3755d756eeb2691702233abd966ee405ef194f",
+          "bytes": 708
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "fixed-26112161",
+      "exposures": 1462,
+      "rgb_ordered_sha256": "a4a64b616400da864cb8f210398f36808a93370990712fc74ed3f8b42df5b634",
+      "depth_ordered_sha256": "6bdb2967d687d08f32b2bb015b8f7b796fef2ae1c97c3e5667e4c2d11e16a367",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "28cfb3f616ca1b074f1f556e927ff19b564e2d53921f18238149f152c968cb47",
+          "bytes": 34810
+        },
+        "flight/run.json": {
+          "sha256": "b413cbbd6109a215e48b017fd2d22f96de69b9fc67f523d7b5c3a7d808154edb",
+          "bytes": 447
+        },
+        "flight/provenance.json": {
+          "sha256": "c09f79debbc995c4f5bb7ad4a65039790f7a55ea589764904748e594c15a2efa",
+          "bytes": 3282
+        },
+        "flight/events.jsonl": {
+          "sha256": "2dbb16db2bd90146efb7f94c9c1cddd5da3da76aed4bebd0f558ca0c97275eb5",
+          "bytes": 1312
+        },
+        "flight/control-summary.json": {
+          "sha256": "cb3276f899e6ac83124a80267a1d23884adcfbb6643cbf3ba55b7b3388bcf34d",
+          "bytes": 947
+        },
+        "flight/physics.npz": {
+          "sha256": "18a5033639cc21296833ffb7e63dfeee861956321c32fdd8363fb5d4eaa628ac",
+          "bytes": 1799984
+        },
+        "flight/control.npz": {
+          "sha256": "8da2e4c23b1120e8809645022732cc74fb5f4545d23b8218a2f6075943e27424",
+          "bytes": 378327
+        },
+        "flight/flight.ulg": {
+          "sha256": "5018677488ee32101ceda297c6237f1f071246940cbd88305e5c26db2baffadc",
+          "bytes": 6407163
+        },
+        "flight/flight.bag": {
+          "sha256": "9692e5324f1f6a8b5a46e7109c19b1ce4bc63d5d476c075202a72df24c3945bb",
+          "bytes": 1085863
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "1184abf2bb99b8fedb54223e6d19d2523b2ad31c41259c3129d892b47d581038",
+          "bytes": 76863
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "46a008b6239e3899d265587c9c59b3290352675f65cc969964e840556dcba800",
+          "bytes": 695049
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "b54b7ca7d65da71121d8b72c0b02e19cf55804437bb673984cf667b661878b3e",
+          "bytes": 2204
+        },
+        "audit/series.npz": {
+          "sha256": "1166f9fa3350c16051cbdb838b0ada16b2c484b3851a4c89311770f0380c12f6",
+          "bytes": 1406475
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "12e649daba7a6810f20a45cd3868aa288c484fe2d4f830da8d77f0976e7cbd5b",
+          "bytes": 1251
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "6497a44d5fa570f51c9449946845541abd9993e49734c6bd049a89b6a5ece119",
+          "bytes": 445470
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "5e447956598f71ba3d9cb72d079972a3f19268e4ffa1a769feb91b40a2e3be0b",
+          "bytes": 200502
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "34dc9734b7ab8b00a8b376cd1eeb8cb49595810cf91a4da257b46a4315352d01",
+          "bytes": 123501
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "9f7335c8c69f0dde5d8acd08ee1dea75c25ede59bf1ede54c7c15887a4dbc7a0",
+          "bytes": 140593
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "12b0669a3c865fe296eaa565f90c0cba9b2a8274e0b7af666735c25bfde234f6",
+          "bytes": 371443
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "5e27909db2e6a6a15ed34ae5b99ee9a1637a6094f1d19a579f35e83ee10b5e3c",
+          "bytes": 103229
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "e94a689d38aaafa727490c465571498f77bddd691bf14a78dd5acbadb9c2c828",
+          "bytes": 76401
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "9a6402b627cba9b8e5ed659e1400a92c703fa3ebce018dae7f791bc0298f7c6b",
+          "bytes": 1110428
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "83b6631e6b9578e9337d822cc3c0721b776b6f1d661ae486e13021b096778cae",
+          "bytes": 475876
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "c5d0a46e68a44da382e46702ea62abec8a6b20a0d464cca2395b282e03a13db5",
+          "bytes": 21564
+        },
+        "plan/seed.npy": {
+          "sha256": "3879d091261f69ff68590d68be0b68b025877fc41a958ea00425704266436686",
+          "bytes": 656
+        },
+        "plan/body-reference.npy": {
+          "sha256": "e75c6875534378d43dda15e5f1060125bf5c839cb47bb48460f7593e0280e9c3",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "87a313a0232dd4321d25cafa16aa3c085c9eb0a6674d55c1ba7457708c3b7458",
+          "bytes": 313953
+        },
+        "flight/optics/native.log": {
+          "sha256": "574c987343dd88def23a03cd69e1e4a356e4b02627ccc6ce2148bb6519348dd3",
+          "bytes": 1949
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "c753b9dd71e233cc9d9431c646494bf54f8e722a29d84d602f601199b8f9b8b5",
+          "bytes": 710
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "sequential-26112161",
+      "exposures": 1810,
+      "rgb_ordered_sha256": "dc6b70f36c7b317af9db21bf0ef6ce688666a7953a47cf0c0e3b694bfc7bfd83",
+      "depth_ordered_sha256": "89d7124e771d5ef548c33751bc0b4d29db8992fb08c8403a655d4bd3791f4a0e",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "a1e05609e41c12b94e72979025555a3ea194327c5c9f95513557874e1a52ebf3",
+          "bytes": 39600
+        },
+        "flight/run.json": {
+          "sha256": "b410046a75db1082f9174835409169b3d2ebbbc74ca4a587d23dfee0718250d0",
+          "bytes": 454
+        },
+        "flight/provenance.json": {
+          "sha256": "97c5f8757f4db735fcdb56152b8569d76e131406592a960aea18a1de98685e0d",
+          "bytes": 3297
+        },
+        "flight/events.jsonl": {
+          "sha256": "7875d1ad9885e73c628cb1624cc58f4215aaae7c656befffc9edbf9532cc1ae9",
+          "bytes": 1312
+        },
+        "flight/control-summary.json": {
+          "sha256": "5e3251a687397aa8018712cecf5e62e530fa3883d6582e1d2b164ae32f090af3",
+          "bytes": 957
+        },
+        "flight/physics.npz": {
+          "sha256": "8bb0f74b88fae297d12d90aca9b58f5156e314a0a98c05634a30f2d483c3e1db",
+          "bytes": 2144894
+        },
+        "flight/control.npz": {
+          "sha256": "4c98acced603025cd0167edb77417c9941879d13ae6a2d7061ba7a12032b5356",
+          "bytes": 518831
+        },
+        "flight/flight.ulg": {
+          "sha256": "3bc3ae8ae24d965f496765d4f5b0fffcad90c846a3763b262e68ddcc7f3c6aa5",
+          "bytes": 7479005
+        },
+        "flight/flight.bag": {
+          "sha256": "6ace7311550dfd117963de32ea6fe6dc26bc425bb6e402284caa4d2e89386361",
+          "bytes": 1350157
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "fe1ae5eb4b4a3e1ffc1309421b8a7d37a6e5a5790de9d756f3ddf5176c434e41",
+          "bytes": 83200
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "610bc028a6e3414cf1754e9783ad7e0af4fc4db437bf9b666b14f61b8ffb875b",
+          "bytes": 859984
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "abe69e9c81b9469ded7c83576c54da65abeecedee16e538d99051817e70cfb0f",
+          "bytes": 2199
+        },
+        "audit/series.npz": {
+          "sha256": "36e17c8475b1c7e7f555bb00c05f4d551891c72b013f36d9ae7a152f00565c57",
+          "bytes": 1748085
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "12e649daba7a6810f20a45cd3868aa288c484fe2d4f830da8d77f0976e7cbd5b",
+          "bytes": 1251
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "cf077d45bdaf7066f0361fb1d4423d9c5dd53fd922eed9b7958443cee2508381",
+          "bytes": 533635
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "d5e3b471fc32733c7a111b7404d95cdef3ed220fb82f55a249c2a8f4acb3dd38",
+          "bytes": 240646
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "13644401d63b8f219cabf5caf6646b31e2328c025645e798b67b17f206473788",
+          "bytes": 138881
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "f60739fc358f2f4385c973441d5f37f58a9564cc47029c55c40143cf98369ee8",
+          "bytes": 169276
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "15ec823bc956bbc3e066981a1c8699f624538fbc65f3cb3470ae5acf5bc2b953",
+          "bytes": 466229
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "1bbfe22894fe3880f604c625c455c173c3834d1483833b404e75f2ce0dd31362",
+          "bytes": 116218
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "51011dc696bd2013a76d9ef6db1d8c79f1121936733375761e35f76ae7a7b2ae",
+          "bytes": 82722
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "8c7748597fd5a22de28d202ade60c0ace99f4a86a2d56ac722ebe3aeb7d3b79b",
+          "bytes": 1321865
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "a8f4ff8fd7a6ef12808e424d21ba0b30d358aa11bd73d9955167942c2a5a5e82",
+          "bytes": 569080
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "abbfa2ab41ebf5187259eedadf147e892ae58c70e25648c1d1c39ce27c89f8fc",
+          "bytes": 57838
+        },
+        "plan/seed.npy": {
+          "sha256": "082e6dcdbb50fe0f971a43a8d2d8e61f9bbbdd46269388da4d3e6c44921eb3d4",
+          "bytes": 800
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "a7f5f1497d30ade63f4eb80a8dbc0e2f5ec8276d6f4c1099d8f4e05c297c7766",
+          "bytes": 386665
+        },
+        "flight/optics/native.log": {
+          "sha256": "aa52d9a70a4247bedca909674aaf3f1efda4abdb0f83ee36ca9329caf2e6a80c",
+          "bytes": 1954
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "4163211243fe7b0385b5d38415694a06f6d44f1b588c1ec55eb69da2d5d267b5",
+          "bytes": 709
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "unregularized-26112161",
+      "exposures": 2725,
+      "rgb_ordered_sha256": "66d4a733d39cfbe5f6487f669933436b1e894b3a1e3416183be361942a2e4dfa",
+      "depth_ordered_sha256": "ed9b1c00d1da0edad99d654a63ea930098cc99ff1a2828cd30c6abd39a5d3175",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "7452617fa2fdb6ada723d6af7f733e5b9e56465e32013c13c7c91fbb609ee7a9",
+          "bytes": 107850
+        },
+        "flight/run.json": {
+          "sha256": "6d256578efc37e7139f6eae71b8b85caf38924cfce36ca2bc6fd05890029bc02",
+          "bytes": 455
+        },
+        "flight/provenance.json": {
+          "sha256": "fd1c53b0fe9f62e3adbd1a7664d4f3b423059dbde39db7f2ebdc474cf94722db",
+          "bytes": 3306
+        },
+        "flight/events.jsonl": {
+          "sha256": "365c993cdc97edb6f225a3c964cf844aa651bc63d116c6f1c1a92add6c2277b5",
+          "bytes": 1305
+        },
+        "flight/control-summary.json": {
+          "sha256": "fb0b6d280a278def072c721701e2d644ca06cb44261413c3496d7461724ca043",
+          "bytes": 965
+        },
+        "flight/physics.npz": {
+          "sha256": "4f8eaecde3b060d956362fa31802abf7c176d8af8116f5292dba1d1c6d1bb3f5",
+          "bytes": 3002008
+        },
+        "flight/control.npz": {
+          "sha256": "4accce1839757e137b909f4b9c05a2e5d88c6e9c8fd3d1768c83f657f353f1d5",
+          "bytes": 854239
+        },
+        "flight/flight.ulg": {
+          "sha256": "2f3b01e6106857012ebf905a0119517fa2992aa39394bcca9d78ff48e3efbff4",
+          "bytes": 10226289
+        },
+        "flight/flight.bag": {
+          "sha256": "560874975642087d051899e495b4bcfbe47922767504cd48986fbc9afb01af0e",
+          "bytes": 1973996
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "7f4dfab9f6704cd41d23e8a33fab97a4802151a1e78c956b775faf9f11fa82c2",
+          "bytes": 115667
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "f3c797e6c2e70ce40be10bc3416d4486c1ebfaef166f7f9e122912acbd20e48b",
+          "bytes": 1294999
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "85f0ee4d2909b5594f1e01cbd4993212b24f6364d7c3533aa2a369228187e6a6",
+          "bytes": 2251
+        },
+        "audit/series.npz": {
+          "sha256": "2ca378aa097e3444b9770764ec10b5fcb7fec9b4a5bca96ec68c0b260ee91357",
+          "bytes": 2553773
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "12e649daba7a6810f20a45cd3868aa288c484fe2d4f830da8d77f0976e7cbd5b",
+          "bytes": 1251
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "166890c58c9e5ce93026b1f8ca8ac956cf551478be1b5c49e71b7ff8781d1b62",
+          "bytes": 752567
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "8baf3953605fde22c90c9b22ac1cec537eff5955e11664d1b93e893bbd500e8a",
+          "bytes": 337321
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "2503e3d760155a0e6754f95b4cf8641d1b4553eecb35f3f8cb38b452178eed41",
+          "bytes": 191213
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "0c986ed5a7a65fd5bcb57bbb2ff2cfeda0630f8e3e4c638b82e6094d2ba19790",
+          "bytes": 237905
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "7b1ce043ac3e3ab4f81332e61ef78b68b6c58a7e1c5ccdbf2a92c45114243ad9",
+          "bytes": 668648
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "9a102c41e2334b36b95694a0d6a2047317d4ae8992cb1414dff68d89af77c093",
+          "bytes": 159643
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "0e191a3cdc3f9a35ae8db91d16bee19b2a30ac4c115d3231523c0079ce2535a4",
+          "bytes": 115359
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "0441254bfe63be457ddfbd80a205c8ad780adf54080fbb5f18c1134992b8f674",
+          "bytes": 1893073
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "51b5c247dd6ca054b55fbdc043fb94a2b491fb03cc3e12f46fc5f537a1b99f48",
+          "bytes": 825999
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "c062bfc3b256e9f8ab3e6844c744e5ec06fb87b3643f5a7088894682e5e553b4",
+          "bytes": 97036
+        },
+        "plan/seed.npy": {
+          "sha256": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b",
+          "bytes": 1664
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "c4dbd8e1624930802e8ca12666cb64316c4435798de1bcd52999d2c189263bf3",
+          "bytes": 564801
+        },
+        "flight/optics/native.log": {
+          "sha256": "0567c1fd6bb1fd0565276d7352d97ba8d92fd2b4675fccdff10bb20935f64b55",
+          "bytes": 1957
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "011534ab282297eff997b9ceb0d51e9b856d16db5ff153bfa5a1b7caf704c21d",
+          "bytes": 708
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "coupled-26112161",
+      "exposures": 2903,
+      "rgb_ordered_sha256": "5bf94e52dbec45c2f56bc4b6e7ee575ee46d2631da7cb388e49da101941ab406",
+      "depth_ordered_sha256": "e50980c3194596280acaa9378ef59768da92ad145601d7843ebe8af3c8dd2929",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "455cb8b61b82480354649f5977a0f1fad0e6b33c3b705ab215473321f87be37f",
+          "bytes": 107879
+        },
+        "flight/run.json": {
+          "sha256": "dff4444a7f2e64e727904d48eb592dabfa2eaf6beb166febc6cea30ee3ba7d0c",
+          "bytes": 449
+        },
+        "flight/provenance.json": {
+          "sha256": "ed53bbd0610b56d28af9a6865fb52370ef838c47d7247c89d38ed4b5aefbcfe4",
+          "bytes": 3288
+        },
+        "flight/events.jsonl": {
+          "sha256": "b30c3c88c8bf7d6954d073d736b0729b376924e7336c4b33aaa764cfa0d0deb3",
+          "bytes": 1304
+        },
+        "flight/control-summary.json": {
+          "sha256": "dc081c61ab9b884dc5a2912d2100144957e62caafa820a3a79a76297f075db48",
+          "bytes": 953
+        },
+        "flight/physics.npz": {
+          "sha256": "c5761f7204435e0c4f4fb486667df2b669ed9c8b122ba1142cebee17585315cd",
+          "bytes": 3165076
+        },
+        "flight/control.npz": {
+          "sha256": "6b0018e8dd3d1329c181a0306af3ba1cf5b97e8030c81f396b98897865458251",
+          "bytes": 909830
+        },
+        "flight/flight.ulg": {
+          "sha256": "fdd92f9cf36c4129fe2498d02749636b0712f9cfce9d2c5cb681915537adbf6a",
+          "bytes": 10753283
+        },
+        "flight/flight.bag": {
+          "sha256": "f63efb9d5fb591d191bf6ca66a1cfb4be8c74983dd8508b9816e72d1a5bbbe50",
+          "bytes": 2087569
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "cc18976cf46cf7b8846969c429585f43ac0650d80826ac1d610b4b25009c44be",
+          "bytes": 121860
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "63a7f797f9e614fd27961ffc61a06120bdd5f5c41bde3b266a4a51179d71860e",
+          "bytes": 1380233
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "7679f0d32c8f97911448346a8bcdb86af42b7bead072122b2a26d54ffad9be1b",
+          "bytes": 2214
+        },
+        "audit/series.npz": {
+          "sha256": "973c93964510ec90fca1503244669ed865a840ac5bc68850e8c92962bc21bb9d",
+          "bytes": 2706761
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "12e649daba7a6810f20a45cd3868aa288c484fe2d4f830da8d77f0976e7cbd5b",
+          "bytes": 1251
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "5b576b28c1c48ed129606043e1c9d3675a893d12a06ec042a31dd9c73ca211ef",
+          "bytes": 796887
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "0f835fb93a1134ffa0fa135f89b98b9457aae419ee6b89b2df09113cfdc0ba10",
+          "bytes": 356771
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "344e459d3ef1a71f9b67547bf1a3fb52e140fbdccdf727077a4b498386b34507",
+          "bytes": 201334
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "54d01537588d5e8f219693b1795122981c95f5dd711f77284beaea76ea478f3d",
+          "bytes": 251653
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "3010c247dc884fc6c17d8561fe0dcbb3e8fde431c9eefb0e3c316165aff0930d",
+          "bytes": 707566
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "ce42b57ce8a50c2235453a406af51d57a2b0e32a79f4437228d7cf843b59c227",
+          "bytes": 168245
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "23fd99ca94b5d375360dcb0c40aae7102c74a8f656cca9c5659ee3556af8371e",
+          "bytes": 121430
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "08cd813c4857ba35e647ced4a63f507023027d2c598c4b6674319c1b319911aa",
+          "bytes": 2000178
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "dca36e373ddd883877a6e36f3feb78ed3996914cf87af7fd6bc5be36823a6ab4",
+          "bytes": 873775
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "63fb4996c0d96164a3fa17a3c6973617847538e4bf7ab8ec5e5c90d06e87b7e2",
+          "bytes": 105209
+        },
+        "plan/seed.npy": {
+          "sha256": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b",
+          "bytes": 1664
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "471568ff520373908095f8e2886bd73aa015015a7614cf690da14f01e343c576",
+          "bytes": 601290
+        },
+        "flight/optics/native.log": {
+          "sha256": "41a827b1ee77db53b26dd214d2f347d873c43e61cdef4c7baef0c2846d2b46ab",
+          "bytes": 1951
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "83ca64ea294b42187268f7734b1c9f31dd081ce40ad3bfd3e630a082b12726ea",
+          "bytes": 708
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "fixed-26112167",
+      "exposures": 1462,
+      "rgb_ordered_sha256": "7eebcf35e95e879a5045a10a7fa121055f0dd98fdaead607a6ae5d476b1ae09e",
+      "depth_ordered_sha256": "6ba01a2f4bbee94f32dee5eeb37197211215f7d191f9b4f0a2875bd197233230",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "32ed2f9582c83b3c70eab6dd3140ca3ef08e66ae943e70902701b898aae27f78",
+          "bytes": 34810
+        },
+        "flight/run.json": {
+          "sha256": "95355e02ae0c636eb89cb2e49f0116e5a9d95575be502fb5102b26462427fe65",
+          "bytes": 448
+        },
+        "flight/provenance.json": {
+          "sha256": "a8491f00c03304cd37cbc1fdacb9bc411e64b7562e926a462da09c7e20be4346",
+          "bytes": 3282
+        },
+        "flight/events.jsonl": {
+          "sha256": "6700f3a3f9352b34c669e334ccfd4576b20fe6b5269e74d86eb4114af620fc25",
+          "bytes": 1313
+        },
+        "flight/control-summary.json": {
+          "sha256": "4c24d3d1a1d39a6d902c46a73b4f5ad3e8e71453788825e5a7652767ebafb2fc",
+          "bytes": 947
+        },
+        "flight/physics.npz": {
+          "sha256": "f888ba3cf015faf7a368bcc9fad86060d990ed88f7f1b5101b8ce22875cb147c",
+          "bytes": 1804343
+        },
+        "flight/control.npz": {
+          "sha256": "1aae02a9e5b61fb02cc9f643e29e5e85ab73aa2e590017a89a34e72e56a438ca",
+          "bytes": 378569
+        },
+        "flight/flight.ulg": {
+          "sha256": "88bf2cb228cc84001f9589ef21d7148564b9121d6ff8da5bd301a742d5dfb6b8",
+          "bytes": 6434395
+        },
+        "flight/flight.bag": {
+          "sha256": "2b66a02d687b9c704c6bd67982a0e33eadb78b8d2a2ceb4db6d9b1446db053b9",
+          "bytes": 1087489
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "baf4554cc5f28f2b9f8ec47a7b57ef742bfdca203976875f46bc7f689196d155",
+          "bytes": 76892
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "819fc01e8366c204e1ae2cc4b06f77ce7f4277621ae3ae41ff643f8164b030ca",
+          "bytes": 694727
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "995447eff7b7a992d655818ae96bf7a57e6ff48b5af9b4057d3225cb5ded49a0",
+          "bytes": 2188
+        },
+        "audit/series.npz": {
+          "sha256": "19a381d66012e30be6eab83ed18addae4c05b7ed5a5ceaa70259ea0186100360",
+          "bytes": 1410351
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "ea8e7b80bfd59456e5f0a19a45e543d0bfc3eaccadffd46296714d7900acb1df",
+          "bytes": 1247
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "c32feae011c42ab252dcaee6a4111a70ba4d18b4157c4a346f9a26cd917ff3ae",
+          "bytes": 444255
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "cfc731c17a1f436581a533f2ec59ffab2cbb538575778cc938d3344be43e2bda",
+          "bytes": 200812
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "e06e0f9e78079c5cdb8b782eb36f7099ac7677ed3e4ea54735cc052ed5b26b0e",
+          "bytes": 123472
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "c27a089acd0b244c54a1b6dcc0047fc536debea541a98b91dbcb1773e028a03b",
+          "bytes": 141174
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "d9f7034ec5c72607bb8eb161b9490eaaeaff58d510c5ea5cedfadbb346e11050",
+          "bytes": 374164
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "0ce645146443d26270d1207f37b2dc425ec9d0e6be60f12e9c3f9ca124c95569",
+          "bytes": 103061
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "bc1ec6da7689ac3d4a1a1083bbfed480ab714b3e4d0b30d3b686d477549f62f0",
+          "bytes": 76435
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "807e3e79028975e814e25e614ac0170d1ab13745916d7676b02899d14d00c81a",
+          "bytes": 1107659
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "b47228344972ddbcf421ef0fc1de43ef3241d7541c93904e6d9e4694d6e3e858",
+          "bytes": 477750
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "c5d0a46e68a44da382e46702ea62abec8a6b20a0d464cca2395b282e03a13db5",
+          "bytes": 21564
+        },
+        "plan/seed.npy": {
+          "sha256": "3879d091261f69ff68590d68be0b68b025877fc41a958ea00425704266436686",
+          "bytes": 656
+        },
+        "plan/body-reference.npy": {
+          "sha256": "e75c6875534378d43dda15e5f1060125bf5c839cb47bb48460f7593e0280e9c3",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "e301c7c8fa37c02353af345fc341493d760e46aa508d3a6216d1387497a1eaa9",
+          "bytes": 312976
+        },
+        "flight/optics/native.log": {
+          "sha256": "fe78a6fd3ee2bce9b2d8e98607663cdc27682ba9ccfa08902d629eea618a8a4a",
+          "bytes": 1949
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "b8375e972e8f1e7be51b349240d62b0327337974f3884abfbe61dedb5075d48a",
+          "bytes": 711
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "sequential-26112167",
+      "exposures": 1810,
+      "rgb_ordered_sha256": "eaf85bd9cb44cf2f869e580e59473ce205c8b356637175ea6704de2d67e1831d",
+      "depth_ordered_sha256": "08239c3ecded117a9cf88016339dcf0e74081e605d48e9df2db15ee70cc01206",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "9aa7c3ce1fdcfffb9fd3b12ff7a46ead07470310f1ec4085e09e49141b241b8a",
+          "bytes": 39600
+        },
+        "flight/run.json": {
+          "sha256": "54f5579336477c2bfac56882e4e24ca29ceaf27a809706173fbfb497eb741c5a",
+          "bytes": 455
+        },
+        "flight/provenance.json": {
+          "sha256": "261a1acfaeaad1afac6cb7c6ed113f3527257a114f3cf563e2a6070adf5b0269",
+          "bytes": 3297
+        },
+        "flight/events.jsonl": {
+          "sha256": "cde0df4fcd817e15d0e0140549a36d8743723b3f1c83d58e1e83696ce685e24c",
+          "bytes": 1313
+        },
+        "flight/control-summary.json": {
+          "sha256": "9be4403da9ae4ac08fb71df800ff7cd7353b8174274701bd2a95d5f311eb7920",
+          "bytes": 957
+        },
+        "flight/physics.npz": {
+          "sha256": "3d481cc2e5565312553549cabfbdc7c484e09ba40dcb87c0f68ffecaf9db6956",
+          "bytes": 2145727
+        },
+        "flight/control.npz": {
+          "sha256": "6c0c87ed60d526149b0b1315c8ad515daba09a8c824af36639e876fa9b76fe53",
+          "bytes": 517372
+        },
+        "flight/flight.ulg": {
+          "sha256": "3feeb034e9b3d073cc793925630998b8015931412f0432aeedb90de4d726e918",
+          "bytes": 7475790
+        },
+        "flight/flight.bag": {
+          "sha256": "03c2e1c5ab5b9ae823b077eb41a1cbb25fbb403107bf86ae5a16a898c2af0ac5",
+          "bytes": 1351210
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "49ab603a167022b7f57606033b6a4119ecac8286d5c1951d34d58c87b9cb1dc7",
+          "bytes": 75275
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "d4689bf7c5f985dd9e8a5adbc96f69722c5385da97ba07bb40c950389d2293b7",
+          "bytes": 859776
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "2217867cf5b1d7d75ac19f9736d62adbaacf18aeee1d2c95c77fa5375f4b5c3d",
+          "bytes": 2212
+        },
+        "audit/series.npz": {
+          "sha256": "76c627fbd3d8220b6021fd3b6a7d4fd8752913dd36723dab9af1bf11261b53b9",
+          "bytes": 1748237
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "ea8e7b80bfd59456e5f0a19a45e543d0bfc3eaccadffd46296714d7900acb1df",
+          "bytes": 1247
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "79f47ed58a8154a2f85b4dd658efe0ac97a8e7003c3653619a5610ba66ab4011",
+          "bytes": 531368
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "87ce8df4d9378477813d53147f4a30923786522898a740ea8d594de3f189fbed",
+          "bytes": 241552
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "84db7eed650786737df854618565ce25c500c646d11e5ef099edae9850d0fbac",
+          "bytes": 129876
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "493e6f90d3ec6f9ff52f462a1d77a95024845dcb0e0680a7e2b79fa83e01ffd4",
+          "bytes": 170049
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "74cb32fcafdcc5a5081aea2819de5d27d0bfe980e6d5e7af78874132de1220a6",
+          "bytes": 468294
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "49e0f94a45b898e9c101fa289da1438b55ebea766a0d82ac54dc5d17b895dff3",
+          "bytes": 109753
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "2c67740ac75027ee2186c4d2d3fdd1ba78b5eb4d5b0d686daf38855e5c7b2f49",
+          "bytes": 75012
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "f62bbb5fd4546edebd29d907ecc098913b8e70252d42985c0cf9382510a12d03",
+          "bytes": 1298061
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "369e2206961dd41f4d56c5adf0e5ecbe2887a9fad79f61256d0d2117c5649df5",
+          "bytes": 569707
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "abbfa2ab41ebf5187259eedadf147e892ae58c70e25648c1d1c39ce27c89f8fc",
+          "bytes": 57838
+        },
+        "plan/seed.npy": {
+          "sha256": "082e6dcdbb50fe0f971a43a8d2d8e61f9bbbdd46269388da4d3e6c44921eb3d4",
+          "bytes": 800
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "0f36a9e954e17283fae8ec98b9862bdc8b698039e6134f2b09af93d21a4b7b23",
+          "bytes": 385527
+        },
+        "flight/optics/native.log": {
+          "sha256": "e16456dc214b12af206da3875eb2136b459302fde9b64bd9fe1508a14c3ea38a",
+          "bytes": 1954
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "876565bcb6cae59ad6ffb6e82ae8935fa5670657f573e299aedcbcbac0fa24df",
+          "bytes": 709
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "unregularized-26112167",
+      "exposures": 2725,
+      "rgb_ordered_sha256": "4053d95f2a6b5746b968c76d19c0fcff81ddc1b2eb17307ed5ed523aa7eb24a4",
+      "depth_ordered_sha256": "b411644fc321423d673b8dd6569c23ad6305e9bea874d7dc8223f2d54248d60f",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "e29c82f108049267b783261bafc818e0c9aea520078080d588086189d0b15e39",
+          "bytes": 107850
+        },
+        "flight/run.json": {
+          "sha256": "b992e9f8e627cfdf4df4335ab67995159bca093217d902d89427ace8c673bd10",
+          "bytes": 454
+        },
+        "flight/provenance.json": {
+          "sha256": "bf23dfb46863f0876bb9652029a0429ef2bab3b8dac116399d8eed8cc497fe34",
+          "bytes": 3306
+        },
+        "flight/events.jsonl": {
+          "sha256": "9486468164d7a79d219a37f3af4ba120e2d1fd91f0f3d33d1f7b95292c976b8a",
+          "bytes": 1306
+        },
+        "flight/control-summary.json": {
+          "sha256": "3311876c6c8355cc23f962626351d3a03bb4040090efb9a80f0c093e24df1532",
+          "bytes": 965
+        },
+        "flight/physics.npz": {
+          "sha256": "84e36bcc263785fff80e81f575962189cdac246a7b8eb4e29f55a7c3ecac191e",
+          "bytes": 3004710
+        },
+        "flight/control.npz": {
+          "sha256": "54f9fed7183d37afec9bdf9774e6354137bbb156d39735428258ceb4dee3ad5d",
+          "bytes": 856424
+        },
+        "flight/flight.ulg": {
+          "sha256": "f37dce80525e03629e71212b8e0f8c08d034b9838e3a6204c63e8efd90bbc0a6",
+          "bytes": 10218404
+        },
+        "flight/flight.bag": {
+          "sha256": "a9f17c51b4d31debefeb524a52d3a510929c1709fa1e341119d461be79682538",
+          "bytes": 1974215
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "9d4e958b1a8c4d1f4d2a9f9486d9936af26ef115041aab13063c2fbdb202dda4",
+          "bytes": 123218
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "baf594b243b698fb6a6b8e9e628a06e231aad27bcce65291b6bb9ae6347ddd98",
+          "bytes": 1294834
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "7db3ea711fd6195bfe93bb453fe6275fd03ec24c3f6d71297680ca4e75808f23",
+          "bytes": 2238
+        },
+        "audit/series.npz": {
+          "sha256": "b820008758688e49ed9c4e0a478af7e2356aadd993edfee1fad6fe4fa2776a7d",
+          "bytes": 2555304
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "ea8e7b80bfd59456e5f0a19a45e543d0bfc3eaccadffd46296714d7900acb1df",
+          "bytes": 1247
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "7712f7d0ce33ff8c62a1fe41526c804f4f23950d0ced8e274978385d3b6c1692",
+          "bytes": 758317
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "10ced64f3f90101fb97049a594e689266f976a0b2797fdb50c673ba310375cad",
+          "bytes": 338489
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "ff3a401d80d0dbecac558f82cdcf9ed06f0219e0333e29992964a0b978d72fba",
+          "bytes": 199596
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "2ae11fcbafd5b83418d261bde55406f7a5ef2342b0bd431afd1ef95e4151d473",
+          "bytes": 239224
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "3b3c5113db8aabd5222904032e66c81b89803ae29f304b4e22dcbfa889a6f29c",
+          "bytes": 671013
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "954598ce410a36b2e699ea5792eff810c2a4b3df4f0010c3ac39380e29622ad7",
+          "bytes": 166411
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "a0e3482757c50b0991bf51c43d288cba1a92ccb8834ea2004d49ea20b7328530",
+          "bytes": 122864
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "ac4b77081a2d4a0c6de44a9f9012a42962f25838c5da2ba98afe3b45f5ba8b0d",
+          "bytes": 1901893
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "7911e3bf3c60604c80a2467634ab055c32ee5d03aafd19d681a60b86840a5c35",
+          "bytes": 826052
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "c062bfc3b256e9f8ab3e6844c744e5ec06fb87b3643f5a7088894682e5e553b4",
+          "bytes": 97036
+        },
+        "plan/seed.npy": {
+          "sha256": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b",
+          "bytes": 1664
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "012bd20cdb41138179121477bf8da7758f3624e1fba2162ebd4ada02f07245e9",
+          "bytes": 564609
+        },
+        "flight/optics/native.log": {
+          "sha256": "cd6cc8d9f039683be10fad73211afeacf8472d9e18910a9c05fa72c7faba01e5",
+          "bytes": 1957
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "328a1985f63e9b0949a0e5480bf9484f2bc64c68528a9b64fd51c4c8e952371b",
+          "bytes": 711
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "coupled-26112167",
+      "exposures": 2903,
+      "rgb_ordered_sha256": "f34a77999c4a3eb74c19ec609504bac89da8131d72e770c5db0468ad2aad79f7",
+      "depth_ordered_sha256": "128149f1303e9456cf781cb1d9504b21d044fbb0ba5153a974f0f3e57c57f0cb",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "69cb3f67ae9cf5374c0fc349de8779ef4beedff2c6748af4f5ba9047f0205f97",
+          "bytes": 107878
+        },
+        "flight/run.json": {
+          "sha256": "f2f1fdbd281fd431acc42dbb04c3593ff9cc5e680a6b93330d66a03f4c88b1a5",
+          "bytes": 450
+        },
+        "flight/provenance.json": {
+          "sha256": "3698708c07845b4d615c0ad6c4dce53f94fb797344f0801fcd6d4fe0b0f7af72",
+          "bytes": 3288
+        },
+        "flight/events.jsonl": {
+          "sha256": "04cbc3766ea5f24a69618f453ac933788dd427d35b1788437ed4a5d54fd52a0a",
+          "bytes": 1245
+        },
+        "flight/control-summary.json": {
+          "sha256": "d88dda1db845b41f596477e608732ed5645ded5a0e5612ab0ca3ee84daf4ca5c",
+          "bytes": 951
+        },
+        "flight/physics.npz": {
+          "sha256": "cddde1fb0302131b876a8375f26de1a7d6d60a73754b1a4b4281f2af28369422",
+          "bytes": 3028693
+        },
+        "flight/control.npz": {
+          "sha256": "60430edc404a5680a3280d6b2861cd2f58b0e22e29424e6a614e8250942beefd",
+          "bytes": 728285
+        },
+        "flight/flight.ulg": {
+          "sha256": "ce3782f00a66a1447b0c1108e8b222491d807d8cda29db0feff047b493acd591",
+          "bytes": 10763166
+        },
+        "flight/flight.bag": {
+          "sha256": "f6e287d6fe0229bef7cf576a484dbccb536872fd1a72e54029a34f1f3ec22b56",
+          "bytes": 1902146
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "ace5d3b749adecad55ac1389715a515614e0df8e0003844a77f1c6ab4da4cb02",
+          "bytes": 134521
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "fe2ab29441e0f74c4bb162a43e60c21396f89f7f900bbe7afd92bc843f85b8ac",
+          "bytes": 1380067
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "dac47bb8402a8a623b901f75fdea8408031374a47cb1e6596a50a62d086b80fb",
+          "bytes": 2165
+        },
+        "audit/series.npz": {
+          "sha256": "337d209a66776f52719ce142b4bd1afe620d2f154808b7634558d787d3058335",
+          "bytes": 2571514
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "ea8e7b80bfd59456e5f0a19a45e543d0bfc3eaccadffd46296714d7900acb1df",
+          "bytes": 1247
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "200ee7ec21b152260373899d0eec18b9e2959a0be810898a90bc998308867363",
+          "bytes": 799048
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "5e8094535a307b08633d3ba4da3668eb180425e0f917afd704a121cb2cce9b40",
+          "bytes": 356678
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "4387ca2d91657a6d3cbf4dbe70187fd485930b8dc41a05a0df36a385da25f023",
+          "bytes": 216828
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "10febe7b7388fdbe21437a265617b32126c8bebacc3a8e6b61cb23cbe45ed8b3",
+          "bytes": 251447
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "5d3a44f7b4a4afa7fe9aae2d8d6087a2cb9272096b29c88039c1e4b6804f6ede",
+          "bytes": 694251
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "f71a75323f84119a48fc279f1959e7135dfce17a7cc40b6a06c1ccecbeb40e78",
+          "bytes": 181094
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "3cae9be60253d1410ecb4bdd5efb354b020eaa797801cfa86db3dfd76e2a9a6c",
+          "bytes": 134026
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "8204597118f162132b1f8361e5d9d1c6aedc3ba525a6718f41bed3ceb42fbb2c",
+          "bytes": 1986701
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "9a11c36e32f6056f51f6545f99e8e8d1b04aa32e11d2975cac0712d6a97bd1e0",
+          "bytes": 838983
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "63fb4996c0d96164a3fa17a3c6973617847538e4bf7ab8ec5e5c90d06e87b7e2",
+          "bytes": 105209
+        },
+        "plan/seed.npy": {
+          "sha256": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b",
+          "bytes": 1664
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "b296ea5adb48d00e254a51da418f6f38f64c753805abbb032e98aca12600b76a",
+          "bytes": 596678
+        },
+        "flight/optics/native.log": {
+          "sha256": "2d9ca5ea0d04ea953e4eb97ce4cbe50dfa7e048f64d66c23cf9ec8b2f310bbb7",
+          "bytes": 1951
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "4d491cc94ac095dceeef7b1789e835788b81132aba3b06a602b40ae944443e70",
+          "bytes": 706
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "straight-26112167",
+      "exposures": 1088,
+      "rgb_ordered_sha256": "00ef1a0fca51ad612fd0fdddb8f791d6e84f2262da8b5cbc0f1be6c34813712d",
+      "depth_ordered_sha256": "5349994711c6b98a794cce5d2ef6787453042a8af3fb7ab4e62cdde21b6c4bfe",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "cddfa174d9881a1fe198fe25ed7652413d0ce49c1c2aeb2ce407112263285957",
+          "bytes": 22926
+        },
+        "flight/run.json": {
+          "sha256": "f1abfdb9602b076c887271bd9a54a52af8ad1389344308e0f085bb665e2ee237",
+          "bytes": 453
+        },
+        "flight/provenance.json": {
+          "sha256": "180281dadd3488295e87d18cb11381cac1677e3820301a925c67239eff8f2941",
+          "bytes": 3291
+        },
+        "flight/events.jsonl": {
+          "sha256": "81c2272b15bdf51a81b151f4646ca4acbcf86b0cee488abd50289e73f1b35d76",
+          "bytes": 1313
+        },
+        "flight/control-summary.json": {
+          "sha256": "131661b94cb1ad52899c1707b56162fefc02c1c8e9a8bf90c67de519a3475979",
+          "bytes": 953
+        },
+        "flight/physics.npz": {
+          "sha256": "df8142ebf512223e012952a55282bfe9229e02708f1f1abceb5d0c84129ae873",
+          "bytes": 1430545
+        },
+        "flight/control.npz": {
+          "sha256": "71350b7bd832fccadfb920d3bb2a97dc7750a12c0c883ab30a87ce3f1eae064c",
+          "bytes": 223755
+        },
+        "flight/flight.ulg": {
+          "sha256": "1335a4c6c7b8f0924d0aa9ab632ba1f2312137163697b629b634644f29c994cb",
+          "bytes": 5324987
+        },
+        "flight/flight.bag": {
+          "sha256": "d56d872dda69a9d82c5b1fa08e63874f7ba192e9a916d499cd4fc19d7f4841c1",
+          "bytes": 813760
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "d1d4b404226cbe1af985ec838d8df92ed0f4d7a551b80df4cc2884319cadc999",
+          "bytes": 23032
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "efda61c1d6f33ee01fe6e97ac3f9b3d828ae0ee4fd8cb295b3ceab7e4ffeef8b",
+          "bytes": 516107
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "0ed9c1e905f406ece3e2dc3c401ed5cfa4406bf4c5c6f30dbb5d391d75ce678b",
+          "bytes": 2161
+        },
+        "audit/series.npz": {
+          "sha256": "ef147744db3cdaa03f97e91b118c04fd89a83bea3f3637a06cd5eb92c1b9d303",
+          "bytes": 1112042
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "ea8e7b80bfd59456e5f0a19a45e543d0bfc3eaccadffd46296714d7900acb1df",
+          "bytes": 1247
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "78c9dddbb05d4bdf1033028ae5e0ea86e0823b3234a9f370034cdd2aadc45408",
+          "bytes": 341964
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "c58639087f4348b9a68b5bde7ebcc4c12cba7283b50a06e87bc0c55a7886e1a4",
+          "bytes": 160949
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "4bda4501eb365a4f569edc3c4556d165fc36d9c794383649ece0aecda740b318",
+          "bytes": 53936
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "13e88ee0997c36c9aabe38ccccc5afd39f5989b67bbe91220f196f31d5e9bb90",
+          "bytes": 113167
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "a92a9fb441fe98fd33db4771df1034db405fd4049470eba854ed68d5df42fa4c",
+          "bytes": 289492
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "44f8c7164842de45e949432096ec902065e2722d277718e6adb628ce33646e83",
+          "bytes": 48019
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "ef4933fbeb5ed6fcdafb203d3e746a85303747717675e2b6b0ed722104228efc",
+          "bytes": 22751
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "2db792c42e86cb654ddef29aca58505508e444612fbc0a80449a20f5b7a850f1",
+          "bytes": 822888
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "4cee55f053c0994b1224d9264d3bcdce9526cfe9d4c171682c085905df468771",
+          "bytes": 341850
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "279fb2b7f5d7a15c99e022995fcc21ea3b617f671e106f73754958f813f75cb1",
+          "bytes": 12079
+        },
+        "plan/seed.npy": {
+          "sha256": "6078ee6a26e50348c094edef69e1941df6bf01974850441a8e8ec7900a77acdc",
+          "bytes": 416
+        },
+        "plan/body-reference.npy": {
+          "sha256": "9bad8d8ed0efae654a58c1ecc706e0607ad441ce98b4e29467cdb2c38d439874",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "3e0966143f06b2a38dc22c3af65919ef2f097165de4a8f8fc058e2ddf3ee90fa",
+          "bytes": 240945
+        },
+        "flight/optics/native.log": {
+          "sha256": "4ee937862d45ae394e0448f56bd10def6e39d192c1d0a18007e8459fa23137f6",
+          "bytes": 1827
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "35e243e2f2ee833681bbc3fcda00a11ccb60931acd91104cebb88e10bb9e88ba",
+          "bytes": 708
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "sequential-26112173",
+      "exposures": 1810,
+      "rgb_ordered_sha256": "077c7aff8019935229d7eaee1119acdb2bc7d0caf7f838a94e04f87d14b47da5",
+      "depth_ordered_sha256": "38fcc7ae089a86ffca6c8b27b3f4d4f030a6ff9c0e586eb8ed6fd7858bc55b61",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "ed8b6934f0ccc144b96416957146ba58748130807fbcda02a0504c027db9d65d",
+          "bytes": 39600
+        },
+        "flight/run.json": {
+          "sha256": "8db004e63bcdc624a294dced6b6cb05db3e793089570fd2827b725efb69c09fd",
+          "bytes": 453
+        },
+        "flight/provenance.json": {
+          "sha256": "2b596808ee72e1a8aef6a09c596b5c3466f58c0c84825d22df1bf8f1b7da6092",
+          "bytes": 3297
+        },
+        "flight/events.jsonl": {
+          "sha256": "63cddf7f24d0180efa6460a37ec074e22fffdcbcb0cdd263c4cbf99bcfe512d7",
+          "bytes": 1313
+        },
+        "flight/control-summary.json": {
+          "sha256": "91f63a43b7c2a31b5a20d33c74cc44b58b5f9cf0cb3f09f6cf822a005a93e743",
+          "bytes": 957
+        },
+        "flight/physics.npz": {
+          "sha256": "0b4177251bd4610291665a8853038b67d683afb176a04b7d2ccee2bceed025c6",
+          "bytes": 2145737
+        },
+        "flight/control.npz": {
+          "sha256": "9aa41c08b0f7c49a4d18fcead5b3267d75cf9d699f8bc62f59b75e41be0dee81",
+          "bytes": 516788
+        },
+        "flight/flight.ulg": {
+          "sha256": "8fbc5a11a368697cdde1865105876a49b82d53d4470819d9ce05992e3c40d069",
+          "bytes": 7488443
+        },
+        "flight/flight.bag": {
+          "sha256": "970969041e9943c2718c7efb66317a301db3bd33b20ccea9bd005f27b62e058d",
+          "bytes": 1349929
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "28961880e2718db3263bc64b1e49db084b03840fc682b26b3581ca4409d76635",
+          "bytes": 79318
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "235bb71bb4febabed3039f1e927dc1973407bb735995af91a2ff58308c28a7dd",
+          "bytes": 859929
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "d12885ae1a4abb88263e8f8209175f927a45c6caa29a80f55524c0e3303bbf1e",
+          "bytes": 2194
+        },
+        "audit/series.npz": {
+          "sha256": "8df134735e528b547869db95eab3c9f60e7e2409c3a4bd2dfc1f298876dfc10f",
+          "bytes": 1748547
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "fb8d1bb0fb1c0ab3d15b0b17cf362e7c4bf4b24f367062b999079f6f2f39fdda",
+          "bytes": 1246
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "456eaa183e293eb3f1381f3c2c4eb1167fce7373c27a53a685ea25656847ab66",
+          "bytes": 534169
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "77e4c8103a0fb666d9579da4082bdc8450dc094cfcaea0966336d34436274951",
+          "bytes": 242097
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "5ca0c2bd7d0944862fac1ea6085480dcc283d0a9abb5b638a01d0e74158c6043",
+          "bytes": 134523
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "5d858d598656e6e7c50567c4b3ae5fa904bcd0437fc0904f8ff8854648e52da1",
+          "bytes": 170691
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "98bb5bd3ad27fd8f56c3442bbec1710b4ffaf7c0327e17db1dea3560f1aa6e14",
+          "bytes": 468049
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "b9b48259c2bc0fbdedbc0e6eccb9f509d61d2841be14ec65da5a74097d53cb8f",
+          "bytes": 113150
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "bb51f64eeb2439b4ce9b60902892f85af21511c0f0ff69ed3c092454433cf331",
+          "bytes": 79043
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "831c64abb08604b4dd3fe5c6404433f0040bfb783d123343c7cbf1f16b13f7db",
+          "bytes": 1305087
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "37cf0956a69d8087d8eea186bcbf146a83c6d36842100e3c4e52d347a4288432",
+          "bytes": 569468
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "abbfa2ab41ebf5187259eedadf147e892ae58c70e25648c1d1c39ce27c89f8fc",
+          "bytes": 57838
+        },
+        "plan/seed.npy": {
+          "sha256": "082e6dcdbb50fe0f971a43a8d2d8e61f9bbbdd46269388da4d3e6c44921eb3d4",
+          "bytes": 800
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "daf71730b30c51fff8329797b900df48136fe316de034f893b4bbeac7763ddba",
+          "bytes": 386782
+        },
+        "flight/optics/native.log": {
+          "sha256": "20620b8e6eaf02fb56f8e1728e552830d7c7c62c21ed9b4f5607cd26886e5377",
+          "bytes": 1829
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "74d5e7a64dad3e00ade1566e9a3937c63e61d50118d8f6cae51c7f5bb93cc961",
+          "bytes": 709
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "unregularized-26112173",
+      "exposures": 2725,
+      "rgb_ordered_sha256": "41f3a4758898661daa5c33b2d64147301a813209a8f7cc4fa6f61544f6f973ac",
+      "depth_ordered_sha256": "fb45649cd90589be922618eda6d426b59aba2312473cb8d41c69a7a6d5051568",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "21713e2ae4929c3027438d03ea66c30a58c311a62248d769a4835a17efe85a8a",
+          "bytes": 107850
+        },
+        "flight/run.json": {
+          "sha256": "3b8d1ae14f6ec9780c36465d9a7b3832caf9a0ff344412b6068209d2f1165824",
+          "bytes": 456
+        },
+        "flight/provenance.json": {
+          "sha256": "ced5dd75b8fef104f2e8151e70445ceb8741d411a40dbb143832d533cd6b1959",
+          "bytes": 3306
+        },
+        "flight/events.jsonl": {
+          "sha256": "cc75c83aeed4b8e20815ce6cbc32d97061070f8547ef063d3cddea95de2e7e4a",
+          "bytes": 1306
+        },
+        "flight/control-summary.json": {
+          "sha256": "8f072a9ade069fd17e15f312242ed346522351742011e971f963a4403f27c68f",
+          "bytes": 964
+        },
+        "flight/physics.npz": {
+          "sha256": "e1afa15f9e522ad39d17d59767ef6f92d56dab6dbed57fba08e677e259219b57",
+          "bytes": 3003716
+        },
+        "flight/control.npz": {
+          "sha256": "d1f28498266fda85504054bf00adfc2ce002f0d8a6e8807da27a25ffc77edbbe",
+          "bytes": 858279
+        },
+        "flight/flight.ulg": {
+          "sha256": "e0869126068800c535a7a0b9d59d53a5cc2e98d0569863cae56093a18c7d4866",
+          "bytes": 10218685
+        },
+        "flight/flight.bag": {
+          "sha256": "5e38aaaf7aa4fbb0c2c513620620467c7bcbb64809d13c7cb4e8d92edd9c7391",
+          "bytes": 1975131
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "89df8ee7fcb9ead63390865a45ee775e7780f0d84a5e98fda5bd82c5738b4bdf",
+          "bytes": 121950
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "8c96f26c5ffef01443eff557dcc18e567274653ba4c9411195f006f5a677787f",
+          "bytes": 1294897
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "aa1061cce87c8ee828071a4dbc287f979a71fc9bd7672a743e55e429d7d938f7",
+          "bytes": 2232
+        },
+        "audit/series.npz": {
+          "sha256": "9a3dacc018dd0fa3ce663cccf70d0ace8c3abd18bd503339596edc8c999fa6c4",
+          "bytes": 2555292
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "fb8d1bb0fb1c0ab3d15b0b17cf362e7c4bf4b24f367062b999079f6f2f39fdda",
+          "bytes": 1246
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "a9e966e6d6d5497305e423c8ebe7e724b267dc597eefeb1720da6152d8817e92",
+          "bytes": 757303
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "cbcf1ebc6a6d8891cf15c58d2bc41ea1d248e5e0a61e1a57bdb0e2ab1db54964",
+          "bytes": 338682
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "008d50cbcbe050b80d7d1290ec1e481a5b2eba613fe02e1a7299eb6f0bc3069d",
+          "bytes": 198288
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "7cda7a25a3107496b32ce5546c8ed0c014194919db79f0eb7b3b97fd65c97356",
+          "bytes": 239513
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "f90274d95ac31249b96418dde209682a3b24f2ac8f2fc04648fa741dc9760d43",
+          "bytes": 669933
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "9d404f09c077fe56a2ae033e173bb323aed1b860d4db8d170157befe70e2de51",
+          "bytes": 165464
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "d6e3ed25123053ea81d8313c4c240672b4663d1bd83fe764648b904bdf10c7a5",
+          "bytes": 121617
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "0e8a8467493d24e39675628fe719aac43a4b27079d4f04706b10fec81a0fb00a",
+          "bytes": 1902651
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "8f742bae4c294354fd8307b706ee3245358e678b962f3bcaaf856a41ad7639f2",
+          "bytes": 825670
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "c062bfc3b256e9f8ab3e6844c744e5ec06fb87b3643f5a7088894682e5e553b4",
+          "bytes": 97036
+        },
+        "plan/seed.npy": {
+          "sha256": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b",
+          "bytes": 1664
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "7a09e267459ac72dff08441433d94d6049f97766dfce20d295be4242155a4458",
+          "bytes": 564233
+        },
+        "flight/optics/native.log": {
+          "sha256": "ef0b1ab5fedaeee41f2194cd6c1c3a2d22c59a177a8da443bc18e5800dde112b",
+          "bytes": 1957
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "aa8c981b9682218a1371839d4b47686b9449e87cc3a1fdaf7d94b4bcaed62131",
+          "bytes": 708
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "coupled-26112173",
+      "exposures": 2903,
+      "rgb_ordered_sha256": "797eaf319caa82ae762a915cbe29bce73b59e6ff16199a16d4d281236572a52f",
+      "depth_ordered_sha256": "992e00475d1bbd03d33d3deaebfedc9a467490c7108b458e7ee0463c3e407e9c",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "b7cc20dd12882920bb9b9fc53b672ab07c8d517438c625b8fe2b673cbd3da8ca",
+          "bytes": 107880
+        },
+        "flight/run.json": {
+          "sha256": "34d0b8ac8f1076a97978586954c8fbedfcced925f56bfd18d40e94216551044c",
+          "bytes": 452
+        },
+        "flight/provenance.json": {
+          "sha256": "b12e40dee2ce957b6b00145a1471cec86bc927a2373f3df3f0176eb39860d1c3",
+          "bytes": 3288
+        },
+        "flight/events.jsonl": {
+          "sha256": "557437f7ce2a2a4db57449e41fcee5da632035f7545376bfedc5f3c78e68a753",
+          "bytes": 1307
+        },
+        "flight/control-summary.json": {
+          "sha256": "1eec3675434fc55cbcba1f3ceda555b022229bab57da4690e10cb985a036c6f4",
+          "bytes": 953
+        },
+        "flight/physics.npz": {
+          "sha256": "d699fac76dfe6f6df7678d4c2aeeb4042476bd3ccd63d1bbc958025966ee8596",
+          "bytes": 3170030
+        },
+        "flight/control.npz": {
+          "sha256": "c06f07eceb776fb3a3353cebcb42454bee2f541a1e17400f3b3c1c9f032d0971",
+          "bytes": 911918
+        },
+        "flight/flight.ulg": {
+          "sha256": "26f3fb02c36935d69cb8a662b26b2e2cb587bd817af4666722656d5b6f286f36",
+          "bytes": 10676832
+        },
+        "flight/flight.bag": {
+          "sha256": "0ab66a45038eda08c5875a1185924ce9e288a9e0f3cbebcc836f1dae9d7ca770",
+          "bytes": 2089227
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "bfbce15a197ba2d2740254da9fedcdbd63002ebf9baa6598050e345b08fd9320",
+          "bytes": 130852
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "c67d7e1737337900cde4fd526e8e90920a3e4e3c93d261ccbde988adec4ec767",
+          "bytes": 1380085
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "01d16c85462b8bb57ca30df57dd5d9fddff69922a627f917aa01faa993511447",
+          "bytes": 2124
+        },
+        "audit/series.npz": {
+          "sha256": "f0c05fb136dcbb7df50482f4fdc47ad1b50e4088d017ff61db14531a5a83b36c",
+          "bytes": 2713181
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "fb8d1bb0fb1c0ab3d15b0b17cf362e7c4bf4b24f367062b999079f6f2f39fdda",
+          "bytes": 1246
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "bfef8b25b89ed9e0d0d7b9a6d785a9d3f8ec103978cd8c7fabdef7277fc30ff4",
+          "bytes": 803412
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "1ce238722e7c54f439a3ac1b7c7aeba87425c9109e4e71543be4361d09b0ee26",
+          "bytes": 357433
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "c3a19760897777a2a94e408b076d2840d32459a807d45504974e63be3430fc8a",
+          "bytes": 210799
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "94c8e807b38216298069feb8458aa448643da68b96d7d4b631d6f6652ccb10c5",
+          "bytes": 253177
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "fdcea4aa674e15aff62baf8e6d5348a64d83724e9681a43342cf0585a703da54",
+          "bytes": 711683
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "b5d7dcccd59d956ec88aacd4673cc8d38a038b327e23db2378e848079856a6f2",
+          "bytes": 175267
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "f0d76b15ee97d5f3bc88635838356e7feba5bc2dd1e917b417be8d88510287a6",
+          "bytes": 130446
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "8a19590b2d75adc2997c6783393359598ab14714e2ccb9474fd950a8687996fa",
+          "bytes": 2015000
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "1474485b188df2b24916f5a8aee7fc671fd2e2e457ecf2ec08148209cd2a8cc3",
+          "bytes": 874292
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "63fb4996c0d96164a3fa17a3c6973617847538e4bf7ab8ec5e5c90d06e87b7e2",
+          "bytes": 105209
+        },
+        "plan/seed.npy": {
+          "sha256": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b",
+          "bytes": 1664
+        },
+        "plan/body-reference.npy": {
+          "sha256": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "56961f79d3e317761b5e844be2081ea4e864aed4e1b038b77c1b574219c41c7e",
+          "bytes": 601096
+        },
+        "flight/optics/native.log": {
+          "sha256": "4c9ba3ea6190d933c40b82a68fd2aa4030251ac91bf0b68d99947ad72775c8a5",
+          "bytes": 1951
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "e4ff9f438d519b69b3a8768852a41a51d079a2c0a83f6efe0c3ec2e4f953d600",
+          "bytes": 709
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "straight-26112173",
+      "exposures": 1088,
+      "rgb_ordered_sha256": "4c2ecb0c8a3629fb21227fbad42afb6fc283c67b5d41406e5e98e6241625043a",
+      "depth_ordered_sha256": "b865221994fac8a40948bea6bf2aac41809edfed529302a9441efc5082c6392c",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "e4031b80de7d9ca51ed48403b09e375dac7eae2907cca6974fdcfb13d75fee29",
+          "bytes": 22926
+        },
+        "flight/run.json": {
+          "sha256": "383eec442ed098bddee078d9d87765dbb481ad5b4bc72aafaaf40f0a061b01b5",
+          "bytes": 453
+        },
+        "flight/provenance.json": {
+          "sha256": "39cd8170f1dde63d34fc554dbd5c4caed45ed4fefcfc33c4c2d38dc31dd7998c",
+          "bytes": 3291
+        },
+        "flight/events.jsonl": {
+          "sha256": "cc5206f6b825c1c87e58a801c5baa1f6ef1143309fc41e2e7a17aedd2fe4be23",
+          "bytes": 1312
+        },
+        "flight/control-summary.json": {
+          "sha256": "673fe996bd1aa5c3a2a84a153e7da24d46dba07632de985198ef36c917900126",
+          "bytes": 953
+        },
+        "flight/physics.npz": {
+          "sha256": "29209551f2fea148e87bbccb16afc6da21c0575f9e5d7fa0d4e9a5b83a7cd8e2",
+          "bytes": 1430466
+        },
+        "flight/control.npz": {
+          "sha256": "ada50893114345ec0ed72bc8f98c02a1230b96c01951c872c1d7a637984436ba",
+          "bytes": 224840
+        },
+        "flight/flight.ulg": {
+          "sha256": "0a8e362ba3b920c86f15f4be144a357c1ab14ce918993228b1b71a9e8ec951f4",
+          "bytes": 5328914
+        },
+        "flight/flight.bag": {
+          "sha256": "99e09dcbd2512a8eda145dd8cee8675f5fe970c9754fe2e59e79d6179eb93e11",
+          "bytes": 814450
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "ad465ba26975fe9d3b9e86dc23df3faa45716a61fea02bf7977d034f0862fb33",
+          "bytes": 23793
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "ac505d23d403559e2a5d259de48da2668261906b938bd74a6a3f8cf0a03a6657",
+          "bytes": 516209
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "9a3bec5188c1e98148b886957d12a56539498d0680f10933dc82766aa2203e3a",
+          "bytes": 2167
+        },
+        "audit/series.npz": {
+          "sha256": "b3a1955fed4abe9cfe7500c72fef5dbf13f80de2d06837d608d0aca011ba4f78",
+          "bytes": 1112706
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "fb8d1bb0fb1c0ab3d15b0b17cf362e7c4bf4b24f367062b999079f6f2f39fdda",
+          "bytes": 1246
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "954e0d007a855a23c91a8072dd696906877063b2f9c51375b7c7acba5a1c1e8c",
+          "bytes": 342985
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "e60b809e7f6b04931573789a189c5006df677d6a639e8bd2958a32357ad8ab0d",
+          "bytes": 160791
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "48922f2c28e297081be4d9e415d42f8c287f3bffa77ba3eb8a1aa6a2e08b7960",
+          "bytes": 54719
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "fc552b7befcc70b97375ff9b94081f98fe32f33882a8bc371779f91b27c98116",
+          "bytes": 112803
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "da883af29021226239f9fc2753a8b0268e6c001aca0fca86beddda776c07dfed",
+          "bytes": 289302
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "acd6ee29bb0a8f0323fd6327b6475038a1523063601f4cdb7a80f8b24ca689b1",
+          "bytes": 48746
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "23ffdd3e32eaf3cb5d24e36d10e9a8c08885a749ae3ab36239f46b989119ca16",
+          "bytes": 23499
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "e4a0094c0782f274fbfaa792c47af47190baaa83d5e1e6075770cae34562735a",
+          "bytes": 825003
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "fb591b92e2c803b375bf2dfe72f7b217fa6dd066618fdea33117ec1ebbf5a9cb",
+          "bytes": 341860
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "279fb2b7f5d7a15c99e022995fcc21ea3b617f671e106f73754958f813f75cb1",
+          "bytes": 12079
+        },
+        "plan/seed.npy": {
+          "sha256": "6078ee6a26e50348c094edef69e1941df6bf01974850441a8e8ec7900a77acdc",
+          "bytes": 416
+        },
+        "plan/body-reference.npy": {
+          "sha256": "9bad8d8ed0efae654a58c1ecc706e0607ad441ce98b4e29467cdb2c38d439874",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "dbd0e8958b340da2cd566bc07aebfeed45452c7b8d33c2d618bd0b8d956ec4f6",
+          "bytes": 240622
+        },
+        "flight/optics/native.log": {
+          "sha256": "0a7bca7a15406c12ee698ac98b3840b41d0d72dfe0ec0257e7094ed0725568a8",
+          "bytes": 1827
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "aa5e9425cc8374d0d8cfe2a098e0c1ede8728b5e1e0b1c82b1958e3d26887cfe",
+          "bytes": 710
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    },
+    {
+      "case": "fixed-26112173",
+      "exposures": 1462,
+      "rgb_ordered_sha256": "e091ef6d394e6ef8f72e5c61ae52df67feaa07db0249e62e0d14195a036566c9",
+      "depth_ordered_sha256": "13c2d2e45f241ea27eef9b8641d95652afc7ca8bbaed6bea104df4fd30753344",
+      "components": {
+        "plan/decision.json": {
+          "sha256": "22653ce9318f6e3a7cff4159c1e8886e898f006ea2ebc6faecf9427ba9112631",
+          "bytes": 34810
+        },
+        "flight/run.json": {
+          "sha256": "435ff611435037bf817a676fc0089d7bbc9e83efb76626fbc01055564d2c48b8",
+          "bytes": 448
+        },
+        "flight/provenance.json": {
+          "sha256": "a1a8c37fa633ffffa9245ac5cbe703752299a654715c9fd2418b04c2942c1ae7",
+          "bytes": 3282
+        },
+        "flight/events.jsonl": {
+          "sha256": "5e540cb62060b7ec644b2be5793d7318389b80e6f97849d19a0d62227a18e0fd",
+          "bytes": 1312
+        },
+        "flight/control-summary.json": {
+          "sha256": "9e18a29fc41841488ef7db6e9c5c7ff44daad5453fac209fb32cea97254d63e0",
+          "bytes": 947
+        },
+        "flight/physics.npz": {
+          "sha256": "ccff5172a3b79a0a97085049e9f7c6cad0521736f2353fb97606290f394d2b34",
+          "bytes": 1800651
+        },
+        "flight/control.npz": {
+          "sha256": "ee25e25b122f0f0c7fcb3906a920ccf663359bd872b9c377b0ddb4f58269bd8b",
+          "bytes": 377703
+        },
+        "flight/flight.ulg": {
+          "sha256": "b29e088835f08fb94bbc623a584aa57272b490ea71b4fa3c3e643b69d9ba2290",
+          "bytes": 6367248
+        },
+        "flight/flight.bag": {
+          "sha256": "7f7654d4cf31dac4509a43537f1ab1ecebc2ccfc464d16ba32720ff7f58a21bf",
+          "bytes": 1085695
+        },
+        "flight/optics/observations.npz": {
+          "sha256": "8e0ce2cda8f9628b7f2b90086091ead19c4e70bbb9edd1731b2994be2b25d941",
+          "bytes": 76462
+        },
+        "flight/optics/index.jsonl": {
+          "sha256": "522c43a92c4382ddbd7d456f01817f99d06b489f02ea5228ac355e5129f4026a",
+          "bytes": 695109
+        },
+        "flight/optics/shared-scene.json": {
+          "sha256": "fd6c52a3f2033786d24dcb0a5bc2a326f4cf5a7210a5aa5460b191341435e7d8",
+          "bytes": 233
+        },
+        "audit/metrics.json": {
+          "sha256": "8d761958821c485608ae06df5fc90b4da4de486e43262f33007f7ca23c96cf12",
+          "bytes": 2185
+        },
+        "audit/series.npz": {
+          "sha256": "d9af47d7732a85dacf1c250bb95d70fd5217d6fd509b1795343e6fcde47480c0",
+          "bytes": 1406660
+        },
+        "flight/sensors/strain_generation.json": {
+          "sha256": "fb8d1bb0fb1c0ab3d15b0b17cf362e7c4bf4b24f367062b999079f6f2f39fdda",
+          "bytes": 1246
+        },
+        "flight/sensors/estimate_fixed.npz": {
+          "sha256": "19063fb94d89c23525b8c31410f1fe58e2284848d1a906c627b3831e195051e4",
+          "bytes": 447220
+        },
+        "flight/sensors/estimate_strain.npz": {
+          "sha256": "9c74f4a8a843f9b24b2a07fdf6fce24d376a62bc55ab7e334788ff62f6e97012",
+          "bytes": 201114
+        },
+        "flight/sensors/estimate_vision.npz": {
+          "sha256": "f3f2811e4fa39a71859bd833664ddd2c465f4da9ebbd86430c21049d3c2ec42f",
+          "bytes": 122881
+        },
+        "flight/sensors/filter_strain_events.npz": {
+          "sha256": "9e2201bd2e6f33da119bebaeaaee12c3102fd5d3ed3da623c5871bd1390ef275",
+          "bytes": 141380
+        },
+        "flight/sensors/strain_observations.npz": {
+          "sha256": "ffa6517995fccba1e8993c878e87fedf544b1e905f767acdaf5ba1b6350038c2",
+          "bytes": 372314
+        },
+        "flight/sensors/estimate_vision_hold.npz": {
+          "sha256": "222ee82d750c85d0c9db4d849ca0964b0794ca7adfa0899aa4f437509b9e1070",
+          "bytes": 102800
+        },
+        "flight/sensors/filter_visual_events.npz": {
+          "sha256": "9821c0b1ff8904f4312a80352f8f3cdd024b50ef781fb7855c65689c9d821e66",
+          "bytes": 75983
+        },
+        "flight/sensors/estimate_proposed.npz": {
+          "sha256": "1bc0751c3bb7e51349b934c192736af19eabba7d5cd26717467283c07392f11c",
+          "bytes": 1107788
+        },
+        "flight/sensors/strain_geometry.npz": {
+          "sha256": "9b390da5deea29e785d7a2f14625007eed6e4aaf950f20e095f7409dcf437867",
+          "bytes": 477248
+        },
+        "flight/sensors/estimator_provenance.json": {
+          "sha256": "50ea5ea5c69ccabe0f80b862df6e663839791f8a0147c89a68af710da0f0ce51",
+          "bytes": 958
+        },
+        "plan/certified.npz": {
+          "sha256": "c5d0a46e68a44da382e46702ea62abec8a6b20a0d464cca2395b282e03a13db5",
+          "bytes": 21564
+        },
+        "plan/seed.npy": {
+          "sha256": "3879d091261f69ff68590d68be0b68b025877fc41a958ea00425704266436686",
+          "bytes": 656
+        },
+        "plan/body-reference.npy": {
+          "sha256": "e75c6875534378d43dda15e5f1060125bf5c839cb47bb48460f7593e0280e9c3",
+          "bytes": 4304
+        },
+        "flight/optics/native.csv": {
+          "sha256": "0a53d725385ccb5d37a4c1579adb524fd5d7600e150038b14bf31dcd2460a327",
+          "bytes": 313748
+        },
+        "flight/optics/native.log": {
+          "sha256": "fcc5eb30638e4b98f23afba33bae802d0dad4aa10604b35bd4af8416ea5cc225",
+          "bytes": 1949
+        },
+        "flight/optics/settings.yaml": {
+          "sha256": "cdb44b7c1e6177850b6422b2f15adb7b3267e37eea7e04517dd16e6ccbc02563",
+          "bytes": 2086
+        },
+        "flight/optics/fixed-calibration.json": {
+          "sha256": "95dd7c1aa6e343e501816341e3ad5f6059feed3e50615f194a93e1aad3cded73",
+          "bytes": 564
+        },
+        "flight/optics/complete.json": {
+          "sha256": "ab3b983bc8023823f878c9aea93d5d63a31463a8a750eac28df654e5978b3217",
+          "bytes": 709
+        },
+        "flight/optics/manifest.json": {
+          "sha256": "8cf1773be88461b98e2477ab5a1876b1fc02bf5cff72fc9a76a8afdc52731872",
+          "bytes": 1051
+        }
+      }
+    }
+  ]
+}

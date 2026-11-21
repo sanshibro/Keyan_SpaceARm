@@ -1,0 +1,412 @@
+[
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "straight",
+      "seed": 26112161,
+      "case": "straight-26112161"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 0.590899281617027,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "fixed",
+      "seed": 26112161,
+      "case": "fixed-26112161"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 1.1480867930808198,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "sequential",
+      "seed": 26112161,
+      "case": "sequential-26112161"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 1.384603060623633,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "unregularized",
+      "seed": 26112161,
+      "case": "unregularized-26112161"
+    },
+    "route": "full",
+    "success": true,
+    "end": "inspect",
+    "actual_end_x_m": 3.257797860311966,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": true,
+      "wrist_depth_dwell_1s": true
+    },
+    "hold": {
+      "clearance": {
+        "cumulative_s": 3.980000000000004,
+        "longest_s": 1.3399999999999963,
+        "interval_s": [
+          35.74,
+          37.06
+        ],
+        "body_x_m": 0.9071217846598859,
+        "minimum_actual_self_during_holds_mm": 1.1739916930817784,
+        "minimum_actual_self_during_longest_mm": 1.3976375207919363
+      }
+    }
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "coupled",
+      "seed": 26112161,
+      "case": "coupled-26112161"
+    },
+    "route": "full",
+    "success": true,
+    "end": "inspect",
+    "actual_end_x_m": 3.2593108277487848,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": true,
+      "wrist_depth_dwell_1s": true
+    },
+    "hold": {
+      "clearance": {
+        "cumulative_s": 2.0200000000000102,
+        "longest_s": 0.980000000000004,
+        "interval_s": [
+          43.36,
+          44.32
+        ],
+        "body_x_m": 1.085457492347019,
+        "minimum_actual_self_during_holds_mm": 1.247413778733609,
+        "minimum_actual_self_during_longest_mm": 1.247413778733609
+      }
+    }
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "fixed",
+      "seed": 26112167,
+      "case": "fixed-26112167"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 1.1488735334226938,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "sequential",
+      "seed": 26112167,
+      "case": "sequential-26112167"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 1.3937668732396538,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "unregularized",
+      "seed": 26112167,
+      "case": "unregularized-26112167"
+    },
+    "route": "full",
+    "success": true,
+    "end": "inspect",
+    "actual_end_x_m": 3.257575899515101,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": true,
+      "wrist_depth_dwell_1s": true
+    },
+    "hold": {
+      "clearance": {
+        "cumulative_s": 3.920000000000009,
+        "longest_s": 0.8400000000000034,
+        "interval_s": [
+          35.12,
+          35.94
+        ],
+        "body_x_m": 0.8751129143941826,
+        "minimum_actual_self_during_holds_mm": 1.1783888314566382,
+        "minimum_actual_self_during_longest_mm": 1.4077152339472543
+      }
+    }
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "coupled",
+      "seed": 26112167,
+      "case": "coupled-26112167"
+    },
+    "route": "full",
+    "success": false,
+    "end": "execute",
+    "actual_end_x_m": 1.849255472082839,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {
+      "self": {
+        "cumulative_s": 51.89999999999996,
+        "longest_s": 39.3,
+        "interval_s": [
+          77.92,
+          117.2
+        ],
+        "body_x_m": 1.8476205887443515,
+        "minimum_actual_self_during_holds_mm": 1.4278972809410468,
+        "minimum_actual_self_during_longest_mm": 1.4278972809410468
+      },
+      "clearance": {
+        "cumulative_s": 3.0800000000000125,
+        "longest_s": 0.8999999999999986,
+        "interval_s": [
+          38.04,
+          38.92
+        ],
+        "body_x_m": 0.894260809814226,
+        "minimum_actual_self_during_holds_mm": 1.1606904080321492,
+        "minimum_actual_self_during_longest_mm": 1.4244233921401404
+      }
+    }
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "straight",
+      "seed": 26112167,
+      "case": "straight-26112167"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 0.596542810093879,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "sequential",
+      "seed": 26112173,
+      "case": "sequential-26112173"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 1.3951866073775918,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {
+      "clearance": {
+        "cumulative_s": 0.10000000000000142,
+        "longest_s": 0.10000000000000142,
+        "interval_s": [
+          43.2,
+          43.28
+        ],
+        "body_x_m": 0.9058195993067262,
+        "minimum_actual_self_during_holds_mm": 1.3834861766759223,
+        "minimum_actual_self_during_longest_mm": 1.3834861766759223
+      }
+    }
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "unregularized",
+      "seed": 26112173,
+      "case": "unregularized-26112173"
+    },
+    "route": "full",
+    "success": false,
+    "end": "inspect",
+    "actual_end_x_m": 3.2467113276618207,
+    "checks": {
+      "geometry_body_60mm": false,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": true,
+      "wrist_depth_dwell_1s": true
+    },
+    "hold": {
+      "clearance": {
+        "cumulative_s": 3.499999999999993,
+        "longest_s": 0.7800000000000011,
+        "interval_s": [
+          36.58,
+          37.34
+        ],
+        "body_x_m": 0.8994997690224942,
+        "minimum_actual_self_during_holds_mm": 1.2696014020308872,
+        "minimum_actual_self_during_longest_mm": 1.4207246868679695
+      }
+    }
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "coupled",
+      "seed": 26112173,
+      "case": "coupled-26112173"
+    },
+    "route": "full",
+    "success": false,
+    "end": "inspect",
+    "actual_end_x_m": 3.2675270633908706,
+    "checks": {
+      "geometry_body_60mm": false,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": true,
+      "wrist_depth_dwell_1s": true
+    },
+    "hold": {
+      "clearance": {
+        "cumulative_s": 2.740000000000002,
+        "longest_s": 0.9799999999999969,
+        "interval_s": [
+          37.800000000000004,
+          38.76
+        ],
+        "body_x_m": 0.8926245411726257,
+        "minimum_actual_self_during_holds_mm": 1.1747027234266538,
+        "minimum_actual_self_during_longest_mm": 1.4109123541488386
+      }
+    }
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "straight",
+      "seed": 26112173,
+      "case": "straight-26112173"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 0.5876291362206048,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "fixed",
+      "seed": 26112173,
+      "case": "fixed-26112173"
+    },
+    "route": "partial",
+    "success": false,
+    "end": "safe_prefix_end",
+    "actual_end_x_m": 1.1534518748945333,
+    "checks": {
+      "geometry_body_60mm": true,
+      "geometry_tool_60mm": true,
+      "positive_self_clearance": true,
+      "contact_free": true,
+      "task_dwell_1s": false,
+      "wrist_depth_dwell_1s": false
+    },
+    "hold": {}
+  }
+]

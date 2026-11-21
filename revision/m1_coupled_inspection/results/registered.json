@@ -1,0 +1,70 @@
+{
+  "scene_sha256": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+  "perception_lock": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+  "source_commit": "ff5aaf16de677e0bb331a94a4ee576561a1444a3",
+  "cells": [
+    [
+      "straight",
+      26112161
+    ],
+    [
+      "fixed",
+      26112161
+    ],
+    [
+      "sequential",
+      26112161
+    ],
+    [
+      "unregularized",
+      26112161
+    ],
+    [
+      "coupled",
+      26112161
+    ],
+    [
+      "fixed",
+      26112167
+    ],
+    [
+      "sequential",
+      26112167
+    ],
+    [
+      "unregularized",
+      26112167
+    ],
+    [
+      "coupled",
+      26112167
+    ],
+    [
+      "straight",
+      26112167
+    ],
+    [
+      "sequential",
+      26112173
+    ],
+    [
+      "unregularized",
+      26112173
+    ],
+    [
+      "coupled",
+      26112173
+    ],
+    [
+      "straight",
+      26112173
+    ],
+    [
+      "fixed",
+      26112173
+    ]
+  ],
+  "shared_pose": "surveyed hover; online PX4 and fused shape feedback",
+  "score": "6 cm external; positive self gap; zero contact; concurrent 3.5 cm, 3 deg and optical standoff 12-18 cm for 1 s",
+  "planning": "each cell independently solved, unchanged source, serial wall-clock timing"
+}

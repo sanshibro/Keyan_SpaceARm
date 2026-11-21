@@ -1,0 +1,98 @@
+{
+  "plan_origin_commit": "6e36b3f88c26b8ffe7ca9dbc3b9259382e850234",
+  "change_basis": "Only development seed 26112107 was scored for controller integration. The two prior pre-qualification flight logs are preserved separately.",
+  "controller": "One feedback and clearance-acceleration law for all methods; true flight measurements scored independently.",
+  "baselines": "AET-Seq. is the in-house body-first/then-shape restriction of this planner, inspired by aerial manipulation planning; authors release and implementation: https://github.com/arclab-hku/AET",
+  "plans": {
+    "straight-26112161": {
+      "body-reference.npy": "9bad8d8ed0efae654a58c1ecc706e0607ad441ce98b4e29467cdb2c38d439874",
+      "certified.npz": "279fb2b7f5d7a15c99e022995fcc21ea3b617f671e106f73754958f813f75cb1",
+      "decision.json": "b3dc6de0879feb782280c643cd9df3746b7e440799968ae69ed28d89eade4025",
+      "seed.npy": "6078ee6a26e50348c094edef69e1941df6bf01974850441a8e8ec7900a77acdc"
+    },
+    "fixed-26112161": {
+      "body-reference.npy": "e75c6875534378d43dda15e5f1060125bf5c839cb47bb48460f7593e0280e9c3",
+      "certified.npz": "c5d0a46e68a44da382e46702ea62abec8a6b20a0d464cca2395b282e03a13db5",
+      "decision.json": "28cfb3f616ca1b074f1f556e927ff19b564e2d53921f18238149f152c968cb47",
+      "seed.npy": "3879d091261f69ff68590d68be0b68b025877fc41a958ea00425704266436686"
+    },
+    "sequential-26112161": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "abbfa2ab41ebf5187259eedadf147e892ae58c70e25648c1d1c39ce27c89f8fc",
+      "decision.json": "a1e05609e41c12b94e72979025555a3ea194327c5c9f95513557874e1a52ebf3",
+      "seed.npy": "082e6dcdbb50fe0f971a43a8d2d8e61f9bbbdd46269388da4d3e6c44921eb3d4"
+    },
+    "unregularized-26112161": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "c062bfc3b256e9f8ab3e6844c744e5ec06fb87b3643f5a7088894682e5e553b4",
+      "decision.json": "7452617fa2fdb6ada723d6af7f733e5b9e56465e32013c13c7c91fbb609ee7a9",
+      "seed.npy": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b"
+    },
+    "coupled-26112161": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "63fb4996c0d96164a3fa17a3c6973617847538e4bf7ab8ec5e5c90d06e87b7e2",
+      "decision.json": "455cb8b61b82480354649f5977a0f1fad0e6b33c3b705ab215473321f87be37f",
+      "seed.npy": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b"
+    },
+    "straight-26112167": {
+      "body-reference.npy": "9bad8d8ed0efae654a58c1ecc706e0607ad441ce98b4e29467cdb2c38d439874",
+      "certified.npz": "279fb2b7f5d7a15c99e022995fcc21ea3b617f671e106f73754958f813f75cb1",
+      "decision.json": "cddfa174d9881a1fe198fe25ed7652413d0ce49c1c2aeb2ce407112263285957",
+      "seed.npy": "6078ee6a26e50348c094edef69e1941df6bf01974850441a8e8ec7900a77acdc"
+    },
+    "fixed-26112167": {
+      "body-reference.npy": "e75c6875534378d43dda15e5f1060125bf5c839cb47bb48460f7593e0280e9c3",
+      "certified.npz": "c5d0a46e68a44da382e46702ea62abec8a6b20a0d464cca2395b282e03a13db5",
+      "decision.json": "32ed2f9582c83b3c70eab6dd3140ca3ef08e66ae943e70902701b898aae27f78",
+      "seed.npy": "3879d091261f69ff68590d68be0b68b025877fc41a958ea00425704266436686"
+    },
+    "sequential-26112167": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "abbfa2ab41ebf5187259eedadf147e892ae58c70e25648c1d1c39ce27c89f8fc",
+      "decision.json": "9aa7c3ce1fdcfffb9fd3b12ff7a46ead07470310f1ec4085e09e49141b241b8a",
+      "seed.npy": "082e6dcdbb50fe0f971a43a8d2d8e61f9bbbdd46269388da4d3e6c44921eb3d4"
+    },
+    "unregularized-26112167": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "c062bfc3b256e9f8ab3e6844c744e5ec06fb87b3643f5a7088894682e5e553b4",
+      "decision.json": "e29c82f108049267b783261bafc818e0c9aea520078080d588086189d0b15e39",
+      "seed.npy": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b"
+    },
+    "coupled-26112167": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "63fb4996c0d96164a3fa17a3c6973617847538e4bf7ab8ec5e5c90d06e87b7e2",
+      "decision.json": "69cb3f67ae9cf5374c0fc349de8779ef4beedff2c6748af4f5ba9047f0205f97",
+      "seed.npy": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b"
+    },
+    "straight-26112173": {
+      "body-reference.npy": "9bad8d8ed0efae654a58c1ecc706e0607ad441ce98b4e29467cdb2c38d439874",
+      "certified.npz": "279fb2b7f5d7a15c99e022995fcc21ea3b617f671e106f73754958f813f75cb1",
+      "decision.json": "e4031b80de7d9ca51ed48403b09e375dac7eae2907cca6974fdcfb13d75fee29",
+      "seed.npy": "6078ee6a26e50348c094edef69e1941df6bf01974850441a8e8ec7900a77acdc"
+    },
+    "fixed-26112173": {
+      "body-reference.npy": "e75c6875534378d43dda15e5f1060125bf5c839cb47bb48460f7593e0280e9c3",
+      "certified.npz": "c5d0a46e68a44da382e46702ea62abec8a6b20a0d464cca2395b282e03a13db5",
+      "decision.json": "22653ce9318f6e3a7cff4159c1e8886e898f006ea2ebc6faecf9427ba9112631",
+      "seed.npy": "3879d091261f69ff68590d68be0b68b025877fc41a958ea00425704266436686"
+    },
+    "sequential-26112173": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "abbfa2ab41ebf5187259eedadf147e892ae58c70e25648c1d1c39ce27c89f8fc",
+      "decision.json": "ed8b6934f0ccc144b96416957146ba58748130807fbcda02a0504c027db9d65d",
+      "seed.npy": "082e6dcdbb50fe0f971a43a8d2d8e61f9bbbdd46269388da4d3e6c44921eb3d4"
+    },
+    "unregularized-26112173": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "c062bfc3b256e9f8ab3e6844c744e5ec06fb87b3643f5a7088894682e5e553b4",
+      "decision.json": "21713e2ae4929c3027438d03ea66c30a58c311a62248d769a4835a17efe85a8a",
+      "seed.npy": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b"
+    },
+    "coupled-26112173": {
+      "body-reference.npy": "17fd781604522c54ba0b1a6d3791e2cda077f2fa50a265f0d94083bd23931a7d",
+      "certified.npz": "63fb4996c0d96164a3fa17a3c6973617847538e4bf7ab8ec5e5c90d06e87b7e2",
+      "decision.json": "b7cc20dd12882920bb9b9fc53b672ab07c8d517438c625b8fe2b673cbd3da8ca",
+      "seed.npy": "42aed95cc7925b8937d5556a6597c69f3c76efac61fba0a562e874b1f375344b"
+    }
+  }
+}

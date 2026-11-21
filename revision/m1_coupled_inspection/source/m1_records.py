@@ -7,10 +7,11 @@ def sha(p):
         for b in iter(lambda:f.read(1<<20),b''):h.update(b)
     return h.hexdigest()
 def put(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
-def package(root,archive):
+def package(root,archive,split=None):
     metrics=json.loads((root/'matrix.json').read_text());reg=json.loads((root/'registered.json').read_text())
     assert len(metrics)==15;keys=set();summary=[]
-    include={'registered.json','matrix.json','plan-registration.json'}
+    include={'registered.json','matrix.json','plan-registration.json'};index=[]
+    if split:split.mkdir(parents=True,exist_ok=True)
     for score in metrics:
         name=score['case']['case'];case=root/name;flt=case/'flight';pro=json.loads((flt/'provenance.json').read_text())
         assert name not in keys and pro['mission']['scene']==reg['scene_sha256'];keys.add(name)
@@ -22,6 +23,8 @@ def package(root,archive):
         if json.loads((case/'plan/decision.json').read_text())['accepted']:files.append('plan/certified.npz')
         files += ['plan/'+n for n in ('seed.npy','body-reference.npy') if (case/'plan'/n).is_file()]
         files += ['flight/optics/'+n for n in ('native.csv','native.log','settings.yaml','fixed-calibration.json','complete.json','manifest.json')]
+        with (flt/'flight.ulg').open('rb') as stream:assert stream.read(7)==b'ULog\x01\x12\x35'
+        with (flt/'flight.bag').open('rb') as stream:assert stream.readline()==b'#ROSBAG V2.0\n'
         # Every native exposure is re-hashed against its producer's index. This
         # also protects the RGB-D evidence retained on the NUC for each flight.
         source=flt/'optics';idx=[json.loads(z) for z in (source/'index.jsonl').read_text().splitlines()]
@@ -35,11 +38,19 @@ def package(root,archive):
             p=case/n
             if not p.is_file():raise FileNotFoundError(p)
             origins[n]={'sha256':sha(p),'bytes':p.stat().st_size};include.add(name+'/'+n)
+        if split:
+            compact=split/(name+'.tar.gz')
+            with tarfile.open(str(compact),'w:gz',compresslevel=4) as tar:
+                for n in sorted(files):tar.add(str(case/n),arcname=n,recursive=False)
+            index.append(dict(case=name,file=compact.name,sha256=sha(compact),bytes=compact.stat().st_size))
         summary.append({'case':name,'exposures':len(idx),'rgb_ordered_sha256':rgb.hexdigest(),'depth_ordered_sha256':dep.hexdigest(),'components':origins})
     put(root/'evidence.json',{'scene':reg['scene_sha256'],'source_commit':reg['source_commit'],'native_flight_count':len(summary),'trials':summary})
     include.add('evidence.json');archive.parent.mkdir(parents=True,exist_ok=True)
+    if split:
+        put(root/'flight-packs.json',index);include.add('flight-packs.json')
     with tarfile.open(str(archive),'w:gz',compresslevel=3) as tar:
         for n in sorted(include):tar.add(str(root/n),arcname=n,recursive=False)
     print('registered',len(keys),'files',len(include),'bytes',archive.stat().st_size,'sha256',sha(archive))
 if __name__=='__main__':
-    a=argparse.ArgumentParser();a.add_argument('folder',type=Path);a.add_argument('archive',type=Path);v=a.parse_args();package(v.folder,v.archive)
+    a=argparse.ArgumentParser();a.add_argument('folder',type=Path);a.add_argument('archive',type=Path)
+    a.add_argument('--split',type=Path);v=a.parse_args();package(v.folder,v.archive,v.split)

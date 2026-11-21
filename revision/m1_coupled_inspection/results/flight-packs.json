@@ -1,0 +1,92 @@
+[
+  {
+    "case": "straight-26112161",
+    "file": "straight-26112161.tar.gz",
+    "sha256": "8d4a206a87043b7e65d759be61a54c6b55e9bfba9061c397846707b9b6d792e4",
+    "bytes": 7119043
+  },
+  {
+    "case": "fixed-26112161",
+    "file": "fixed-26112161.tar.gz",
+    "sha256": "1a61b95121db894273a3c411d50ed56357d893c65c5884244abb73e5a8b72bc1",
+    "bytes": 9487283
+  },
+  {
+    "case": "sequential-26112161",
+    "file": "sequential-26112161.tar.gz",
+    "sha256": "af96018105195ee2087e2212b0a96b810d6c58610f3db9f45641cd6f96c7c845",
+    "bytes": 11552805
+  },
+  {
+    "case": "unregularized-26112161",
+    "file": "unregularized-26112161.tar.gz",
+    "sha256": "c51c28f64b27a571716496c100a74483eba0618ad4f5f6d804d6f25c91e2eb52",
+    "bytes": 16617202
+  },
+  {
+    "case": "coupled-26112161",
+    "file": "coupled-26112161.tar.gz",
+    "sha256": "38f8aab82a2a80c6fef4de651ac4ba1a1f06068b799cbd478d336e713563c445",
+    "bytes": 17565425
+  },
+  {
+    "case": "fixed-26112167",
+    "file": "fixed-26112167.tar.gz",
+    "sha256": "c1e282f333724fa4f2834e853a56052ceaabab8673d7f230b91c084858a35248",
+    "bytes": 9508803
+  },
+  {
+    "case": "sequential-26112167",
+    "file": "sequential-26112167.tar.gz",
+    "sha256": "838e3322d3a9e99247bf495b826924382f80763cbeb57cb45cf64b14fe94548b",
+    "bytes": 11511196
+  },
+  {
+    "case": "unregularized-26112167",
+    "file": "unregularized-26112167.tar.gz",
+    "sha256": "c0c1f2575bdf032fe5dd542ed0cad70c2af2576ba8f7b76240924e7752354540",
+    "bytes": 16688197
+  },
+  {
+    "case": "coupled-26112167",
+    "file": "coupled-26112167.tar.gz",
+    "sha256": "5e0d05cd94dd75244a530695265474e96a77ee898cbe994522ab589cdcdf6aa7",
+    "bytes": 16847617
+  },
+  {
+    "case": "straight-26112167",
+    "file": "straight-26112167.tar.gz",
+    "sha256": "b96a9b9b73498146eaed0b7173dc0fc620a6cbbaf9a51cddd82cc302fe8b2d7f",
+    "bytes": 7131059
+  },
+  {
+    "case": "sequential-26112173",
+    "file": "sequential-26112173.tar.gz",
+    "sha256": "fe37eea4a511ef3678da5b251bf3d1e1d469cc3094aea857c1276d41fb8c60cd",
+    "bytes": 11533851
+  },
+  {
+    "case": "unregularized-26112173",
+    "file": "unregularized-26112173.tar.gz",
+    "sha256": "23c05f193f20b05a261d61335a6f394cd3047f0a2f3181242eb57bcb27ade7bc",
+    "bytes": 16674927
+  },
+  {
+    "case": "coupled-26112173",
+    "file": "coupled-26112173.tar.gz",
+    "sha256": "a8c8b1480daf1cfee87acad333a364cf7dd37285a3df4373068b151689c49f27",
+    "bytes": 17650463
+  },
+  {
+    "case": "straight-26112173",
+    "file": "straight-26112173.tar.gz",
+    "sha256": "087a56c9940ec0d34945715887f2f4fd469ddc61a777d042d149b61a8fcd753c",
+    "bytes": 7135706
+  },
+  {
+    "case": "fixed-26112173",
+    "file": "fixed-26112173.tar.gz",
+    "sha256": "c720ead233b2422b1c6bdabc51f5dbc0aeb4bb8786922c35c431a0de660a3ce0",
+    "bytes": 9483155
+  }
+]

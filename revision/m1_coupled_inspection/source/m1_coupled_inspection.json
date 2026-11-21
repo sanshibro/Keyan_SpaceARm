@@ -1,0 +1,40 @@
+{
+  "stage": "M1",
+  "frame": "ENU",
+  "seeds": [
+    26112161,
+    26112167,
+    26112173
+  ],
+  "methods": [
+    "straight",
+    "fixed",
+    "sequential",
+    "unregularized",
+    "coupled"
+  ],
+  "matched": [
+    "task",
+    "native PX4+MuJoCo",
+    "shape gain and frozen estimator",
+    "optical scene",
+    "sensing delay",
+    "physical payload",
+    "hard clearance and task thresholds"
+  ],
+  "minimum_clearance_m": 0.06,
+  "target_position_m": 0.035,
+  "target_axis_deg": 3,
+  "target_dwell_s": 1,
+  "working_range_m": [
+    0.12,
+    0.18
+  ],
+  "max_bend_deg": 120,
+  "task": "remote optical inspection",
+  "depth_hz": 25,
+  "latency_s": 0.2,
+  "known_map": "surveyed industrial geometry",
+  "flight_controller": "PX4 SITL 1.13 OFFBOARD",
+  "platform": "SUPER + loaded Qingyu"
+}

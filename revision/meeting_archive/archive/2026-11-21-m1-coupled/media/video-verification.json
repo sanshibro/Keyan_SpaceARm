@@ -1,0 +1,272 @@
+{
+  "multi": {
+    "size": [
+      1920,
+      1080
+    ],
+    "fps": 20.0,
+    "frames": 432,
+    "seconds": 21.6,
+    "verified_panels": [
+      {
+        "video_frame": 0,
+        "method": "straight",
+        "source_frame": 627,
+        "exposure": 37.08,
+        "delivery": 37.28,
+        "mean_absolute_8bit_error": 1.5798835539140248
+      },
+      {
+        "video_frame": 0,
+        "method": "coupled",
+        "source_frame": 627,
+        "exposure": 37.08,
+        "delivery": 37.28,
+        "mean_absolute_8bit_error": 1.3621263807667316
+      },
+      {
+        "video_frame": 54,
+        "method": "straight",
+        "source_frame": 735,
+        "exposure": 41.4,
+        "delivery": 41.6,
+        "mean_absolute_8bit_error": 1.5321274067234363
+      },
+      {
+        "video_frame": 54,
+        "method": "coupled",
+        "source_frame": 735,
+        "exposure": 41.4,
+        "delivery": 41.6,
+        "mean_absolute_8bit_error": 1.607148353339489
+      },
+      {
+        "video_frame": 107,
+        "method": "straight",
+        "source_frame": 841,
+        "exposure": 45.64,
+        "delivery": 45.84,
+        "mean_absolute_8bit_error": 1.6654226941623063
+      },
+      {
+        "video_frame": 107,
+        "method": "coupled",
+        "source_frame": 841,
+        "exposure": 45.64,
+        "delivery": 45.84,
+        "mean_absolute_8bit_error": 1.975094900995178
+      },
+      {
+        "video_frame": 108,
+        "method": "fixed",
+        "source_frame": 1165,
+        "exposure": 58.6,
+        "delivery": 58.800000000000004,
+        "mean_absolute_8bit_error": 1.3176084094251224
+      },
+      {
+        "video_frame": 108,
+        "method": "coupled",
+        "source_frame": 1165,
+        "exposure": 58.6,
+        "delivery": 58.800000000000004,
+        "mean_absolute_8bit_error": 1.4592545569576965
+      },
+      {
+        "video_frame": 201,
+        "method": "fixed",
+        "source_frame": 1351,
+        "exposure": 66.04,
+        "delivery": 66.24000000000001,
+        "mean_absolute_8bit_error": 1.4310770835470743
+      },
+      {
+        "video_frame": 201,
+        "method": "coupled",
+        "source_frame": 1351,
+        "exposure": 66.04,
+        "delivery": 66.24000000000001,
+        "mean_absolute_8bit_error": 1.49033035805889
+      },
+      {
+        "video_frame": 216,
+        "method": "sequential",
+        "source_frame": 1809,
+        "exposure": 84.36,
+        "delivery": 84.56,
+        "mean_absolute_8bit_error": 1.4664469409390923
+      },
+      {
+        "video_frame": 216,
+        "method": "coupled",
+        "source_frame": 1825,
+        "exposure": 85.0,
+        "delivery": 85.2,
+        "mean_absolute_8bit_error": 1.4814237714168461
+      },
+      {
+        "video_frame": 288,
+        "method": "sequential",
+        "source_frame": 1809,
+        "exposure": 84.36,
+        "delivery": 84.56,
+        "mean_absolute_8bit_error": 1.3967289080400807
+      },
+      {
+        "video_frame": 288,
+        "method": "coupled",
+        "source_frame": 1969,
+        "exposure": 90.76,
+        "delivery": 90.96000000000001,
+        "mean_absolute_8bit_error": 1.6744211894258063
+      },
+      {
+        "video_frame": 324,
+        "method": "unregularized",
+        "source_frame": 2373,
+        "exposure": 106.92,
+        "delivery": 107.12,
+        "mean_absolute_8bit_error": 2.0977822235901646
+      },
+      {
+        "video_frame": 324,
+        "method": "coupled",
+        "source_frame": 2373,
+        "exposure": 106.92,
+        "delivery": 107.12,
+        "mean_absolute_8bit_error": 2.044787284976574
+      },
+      {
+        "video_frame": 378,
+        "method": "unregularized",
+        "source_frame": 2480,
+        "exposure": 111.2,
+        "delivery": 111.4,
+        "mean_absolute_8bit_error": 2.03596191990698
+      },
+      {
+        "video_frame": 378,
+        "method": "coupled",
+        "source_frame": 2480,
+        "exposure": 111.2,
+        "delivery": 111.4,
+        "mean_absolute_8bit_error": 2.0095200232550186
+      },
+      {
+        "video_frame": 431,
+        "method": "unregularized",
+        "source_frame": 2587,
+        "exposure": 115.48,
+        "delivery": 115.68,
+        "mean_absolute_8bit_error": 2.310155261447967
+      },
+      {
+        "video_frame": 431,
+        "method": "coupled",
+        "source_frame": 2587,
+        "exposure": 115.48,
+        "delivery": 115.68,
+        "mean_absolute_8bit_error": 2.2310988851270475
+      }
+    ]
+  },
+  "continuous": {
+    "size": [
+      1920,
+      1080
+    ],
+    "fps": 20.0,
+    "frames": 1161,
+    "seconds": 58.05,
+    "verified_panels": [
+      {
+        "video_frame": 0,
+        "method": "coupled",
+        "source_frame": 0,
+        "exposure": 12.0,
+        "delivery": 12.2,
+        "mean_absolute_8bit_error": 1.5550547380047428
+      },
+      {
+        "video_frame": 116,
+        "method": "coupled",
+        "source_frame": 290,
+        "exposure": 23.6,
+        "delivery": 23.8,
+        "mean_absolute_8bit_error": 1.7051101663255692
+      },
+      {
+        "video_frame": 232,
+        "method": "coupled",
+        "source_frame": 580,
+        "exposure": 35.2,
+        "delivery": 35.400000000000006,
+        "mean_absolute_8bit_error": 1.4634568999122892
+      },
+      {
+        "video_frame": 348,
+        "method": "coupled",
+        "source_frame": 870,
+        "exposure": 46.800000000000004,
+        "delivery": 47.00000000000001,
+        "mean_absolute_8bit_error": 1.8295954747750383
+      },
+      {
+        "video_frame": 464,
+        "method": "coupled",
+        "source_frame": 1160,
+        "exposure": 58.4,
+        "delivery": 58.6,
+        "mean_absolute_8bit_error": 1.5948159292466622
+      },
+      {
+        "video_frame": 580,
+        "method": "coupled",
+        "source_frame": 1450,
+        "exposure": 70.0,
+        "delivery": 70.2,
+        "mean_absolute_8bit_error": 1.5206820728973784
+      },
+      {
+        "video_frame": 696,
+        "method": "coupled",
+        "source_frame": 1740,
+        "exposure": 81.60000000000001,
+        "delivery": 81.80000000000001,
+        "mean_absolute_8bit_error": 1.6795075609914563
+      },
+      {
+        "video_frame": 812,
+        "method": "coupled",
+        "source_frame": 2030,
+        "exposure": 93.2,
+        "delivery": 93.4,
+        "mean_absolute_8bit_error": 1.6955452278855212
+      },
+      {
+        "video_frame": 928,
+        "method": "coupled",
+        "source_frame": 2320,
+        "exposure": 104.8,
+        "delivery": 105.0,
+        "mean_absolute_8bit_error": 2.028100940454147
+      },
+      {
+        "video_frame": 1044,
+        "method": "coupled",
+        "source_frame": 2610,
+        "exposure": 116.4,
+        "delivery": 116.60000000000001,
+        "mean_absolute_8bit_error": 1.962665066757626
+      },
+      {
+        "video_frame": 1160,
+        "method": "coupled",
+        "source_frame": 2900,
+        "exposure": 128.0,
+        "delivery": 128.2,
+        "mean_absolute_8bit_error": 2.0996684452457526
+      }
+    ]
+  }
+}

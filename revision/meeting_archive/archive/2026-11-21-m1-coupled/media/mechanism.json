@@ -1,0 +1,215 @@
+[
+  {
+    "seed": 26112161,
+    "strategies": {
+      "coupled": {
+        "max_signed_departure_cm": 5.61298322891283,
+        "departure_x_m": 2.3039473684210527,
+        "max_signed_planned_departure_cm": -5.291117165476253,
+        "planned_departure_x_m": 1.4394736842105265,
+        "body_y_range_cm": 36.739011284803915,
+        "pipe_t": [
+          35.92,
+          80.4
+        ],
+        "theta_range_deg": [
+          30.00231568138564,
+          72.73048496199759
+        ],
+        "phi_range_deg": 60.45594561988469,
+        "yaw_range_deg": 0.5868220085490747,
+        "pipe_tracking_peak_cm": 4.70852892357505,
+        "pipe_thrust_diff_rms_N": 4.832073443322224,
+        "pipe_root_peak_Nm": 0.7767403039702715,
+        "pipe_tilt_peak_deg": 1.3428760275642986,
+        "certified_duration_s": 28.422044421226214
+      },
+      "unregularized": {
+        "max_signed_departure_cm": 5.78165824773367,
+        "departure_x_m": 2.292105263157895,
+        "max_signed_planned_departure_cm": -5.285264430152287,
+        "planned_departure_x_m": 1.4394736842105265,
+        "body_y_range_cm": 37.3042542756771,
+        "pipe_t": [
+          33.74,
+          78.60000000000001
+        ],
+        "theta_range_deg": [
+          31.672204695750946,
+          73.58980150950406
+        ],
+        "phi_range_deg": 60.402467807544554,
+        "yaw_range_deg": 0.5996310727644372,
+        "pipe_tracking_peak_cm": 5.6948398535029625,
+        "pipe_thrust_diff_rms_N": 4.930676850578501,
+        "pipe_root_peak_Nm": 0.790945598237219,
+        "pipe_tilt_peak_deg": 1.4897916359803238,
+        "certified_duration_s": 26.116274871085803
+      },
+      "sequential": {
+        "max_signed_departure_cm": -3.1211285900359464,
+        "departure_x_m": 1.2737954008771442,
+        "max_signed_planned_departure_cm": -1.5040342293903435,
+        "planned_departure_x_m": 1.2100152507590671,
+        "body_y_range_cm": 14.073587356620443,
+        "pipe_t": [
+          40.300000000000004,
+          58.92
+        ],
+        "theta_range_deg": [
+          0.040185707812613713,
+          79.63995582398854
+        ],
+        "phi_range_deg": 5.972199192599504,
+        "yaw_range_deg": 5.066795623169262,
+        "pipe_tracking_peak_cm": 3.8694732718380913,
+        "pipe_thrust_diff_rms_N": 5.451744701959711,
+        "pipe_root_peak_Nm": 0.7525820398526623,
+        "pipe_tilt_peak_deg": 0.4313545546036019,
+        "certified_duration_s": 14.317478310448184
+      }
+    }
+  },
+  {
+    "seed": 26112167,
+    "strategies": {
+      "coupled": {
+        "max_signed_departure_cm": -3.6272618669125456,
+        "departure_x_m": 1.4297882936126245,
+        "max_signed_planned_departure_cm": -5.296164261447448,
+        "planned_departure_x_m": 1.435411403377023,
+        "body_y_range_cm": 26.43209676553151,
+        "pipe_t": [
+          35.980000000000004,
+          128.1
+        ],
+        "theta_range_deg": [
+          30.447154378508266,
+          77.93719237366315
+        ],
+        "phi_range_deg": 60.33557729382704,
+        "yaw_range_deg": 0.8074970651138713,
+        "pipe_tracking_peak_cm": 5.3305193421834405,
+        "pipe_thrust_diff_rms_N": 5.9425642855857435,
+        "pipe_root_peak_Nm": 0.9642476279484471,
+        "pipe_tilt_peak_deg": 2.5158222343655168,
+        "certified_duration_s": 28.422044421226214
+      },
+      "unregularized": {
+        "max_signed_departure_cm": 6.133597617262378,
+        "departure_x_m": 2.292105263157895,
+        "max_signed_planned_departure_cm": -5.285264430152287,
+        "planned_departure_x_m": 1.4394736842105265,
+        "body_y_range_cm": 37.51978067901208,
+        "pipe_t": [
+          33.78,
+          78.48
+        ],
+        "theta_range_deg": [
+          31.55274550119742,
+          73.81670928891923
+        ],
+        "phi_range_deg": 61.005220831451624,
+        "yaw_range_deg": 0.8859117475318599,
+        "pipe_tracking_peak_cm": 6.753641819039887,
+        "pipe_thrust_diff_rms_N": 4.922435802885898,
+        "pipe_root_peak_Nm": 0.8105580033319498,
+        "pipe_tilt_peak_deg": 3.1319725847595836,
+        "certified_duration_s": 26.116274871085803
+      },
+      "sequential": {
+        "max_signed_departure_cm": -3.3469512822160223,
+        "departure_x_m": 1.2835935861940282,
+        "max_signed_planned_departure_cm": -1.4945032754654455,
+        "planned_departure_x_m": 1.211054548264924,
+        "body_y_range_cm": 14.341092102870464,
+        "pipe_t": [
+          40.26,
+          59.22
+        ],
+        "theta_range_deg": [
+          0.041856149360049034,
+          79.95962603847867
+        ],
+        "phi_range_deg": 4.694753678242478,
+        "yaw_range_deg": 5.095063542218666,
+        "pipe_tracking_peak_cm": 4.074977761150422,
+        "pipe_thrust_diff_rms_N": 5.439242210089907,
+        "pipe_root_peak_Nm": 0.7565862957655902,
+        "pipe_tilt_peak_deg": 0.3603365127801672,
+        "certified_duration_s": 14.317478310448184
+      }
+    }
+  },
+  {
+    "seed": 26112173,
+    "strategies": {
+      "coupled": {
+        "max_signed_departure_cm": 4.931581813412183,
+        "departure_x_m": 2.3039473684210527,
+        "max_signed_planned_departure_cm": -5.291117165476253,
+        "planned_departure_x_m": 1.4394736842105265,
+        "body_y_range_cm": 37.68198816933832,
+        "pipe_t": [
+          36.08,
+          81.42
+        ],
+        "theta_range_deg": [
+          30.015700116122527,
+          72.96320898428455
+        ],
+        "phi_range_deg": 61.03341175108528,
+        "yaw_range_deg": 0.6554375069499188,
+        "pipe_tracking_peak_cm": 4.814189144837201,
+        "pipe_thrust_diff_rms_N": 4.845113139225536,
+        "pipe_root_peak_Nm": 0.7803669245818902,
+        "pipe_tilt_peak_deg": 1.5675311329654416,
+        "certified_duration_s": 28.422044421226214
+      },
+      "unregularized": {
+        "max_signed_departure_cm": 6.803477898693108,
+        "departure_x_m": 2.292105263157895,
+        "max_signed_planned_departure_cm": -5.285264430152287,
+        "planned_departure_x_m": 1.4394736842105265,
+        "body_y_range_cm": 37.14363401602363,
+        "pipe_t": [
+          33.76,
+          78.66
+        ],
+        "theta_range_deg": [
+          31.658939287787987,
+          73.76360786922827
+        ],
+        "phi_range_deg": 60.54866632141855,
+        "yaw_range_deg": 0.9022739672549436,
+        "pipe_tracking_peak_cm": 5.686563037167071,
+        "pipe_thrust_diff_rms_N": 4.929175133829087,
+        "pipe_root_peak_Nm": 0.8125000914688069,
+        "pipe_tilt_peak_deg": 2.597768246843447,
+        "certified_duration_s": 26.116274871085803
+      },
+      "sequential": {
+        "max_signed_departure_cm": -2.6632953904355663,
+        "departure_x_m": 1.3027991321579777,
+        "max_signed_planned_departure_cm": -1.468317268981563,
+        "planned_departure_x_m": 1.2089029086826928,
+        "body_y_range_cm": 14.122866440228455,
+        "pipe_t": [
+          40.22,
+          58.82
+        ],
+        "theta_range_deg": [
+          0.1080122180596444,
+          80.10439401646897
+        ],
+        "phi_range_deg": 5.69228833692614,
+        "yaw_range_deg": 5.0747430324651726,
+        "pipe_tracking_peak_cm": 3.625633212130732,
+        "pipe_thrust_diff_rms_N": 5.490750956195302,
+        "pipe_root_peak_Nm": 0.7573766909123708,
+        "pipe_tilt_peak_deg": 0.472744943658052,
+        "certified_duration_s": 14.317478310448184
+      }
+    }
+  }
+]

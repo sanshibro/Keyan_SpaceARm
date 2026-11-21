@@ -1,0 +1,1217 @@
+[
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "straight",
+      "seed": 26112161,
+      "case": "straight-26112161"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      null,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.21597700799917624,
+        "t": 52.300000000000004,
+        "lower": 0.21597700799917594,
+        "upper": 0.21597700799917655,
+        "pair": [
+          "collision_landing_163",
+          "COL_portal_sill"
+        ],
+        "evaluations": 1486
+      },
+      "arm_tool": {
+        "m": 0.269484888765954,
+        "t": 25.66,
+        "lower": 0.2694848887659536,
+        "upper": 0.2694848887659544,
+        "pair": [
+          "d435",
+          "COL_portal_sill"
+        ],
+        "evaluations": 2
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009283550361030549,
+    "self_clearance_50Hz_m": 0.0009252968217504626,
+    "self_interval_50Hz_m": [
+      0.0008504310289634276,
+      0.0010001626145374977
+    ],
+    "self_additional_refinements": 1553,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      0.590899281617027,
+      -0.013920957140610604,
+      2.1728183261227128
+    ],
+    "end_tool": [
+      0.5904980365821041,
+      -0.013541471190614216,
+      1.6555616254876002
+    ],
+    "final_pos_m": 2.8520478997272014,
+    "final_axis_deg": 50.12732383892932,
+    "final_optical_m": -0.07397609338799838,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.021798723527352168,
+    "peak_tilt_deg": 3.0107861549568047,
+    "max_gravity_moment_Nm": 0.1370859308543195,
+    "peak_mount_reaction_Nm": 0.10719005601361709,
+    "peak_front_rear_N": 1.307999610900879,
+    "rms_front_rear_N": 0.43421155457227895,
+    "orbit_frames": 1088,
+    "tracked_frames": 364,
+    "matching_exposures": 1088,
+    "scene_geom_count": 498,
+    "command_clip_deg": 0.0,
+    "body_lateral_excursion_m": 0.022712384518111466,
+    "max_actual_bend_deg": 0.39732911220955486
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "fixed",
+      "seed": 26112161,
+      "case": "fixed-26112161"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      null,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.06888804621231315,
+        "t": 32.1,
+        "lower": 0.06885367340741434,
+        "upper": 0.06892241901721197,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 366
+      },
+      "arm_tool": {
+        "m": 0.13710036789225802,
+        "t": 30.740000000000002,
+        "lower": 0.13708973420049936,
+        "upper": 0.13711100158401668,
+        "pair": [
+          "collision_gripper_finger1",
+          "COL_portal_sill"
+        ],
+        "evaluations": 397
+      }
+    },
+    "self_clearance_5Hz_m": 0.0014638391978397858,
+    "self_clearance_50Hz_m": 0.0014367972317043355,
+    "self_interval_50Hz_m": [
+      0.0013695457629754352,
+      0.001504048700433236
+    ],
+    "self_additional_refinements": 2226,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      1.1480867930808198,
+      -0.021325268993203295,
+      2.156281635577729
+    ],
+    "end_tool": [
+      1.4469413917137661,
+      -0.02262114180386231,
+      1.8335608764111826
+    ],
+    "final_pos_m": 1.9980221670712097,
+    "final_axis_deg": 44.29523611570992,
+    "final_optical_m": 2.1265927210175444,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.04455469930444887,
+    "peak_tilt_deg": 0.5094840038484175,
+    "max_gravity_moment_Nm": 0.7483606817215187,
+    "peak_mount_reaction_Nm": 0.7428304145338125,
+    "peak_front_rear_N": 7.4760003089904785,
+    "rms_front_rear_N": 7.317735216686283,
+    "orbit_frames": 1462,
+    "tracked_frames": 1458,
+    "matching_exposures": 1462,
+    "scene_geom_count": 498,
+    "command_clip_deg": 83.25377070998513,
+    "body_lateral_excursion_m": 0.023348171734373816,
+    "max_actual_bend_deg": 80.2263031777644
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "sequential",
+      "seed": 26112161,
+      "case": "sequential-26112161"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      56.04,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.06906373505227162,
+        "t": 42.76,
+        "lower": 0.06902755090105415,
+        "upper": 0.0690999192034891,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 214
+      },
+      "arm_tool": {
+        "m": 0.12010086577604684,
+        "t": 42.5,
+        "lower": 0.1201008608244126,
+        "upper": 0.1201008707276811,
+        "pair": [
+          "collision_gripper_finger1",
+          "COL_portal_sill"
+        ],
+        "evaluations": 440
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009272942505641529,
+    "self_clearance_50Hz_m": 0.0009259400307009325,
+    "self_interval_50Hz_m": [
+      0.0008517354947388256,
+      0.0010001445666630393
+    ],
+    "self_additional_refinements": 2853,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      1.384603060623633,
+      -0.1498905309105926,
+      2.285117641241656
+    ],
+    "end_tool": [
+      1.3833869859386945,
+      -0.15026161284320314,
+      1.7678624036974397
+    ],
+    "final_pos_m": 2.0799856703751947,
+    "final_axis_deg": 50.271826290880554,
+    "final_optical_m": 0.039762168791676766,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.03868904548345169,
+    "peak_tilt_deg": 3.2774816041429853,
+    "max_gravity_moment_Nm": 0.7526740483918094,
+    "peak_mount_reaction_Nm": 0.9808610050296972,
+    "peak_front_rear_N": 8.916000366210938,
+    "rms_front_rear_N": 5.259608656211134,
+    "orbit_frames": 1810,
+    "tracked_frames": 1559,
+    "matching_exposures": 1810,
+    "scene_geom_count": 498,
+    "command_clip_deg": 86.39631268260231,
+    "body_lateral_excursion_m": 0.15619401030153066,
+    "max_actual_bend_deg": 83.41898916902865
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "unregularized",
+      "seed": 26112161,
+      "case": "unregularized-26112161"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "completed",
+    "task_success": true,
+    "task_dwell_s": 10.400000000000006,
+    "first_pass_s": 102.54,
+    "passages_s": [
+      48.7,
+      79.82000000000001,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.06469379988472435,
+        "t": 35.78,
+        "lower": 0.06469379988472435,
+        "upper": 0.06469379988472435,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 1572
+      },
+      "arm_tool": {
+        "m": 0.08719323991531382,
+        "t": 118.60000000000001,
+        "lower": 0.08717500742050381,
+        "upper": 0.08721147241012382,
+        "pair": [
+          "alignment_probe_load",
+          "COL_flange"
+        ],
+        "evaluations": 1286
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009495926186139865,
+    "self_clearance_50Hz_m": 0.0009288368167291031,
+    "self_interval_50Hz_m": [
+      0.0008574871561000271,
+      0.0010001864773581792
+    ],
+    "self_additional_refinements": 4499,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 10.400000000000006,
+    "collision_steps": 0,
+    "end_phase": "inspect",
+    "end_xyz": [
+      3.257797860311966,
+      0.10599934697029392,
+      2.240279597671742
+    ],
+    "end_tool": [
+      3.4322547472714695,
+      0.23491036268831547,
+      1.8045606515873003
+    ],
+    "final_pos_m": 0.011379163590250301,
+    "final_axis_deg": 0.6514301453093887,
+    "final_optical_m": 0.16150926151697964,
+    "terminal_visible_frames": 414,
+    "terminal_checked_frames": 414,
+    "peak_tracking_m": 0.07392022168423538,
+    "peak_tilt_deg": 3.2740724710819995,
+    "max_gravity_moment_Nm": 0.7352566085138263,
+    "peak_mount_reaction_Nm": 0.7783997474012386,
+    "peak_front_rear_N": 7.559999942779541,
+    "rms_front_rear_N": 4.773428707534364,
+    "orbit_frames": 2725,
+    "tracked_frames": 2153,
+    "matching_exposures": 2725,
+    "scene_geom_count": 498,
+    "command_clip_deg": 76.75057990763423,
+    "body_lateral_excursion_m": 0.373042542756771,
+    "max_actual_bend_deg": 73.79998061345135
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "coupled",
+      "seed": 26112161,
+      "case": "coupled-26112161"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "completed",
+    "task_success": true,
+    "task_dwell_s": 18.19999999999999,
+    "first_pass_s": 110.9,
+    "passages_s": [
+      50.54,
+      82.02,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.06322547019231273,
+        "t": 38.36,
+        "lower": 0.06322547019231273,
+        "upper": 0.06322547019231273,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 1820
+      },
+      "arm_tool": {
+        "m": 0.08755509131537079,
+        "t": 119.5,
+        "lower": 0.08755127745512058,
+        "upper": 0.08755890517562101,
+        "pair": [
+          "alignment_probe_load",
+          "COL_flange"
+        ],
+        "evaluations": 1394
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009629475704405481,
+    "self_clearance_50Hz_m": 0.0009290358774771728,
+    "self_interval_50Hz_m": [
+      0.0008578802802499299,
+      0.0010001914747044156
+    ],
+    "self_additional_refinements": 4820,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 18.16000000000001,
+    "collision_steps": 0,
+    "end_phase": "inspect",
+    "end_xyz": [
+      3.2593108277487848,
+      0.10427955867520051,
+      2.2563183195596688
+    ],
+    "end_tool": [
+      3.434284894302724,
+      0.23466294070878974,
+      1.8217453933154113
+    ],
+    "final_pos_m": 0.010823471758275537,
+    "final_axis_deg": 0.3227108475067623,
+    "final_optical_m": 0.17355854003019813,
+    "terminal_visible_frames": 472,
+    "terminal_checked_frames": 472,
+    "peak_tracking_m": 0.05531339319147968,
+    "peak_tilt_deg": 2.3908791389144124,
+    "max_gravity_moment_Nm": 0.7103161194148738,
+    "peak_mount_reaction_Nm": 0.7696092174765332,
+    "peak_front_rear_N": 7.163999855518341,
+    "rms_front_rear_N": 4.617224319265961,
+    "orbit_frames": 2903,
+    "tracked_frames": 2263,
+    "matching_exposures": 2903,
+    "scene_geom_count": 498,
+    "command_clip_deg": 76.12592998629042,
+    "body_lateral_excursion_m": 0.3673901128480392,
+    "max_actual_bend_deg": 73.17612028777332
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "fixed",
+      "seed": 26112167,
+      "case": "fixed-26112167"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      null,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.07753008478136446,
+        "t": 32.1,
+        "lower": 0.07752486782507449,
+        "upper": 0.07753530173765442,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 661
+      },
+      "arm_tool": {
+        "m": 0.1272543159864165,
+        "t": 30.68,
+        "lower": 0.127203996438203,
+        "upper": 0.12730463553463003,
+        "pair": [
+          "collision_gripper_finger1",
+          "COL_portal_sill"
+        ],
+        "evaluations": 231
+      }
+    },
+    "self_clearance_5Hz_m": 0.0014539824656325823,
+    "self_clearance_50Hz_m": 0.0014370916006341003,
+    "self_interval_50Hz_m": [
+      0.0013697927503004703,
+      0.0015043904509677304
+    ],
+    "self_additional_refinements": 2226,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      1.1488735334226938,
+      -0.01680616473516034,
+      2.173514186987749
+    ],
+    "end_tool": [
+      1.4475578312309318,
+      -0.018333335400623766,
+      1.850427667962663
+    ],
+    "final_pos_m": 1.9956497056726832,
+    "final_axis_deg": 44.39369922437903,
+    "final_optical_m": 2.1276057187212705,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.04738475341001861,
+    "peak_tilt_deg": 1.6943653712600126,
+    "max_gravity_moment_Nm": 0.7371390570584937,
+    "peak_mount_reaction_Nm": 0.7434751234796194,
+    "peak_front_rear_N": 7.488000154495239,
+    "rms_front_rear_N": 7.327363673119235,
+    "orbit_frames": 1462,
+    "tracked_frames": 1462,
+    "matching_exposures": 1462,
+    "scene_geom_count": 498,
+    "command_clip_deg": 83.00833254187957,
+    "body_lateral_excursion_m": 0.034124433676045195,
+    "max_actual_bend_deg": 80.13262656475024
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "sequential",
+      "seed": 26112167,
+      "case": "sequential-26112167"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      56.36,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.07030015899297426,
+        "t": 42.58,
+        "lower": 0.07028953909019078,
+        "upper": 0.07031077889575774,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 218
+      },
+      "arm_tool": {
+        "m": 0.11930349368794578,
+        "t": 42.300000000000004,
+        "lower": 0.1193034936879451,
+        "upper": 0.11930349368794646,
+        "pair": [
+          "collision_gripper_finger1",
+          "COL_portal_sill"
+        ],
+        "evaluations": 437
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009259864766425758,
+    "self_clearance_50Hz_m": 0.0009258485061703345,
+    "self_interval_50Hz_m": [
+      0.0008515778395710472,
+      0.001000119172769622
+    ],
+    "self_additional_refinements": 2853,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      1.3937668732396538,
+      -0.14606316601021457,
+      2.269138064633741
+    ],
+    "end_tool": [
+      1.3924008536230443,
+      -0.14577273951453015,
+      1.7518832157385313
+    ],
+    "final_pos_m": 2.071132342684396,
+    "final_axis_deg": 50.14510497594252,
+    "final_optical_m": 0.024514727292164768,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.04074977761150422,
+    "peak_tilt_deg": 3.23763239829106,
+    "max_gravity_moment_Nm": 0.7557022309543052,
+    "peak_mount_reaction_Nm": 0.8841527533121851,
+    "peak_front_rear_N": 8.280000686645508,
+    "rms_front_rear_N": 5.267334032154245,
+    "orbit_frames": 1810,
+    "tracked_frames": 1382,
+    "matching_exposures": 1810,
+    "scene_geom_count": 498,
+    "command_clip_deg": 86.83163405803205,
+    "body_lateral_excursion_m": 0.15578870612419563,
+    "max_actual_bend_deg": 83.74810811927846
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "unregularized",
+      "seed": 26112167,
+      "case": "unregularized-26112167"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "completed",
+    "task_success": true,
+    "task_dwell_s": 9.400000000000006,
+    "first_pass_s": 104.5,
+    "passages_s": [
+      48.800000000000004,
+      79.76,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.061331466498507056,
+        "t": 35.56,
+        "lower": 0.06133146649850553,
+        "upper": 0.06133146649850859,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 1181
+      },
+      "arm_tool": {
+        "m": 0.08483768426361608,
+        "t": 117.64,
+        "lower": 0.08483371801152298,
+        "upper": 0.08484165051570919,
+        "pair": [
+          "alignment_probe_load",
+          "COL_flange"
+        ],
+        "evaluations": 1159
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009716189572881802,
+    "self_clearance_50Hz_m": 0.0009307979967602607,
+    "self_interval_50Hz_m": [
+      0.0008614150373862247,
+      0.0010001809561342968
+    ],
+    "self_additional_refinements": 4499,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 9.400000000000006,
+    "collision_steps": 0,
+    "end_phase": "inspect",
+    "end_xyz": [
+      3.257575899515101,
+      0.09633516079079407,
+      2.238860230843798
+    ],
+    "end_tool": [
+      3.4302121739050015,
+      0.22908612774457507,
+      1.803921995181729
+    ],
+    "final_pos_m": 0.012068310510827684,
+    "final_axis_deg": 0.455923038201427,
+    "final_optical_m": 0.16397687719930792,
+    "terminal_visible_frames": 297,
+    "terminal_checked_frames": 297,
+    "peak_tracking_m": 0.07835549397086793,
+    "peak_tilt_deg": 3.269922898192472,
+    "max_gravity_moment_Nm": 0.7804307689626182,
+    "peak_mount_reaction_Nm": 0.8105580033319498,
+    "peak_front_rear_N": 7.2360005378723145,
+    "rms_front_rear_N": 4.757241479067547,
+    "orbit_frames": 2725,
+    "tracked_frames": 2313,
+    "matching_exposures": 2725,
+    "scene_geom_count": 498,
+    "command_clip_deg": 76.8839573396722,
+    "body_lateral_excursion_m": 0.37519780679012077,
+    "max_actual_bend_deg": 73.91094653949521
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "coupled",
+      "seed": 26112167,
+      "case": "coupled-26112167"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      51.02,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.06147021787285656,
+        "t": 38.46,
+        "lower": 0.06147021787285656,
+        "upper": 0.06147021787285656,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 196
+      },
+      "arm_tool": {
+        "m": 0.09194483693450933,
+        "t": 56.32,
+        "lower": 0.09193713322049651,
+        "upper": 0.09195254064852214,
+        "pair": [
+          "d435",
+          "COL_instrument_elbow"
+        ],
+        "evaluations": 171
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009715064423524362,
+    "self_clearance_50Hz_m": 0.000929474391092406,
+    "self_interval_50Hz_m": [
+      0.000858766629393326,
+      0.001000182152791486
+    ],
+    "self_additional_refinements": 4820,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "execute",
+    "end_xyz": [
+      1.849255472082839,
+      -0.22465052819418796,
+      2.311503780455571
+    ],
+    "end_tool": [
+      2.112203162672745,
+      -0.3579278995687903,
+      1.9801270402328535
+    ],
+    "final_pos_m": 1.4547803016236147,
+    "final_axis_deg": 62.29926581822465,
+    "final_optical_m": 1.0653840632851945,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.061404623866117725,
+    "peak_tilt_deg": 2.5158222343655168,
+    "max_gravity_moment_Nm": 0.7504644859995439,
+    "peak_mount_reaction_Nm": 0.9642476279484471,
+    "peak_front_rear_N": 8.340000450611115,
+    "rms_front_rear_N": 5.18635362781283,
+    "orbit_frames": 2903,
+    "tracked_frames": 2602,
+    "matching_exposures": 2903,
+    "scene_geom_count": 498,
+    "command_clip_deg": 80.83810595378044,
+    "body_lateral_excursion_m": 0.2643209676553151,
+    "max_actual_bend_deg": 77.93719237366315
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "straight",
+      "seed": 26112167,
+      "case": "straight-26112167"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      null,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.2155497081225286,
+        "t": 25.66,
+        "lower": 0.21552202036623885,
+        "upper": 0.21557739587881838,
+        "pair": [
+          "collision_landing_163",
+          "COL_portal_sill"
+        ],
+        "evaluations": 1492
+      },
+      "arm_tool": {
+        "m": 0.26511722202380456,
+        "t": 25.64,
+        "lower": 0.26511722202380456,
+        "upper": 0.26511722202380456,
+        "pair": [
+          "d435",
+          "COL_portal_sill"
+        ],
+        "evaluations": 1
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009335880159689244,
+    "self_clearance_50Hz_m": 0.0009266071071093168,
+    "self_interval_50Hz_m": [
+      0.0008530957305001963,
+      0.0010001184837184374
+    ],
+    "self_additional_refinements": 1553,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      0.596542810093879,
+      -0.022809826715797742,
+      2.156674798713046
+    ],
+    "end_tool": [
+      0.5959986736434506,
+      -0.02306958227442507,
+      1.6394181579479061
+    ],
+    "final_pos_m": 2.8509760396014348,
+    "final_axis_deg": 50.12399670287877,
+    "final_optical_m": -0.08592493476114324,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.016103628943850954,
+    "peak_tilt_deg": 3.0571841619574447,
+    "max_gravity_moment_Nm": 0.13969502371704082,
+    "peak_mount_reaction_Nm": 0.10732148831960382,
+    "peak_front_rear_N": 1.3199998140335083,
+    "rms_front_rear_N": 0.43667778695248194,
+    "orbit_frames": 1088,
+    "tracked_frames": 346,
+    "matching_exposures": 1088,
+    "scene_geom_count": 498,
+    "command_clip_deg": 0.0,
+    "body_lateral_excursion_m": 0.030836962828541828,
+    "max_actual_bend_deg": 0.3992346386834641
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "sequential",
+      "seed": 26112173,
+      "case": "sequential-26112173"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      55.96,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.0682923328002769,
+        "t": 42.64,
+        "lower": 0.06829088701816127,
+        "upper": 0.06829377858239252,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 201
+      },
+      "arm_tool": {
+        "m": 0.12066228398747503,
+        "t": 42.12,
+        "lower": 0.12066228398747435,
+        "upper": 0.12066228398747572,
+        "pair": [
+          "visual_gripper_finger1",
+          "COL_portal_sill"
+        ],
+        "evaluations": 488
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009258295573675515,
+    "self_clearance_50Hz_m": 0.0009257653404568698,
+    "self_interval_50Hz_m": [
+      0.0008514025749448706,
+      0.001000128105968869
+    ],
+    "self_additional_refinements": 2853,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      1.3951866073775918,
+      -0.14101863628555963,
+      2.271004694343627
+    ],
+    "end_tool": [
+      1.394313424365576,
+      -0.14065261876288765,
+      1.753748389192754
+    ],
+    "final_pos_m": 2.069835312089928,
+    "final_axis_deg": 50.100376162607425,
+    "final_optical_m": 0.03166872548819185,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.04327782298114167,
+    "peak_tilt_deg": 3.2269549893665084,
+    "max_gravity_moment_Nm": 0.755712062846325,
+    "peak_mount_reaction_Nm": 0.8858965008396342,
+    "peak_front_rear_N": 8.30400037765503,
+    "rms_front_rear_N": 5.307689678404687,
+    "orbit_frames": 1810,
+    "tracked_frames": 1472,
+    "matching_exposures": 1810,
+    "scene_geom_count": 498,
+    "command_clip_deg": 86.64694389695958,
+    "body_lateral_excursion_m": 0.15707122278964827,
+    "max_actual_bend_deg": 83.70166381716645
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "unregularized",
+      "seed": 26112173,
+      "case": "unregularized-26112173"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 10.100000000000009,
+    "first_pass_s": 103.0,
+    "passages_s": [
+      48.44,
+      80.08,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.05654056937452594,
+        "t": 35.660000000000004,
+        "lower": 0.056540569374524396,
+        "upper": 0.056540569374527484,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 1328
+      },
+      "arm_tool": {
+        "m": 0.0900252898157521,
+        "t": 55.08,
+        "lower": 0.0900025428562362,
+        "upper": 0.090048036775268,
+        "pair": [
+          "d435",
+          "COL_instrument_elbow"
+        ],
+        "evaluations": 1318
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009290268412442605,
+    "self_clearance_50Hz_m": 0.0009288070052901325,
+    "self_interval_50Hz_m": [
+      0.0008574294543226557,
+      0.0010001845562576093
+    ],
+    "self_additional_refinements": 4499,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 10.080000000000013,
+    "collision_steps": 0,
+    "end_phase": "inspect",
+    "end_xyz": [
+      3.2467113276618207,
+      0.10508772026301495,
+      2.244651334177012
+    ],
+    "end_tool": [
+      3.4196031405535185,
+      0.23570705653705037,
+      1.8086972325703254
+    ],
+    "final_pos_m": 0.008650504079305862,
+    "final_axis_deg": 0.4914746671184862,
+    "final_optical_m": 0.17160476009212178,
+    "terminal_visible_frames": 315,
+    "terminal_checked_frames": 315,
+    "peak_tracking_m": 0.06957841742746959,
+    "peak_tilt_deg": 2.977409067962602,
+    "max_gravity_moment_Nm": 0.766440162818934,
+    "peak_mount_reaction_Nm": 0.7962784982974931,
+    "peak_front_rear_N": 7.560000479221344,
+    "rms_front_rear_N": 4.758379097167982,
+    "orbit_frames": 2725,
+    "tracked_frames": 2287,
+    "matching_exposures": 2725,
+    "scene_geom_count": 498,
+    "command_clip_deg": 76.90171990356478,
+    "body_lateral_excursion_m": 0.3714363401602363,
+    "max_actual_bend_deg": 73.94177216860254
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "coupled",
+      "seed": 26112173,
+      "case": "coupled-26112173"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 13.939999999999998,
+    "first_pass_s": 106.98,
+    "passages_s": [
+      50.9,
+      83.0,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.05729967858155249,
+        "t": 38.2,
+        "lower": 0.05729967858155227,
+        "upper": 0.057299678581552715,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 211
+      },
+      "arm_tool": {
+        "m": 0.09215499569143965,
+        "t": 56.58,
+        "lower": 0.09213968379282031,
+        "upper": 0.09217030759005898,
+        "pair": [
+          "d435",
+          "COL_instrument_elbow"
+        ],
+        "evaluations": 894
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009438702826084183,
+    "self_clearance_50Hz_m": 0.0009294020862373888,
+    "self_interval_50Hz_m": [
+      0.0008586078672037081,
+      0.0010001963052710696
+    ],
+    "self_additional_refinements": 4820,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 13.920000000000016,
+    "collision_steps": 0,
+    "end_phase": "inspect",
+    "end_xyz": [
+      3.2675270633908706,
+      0.09608043246744506,
+      2.2545335302917975
+    ],
+    "end_tool": [
+      3.43698632991789,
+      0.23144854374539164,
+      1.8198218126823316
+    ],
+    "final_pos_m": 0.020137224663803792,
+    "final_axis_deg": 1.0593585268455639,
+    "final_optical_m": 0.1717616477106151,
+    "terminal_visible_frames": 413,
+    "terminal_checked_frames": 413,
+    "peak_tracking_m": 0.059508119711012324,
+    "peak_tilt_deg": 2.6437472113926295,
+    "max_gravity_moment_Nm": 0.717882350704846,
+    "peak_mount_reaction_Nm": 0.7660468312934081,
+    "peak_front_rear_N": 7.3080005049705505,
+    "rms_front_rear_N": 4.58315929397292,
+    "orbit_frames": 2903,
+    "tracked_frames": 2452,
+    "matching_exposures": 2903,
+    "scene_geom_count": 498,
+    "command_clip_deg": 76.11408051071318,
+    "body_lateral_excursion_m": 0.3768198816933832,
+    "max_actual_bend_deg": 73.1385300590147
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "straight",
+      "seed": 26112173,
+      "case": "straight-26112173"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      null,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.21662165890005652,
+        "t": 55.480000000000004,
+        "lower": 0.21660425149366436,
+        "upper": 0.21663906630644866,
+        "pair": [
+          "collision_central_equipment",
+          "COL_roof"
+        ],
+        "evaluations": 1505
+      },
+      "arm_tool": {
+        "m": 0.2641579277029035,
+        "t": 25.64,
+        "lower": 0.2641579277029031,
+        "upper": 0.26415792770290386,
+        "pair": [
+          "d435",
+          "COL_portal_sill"
+        ],
+        "evaluations": 1
+      }
+    },
+    "self_clearance_5Hz_m": 0.0009339824912863603,
+    "self_clearance_50Hz_m": 0.0009256071515493404,
+    "self_interval_50Hz_m": [
+      0.0008510713908735923,
+      0.0010001429122250885
+    ],
+    "self_additional_refinements": 1553,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      0.5876291362206048,
+      -0.025362942590170797,
+      2.182863067368809
+    ],
+    "end_tool": [
+      0.5868339062731758,
+      -0.024831401697385593,
+      1.6656069687120125
+    ],
+    "final_pos_m": 2.8573002241716416,
+    "final_axis_deg": 50.1761099171176,
+    "final_optical_m": -0.0654797858748964,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.019168993557043663,
+    "peak_tilt_deg": 3.077424762307758,
+    "max_gravity_moment_Nm": 0.1384096641410674,
+    "peak_mount_reaction_Nm": 0.1080340024077522,
+    "peak_front_rear_N": 1.3199998140335083,
+    "rms_front_rear_N": 0.4347529503369162,
+    "orbit_frames": 1088,
+    "tracked_frames": 358,
+    "matching_exposures": 1088,
+    "scene_geom_count": 498,
+    "command_clip_deg": 0.0,
+    "body_lateral_excursion_m": 0.034100355385798996,
+    "max_actual_bend_deg": 0.399842559621225
+  },
+  {
+    "case": {
+      "method": "proposed",
+      "strategy": "fixed",
+      "seed": 26112173,
+      "case": "fixed-26112173"
+    },
+    "scene": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
+    "classification": "evaluated",
+    "task_success": false,
+    "task_dwell_s": 0.0,
+    "first_pass_s": null,
+    "passages_s": [
+      null,
+      null,
+      null
+    ],
+    "clearance": {
+      "body": {
+        "m": 0.069472771967156,
+        "t": 32.06,
+        "lower": 0.06946600222306029,
+        "upper": 0.0694795417112517,
+        "pair": [
+          "collision_central_equipment",
+          "COL_portal_lintel"
+        ],
+        "evaluations": 479
+      },
+      "arm_tool": {
+        "m": 0.13585379083750712,
+        "t": 30.78,
+        "lower": 0.13584135442525075,
+        "upper": 0.1358662272497635,
+        "pair": [
+          "collision_gripper_finger1",
+          "COL_portal_sill"
+        ],
+        "evaluations": 311
+      }
+    },
+    "self_clearance_5Hz_m": 0.0014424921313081155,
+    "self_clearance_50Hz_m": 0.0014355786024021627,
+    "self_interval_50Hz_m": [
+      0.0013696304684109875,
+      0.0015015267363933382
+    ],
+    "self_additional_refinements": 2226,
+    "self_broad_phase_50Hz_m": 0.0,
+    "optical_dwell_s": 0.0,
+    "collision_steps": 0,
+    "end_phase": "safe_prefix_end",
+    "end_xyz": [
+      1.1534518748945333,
+      -0.027289467212727205,
+      2.15468697775028
+    ],
+    "end_tool": [
+      1.4521166275324984,
+      -0.02827984693803365,
+      1.8317341902792463
+    ],
+    "final_pos_m": 1.9950779865332715,
+    "final_axis_deg": 44.43387131866227,
+    "final_optical_m": 2.123131663657679,
+    "terminal_visible_frames": 0,
+    "terminal_checked_frames": 0,
+    "peak_tracking_m": 0.04265746590778091,
+    "peak_tilt_deg": 0.4792539109976712,
+    "max_gravity_moment_Nm": 0.7370583876932465,
+    "peak_mount_reaction_Nm": 0.7549971525342253,
+    "peak_front_rear_N": 7.60800039768219,
+    "rms_front_rear_N": 7.377192710706767,
+    "orbit_frames": 1462,
+    "tracked_frames": 1448,
+    "matching_exposures": 1462,
+    "scene_geom_count": 498,
+    "command_clip_deg": 83.20527261844853,
+    "body_lateral_excursion_m": 0.03460994682993955,
+    "max_actual_bend_deg": 80.16694383145314
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "feature": "Service opening",
+    "exposure": 33.12,
+    "delivery": 33.32,
+    "frame": 528,
+    "native_rgb_sha256": "9a65ae84ae3e3d69f283ba68cf2976abdd73eec8ec9c70fe64e0dcc42e5549ef",
+    "qpos_sha256": "83e6b5581201bb2b1f885eb49825c6fe5bed1bdc814d79e8f4f3b8db3f34745c",
+    "visible_fraction_240x180": 0.29064814814814816,
+    "feature_centre_normalized": [
+      0.40213742433896144,
+      0.7915910056281193
+    ]
+  },
+  {
+    "feature": "Asymmetric pipe",
+    "exposure": 40.480000000000004,
+    "delivery": 40.68000000000001,
+    "frame": 712,
+    "native_rgb_sha256": "26e4704cf4dab08bec594c491d5c367d6d4d8e44987e706ae76e6ef8c12d884d",
+    "qpos_sha256": "991dcc2228ec7f9e6ac1f95bda0a1ed8b085268bb9cb25661ac4236298270d36",
+    "visible_fraction_240x180": 0.10983796296296296,
+    "feature_centre_normalized": [
+      0.724423076923077,
+      0.30504273504273505
+    ]
+  },
+  {
+    "feature": "Inspection flange",
+    "exposure": 109.92,
+    "delivery": 110.12,
+    "frame": 2448,
+    "native_rgb_sha256": "7524e612f01d36b367f015521e1d14e82cbfc5f79315ddbe70de96010ebaa9a1",
+    "qpos_sha256": "6afa16fc16ae9f82f480a8b8394453f54de4f864443403e69fae1ca3be64e904",
+    "visible_fraction_240x180": 0.3946527777777778,
+    "feature_centre_normalized": [
+      0.4797197294073944,
+      0.5656959352454689
+    ]
+  }
+]
