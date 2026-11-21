@@ -30,6 +30,7 @@ class Controller:
         self.integral=np.zeros(2);self.issued=np.zeros(2);self.des=np.zeros(2)
         self.ref=HOVER.copy();self.yaw=0.;self.phase='takeoff';self.checked=0;self.exit_time=None
         self.s=P['servo'];self.holding=False
+        self.reserve=np.array([.066,.078]);self.last_gap=None;self.gap_rate=np.zeros(2)
     def sample(self,clock):
         j=min(np.searchsorted(self.t,clock),len(self.t)-1)
         if j==0:return self.q[0].copy()
@@ -43,6 +44,9 @@ class Controller:
             R=enu_body_rotation(rpy);g.place_estimate(xyz,R,estimate)
             components=self.geom.components(g.d,xyz);components[:,6]=0
             clear=self.geom.query(components,np.r_[xyz,0.,0,0])[0]
+            if self.last_gap is not None:
+                self.gap_rate=.78*self.gap_rate+.22*np.clip((clear-self.last_gap)/.02,-.35,.35)
+            self.last_gap=clear.copy()
             # Check the measured pose and a short braking projection with the actual attitude.
             v=np.asarray(velocity);a=(.30+np.linalg.norm(v)/(2*.55))*v
             ahead=np.minimum.reduce([self.geom.query(components,np.r_[xyz+f*a,0.,0,0])[0] for f in (.33,.67,1.)])
@@ -59,23 +63,37 @@ class Controller:
             self.phase='execute'
             if not fresh:hold='feedback'
             elif hit:hold='self'
-            elif min(np.min(clear),np.min(ahead))<.060:hold='clearance'
+            elif np.min(np.minimum(clear,ahead)-self.reserve)<0:hold='clearance'
             elif np.linalg.norm(xyz-self.ref)>.085:hold='tracking'
             if hold=='none':
-                remaining=min(np.min(clear),np.min(ahead))
-                rate=float(np.clip(.36+7.0*(remaining-.06),.36,1.))
+                reserve=np.min(np.minimum(clear,ahead)-self.reserve)
+                rate=float(np.clip(.32+7.0*reserve,.32,1.))
                 self.elapsed=min(self.t[-1],self.elapsed+.02*rate);q=self.sample(self.elapsed)
                 j=min(np.searchsorted(self.t,self.elapsed),len(self.t)-1)
                 self.ff=(rate*self.v[j,:3].copy(),rate**2*self.acc[j,:3].copy())
             self.ref=q[:3].copy();self.yaw=float(q[3])
-            self.des=q[4]*np.array([np.cos(q[5]),np.sin(q[5])])
-            if fresh and self.full_route and not hit and self.elapsed<self.t[-1]-.4:
-                lead=self.sample(self.elapsed+.36)
-                next_b=lead[4]*np.array([np.cos(lead[5]),np.sin(lead[5])])
-                g.place_estimate(xyz,R,next_b)
-                extra=self.geom.components(g.d,xyz);extra[:,6]=0.
-                if min(self.geom.query(extra,np.r_[xyz,0.,0.,0.])[0])>=min(.068,min(clear)) and not g.has_self_contact():
-                    self.des=next_b
+            nominal=q[4]*np.array([np.cos(q[5]),np.sin(q[5])])
+            if fresh and self.method not in ('straight','fixed') and not hit and self.elapsed<self.t[-1]-.4:
+                # Evaluate the nominal shape too: a certified path can lead the real
+                # aircraft during braking. Releasing bend early consumes sill clearance.
+                minimum=min(.084,min(clear[1],ahead[1]))-.0003
+                best=-np.inf;selected=None;scheduled=False
+                candidates=[(False,self.des.copy()),(False,estimate),(True,nominal)]
+                for advance in (.34,.68,1.02):
+                    lead=self.sample(self.elapsed+advance)
+                    candidates.append((True,lead[4]*np.array([np.cos(lead[5]),np.sin(lead[5])])))
+                for on_spline,next_b in candidates:
+                    g.place_estimate(xyz,R,next_b)
+                    extra=self.geom.components(g.d,xyz);extra[:,6]=0.
+                    gap=min(self.geom.query(extra,np.r_[xyz,0.,0.,0.])[0][1],
+                            self.geom.query(extra,np.r_[xyz+a,0.,0.,0.])[0][1])
+                    if g.has_self_contact():continue
+                    if on_spline and gap>=minimum:
+                        selected=next_b;scheduled=True
+                    elif not scheduled and gap>best:
+                        selected=next_b;best=gap
+                if selected is not None:self.des+=limit_vector(selected-self.des,.02*np.deg2rad(self.s['command_rate_deg_s']))
+            else:self.des=nominal
             if self.elapsed>=self.t[-1]-.001 and self.full_route and fresh:
                 self.phase='inspect'
                 if self.exit_time is None:self.exit_time=t
@@ -91,18 +109,38 @@ class Controller:
                 self.ref=self.brake.copy()
                 if hold=='clearance':
                     # Translate toward larger measured whole-body clearance before rejoining the spline.
+                    # Body and arm constraints share the same flight translation.
+                    # Superpose their corrections to avoid alternating upward and
+                    # downward commands between a sill and an opposing lintel.
+                    limits=self.reserve
                     gradient=[]
                     for unit in np.eye(3)*.004:
-                        plus=min(self.geom.query(components,np.r_[xyz+unit,0.,0.,0.])[0])
-                        minus=min(self.geom.query(components,np.r_[xyz-unit,0.,0.,0.])[0])
+                        plus=self.geom.query(components,np.r_[xyz+unit,0.,0.,0.])[0]
+                        minus=self.geom.query(components,np.r_[xyz-unit,0.,0.,0.])[0]
                         gradient.append((plus-minus)/.008)
-                    self.ref+=limit_vector(np.asarray(gradient)*max(0.,.074-min(clear)),.025)
+                    deficit=np.maximum(0.,limits+.009-np.minimum(clear,ahead))
+                    self.ref+=limit_vector(np.asarray(gradient)@deficit,.025)
         self.holding=hold in ('clearance','self') and fresh
         if fresh and t>=21:
             vref,aff=self.ff
             # PX4 receives acceleration in the inertial frame before its native
             # attitude/rate loops and motor mixer, including during a braking hold.
             acc=aff+2.0*(self.ref-xyz)+3.2*(vref-np.asarray(velocity))
+            # A relative-degree-two clearance constraint acts on the PX4 acceleration
+            # feedforward before the position guard has come to a stop. Distance rate
+            # includes rotation of the aircraft and deformation of the tool.
+            close=np.flatnonzero(clear<self.reserve+.037)
+            if len(close):
+                jac=[]
+                for unit in np.eye(3)*.003:
+                    plus=self.geom.query(components,np.r_[xyz+unit,0.,0.,0.])[0]
+                    minus=self.geom.query(components,np.r_[xyz-unit,0.,0.,0.])[0]
+                    jac.append((plus-minus)/.006)
+                jac=np.asarray(jac).T;tau=.38
+                for k in close[np.argsort((clear-self.reserve)[close])[::-1]]:
+                    normal=jac[k];norm2=normal@normal
+                    required=2*(self.reserve[k]-clear[k]-tau*self.gap_rate[k])/tau**2
+                    if norm2>.15:acc+=normal*np.clip((required-normal@acc)/norm2,0.,.65)
             self.ff=(vref,limit_vector(acc,.85))
         if fresh and not hit and t>=12:
             e=self.des-estimate

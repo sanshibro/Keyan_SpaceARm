@@ -59,14 +59,14 @@ def evaluate(folder,output):
     # whose conservative lower bound is greater than this upper witness cannot improve it.
     mins={};stations=[]
     for k,kind in enumerate(('body','arm_tool')):
-        best=np.inf;winner=None;count=0
+        best=np.inf;lowest=np.inf;winner=None;count=0
         for n in np.flatnonzero(during)[np.argsort(ext[during,k])]:
-            if ext[n,k]>=best:break
+            if ext[n,k]>0. and ext[n,k]>=best:break
             audit.d.qpos[:]=Q[n];mujoco.mj_kinematics(p.m,audit.d)
             lo,hi=audit.bounds();result=audit._scan(kind,audit.external[kind],lo,hi)
-            count+=1
+            count+=1;lowest=min(lowest,result['lower'])
             if result['upper']<best:best=result['upper'];winner=(int(n),result)
-        n,r=winner;mins[kind]=dict(m=float(r['distance']),t=float(t[n]),lower=float(r['lower']),upper=float(r['upper']),
+        n,r=winner;mins[kind]=dict(m=float((lowest+best)*.5),t=float(t[n]),lower=float(lowest),upper=float(best),
                 pair=[r['name_a'],r['name_b']],evaluations=count)
     # Fully sampled independent self audit, accelerate repeated pair bounds with the
     # same broad phase used by the signed-convex verifier.
@@ -76,17 +76,20 @@ def evaluate(folder,output):
         delta=np.maximum(np.maximum(l[aa]-h[bb],l[bb]-h[aa]),0.)
         self_lower.append(np.linalg.norm(delta,axis=1).min())
     # Exact self/contact curve at 5 Hz. All 50 Hz samples retain the self AABB lower bound.
-    ns=np.flatnonzero(during);sample=ns[::10];self_curve=[]
+    ns=np.flatnonzero(during);sample=ns[::10];self_curve=[];exact_ext=[]
+    self_lo=np.inf;self_best=np.inf
     for n in sample:
         audit.d.qpos[:]=Q[n];mujoco.mj_kinematics(p.m,audit.d);l,h=audit.bounds()
         r=audit._scan('self',pairs,l,h);self_curve.append(r['distance'])
-    self_curve=np.array(self_curve);self_best=float(self_curve.min());self_remaining=0
+        self_lo=min(self_lo,r['lower']);self_best=min(self_best,r['upper'])
+        exact_ext.append([audit._scan(k,audit.external[k],l,h)['distance'] for k in ('body','arm_tool')])
+    self_curve=np.array(self_curve);self_remaining=0
     for j in np.argsort(self_lower):
-        if self_lower[j]>=self_best:break
+        if self_lower[j]>0. and self_lower[j]>=self_best:break
         n=ns[j]
         if j%10==0:continue
         audit.d.qpos[:]=Q[n];mujoco.mj_kinematics(p.m,audit.d);l,h=audit.bounds()
-        r=audit._scan('self',pairs,l,h);self_best=min(self_best,float(r['upper']));self_remaining+=1
+        r=audit._scan('self',pairs,l,h);self_best=min(self_best,float(r['upper']));self_lo=min(self_lo,r['lower']);self_remaining+=1
     inside=(A[:,3]>=.12)&(A[:,3]<=.18)&(A[:,4]>=0)&(A[:,4]<480)&(A[:,5]>=0)&(A[:,5]<360)
     eligible=(pose<=.035)&(A[:,2]<=3.)&inside&(c['phase']=='inspect')
     span,first=dwell(t,eligible)
@@ -111,10 +114,10 @@ def evaluate(folder,output):
     if not transition.any():transition=during
     z=np.load(f/'optics/observations.npz')
     optical_dwell,_=dwell(np.array([r['t'] for r in optical]),visible)
-    success=bool(span>=1.-1e-7 and optical_dwell>=1.-1e-7 and all(v['lower']>=.06 for v in mins.values()) and run['contact_integration_steps']==0 and self_best>0)
+    success=bool(span>=1.-1e-7 and optical_dwell>=1.-1e-7 and all(v['lower']>=.06 for v in mins.values()) and run['contact_integration_steps']==0 and self_lo>0)
     summary=dict(case=prov['mission']['case'],scene=p.scene_digest,classification='completed' if success else 'evaluated',
         task_success=success,task_dwell_s=span,first_pass_s=first,passages_s=t_pass,clearance=mins,
-        self_clearance_5Hz_m=float(self_curve.min()),self_clearance_50Hz_m=self_best,self_additional_refinements=self_remaining,
+        self_clearance_5Hz_m=float(self_curve.min()),self_clearance_50Hz_m=.5*(self_lo+self_best),self_interval_50Hz_m=[self_lo,self_best],self_additional_refinements=self_remaining,
         self_broad_phase_50Hz_m=float(np.min(self_lower)),optical_dwell_s=optical_dwell,
         collision_steps=run['contact_integration_steps'],end_phase=str(c['phase'][-1]),end_xyz=Q[-1,:3],end_tool=tcp[-1],
         final_pos_m=float(np.median(pose[t>=t[-1]-1])),final_axis_deg=float(np.median(A[t>=t[-1]-1,2])),
@@ -128,7 +131,7 @@ def evaluate(folder,output):
         body_lateral_excursion_m=float(np.ptp(Q[during,1])),max_actual_bend_deg=float(np.rad2deg(np.linalg.norm(A[:,6:8],axis=1).max())))
     np.savez_compressed(out/'series.npz',t=t,body=Q[:,:3],qpos=Q,tcp=tcp,ref_xyz=c['ref_world'],ref_b=c['des_b'],
          est_b=c['est_b'],actual_b=A[:,6:8],external_lower=ext,self_lower_t=t[ns],self_lower=self_lower,
-         self_exact_t=t[sample],self_exact=self_curve,moment=A[:,8:10],mount_reaction=np.array(reaction),rotors=Z,front_rear=fth,tracking=err,tilt=A[:,10],yaw=A[:,11],
+         self_exact_t=t[sample],self_exact=self_curve,external_exact=np.asarray(exact_ext),moment=A[:,8:10],mount_reaction=np.array(reaction),rotors=Z,front_rear=fth,tracking=err,tilt=A[:,10],yaw=A[:,11],
          target_error=pose,target_angle=A[:,2],zcam=A[:,3],uv=A[:,4:6],rear_x=A[:,12],phase=c['phase'],hold=c['hold'],verified_views=np.array(samples))
     writej(out/'metrics.json',summary);print(json.dumps(clean(summary),ensure_ascii=False),flush=True)
 if __name__=='__main__':
