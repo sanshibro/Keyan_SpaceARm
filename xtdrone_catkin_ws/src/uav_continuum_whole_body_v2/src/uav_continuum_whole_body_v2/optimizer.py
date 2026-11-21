@@ -725,6 +725,19 @@ class WholeBodyOptimizer:
                     controls, span_durations = repaired_controls, repaired_durations
                     spline, validation, repair_used = repaired_spline, repaired_validation, label
                     break
+        retime = getattr(self, 'repair_clock', None)
+        if retime is not None and not validation.feasible:
+            alternative = retime(controls, span_durations, validation, seed, durations)
+            if alternative is not None:
+                controls, span_durations, validation = alternative
+                spline = self._spline(controls, span_durations)
+                repair_used = 'independently_validated_time_scaling'
+        polishing = getattr(self, 'polish_certified', None)
+        polish_report = None
+        if polishing is not None and validation.feasible:
+            controls, span_durations, validation, polish_report = polishing(
+                controls, span_durations, validation, candidate_vector, reference)
+            spline = self._spline(controls, span_durations)
         trajectory = spline.sample(
             self.config.output_dt, source="rolling_whole_body_v2", objective=best["objective"],
             metadata={"solver_status": status, "risk_knots": seed_plan.risk_knots,
@@ -735,6 +748,9 @@ class WholeBodyOptimizer:
                           else conditioned_initial_rate.tolist()
                       )},
         )
+        if polishing is not None:
+            trajectory.metadata['control_states'] = spline.control_states.tolist()
+            trajectory.metadata['validated_refinement'] = polish_report
         return OptimizationResult(
             success=validation.feasible,
             status=("validated_" + status) if validation.feasible else ("rejected_" + status),

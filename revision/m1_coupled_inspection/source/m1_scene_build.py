@@ -123,7 +123,8 @@ def bake():
     a=FACE+AXIS*.20;b=np.array([3.813,.754,1.49])
     addsolid('bracket',type='capsule',fromto=txt([*a,*b]),size='.042')
     xml=ET.tostring(root,encoding='utf-8');(BASE/'cell.xml').write_bytes(xml)
-    files={p.name:hashfile(p) for p in sorted(BASE.iterdir()) if p.suffix in ('.xml','.obj','.png')}
+    declared=sorted({'cell.xml'}|{node.get('file') for node in assets if node.get('file')})
+    files={n:hashfile(BASE/n) for n in declared}
     writej(BASE/'manifest.json',dict(meshes=len(groups),parts=len(parts),scene_sha256=hashlib.sha256(json.dumps(files,sort_keys=True).encode()).hexdigest(),
       files=files,flange_center=FACE.tolist(),axis=AXIS.tolist(),optical_working_distance_m=STANDOFF,visual_nodes=names,
       cols={'boxes':static,'pipes':pipe},shared_between=['wrist_rgbd','navigation','observer_oblique','observer_side']))

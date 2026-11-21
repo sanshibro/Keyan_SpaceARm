@@ -39,7 +39,7 @@
     0.28,
     1.775
   ],
-  "scene_sha256": "26f00d25df7d4a039fa6607ca579517aee6521675ecd10d756b85178a1673e07",
+  "scene_sha256": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
   "centre_uv": [
     239.50000000000028,
     179.49999999999963
@@ -49,6 +49,6 @@
   "depth_valid_fraction": 0.8467997685185186,
   "angle_tool_axis_deg": 2.831646840510158e-06,
   "mj_version": "3.2.3",
-  "geoms": 490,
+  "geoms": 498,
   "excluded_view_specific_meshes": 0
 }

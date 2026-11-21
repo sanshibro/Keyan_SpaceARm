@@ -207,8 +207,15 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                 # A neutral virtual joystick supplies the monitored manual link in this isolated SITL.
                 ground.mav.manual_control_send(sysid,0,0,0,0,0)
                 ref_ned=ENU_NED@ref+(origin if origin is not None else 0.)
-                ground.mav.set_position_target_local_ned_send(us//1000,sysid,1,1,2552,
-                                            *ref_ned,0,0,0,0,0,0,math.remainder(math.pi/2-getattr(flight_loop,"yaw_enu",0.),2*math.pi),0)
+                yaw_ned = math.remainder(math.pi/2-getattr(flight_loop, "yaw_enu", 0.), 2*math.pi)
+                motion = getattr(flight_loop, "translation_feedforward", None)
+                if motion is None:
+                    ground.mav.set_position_target_local_ned_send(us//1000,sysid,1,1,2552,
+                                                *ref_ned,0,0,0,0,0,0,yaw_ned,0)
+                else:
+                    vel_ff, acc_ff = (ENU_NED @ component for component in motion)
+                    ground.mav.set_position_target_local_ned_send(us//1000,sysid,1,1,2048,
+                                                *ref_ned,*vel_ff,*acc_ff,yaw_ned,0)
             if origin is not None and sim_t>10 and k%FREQ==0:
                 if not last_mode:
                     ground.mav.command_long_send(sysid,1,176,0,1,6,0,0,0,0,0)

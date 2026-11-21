@@ -1,11 +1,8 @@
 {
-  "meshes": 93,
-  "parts": 370,
-  "scene_sha256": "26f00d25df7d4a039fa6607ca579517aee6521675ecd10d756b85178a1673e07",
+  "meshes": 99,
+  "parts": 380,
+  "scene_sha256": "a54fb74c2fe6fa68222bbbed22a96b2ce09051b547a6f3a73dd79b462a000441",
   "files": {
-    "cell.xml": "aa929de8ecd0d67c40b9c760f10341aa754a6682f30941d3440d054059abb942",
-    "concrete.png": "1da56b8b5d00346bfaf4d5cb8a930cbd4e029943b3b82fa49a6be2ded337be3d",
-    "deck.png": "d7d00624ff725e6d7a51a5c451d87c1da954cecfdcc17026eb7fe45b39689a9c",
     "M1_approach_deck_001.obj": "302ec458e73ae3892124d10228e0eafc55af47c6e2a7d47e6c445cf5035ce41a",
     "M1_approach_deck_002.obj": "969e0e9a4f0d6ac82abf20814a89784ad7b91ca22daa4d5a756e441ad54cdf96",
     "M1_asymmetric_riser_083.obj": "324b9aab19f21d350055a661233969a50562b60acbc01a0908febd0eae22737a",
@@ -18,10 +15,10 @@
     "M1_flange_back_068.obj": "b4d1693ebf096bc57cb675ca4b3b7b85d4ff121e28e687deb7967d5079ebb37c",
     "M1_flange_back_069.obj": "3bd236b54b9433338441953afd7ff3fc36877ca06f067cc5bc8b71dad11a5ed4",
     "M1_flange_back_070.obj": "4bfc1fdcb8f1cc2066c99a62cb0664592089d7e1d353dfb58ca0bbf360207f09",
-    "M1_flange_front_089.obj": "f8a1766aadb64f813ad1bee6afc15e2ee9ed7cf2c31ef98766e83464bc011703",
-    "M1_flange_front_090.obj": "b963ccf7093c517a77f5f862b600d9c7e923d076fe89ebdd5007e054c65049ce",
-    "M1_flange_front_091.obj": "9ec669c6513472c9f3432fa1d87c331c0bf222e5d57347e449825b7fc853544b",
-    "M1_flange_front_092.obj": "9abce8d726a723a2c04d56c5741a24a90cf0306afa37154042d2f807d32d28f7",
+    "M1_flange_front_095.obj": "f8a1766aadb64f813ad1bee6afc15e2ee9ed7cf2c31ef98766e83464bc011703",
+    "M1_flange_front_096.obj": "b963ccf7093c517a77f5f862b600d9c7e923d076fe89ebdd5007e054c65049ce",
+    "M1_flange_front_097.obj": "9ec669c6513472c9f3432fa1d87c331c0bf222e5d57347e449825b7fc853544b",
+    "M1_flange_front_098.obj": "9abce8d726a723a2c04d56c5741a24a90cf0306afa37154042d2f807d32d28f7",
     "M1_flange_lip_059.obj": "eac55d7fb8d3997a861fea118bac0c2ccefa1f4630e4753bfff8214a01f4c089",
     "M1_flange_lip_060.obj": "657efdd2f7a0b2e060cf43f53f17bed95375c6620a78bfa1c2e440b19ac10dda",
     "M1_flange_lip_061.obj": "a079d4e5f8d53601bc798ff65fe1f99fead57f9ab29da6e7f8bd20091ecf5d9e",
@@ -30,6 +27,12 @@
     "M1_flange_lip_064.obj": "ca7c3ca38c096a124d99a1f01e4e53a1d91c96db9e5695a9e118ce5e7fb23d53",
     "M1_flange_tube_065.obj": "09af057d3b59fcbb8600789eaad0410a7810f36b5f9c3cc132c8b1f5254c0df7",
     "M1_foundation_000.obj": "36f806c1f6f23bee19970fa51f313127c7751685557956204ebbd10d23b1a2d9",
+    "M1_instrument_elbow_092.obj": "7ac49ac578b695029bbfb154cb43c753845fd9d4aa881090e48c31bcb14b4e78",
+    "M1_instrument_elbow_093.obj": "e7af902b9341dd658e75aabc44445225843e4093dedb72c335f0e8639019c1d7",
+    "M1_instrument_elbow_094.obj": "432edfc82061f22a575208d90583b717ba9f404536e89b851afa06639573e778",
+    "M1_instrument_tap_089.obj": "f1a7a128a38f1043a9fa6614fd1d80a4df8abcf7d43b7876117760ddc46c9937",
+    "M1_instrument_tap_090.obj": "a5b443d561ba40b1a3f0382e7855b7275fa98173e959c7761dacceef78eacce7",
+    "M1_instrument_tap_091.obj": "764ffe82c63eff5f96cf053792d45862658bf12a8e21b97e5b77c9c9113899d6",
     "M1_jambminus_017.obj": "aee60b482f09e2c741be8ea9bab47c77310a69f448a5e305c1f61ff32bf957da",
     "M1_jambminus_018.obj": "725949f054242ccdca280f4db13c0529a2c376146dac7aa9d93709f318e6e5cf",
     "M1_jambminus_019.obj": "a12d798883a76a51d323f769832bb759501deeb4546a24ad3dde2c6db9e67431",
@@ -99,6 +102,9 @@
     "M1_support_072.obj": "32337b5b550b8c939e4c63aef77e989a2e23813a1d2ebd092913bcd62103a125",
     "M1_support_073.obj": "664ba6d7c0628ced581c08328105a73b2d08cd04e1d55f084c26066bb0560508",
     "M1_support_074.obj": "8bb67237190bf2b01523d2a1c50316a80a8139a42c9328fb147f493acd901b57",
+    "cell.xml": "7077c018965229adb58c8f28ba21c016ea6a07560cc8feede77dc4f9a78f6eb0",
+    "concrete.png": "1da56b8b5d00346bfaf4d5cb8a930cbd4e029943b3b82fa49a6be2ded337be3d",
+    "deck.png": "d7d00624ff725e6d7a51a5c451d87c1da954cecfdcc17026eb7fe45b39689a9c",
     "pipe.png": "2a2f6050db787e16cc9592663c8d67285e0dcfdae4e464e93e0fc58502536d0a",
     "steel.png": "e749a3737877a7f3c1017e01fa985f771708b8b05c770fd096dee9f19eff85ee"
   },
@@ -203,10 +209,16 @@
     "M1_riser_return_086",
     "M1_riser_return_087",
     "M1_riser_return_088",
-    "M1_flange_front_089",
-    "M1_flange_front_090",
-    "M1_flange_front_091",
-    "M1_flange_front_092"
+    "M1_instrument_tap_089",
+    "M1_instrument_tap_090",
+    "M1_instrument_tap_091",
+    "M1_instrument_elbow_092",
+    "M1_instrument_elbow_093",
+    "M1_instrument_elbow_094",
+    "M1_flange_front_095",
+    "M1_flange_front_096",
+    "M1_flange_front_097",
+    "M1_flange_front_098"
   ],
   "cols": {
     "boxes": {
@@ -381,6 +393,32 @@
           2.463
         ],
         0.044
+      ],
+      "instrument_tap": [
+        [
+          1.65,
+          0.135,
+          1.825
+        ],
+        [
+          1.77,
+          0.135,
+          1.825
+        ],
+        0.019
+      ],
+      "instrument_elbow": [
+        [
+          1.65,
+          -0.115,
+          1.825
+        ],
+        [
+          1.65,
+          0.135,
+          1.825
+        ],
+        0.019
       ]
     }
   },

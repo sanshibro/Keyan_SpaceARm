@@ -9,11 +9,13 @@ from m1_geometry import GalleryGeometry
 from planner_adapter import (V21Adapter,WholeBodySeedPlanner,WholeBodyOptimizer,SweptVolumeValidator,
         ArmModel,LIB,load_planner_configuration,ARC_LENGTH,BASE_LENGTH,PLAN_THETA_MAX)
 from uav_continuum_whole_body_v2.trajectory import SplineTrajectory,resample_states
+from uav_continuum_whole_body_v2.seed_planner import SeedPlan
 from uav_continuum_whole_body_v2.geometry import wrap_angle
 from gate_live_optics import clean
 from scipy.spatial.distance import cdist
 from scipy.spatial.transform import Rotation
 from scipy.ndimage import gaussian_filter1d
+from scipy.optimize import minimize
 
 def writej(p,obj):
     Path(p).write_text(json.dumps(clean(obj),indent=2,allow_nan=False)+'\n')
@@ -86,6 +88,7 @@ class Seed(WholeBodySeedPlanner):
         self.layer_log.append(dict(index=index,survivors=[p[-1].tolist() for _,p in chosen]))
         print('layer',index,'unique',len(unique),'beam',len(chosen),flush=True)
         if not chosen:raise RuntimeError('no safe transition into longitudinal layer %d'%index)
+        self.last_path=np.asarray(chosen[0][1]).copy()
         return chosen
     def _clearance(self,s):
         k=s.tobytes()
@@ -149,6 +152,54 @@ class Seed(WholeBodySeedPlanner):
         return cost
 
 class Optimizer(WholeBodyOptimizer):
+    def repair_clock(self,controls,durations,invalid,seed,seed_durations):
+        for c,h in ((controls,durations),(seed,seed_durations)):
+            for ratio in (1.16,1.34,1.59,1.90,2.25):
+                clock=h*ratio
+                if np.max(clock)>self.config.dt_max:break
+                checked=self.validator.validate(self._spline(c,clock),stop_on_failure=True)
+                if checked.feasible:return c,clock,checked
+                if checked.failure_reason in ('body_collision','arm_collision','self_collision'):break
+        return None
+    def polish_certified(self,controls,dt,proof,trial,reference):
+        g=self.platform_geometry;w=self.config.weights;scale=np.deg2rad(18.0)
+        trial_ctrl,_=self._decode(trial)
+        def score(c,h):
+            curve=self._spline(c,h)
+            times=np.linspace(0,curve.duration,101);s=curve.evaluate(times,0);v=curve.evaluate(times,1);a=curve.evaluate(times,2)
+            cp=np.array([g.physical_coupling(q)['com_offset'] for q in s])
+            rr=np.stack([np.interp(np.linspace(0,1,len(s)),np.linspace(0,1,len(reference)),col) for col in reference[:,:3].T],axis=1)
+            vel2=v[:,4]**2+(np.sin(s[:,4])*v[:,5])**2
+            acc2=a[:,4]**2+(np.sin(s[:,4])*a[:,5])**2
+            return float(w['duration']*curve.duration+w['reference']*np.mean(np.sum((s[:,:3]-rr)**2,axis=1))+
+                 w['com']*np.mean((cp/self.limits.com_max)**2)+w['arm_rate']*curve.duration*np.mean(vel2)/scale**2+
+                 w['arm_acceleration']*curve.duration*np.mean(acc2)/(2*scale)**2+w['dt_smooth']*np.mean(np.diff(h)**2))
+        def schedule(c):
+            b=c[:,4,None]*np.c_[np.cos(c[:,5]),np.sin(c[:,5])]
+            bend=np.diff(b,axis=0)
+            power=np.array([np.mean(np.sum(bend[i:i+3]**2,axis=1)) for i in range(len(dt))])
+            def obj(h):
+                rate=bend[1:len(h)+1]/h[:,None]
+                accel=np.diff(rate,axis=0)/(.5*(h[1:]+h[:-1]))[:,None]
+                return (w['duration']*h.sum()+w['arm_rate']*np.sum(power/h)/scale**2+
+                        w['arm_acceleration']*np.sum(np.sum(accel**2,axis=1)*(h[1:]+h[:-1])*.5)/(2*scale)**2+
+                        w['dt_smooth']*np.mean(np.diff(h)**2))
+            bounds=[(max(self.config.dt_min,.65*t),min(self.config.dt_max,1.85*t)) for t in dt]
+            return minimize(obj,dt,method='L-BFGS-B',bounds=bounds,options={'maxiter':36}).x
+        candidates=[];original=score(controls,dt)
+        for cf in (0.,.18,.45,.72,1.):
+            c=controls+cf*(trial_ctrl-controls)
+            if self.locked:c[:,self.locked]=self._seed_base[:,self.locked]
+            clock=schedule(c)
+            for tf in (.25,.5,.75,1.):
+                h=dt+tf*(clock-dt);cost=score(c,h)
+                if cost<original-1e-6:candidates.append((cost,cf,tf,c,h))
+        log=[]
+        for cost,cf,tf,c,h in sorted(candidates,key=lambda x:x[0]):
+            check=self.validator.validate(self._spline(c,h),stop_on_failure=True)
+            log.append(dict(spatial_fraction=cf,time_fraction=tf,cost=cost,valid=check.feasible,reason=check.failure_reason))
+            if check.feasible:return c,h,check,dict(initial_cost=original,accepted_cost=cost,trials=log)
+        return controls,dt,proof,dict(initial_cost=original,accepted_cost=original,trials=log)
     def initial_span_clock(self,seed,uniform):
         delta=np.abs(np.diff(seed,axis=0));translation=np.linalg.norm(delta[:,:3],axis=1)
         demand=np.maximum.reduce([translation/self.config.nominal_speed,delta[:,3]/self.limits.yaw_rate_max,
@@ -182,6 +233,7 @@ class IndustryAdapter(V21Adapter):
         self.arm=ArmModel(arc_length=ARC_LENGTH,base_offset_z=BASE_LENGTH,theta_max=PLAN_THETA_MAX)
         self.limits=replace(l,body_margin=.060,arm_margin=.060,tilt_max=np.deg2rad(2.),z_max=2.38,z_min=2.015)
         w=dict(c.weights)
+        w.update(arm_rate=.42,arm_acceleration=.12)
         if method=='unregularized':
             for k in ('com','arm_rate','arm_acceleration','dt_smooth'):w[k]=0.
         self.config=replace(c,knot_count=32,seed_beam_width=18,seed_shape_limit=46,theta_design_margin=0.,
@@ -205,14 +257,27 @@ class IndustryAdapter(V21Adapter):
         report=dict(method=self.method,start=start,end=end,map=self.proposal.map_hash,seed_algorithm='WholeBodySeedPlanner',
                     optimizer='WholeBodyOptimizer',weights=self.config.weights)
         try:
-            ref=body_reference(self.proposal,start,end);ref[:,4]=start[4];ref[:,5]=start[5]
+            reference_end=np.r_[task_pose(self.plant)['body'],0.,end[4:6]]
+            ref=body_reference(self.proposal,start,reference_end);ref[:,4]=start[4];ref[:,5]=start[5]
             ref[-1]=end
             np.save(out/'body-reference.npy',ref)
             seed=Seed(None,self.arm,self.mass,self.limits,self.config,platform_geometry=self.proposal)
             seed.method=self.method;seed.start=start;seed.end=end;seed.layer_log=[]
             print('body reference',len(ref),round(time.perf_counter()-t0,2),flush=True)
-            seed_plan=seed.plan(ref,current_state=start,terminal_state=end,_force_phi_unlocked=True)
-            seed_plan.diagnostics['terminal_shape']=end[4:6].tolist()
+            try:
+                seed_plan=seed.plan(ref,current_state=start,terminal_state=end,_force_phi_unlocked=True)
+                report['task_route']='full'
+            except RuntimeError as error:
+                path=getattr(seed,'last_path',np.empty((0,6)))
+                if len(path)<5:raise
+                path=path[:-1].copy();path[:,3]=np.unwrap(path[:,3]);path[:,5]=np.unwrap(path[:,5])
+                ref=path.copy()
+                self.config=replace(self.config,knot_count=len(path))
+                self.validator.config=self.config
+                seed_plan=SeedPlan(path,list(range(1,len(path))),list(range(len(path)-3)),
+                      dict(expanded=self.proposal.calls['seed_edges'],shape_mode='theta_phi'))
+                report.update(task_route='partial',full_route_rejection=str(error))
+            seed_plan.diagnostics['terminal_shape']=seed_plan.states[-1,4:6].tolist()
             np.save(out/'seed.npy',seed_plan.states);report['seed']=seed_plan.diagnostics
             print('beam',round(time.perf_counter()-t0,2),seed_plan.diagnostics['expanded'],flush=True)
             opt=Optimizer(None,self.arm,self.mass,self.limits,self.config,self.validator,platform_geometry=self.proposal)
@@ -221,8 +286,10 @@ class IndustryAdapter(V21Adapter):
             report.update(accepted=bool(result.success),status=result.status,iterations=result.iterations,
                 optimizer_details=result.diagnostics,proof=result.validation.__dict__,objective=result.objective)
             tr=result.trajectory
+            report['validation_line_search']=tr.metadata.get('validated_refinement')
             if result.success:
-                np.savez_compressed(out/'certified.npz',t=tr.times,q=tr.states,dq=tr.velocities,dt=tr.metadata['span_durations'])
+                np.savez_compressed(out/'certified.npz',t=tr.times,q=tr.states,dq=tr.velocities,dt=tr.metadata['span_durations'],
+                                    controls=tr.metadata['control_states'])
             print('solver',result.status,result.validation.failure_reason,flush=True)
         except (ValueError,RuntimeError) as e:
             report.update(accepted=False,status=str(e),empty_at=getattr(locals().get('seed'),'empty_at',None))
