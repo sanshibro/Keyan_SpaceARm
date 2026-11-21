@@ -1,0 +1,63 @@
+{
+  "scene": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "n": 288,
+  "oracle": [
+    {
+      "lower": 0.10524800052475658,
+      "upper": 0.10524800052475691,
+      "pair": [
+        "collision_rotor_sweep1",
+        "COL_offset_riser_positive"
+      ],
+      "support_queries": 14,
+      "iterations": 56
+    },
+    {
+      "lower": 0.10061117018979444,
+      "upper": 0.10061117018979461,
+      "pair": [
+        "collision_rotor_sweep1",
+        "COL_offset_riser_positive"
+      ],
+      "support_queries": 9,
+      "iterations": 28
+    },
+    {
+      "lower": 0.07376728514598922,
+      "upper": 0.07377379187801547,
+      "pair": [
+        "collision_landing_255",
+        "COL_branch_cross"
+      ],
+      "support_queries": 4,
+      "iterations": 16
+    },
+    {
+      "lower": 0.12011922908044649,
+      "upper": 0.12011922908044671,
+      "pair": [
+        "collision_rotor_sweep0",
+        "COL_offset_riser_positive"
+      ],
+      "support_queries": 21,
+      "iterations": 76
+    }
+  ],
+  "batch_m": [
+    0.10524800052475677,
+    0.10061117018979435,
+    0.07376728514598922,
+    0.12011922908044649
+  ],
+  "batch_seconds": [
+    0.022887254992383532,
+    0.02287195299868472,
+    0.02259217799291946,
+    0.022507652000058442
+  ],
+  "qualifying_count": 216,
+  "random_pool": 640,
+  "landmark_seconds": 0.0052031109953531995,
+  "random_safes": 6,
+  "screened_out": 634
+}

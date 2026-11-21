@@ -1,0 +1,58 @@
+{
+  "development_receipt": "166ea37e6d896fe7188faafbc9297884655a428642bcfe8bf350b2f8396c8b74",
+  "scene": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "frozen": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235",
+  "formal_rejects_development_receipt": true,
+  "paired_noise_example_digests": {
+    "26112207": {
+      "timestamps": "9ef9361db6c48feba25b09176894a050f1eac2928d206e8a3591668a481f4884",
+      "readout": "e77e7f7e6cc98199c13ab636b054c5a5d3fb3e1af070a8431947b1862e610d00",
+      "samples": 189,
+      "gains": "f0a26337170eb8ba0bba0bcda6118a50ece735cbda92f1c0bfc4fcde9fae57e9",
+      "after_support": "124f8dd6995e457f889df29102e9dcb124fd5ff4ea16ce5a6237bffc2967a3db"
+    },
+    "26112209": {
+      "timestamps": "6912d0d2449a7749fa6de4ceb64ac2628308156f399591b58bc15b80dff25ed6",
+      "readout": "9ad66ef380306bc2db4b00db88f9d93258ecaf26b7e195ebcb46e2f5926535a7",
+      "samples": 189,
+      "gains": "b2a1745aabc24bdd8d39dce6040399969ec60fe122c3d97cd36b6a81f060aa31",
+      "after_support": "13c044b220358e7da99325c2abfc9403856e1e4cf8ae7391829e21d803e3c9d0"
+    },
+    "26112241": {
+      "timestamps": "01a90924c8333ed7685c768a2d7bfd47cbb28c594d77fcd04c9f1d8c44e13f7d",
+      "readout": "ce9c3d5df7c66ce64ab0fc96c81e3dda45f30f86913e2df7a3e643b6265ee6c5",
+      "samples": 189,
+      "gains": "bb3f26b3ebc5589e76e3bc7273841b78f66341fa1e6aee3e47645faadc938bb2",
+      "after_support": "7743429c3af7b5199c911031ed65bdd277c5e44f22381f0bb68c769ec9584f4c"
+    },
+    "26112247": {
+      "timestamps": "e0d86688912114839a267273c70a8eb25b54fdccb722f02195566200780b725f",
+      "readout": "22e2753e6b48c938e16c66d04d21fcfaac3efd5df0aecff3d424d9a50c4c83a9",
+      "samples": 189,
+      "gains": "15badfcc6e188d504ec202fb35bea3e48f746fa869ddeb88247f7227fb25051f",
+      "after_support": "be13f9622f2fe0c7124b4581ae247794ba970d4383a11a8cec1edb13292ff29c"
+    },
+    "26112253": {
+      "timestamps": "3cb6e905c52a6f27e071cc194128e4429a178f72f4e7e472bc85e7da8e67da02",
+      "readout": "97cf66636102b6f50d24343db289d1ce65ececbad973acc0054d8e3746837d7e",
+      "samples": 189,
+      "gains": "aff9534e103a174efb5990f3a0906ea342b2d8c4c75bf9be3e7842ad2b3894b0",
+      "after_support": "6f434d4fac207dbf47429f8f0a71c3c01ad30fc233d1b32a1ff620adea62ec73"
+    }
+  },
+  "clock_intervals_us": [
+    [
+      16000,
+      1
+    ],
+    [
+      20000,
+      4310
+    ]
+  ],
+  "reference_native_bag_and_ULog": true,
+  "reference_run": "coupled-26112207",
+  "controller": "/home/uav/paper_revision_20261117/revision/m2_multipassage/source/m2_flight.py",
+  "hil_sender": "/home/uav/paper_revision_20261117/revision/scripts/round_f_sitl.py",
+  "native_sensor_source": "/home/uav/paper_revision_20261117/revision/scripts/gate_live_shape.py"
+}
