@@ -6,7 +6,8 @@ or the four registered regularizers.
 """
 from dataclasses import dataclass
 from types import SimpleNamespace
-import math,time
+import json,math,time
+from pathlib import Path
 import numpy as np
 from scipy.optimize import minimize
 from m2_geometry import Geometry,wrap
@@ -50,6 +51,8 @@ class Validator:
             return result
         cachekey=(g.map_hash,curve.control_states.tobytes(),curve.span_durations.tobytes(),curve.stationary_start,curve.stationary_end)
         if cachekey in self.cached:return self.cached[cachekey]
+        if not np.isfinite(curve.duration) or curve.duration<=0 or curve.duration>900.:
+            return ValidationResult(False,'invalid_reference_clock',{'duration':float(curve.duration)},0,0.,'reference clock outside native proof domain')
         ts=np.linspace(0,curve.duration,max(3,int(np.ceil(curve.duration/.04))+1))
         q=curve.evaluate(ts,0);v=curve.evaluate(ts,1);a=curve.evaluate(ts,2);j=curve.evaluate(ts,3)
         values=dict(speed=np.linalg.norm(v[:,:3],axis=1),acceleration=np.linalg.norm(a[:,:3],axis=1),jerk=np.linalg.norm(j[:,:3],axis=1),
@@ -71,6 +74,11 @@ class Kernel:
     def __init__(self,plant,method,goal,settings=None):
         if method not in METHODS:raise ValueError(method)
         self.settings=settings or Settings();self.method=method;self.goal=goal;self.coupled=method!='unregularized'
+        if method in ('straight','fixed'):
+            from m2_inspection_ik import fixed_family
+            self.goal=dict(goal)
+            self.goal['candidates'],self.goal['best_locked_axis_error_deg']=fixed_family(
+                plant,goal,0. if method=='straight' else np.rad2deg(FIXED_THETA),np.rad2deg(FIXED_PHI),method=='fixed')
         lim=SimpleNamespace(body_margin=self.settings.body_margin,arm_margin=self.settings.arm_margin,tilt_max=0.)
         self.geometry=Geometry(plant,lim);self.geometry.plan_self_margin=self.settings.self_margin
         from m2_path_batch import PathBatch
@@ -79,6 +87,17 @@ class Kernel:
         self.roadmap=LocalLattice(self)
         self.last_curve=None
         self.last_opt=None;self.warm_points=None;self.warm_used=0
+        self.trace_path=None
+    def phase(self,name,**extra):
+        self.current_phase=name
+        if self.trace_path is None:return
+        status=Path('/proc/self/status')
+        memory={}
+        if status.is_file():
+            memory={s.split(':')[0]:int(s.split()[1]) for s in status.read_text().splitlines()
+                    if s.startswith(('VmRSS:','VmHWM:','VmSwap:'))}
+        record=dict(id=self.request_id,phase=name,wall=time.monotonic(),memory_kib=memory,**extra)
+        with self.trace_path.open('a',encoding='utf8') as log:log.write(json.dumps(record)+'\n')
     def seed(self,start,end,final=False):
         return self.roadmap.search(start,end,final)
     def make_curve(self,route,rate,final,spans=None,stationary_start=True):
@@ -111,7 +130,7 @@ class Kernel:
         from m2_refine import refine
         return refine(self,seed,rate,final,stationary_start)
     def solve(self,snapshot,start,rate,accel,request_id=0,warm=None):
-        started=time.monotonic();self.current_phase='snapshot';self.seed_diagnostics=[]
+        started=time.monotonic();self.request_id=request_id;self.phase('snapshot');self.seed_diagnostics=[]
         try:return self._solve(snapshot,start,rate,accel,request_id,warm)
         except Exception as exc:
             timing=dict(getattr(exc,'timing',{}) or {})
@@ -122,6 +141,13 @@ class Kernel:
             raise
     def _solve(self,snapshot,start,rate,accel,request_id=0,warm=None):
         wall=time.monotonic();self.geometry.set_snapshot(snapshot);self.snapshot=snapshot
+        first,_=self.geometry.path_batch.evaluate(np.asarray(start).reshape(1,6))
+        min_start=np.array([self.settings.body_margin,self.settings.arm_margin,self.settings.self_margin,0.,-1.e-10])
+        if np.any(first[0]<min_start):
+            labels=('body_environment','arm_environment','self_collision','assembly_fit','unknown_space')
+            reason=labels[int(np.flatnonzero(first[0]<min_start)[0])]
+            p=ValidationResult(False,'initial_geometry',{'clearance_m':first[0].tolist()},0,0.,reason)
+            raise PlanRejected(p,{},[])
         self.body_batch=BodyBatch(self.geometry)
         self.geometry.tight_search=False
         previous=warm if warm is not None else self.last_curve
@@ -133,26 +159,40 @@ class Kernel:
         final=end[0]>=qgoal[0]-1e-8
         if final:
             self.geometry.tight_search=True
-            pool=self.goal.get('candidates',[self.goal]);feasible=[]
+            pool=self.goal.get('candidates',[self.goal]);ranked=[]
             for candidate in pool:
                 q=np.r_[candidate['body'],np.deg2rad(candidate.get('yaw_deg',0)),np.deg2rad(candidate['theta_deg']),np.deg2rad(candidate['phi_deg'])]
                 if self.method=='straight' and q[4]>.001:continue
                 if self.method=='fixed' and (abs(q[4]-FIXED_THETA)>.001 or abs(wrap(q[5]-FIXED_PHI))>.001):continue
-                check=self.geometry.state(q,exact=True)
-                if check['reason'] is None:
-                    cost=np.linalg.norm(q[:3]-start[:3])+.1*np.linalg.norm(bend(q)-bend(start))
-                    feasible.append((cost,q,check))
-            if not feasible:raise RuntimeError('No observed terminal task-family pose passes the registered margins and method DOFs')
-            feasible.sort(key=lambda x:x[0]);end=feasible[0][1].copy()
-        self.current_phase='seed';t=time.monotonic();route,layers,reached=self.seed(start,end,final);seedwall=time.monotonic()-t
+                nominal_yaw=np.deg2rad(self.goal.get('yaw_deg',0.))
+                cost=(np.linalg.norm(q[:3]-start[:3])+.10*np.linalg.norm(bend(q)-bend(start))
+                      +.39*abs(wrap(q[3]-nominal_yaw))+.10*abs(wrap(q[3]-start[3]))
+                      +candidate.get('task_tool_offset_m',0.)+.5*candidate.get('task_camera_offset_m',0.))
+                ranked.append((cost,q))
+            if ranked:
+                qs=np.array([q for _,q in ranked])
+                gaps,_=self.geometry.path_batch.evaluate(qs,caps=(.120,.120,.045,.006))
+                ranked=[(cost+5.*max(0.,.108-min(row[:2])),q) for (cost,q),row in zip(ranked,gaps)
+                        if row[0]>=self.settings.body_margin and row[1]>=self.settings.arm_margin and
+                        row[2]>=self.settings.self_margin and row[3]>=0 and row[4]>=0]
+            ranked.sort(key=lambda item:item[0])
+            for _,candidate in ranked:
+                if self.geometry.state(candidate,exact=True)['reason'] is None:
+                    end=candidate.copy();break
+            else:
+                if self.method in ('straight','fixed') and end[0]-start[0]>.28:
+                    final=False
+                else:raise RuntimeError('No observed terminal task-family pose passes the registered margins and method DOFs')
+        self.phase('seed');t=time.monotonic();route,layers,reached=self.seed(start,end,final);seedwall=time.monotonic()-t
         final=final and reached;stationary=np.linalg.norm(rate[:3])<.03
-        self.current_phase='optimization'
+        self.phase('optimization',layers=len(layers))
         curve,base,opt=self.optimize(route,rate,final or self.method=='stop',stationary)
-        self.current_phase='validation'
+        self.phase('validation')
         t=time.monotonic()
         for candidate in (curve,base):
             curve=candidate;repair=1.
             for retry in range(6):
+                self.phase('validation',retry=retry,duration_s=float(curve.duration))
                 proof=self.validator.validate(curve)
                 if proof.feasible or proof.status!='dynamics_rejected':break
                 peaks=proof.metrics['peaks'];bounds=proof.metrics['limits']
@@ -166,6 +206,7 @@ class Kernel:
         timing=dict(seed_s=seedwall,optimization_s=opt['wall_s'],validation_s=time.monotonic()-t,total_s=time.monotonic()-wall,
                     wall_started_s=wall,wall_completed_s=time.monotonic(),clock_repair=repair,optimizer=opt,warm_seed_layers=self.warm_used)
         if not proof.feasible:raise PlanRejected(proof,timing,layers)
+        self.phase('certified',duration_s=float(curve.duration))
         proof.metrics['ending_policy']=dict(stationary_end=True,braking_tail_s=curve.finish_ramp_duration,
             endpoint_velocity=curve.evaluate([curve.duration],1)[0].tolist(),endpoint_acceleration=curve.evaluate([curve.duration],2)[0].tolist(),
             normal_operation='accepted successor may replace the committed plan before its certified braking tail')

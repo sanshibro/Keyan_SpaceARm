@@ -1,0 +1,46 @@
+[
+  {
+    "fit": "layered-pilot03",
+    "holdout": "heading-pilot04",
+    "channels": [
+      {
+        "channel": 0,
+        "training_samples": 1388,
+        "test_samples": 857,
+        "time_constant_s": 0.033744738752529646,
+        "validation_rms_deg": 0.21225983657902864,
+        "validation_static_rms_deg": 0.9407020722351908
+      },
+      {
+        "channel": 1,
+        "training_samples": 1388,
+        "test_samples": 344,
+        "time_constant_s": 0.035161073465489454,
+        "validation_rms_deg": 0.11707913008821799,
+        "validation_static_rms_deg": 0.38350834976519405
+      }
+    ]
+  },
+  {
+    "fit": "heading-pilot04",
+    "holdout": "layered-pilot03",
+    "channels": [
+      {
+        "channel": 0,
+        "training_samples": 1386,
+        "test_samples": 919,
+        "time_constant_s": 0.03483118502401148,
+        "validation_rms_deg": 0.404921180092838,
+        "validation_static_rms_deg": 0.8663759056689867
+      },
+      {
+        "channel": 1,
+        "training_samples": 1386,
+        "test_samples": 489,
+        "time_constant_s": 0.03658439918706217,
+        "validation_rms_deg": 0.24608622586628193,
+        "validation_static_rms_deg": 0.5765490060812011
+      }
+    ]
+  }
+]

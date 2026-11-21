@@ -18,6 +18,7 @@ def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def require(test,why):
     if not test:raise ValueError(why)
 def identity():
+    import importlib.util
     source=ROOT/'source'
     pending=['m2_flight','m2_gate'];modules=set()
     while pending:
@@ -32,7 +33,8 @@ def identity():
     runtime=[source/(name+'.py') for name in modules]
     runtime.extend(sorted(source.glob('m2_*.cc')))
     runtime.append(source/'m2_rolling_inspection.json')
-    return dict(source={p.name:digest(p) for p in sorted(runtime)},scene=read(SCENE/'manifest.json')['scene_sha256'],
+    hil=Path(importlib.util.find_spec('round_f_sitl').origin)
+    return dict(source={p.name:digest(p) for p in sorted(runtime)},hil_sender=digest(hil),scene=read(SCENE/'manifest.json')['scene_sha256'],
                 registry=digest(source/'m2_self_registry.py'),perception=LOCK)
 def check_static(path):
     d=read(path);manifest=read(SCENE/'manifest.json')

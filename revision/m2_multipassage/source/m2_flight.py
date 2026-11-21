@@ -79,6 +79,7 @@ class Controller:
         self.task['candidates']=goal_family(p,self.task)
         self.inspection_tcp=None
         self.rolling=RollingPlanner(p,method,self.task)
+        self.rolling.event_path=folder/'rolling-live.jsonl'
         rotor_sites=[p.m.site('rotor'+str(i)).id for i in range(4)]
         if not np.all(p.m.site_bodyid[rotor_sites]==p.base) or not np.allclose(p.m.site_quat[rotor_sites],[1,0,0,0]):
             raise ValueError('Rotor thrust axes must be registered in the common body frame')
@@ -86,7 +87,7 @@ class Controller:
         self.observation=ShapeObservation()
         self.ref=HOVER.copy();self.yaw=0.;self.phase='takeoff'
         self.des=np.zeros(2);self.issued=np.zeros(2);self.integral=np.zeros(2)
-        self.ff=(np.zeros(3),np.zeros(3));self.exit_time=None;self.s=P['servo'];self.last_time=None
+        self.ff=(np.zeros(3),np.zeros(3));self.yaw_rate=0.;self.exit_time=None;self.s=P['servo'];self.last_time=None
 
     def control(self,t,obs,xyz,velocity,rpy,age_p,age_r):
         fresh=bool(xyz is not None and velocity is not None and rpy is not None and
@@ -150,7 +151,12 @@ class Controller:
                     self.des,projection=project_bend(b,desired,gap,gap_at)
                 error=self.des-b
                 self.integral=bound(self.integral+dt*self.s['ki']*error,np.deg2rad(self.s['i_limit_deg']))
-                target=bound(self.des+self.s['kp']*error+self.integral,np.deg2rad(self.s['command_max_deg']))
+                unit=np.array([np.cos(q[5]),np.sin(q[5])])
+                bend_rate=dq[4]*unit+q[4]*dq[5]*np.array([-unit[1],unit[0]])
+                # HIL identification on separate development traces measured
+                # 0.034–0.037 s actuator lag along the two bending axes.
+                lead=.035*bend_rate if phase=='execute' and projection=='nominal' else np.zeros(2)
+                target=bound(self.des+self.s['kp']*error+self.integral+lead,np.deg2rad(self.s['command_max_deg']))
                 if disabled_shape and gap>=GEAR_TRIGGER:target[:]=0.
                 # On recovery the integral correction may pull towards the very
                 # leg being avoided. Project the final command as well.
@@ -160,6 +166,7 @@ class Controller:
             phase='feedback_hold';hold='feedback'
         self.phase=phase
         self.ff=(dq[:3].copy(),ddq[:3]+acc_trim)
+        self.yaw_rate=float(dq[3])
         return dict(t=float(t),phase=phase,hold=hold,valid=fresh,shape_valid=bool(obs['valid']),
             shape_age=obs['age'],age_p=age_p,age_r=age_r,
             des_b=self.des.copy(),est_b=b.copy(),issued_b=self.issued.copy(),integral_b=self.integral.copy(),
@@ -174,7 +181,7 @@ class Loop(FlightLoop):
         self.plant=plant;self.folder=folder;self.case=case;self.mechanics=False;self.horizon=horizon
         self.ctrl=Controller(plant,case['strategy'],folder)
         self.camera=self.gauge=self.filter=None;self.strain_pending=[];self.visual_pending=deque()
-        self.rows=[];self.last_source=None;self.yaw_enu=0.;self.translation_feedforward=(np.zeros(3),np.zeros(3))
+        self.rows=[];self.last_source=None;self.yaw_enu=0.;self.yaw_rate_enu=0.;self.translation_feedforward=(np.zeros(3),np.zeros(3))
         self.jaw_joints=[plant.m.joint('grip'+str(i)).id for i in range(3)]
         self.jaw_actuators=[plant.m.actuator('grip'+str(i)).id for i in range(3)]
         self.jaw_qpos=plant.m.jnt_qposadr[self.jaw_joints]
@@ -195,7 +202,7 @@ class Loop(FlightLoop):
         if len(self.rows)>previous:
             self.rows[-1]['grip_command_m']=self.plant.d.ctrl[self.jaw_actuators].copy()
             self.rows[-1]['grip_observed_m']=self.plant.d.qpos[self.jaw_qpos].copy()
-        self.yaw_enu=self.ctrl.yaw;self.translation_feedforward=self.ctrl.ff
+        self.yaw_enu=self.ctrl.yaw;self.yaw_rate_enu=self.ctrl.yaw_rate;self.translation_feedforward=self.ctrl.ff
         return result
     def save(self):
         self.ctrl.rolling.close()
@@ -218,8 +225,8 @@ def fly(strategy,seed,instance,out,development,gate_path):
     from m2_gate import authorize,LOCK
     registration=authorize(strategy,seed,development,gate_path)
     runtime=inspect.getsource(run)
-    if 'translation_feedforward' not in runtime or '2048' not in runtime or 'yaw_enu' not in runtime:
-        raise RuntimeError('Native HIL sender must pass position, velocity, acceleration and yaw to PX4')
+    if 'translation_feedforward' not in runtime or 'yaw_rate_enu' not in runtime or 'yaw_enu' not in runtime:
+        raise RuntimeError('Native HIL sender must pass translation, heading and its planned rate to PX4')
     p=build();case=dict(method='proposed',strategy=strategy,seed=seed,case='%s-%d'%(strategy,seed))
     lock=verify_frozen();out=out.resolve()
     if lock!=LOCK:raise ValueError('Perception identity differs from the M2 registration')

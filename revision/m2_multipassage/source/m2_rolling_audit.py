@@ -6,6 +6,7 @@ import numpy as np
 from super_handoff import coordinates,rates,accelerations
 from uav_continuum_whole_body_v2.execution import evaluate_quintic_bridge
 from uav_continuum_whole_body_v2.trajectory import SplineTrajectory
+from m2_stop_clock import StopClock
 
 def load(path):
     return json.loads(path.read_text(encoding='utf8'))
@@ -37,6 +38,7 @@ class RecordedWindow:
             for i,name in enumerate(('q','dq','ddq')):
                 check(np.allclose(self.curve.evaluate(z['t'],i),z[name],rtol=1e-7,atol=1.e-8),'reconstructed spline '+name)
         self.duration=0.;self.coef=None;self.handoff=load(path/'handoff.json')
+        self.stop_clock=StopClock(**self.handoff['commit_brake']) if 'commit_brake' in self.handoff else None
         if self.handoff['kind']=='C2_quintic':
             with np.load(path/'bridge.npz') as z:
                 self.coef=z['coefficients'].copy();self.duration=float(z['duration'])
@@ -52,6 +54,7 @@ class RecordedWindow:
         local=max(0.,release-self.activation)
         if local<self.duration:return self.bridge(local)
         local=local-self.duration+self.offset
+        if self.stop_clock is not None:return cart(*self.stop_clock.sample(self.curve,local))
         if local>=self.curve.duration:
             q=self.curve.evaluate([self.curve.duration],0)[0]
             return cart(q,np.zeros(6),np.zeros(6))

@@ -214,8 +214,11 @@ def run(out,tag,pitch_i,*,reference_fn=reference,score_end=39.,noise_seed=None,
                                                 *ref_ned,0,0,0,0,0,0,yaw_ned,0)
                 else:
                     vel_ff, acc_ff = (ENU_NED @ component for component in motion)
-                    ground.mav.set_position_target_local_ned_send(us//1000,sysid,1,1,2048,
-                                                *ref_ned,*vel_ff,*acc_ff,yaw_ned,0)
+                    yaw_rate = getattr(flight_loop, 'yaw_rate_enu', None)
+                    type_mask = 2048 if yaw_rate is None else 0
+                    yaw_rate_ned = 0. if yaw_rate is None else -float(yaw_rate)
+                    ground.mav.set_position_target_local_ned_send(us//1000,sysid,1,1,type_mask,
+                                                *ref_ned,*vel_ff,*acc_ff,yaw_ned,yaw_rate_ned)
             if origin is not None and sim_t>10 and k%FREQ==0:
                 if not last_mode:
                     ground.mav.command_long_send(sysid,1,176,0,1,6,0,0,0,0,0)

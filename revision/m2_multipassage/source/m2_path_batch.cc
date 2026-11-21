@@ -19,7 +19,7 @@ static double box_distance2(const Box&a,const Box&b) {
     return ss;
 }
 
-extern "C" void path_clearances(int nr,int no,const int* types,const double* sizes,
+static void path_block(int nr,int no,const int* types,const double* sizes,
     const double* boxes,const int* offsets,const int* counts,const double* vertices,
     const int* groups,const double* obstacle,const int* internal,int np,
     const double* origin,double radius,const double* caps,int nq,const double* moving,
@@ -62,5 +62,21 @@ extern "C" void path_clearances(int nr,int no,const int* types,const double* siz
         for(int j=nr;j<n;++j)if(box_distance2(robot,bounds[j])<cap*cap)near.push_back(j);
         for(int j:near)for(int i=0;i<nr;++i)visit(i,j,groups[i]);
         for(int j=0;j<np;++j)visit(internal[3*j],internal[3*j+1],internal[3*j+2]);
+    }
+}
+
+extern "C" void path_clearances(int nr,int no,const int* types,const double* sizes,
+    const double* boxes,const int* offsets,const int* counts,const double* vertices,
+    const int* groups,const double* obstacle,const int* internal,int np,
+    const double* origin,double radius,const double* caps,int nq,const double* moving,
+    double* result,int* witness) {
+    // Consecutive poses share a broad-phase warm start inside each block.
+    // Every worker owns its GJK scratch and witness bounds.
+    const int blocks=nq>=32 ? 2 : 1;
+    #pragma omp parallel for num_threads(2) if(blocks>1) schedule(static)
+    for (int k=0;k<blocks;++k) {
+        const int first=nq*k/blocks, last=nq*(k+1)/blocks;
+        path_block(nr,no,types,sizes,boxes,offsets,counts,vertices,groups,obstacle,internal,
+            np,origin,radius,caps,last-first,moving+12*nr*first,result+5*first,witness+8*first);
     }
 }

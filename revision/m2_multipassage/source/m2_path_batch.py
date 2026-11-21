@@ -17,7 +17,7 @@ def entry():
     lib=Path(tempfile.gettempdir())/('m2_path_'+key+'.so')
     if not lib.exists():
         tmp=lib.with_name(lib.stem+'-'+str(os.getpid())+lib.suffix)
-        subprocess.run(['c++','-O3','-std=c++17','-shared','-fPIC',str(source),'-o',str(tmp)],check=True)
+        subprocess.run(['c++','-O3','-std=c++17','-fopenmp','-march=native','-shared','-fPIC',str(source),'-o',str(tmp)],check=True)
         tmp.replace(lib)
     f=ctypes.CDLL(str(lib)).path_clearances
     ip=np.ctypeslib.ndpointer(np.int32,flags='C_CONTIGUOUS')
@@ -46,6 +46,11 @@ class PathBatch:
         g=self.g;c=g.convex_map
         states=np.asarray(states,float).reshape(-1,6)
         if not np.isfinite(states).all():raise ValueError('Nonfinite body or arm pose')
+        if len(states)>96:
+            # Bound native-transform scratch to about 3.3 MiB independently
+            # of the number of spline samples and the length of a flight.
+            rows=[self.evaluate(states[i:i+96],caps) for i in range(0,len(states),96)]
+            return np.vstack([r[0] for r in rows]),np.vstack([r[1] for r in rows])
         poses=np.empty((len(states),len(g.ids),12))
         d=g.w
         angles=states[:,3]/2

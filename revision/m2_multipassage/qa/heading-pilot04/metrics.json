@@ -1,0 +1,231 @@
+{
+  "strategy": "coupled",
+  "seed": 26112207,
+  "identity": {
+    "source": {
+      "m2_body_batch.cc": "a8daa95ee79c3faad18756c0e43ab8acb6f1b0f4d1c399d54af41075e5e3267d",
+      "m2_body_batch.py": "06cd414c42d27071aeaedf15373d715ff27dce70e1aa347ecc9d367f2f8e26b3",
+      "m2_field.cc": "6f6fd6da27ec0a6533cf8560944cb4ffaa7fcb35b1b832bfcd0d7ca1723ac05d",
+      "m2_field.py": "ff41f023b0fbd3d75883eb05fe40a709b75c702c0bb79a9a36f7b94af3bd06f4",
+      "m2_flight.py": "67618b997b7e6759a7620d89684961668442ea8f5ea1fc53cd453c9f0a16b097",
+      "m2_gate.py": "38d9b7ae937d14a028999c84ee7443240f129f3cb62ea7290ebdc018f15be856",
+      "m2_geometry.py": "ea6ec3d8143191060d23d160edece0d0ac82c1b3d6a52f3d784f604a04fb28af",
+      "m2_handoff.py": "afa6f9a5f2654595d08cc28bd5b8dcb8fe044d849ec310e6ce3c2059290d737c",
+      "m2_inspection_ik.py": "9ab0955406e8de0927b6d1a4cb0e4d556dd65643b2d4a9fd9490f26d78244d74",
+      "m2_lattice.py": "67f3099ad20d1314583eba30d44d49de966f32eee4adb802720f0a5384c36ce7",
+      "m2_map.cc": "37cf17ab548ce52248f535de8ee5ae91ed1aef36689d3b83778f491075f2e108",
+      "m2_path_batch.cc": "acd346d585fcbe265f8455b16e86279c77c452323bb88cf4227dc79c1dadf39b",
+      "m2_path_batch.py": "799a143d8cb85365a90703962446de3b177e164710f34ec2973ecdeba6bf9bee",
+      "m2_planner.py": "9b3ec98e95944c6540b31eb9c0b38bafb0433cc5822fc16bda6917d2b2e4c23d",
+      "m2_plant.py": "22eb347b2919a4c1baecd7a9b9e9b60181ed0f9262722e81f8dca3d0f4db7e91",
+      "m2_refine.py": "9985f2ffe360379bc08bd09412674180acb38847ad0f34dfc9581fb5a9c8eeca",
+      "m2_rolling.py": "34b02543f5c01163cf3ee5d172393a57d793f94455f150955b8175143d2fdb70",
+      "m2_rolling_inspection.json": "9af46636cdd82858713b4918740d53b80a86e7fabc5e336b05e8dc1ace832c9e",
+      "m2_scene.py": "e94f0cdfaf32321626fb3fb611be5cac72e06271e58ca425c87fff4c8ce03779",
+      "m2_scene_lock.py": "c4437417d6ae77bedf20d1e0ac022b8c44101eda70ed222da6dbf117dcc268b1",
+      "m2_self.cc": "ee1004ff3bb754ec021f3278a1e606b034cfbb0d6a4ebdb4b89b8ea68edd5c6f",
+      "m2_self_registry.py": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
+      "m2_servo.py": "3aa22350cad788d01f1f27d7dfb804d83fee4558c7ca0443bea0397044b982ba",
+      "m2_spline.py": "288268639159dbfc1f79c3a3b98ff0e3d6afcbbdbd7bb1bca49aff299655fc86",
+      "m2_stop_clock.py": "8d37aa69128069f2dc3457fa4669c8c1c96aef8c8c7395b3761b46df343636d9"
+    },
+    "hil_sender": "bc402751f204b18dd085010fff2bef3816a79177652d1038d4fad02541bb4d66",
+    "scene": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+    "registry": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
+    "perception": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235"
+  },
+  "development": true,
+  "native_logs_verified": true,
+  "synchronized_rgbd": true,
+  "rgbd_count": 1476,
+  "external_lower_m": 0.01619509340157995,
+  "hazard_lower_m": 0.035502704802029286,
+  "fit_lower_m": 0.000990265167086879,
+  "certificates": {
+    "body": {
+      "lower_m": 0.04011362617248812,
+      "upper_m": 0.04011362617248813,
+      "t_s": 45.22,
+      "names": [
+        "collision_landing_162",
+        "COL_gate3_sill"
+      ],
+      "crosscheck": [
+        0.0401136261724872,
+        0.04011362617248813
+      ]
+    },
+    "arm": {
+      "lower_m": 0.01619509340157995,
+      "upper_m": 0.016195093401581314,
+      "t_s": 43.68,
+      "names": [
+        "collision_gripper_finger1",
+        "COL_gate3_sill"
+      ],
+      "crosscheck": [
+        0.01619509340156997,
+        0.016195093401581706
+      ]
+    },
+    "hazard": {
+      "lower_m": 0.035502704802029286,
+      "upper_m": 0.03550843900042579,
+      "t_s": 27.26,
+      "names": [
+        "geom503",
+        "arm2"
+      ],
+      "crosscheck": [
+        0.035508081671504606,
+        0.03550843900042584
+      ]
+    },
+    "mount_fit": {
+      "lower_m": 0.000990265167086879,
+      "upper_m": 0.0010001696389823481,
+      "t_s": 12.040000000000001,
+      "names": [
+        "geom503",
+        "arm1"
+      ],
+      "crosscheck": [
+        0.0009673912125359172,
+        0.0010033931985633272
+      ]
+    },
+    "finger_fit": {
+      "lower_m": 0.011062910493459817,
+      "upper_m": 0.011062910493459817,
+      "t_s": 30.28,
+      "names": [
+        "collision_gripper_finger1",
+        "collision_gripper_finger2"
+      ],
+      "crosscheck": [
+        0.011062910493459829,
+        0.011062910493459829
+      ]
+    }
+  },
+  "contact_steps": 0,
+  "gripper_open_command": true,
+  "grip_stroke_mm": {
+    "min": [
+      -0.13304231095156008,
+      -0.1382894347517084,
+      -0.038979409445630574
+    ],
+    "max": [
+      0.19195288720735865,
+      0.2009698617487712,
+      0.05618868578459199
+    ],
+    "below_limit": [
+      0.13304231095156008,
+      0.1382894347517084,
+      0.038979409445630574
+    ],
+    "above_limit": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "pose_dwell_s": 22.199999999998298,
+  "task_depth_dwell_s": 22.20000000000023,
+  "eligible_depth_count": 1111,
+  "verified_depth_count": 556,
+  "control_inspect_request_s": 48.72,
+  "elapsed_motion_observation_s": 50.0,
+  "motion_to_inspect_s": 27.800000000000004,
+  "position_tracking_peak_m": 0.08659694458401747,
+  "thrust_diff_rms_N": 5.246444649436455,
+  "rotor_roll_pitch_rms_Nm": 0.5235083339176537,
+  "peak_roll_pitch_reaction_Nm": 0.9021083976174438,
+  "max_theta_deg": 102.3555371470378,
+  "end_body_m": [
+    4.666716281113538,
+    0.008384779868694585,
+    2.1078329665366584
+  ],
+  "terminal_error_m": 0.011756170994347946,
+  "terminal_axis_deg": 0.46620480410013365,
+  "terminal_optical_m": 0.15723863195751459,
+  "terminal_camera_axis_deg": 0.4662048041009154,
+  "peak_tilt_integration_deg": 7.130585269426378,
+  "tilt_motion_p95_deg": 1.8953542270150416,
+  "raw_ulog_sha256": "75e4a06e839c92f8865ec5f2717cb6995576a5b9207e04cbbcd01d899910c01d",
+  "raw_rosbag_sha256": "d730b651b4f32ce0460bfa7e5649df28bbb73f97580b235ac41079e9a28cfb6b",
+  "success": false,
+  "solve_wall_s": [
+    0.30894976999843493,
+    0.23490450000099372,
+    0.7106867029942805,
+    1.0413942809973378,
+    1.1450152360048378,
+    0.9171642910077935
+  ],
+  "request_wall_latency_s": [
+    0.35158636899723206,
+    0.2609244360064622,
+    0.7460194309969665,
+    1.0758505359990522,
+    1.2286368490022141,
+    0.9515191969985608
+  ],
+  "submitted_windows": 6,
+  "activated_replans": 4,
+  "rolling_verified": true,
+  "causal_map_verified": true,
+  "async_coverage": true,
+  "switches": [
+    {
+      "window": 1,
+      "source": 0,
+      "release_s": 25.44,
+      "kind": "C1_direct",
+      "bridge_s": 0.0,
+      "acceleration_jump_m_s2": 0.07540794777545257,
+      "bend_rate_jump_rad_s": 0.025355051572511018
+    },
+    {
+      "window": 2,
+      "source": 1,
+      "release_s": 29.02,
+      "kind": "C2_quintic",
+      "bridge_s": 0.5,
+      "acceleration_jump_m_s2": 1.2869730969111293e-16,
+      "bend_rate_jump_rad_s": 2.710505431213761e-20
+    },
+    {
+      "window": 3,
+      "source": 2,
+      "release_s": 31.86,
+      "kind": "C2_quintic",
+      "bridge_s": 0.5,
+      "acceleration_jump_m_s2": 2.194270917860438e-16,
+      "bend_rate_jump_rad_s": 1.942890293094024e-16
+    },
+    {
+      "window": 5,
+      "source": 3,
+      "release_s": 42.88,
+      "kind": "C2_quintic",
+      "bridge_s": 0.5,
+      "acceleration_jump_m_s2": 1.1188630228279524e-15,
+      "bend_rate_jump_rad_s": 0.0
+    }
+  ],
+  "planning_diagnosis": [
+    "PlanRejected: body_environment"
+  ],
+  "planner_pause_s": 0.0,
+  "abnormal_stall_s": 0.0,
+  "handoff_accel_jump_m_s2": 0.07540794777545257,
+  "handoff_brate_jump_rad_s": 0.025355051572511018,
+  "evaluation_sources": {
+    "m2_score.py": "4c2771dbb88f64e11ade2a5c0aec4c77f5c3747a66c28a5e7d0f784694e9c155",
+    "m2_rolling_audit.py": "66212c4c02d92b80f2949a95f424d4f7cf645e08b8a1d5ca86e9a6e769ea7a96"
+  }
+}

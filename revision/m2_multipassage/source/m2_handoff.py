@@ -2,6 +2,7 @@
 import numpy as np
 from super_handoff import QuinticBendingBridge,coordinates,rates,accelerations,review
 from uav_continuum_whole_body_v2.execution import quintic_bridge_coefficients,evaluate_quintic_bridge,whole_body_switch_deltas
+from m2_bridge_limits import receiving_options
 
 class SuffixCurve:
     """An unchanged suffix of an already certified absolute-time trajectory."""
@@ -19,13 +20,17 @@ def qualify_timed(adapter,old,raw_curve,offset,bridge_duration=.5):
         target=tuple(candidate.evaluate([0.],d)[0] for d in range(3))
         return None,direct,dict(kind='C1_direct',duration=0.,trajectory_offset_s=offset,
                   before=boundary_record(q,v,a),after=boundary_record(*target)),offset
-    target_offset=offset+bridge_duration;candidate=SuffixCurve(raw_curve,target_offset)
-    bridge=make_bridge(q,v,a,candidate,bridge_duration)
-    proof=review(adapter,q,v,candidate,bridge,start_acceleration=a)
-    target=tuple(candidate.evaluate([0.],d)[0] for d in range(3))
-    return bridge,proof,dict(kind='C2_quintic',duration=bridge.duration,trajectory_offset_s=target_offset,
-             before=boundary_record(q,v,a),after=boundary_record(*target),coefficients=bridge.c.tolist(),
-             direct_rejection=direct.failure_reason),target_offset
+    options=receiving_options(old,raw_curve,offset,bridge_duration)
+    for _,duration,target_offset,ratio in options[:8]:
+        candidate=SuffixCurve(raw_curve,target_offset)
+        bridge=make_bridge(q,v,a,candidate,duration)
+        proof=review(adapter,q,v,candidate,bridge,start_acceleration=a)
+        if proof.feasible:
+            target=tuple(candidate.evaluate([0.],d)[0] for d in range(3))
+            return bridge,proof,dict(kind='C2_quintic',duration=bridge.duration,trajectory_offset_s=target_offset,
+                    dynamics_peak_ratio=ratio,before=boundary_record(q,v,a),after=boundary_record(*target),
+                    coefficients=bridge.c.tolist(),direct_rejection=direct.failure_reason),target_offset
+    raise ValueError('No dynamically admissible and swept-clear C2 receiving phase')
 
 def make_bridge(q,v,a,successor,duration):
     target=successor.evaluate([0.],0)[0];tv=successor.evaluate([0.],1)[0];ta=successor.evaluate([0.],2)[0]

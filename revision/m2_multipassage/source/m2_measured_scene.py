@@ -122,13 +122,14 @@ def make(record, out, development=False):
         'mathtext.fontset':'stix','font.size':9,'axes.labelsize':8,'pdf.fonttype':42,
         'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False,
         'axes.linewidth':.6,'xtick.labelsize':7,'ytick.labelsize':7})
-    fig = plt.figure(figsize=(10.1, 8.3), layout='constrained')
+    fig = plt.figure(figsize=(10.1, 8.3), constrained_layout=True)
     grid = fig.add_gridspec(3, 12, height_ratios=(3.6, 1.85, 1.62))
     scene_ax = fig.add_subplot(grid[0, :])
     image = wide[65:818, 65:1540]
     scene_ax.imshow(image)
     scene_ax.axis('off')
-    scene_ax.set_title('a   Recorded passage through the inspection corridor', loc='left', color=INK)
+    title='a   Recorded passage through the inspection corridor'
+    scene_ax.set_title(title+('  |  Development flight' if development else ''), loc='left', color=INK)
     for color, label in [(BODY, 'Vehicle origin'), (TOOL, 'Tool centre')]:
         scene_ax.plot([], [], color=color, lw=2.2, label=label)
     scene_ax.legend(loc='upper right', frameon=False, ncol=2, fontsize=8)

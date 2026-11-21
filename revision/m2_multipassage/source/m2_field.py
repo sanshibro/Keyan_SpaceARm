@@ -16,7 +16,7 @@ def library():
     lib=Path(tempfile.gettempdir())/('m2_field_'+hashlib.sha256(cc.read_bytes()).hexdigest()[:16]+'.so')
     if not lib.exists():
         tmp=lib.with_name(lib.stem+'-'+str(os.getpid())+'.so')
-        subprocess.run(['c++','-O3','-std=c++17','-shared','-fPIC',str(cc),'-o',str(tmp)],check=True)
+        subprocess.run(['c++','-O3','-std=c++17','-fopenmp','-march=native','-shared','-fPIC',str(cc),'-o',str(tmp)],check=True)
         tmp.replace(lib)
     dll=ctypes.CDLL(str(lib));dp=np.ctypeslib.ndpointer(np.float64,flags='C_CONTIGUOUS')
     fp=np.ctypeslib.ndpointer(np.float32,flags='C_CONTIGUOUS')

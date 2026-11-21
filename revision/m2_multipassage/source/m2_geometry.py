@@ -308,7 +308,8 @@ class Geometry:
         if self.limits.tilt_max==0:
             from m2_path_batch import PathBatch
             if not hasattr(self,'path_batch'):self.path_batch=PathBatch(self)
-            ts=sampled_times(spline,dt,dp,da);states=spline.evaluate(ts,0)
+            from m2_spline import proof_times
+            ts=proof_times(spline,dt,dp,da);states=spline.evaluate(ts,0)
             gaps,pairs=self.path_batch.evaluate(states)
             bad=(gaps[:,0]<self.limits.body_margin)|(gaps[:,1]<self.limits.arm_margin)|(gaps[:,2]<self.plan_self_margin)|(gaps[:,3]<0)|(gaps[:,4]<-1.e-10)|(states[:,4]<-1.e-9)|(states[:,4]>self.theta_max+1.e-9)
             refused=np.flatnonzero(bad);first=None

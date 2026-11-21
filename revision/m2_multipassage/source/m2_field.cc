@@ -41,6 +41,7 @@ extern "C" void pose_field(int n,const double* pts,int nq,const double* q,
     const double* origin,double step,int nx,int ny,int nz,const float* field,double cap,
     double threshold,double* out) {
     double inv=1./step;
+    #pragma omp parallel for num_threads(2) if(nq>=256) schedule(static)
     for(int j=0;j<nq;++j) {
         const double* s=q+6*j;double cy=std::cos(s[3])*inv,sy=std::sin(s[3])*inv,m=cap;
         double x0=(s[0]-origin[0])*inv,y0=(s[1]-origin[1])*inv,z0=(s[2]-origin[2])*inv;

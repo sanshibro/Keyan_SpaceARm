@@ -41,6 +41,7 @@ def refine(k,route,rate,final,stationary):
     width=len(free)*6
     spatial_lim=np.ones((len(free),6))
     if k.method in ('straight','fixed'):spatial_lim[:,4:]=0.
+    if k.method=='straight':spatial_lim[:,3]=0.
     if k.method=='sequential':spatial_lim[:,:4]=0.
     limits=[(-float(a),float(a)) for a in spatial_lim.ravel()]+[(-.10,.20)]*N
     reg=np.array([.099,.101,.0175]);weights=np.array([3.2e4,3.2e4,5.e4])

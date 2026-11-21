@@ -2,6 +2,26 @@
 import numpy as np
 import mujoco
 from m2_plant import place
+from m2_scene import STANDOFF
+
+
+def fixed_family(plant,task,theta,phi,free_yaw):
+    """Solve yaw about the vertical for a locked arm, then the TCP translation."""
+    m=plant.m;d=mujoco.MjData(m)
+    target_axis=np.asarray(task['axis']);tool_target=np.asarray(task['tool'])
+    place(m,d,np.zeros(3),theta,phi,0.)
+    initial=d.site('tip').xmat.reshape(3,3)[:,2]
+    best_yaw=np.rad2deg(np.arctan2(target_axis[1],target_axis[0])-np.arctan2(initial[1],initial[0])) if free_yaw else 0.
+    place(m,d,np.zeros(3),theta,phi,best_yaw)
+    axis=d.site('tip').xmat.reshape(3,3)[:,2];cam=d.camera('wrist_rgbd')
+    optical=-cam.xmat.reshape(3,3)[:,2]
+    angle=lambda a,b:float(np.rad2deg(np.arccos(np.clip(a@b,-1.,1.))))
+    mismatch=max(angle(axis,target_axis),angle(optical,np.asarray(task['camera_axis'])))
+    if mismatch>3.:return [],mismatch
+    body=tool_target-d.site('tip').xpos
+    camera=body+cam.xpos
+    if not .12<=STANDOFF+(np.asarray(task['camera'])-camera)@optical<=.18:return [],mismatch
+    return [dict(body=body.tolist(),yaw_deg=float(best_yaw),theta_deg=float(theta),phi_deg=float(phi))],mismatch
 
 
 def goal_family(plant, task, yaw_grid=None):

@@ -86,6 +86,8 @@ class LocalLattice:
             expanded|=xs<start[0]+.86
         if abs(angle(end[3]))>.16:
             expanded|=xs>end[0]-.48
+        if self.k.method=='straight':
+            expanded[:]=False
         layers=[]
         for n,x in enumerate(xs):
             xyz=base[n]
@@ -126,12 +128,17 @@ class LocalLattice:
                 layers.append((np.empty((0,6)),np.empty(0)));continue
             ids=np.asarray(selected,int)
             chosen=pos[ids]
-            if self.k.warm_points is not None and self.k.warm_points[0,0]<=x<=self.k.warm_points[-1,0]:
+            if self.k.warm_points is not None and self.k.method!='straight' and self.k.warm_points[0,0]<=x<=self.k.warm_points[-1,0]:
                 warm=np.array([np.interp(x,self.k.warm_points[:,0],self.k.warm_points[:,j]) for j in range(6)])
                 chosen=np.vstack((chosen,warm));self.k.warm_used+=1
-            exact=precise.query(chosen,cap=.16,reject_below=.085);ok=exact>=.08505
-            layers.append((chosen[ok],exact[ok]))
-        return layers
+            layers.append((chosen,None))
+        # All slices belong to the same snapshot. Reuse the rigid CAD support
+        # transforms for common yaw across layers in a single native call.
+        sizes=[len(p) for p,_ in layers]
+        if not sum(sizes):return layers
+        exact=precise.query(np.vstack([p for p,_ in layers]),cap=.16,reject_below=.085)
+        cuts=np.split(exact,np.cumsum(sizes)[:-1])
+        return [(p[g>=.08505],g[g>=.08505]) for (p,_),g in zip(layers,cuts)]
 
     def search(self,start,end,final=False):
         c=self.k.settings;method=self.k.method
@@ -169,12 +176,27 @@ class LocalLattice:
 
     @staticmethod
     def sequential_bodies(start,bodies):
-        prev=start[:4];out=[]
-        for p,g in bodies:
-            if not len(p):out.append((p,g));continue
-            cost=np.sum((p[:,1:3]-prev[1:3])**2,axis=1)+.08*angle(p[:,3]-prev[3])**2+4.*np.maximum(0.,.123-g)**2
-            ix=np.argmin(cost);prev=p[ix,:4];out.append((p[ix:ix+1],g[ix:ix+1]))
-        return out
+        # Select a connected least-cost aircraft route across the *entire*
+        # observed local window before supplying any arm state to the search.
+        prev=start.reshape(1,6);cost=np.zeros(1);back=[];layers=[]
+        for poses,gaps in bodies:
+            if not len(poses):break
+            yz=poses[:,None,1:3]-prev[None,:,1:3]
+            yaw=angle(poses[:,None,3]-prev[None,:,3])
+            scores=cost[None,:]+np.sum(yz*yz,axis=2)+.08*yaw**2
+            scores[abs(yaw)>75*RAD]=np.inf
+            predecessor=np.argmin(scores,axis=1)
+            total=scores[np.arange(len(poses)),predecessor]+4.*np.maximum(0.,.123-gaps)**2
+            good=np.isfinite(total)
+            if not np.any(good):break
+            prev=poses[good];cost=total[good]
+            layers.append((prev,gaps[good]));back.append(predecessor[good])
+        result=[(np.empty((0,6)),np.empty(0)) for _ in bodies]
+        i=int(np.argmin(cost))
+        for layer in reversed(range(len(layers))):
+            poses,gaps=layers[layer]
+            result[layer]=(poses[i:i+1],gaps[i:i+1]);i=back[layer][i]
+        return result
 
     @staticmethod
     def features(q):
@@ -196,6 +218,11 @@ class LocalLattice:
             gap=np.minimum(body,arm)
             node=90.*np.maximum(.126-gap,0.)**2 + 2.*np.maximum(.147-gap,0.)
             node+=.033*np.linalg.norm(q[:,1:3]-start[1:3],axis=1)**2 + .0025*q[:,4]**2
+            # The surveyed approach heading is available at launch. Rotating
+            # through a reverse heading near the wrist task spends optical
+            # tracking bandwidth on a redundant aircraft revolution.
+            offset=1.-np.cos(q[:,3]-np.deg2rad(k.goal.get('yaw_deg',0.)))
+            node+=.14*offset**2+.025*offset
             if k.coupled:node+=1.4*shape_com[s]**2
             scores=cost[j]+step_cost
             best=np.argmin(scores,axis=1);row=np.arange(len(q))

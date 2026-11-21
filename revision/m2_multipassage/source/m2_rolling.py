@@ -7,6 +7,7 @@ import numpy as np
 from m2_geometry import Geometry,RangeMap
 from m2_planner import Kernel,Settings,METHODS,FIXED_THETA,FIXED_PHI
 from m2_handoff import qualify_timed,sample_bridge,boundary_record
+from m2_stop_clock import commit_clock
 
 def clean(x):
     if is_dataclass(x):return clean(asdict(x))
@@ -27,22 +28,28 @@ class RollingPlanner:
         self.last_request=-np.inf;self.last_x=-np.inf;self.last_state=None;self.last_rate=np.zeros(6);self.last_accel=np.zeros(6)
         self.rejections=0;self.closed=False;self.status='waiting';self.done=False;self.needs_stop=True;self.request=None
         self.requests={}
-        self.last_now=0.
+        self.last_now=0.;self.event_path=None
     def event(self,kind,now,**fields):
         item=dict(event=kind,release_s=float(now),wall_monotonic_s=time.monotonic(),method=self.method,**fields)
-        self.events.append(clean(item));return item
+        self.events.append(clean(item))
+        if self.event_path is not None:
+            with self.event_path.open('a',encoding='utf8') as log:log.write(json.dumps(self.events[-1])+'\n')
+        return item
     def _active_sample(self,now):
         a=self.active
         if a is None:return self.last_state.copy(),np.zeros(6),np.zeros(6)
         local=max(0.,now-a['activated']);bridge=a.get('bridge');duration=bridge.duration if bridge else 0.
         if bridge is not None and local<duration:return sample_bridge(bridge,local)
         curve=a['curve'];offset=a.get('trajectory_offset_s',0.);t=np.clip(local-duration+offset,0.,curve.duration)
+        if a.get('stop_clock') is not None:return a['stop_clock'].sample(curve,local-duration+offset)
         if local-duration+offset>=curve.duration:return curve.evaluate([curve.duration],0)[0],np.zeros(6),np.zeros(6)
         return tuple(curve.evaluate([t],d)[0] for d in range(3))
     def _job(self,request,snapshot,start,rate,accel,old):
         # Immutable copies of request state and snapshot are the entire causal
         # worker input. No live plant state or future map is queried here.
         request['worker_started_s']=time.monotonic()
+        if self.event_path is not None:
+            self.kernel.trace_path=self.event_path.with_name('planner-live.jsonl')
         try:
             result=self.kernel.solve(snapshot,start,rate,accel,request['id'])
             result['request']=request;result['bridge']=None;result['handoff']=None;result['trajectory_offset_s']=0.
@@ -55,6 +62,10 @@ class RollingPlanner:
                 if not proof.feasible:raise RuntimeError('Receiving-map handoff rejected: '+proof.failure_reason)
             else:
                 result['handoff']=dict(kind='hard_switch',duration=0.,phase_rule='candidate absolute time is submission time; apply its available suffix at actual readiness')
+            if self.method=='stop' and not result['final']:
+                result['stop_clock']=commit_clock(result['curve'],self.config.replan_distance)
+                clock=result['stop_clock']
+                if clock is not None:result['handoff']['commit_brake']=asdict(clock)
             result['wall_completed']=time.monotonic();return result
         finally:
             request['worker_finished_s']=time.monotonic()
@@ -65,7 +76,12 @@ class RollingPlanner:
         switch_time=float(np.ceil((now+1.25-1e-9)/.02)*.02) if live else max(21.,now)
         old=self._active_sample(switch_time) if live else (state.copy(),np.zeros(6),np.zeros(6))
         start,v,a=state.copy(),rate.copy(),accel.copy()
-        if self.method=='stop' or self.active is None:v=np.zeros(6);a=np.zeros(6)
+        if live:
+            # The state origin is the present measured whole-body pose. The
+            # moving spline starts with the tangent already issued by control;
+            # differencing a nearly straight arm can give singular polar rates.
+            _,v,a=self._active_sample(now)
+        else:v=np.zeros(6);a=np.zeros(6)
         # Moving boundary is predicted from the already committed curve, never
         # by peeking at future physical states. Current measured state is logged.
         request=dict(id=self.next_id,submit_release_s=float(now),wall_before_reveal_s=wall_before_reveal,wall_submit_s=time.monotonic(),scheduled_switch_s=float(switch_time),
@@ -74,6 +90,12 @@ class RollingPlanner:
                      map=snap.metadata(),bridge_duration=bridge_duration)
         self.request=request;self.next_id+=1;self.last_request=now;self.last_x=state[0]
         self.requests[request['id']]=dict(request=request,snapshot=snap)
+        if self.event_path is not None:
+            evidence=self.event_path.parent/'rolling'/'windows'/('%03d'%request['id'])
+            evidence.mkdir(parents=True,exist_ok=True)
+            np.savez(evidence/'snapshot.npz',obstacle_rows=snap.obstacle_rows,ids=np.asarray(snap.ids),
+                     origin=snap.origin,radius=snap.radius)
+            (evidence/'request.json').write_text(json.dumps(clean(request)))
         self.event('submit',now,**request);self.future=self.pool.submit(self._job,request,snap,start.copy(),v.copy(),a.copy(),old)
         self.needs_stop=self.active is None or self.method=='stop'
     def tick(self,now,state6,rate6,accel6):
@@ -114,11 +136,13 @@ class RollingPlanner:
                            handoff=result['handoff'],trajectory_offset_s=result['trajectory_offset_s'],bridge_start_s=float(now),bridge_end_s=float(now+(result['bridge'].duration if result['bridge'] else 0.)))
         elapsed=now-self.active['activated'] if self.active else 0.
         duration=(self.active['curve'].duration-self.active.get('trajectory_offset_s',0.)+(self.active['bridge'].duration if self.active['bridge'] else 0.)) if self.active else 0.
+        if self.active and self.active.get('stop_clock') is not None:
+            duration+=self.active['stop_clock'].duration-self.active['curve'].duration
         ended=bool(self.active is not None and elapsed>=duration)
         if ended and self.active['final']:
             if not self.done:self.event('plan_done',now,id=self.active['id'])
             self.done=True;self.status='done';return
-        if self.future is None and self.pending is None and not self.done:
+        if self.future is None and self.pending is None and not self.done and not (self.active and self.active['final']):
             if self.active is None:
                 ready=now-self.last_request>1.0
             elif self.method=='stop':ready=ended and now-self.last_request>1.0
