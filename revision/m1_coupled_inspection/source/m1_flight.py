@@ -30,7 +30,7 @@ class Controller:
         self.integral=np.zeros(2);self.issued=np.zeros(2);self.des=np.zeros(2)
         self.ref=HOVER.copy();self.yaw=0.;self.phase='takeoff';self.checked=0;self.exit_time=None
         self.s=P['servo'];self.holding=False
-        self.reserve=np.array([.066,.078]);self.last_gap=None;self.gap_rate=np.zeros(2)
+        self.reserve=np.array([.064,.078])
     def sample(self,clock):
         j=min(np.searchsorted(self.t,clock),len(self.t)-1)
         if j==0:return self.q[0].copy()
@@ -44,9 +44,6 @@ class Controller:
             R=enu_body_rotation(rpy);g.place_estimate(xyz,R,estimate)
             components=self.geom.components(g.d,xyz);components[:,6]=0
             clear=self.geom.query(components,np.r_[xyz,0.,0,0])[0]
-            if self.last_gap is not None:
-                self.gap_rate=.78*self.gap_rate+.22*np.clip((clear-self.last_gap)/.02,-.35,.35)
-            self.last_gap=clear.copy()
             # Check the measured pose and a short braking projection with the actual attitude.
             v=np.asarray(velocity);a=(.30+np.linalg.norm(v)/(2*.55))*v
             ahead=np.minimum.reduce([self.geom.query(components,np.r_[xyz+f*a,0.,0,0])[0] for f in (.33,.67,1.)])
@@ -67,7 +64,11 @@ class Controller:
             elif np.linalg.norm(xyz-self.ref)>.085:hold='tracking'
             if hold=='none':
                 reserve=np.min(np.minimum(clear,ahead)-self.reserve)
-                rate=float(np.clip(.32+7.0*reserve,.32,1.))
+                rate=float(np.clip(.26+6.5*reserve,.26,1.))
+                if self.method not in ('straight','fixed'):
+                    bend_target=q[4]*np.array([np.cos(q[5]),np.sin(q[5])])
+                    lag=np.linalg.norm(bend_target-estimate)
+                    rate*=float(np.clip(1.2-lag/np.deg2rad(17.),.35,1.))
                 self.elapsed=min(self.t[-1],self.elapsed+.02*rate);q=self.sample(self.elapsed)
                 j=min(np.searchsorted(self.t,self.elapsed),len(self.t)-1)
                 self.ff=(rate*self.v[j,:3].copy(),rate**2*self.acc[j,:3].copy())
@@ -78,9 +79,17 @@ class Controller:
                 # aircraft during braking. Releasing bend early consumes sill clearance.
                 minimum=min(.084,min(clear[1],ahead[1]))-.0003
                 best=-np.inf;selected=None;scheduled=False
-                candidates=[(False,self.des.copy()),(False,estimate),(True,nominal)]
+                # Assign shape to achieved translation. A body can lag its spline
+                # clock across a constriction, particularly when the arm unloads.
+                near=np.flatnonzero(abs(self.t-self.elapsed)<=1.85)
+                dist=np.linalg.norm(self.q[near,:3]-xyz,axis=1)+.003*abs(self.t[near]-self.elapsed)
+                reached=min(self.elapsed,self.t[near[np.argmin(dist)]])
+                aligned=self.sample(reached)
+                aligned_b=aligned[4]*np.array([np.cos(aligned[5]),np.sin(aligned[5])])
+                candidates=[(False,self.des.copy()),(False,estimate),(True,aligned_b)]
                 for advance in (.34,.68,1.02):
-                    lead=self.sample(self.elapsed+advance)
+                    lead=self.sample(reached+advance)
+                    if lead[4]<aligned[4]-.004 and np.min(clear)<.13:break
                     candidates.append((True,lead[4]*np.array([np.cos(lead[5]),np.sin(lead[5])])))
                 for on_spline,next_b in candidates:
                     g.place_estimate(xyz,R,next_b)
@@ -92,7 +101,11 @@ class Controller:
                         selected=next_b;scheduled=True
                     elif not scheduled and gap>best:
                         selected=next_b;best=gap
-                if selected is not None:self.des+=limit_vector(selected-self.des,.02*np.deg2rad(self.s['command_rate_deg_s']))
+                if selected is not None:
+                    # Slow mass redistribution near a wall while preserving the
+                    # controller's common maximal slew in the open corridor.
+                    slew=np.clip(12.+350.*(np.min(clear)-.09),12.,self.s['command_rate_deg_s'])
+                    self.des+=limit_vector(selected-self.des,.02*np.deg2rad(slew))
             else:self.des=nominal
             if self.elapsed>=self.t[-1]-.001 and self.full_route and fresh:
                 self.phase='inspect'
@@ -126,21 +139,6 @@ class Controller:
             # PX4 receives acceleration in the inertial frame before its native
             # attitude/rate loops and motor mixer, including during a braking hold.
             acc=aff+2.0*(self.ref-xyz)+3.2*(vref-np.asarray(velocity))
-            # A relative-degree-two clearance constraint acts on the PX4 acceleration
-            # feedforward before the position guard has come to a stop. Distance rate
-            # includes rotation of the aircraft and deformation of the tool.
-            close=np.flatnonzero(clear<self.reserve+.037)
-            if len(close):
-                jac=[]
-                for unit in np.eye(3)*.003:
-                    plus=self.geom.query(components,np.r_[xyz+unit,0.,0.,0.])[0]
-                    minus=self.geom.query(components,np.r_[xyz-unit,0.,0.,0.])[0]
-                    jac.append((plus-minus)/.006)
-                jac=np.asarray(jac).T;tau=.38
-                for k in close[np.argsort((clear-self.reserve)[close])[::-1]]:
-                    normal=jac[k];norm2=normal@normal
-                    required=2*(self.reserve[k]-clear[k]-tau*self.gap_rate[k])/tau**2
-                    if norm2>.15:acc+=normal*np.clip((required-normal@acc)/norm2,0.,.65)
             self.ff=(vref,limit_vector(acc,.85))
         if fresh and not hit and t>=12:
             e=self.des-estimate
@@ -183,7 +181,7 @@ def fly(out,planfolder,strategy,seed,instance,development):
     if decision['method']!=strategy or decision['map']!=p.scene_digest:raise ValueError('mismatched plan')
     if decision['accepted']:
         with np.load(planfolder/'certified.npz') as f:T=f['t'][-1]
-        score_end=21.+2.45*T+14.
+        score_end=21.+3.1*T+18.
     else:score_end=21.
     c=dict(method='proposed',strategy=strategy,seed=seed,case='%s-%d'%(strategy,seed))
     loop=IndustryLoop(p,out,c,decision,planfolder,score_end)

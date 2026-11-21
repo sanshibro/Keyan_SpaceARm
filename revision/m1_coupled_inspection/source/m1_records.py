@@ -10,14 +10,17 @@ def put(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encodin
 def package(root,archive):
     metrics=json.loads((root/'matrix.json').read_text());reg=json.loads((root/'registered.json').read_text())
     assert len(metrics)==15;keys=set();summary=[]
-    include={'registered.json','matrix.json'}
+    include={'registered.json','matrix.json','plan-registration.json'}
     for score in metrics:
         name=score['case']['case'];case=root/name;flt=case/'flight';pro=json.loads((flt/'provenance.json').read_text())
         assert name not in keys and pro['mission']['scene']==reg['scene_sha256'];keys.add(name)
-        files=['plan/decision.json','plan/certified.npz','flight/run.json','flight/provenance.json','flight/events.jsonl',
+        files=['plan/decision.json','flight/run.json','flight/provenance.json','flight/events.jsonl',
                'flight/control-summary.json','flight/physics.npz','flight/control.npz','flight/flight.ulg','flight/flight.bag',
                'flight/optics/observations.npz','flight/optics/index.jsonl','flight/optics/shared-scene.json','audit/metrics.json','audit/series.npz']
         files += [str(x.relative_to(case)) for x in (flt/'sensors').iterdir() if x.suffix in ('.npz','.json')]
+        if pro['mission']['plan_sha256']!=sha(case/'plan/decision.json'):raise ValueError('Plan identity: '+name)
+        if json.loads((case/'plan/decision.json').read_text())['accepted']:files.append('plan/certified.npz')
+        files += ['plan/'+n for n in ('seed.npy','body-reference.npy') if (case/'plan'/n).is_file()]
         files += ['flight/optics/'+n for n in ('native.csv','native.log','settings.yaml','fixed-calibration.json','complete.json','manifest.json')]
         # Every native exposure is re-hashed against its producer's index. This
         # also protects the RGB-D evidence retained on the NUC for each flight.
