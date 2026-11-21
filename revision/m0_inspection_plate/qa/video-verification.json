@@ -1,0 +1,28 @@
+{
+  "file": "gate_multiview_v2.mp4",
+  "sha256": "785473c8a92e58746e9510e176040943e57a185f9bf04b20abf47d13472c3370",
+  "width": 1920,
+  "height": 1080,
+  "fps": 15,
+  "frames": 481,
+  "release_s": [
+    23.0,
+    55.0
+  ],
+  "checked_native_wrist_tiles": 2405,
+  "black_frames": {
+    "vision": 60,
+    "strain": 60,
+    "fixed": 60,
+    "proposed": 60,
+    "oracle": 60
+  },
+  "highest_pixel_mae_8bit": {
+    "vision": 3.684729064039409,
+    "strain": 3.226851096684392,
+    "fixed": 3.5237116541067213,
+    "proposed": 3.2430104720582,
+    "oracle": 3.201143988081645
+  },
+  "source_pose": "nearest archived qpos"
+}

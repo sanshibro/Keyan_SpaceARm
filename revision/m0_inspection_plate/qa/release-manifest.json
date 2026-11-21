@@ -1,0 +1,197 @@
+{
+  "source_commit": "951c512fbeaf860c5158e18c44aed527dbf7a899",
+  "files": {
+    "revision/m0_inspection_plate/README.md": {
+      "sha256": "13e8573dab9873f3f187d178306581aaf7f9cce4f321cd83533c164d1cc45081",
+      "bytes": 2409
+    },
+    "revision/m0_inspection_plate/source/m0_archive.py": {
+      "sha256": "4871a739dbadd556edef0c48a8821e95d3467189ff27aafe4cf49061f5f20ba4",
+      "bytes": 12522
+    },
+    "revision/m0_inspection_plate/source/m0_audit.py": {
+      "sha256": "aa0717d8367e26682c6163af301148dcb9a7fc6aab9066668cf627e9dc6dde5d",
+      "bytes": 6835
+    },
+    "revision/m0_inspection_plate/source/m0_data.py": {
+      "sha256": "d210159c22013eb1936fdfdb1cf9300cafbcdccc7d43f43ae5890b6507a99ea4",
+      "bytes": 5382
+    },
+    "revision/m0_inspection_plate/source/m0_pathtrace.py": {
+      "sha256": "ac30299e2f60a8516003f78d9dd6590e4a28e41199f15cfa2aec6b2401e702dd",
+      "bytes": 9116
+    },
+    "revision/m0_inspection_plate/source/m0_plates.py": {
+      "sha256": "12408a2f8cecdee42e5e32e052e6f915c1ceb01f1ac45dd9f0b19514367521a4",
+      "bytes": 15061
+    },
+    "revision/m0_inspection_plate/source/m0_release.py": {
+      "sha256": "fcc67fa3e3d5b3f713b5d3970cfa9a34d7cdf6f0fb7333f665f0590b3b7b6046",
+      "bytes": 2068
+    },
+    "revision/m0_inspection_plate/source/m0_render.py": {
+      "sha256": "afa214f01d9ccdee09bad3746ad81511b174050a947704b59f668ff4a7ffd597",
+      "bytes": 9594
+    },
+    "revision/m0_inspection_plate/source/m0_review.py": {
+      "sha256": "3ef14d4474b9aab2a9c146846a9ced07609508c67b89b7ba4da002ac6d0c42c6",
+      "bytes": 5359
+    },
+    "revision/m0_inspection_plate/source/m0_scene.py": {
+      "sha256": "8ecd28e922336ad5aafec5ff11f7096d7e4288340ef918baadbc41eeb38226ea",
+      "bytes": 17962
+    },
+    "revision/m0_inspection_plate/source/m0_vector.py": {
+      "sha256": "a89ddf1f443d2990cc59a4cc832b91ef83fadf81ada2e82f0424f70d414f3c50",
+      "bytes": 6664
+    },
+    "revision/m0_inspection_plate/source/m0_video.py": {
+      "sha256": "875f0713644ea9e9803e1c120566882a07d18ffe0105da05fcf09e3410e37b03",
+      "bytes": 7355
+    },
+    "revision/m0_inspection_plate/review/gate_hero_v2.png": {
+      "sha256": "c6251e37110fec3fc51d7dade6ba4366d7cbcb32e35086c3a85590a59ec2ca5a",
+      "bytes": 1796852
+    },
+    "revision/m0_inspection_plate/review/gate_hero_v2.svg": {
+      "sha256": "df22036b4302c4e63a6236acb6032513d739275f9bbf84172a1b779220020966",
+      "bytes": 2589065
+    },
+    "revision/m0_inspection_plate/review/gate_hero_v2.pdf": {
+      "sha256": "dd5a6d80df673631543aff10b4294d8ea08af071c0dd5d1117ac8c1adf45cf9c",
+      "bytes": 1405509
+    },
+    "revision/m0_inspection_plate/review/gate_insets_v2.png": {
+      "sha256": "f600c36b0e37a5b499bc018b14ced0da64143f619b72df2f5dd5a4f2fa3dc8eb",
+      "bytes": 2163195
+    },
+    "revision/m0_inspection_plate/review/gate_insets_v2.svg": {
+      "sha256": "f370f6a21c592abff401423f4718cbaadc3f8279e1d1189b27d3f6608c42f098",
+      "bytes": 4135413
+    },
+    "revision/m0_inspection_plate/review/gate_insets_v2.pdf": {
+      "sha256": "f16a92b8fa66e4970da1ad6fae957360299c5757abb31be5ae0e868c1558fc82",
+      "bytes": 2156947
+    },
+    "revision/m0_inspection_plate/review/gate_four_metrics_v2.png": {
+      "sha256": "01e8706c7256ad49e491309e1a5ea5fe8fe13fee3aa76e78977529b5ba687d2b",
+      "bytes": 776262
+    },
+    "revision/m0_inspection_plate/review/gate_four_metrics_v2.svg": {
+      "sha256": "a5945bc1e20a1239e645c1f3e64e38542eb24c2b80d8bf17269076bff4921eaa",
+      "bytes": 342734
+    },
+    "revision/m0_inspection_plate/review/gate_four_metrics_v2.pdf": {
+      "sha256": "d4b7a0b4de9a4b7e7350b04aa5df9af243a9ccd433f0c9b5ef34fce6c8c8259f",
+      "bytes": 137753
+    },
+    "revision/m0_inspection_plate/review/gate_main_v2.png": {
+      "sha256": "0d384dde6148fb7bf893eb769e2bf1721ccc23f9efdeb3417a4d84c638909e1e",
+      "bytes": 3346683
+    },
+    "revision/m0_inspection_plate/review/gate_main_v2.svg": {
+      "sha256": "2a38adb4f7e7c4994ac32a2f932745071ce162e1c85f3072f3d5ff800a48146e",
+      "bytes": 7068532
+    },
+    "revision/m0_inspection_plate/review/gate_main_v2.pdf": {
+      "sha256": "d203150d4d9136c346634463bdaec01afe7bb7eb9823a8e8203c9222371cc18c",
+      "bytes": 3546612
+    },
+    "revision/m0_inspection_plate/review/gate_review_v2.pdf": {
+      "sha256": "925006669235d3bd0605f4a36dfe55fe616807ac42ab67e19a2bb8ff4bb51832",
+      "bytes": 1648831
+    },
+    "revision/m0_inspection_plate/review/gate_multiview_v2.mp4": {
+      "sha256": "785473c8a92e58746e9510e176040943e57a185f9bf04b20abf47d13472c3370",
+      "bytes": 6989849
+    },
+    "revision/m0_inspection_plate/qa/archive-fingerprints.json": {
+      "sha256": "220951c293cfd706936d7d101e35eef3294309a63dad0e45e5f30df17b319758",
+      "bytes": 51778
+    },
+    "revision/m0_inspection_plate/qa/scene-clearance.json": {
+      "sha256": "1576d6a0afd30ed220415e2b2c1dc523665df3e9cb0b54251291affd9ab84294",
+      "bytes": 115054
+    },
+    "revision/m0_inspection_plate/qa/hero-projection.json": {
+      "sha256": "448f55dd19329f1822d4517f806a64244aba672be2e3af65ef937947f84aa399",
+      "bytes": 1693
+    },
+    "revision/m0_inspection_plate/qa/inset-projection.json": {
+      "sha256": "d304da32f38c78150dc0c99238f3dac49330aff469d90aeaa9f95f2418c351c4",
+      "bytes": 2067
+    },
+    "revision/m0_inspection_plate/qa/pathtrace.json": {
+      "sha256": "0e38236ba4da06904275ab4430c906a1abb1d2e61e8e2f5926bde463674be856",
+      "bytes": 858
+    },
+    "revision/m0_inspection_plate/qa/vector-verification.json": {
+      "sha256": "52f7d2de0357b52d13fc966364015b235ddac14b6a72bef18d980bc777514c32",
+      "bytes": 2462
+    },
+    "revision/m0_inspection_plate/qa/video-verification.json": {
+      "sha256": "ce955b7e3d1c2fa87ca1dd56c3a6d704dd0c18cc44dbdf1b48788ae452973227",
+      "bytes": 646
+    },
+    "revision/m0_inspection_plate/qa/review-verification.json": {
+      "sha256": "2d4be4b3c3398c279b3a4bc18077756ad355358857af9f29557103fbc1cedb1c",
+      "bytes": 285
+    },
+    "revision/m0_inspection_plate/qa/machined-portal-proof.png": {
+      "sha256": "d4bcdc54b89efceeeebd769868c0e6bac294318d3de953b1edca02999f1af896",
+      "bytes": 274561
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/index.html": {
+      "sha256": "3acf5c61d22733f1f3d0ace48f3ce7c02bd5631e5eaf3dd664cbd628ffa81b89",
+      "bytes": 11968
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/meeting.zip": {
+      "sha256": "a0eec6a4bbf4064c13d6e2ae921c5115ae2b4f151f333d89a7e243316870682e",
+      "bytes": 12384832
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/snapshot.json": {
+      "sha256": "3b034c857835d617019e7164aa427b7431fc8ee8d228fa2b10ff7369181fe521",
+      "bytes": 4937
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/curves.webp": {
+      "sha256": "eb15a76e9abfdb3b87f8896eefea6b5ea81a22c16630a4ce43136b69a52bfb63",
+      "bytes": 145454
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/fingerprints.json": {
+      "sha256": "220951c293cfd706936d7d101e35eef3294309a63dad0e45e5f30df17b319758",
+      "bytes": 51778
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/geometry.json": {
+      "sha256": "1576d6a0afd30ed220415e2b2c1dc523665df3e9cb0b54251291affd9ab84294",
+      "bytes": 115054
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/hero.webp": {
+      "sha256": "8f194edbb017f2e8da55f8fcd037dab1504f2c1c178e3bd64cfbda618017b0e0",
+      "bytes": 130118
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/insets.webp": {
+      "sha256": "1b42eae21370d6ff8b621c5c197b8aaa0ab14794f3b144f0ec4da4a2120516ea",
+      "bytes": 146746
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/poster.webp": {
+      "sha256": "35bff8ba9609f5b1c7d5858d71a0b74544310e8a2c71ec9fc0b0e36df286efe0",
+      "bytes": 99340
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/print.pdf": {
+      "sha256": "d203150d4d9136c346634463bdaec01afe7bb7eb9823a8e8203c9222371cc18c",
+      "bytes": 3546612
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/print.tar.gz": {
+      "sha256": "2f1608507d789980b59c6ac5714abe7050ca12dae9d3756a05d10b3bb6317d03",
+      "bytes": 19914783
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/replay.mp4": {
+      "sha256": "785473c8a92e58746e9510e176040943e57a185f9bf04b20abf47d13472c3370",
+      "bytes": 6989849
+    },
+    "revision/meeting_archive/archive/2026-11-21-m0-cutaway/media/review.pdf": {
+      "sha256": "925006669235d3bd0605f4a36dfe55fe616807ac42ab67e19a2bb8ff4bb51832",
+      "bytes": 1648831
+    }
+  }
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "row": "gate",
+    "case": "26112131-differential-occluded-strain",
+    "release_s": 33.78,
+    "metric": "6.21 cm   ·   33.78 s",
+    "camera": {
+      "at": [
+        0.98,
+        0.06,
+        1.8
+      ],
+      "toward_eye": [
+        0.28,
+        -1.0,
+        0.15
+      ],
+      "width": 0.6
+    }
+  },
+  {
+    "row": "gate",
+    "case": "26112131-differential-occluded-fixed",
+    "release_s": 34.699999999999996,
+    "metric": "7.38 cm   ·   34.70 s",
+    "camera": {
+      "at": [
+        0.98,
+        0.06,
+        1.8
+      ],
+      "toward_eye": [
+        0.28,
+        -1.0,
+        0.15
+      ],
+      "width": 0.6
+    }
+  },
+  {
+    "row": "gate",
+    "case": "26112131-differential-occluded-proposed",
+    "release_s": 33.64,
+    "metric": "8.90 cm   ·   33.64 s",
+    "camera": {
+      "at": [
+        0.98,
+        0.06,
+        1.8
+      ],
+      "toward_eye": [
+        0.28,
+        -1.0,
+        0.15
+      ],
+      "width": 0.6
+    }
+  },
+  {
+    "row": "dock",
+    "case": "26112131-differential-occluded-strain",
+    "release_s": 52.0,
+    "metric": "3.50 cm   /   6.69°",
+    "camera": {
+      "at": [
+        1.996,
+        0.249,
+        1.716
+      ],
+      "toward_eye": [
+        0.32,
+        -1.0,
+        0.47
+      ],
+      "width": 0.58
+    }
+  },
+  {
+    "row": "dock",
+    "case": "26112131-differential-occluded-oracle",
+    "release_s": 52.0,
+    "metric": "1.70 cm   /   0.09°",
+    "camera": {
+      "at": [
+        1.996,
+        0.249,
+        1.716
+      ],
+      "toward_eye": [
+        0.32,
+        -1.0,
+        0.47
+      ],
+      "width": 0.58
+    }
+  },
+  {
+    "row": "dock",
+    "case": "26112131-differential-occluded-proposed",
+    "release_s": 52.0,
+    "metric": "1.37 cm   /   0.26°",
+    "camera": {
+      "at": [
+        1.996,
+        0.249,
+        1.716
+      ],
+      "toward_eye": [
+        0.32,
+        -1.0,
+        0.47
+      ],
+      "width": 0.58
+    }
+  }
+]

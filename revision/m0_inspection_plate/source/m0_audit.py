@@ -127,4 +127,3 @@ def main():
     if not cert['certified']:raise SystemExit("Closer inspection required for unresolved bounding volumes.")
 
 if __name__=="__main__":main()
-

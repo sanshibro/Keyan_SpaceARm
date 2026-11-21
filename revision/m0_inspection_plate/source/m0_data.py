@@ -163,4 +163,3 @@ def matrix(R, t):
     H[:3,:3] = R
     H[:3,3] = t
     return H
-

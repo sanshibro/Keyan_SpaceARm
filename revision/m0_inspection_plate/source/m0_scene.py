@@ -177,8 +177,11 @@ def inspection_scene():
                     elif v[:,1].min()>=half-1e-10:key="jambplus"
                     else:raise ValueError(name)
                     groups.setdefault(key,[]).append(v)
+        triangles=np.asarray([v for tris in groups.values() for v in tris])
+        volume6=np.einsum('ij,ij->',triangles[:,0],np.cross(triangles[:,1],triangles[:,2]))
         for key,value in groups.items():
             v=np.vstack(value);f=np.arange(len(v)).reshape(-1,3)
+            if volume6<0:f=f[:,::-1]
             add(facets(v,f),np.zeros(3),ident,color,key,name,metal=metal,rough=rough)
     portal_layer("tunnel liner",[(0,0,x0),(.009,.008,x0),(.009,.008,x1),(0,0,x1)],
                  "#5d8683",.59,.38)
@@ -315,4 +318,3 @@ def robot_parts(m):
     assert sum("visual_gripper_finger" in a.name for a in pieces)==3
     assert any("visual_super_prop" in a.name for a in pieces)
     return pieces
-

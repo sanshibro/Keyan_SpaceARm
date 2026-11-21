@@ -1,0 +1,125 @@
+{
+  "gate_hero_v2": {
+    "mean_absolute_RGB_difference_255": 3.67,
+    "page_points": [
+      835.2000122070312,
+      536.4000244140625
+    ],
+    "pdf_sha256": "dd5a6d80df673631543aff10b4294d8ea08af071c0dd5d1117ac8c1adf45cf9c",
+    "CAD_layers": [
+      {
+        "input_size": [
+          2260,
+          1200
+        ],
+        "trace_size": [
+          1880,
+          998
+        ],
+        "paths": 5712
+      }
+    ],
+    "native_text": 22,
+    "all_paths": 5756,
+    "pdf_images": 0
+  },
+  "gate_insets_v2": {
+    "mean_absolute_RGB_difference_255": 3.74,
+    "page_points": [
+      835.2000122070312,
+      522.0
+    ],
+    "pdf_sha256": "f16a92b8fa66e4970da1ad6fae957360299c5757abb31be5ae0e868c1558fc82",
+    "CAD_layers": [
+      {
+        "input_size": [
+          1060,
+          636
+        ],
+        "trace_size": [
+          1060,
+          636
+        ],
+        "paths": 1359
+      },
+      {
+        "input_size": [
+          1060,
+          636
+        ],
+        "trace_size": [
+          1060,
+          636
+        ],
+        "paths": 1459
+      },
+      {
+        "input_size": [
+          1060,
+          636
+        ],
+        "trace_size": [
+          1060,
+          636
+        ],
+        "paths": 1287
+      },
+      {
+        "input_size": [
+          1060,
+          636
+        ],
+        "trace_size": [
+          1060,
+          636
+        ],
+        "paths": 1986
+      },
+      {
+        "input_size": [
+          1060,
+          636
+        ],
+        "trace_size": [
+          1060,
+          636
+        ],
+        "paths": 2004
+      },
+      {
+        "input_size": [
+          1060,
+          636
+        ],
+        "trace_size": [
+          1060,
+          636
+        ],
+        "paths": 1959
+      }
+    ],
+    "native_text": 23,
+    "all_paths": 10082,
+    "pdf_images": 0
+  },
+  "gate_four_metrics_v2": {
+    "mean_absolute_RGB_difference_255": 1.86,
+    "page_points": [
+      835.2000122070312,
+      536.4000244140625
+    ],
+    "pdf_sha256": "d4b7a0b4de9a4b7e7350b04aa5df9af243a9ccd433f0c9b5ef34fce6c8c8259f",
+    "CAD_layers": [],
+    "native_text": 57,
+    "all_paths": 88,
+    "pdf_images": 0
+  },
+  "gate_main_v2": {
+    "pdf_images": 0,
+    "png_size": [
+      3468,
+      3357
+    ],
+    "pdf_sha256": "d203150d4d9136c346634463bdaec01afe7bb7eb9823a8e8203c9222371cc18c"
+  }
+}

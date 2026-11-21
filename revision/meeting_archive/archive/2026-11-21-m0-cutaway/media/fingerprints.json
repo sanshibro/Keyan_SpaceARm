@@ -1,0 +1,845 @@
+{
+  "source_commit": "951c512fbeaf860c5158e18c44aed527dbf7a899",
+  "cases": [
+    {
+      "case": "26112131-differential-natural-vision",
+      "sha256": "ae782927e9fe19313f01bbec8857855f40cf1e0b1b4cfce4e8f1a6320955f085",
+      "success": false,
+      "inputs": {
+        "run.json": "d266c9345fd52d91ced16759eee4658252169b204dbdf9b2c19981f11ab7bcbb",
+        "control-summary.json": "2c71aa9c9880bfebf0549cf70bdcf387a4ba536eba20bbf97d6a7716b98fb63c",
+        "metrics.json": "d3400c4e7a407b7e6e63e1ef3b0dbf8fa4a43eb4f158cffa26a38fbf3f66b716",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "507d2dd818918380cee2e6f34331029d0345ca5c09fffc7148f8963107dd2245",
+        "control.npz": "19ac51c878a1e59bc01212a02f2405560f4bbdffe5572a6b9e6a270d8ce60c60",
+        "score-trace.npz": "c7f3750e7e59b9038d1c474cfd54330a7cf0a790166f7ad945568d9243984053"
+      }
+    },
+    {
+      "case": "26112131-differential-natural-strain",
+      "sha256": "2508516bb54975498228b64ad75879f2f1759ea2464624c6826359ddcada3e62",
+      "success": false,
+      "inputs": {
+        "run.json": "965d399cd59af8fe9e88ce24fa04805d809a4b0a4167593ae06c35e0624e94cb",
+        "control-summary.json": "d2f33a253c7ca3a8d8dda88f882c14743ac2b6824f088b53abde1b3ec957a4cf",
+        "metrics.json": "bf3c9223fafeee173879ffbc1f01f23471c25ed48e980a2776f93781ae9f2a86",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "d9d8db357d37b86e6f89bb46de632fa9385d4e8b8f777e53bdd44b57460e7e30",
+        "control.npz": "ad94c975dc61dd2ddebe5741d60285663983527753c90f11f5e791df26c0481a",
+        "score-trace.npz": "769fe1f0da85323e107d4f98686b478e98c2a3cee318beb448f0c39fbedd1aba"
+      }
+    },
+    {
+      "case": "26112131-differential-natural-fixed",
+      "sha256": "f41e8d1d1236a531cdf146e8c54f2541fee341f22bc5be29e9e2e43e03e6c799",
+      "success": true,
+      "inputs": {
+        "run.json": "5cb232f1ab7908c1031677ff3e4fc4d41a244aeb8910f10c2cad1ec3d18bc825",
+        "control-summary.json": "2ca2e0a0c8e75965d84a4b1989ead76b589840e05bfcfb3b50b7c00d0f843fc3",
+        "metrics.json": "ee857ec8d6cbd680bc7a0a861027b973f35a35e7ad2eb800c2d644863bf39e1d",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "059b4208d69cb55a244d2bdb5b92ff0eac190a7faf9d42cb1f2d037b0f1a83dd",
+        "control.npz": "129f99c87af02eefc86c287991c55ff2e1416579dca9be45f001b5352dc2f5f2",
+        "score-trace.npz": "b84cdb97d741e3259ca9aa2827507d8912a4cd8aae4a50ca5c31f7199615f68a"
+      }
+    },
+    {
+      "case": "26112131-differential-natural-proposed",
+      "sha256": "2799bd319aab7ffe759672d1b95679a30ad7e251fe4822fde164731b03d0f7b8",
+      "success": true,
+      "inputs": {
+        "run.json": "c96738dcc1565cded59f832f50d5df04c469162f596a0632dffdb1ead98ff1f8",
+        "control-summary.json": "4ca1b771d446c471def0ecf89935058f6ecf4c5082360aae51020a3ac70a21f8",
+        "metrics.json": "1178e388c38c7038bc8d693127ba45efa73dffb939086d5f0ad75bfe1ae348f7",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "eac953a0261753703a907c421c78c3eceb6219ac6100e3ac1b1d633ff6724acf",
+        "control.npz": "93f53053026ca7ce79fe52f9c07a50a0005dce4032a220eb2faed72eddab3788",
+        "score-trace.npz": "5d54d46d23b7a3f621d44a0c150f03d5cbbe8d2c21b16f1800d171a30aaaa69d"
+      }
+    },
+    {
+      "case": "26112131-differential-natural-oracle",
+      "sha256": "5c0fce4171f98060ae79a119314328edacc658f769948f07e644ef46a674e44e",
+      "success": true,
+      "inputs": {
+        "run.json": "7a410ec3a4dafe3ecf8603761c6569f4f3bda908652ebac4ad7fff21f7c6d1c1",
+        "control-summary.json": "319396552912b69e7f5b6dff6633c7a354f8fd8de7ec77cc8892aac5af770a2a",
+        "metrics.json": "0b55480fde4a59adf3544f0300a0ec03cee783c5558d67c57044e530cadf970a",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "aab6288eb963a52fff4bfaf4d615ea4ee0b0a4ccebf9a7ce83bb118f4984426b",
+        "control.npz": "44bcc8a571e791a8cd15e7c7df97110ac8850534f541dbd9f47607e242da64c8",
+        "score-trace.npz": "b5ee9448b27e51509522ad6a504af426f2cd4699378a7c4c4b0a4491c74345d4"
+      }
+    },
+    {
+      "case": "26112137-differential-natural-vision",
+      "sha256": "5b2045cd48d0099916e9d8b7bf09a6df533f61145cd6410437d3a654d794bb33",
+      "success": false,
+      "inputs": {
+        "run.json": "97a33d083cea872514a6816bab74fe0c95c0898776644611d819b0128354a5a4",
+        "control-summary.json": "dc09f53a832a40776ecbdedb99e3ae17d29a6114c448681b4b1b7968effe7208",
+        "metrics.json": "1fa0c680c761cf220fe7a5aea71f4a5858ea0f21eafe786e4b6d74883030c836",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "eaa57ca2bb55831ab1f0298780549c22e5c132fd5b75e24c44100dca2c0c46c3",
+        "control.npz": "555d296c794a3da2a81b5de843624ebd84a287f5f7b4f38d11fc1845c64f34bf",
+        "score-trace.npz": "c81f30019d178ada79842f6cd87c24aed6afb708a8f28deba1e224369e51f443"
+      }
+    },
+    {
+      "case": "26112137-differential-natural-strain",
+      "sha256": "cd3f146065de0ed870cf3bef5bb0714809176b596d4b6cda500d64db4dfa711f",
+      "success": false,
+      "inputs": {
+        "run.json": "f34441b457a1c28a2b6e527c7e225b48f58a47cd847a16bb62f8bd0c28939b78",
+        "control-summary.json": "c244665cc7fd113d78a33c7a59901e73ea74bffa258f0c021185e9f7ac7a302e",
+        "metrics.json": "b55367e55ee41925c4ebf408b970c50888b323630b541e32a62f7f397abc84ef",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "119f69c4583a9141556ac9a61797dddc4cda136e9ad231a5fba155c0567b7896",
+        "control.npz": "ecdc927707d0bd7ca9fdd7c13cbed16201d87e8e60fdda6b3663df8cf97fd684",
+        "score-trace.npz": "03afaa94f2570fca64b9244dee75ca49ff492dae7d6bcea4d9033e551a5af651"
+      }
+    },
+    {
+      "case": "26112137-differential-natural-fixed",
+      "sha256": "80231a311c1d600dc248bdbb0d5e6fb42a4eca963f818ce35bc3f9dc35f21413",
+      "success": true,
+      "inputs": {
+        "run.json": "f8dfcf65d0a823b3efae0c03729764b073c21516bae44174a1478df988b8977c",
+        "control-summary.json": "97e1e5577762b603abee40f84ade66e4b1c1b600348b5d7a82b0d85d5def39c8",
+        "metrics.json": "1efdcb88722e9dc545da5057026ebbbb08f9ede6f69828809b3da9bfd8e2c5ad",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "1ea110367665ea3aa009dca384fad60dacb68166099b4194d917146a0edbb3b9",
+        "control.npz": "0a5b8bec70ee12c1f189b91a7f33e04919510167565eb2d63cbfdcfb50353ace",
+        "score-trace.npz": "81164ecd0f61045c479f178c753bef247bbc052a2f5c9d5aef787c2c282cf6ed"
+      }
+    },
+    {
+      "case": "26112137-differential-natural-proposed",
+      "sha256": "7243d29f14d7e218278feba9e9e7832e7e7a56b06be51309aed344c259edb64f",
+      "success": true,
+      "inputs": {
+        "run.json": "f4c963049868eb50818b7bb66417d1d41268a0fd9663fed82416a64ae8430b94",
+        "control-summary.json": "8bb847646ae1fd23b267b06e7174f5efd1106d7658bfa9b1e36e9c45707a8d09",
+        "metrics.json": "8729c1b6211a9c9bb6b702a0e3c71426f71024e5246ffe82202b9350b74f8df4",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "f94b7ef260e6d979a03165f86df76771b10522d7289513dec3203e2a85fabed7",
+        "control.npz": "199237b5681de8ac2c5b5ab439fc9f2b6a2fa30219461edb4f53c78e8bebfc9e",
+        "score-trace.npz": "4bcdab846e98f98f5acaa35321be0ed6673a1347b65c99c4289bd09a25b338c9"
+      }
+    },
+    {
+      "case": "26112137-differential-natural-oracle",
+      "sha256": "34b09a2d43ac16e21bad631ce4b24e9285a11b2136c88806c31f94b3f630ce51",
+      "success": true,
+      "inputs": {
+        "run.json": "f231610445c8207236ac9fcbfe7224874fe11562c01915c7f4d2e8df70476cd3",
+        "control-summary.json": "7cf5c041f82ccc4e140a8d2d7eef5995681fa8a9a3f876dcd32003d5b85c63df",
+        "metrics.json": "177dc88eed4483627be02dcf39fed9cb44e0c7aa63e4be05f3a82573fa28f220",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "e20e678d791cb9ba80502222a9a1e918ebf6dfd6e2562d476ff2b30c835d1694",
+        "control.npz": "9ddb7b07744ce6d51e660c15a0f07e70a5f540b2a2acd63daf040c9572170ab9",
+        "score-trace.npz": "3a64fad18ed6561cbe5b39cdd5951735a3d0f75e71db05e9196087d9a97ae97c"
+      }
+    },
+    {
+      "case": "26112143-differential-natural-vision",
+      "sha256": "0aa01f0c237f418408ce30b1d19348a0071a2f0a372c4de6baf001dae7e6f01e",
+      "success": false,
+      "inputs": {
+        "run.json": "09ce5ecafdaeb1269553e3ee47f670e8aa01fa10c134063b32eecca048c4dc3b",
+        "control-summary.json": "d15fec875638c3314909a16805030d7a7c50751a5f896b79a50db3ce035fba35",
+        "metrics.json": "df32f185755d6eab49e5b365a7491c9f4d077b5e71317fa2c59ad192e161a03d",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3b635536dcd585abff7675144152f6cbe6bead6fab874bea7db72ba8691f5e1b",
+        "control.npz": "409e27e7023facbbe2cc2a718dff6c06093b2ad1ed0bc4497bf9d06f608184f1",
+        "score-trace.npz": "bbf57e6eb750bec01ac340c1e49f24e5e82c8a2f01ab6e4d00cd9d666dada1a6"
+      }
+    },
+    {
+      "case": "26112143-differential-natural-strain",
+      "sha256": "953cdce277dd6aa90e50d428b7afc1c6039e65ef4b47150738220bccf07e8efe",
+      "success": false,
+      "inputs": {
+        "run.json": "8170aeae4ecd2bae83fcbded4285751b76e4ee566fa429a9de0527b251f33cd5",
+        "control-summary.json": "113f63597aab01710f598e03e7a8c4c1598971a126c08d5b076615e21e5a7453",
+        "metrics.json": "39bc083d663c0f969a3b819961364e37891387b5374b3db8d4b1905b907762f5",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "9e09b3f442c4dc89a6f8fa6d71870e048b6611a1ea19874b56f9f35494980b3b",
+        "control.npz": "0aec4a0a93978df95b49a7afc011243657f37ab5c14462f689c367855895ad6f",
+        "score-trace.npz": "22ce9806b8c1db3340bf17d2f43b35b4f493adb7cc127321a8c25c1f85307aed"
+      }
+    },
+    {
+      "case": "26112143-differential-natural-fixed",
+      "sha256": "9d173c862b8664e406eb6cf984c9e03ec3523efe743f9a740a71ea12e906dd49",
+      "success": true,
+      "inputs": {
+        "run.json": "5d2d33cfcb4178bff175c051f81f5ad83f632370f668d5c0482bc8acef744a9b",
+        "control-summary.json": "b724334d31b495dc0bb374b2adfa82a9eb556628d8c953964becaebabd3ea2b8",
+        "metrics.json": "4bb6724d6215c6d82ac83abc1968f503c00cfb25921c643e0c016342a379e615",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "e52e40c0aa9decbdfb72b607c6995342651410a08023acea4069930456224ae0",
+        "control.npz": "0a11eb6e93bb6ac2f803db72a6c66a985144d41e0ff225a0aeea8602b550116c",
+        "score-trace.npz": "d570e76e121f15a68e3753d7190b65ddde4ef533489ef8d28289fe5ce138ad0d"
+      }
+    },
+    {
+      "case": "26112143-differential-natural-proposed",
+      "sha256": "ec5d7af7f0e02cb98fad6b5f7bd2cf50fb2e67bded30667c854f4a1f2ae20c21",
+      "success": true,
+      "inputs": {
+        "run.json": "f9ee9db8d69dc0072442010a0213eb6792ee7ea9ce56cf74ab501f1ff0b758d7",
+        "control-summary.json": "8e88c461fd112baa434f505251b21fc591a83cf5d59fb9e4a5350b8ad6a0fe00",
+        "metrics.json": "a41a99a5ff3908a15e79fe0c0bf22f27ad7085777373e89448f31a3a801930d6",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3f6e71c9106da9b5c8138b0820a9089b52ef66d051a179714c9a5c5141268c9a",
+        "control.npz": "63016b8743a840f03aa2ed6be9654e72fb5a6ca7091ab12f722bbec60b64f1f2",
+        "score-trace.npz": "23286282f23848b7d4e96a97cf58c702746ff150ec7d821634f144db8a045e2b"
+      }
+    },
+    {
+      "case": "26112143-differential-natural-oracle",
+      "sha256": "b46142f668d2e8288cd620878d90e3bfe6d865875ee39830732185f048f7ae15",
+      "success": true,
+      "inputs": {
+        "run.json": "4b022b5397412553e28707f59d50446b70c7d66796051a0f4cff7df5ddc36ab7",
+        "control-summary.json": "2508a17eb23d0408d35f3a405191112bcbee6251282f5339621e3a9d20dc7bd7",
+        "metrics.json": "77ad679fa7293bcc52a3d8ae170db14aeb09e0e823c16f50eb9eebcdbeef88c0",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "e997b40250552bfe0c46e3e1adab7f0a2a1a523c2680fe580968cb0c43c9d7be",
+        "control.npz": "f68947b5990f25087ad55ea4c359789ca3190816ab790a6af30c1e65fab76b78",
+        "score-trace.npz": "731c77d65ca9cc3c7a7f81b9d32c0a7c1f90f3e22bbee0861b4bcc8d87d9034c"
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-vision",
+      "sha256": "71ef702bf86475ce48c9dce5f1d865825be8921169d87f4a41a66d030479c9ae",
+      "success": false,
+      "inputs": {
+        "run.json": "ca3d70d568d2aac694ef5ed984511043ca10f8cf111e1e21de1a520c59cc9a88",
+        "control-summary.json": "b316e3618a0f26f5bccff8dcba6bb9b8fbd148960d192b81e918df8a6300c62a",
+        "metrics.json": "3c7778452819f85980eb407352f78d5153cb9a62d3e32834eb04d5f2091ff050",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "038eb53e8ca149afae45de9a0345aeb416888f0286a6636b0c228520a45298bb",
+        "control.npz": "5dcd90a058370539d3ccec4da9cc4a070d23531a3f7528e72070870243e0e569",
+        "score-trace.npz": "58209ce3ba0c3272313110113ae7930b988964abff50185b5c36fe7d480d9459"
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-strain",
+      "sha256": "5f315f16b0775a8866b80abc3f8078161c5c0fe2ad135e7723646d94c7c13fb2",
+      "success": false,
+      "inputs": {
+        "run.json": "78c256200a345184c59248dc50b2df23095223f05cfada66b003a08ac7cedf15",
+        "control-summary.json": "b106a34fa9a3a9d7669ce52c5cc64a52d8663ea920acbb07fd36412ad7f08920",
+        "metrics.json": "d3f29017d76d3d3319f8162ff7a02dfc1e8c5c76453768dc4d971ea17abf5b0b",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "9d4ff1171856e21a4d537507920bbeef69e336cd2b6cb12d7714c5bfe614a6e1",
+        "control.npz": "337cfa54e5d1518cc50595db1dc48522afdd3eebf3d61dc54eece680d98706dd",
+        "score-trace.npz": "333262fba69bd26b9fa6330d506ed2d3fc51a112cdf23bc1331f35d8c12df31e"
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-fixed",
+      "sha256": "f03f437eb2c8cd34bef1c349daf15baf1186852a8151c4374a790ddb6e2c8336",
+      "success": true,
+      "inputs": {
+        "run.json": "bf8aa179a509d1a763ac11542e38879746b22ec84610c00dc567db3f7a39c384",
+        "control-summary.json": "76f0729f0af1830829362ded9a2ee053e71873a9ec00a00d14aaa52c6db49759",
+        "metrics.json": "2878705dd7ba1caaf89ace5916cd13493d98c72bd40ef129110499f5bd3e76de",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "8033073e50481ace4bc7133307cdc4de86a7700570520b070cea05ce4022912a",
+        "control.npz": "5a2a613df7815e0533cf3e50abcc6747515895fa247c481c142b8facc934dc97",
+        "score-trace.npz": "43a9c73ba36639783d4526190cc8ec921477eec7817e5535c8a7126c48be3aac"
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-proposed",
+      "sha256": "e4abba28b1555d8450d577c0708d80077e3f457a812d3f8b69191bd1e56468a2",
+      "success": true,
+      "inputs": {
+        "run.json": "13f260105a80ada713ee633b7dde8d7174c7fc2fb3cd23c2665b2654e475e366",
+        "control-summary.json": "e568bc67d4563a87b0d61ea3790dd44a201701e37089f3bf2080ff214547ab30",
+        "metrics.json": "3599c0d60bd6247a6ef635f5e489b99aadf612c0256a6a92807873c460f415c0",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3e23ccda8c799635353f9681e9af82ef5efaaf87a2480670c57bafa2b2c5d34a",
+        "control.npz": "f56667512f26bda21daae01ac1abb42c7a297b8f2a8b563e208ead61dc5616b6",
+        "score-trace.npz": "0182034532832a5c13b3da452f9aeaee4714122ca6d8a0734cb89f76bba2926e"
+      }
+    },
+    {
+      "case": "26112131-differential-occluded-oracle",
+      "sha256": "9573425c2a9a2d6d030fbf34d9483cdcafa5160c82c4b6c34df28bba3832eacc",
+      "success": true,
+      "inputs": {
+        "run.json": "49b71d27e26dae9761536e2d6931e6fb8f8180dd5d9e102d3a9f91d7bb13f05d",
+        "control-summary.json": "ee350c5911432b773ccc0bd87e7376837eea5a03e48004554f5a0c3def9ff903",
+        "metrics.json": "c965468a514fda77c89d86ba3e6111ef7bf083a2e90a21bd439aa73effd49c01",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "43d6d853dd8a8a9f73d82032448d4df3e7bdd8296585582a7bf4b8c616a0dc36",
+        "control.npz": "276602d1200501f7ec27c40796f566ae0fdbec8897ae784823f8308823148b76",
+        "score-trace.npz": "8b8d2a24baaa89df8ed1bb1d7eb4cc21c48d804a3ee2ef9c8305d0209428969a"
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-vision",
+      "sha256": "fa71627e945feddd007f6ac2eaaa0e02cd6598b6f47de9be3f7eab0a6c4ea761",
+      "success": false,
+      "inputs": {
+        "run.json": "877afdc94c04811a19fc01a04a2c88cbc2e121dc2fac94575ec73e2a7b63fccf",
+        "control-summary.json": "c3067b0565c4227ca72f73cd23a552b97a820e80e5725ef60b8a0f36ca822e1b",
+        "metrics.json": "4ee2cbc58b29bb6632702b3d8a725460f6be07a181484dfd67f1abf76dc2b3d7",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "4301fd9173dd2c486eeb0f321d43e8138ea9e1fbd094d7c8def9a8c80a75ef2a",
+        "control.npz": "114ddda772f52136524954f8a7ced243415e52e6e1242855c075e7b5c19f8d74",
+        "score-trace.npz": "3397ce050430bac90e8f5c1292fedacb724700bd6239ce83604f97b220d68c68"
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-strain",
+      "sha256": "245b9415f32c5479eb77b2d29af1a52b918cb6860991a545294fa34bcd4776ef",
+      "success": false,
+      "inputs": {
+        "run.json": "82a6d4bfe2907df3a9733b7fcf4b5a8d58bae1c9eafcb70268c3c961a0f4dd6c",
+        "control-summary.json": "e65b027ddb00ae5069b0f4b4ab227357ad8f21c52b4c503074459b07b90237a0",
+        "metrics.json": "5f34e0db6501b598f67a5f3ef0e61cd4e4567ecec57867b0b558745eb3b7822f",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "abde9fdc094eee125c24efaf0e1ed4a46c88a23dc47a5d3a9afc169e5e753f18",
+        "control.npz": "1ea7bdcf9080f9948d6cd4c9189dd5c0d38462e33a2cf01bf3c1fbc91c190986",
+        "score-trace.npz": "1234b90b621484bcfe89e33cd9862b35993ad49ba74b14a7a722386e9b0fe947"
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-fixed",
+      "sha256": "b2ab0028ddb60974a9488cffdac87902bd34407f24606dbc32fbbf50359e2be2",
+      "success": true,
+      "inputs": {
+        "run.json": "44db0f9ec4f4a8b5b4a962eb14c308757037e8a62d10b5868a49d17a63acb9c1",
+        "control-summary.json": "79a3e9c357074ff4bc28402efd008c0dcdc45a17ac91381d513f037e0ded98dc",
+        "metrics.json": "e0a6cbfadd9240805d4fe59eeafc440f898fdb2ba8e13da0a816457bac8027e9",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "851b2f3c666e412c292c33fabae1b3250962349b31c9be1f2deb20ed18119961",
+        "control.npz": "d836bbd5153c6abaaee3d724afc3654e292ff963899d039c3d671824f8242a7c",
+        "score-trace.npz": "5ecb748ad1de3b01646820df14fca811f910861412d74911302e3bf580238d8e"
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-proposed",
+      "sha256": "03235ecdb516098cb278ee7aa3d251928b85b2d4c398a0008b3ba2a963add93f",
+      "success": true,
+      "inputs": {
+        "run.json": "c118f8dc79fd3a693ee6ed3b23f65f8d5f7dea4a4652c61931bb519587ba642a",
+        "control-summary.json": "318f6eb9b2cacecd458b5c8a7e71f3db4557ba31c43f7e7910122985fbbde470",
+        "metrics.json": "3aed535474ed437713121ff2341ed278e4844b37b7106817a1c1a99aed4a0e84",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "c513d55c176c915462e3117442aae265b4998c28212dccceebe749be4675af32",
+        "control.npz": "6b7efbb7ef522edf4be06144254b18230fd2a23b4728227ad124f529a7052dd3",
+        "score-trace.npz": "c9d29eaffb68ce1714bb217b58e796b220331724417388379c0aec163e8c09a5"
+      }
+    },
+    {
+      "case": "26112137-differential-occluded-oracle",
+      "sha256": "a9f8cdb04fb570ff940096ffe1d121132a907b7f5e058022dc2b2003126e61d2",
+      "success": true,
+      "inputs": {
+        "run.json": "64712c9b265b8b30161eda9f2265f0fee343a1c6b1dfde9799f218a52f9f3893",
+        "control-summary.json": "83efd2483b1362a425d64f5e2b152f4363211db502997ccca045f3d43409decc",
+        "metrics.json": "fa42cc89605bca41b5606ab71f6c68ca8e137641b4a7fb12be1bae3514de0fee",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "7f5d252e1619ee76390d016ae452da2a98e6199feb35f1ab0099a12065762686",
+        "control.npz": "ea1d4404dafb5e760498420a19caed57bb08c6a4f161e8bb3f726d47e687abe7",
+        "score-trace.npz": "9a79e10b34bdf189fceded9c9a23f055e4a74d43f5b5ad2e67fd43a7b5010790"
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-vision",
+      "sha256": "c8c63e22f753960ed666342e66b068e6358827678fa3a02c87cb8656525731f6",
+      "success": false,
+      "inputs": {
+        "run.json": "d668272d59082a32f9fb5ebecb91998e3553949aa61fdbec8911e0e1a999fa8c",
+        "control-summary.json": "b883848194ea75dc2ffdec341d41a704c698297cda1850c92b7c4ab8eae05574",
+        "metrics.json": "e8422f72243f60b37451d9785e5a314934c1e17207c8cf00dce48b35f42bc43d",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "e6055fdeb0bfa819ce8cb562786bdb127ec767d73cbbb2bc3989d66a05342506",
+        "control.npz": "d8a1b796d6babdc07f0cdc9d06353a1bcad7570cbb8c33927c612770c5af3850",
+        "score-trace.npz": "e41ed58c5674b82be79da235b7e1820cbc5970f25ff28fad9ff2fe5bc75d97b4"
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-strain",
+      "sha256": "08832dc1210deb8d8daa24e7422b5ac83e0e2bcac18762cb70445411a61d6afe",
+      "success": false,
+      "inputs": {
+        "run.json": "acfe30b4804fcdf97fa6e069f806c77e700a0b9d545e3ffc3e687eb81be0f7f6",
+        "control-summary.json": "3b4628d371c461ade7ebee11ed2f689e1bd9d14947119f008597db7b0759b05e",
+        "metrics.json": "82c4898d62f6a301770248eee57fb6b83917c78bd39abe9e9091d6669d7803c3",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "730cad5b943c467015ff5de3ea17c03d5560ebf1829a532fd290338b992256d9",
+        "control.npz": "10867e61b0cebcff888707cc282abf6a49a3c96202c170a78f54f07125c0db00",
+        "score-trace.npz": "c399a4ce4481f3eea51d7ae75df83dc31753436438fa1006321aa5b8b621721f"
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-fixed",
+      "sha256": "2037d5d9fb6a0335cbde5b57755b8f7084174278da0fb8370b86d15feeae1dcc",
+      "success": true,
+      "inputs": {
+        "run.json": "e7335432a5a97d2a851977b675c4361cf9e25e7de492cff43adfba8aed50653b",
+        "control-summary.json": "42d0fa241b25c587a774fb65474ad3a3fdbdb410cfdd304fcf99f5c8f92d08cc",
+        "metrics.json": "e65f6bf1da1eb0a44cd2516c814fbbf31b8b6fd93775311c086df39a93c50ba9",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "b2af9662886cfd2b12d61ef4dda5c4e48010afa38c57ca19750901acddbf7cc4",
+        "control.npz": "a223cb7d9c37a097bf1825dce35a6a99cd2c111f2fb1ba50edca92c1aa5d0e65",
+        "score-trace.npz": "afb763468b223447760bf122369a4d624591f1fffd8d6199d0fc6d7d28674186"
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-proposed",
+      "sha256": "a74424a10576e5344d0e13fcdb3aa2f215cc41c03ab3e6edd48a1ac3c25acbba",
+      "success": true,
+      "inputs": {
+        "run.json": "3271ad79352223ee0a24fc4a3ee27610bcd45c07d6f9d924221df0930a61e908",
+        "control-summary.json": "248c21d4979a7c32aeea94ff92ca7712418798bbf3ee6f172ba74afdc5ecd49b",
+        "metrics.json": "83b833218fe37ea4c8a24275c703f814cd2dd97ea7edb2f012f917ffb2effcb3",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "425df8ca4509f40efc5173f7266893e3f976c780d71c52d279aaff415219fa96",
+        "control.npz": "5b3ef8f27f4230e5b85482f551b6ef0a8ec13c7f618e7575f4b56f05fc51627d",
+        "score-trace.npz": "75d63c91a162d309c8d4a4d293a752bf3336788772aefde802baf2ae92f886f5"
+      }
+    },
+    {
+      "case": "26112143-differential-occluded-oracle",
+      "sha256": "c50904f91acffbff7a7ef4fe6d58834b37e94129d9c0b830ca601315c72659a5",
+      "success": true,
+      "inputs": {
+        "run.json": "5bd33d412d95bdc0fcc5383f309791857f5c0304bbd556f749af88f7f1cc2cdb",
+        "control-summary.json": "f102c7ae92db7e620ab333a14aba00c92d32db63782c820edc105bc2db022d14",
+        "metrics.json": "bed1e50caf8700508d6e29c1fe8c10dd3fe23ed7e33278e6fac19a2c6c3c52d7",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3c2e4ba0686bad632b6b9e10f566e397c541790dcc1f411dc8410f35c68d5f1d",
+        "control.npz": "4850d8bc8a2b7b2c300cd7df880333cb5c75ab77676e674aa02a20e27df619eb",
+        "score-trace.npz": "776075aa16701e066a04842e3a34970e80face2354e5268b49888987a9d783e5"
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-vision",
+      "sha256": "4e88e82106658907ad08366de935d098d8482fc697836c2d04be4e9537a28329",
+      "success": false,
+      "inputs": {
+        "run.json": "bd038a19d47e5b1e9257993e2f99c2a654c90aa74b300e32be4668653e0b31f3",
+        "control-summary.json": "f93692c6165c8f793fe7710dbea87e5e8b4bd6d8cb995e03b73dabbc24864f32",
+        "metrics.json": "83421d0e7eb819853de426784b061ed026ea3b6b521b55a2e7217802fae77407",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "aac65f033913be208992809ad5f8f185af5970f1fd6f79a06ab9af71b9dab5fe",
+        "control.npz": "5544d6030f61a6e204fcae9b611a847811cf0ef80e9b128530006774de904a34",
+        "score-trace.npz": "59c511573ce8b1eaae8e1c45e85445bb99d09bae3d60bfc2a687a2a13aab32e6"
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-strain",
+      "sha256": "5ede3a16a29503c882955b5bc322b2586fb7385e6938f5d63f9e880f9f70e2fb",
+      "success": true,
+      "inputs": {
+        "run.json": "034ce2ad7c4f121037083e290b3b7411ea36be37705942eda3f4a8748b6db088",
+        "control-summary.json": "ea3f6bccfe6d521c8b585aa6eb099d04970c0e787be70ed202b0f954fd194ba3",
+        "metrics.json": "cdacba0ff7aa424749668817cd3f18273d9a6f132ca5836b984e74144029bf87",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "4e1f4a0147a0122fded48f588db4e07cde1653137fc9b8bcf18082e729b38ac6",
+        "control.npz": "68731894b13ad669405c98ddec0de174f81bcc0520ed2e3ff0fab48d8f4cde7e",
+        "score-trace.npz": "44550a4232621e8272b44b8465410fd6a60000079b1c6c3bc58d18508babfb82"
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-fixed",
+      "sha256": "e0c4bc1bab9f8a87712b396fd0805ccf91eb96f2e568cdbe8291df64693974c9",
+      "success": true,
+      "inputs": {
+        "run.json": "9252186192cf0515fea96b7d454fd260852e0231d99b8aefbd5be9aab5909fa2",
+        "control-summary.json": "1f4c566cef7ea20e4576d46df30697c3fd074277f24280acc1ebf79b06e92462",
+        "metrics.json": "99fcde9eaddcebd279c545ed7bc56bd2a7733198da262c638d93935cf9a2dfb4",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "5a85b719bbdf749c4e2c1ea4dabc74a0360f322925cd75a2822694b5778d89fa",
+        "control.npz": "3070c7b851d2f369cf654126447a48d9c2aadbe5739efb411a4cea60e79b0301",
+        "score-trace.npz": "be2f81657875be21d4ec3dbb01b0d2cebdf755430d2c8a8c87ff6214ea6cfe94"
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-proposed",
+      "sha256": "cb7efe6e68851f2b2631fab3d1c5ead5616fe09417d4a0afc164c064ddcedfe5",
+      "success": true,
+      "inputs": {
+        "run.json": "ce08c39182f301ec574287052cbe7a9f169e01f604388543a0899bdeff293d49",
+        "control-summary.json": "e8e2dea2b496cb72f6d3c3880944efa234323922515cdba983e8fbf066181e46",
+        "metrics.json": "e56bc9043ad3edde7d806f87ecab01b6a4f1b134e20a854f1836b9ae678c6bb5",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "d274bdb2b534bb503aaf8bd60063446eefc6e772cbca2b5cfd9fc3f04bbfe12f",
+        "control.npz": "2f365949eb69558d036a329b18e8f676af51fb8961e21673e63fb022816e419d",
+        "score-trace.npz": "9fc7ea455be1ac16a83ed07af057a4a4944511b4646a4c9ca3c955f74ae0ce1c"
+      }
+    },
+    {
+      "case": "26112131-nominal-natural-oracle",
+      "sha256": "4f1ba7032b2e0905db2cd00bbda2870ffec5e3ca539cc3a9b183cf9baa4560c7",
+      "success": true,
+      "inputs": {
+        "run.json": "10f9fbe78b2ed019cffa020cc57511c7a2d1851c0ab035f64b7f39fe6cff9074",
+        "control-summary.json": "bd07ae426862467e7f2ac278a1f9c31d974a05e807b247d30b0dcb6fe0d91a81",
+        "metrics.json": "9619b39eb1134915b522800d56815adfc099a4c29bdab838cd0cbf6fb8264cce",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "4a8e348eb5e52fe1679343d49c18fec5cf08e0f02b37e45f9ccbf5ed9f93e9ee",
+        "control.npz": "0a19cea238b87cd0bff22916a411501c968269625ad1cece257084cd9192be3f",
+        "score-trace.npz": "0d8846bcf673c41ddc529c0debc2394942f2b9dae590b237aca1e1d923329c07"
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-vision",
+      "sha256": "4ee6ddea0389ad617ad5ada3c9b9a5ad4242c5a651c3601d7dbb3772ad90ded1",
+      "success": false,
+      "inputs": {
+        "run.json": "c2710569b617e69ebe9674ea66230643fae28ac7177a5facc8bd56b16fe6325f",
+        "control-summary.json": "00ef649a0c085cb7b0df72eb53a468a2671385b7e1b9ebd3e893dc4e59be7263",
+        "metrics.json": "062f98802cde817c61a533b0162a8a68824c11808c4b19d501096a7ea74fe55e",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "520475d698d20f2f983bbf783be290ac1c1674426dcd4a355cce7f5b44785bac",
+        "control.npz": "395d643058938555f29fdf97aa3d60303ee23644c268901922e3fc6bcb1560d9",
+        "score-trace.npz": "8090de0d58bfc3f24f2c8d35696a170a07a579509bb8679c228c798ca1012fe9"
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-strain",
+      "sha256": "fac95042bb69fb7da010a6997eb4dfb333d46491432b7f509c65b6e0d86e8f5f",
+      "success": true,
+      "inputs": {
+        "run.json": "c0b67d2c7cc5ed12f7e402af9f374bbcdfaef804e1fc991c95d568fafdee7960",
+        "control-summary.json": "5639a40423b27c0a060d0aeec54f6ba6fbc2f85471f226b87cd97212f27915c2",
+        "metrics.json": "159a7dd327ab85d3ad92b700ae9e2362da5404a63f749934f63b755e79431d91",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "ea808678e3c80b8458ab64843db8e384e53588c57b24d33e474baea47029844d",
+        "control.npz": "d9cb9b92adcb45620cdfca3b6f430df2f7fb44f7080f425b91706d442cbd17ed",
+        "score-trace.npz": "140710e360f33515fa9e63856055f151972502eb9a3e87a4ac80baf66a2fc322"
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-fixed",
+      "sha256": "adc6a7e27a0d17696ebe67659f531b2ff04f1d98f852cebd36cc77eb0cdd07f7",
+      "success": true,
+      "inputs": {
+        "run.json": "1c19822916c497826a2983da398ada9eb02a397457c5e35a8551a74827406057",
+        "control-summary.json": "8c4a207e5c500159c9ee307dee83cae58464f8aef3271db000774126fde8a118",
+        "metrics.json": "b6c2215ce29420443e86ccf1cebb802f94a8a67d78ec1213e09f7f993d9bc6e8",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "d8381ef1885b8f8a1fff55df78a5516d40c0800542c6b406521b8df77dbd7bbf",
+        "control.npz": "e58abab7cbb36f4b0fb3bb6764f2a276980532d8af69f4dde9e7eaa631863f35",
+        "score-trace.npz": "0b93ed89471891d2181e381ee796b458dd88cd9e56dc1272316afd7e64bff3ad"
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-proposed",
+      "sha256": "47b714605014dcfd7b7c7787839e7c529ed6183c6981d37d609846df4fafdd65",
+      "success": true,
+      "inputs": {
+        "run.json": "0aae9bc4b95263b0e689cd697541050c5bbc9a2c08d36f9d852a99bfd81a0fae",
+        "control-summary.json": "e414c969e5e26c76f88a9b7f38ddb1f9ade8a040c6f0783f03f8d98c98112718",
+        "metrics.json": "ff40100b324db5ac4dd803b7f9fd70662530cabee3a7236f5374c8a602df9dc4",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "79fd43779c94853cb92abfe298914eb469b635cb1d5c395f228fde170fb44117",
+        "control.npz": "8798d6dbb9035f9f33c799a768732569a51bb871181c4835a326705f29c4299e",
+        "score-trace.npz": "9d6f538a5a16565ed5b95e80fd2cda504bdd160e000d8fb3dd9e98febec06755"
+      }
+    },
+    {
+      "case": "26112137-nominal-natural-oracle",
+      "sha256": "be0a551c151f0c864605a008bca8ba047dadc1456e0cceaccbedab8f989edf7a",
+      "success": true,
+      "inputs": {
+        "run.json": "b7fa3f33c747ce41d958007b55e457d807c4b0ef9ffca85c6fbc8132db25f2f5",
+        "control-summary.json": "0a2d9cf998c394c0ededc414567569564818e35f1dd809c8a45ad6c65e32a131",
+        "metrics.json": "ee7691dba97e2a347e02701acf549d8e6b356a4479bb1906fb38a81f1a9894c7",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3256f029306f7de3bf1d239887f5ed0e099b34dc7034bee928e702c11bd560ec",
+        "control.npz": "936dce503b77a9750a32996d45f481d38752d0705c61156e7c19225cf21c6f61",
+        "score-trace.npz": "50e7390a2a648311ecca5fdf2dd0f97de1121cf03423f7bfc6d8f78c7efc9505"
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-vision",
+      "sha256": "13134b4a8e2243c5580c9d1294953e2cad6ee240b6a02180761f4b39554528ba",
+      "success": false,
+      "inputs": {
+        "run.json": "8c9a97dc4de88c2a117321ba7ed3d4d552943bb0e04316c0e510fa6a8131a46e",
+        "control-summary.json": "db3abeb220854d177b6369abcf8d29bca4bbcaddc63c04fff3e110e463abdb2f",
+        "metrics.json": "b70c06f17fb05d5ca580b8beb8f668b33d0ad125b43d0daf975c48135ac2101f",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "0a875c2ee0a45f58d824293fc66e270c0c4444e9b4cc139ad0d88d5e3b360367",
+        "control.npz": "5e5a2e9b6976fc6e6fc623fc8f72ba0c9eadb3f6251f0538b57aa9cd0a4b120b",
+        "score-trace.npz": "d93c584a82fb4e81b9e02f1a921d5bc53e142f856c4aab5e6e58846034e4cd16"
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-strain",
+      "sha256": "e94804e1ce8e58515010ac7cb94578b3525faf84895a3fba9ca9ce3b08fdc483",
+      "success": true,
+      "inputs": {
+        "run.json": "50ea3677ae75394d6cacf26f2deb1bde9e0addaff4c23b8ab370b023b84473a9",
+        "control-summary.json": "c3f16b3a2eeaafad0e20eb0f83f08b5106d91d5032e3fc068b7efa9f627d6766",
+        "metrics.json": "d8b5e5d1c6fb1171d9d8d6468d911e4541690e0159266035fb3b0d12fe427b32",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "3798cf2f148645858c9992954875b703ae0288ef6f5b325c1065d3ef3cdcdeba",
+        "control.npz": "8318e15722ef61159ed70e4627cd6effc13f3459e80dea8fbc1a918363ac20de",
+        "score-trace.npz": "1992d0178eff0c263b31802f5d577d6ab5756fab9e457dd1a16b106f2e21b1dc"
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-fixed",
+      "sha256": "2b76af0489d831a953faef0c31f521d29e4c862c15056e463fdfea5009fe4441",
+      "success": true,
+      "inputs": {
+        "run.json": "8e47df43d340b6407a07003a1c2df8567f3766869013ea633266a3b65c685020",
+        "control-summary.json": "cd8e8318f77ce392f4fb4e694ed6a111983af16aab45cccfeec3db002fc09592",
+        "metrics.json": "6ed4ca1897e274f96e26cc54e608257ae01fd6f64f88603fdda8aa2fd3caad28",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "f341a69e0a3c874b28d6dd67726474c82ce4368bbe8c661251eb686a6b0fa076",
+        "control.npz": "a0b6f8fde2f13e35d6cdb67c1098b547cf51e7f8f12e3878b3b66d20b7712b37",
+        "score-trace.npz": "61a1694ad85dcd06ef0819540290ebb81cf1057439d66f3743609b7e971237e4"
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-proposed",
+      "sha256": "9daacecea98985e852c1d8014f1ac621f188dd1dee58092393b6e92965847c51",
+      "success": true,
+      "inputs": {
+        "run.json": "5c55f045c163dced387fbf4ba86bf0aa4cafcc1baaf45cda102ae8dd9a42acba",
+        "control-summary.json": "a30c168a89b962bde98cf22c9addad5abb7b285970ed8e936c84f85840d3eadd",
+        "metrics.json": "800ac38f0c1b02fe7633afd1691f2a659120d4cfd2bd67345d858c185946861b",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "d1ccc4e3bc76d6828eb9d690679ebabd875869058e23a102bd6eebefef037e43",
+        "control.npz": "90987f0a836b979b560db19bbd3a2ec6e4e9b9bda4552ef9d45622197eb8ea18",
+        "score-trace.npz": "518452b87cf89826e7a81920679b00190a502703a88e7894eb1b577aa343c34e"
+      }
+    },
+    {
+      "case": "26112143-nominal-natural-oracle",
+      "sha256": "a28f7a7f5ceac4ef5c162a89bb241827515e45c3f113f80019ebffd65b52828f",
+      "success": true,
+      "inputs": {
+        "run.json": "26703dff171baa85dd9aace3b6ef9c41a1ea4fee14c01cc9b313c7c77e76bfae",
+        "control-summary.json": "5966d8bebee496d37267e315cd0b31a361d16d9bec5573b35dcc9932e75c84ad",
+        "metrics.json": "ab81a4afbdcefc98f687697f97383556a585d760c9d914efd3442fb659a44c14",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "2ba4d239a6f7b2d10c16c8d1ecc19d31c0a4cdef21ff3246660779584d77df8c",
+        "control.npz": "e070f9f63c81480d9fc9448ef019be5dd701b226c85749d2616d56301447756f",
+        "score-trace.npz": "95b44b150db8b783d0e58f239f809eceed7c38164a48d19c56e04bec29e2d118"
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-vision",
+      "sha256": "11586a47c4b8ddb3485d8900a90fb0f83930667841235534b571a68bce8e5404",
+      "success": false,
+      "inputs": {
+        "run.json": "847248fa5a2f83bc032e780b2f46ddde2cb769bf1a44287bd40421c176eb9192",
+        "control-summary.json": "936bca8860172e05001085763b8f973fb3320962623ef81fd8e44e98697a1e0b",
+        "metrics.json": "51edc36a5df78f629293ecb494d97d61eaa7f2f88c09759f033194fd80fdf440",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "bd881e9d939bbca01f946a2f5ee501c53dc9e02b47e48f84560509b6cde9d352",
+        "control.npz": "6a96aa69412a42279be051f3cede852d2f9fcbb317dd867b49a429290be813e5",
+        "score-trace.npz": "655fadb3dca0a38be93e9c777d96eda3f7fce93f38fbaf07e7313e12b93daeed"
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-strain",
+      "sha256": "0b5f0d71cf372ae1516351bb20a250098f52799a999db22679f305bad3045379",
+      "success": true,
+      "inputs": {
+        "run.json": "32e3f291ee16362c0f7dc921b026b27be0df4eb54fabe80ba1303c7dee262213",
+        "control-summary.json": "1f0113dff0ec17595b0a3b146e04a19ad2ef9c54e69f1fa863d0266693cff88d",
+        "metrics.json": "d18fa412a3a7701639e2d594e7791f80439fb051c42e5071cf97edd5e26bbb3d",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "2104b68f8f3bfd693e1f5cf4529f66675459f9154bbe2cd4f3527ccc09e81598",
+        "control.npz": "cae60059e03e588bd34676951b7b5ee41b71d5cea1bcaaf150c2b8fd24a58318",
+        "score-trace.npz": "db2bb139269e77f07022b1cbe8011177599b9b51029a5ec99e7be018213c5076"
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-fixed",
+      "sha256": "769af66467354b24fac98d995df00f7370e04955dc6edc61727b4ab322effba8",
+      "success": true,
+      "inputs": {
+        "run.json": "e468f3fe33ea4d3139a0c2d872ebdc6827eca463687598b080ff285d3ea85071",
+        "control-summary.json": "0a3d0b380cc21b46486245fc20864c341ca45b1927705f1575b65a4884f691b6",
+        "metrics.json": "99727017e72045f7ada874ddf2148a10a3368e5a56af1c540829b1a6bb16220a",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "13267999a1e934707265ac4e6a449f0c9fd81d72bc981c3bca9e9439d62feae2",
+        "control.npz": "1c053bb11d81a9c608df9d9eefad05d656d85a7379a63f662a6735959ea092fd",
+        "score-trace.npz": "90efe799ffaac38965ffb8afc7d5504086d07d45142309b397e02addab86fcc3"
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-proposed",
+      "sha256": "5f174b158986fc15ff96ee5460da07e3407129232f65666dda0ef49ab1942560",
+      "success": true,
+      "inputs": {
+        "run.json": "899802f1c4df52f6e280206bee90e6e118353abec3f7d6803758980fd5b47065",
+        "control-summary.json": "c8ad5e180a61904278d9fa9c0fc488fd6d3c00077be748850f484470b21de6c4",
+        "metrics.json": "8e29cf165ad44a814c6e3d5c933df16443e16abf8c7a76c30d83b2db2db9d03a",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "50026944e27343cbf4b2d7b5f324c6e47cdb983896694c5aae7ec4541cac93d0",
+        "control.npz": "a0006826b75cd7ad150e9e6d16b47e325645cfc0bbbaeaae25296001b31d77ed",
+        "score-trace.npz": "1aa7c18865d393342fd9d1db4fa715e25fda7177558590360ff72d0e8e5c8b1f"
+      }
+    },
+    {
+      "case": "26112131-nominal-occluded-oracle",
+      "sha256": "541f065345191732f91565e2b08d5af569ae2661160d922291c6ebb60fddae72",
+      "success": true,
+      "inputs": {
+        "run.json": "61e1c727e417ecbc8956965339f3d0f4e6f8d8289f1e352f20e2eb488580eab5",
+        "control-summary.json": "931e84152d73d5304d5e320a5b18deeaee1fc6e9e24cdc8a3d029b165e5a40c5",
+        "metrics.json": "9b2e1e90b127ae11aa33a3b82275e8f9b6c7a38adf2d9b416e34ebfb4f7f39d0",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "5739c317069b413da98a9ab0412e20885e1b3af113293af6f3bdacd5c3ed73ad",
+        "control.npz": "66f7cfd16d68fee7a0e29d9da131117a24566e3cdab1f0ada94599d56eb0ea77",
+        "score-trace.npz": "aa41ae5e57a8a5d5fc8670c4a5e395e1b10706c2554eb91e0c5032e09ef24d0a"
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-vision",
+      "sha256": "ccf7deb94b23b829b84b6b6e40b0c2a9cf72c1236ae647a41d5f21564bd4922c",
+      "success": false,
+      "inputs": {
+        "run.json": "862e020d645ad3ceb9bb4449b51bb10d629dfc24878136b4f80be761dbdeb714",
+        "control-summary.json": "ea0440e94ff90195d02ae8a683047a6b898ac36e6d358f34dbd6abee6dd6a02e",
+        "metrics.json": "bbe5025dc3f4afc68be4dcad6c04a52de4c28ceeb8df209a3e9a38d728105769",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "b68d04386d87284b6809f18665bf0bdf2019ee696a6a6bd3aefc33e7141916b4",
+        "control.npz": "b654e23449f028bb93ff7e0a2073c541f8fabf56bdbdf870138f7df7a9123617",
+        "score-trace.npz": "d9cd183bfbd7892d7b011455d69894bebc9ee6c3a11a7408f8dae4d90aa28567"
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-strain",
+      "sha256": "f968c9861f64c4c4463e3f646e618274a0bb33a2a900d9494762d9229c7e0661",
+      "success": true,
+      "inputs": {
+        "run.json": "070506ae724b45c60b70f7c4bbe748e7a35f9281ba3b870276b360af89c08c93",
+        "control-summary.json": "dca3f7ba0f982a71e2acfbe59d7f1e61eaf24a41f4e5b89514817bbc975cecd8",
+        "metrics.json": "e63f2d76a83fad50cfaa38bfd2caa82b2e576e82515fab489496a6fe32d15599",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "960fe4070289fcf5c35beb60ccc8476dec600acaf7ac4cb364a6ac2eb757857b",
+        "control.npz": "473718331b7043ab9b24f7b4196c7652a941425fc25958f0dee5bda61c2d8719",
+        "score-trace.npz": "c850e695ac8f1913cbae68bcceb6796b5ca2ac68155b1465b9287b05fe47b0fa"
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-fixed",
+      "sha256": "bfe56c6ae67600292448cfd2255bcbab68d0f9b10383acf59b0589feb4f99250",
+      "success": true,
+      "inputs": {
+        "run.json": "f0875a082d981d5f5de8007061f4f699a7e27fa54cabdaa671d812fbd9a959b2",
+        "control-summary.json": "40e6dba1f8563fbb66942e2e0f537c0e190fa4879497a9dc7d9c6ff5d7572bd3",
+        "metrics.json": "a181d26f0555e8669fc764b1b8a937ec8b824facd662f068712d57c2eed26501",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "7e45c31069dc4120691cdf8ab8298b95904e5d4ef3bc5ad4c6e8eb87eb0ec347",
+        "control.npz": "359b2ca1dfe147a1d260317584922cb294954aef79b58fe0d75d204bb91c7a44",
+        "score-trace.npz": "a0b06c792ea126ffe3285078c895cd040f7261de4f68c362ee1b83a37d504995"
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-proposed",
+      "sha256": "455bed9b668d4e10b960aed97c8be3236246eee0a5faa9a8d48414be44c146ff",
+      "success": true,
+      "inputs": {
+        "run.json": "52478f305aed46c16d0d275128975501b490e534a1294ba74b7b7882eb333106",
+        "control-summary.json": "54239d5e7a62ea11b5d648249b828094f37e81f6f084f8d878f308cf107f6347",
+        "metrics.json": "62421e602e6f5daa52ffdc7aec77dd9167bd935426ab6a74e7846506877a7a53",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "752863ecb4a815e63807f5f682912c234fd0fa21d429f704ea9ce27ba18c1823",
+        "control.npz": "217299a83642c31a9af69f47ff0b022cd17e7ca921d96a6455eef93ff4ef4ad8",
+        "score-trace.npz": "eb451582fb9aac7e321ecb58d750b26be324e85da93a7987dd8ba4c30bfb4157"
+      }
+    },
+    {
+      "case": "26112137-nominal-occluded-oracle",
+      "sha256": "2a2075559ef722ec17ba07e2a98aa7b781b155702bcad9b5805733da0f72a0ec",
+      "success": true,
+      "inputs": {
+        "run.json": "91bf2668b98aa90b40eb27bfbe173846becfffab07cb687324e14c9a0035b322",
+        "control-summary.json": "e7fe3330ebeb70ac2981d04e98a57444604a5bd205fc705c8ddf46473450b9f2",
+        "metrics.json": "22c796b629bd3e9fc6f786bbe3e1cd00d03bff91f1d3e7ac904c7877c1681228",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "a02d7bb7d6a7a2d4161a7c9557431eed03c4e728f833ad2aa859d2c3a8d6c192",
+        "control.npz": "8fab8096da71f49dc80e59930fb5c50413f0dffe4157b4b4dae7d0670b17d789",
+        "score-trace.npz": "c1cd64350c00bcc7df13cf31f3a5f215418ebd55df570eac5ebc69c8d5a9747a"
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-vision",
+      "sha256": "42801859611e705669ad86b0d464f2475f856e238470243792df66c7ba78844c",
+      "success": false,
+      "inputs": {
+        "run.json": "9f426689cf9ba518dafd2b36eda63c7e98c235021277dc6a27771fa96d613248",
+        "control-summary.json": "7b7f40d38f098402b98b8f7671aa96a1eefb95056b2a2820ff94d0c2532886d2",
+        "metrics.json": "de892ca934382f2b8e1d5c3cb7ee4ea57f04b12e010cce3290e2449cc75ab966",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "382fb911e18d63e8fea08e70dd721e1446498c799e090ec3fe8c7c7b7ae6dc6e",
+        "control.npz": "871ecec8c12d8fd95be1412c4dabd00f538ba81cf0dc75f794523713f8f94c1e",
+        "score-trace.npz": "1fa6cf25435d68e2a1bf886a459f7dc698772ed298e35ea50eb2279e1093c448"
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-strain",
+      "sha256": "76ed6f80e434273a03d4c9f852af9a14d8f800190e6dd9d2318bbe92aaff5360",
+      "success": true,
+      "inputs": {
+        "run.json": "f56201a6d5a6c71af6d630bcff450a4cab08ed393b29bac76279eb3d0e011eb4",
+        "control-summary.json": "0c9d923d69fb353c626d78c2017847447ad8022ee5e31893706d8c3c81059eea",
+        "metrics.json": "8960c0cd81262b64b2d45e143fa311bc08e3784ec99b4f812f5d083f4a50517f",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "cff620e90cb014fdfec97e50138ddae2c17be7100cb58cc8899f77b7c2c9b1c8",
+        "control.npz": "eaeaa0d6a138e098f4635b443de868f779531481fd7f477ed653c529ce833a01",
+        "score-trace.npz": "f2870a836c4dfb9854bfe6cb78799058352658a05e237760f78ca298e28a41b5"
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-fixed",
+      "sha256": "586c09ff702547f335dd2927df918c2a90aacfc88f36952a7c7bb078e2121a28",
+      "success": true,
+      "inputs": {
+        "run.json": "e7b559d7b8ce69b745348e7b996795a3d7b21211981357bf3e67d3198dcd6f3e",
+        "control-summary.json": "0e756fe2658c9bd91c1aac55765cf715ea8d5faa3ce0e2dd41ce21d050e4b808",
+        "metrics.json": "a4b610ba84dba05891a16c8d9b4aeb7d7294c377d4cc35a32c169a3b0aaeab73",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "2a5cbb9d8e02fc4a25e285faa80538024cf6a135c65b433f47acecf2175e84e6",
+        "control.npz": "1f74ed1e274eb5a540cc381ebd6725366883f0f843cdc42a20e770105aaa1bcf",
+        "score-trace.npz": "28940b0f0674931811173e7efeb21f464bac6cfc46fdf5daf42e02d9631f7dc7"
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-proposed",
+      "sha256": "7ee8df3f1a00a5d88e8f2918c3ccfb309ec9f80b40cb0be6a9170d9c488ac018",
+      "success": true,
+      "inputs": {
+        "run.json": "26517fbb16bf29ea5f06e49ebca3822d94433d911732a10e3939d4a5c6e09c74",
+        "control-summary.json": "2c741be8947ab9bf0f76252d891b5f62f49d5a848e99a1ed54ac3953ca292efa",
+        "metrics.json": "8be05be140228d57932839f6381e5fe0e6e5ebc194402c4e178756d4986cdd59",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "13e26a7b376d773c286e643cdb6d45e4bb3a8998a5c4d9e7ecc56f5c13252bcb",
+        "control.npz": "18220b65e8f710dccf14d80afce7745b333a6731ec9309258a6f0e084dfad8c9",
+        "score-trace.npz": "d396151c7928482545bb298b4facd95cd2364dd18cb5efb67bc56f822355ded0"
+      }
+    },
+    {
+      "case": "26112143-nominal-occluded-oracle",
+      "sha256": "fb2d8fcb7282a8880bada544e2c377039b7917836960dfa23dd21a97f10e56ed",
+      "success": true,
+      "inputs": {
+        "run.json": "d28124a9c2b6d6466bc555386de106b4ab851dd5becc2a7b6dc08527cd7480e3",
+        "control-summary.json": "adc1e47b3c93946a40f874b61b5a07115e05da372dc4fc13248cd0969234dacc",
+        "metrics.json": "141e0fc455c765b86411f1fca02162fd48b006ddaafa1ad4ce2dfe66885e21df",
+        "protocol.json": "3b1803710094b1df11b62ac2a7ebad322ac23131e5497b5ae44c4d4ae987d7c0",
+        "physics.npz": "1f90284a1bcc5e8c5624ebda59beafa2321b5ecf048f8f3bfda709137b0cc5f6",
+        "control.npz": "1b4103e710c37dd239d21fa534595871959d82a27ee0dcc007482f28efb33879",
+        "score-trace.npz": "e2ef4da72e15b6c04af66fb5ebc6f7ac93f34367fd2d021e19422e1a2bc4789b"
+      }
+    }
+  ]
+}

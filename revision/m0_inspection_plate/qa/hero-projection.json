@@ -1,0 +1,80 @@
+{
+  "camera": {
+    "at": [
+      1.0,
+      0.06,
+      1.91
+    ],
+    "toward_eye": [
+      0.46,
+      -1.0,
+      0.49
+    ],
+    "width": 3.38
+  },
+  "size": [
+    2260,
+    1200
+  ],
+  "records": [
+    {
+      "release_s": 24.0,
+      "pixel_bounds": [
+        483.1973382974338,
+        312.2946223257873,
+        770.0265029386912,
+        712.5311447331754
+      ],
+      "state": "prebend",
+      "theta_deg": 36.145431678473265,
+      "phi_deg": 190.69590814063807
+    },
+    {
+      "release_s": 30.0,
+      "pixel_bounds": [
+        627.9004582578732,
+        313.4295791787213,
+        938.5166823788112,
+        672.3605341185993
+      ],
+      "state": "cross",
+      "theta_deg": 62.4137113883726,
+      "phi_deg": 175.57559957540607
+    },
+    {
+      "release_s": 35.5,
+      "pixel_bounds": [
+        1008.1965479457467,
+        399.9091630580115,
+        1346.7152438420615,
+        758.6653849092602
+      ],
+      "state": "cross",
+      "theta_deg": 78.01386131595662,
+      "phi_deg": 166.02620094615514
+    },
+    {
+      "release_s": 52.0,
+      "pixel_bounds": [
+        1497.9861608693918,
+        466.48498725558716,
+        1792.001375720869,
+        825.2928222583483
+      ],
+      "state": "dock",
+      "theta_deg": 49.951117169709484,
+      "phi_deg": 143.2458483139857
+    }
+  ],
+  "mesh_parts": 229,
+  "arm_nodes": 15,
+  "gripper_fingers": 3,
+  "rotor_mesh": "visual_super_prop",
+  "stages": [
+    "Pre-bend after calibration",
+    "Lift during occlusion",
+    "Traverse the sill",
+    "Align to the port"
+  ],
+  "state_source": "archived world transforms and native CAD"
+}

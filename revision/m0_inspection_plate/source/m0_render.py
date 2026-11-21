@@ -192,4 +192,3 @@ def ghost_picture(r,cam,run,times,size):
         weight=(np.max(abs(pic-bg),axis=2)>.55)[:,:,None]*a
         result=result*(1-weight)+pic*weight
     return Image.fromarray(np.uint8(np.clip(result,0,255)))
-

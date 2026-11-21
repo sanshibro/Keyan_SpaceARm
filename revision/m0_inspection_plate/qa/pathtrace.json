@@ -1,0 +1,48 @@
+{
+  "renderer": "Mitsuba 3.9.1 / CUDA OptiX",
+  "version": "cuda_ad_rgb",
+  "hero_spp": 24,
+  "hero_size": [
+    2260,
+    1200
+  ],
+  "compared": [
+    {
+      "method": "strain",
+      "view": "dock",
+      "state_s": 52.0,
+      "spp": 32
+    },
+    {
+      "method": "oracle",
+      "view": "dock",
+      "state_s": 52.0,
+      "spp": 32
+    },
+    {
+      "method": "proposed",
+      "view": "dock",
+      "state_s": 52.0,
+      "spp": 32
+    },
+    {
+      "method": "strain",
+      "view": "gate",
+      "state_s": 33.78,
+      "spp": 32
+    },
+    {
+      "method": "fixed",
+      "view": "gate",
+      "state_s": 34.699999999999996,
+      "spp": 32
+    },
+    {
+      "method": "proposed",
+      "view": "gate",
+      "state_s": 33.64,
+      "spp": 32
+    }
+  ],
+  "projection_error_limit_m": 2e-05
+}

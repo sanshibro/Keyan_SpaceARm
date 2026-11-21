@@ -1,0 +1,112 @@
+{
+  "cover": "hero.webp",
+  "files": [
+    {
+      "bytes": 130118,
+      "caption": "按 24.0、30.0、35.5、52.0 秒读四个整机姿态。铜色曲线跟踪工具中心，青色曲线跟踪机身质心。",
+      "file": "hero.webp",
+      "kind": "image",
+      "sha256": "8f194edbb017f2e8da55f8fcd037dab1504f2c1c178e3bd64cfbda618017b0e0",
+      "title": "全景残影与夹爪流线"
+    },
+    {
+      "bytes": 146746,
+      "caption": "上排是各趟独立的最近时刻，下排固定在 52.0 秒。每排共用视角、比例和裁切。",
+      "file": "insets.webp",
+      "kind": "image",
+      "sha256": "1b42eae21370d6ff8b621c5c197b8aaa0ab14794f3b144f0ec4da4a2120516ea",
+      "title": "下槛净空与法兰对准"
+    },
+    {
+      "bytes": 145454,
+      "caption": "灰带内完全失视 4 秒。本文方法的弯角 RMSE 为 0.27°，保留遮挡前最后一帧的弯角峰值误差为 41.4°。",
+      "file": "curves.webp",
+      "kind": "curve",
+      "sha256": "eb15a76e9abfdb3b87f8896eefea6b5ea81a22c16630a4ce43136b69a52bfb63",
+      "title": "弯曲幅值、方位、净空与对准误差"
+    },
+    {
+      "bytes": 99340,
+      "caption": "五组方法于 52.0 秒的同场景对照。",
+      "file": "poster.webp",
+      "kind": "poster",
+      "sha256": "35bff8ba9609f5b1c7d5858d71a0b74544310e8a2c71ec9fc0b0e36df286efe0",
+      "title": "视频封面"
+    },
+    {
+      "bytes": 6989849,
+      "caption": "1920 × 1080。侧视、过门或对准近景、原始腕部 RGB 及读数同步回放，覆盖释放后 23–55 秒。",
+      "file": "replay.mp4",
+      "kind": "video",
+      "poster": "poster.webp",
+      "sha256": "785473c8a92e58746e9510e176040943e57a185f9bf04b20abf47d13472c3370",
+      "title": "同机位闭环飞行回放"
+    },
+    {
+      "bytes": 1648831,
+      "caption": "第一页看任务空间与接触最近点，第二页读同步曲线与五方法配对表。",
+      "file": "review.pdf",
+      "kind": "document",
+      "sha256": "925006669235d3bd0605f4a36dfe55fe616807ac42ab67e19a2bb8ff4bb51832",
+      "title": "两页审阅 PDF"
+    },
+    {
+      "bytes": 3546612,
+      "caption": "三组图的可放大矢量版。",
+      "file": "print.pdf",
+      "kind": "document",
+      "sha256": "d203150d4d9136c346634463bdaec01afe7bb7eb9823a8e8203c9222371cc18c",
+      "title": "全景、近景和同步曲线合版"
+    },
+    {
+      "bytes": 19914783,
+      "caption": "含全景、同机位特写、四排曲线及合版。每组提供 PNG、PDF 和 SVG。",
+      "file": "print.tar.gz",
+      "kind": "data",
+      "separate": true,
+      "sha256": "2f1608507d789980b59c6ac5714abe7050ca12dae9d3756a05d10b3bb6317d03",
+      "title": "四组高清图与矢量源图"
+    },
+    {
+      "bytes": 115054,
+      "caption": "42 趟成功轨迹共 153,500 个记录姿态与 153,458 段相邻姿态扫掠的分离证书。",
+      "file": "geometry.json",
+      "kind": "data",
+      "sha256": "1576d6a0afd30ed220415e2b2c1dc523665df3e9cb0b54251291affd9ab84294",
+      "title": "场景几何校验"
+    },
+    {
+      "bytes": 51778,
+      "caption": "按趟核对原包、物理状态、控制记录和评分轨迹。",
+      "file": "fingerprints.json",
+      "kind": "data",
+      "sha256": "220951c293cfd706936d7d101e35eef3294309a63dad0e45e5f30df17b319758",
+      "title": "六十趟原始记录指纹"
+    }
+  ],
+  "guide": [
+    "从全景沿夹爪流线看预弯、失视进窗、越槛和斜向对准。",
+    "在同机位特写中读最小净空，再比较夹爪轴与法兰轴。",
+    "将视频停在 28–32 秒，结合两页审阅中的弯角与方位曲线讲解失视期间的反馈。"
+  ],
+  "id": "2026-11-21-m0-cutaway",
+  "outputs": {
+    "pack": {
+      "file": "meeting.zip",
+      "sha256": "a0eec6a4bbf4064c13d6e2ae921c5115ae2b4f151f333d89a7e243316870682e"
+    },
+    "page": {
+      "file": "index.html",
+      "sha256": "3acf5c61d22733f1f3d0ace48f3ce7c02bd5631e5eaf3dd664cbd628ffa81b89"
+    }
+  },
+  "parent_round": "2026-11-20-gate-feedback",
+  "revision": "951c512fbeaf860c5158e18c44aed527dbf7a899",
+  "schema": 1,
+  "scope": "给获批的单门仿真数据增加可复用的工业隔舱和斜置法兰。半透明墙体、金属窗套与支架按原门洞和目标坐标配准。",
+  "source_note": "60 趟闭环记录取自 G2 归档 951c512。代表种子 26112131，差模偏移及腕部全遮挡，视频保留原始腕部曝光和帧交付时刻。",
+  "stage": "M0 · 隔舱场景与主图",
+  "summary": "同一工况下，纯应变、固定权重 KF、增广融合的臂爪最小净空依次为 6.21、7.38、8.90 cm。全景与同机位特写把这段差异定位到门槛，并在门后比较夹爪与法兰的轴向。",
+  "title": "穿过隔舱，再对准斜置检修接口",
+  "when": "2026-11-21T10:26:04+08:00"
+}

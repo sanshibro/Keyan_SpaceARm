@@ -1,0 +1,15 @@
+{
+  "pages": 2,
+  "sha256": "925006669235d3bd0605f4a36dfe55fe616807ac42ab67e19a2bb8ff4bb51832",
+  "paper": "A4",
+  "source_revision": "951c512",
+  "figure_order": [
+    [
+      "gate_hero_v2",
+      "gate_insets_v2"
+    ],
+    [
+      "gate_four_metrics_v2"
+    ]
+  ]
+}
