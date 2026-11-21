@@ -1,0 +1,15 @@
+{
+  "scene_sha256": "b1cfbf74f31eae7261e973553cf1e21bbfe5f551e17ce5ca5812e4029009d445",
+  "face_uv": [
+    239.5,
+    179.50000000000122
+  ],
+  "optical_depth_m": 0.1679999999999995,
+  "native_depth_at_face_m": 0.1679997593164444,
+  "camera_center_depth_m": 0.1679997593164444,
+  "valid_depth_fraction": 1.0,
+  "desired_axis_error_deg": 1.7075472925031877e-06,
+  "stand_off_pass": true,
+  "depth_center_pass": true,
+  "view_specific_geometry": false
+}

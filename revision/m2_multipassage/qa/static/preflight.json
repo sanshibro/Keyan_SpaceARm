@@ -1,0 +1,678 @@
+{
+  "scene_sha256": "b1cfbf74f31eae7261e973553cf1e21bbfe5f551e17ce5ca5812e4029009d445",
+  "mujoco_version": "3.2.3",
+  "static_only": true,
+  "flight_executed": false,
+  "search": "finite native geometry witness search, not a certified global optimum",
+  "gate_witnesses": [
+    {
+      "gate": "gate1",
+      "xyz": [
+        1.15,
+        -0.1,
+        2.26
+      ],
+      "theta_deg": 70,
+      "phi_deg": 160,
+      "yaw_deg": 0.0,
+      "external_native_search": {
+        "distance_m": 0.11955304210000053,
+        "name_a": "collision_central_equipment",
+        "name_b": "COL_gate1_lintel",
+        "geom_a": 104,
+        "geom_b": 13,
+        "body_a": "uav",
+        "body_b": "world",
+        "point_a": [
+          1.2049999999999998,
+          -0.16007022906675347,
+          2.3804469578999994
+        ],
+        "point_b": [
+          1.2049999999999998,
+          -0.16007022906675347,
+          2.5
+        ],
+        "pairs_refined": 3
+      },
+      "external": {
+        "lower": 0.11955303986706757,
+        "upper": 0.11955304210000062,
+        "distance": 0.11955304098353409,
+        "a": [
+          1.1500001588909767,
+          -0.09301557347115659,
+          2.3804469578999994
+        ],
+        "b": [
+          1.150000158890977,
+          -0.0930155734711566,
+          2.5
+        ],
+        "converged": true,
+        "iterations": 3,
+        "status": "separated GJK",
+        "geom_a": 104,
+        "geom_b": 13,
+        "name_a": "collision_central_equipment",
+        "name_b": "COL_gate1_lintel",
+        "pairs_refined": 3,
+        "distance_m": 0.11955304098353409
+      },
+      "external_body": {
+        "lower": 0.11955303986706757,
+        "upper": 0.11955304210000062,
+        "distance": 0.11955304098353409,
+        "a": [
+          1.1500001588909767,
+          -0.09301557347115659,
+          2.3804469578999994
+        ],
+        "b": [
+          1.150000158890977,
+          -0.0930155734711566,
+          2.5
+        ],
+        "converged": true,
+        "iterations": 3,
+        "status": "separated GJK",
+        "geom_a": 104,
+        "geom_b": 13,
+        "name_a": "collision_central_equipment",
+        "name_b": "COL_gate1_lintel",
+        "pairs_refined": 3
+      },
+      "external_arm_tool": {
+        "lower": 0.16932879987764074,
+        "upper": 0.16933308957082033,
+        "distance": 0.16933094472423055,
+        "a": [
+          1.2662800922679074,
+          -0.05322814128883349,
+          1.9178557744119538
+        ],
+        "b": [
+          1.2049999999999998,
+          -0.053228337664834785,
+          1.76
+        ],
+        "converged": true,
+        "iterations": 5,
+        "status": "separated GJK",
+        "geom_a": 414,
+        "geom_b": 11,
+        "name_a": "arm7",
+        "name_b": "COL_gate1_sill",
+        "pairs_refined": 10
+      },
+      "self_registered": {
+        "lower": 0.0014006657994425295,
+        "upper": 0.0014038430702205645,
+        "distance": 0.001402254434831547,
+        "a": [
+          1.1502666511703783,
+          -0.09990253442661397,
+          2.1595999999999997
+        ],
+        "b": [
+          1.1502666175571101,
+          -0.09990253661422319,
+          2.1581961569301833
+        ],
+        "converged": true,
+        "iterations": 5,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 397,
+        "name_a": "geom391",
+        "name_b": "arm1",
+        "pairs_refined": 11
+      },
+      "self_hazardous": {
+        "lower": 0.03577765901778093,
+        "upper": 0.03577768474737316,
+        "distance": 0.03577767188257705,
+        "a": [
+          1.157615314664352,
+          -0.09721618355368214,
+          2.1595999999999997
+        ],
+        "b": [
+          1.1576153112034109,
+          -0.09721618484240194,
+          2.1238223152526268
+        ],
+        "converged": true,
+        "iterations": 5,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 400,
+        "name_a": "geom391",
+        "name_b": "arm2",
+        "pairs_refined": 29
+      },
+      "self_fit": {
+        "lower": 0.0014018448811016955,
+        "upper": 0.0014025323780847629,
+        "distance": 0.001402188629593229,
+        "a": [
+          1.1500050515017795,
+          -0.10003326782477429,
+          2.1595999999999997
+        ],
+        "b": [
+          1.1500050560890829,
+          -0.10003325986164306,
+          2.158197467621945
+        ],
+        "converged": true,
+        "iterations": 6,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 397,
+        "name_a": "geom391",
+        "name_b": "arm1",
+        "pairs_refined": 4
+      },
+      "external_pass_105mm": true
+    },
+    {
+      "gate": "gate2",
+      "xyz": [
+        2.55,
+        0.12,
+        1.94
+      ],
+      "theta_deg": 80,
+      "phi_deg": 90,
+      "yaw_deg": 0.0,
+      "external_native_search": {
+        "distance_m": 0.1216480221572378,
+        "name_a": "collision_landing_162",
+        "name_b": "COL_branch_cross",
+        "geom_a": 130,
+        "geom_b": 39,
+        "body_a": "uav",
+        "body_b": "world",
+        "point_a": [
+          2.6988433310841993,
+          -0.03094712457238901,
+          1.590493899853878
+        ],
+        "point_b": [
+          2.8063305781504964,
+          -0.03094712457238901,
+          1.6474564578448652
+        ],
+        "pairs_refined": 8
+      },
+      "external": {
+        "lower": 0.12165120076452181,
+        "upper": 0.12165204049230342,
+        "distance": 0.12165162062841262,
+        "a": [
+          2.7000100042339286,
+          -0.03094713281677254,
+          1.589974280561841
+        ],
+        "b": [
+          2.807070444804994,
+          -0.030947293301710282,
+          1.6477434853395132
+        ],
+        "converged": true,
+        "iterations": 2,
+        "status": "separated GJK",
+        "geom_a": 130,
+        "geom_b": 39,
+        "name_a": "collision_landing_162",
+        "name_b": "COL_branch_cross",
+        "pairs_refined": 9,
+        "distance_m": 0.12165162062841262
+      },
+      "external_body": {
+        "lower": 0.12165120076452181,
+        "upper": 0.12165204049230342,
+        "distance": 0.12165162062841262,
+        "a": [
+          2.7000100042339286,
+          -0.03094713281677254,
+          1.589974280561841
+        ],
+        "b": [
+          2.807070444804994,
+          -0.030947293301710282,
+          1.6477434853395132
+        ],
+        "converged": true,
+        "iterations": 2,
+        "status": "separated GJK",
+        "geom_a": 130,
+        "geom_b": 39,
+        "name_a": "collision_landing_162",
+        "name_b": "COL_branch_cross",
+        "pairs_refined": 9
+      },
+      "external_arm_tool": {
+        "lower": 0.19492566924494437,
+        "upper": 0.19492566924494437,
+        "distance": 0.19492566924494437,
+        "a": [
+          2.615818965680492,
+          0.353307808607538,
+          1.5849256692449445
+        ],
+        "b": [
+          2.615818965680491,
+          0.3533078086075372,
+          1.3900000000000001
+        ],
+        "converged": true,
+        "iterations": 5,
+        "status": "separated GJK",
+        "geom_a": 417,
+        "geom_b": 29,
+        "name_a": "d435",
+        "name_b": "COL_low_service_plinth",
+        "pairs_refined": 6
+      },
+      "self_registered": {
+        "lower": 0.0015208019236971097,
+        "upper": 0.0015256446065066015,
+        "distance": 0.0015232232651018556,
+        "a": [
+          2.5501659054657346,
+          0.1202293372808766,
+          1.8396000000000003
+        ],
+        "b": [
+          2.550165843164069,
+          0.12022932113058049,
+          1.8380743553948513
+        ],
+        "converged": true,
+        "iterations": 7,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 397,
+        "name_a": "geom391",
+        "name_b": "arm1",
+        "pairs_refined": 17
+      },
+      "self_hazardous": {
+        "lower": 0.02092341722374986,
+        "upper": 0.020927665787418035,
+        "distance": 0.02092554150558395,
+        "a": [
+          2.549998489944339,
+          0.28004775815708316,
+          1.5879386443559067
+        ],
+        "b": [
+          2.54999855560382,
+          0.282097541037702,
+          1.608765684122707
+        ],
+        "converged": true,
+        "iterations": 10,
+        "status": "separated GJK",
+        "geom_a": 142,
+        "geom_b": 414,
+        "name_a": "collision_landing_168",
+        "name_b": "arm7",
+        "pairs_refined": 25
+      },
+      "self_fit": {
+        "lower": 0.0015226061679851036,
+        "upper": 0.0015245035548664258,
+        "distance": 0.0015235548614257648,
+        "a": [
+          2.5499108232467966,
+          0.12004117694787919,
+          1.8396000000000003
+        ],
+        "b": [
+          2.5499108384380915,
+          0.12004119502273611,
+          1.8380754964453168
+        ],
+        "converged": true,
+        "iterations": 6,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 397,
+        "name_a": "geom391",
+        "name_b": "arm1",
+        "pairs_refined": 4
+      },
+      "external_pass_105mm": true
+    },
+    {
+      "gate": "gate3",
+      "xyz": [
+        3.95,
+        -0.11000000000000001,
+        2.23
+      ],
+      "theta_deg": 70,
+      "phi_deg": 160,
+      "yaw_deg": 0.0,
+      "external_native_search": {
+        "distance_m": 0.11955304210000023,
+        "name_a": "collision_central_equipment",
+        "name_b": "COL_gate3_lintel",
+        "geom_a": 104,
+        "geom_b": 21,
+        "body_a": "uav",
+        "body_b": "world",
+        "point_a": [
+          4.005,
+          -0.17007022906675354,
+          2.3504469578999996
+        ],
+        "point_b": [
+          4.005,
+          -0.17007022906675354,
+          2.47
+        ],
+        "pairs_refined": 3
+      },
+      "external": {
+        "lower": 0.1195530410171855,
+        "upper": 0.11955304210000062,
+        "distance": 0.11955304155859306,
+        "a": [
+          3.950000158890977,
+          -0.10231713856956844,
+          2.3504469578999996
+        ],
+        "b": [
+          3.9500001588909774,
+          -0.1023171385695684,
+          2.47
+        ],
+        "converged": true,
+        "iterations": 3,
+        "status": "separated GJK",
+        "geom_a": 104,
+        "geom_b": 21,
+        "name_a": "collision_central_equipment",
+        "name_b": "COL_gate3_lintel",
+        "pairs_refined": 4,
+        "distance_m": 0.11955304155859306
+      },
+      "external_body": {
+        "lower": 0.1195530410171855,
+        "upper": 0.11955304210000062,
+        "distance": 0.11955304155859306,
+        "a": [
+          3.950000158890977,
+          -0.10231713856956844,
+          2.3504469578999996
+        ],
+        "b": [
+          3.9500001588909774,
+          -0.1023171385695684,
+          2.47
+        ],
+        "converged": true,
+        "iterations": 3,
+        "status": "separated GJK",
+        "geom_a": 104,
+        "geom_b": 21,
+        "name_a": "collision_central_equipment",
+        "name_b": "COL_gate3_lintel",
+        "pairs_refined": 4
+      },
+      "external_arm_tool": {
+        "lower": 0.16932880577240178,
+        "upper": 0.16933302953879315,
+        "distance": 0.16933091765559746,
+        "a": [
+          4.06628162294475,
+          -0.06322058515642176,
+          1.8878551157929926
+        ],
+        "b": [
+          4.005,
+          -0.06322074083384092,
+          1.7300000000000002
+        ],
+        "converged": true,
+        "iterations": 5,
+        "status": "separated GJK",
+        "geom_a": 414,
+        "geom_b": 19,
+        "name_a": "arm7",
+        "name_b": "COL_gate3_sill",
+        "pairs_refined": 11
+      },
+      "self_registered": {
+        "lower": 0.0013996499416869103,
+        "upper": 0.0014043167610157596,
+        "distance": 0.001401983351351335,
+        "a": [
+          3.9501506257345924,
+          -0.1097790483201756,
+          2.1296
+        ],
+        "b": [
+          3.950150625319954,
+          -0.10977910316063712,
+          2.128195683240055
+        ],
+        "converged": true,
+        "iterations": 7,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 397,
+        "name_a": "geom391",
+        "name_b": "arm1",
+        "pairs_refined": 11
+      },
+      "self_hazardous": {
+        "lower": 0.03577177543504694,
+        "upper": 0.03577953440804474,
+        "distance": 0.035775654921545844,
+        "a": [
+          3.9577650760480054,
+          -0.10717358741302874,
+          2.1296
+        ],
+        "b": [
+          3.957762489472956,
+          -0.1071746281150554,
+          2.0938204657005848
+        ],
+        "converged": true,
+        "iterations": 6,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 400,
+        "name_a": "geom391",
+        "name_b": "arm2",
+        "pairs_refined": 30
+      },
+      "self_fit": {
+        "lower": 0.0014020471798683294,
+        "upper": 0.0014024531666136453,
+        "distance": 0.0014022501732409874,
+        "a": [
+          3.9500670519625274,
+          -0.11004971651519316,
+          2.1296
+        ],
+        "b": [
+          3.9500670484069613,
+          -0.11004971303142305,
+          2.128197546833395
+        ],
+        "converged": true,
+        "iterations": 7,
+        "status": "separated GJK",
+        "geom_a": 391,
+        "geom_b": 397,
+        "name_a": "geom391",
+        "name_b": "arm1",
+        "pairs_refined": 4
+      },
+      "external_pass_105mm": true
+    }
+  ],
+  "registered_self_pairs": 1948,
+  "hazardous_pairs": 1944,
+  "fit_pairs": 4,
+  "external_geoms": 372,
+  "obstacles": 44,
+  "elapsed_s": 2.030999999959022,
+  "task": {
+    "body": [
+      4.662946098965787,
+      0.006928285036025689,
+      2.119383934882359
+    ],
+    "tool": [
+      4.837881908622765,
+      0.13910870392102045,
+      1.6853948100723903
+    ],
+    "axis": [
+      0.6109852853641633,
+      0.4616567134559925,
+      -0.6430941299603677
+    ],
+    "theta_deg": 50.0,
+    "phi_deg": 143.0,
+    "yaw_deg": 0.0,
+    "camera": [
+      4.847354472058821,
+      0.10244167213939326,
+      1.7580398138333415
+    ],
+    "camera_axis": [
+      0.6109852853641634,
+      0.46165671345599246,
+      -0.6430941299603679
+    ],
+    "tool_axis": [
+      0.6109852853641633,
+      0.4616567134559925,
+      -0.6430941299603677
+    ]
+  },
+  "task_native_search": {
+    "distance_m": 0.0885518002721682,
+    "name_a": "alignment_probe_load",
+    "name_b": "COL_flange_bolt_3",
+    "geom_a": 458,
+    "geom_b": 53,
+    "body_a": "tool",
+    "body_b": "world",
+    "point_a": [
+      4.843565283756055,
+      0.14562638396276792,
+      1.6770750087545887
+    ],
+    "point_b": [
+      4.885504708728972,
+      0.19372240907066127,
+      1.61568056003808
+    ],
+    "pairs_refined": 79
+  },
+  "task_certified": {
+    "body": {
+      "lower": 0.13915209482357196,
+      "upper": 0.1391520948235725,
+      "distance": 0.13915209482357221,
+      "a": [
+        4.8129587586253155,
+        0.1689382900804357,
+        1.745344060192813
+      ],
+      "b": [
+        4.897978623934559,
+        0.2331787625817876,
+        1.6558561297809993
+      ],
+      "converged": true,
+      "iterations": 3,
+      "status": "separated GJK",
+      "geom_a": 132,
+      "geom_b": 55,
+      "name_a": "collision_landing_163",
+      "name_b": "COL_flange_bolt_4",
+      "pairs_refined": 18
+    },
+    "arm_tool": {
+      "lower": 0.0885516904558525,
+      "upper": 0.08855261067632096,
+      "distance": 0.08855215056608673,
+      "a": [
+        4.843677909822371,
+        0.14556805068315526,
+        1.6771072766938355
+      ],
+      "b": [
+        4.885504708728972,
+        0.19372240907066124,
+        1.61568056003808
+      ],
+      "converged": true,
+      "iterations": 2,
+      "status": "separated GJK",
+      "geom_a": 458,
+      "geom_b": 53,
+      "name_a": "alignment_probe_load",
+      "name_b": "COL_flange_bolt_3",
+      "pairs_refined": 73
+    },
+    "hazardous": {
+      "lower": 0.012354231857983382,
+      "upper": 0.012354231857983638,
+      "distance": 0.01235423185798351,
+      "a": [
+        4.8129561032004355,
+        0.14491827199162366,
+        1.7693582089537505
+      ],
+      "b": [
+        4.822730303837722,
+        0.1401697099872242,
+        1.775235555769556
+      ],
+      "converged": true,
+      "iterations": 2,
+      "status": "separated GJK",
+      "geom_a": 132,
+      "geom_b": 417,
+      "name_a": "collision_landing_163",
+      "name_b": "d435",
+      "pairs_refined": 21
+    },
+    "fit": {
+      "lower": 0.0012062286541317244,
+      "upper": 0.0012068242622524513,
+      "distance": 0.0012065264581920879,
+      "a": [
+        4.6628929249774345,
+        0.006954994479872807,
+        2.018983934882359
+      ],
+      "b": [
+        4.662892931587521,
+        0.00695499558701412,
+        2.017777110620125
+      ],
+      "converged": true,
+      "iterations": 6,
+      "status": "separated GJK",
+      "geom_a": 391,
+      "geom_b": 397,
+      "name_a": "geom391",
+      "name_b": "arm1",
+      "pairs_refined": 4
+    }
+  },
+  "all_external_static_pass": true
+}

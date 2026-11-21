@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="M2_shared_industrial_corridor">
+  <asset>
+    <texture name="M2_tex_deck" type="2d" file="deck.png" />
+    <material name="M2_mat_deck" texture="M2_tex_deck" texrepeat="3 3" texuniform="true" rgba="1 1 1 1" specular=".22" shininess=".28" reflectance="0" />
+    <texture name="M2_tex_wall" type="2d" file="wall.png" />
+    <material name="M2_mat_wall" texture="M2_tex_wall" texrepeat="3 3" texuniform="true" rgba="1 1 1 1" specular=".22" shininess=".28" reflectance="0" />
+    <texture name="M2_tex_glass" type="2d" file="glass.png" />
+    <material name="M2_mat_glass" texture="M2_tex_glass" texrepeat="3 3" texuniform="true" rgba="1 1 1 .14" specular=".22" shininess=".28" reflectance="0" />
+    <texture name="M2_tex_steel" type="2d" file="steel.png" />
+    <material name="M2_mat_steel" texture="M2_tex_steel" texrepeat="3 3" texuniform="true" rgba="1 1 1 1" specular=".22" shininess=".28" reflectance="0" />
+    <texture name="M2_tex_bulkhead" type="2d" file="bulkhead.png" />
+    <material name="M2_mat_bulkhead" texture="M2_tex_bulkhead" texrepeat="3 3" texuniform="true" rgba="1 1 1 1" specular=".22" shininess=".28" reflectance="0" />
+    <texture name="M2_tex_duct" type="2d" file="duct.png" />
+    <material name="M2_mat_duct" texture="M2_tex_duct" texrepeat="3 3" texuniform="true" rgba="1 1 1 1" specular=".22" shininess=".28" reflectance="0" />
+    <texture name="M2_tex_copper" type="2d" file="copper.png" />
+    <material name="M2_mat_copper" texture="M2_tex_copper" texrepeat="3 3" texuniform="true" rgba="1 1 1 1" specular=".22" shininess=".28" reflectance="0" />
+    <texture name="M2_tex_flange" type="2d" file="flange.png" />
+    <material name="M2_mat_flange" texture="M2_tex_flange" texrepeat="3 3" texuniform="true" rgba="1 1 1 1" specular=".22" shininess=".28" reflectance="0" />
+  </asset>
+  <worldbody>
+    <geom name="M2_deck" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_deck" pos="2.45 0 1.2" size="3 0.82 0.05" />
+    <geom name="COL_deck" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.45 0 1.2" size="3 0.82 0.05" />
+    <geom name="M2_far_wall" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_wall" pos="2.45 0.82 2.035" size="3 0.02 0.785" />
+    <geom name="COL_far_wall" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.45 0.82 2.035" size="3 0.02 0.785" />
+    <geom name="M2_near_guard" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_glass" pos="2.45 -0.82 2.035" size="3 0.02 0.785" />
+    <geom name="COL_near_guard" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.45 -0.82 2.035" size="3 0.02 0.785" />
+    <geom name="M2_roof_edge_far" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.45 0.76 2.79" size="3 0.04 0.03" />
+    <geom name="COL_roof_edge_far" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.45 0.76 2.79" size="3 0.04 0.03" />
+    <geom name="M2_roof_edge_near" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.45 -0.76 2.79" size="3 0.04 0.03" />
+    <geom name="COL_roof_edge_near" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.45 -0.76 2.79" size="3 0.04 0.03" />
+    <geom name="M2_gate1_sill" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="1.15 0 1.505" size="0.055 0.8 0.255" />
+    <geom name="COL_gate1_sill" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="1.15 0 1.505" size="0.055 0.8 0.255" />
+    <geom name="M2_gate1_lintel" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="1.15 0 2.66" size="0.055 0.8 0.16" />
+    <geom name="COL_gate1_lintel" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="1.15 0 2.66" size="0.055 0.8 0.16" />
+    <geom name="M2_gate1_negative" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="1.15 -0.665 2.13" size="0.055 0.135 0.37" />
+    <geom name="COL_gate1_negative" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="1.15 -0.665 2.13" size="0.055 0.135 0.37" />
+    <geom name="M2_gate1_positive" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="1.15 0.565 2.13" size="0.055 0.235 0.37" />
+    <geom name="COL_gate1_positive" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="1.15 0.565 2.13" size="0.055 0.235 0.37" />
+    <geom name="M2_gate3_sill" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="3.95 0 1.49" size="0.055 0.8 0.24" />
+    <geom name="COL_gate3_sill" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="3.95 0 1.49" size="0.055 0.8 0.24" />
+    <geom name="M2_gate3_lintel" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="3.95 0 2.645" size="0.055 0.8 0.175" />
+    <geom name="COL_gate3_lintel" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="3.95 0 2.645" size="0.055 0.8 0.175" />
+    <geom name="M2_gate3_negative" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="3.95 -0.685 2.1" size="0.055 0.115 0.37" />
+    <geom name="COL_gate3_negative" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="3.95 -0.685 2.1" size="0.055 0.115 0.37" />
+    <geom name="M2_gate3_positive" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_bulkhead" pos="3.95 0.545 2.1" size="0.055 0.255 0.37" />
+    <geom name="COL_gate3_positive" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="3.95 0.545 2.1" size="0.055 0.255 0.37" />
+    <geom name="M2_overhead_duct" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_duct" pos="2.56 0 2.455" size="0.38 0.8 0.225" />
+    <geom name="COL_overhead_duct" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.56 0 2.455" size="0.38 0.8 0.225" />
+    <geom name="M2_low_service_plinth" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.535 0 1.32" size="0.405 0.8 0.07" />
+    <geom name="COL_low_service_plinth" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.535 0 1.32" size="0.405 0.8 0.07" />
+    <geom name="M2_terminal_panel" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_wall" pos="5.275 0 2.035" size="0.025 0.8 0.785" />
+    <geom name="COL_terminal_panel" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="5.275 0 2.035" size="0.025 0.8 0.785" />
+    <geom name="M2_offset_riser_negative" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_copper" fromto="2.44 -0.36 1.39 2.44 -0.36 2.23" size="0.045" />
+    <geom name="COL_offset_riser_negative" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="2.44 -0.36 1.39 2.44 -0.36 2.23" size="0.045" />
+    <geom name="M2_offset_riser_positive" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_copper" fromto="2.67 0.7 1.39 2.67 0.7 2.23" size="0.045" />
+    <geom name="COL_offset_riser_positive" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="2.67 0.7 1.39 2.67 0.7 2.23" size="0.045" />
+    <geom name="M2_branch_negative" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="2.44 -0.36 1.66 2.83 -0.36 1.66" size="0.026" />
+    <geom name="COL_branch_negative" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="2.44 -0.36 1.66 2.83 -0.36 1.66" size="0.026" />
+    <geom name="M2_branch_cross" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="2.83 -0.36 1.66 2.83 0.25 1.66" size="0.026" />
+    <geom name="COL_branch_cross" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="2.83 -0.36 1.66 2.83 0.25 1.66" size="0.026" />
+    <geom name="M2_far_header" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_copper" fromto="0.05 0.72 2.64 5.08 0.72 2.64" size="0.036" />
+    <geom name="COL_far_header" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="0.05 0.72 2.64 5.08 0.72 2.64" size="0.036" />
+    <geom name="M2_inspection_flange" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_flange" fromto="4.95 0.18 1.65 5.08624972 0.282949447 1.50659001" size="0.1075" />
+    <geom name="COL_inspection_flange" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.95 0.18 1.65 5.08624972 0.282949447 1.50659001" size="0.1075" />
+    <geom name="M2_flange_support" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="5.07219706 0.272331343 1.52138117 5.24 0.53 1.38" size="0.04" />
+    <geom name="COL_flange_support" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="5.07219706 0.272331343 1.52138117 5.24 0.53 1.38" size="0.04" />
+    <geom name="M2_flange_bolt_0" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="4.99331592 0.108700007 1.65707404 5.00125873 0.114701545 1.64871381" size="0.01" />
+    <geom name="COL_flange_bolt_0" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.99331592 0.108700007 1.65707404 5.00125873 0.114701545 1.64871381" size="0.01" />
+    <geom name="M2_flange_bolt_1" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="4.94854706 0.105342387 1.61213009 4.95648987 0.111343925 1.60376987" size="0.01" />
+    <geom name="COL_flange_bolt_1" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.94854706 0.105342387 1.61213009 4.95648987 0.111343925 1.60376987" size="0.01" />
+    <geom name="M2_flange_bolt_2" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="4.90069233 0.14274343 1.5935137 4.90863514 0.148744967 1.58515348" size="0.01" />
+    <geom name="COL_flange_bolt_2" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.90069233 0.14274343 1.5935137 4.90863514 0.148744967 1.58515348" size="0.01" />
+    <geom name="M2_flange_bolt_3" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="4.87778439 0.198994111 1.61213009 4.8857272 0.204995648 1.60376987" size="0.01" />
+    <geom name="COL_flange_bolt_3" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.87778439 0.198994111 1.61213009 4.8857272 0.204995648 1.60376987" size="0.01" />
+    <geom name="M2_flange_bolt_4" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="4.8932424 0.241143545 1.65707404 4.90118521 0.247145082 1.64871381" size="0.01" />
+    <geom name="COL_flange_bolt_4" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.8932424 0.241143545 1.65707404 4.90118521 0.247145082 1.64871381" size="0.01" />
+    <geom name="M2_flange_bolt_5" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="4.93801127 0.244501165 1.70201798 4.94595408 0.250502702 1.69365775" size="0.01" />
+    <geom name="COL_flange_bolt_5" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.93801127 0.244501165 1.70201798 4.94595408 0.250502702 1.69365775" size="0.01" />
+    <geom name="M2_flange_bolt_6" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="4.98586599 0.207100123 1.72063437 4.9938088 0.21310166 1.71227414" size="0.01" />
+    <geom name="COL_flange_bolt_6" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="4.98586599 0.207100123 1.72063437 4.9938088 0.21310166 1.71227414" size="0.01" />
+    <geom name="M2_flange_bolt_7" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="5.00877393 0.150849442 1.70201798 5.01671674 0.156850979 1.69365775" size="0.01" />
+    <geom name="COL_flange_bolt_7" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="5.00877393 0.150849442 1.70201798 5.01671674 0.156850979 1.69365775" size="0.01" />
+    <geom name="M2_gate1_bolt_-1_1.48" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="1.086 -0.61 1.48 1.214 -0.61 1.48" size="0.012" />
+    <geom name="COL_gate1_bolt_-1_1.48" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="1.086 -0.61 1.48 1.214 -0.61 1.48" size="0.012" />
+    <geom name="M2_gate1_bolt_-1_2.68" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="1.086 -0.61 2.68 1.214 -0.61 2.68" size="0.012" />
+    <geom name="COL_gate1_bolt_-1_2.68" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="1.086 -0.61 2.68 1.214 -0.61 2.68" size="0.012" />
+    <geom name="M2_gate1_bolt_1_1.48" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="1.086 0.41 1.48 1.214 0.41 1.48" size="0.012" />
+    <geom name="COL_gate1_bolt_1_1.48" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="1.086 0.41 1.48 1.214 0.41 1.48" size="0.012" />
+    <geom name="M2_gate1_bolt_1_2.68" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="1.086 0.41 2.68 1.214 0.41 2.68" size="0.012" />
+    <geom name="COL_gate1_bolt_1_2.68" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="1.086 0.41 2.68 1.214 0.41 2.68" size="0.012" />
+    <geom name="M2_gate3_bolt_-1_1.48" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="3.886 -0.65 1.48 4.014 -0.65 1.48" size="0.012" />
+    <geom name="COL_gate3_bolt_-1_1.48" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="3.886 -0.65 1.48 4.014 -0.65 1.48" size="0.012" />
+    <geom name="M2_gate3_bolt_-1_2.68" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="3.886 -0.65 2.68 4.014 -0.65 2.68" size="0.012" />
+    <geom name="COL_gate3_bolt_-1_2.68" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="3.886 -0.65 2.68 4.014 -0.65 2.68" size="0.012" />
+    <geom name="M2_gate3_bolt_1_1.48" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="3.886 0.37 1.48 4.014 0.37 1.48" size="0.012" />
+    <geom name="COL_gate3_bolt_1_1.48" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="3.886 0.37 1.48 4.014 0.37 1.48" size="0.012" />
+    <geom name="M2_gate3_bolt_1_2.68" type="cylinder" group="0" contype="0" conaffinity="0" material="M2_mat_steel" fromto="3.886 0.37 2.68 4.014 0.37 2.68" size="0.012" />
+    <geom name="COL_gate3_bolt_1_2.68" type="cylinder" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" fromto="3.886 0.37 2.68 4.014 0.37 2.68" size="0.012" />
+    <geom name="M2_duct_rib_0" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.19 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="COL_duct_rib_0" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.19 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="M2_duct_rib_1" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.37 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="COL_duct_rib_1" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.37 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="M2_duct_rib_2" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.56 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="COL_duct_rib_2" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.56 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="M2_duct_rib_3" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.75 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="COL_duct_rib_3" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.75 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="M2_duct_rib_4" type="box" group="0" contype="0" conaffinity="0" material="M2_mat_steel" pos="2.93 0 2.451" size="0.008 0.803 0.221" />
+    <geom name="COL_duct_rib_4" type="box" group="4" contype="2" conaffinity="5" rgba="0 0 0 0" pos="2.93 0 2.451" size="0.008 0.803 0.221" />
+  </worldbody>
+</mujoco>

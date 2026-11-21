@@ -1,0 +1,387 @@
+{
+  "scene_sha256": "b1cfbf74f31eae7261e973553cf1e21bbfe5f551e17ce5ca5812e4029009d445",
+  "files": {
+    "bulkhead.png": "574dc4152b8673972babcdb468022ecd9bc621dede4fa3d2ddb8e6f0ad0b47b9",
+    "cell.xml": "262bbedebefe6e0b3bd52d61dbe9d7066318cedfa1481e6df02d383c7384a314",
+    "copper.png": "d664ce7ed1075cb8a5f4449c9fa6e5404d8aeacc0488f1cbec6b799ce85c9264",
+    "deck.png": "5b5ea388ac9445792b636b87c25f5b879a4714f5440a2d57e28c9287fbcd4752",
+    "duct.png": "752ca859269cfc68d4849ee132d75fa359298b8c78b597ec02d4f1b6b630d70d",
+    "flange.png": "77503704b6e3065201599a237d0fce8b299c3cbc1d152a266f3268221535d9d1",
+    "glass.png": "7cfbe26f370b903d7f35ddd28b94f4f440bd906b60ebde18f88832327b8332ed",
+    "steel.png": "be42ba841c51eda2660d8b7a37280994ee09f404e882c3bf6f35d37c712e4486",
+    "wall.png": "d36cdc2eee153a0d7b7393e3908799db9137d5e767402d76f8ffd81f283e4f0c"
+  },
+  "gates": [
+    {
+      "name": "gate1",
+      "x": 1.15,
+      "y": -0.1,
+      "z": 2.13,
+      "width": 0.86,
+      "height": 0.74
+    },
+    {
+      "name": "gate2",
+      "x": 2.55,
+      "y": 0.18,
+      "z": 1.99,
+      "width": null,
+      "height": null
+    },
+    {
+      "name": "gate3",
+      "x": 3.95,
+      "y": -0.14,
+      "z": 2.1,
+      "width": 0.86,
+      "height": 0.74
+    }
+  ],
+  "face": [
+    4.95,
+    0.18,
+    1.65
+  ],
+  "axis": [
+    0.6109852853641633,
+    0.4616567134559925,
+    -0.6430941299603677
+  ],
+  "shared_views": true,
+  "view_specific_geometry": false,
+  "texture": "fixed-seed natural brushed/coated metal",
+  "box_geometry": [
+    {
+      "name": "deck",
+      "lo": [
+        -0.55,
+        -0.82,
+        1.15
+      ],
+      "hi": [
+        5.45,
+        0.82,
+        1.25
+      ],
+      "material": "deck"
+    },
+    {
+      "name": "far_wall",
+      "lo": [
+        -0.55,
+        0.8,
+        1.25
+      ],
+      "hi": [
+        5.45,
+        0.84,
+        2.82
+      ],
+      "material": "wall"
+    },
+    {
+      "name": "near_guard",
+      "lo": [
+        -0.55,
+        -0.84,
+        1.25
+      ],
+      "hi": [
+        5.45,
+        -0.8,
+        2.82
+      ],
+      "material": "glass"
+    },
+    {
+      "name": "roof_edge_far",
+      "lo": [
+        -0.55,
+        0.72,
+        2.76
+      ],
+      "hi": [
+        5.45,
+        0.8,
+        2.82
+      ],
+      "material": "steel"
+    },
+    {
+      "name": "roof_edge_near",
+      "lo": [
+        -0.55,
+        -0.8,
+        2.76
+      ],
+      "hi": [
+        5.45,
+        -0.72,
+        2.82
+      ],
+      "material": "steel"
+    },
+    {
+      "name": "gate1_sill",
+      "lo": [
+        1.095,
+        -0.8,
+        1.25
+      ],
+      "hi": [
+        1.2049999999999998,
+        0.8,
+        1.7599999999999998
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "gate1_lintel",
+      "lo": [
+        1.095,
+        -0.8,
+        2.5
+      ],
+      "hi": [
+        1.2049999999999998,
+        0.8,
+        2.82
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "gate1_negative",
+      "lo": [
+        1.095,
+        -0.8,
+        1.7599999999999998
+      ],
+      "hi": [
+        1.2049999999999998,
+        -0.53,
+        2.5
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "gate1_positive",
+      "lo": [
+        1.095,
+        0.32999999999999996,
+        1.7599999999999998
+      ],
+      "hi": [
+        1.2049999999999998,
+        0.8,
+        2.5
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "gate3_sill",
+      "lo": [
+        3.895,
+        -0.8,
+        1.25
+      ],
+      "hi": [
+        4.005,
+        0.8,
+        1.73
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "gate3_lintel",
+      "lo": [
+        3.895,
+        -0.8,
+        2.47
+      ],
+      "hi": [
+        4.005,
+        0.8,
+        2.82
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "gate3_negative",
+      "lo": [
+        3.895,
+        -0.8,
+        1.73
+      ],
+      "hi": [
+        4.005,
+        -0.5700000000000001,
+        2.47
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "gate3_positive",
+      "lo": [
+        3.895,
+        0.29,
+        1.73
+      ],
+      "hi": [
+        4.005,
+        0.8,
+        2.47
+      ],
+      "material": "bulkhead"
+    },
+    {
+      "name": "overhead_duct",
+      "lo": [
+        2.18,
+        -0.8,
+        2.23
+      ],
+      "hi": [
+        2.94,
+        0.8,
+        2.68
+      ],
+      "material": "duct"
+    },
+    {
+      "name": "low_service_plinth",
+      "lo": [
+        2.13,
+        -0.8,
+        1.25
+      ],
+      "hi": [
+        2.94,
+        0.8,
+        1.39
+      ],
+      "material": "steel"
+    },
+    {
+      "name": "terminal_panel",
+      "lo": [
+        5.25,
+        -0.8,
+        1.25
+      ],
+      "hi": [
+        5.3,
+        0.8,
+        2.82
+      ],
+      "material": "wall"
+    }
+  ],
+  "pipe_geometry": [
+    {
+      "name": "offset_riser_negative",
+      "a": [
+        2.44,
+        -0.36,
+        1.39
+      ],
+      "b": [
+        2.44,
+        -0.36,
+        2.23
+      ],
+      "radius": 0.045,
+      "material": "copper"
+    },
+    {
+      "name": "offset_riser_positive",
+      "a": [
+        2.67,
+        0.7,
+        1.39
+      ],
+      "b": [
+        2.67,
+        0.7,
+        2.23
+      ],
+      "radius": 0.045,
+      "material": "copper"
+    },
+    {
+      "name": "branch_negative",
+      "a": [
+        2.44,
+        -0.36,
+        1.66
+      ],
+      "b": [
+        2.83,
+        -0.36,
+        1.66
+      ],
+      "radius": 0.026,
+      "material": "steel"
+    },
+    {
+      "name": "branch_cross",
+      "a": [
+        2.83,
+        -0.36,
+        1.66
+      ],
+      "b": [
+        2.83,
+        0.25,
+        1.66
+      ],
+      "radius": 0.026,
+      "material": "steel"
+    },
+    {
+      "name": "far_header",
+      "a": [
+        0.05,
+        0.72,
+        2.64
+      ],
+      "b": [
+        5.08,
+        0.72,
+        2.64
+      ],
+      "radius": 0.036,
+      "material": "copper"
+    },
+    {
+      "name": "inspection_flange",
+      "a": [
+        4.95,
+        0.18,
+        1.65
+      ],
+      "b": [
+        5.086249718636209,
+        0.2829494471006863,
+        1.506590009018838
+      ],
+      "radius": 0.1075,
+      "material": "flange"
+    },
+    {
+      "name": "flange_support",
+      "a": [
+        5.072197057072833,
+        0.2723313426911985,
+        1.5213811740079264
+      ],
+      "b": [
+        5.24,
+        0.53,
+        1.38
+      ],
+      "radius": 0.04,
+      "material": "steel"
+    }
+  ],
+  "registration_status": "development: static feasibility must be audited before flight"
+}

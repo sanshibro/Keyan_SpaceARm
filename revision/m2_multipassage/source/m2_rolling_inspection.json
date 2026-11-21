@@ -1,0 +1,84 @@
+{
+  "stage": "M2",
+  "parent": "611ea637130474f53c15d8453853350f88758b35",
+  "frozen_perception": "881a799",
+  "development_seeds": [
+    26112207,
+    26112209
+  ],
+  "formal_seeds": [
+    26112241,
+    26112247,
+    26112253
+  ],
+  "methods": [
+    "straight",
+    "fixed",
+    "sequential",
+    "unregularized",
+    "coupled",
+    "stop",
+    "hard"
+  ],
+  "groups": {
+    "A": [
+      "straight",
+      "fixed",
+      "sequential",
+      "unregularized",
+      "coupled"
+    ],
+    "B": [
+      "stop",
+      "hard",
+      "coupled"
+    ]
+  },
+  "scene_length_m": 5.2,
+  "causal_radius_m": 2.4,
+  "nominal_window_m": 2.2,
+  "planner_body_arm_margin_m": [
+    0.085,
+    0.085
+  ],
+  "static_clearance_m": 0.105,
+  "external_pilot_formal_m": [
+    0.062,
+    0.05
+  ],
+  "hazard_plan_project_pilot_formal_m": [
+    0.015,
+    0.008,
+    0.005,
+    0.003
+  ],
+  "fit_pairs": [
+    "mount central cylinder / arm1",
+    "finger0 / finger1",
+    "finger0 / finger2",
+    "finger1 / finger2"
+  ],
+  "gripper": "open inspection command; opposite jaws checked for stroke and nonpenetration; every jaw-to-airframe and jaw-to-arm pair remains in the hazardous registry",
+  "camera_delay_s": 0.2,
+  "working_distance_m": [
+    0.12,
+    0.18
+  ],
+  "terminal_position_m": 0.035,
+  "terminal_axis_deg": 3,
+  "continuous_depth_s": 1,
+  "active_nominal_speed_m_s": [
+    0.24,
+    0.3
+  ],
+  "mission_motion_s": [
+    24,
+    34
+  ],
+  "minimum_online_replans": 3,
+  "planner_median_wall_s_strict_upper": 1,
+  "registered_target_single_window_wall_s": [
+    0.25,
+    0.95
+  ]
+}
