@@ -26,10 +26,12 @@ class Replay:
         self.records=records;self.plant=portable() if os.name=='nt' else build();self.data=mujoco.MjData(self.plant.m)
         if any(r.scene!=self.plant.scene_digest for r in records):raise ValueError('Replay model is not the frozen flight scene')
         self.renderer=mujoco.Renderer(self.plant.m,height=360,width=640)
-    def native(self,qpos,camera):
+        self.wide=mujoco.Renderer(self.plant.m,height=630,width=1120) if len(records)==1 else None
+    def native(self,qpos,camera,renderer=None):
         self.data.qpos[:]=qpos;mujoco.mj_kinematics(self.plant.m,self.data);mujoco.mj_camlight(self.plant.m,self.data)
-        self.renderer.update_scene(self.data,camera=camera,scene_option=option())
-        return Image.fromarray(self.renderer.render().copy())
+        renderer=self.renderer if renderer is None else renderer
+        renderer.update_scene(self.data,camera=camera,scene_option=option())
+        return Image.fromarray(renderer.render().copy())
     def row(self,record,t):
         panel=Image.new('RGB',(1920,420),'white');d=ImageDraw.Draw(panel)
         d.text((20,7),record.label+'  |  seed '+str(record.seed),font=font(25,True),fill=record.color)
@@ -44,13 +46,44 @@ class Replay:
         d.text((1765,234),'Frame %d'%exp['frame'],font=font(18),fill='#333333');d.text((1765,273),'Pose + pixels',font=font(18),fill='#333333');d.text((1765,301),'hash verified',font=font(18),fill='#333333')
         return panel
     def frame(self,t):
+        if len(self.records)==1:return self.single(self.records[0],t)
         # Up to two comparison rows are padded to exactly 1920 x 1080.
         height=max(1080,120+420*len(self.records));im=Image.new('RGB',(1920,height),'white');d=ImageDraw.Draw(im)
         d.text((24,14),'M2 | Recorded native multi-passage flight | release time %.3f s'%t,font=font(29,True),fill='#18252c')
         d.text((24,52),'Oblique world view                         Side world view                         Original wrist RGB-D input',font=font(22),fill='#444444')
         for n,r in enumerate(self.records):im.paste(self.row(r,t),(0,92+420*n))
         return im
-    def close(self):self.renderer.close()
+    def single(self,r,t):
+        canvas=Image.new('RGB',(1920,1080),'white');d=ImageDraw.Draw(canvas);ink='#243b40'
+        d.text((36,20),r.label+'   |   Three-passage inspection',font=font(37,True),fill=ink)
+        label='Development flight' if r.metrics['development'] else 'Paired evaluation'
+        d.text((36,74),label+'   ·   seed '+str(r.seed),font=font(25),fill='#56696a')
+        e=r.exposure(t,verify=True,require_tolerance=.026)
+        if e is None:
+            d.text((40,198),'No recorded exposure at this time',font=font(29),fill=ink)
+            return canvas
+        i=e['physics_index'];q=r.physics['qpos'][i]
+        canvas.paste(self.native(q,'observer_oblique',self.wide),(28,152))
+        cam=mujoco.MjvCamera();cam.lookat[:]=q[:3]-[0,0,.14]
+        cam.azimuth=78;cam.elevation=-14;cam.distance=2.15
+        canvas.paste(self.native(q,cam).resize((656,369),Image.Resampling.LANCZOS),(1212,138))
+        with Image.open(e['rgb_path']) as frame:
+            wrist=frame.convert('RGB').resize((656,492),Image.Resampling.LANCZOS);canvas.paste(wrist,(1212,568))
+        d=ImageDraw.Draw(canvas)
+        d.text((36,118),'a   Industrial corridor',font=font(24,True),fill=ink)
+        d.text((1210,100),'b   External tracking view',font=font(24,True),fill=ink)
+        d.text((1210,525),'c   Original wrist RGB',font=font(24,True),fill=ink)
+        d.text((42,822),'Longitudinal position (m)',font=font(25),fill=ink)
+        x0,x1,y=55,1100,927;mapx=lambda x:x0+(x1-x0)*x/5.2
+        d.line((x0,y,x1,y),fill='#9caaaa',width=2)
+        for name,x in [('G1',1.15),('G2',2.83),('G3',3.95),('Flange',4.95)]:
+            u=mapx(x);d.line((u,y-12,u,y+8),fill='#7c8a89',width=2);d.text((u-17,y-44),name,font=font(22),fill=ink)
+        u=mapx(float(q[0]));d.ellipse((u-8,y-8,u+8,y+8),fill=r.color)
+        d.text((42,977),'Exposure %.2f s   ·   delivery %.2f s   ·   frame %d'%(e['t'],e['arrival_t'],e['frame']),font=font(24),fill=ink)
+        return canvas
+    def close(self):
+        self.renderer.close()
+        if self.wide is not None:self.wide.close()
 
 def movie(manifest,out,fps=10.,start=None,end=None,frames_only=False):
     records=load_manifest(manifest)
@@ -64,6 +97,11 @@ def movie(manifest,out,fps=10.,start=None,end=None,frames_only=False):
     if frames_only:frame_dir.mkdir(exist_ok=True)
     else:
         exe=shutil.which('ffmpeg') or os.environ.get('FFMPEG')
+        if not exe:
+            try:
+                from imageio_ffmpeg import get_ffmpeg_exe
+                exe=get_ffmpeg_exe()
+            except ImportError:pass
         if not exe:raise RuntimeError('ffmpeg missing; use --frames-only or set FFMPEG')
         pipe=subprocess.Popen([exe,'-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','rgb24','-video_size','1920x1080','-framerate',str(fps),'-i','-',
           '-an','-c:v','libx264','-preset','medium','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(out)],stdin=subprocess.PIPE)

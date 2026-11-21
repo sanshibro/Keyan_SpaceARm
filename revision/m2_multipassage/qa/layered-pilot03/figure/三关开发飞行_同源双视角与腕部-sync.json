@@ -1,0 +1,19 @@
+{
+  "output": "qa\\layered-pilot03\\figure\\\u4e09\u5173\u5f00\u53d1\u98de\u884c_\u540c\u6e90\u53cc\u89c6\u89d2\u4e0e\u8155\u90e8.mp4",
+  "video_frames": 611,
+  "fps": 20.0,
+  "start_s": 21.0,
+  "end_s": 51.5,
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "original_wrist_pixels": true,
+  "exact_exposure_pose": true,
+  "all_rows_same_requested_release_clock": true,
+  "sources": [
+    {
+      "flight": "qa\\layered-pilot03\\flight",
+      "verified_frames": 611,
+      "available_frames": 1476,
+      "status": "fail"
+    }
+  ]
+}

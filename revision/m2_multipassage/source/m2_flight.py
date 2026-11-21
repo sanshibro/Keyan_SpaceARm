@@ -99,7 +99,7 @@ class Controller:
         hold='none';q=np.r_[self.ref,self.yaw,np.linalg.norm(self.des),np.arctan2(self.des[1],self.des[0])]
         dq=np.zeros(6);ddq=np.zeros(6);gap=fit_gap=np.nan;pair=[-1,-1];fit_pair=[-1,-1]
         fit_all=np.full(len(self.mechanism.fit),np.nan)
-        com=np.full(3,np.nan);tau=np.zeros(2);tilt=np.zeros(2);acc_trim=np.zeros(3)
+        com=np.full(3,np.nan);tau=np.zeros(2);tilt=np.zeros(2);acc_trim=np.zeros(3);tracking_acc=np.zeros(3)
         projection='nominal';window=-1;window_status='initial';sample_time=np.nan
         disabled_shape=(self.method=='straight')
         if t>=16 and t<MOTION_START and self.method=='fixed':
@@ -129,7 +129,11 @@ class Controller:
                     if self.method not in ('straight','fixed'):
                         self.des=self.mechanism.fk.geom_axis_bend(R,np.asarray(self.task['axis']))
                     self.mechanism.fk.place_estimate(np.zeros(3),R,b)
-                    self.ref=self.inspection_tcp-self.mechanism.fk.tip()[0]
+                    corrected=self.inspection_tcp-self.mechanism.fk.tip()[0]
+                    # Translating a rigid configuration by d can close any
+                    # external gap by at most ||d||. Keep dock corrections
+                    # inside the receiving pose's measured geometric surplus.
+                    self.ref=q[:3]+bound(corrected-q[:3],min(.015,s['terminal_slack_m']))
                     self.yaw=float(q[3])
                 elif window_status in ('running','waiting','stopped','rejected'):
                     q,dq,ddq=(np.asarray(s[k],dtype=float).copy() for k in ('q','dq','ddq'))
@@ -141,6 +145,10 @@ class Controller:
                     if window_status!='running':hold=window_status
                 else:raise ValueError('Unknown rolling state '+str(window_status))
             acc_trim,tau,tilt=self.trim.evaluate(com,self.plant.mass,R,dt,ddq[2])
+            if phase in ('execute','inspect'):
+                # Close the position/velocity tracking error using the PX4
+                # estimate common to all planners and switching policies.
+                tracking_acc=np.array([2.,2.,2.5])*(self.ref-xyz)+np.array([1.55,1.55,1.65])*(dq[:3]-velocity)
             if disabled_shape:self.des=np.zeros(2)
             if t>=12.:
                 desired=self.des.copy()
@@ -165,7 +173,7 @@ class Controller:
         elif t>=MOTION_START:
             phase='feedback_hold';hold='feedback'
         self.phase=phase
-        self.ff=(dq[:3].copy(),ddq[:3]+acc_trim)
+        self.ff=(dq[:3].copy(),ddq[:3]+acc_trim+tracking_acc)
         self.yaw_rate=float(dq[3])
         return dict(t=float(t),phase=phase,hold=hold,valid=fresh,shape_valid=bool(obs['valid']),
             shape_age=obs['age'],age_p=age_p,age_r=age_r,
@@ -174,7 +182,8 @@ class Controller:
             ref_world=self.ref.copy(),reference_yaw=self.yaw,plan_q=q,plan_dq=dq,plan_ddq=ddq,active_window=window,
             window_status=window_status,local_trajectory_time=sample_time,ff_enu=self.ff[0].copy(),acc_ff_enu=self.ff[1].copy(),
             est_hazard_gap=gap,est_fit_gap=fit_gap,est_fit_gaps=fit_all,est_hazard_pair=pair,est_fit_pair=fit_pair,projection=projection,
-            trim_enabled=self.trim.enabled,est_com_offset_enu=com,required_roll_pitch_Nm_frd=tau,trim_angle_frd=tilt,trim_accel_enu=acc_trim)
+            trim_enabled=self.trim.enabled,est_com_offset_enu=com,required_roll_pitch_Nm_frd=tau,trim_angle_frd=tilt,
+            trim_accel_enu=acc_trim,tracking_feedback_acc_enu=tracking_acc)
 
 class Loop(FlightLoop):
     def __init__(self,plant,folder,case,horizon):

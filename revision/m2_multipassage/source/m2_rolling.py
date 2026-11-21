@@ -28,7 +28,7 @@ class RollingPlanner:
         self.last_request=-np.inf;self.last_x=-np.inf;self.last_state=None;self.last_rate=np.zeros(6);self.last_accel=np.zeros(6)
         self.rejections=0;self.closed=False;self.status='waiting';self.done=False;self.needs_stop=True;self.request=None
         self.requests={}
-        self.last_now=0.;self.event_path=None
+        self.last_now=0.;self.event_path=None;self.try_again=False
     def event(self,kind,now,**fields):
         item=dict(event=kind,release_s=float(now),wall_monotonic_s=time.monotonic(),method=self.method,**fields)
         self.events.append(clean(item))
@@ -73,7 +73,7 @@ class RollingPlanner:
         wall_before_reveal=time.monotonic()
         snap=self.sensor.reveal(now,state);self.geometry.set_snapshot(snap)
         live=self.active is not None and self.method!='stop';bridge_duration=.5
-        switch_time=float(np.ceil((now+1.25-1e-9)/.02)*.02) if live else max(21.,now)
+        switch_time=float(np.ceil((now+.98-1e-9)/.02)*.02) if live else max(21.,now)
         old=self._active_sample(switch_time) if live else (state.copy(),np.zeros(6),np.zeros(6))
         start,v,a=state.copy(),rate.copy(),accel.copy()
         if live:
@@ -89,6 +89,7 @@ class RollingPlanner:
                      seed_boundary=boundary_record(start,v,a),committed_boundary=boundary_record(*old),
                      map=snap.metadata(),bridge_duration=bridge_duration)
         self.request=request;self.next_id+=1;self.last_request=now;self.last_x=state[0]
+        self.try_again=False
         self.requests[request['id']]=dict(request=request,snapshot=snap)
         if self.event_path is not None:
             evidence=self.event_path.parent/'rolling'/'windows'/('%03d'%request['id'])
@@ -118,6 +119,7 @@ class RollingPlanner:
                     self.event('reject',now,id=result['id'],reason='missed_causal_handoff_deadline');self.rejections+=1
                 else:self.pending=result
             except Exception as exc:
+                self.try_again=True
                 self.requests[self.request['id']].update(failure=dict(reason=type(exc).__name__+': '+str(exc),
                     wall_completed_s=time.monotonic(),release_completed_s=float(now),timing=getattr(exc,'timing',None),
                     proof=clean(getattr(exc,'proof',None)),layers=getattr(exc,'layers',None)))
@@ -147,13 +149,16 @@ class RollingPlanner:
                 ready=now-self.last_request>1.0
             elif self.method=='stop':ready=ended and now-self.last_request>1.0
             else:ready=(state[0]-self.last_x>=self.config.replan_distance or elapsed>=duration-2.1) and now-self.last_request>=self.config.replan_min_interval
+            if self.try_again and self.active and self.method!='stop':
+                ready|=(state[0]-self.last_x>=.12 or elapsed>=duration-1.5) and now-self.last_request>=.58
             if ready:self._submit(now,state,rate,accel)
         if ended:self.status='waiting' if self.future is not None else 'stopped';self.needs_stop=True
         elif self.active is None:self.status='waiting' if self.future is not None else 'rejected'
     def sample(self,now):
         if self.last_state is None:raise RuntimeError('tick must provide the first causal state before sample')
         q,v,a=self._active_sample(now)
-        return dict(q=q,dq=v,ddq=a,active_id=self.active['id'] if self.active else -1,status=self.status,needs_stop=self.needs_stop)
+        return dict(q=q,dq=v,ddq=a,active_id=self.active['id'] if self.active else -1,status=self.status,
+                    terminal_slack_m=self.active.get('terminal_slack_m',0.) if self.active else 0.,needs_stop=self.needs_stop)
     def close(self):
         if self.closed:return
         self.closed=True

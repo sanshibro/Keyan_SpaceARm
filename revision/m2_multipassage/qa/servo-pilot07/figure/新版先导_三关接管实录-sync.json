@@ -1,0 +1,19 @@
+{
+  "output": "qa\\servo-pilot07\\figure\\\u65b0\u7248\u5148\u5bfc_\u4e09\u5173\u63a5\u7ba1\u5b9e\u5f55.mp4",
+  "video_frames": 641,
+  "fps": 20.0,
+  "start_s": 21.0,
+  "end_s": 53.0,
+  "scene_sha256": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+  "original_wrist_pixels": true,
+  "exact_exposure_pose": true,
+  "all_rows_same_requested_release_clock": true,
+  "sources": [
+    {
+      "flight": "qa\\servo-pilot07\\flight",
+      "verified_frames": 641,
+      "available_frames": 1476,
+      "status": "fail"
+    }
+  ]
+}

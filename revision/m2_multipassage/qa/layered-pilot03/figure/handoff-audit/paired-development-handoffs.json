@@ -1,0 +1,78 @@
+{
+  "original": {
+    "seed": 26112207,
+    "method": "coupled",
+    "development": true,
+    "physical_ulog_sha256": "0758d318fec42f6c3834774f93b68aa59e94e70914bf26c67588a3e0ae74c555",
+    "recovery_interval_s": 0.65,
+    "external_clearance_m": 0.03254502130730708,
+    "bridges": [
+      {
+        "window": 1,
+        "start_s": 25.42,
+        "end_s": 25.42,
+        "kind": "C1_direct",
+        "peak_planned_translation_accel_m_s2": 0.10735788311936195,
+        "peak_measured_tilt_including_recovery_deg": 1.902109350587683
+      },
+      {
+        "window": 3,
+        "start_s": 30.82,
+        "end_s": 31.32,
+        "kind": "C2_quintic",
+        "peak_planned_translation_accel_m_s2": 3.468442855679006,
+        "peak_measured_tilt_including_recovery_deg": 14.596451365824157
+      },
+      {
+        "window": 6,
+        "start_s": 38.5,
+        "end_s": 39.0,
+        "kind": "C2_quintic",
+        "peak_planned_translation_accel_m_s2": 6.239019375517282,
+        "peak_measured_tilt_including_recovery_deg": 18.845541231812465
+      }
+    ]
+  },
+  "updated": {
+    "seed": 26112207,
+    "method": "coupled",
+    "development": true,
+    "physical_ulog_sha256": "9c85f43cc099d7f5996478366466327e82788be9e6fa6407960b6e386053a64c",
+    "recovery_interval_s": 0.65,
+    "external_clearance_m": 0.044185998384803506,
+    "bridges": [
+      {
+        "window": 1,
+        "start_s": 25.18,
+        "end_s": 25.98,
+        "kind": "C2_quintic",
+        "peak_planned_translation_accel_m_s2": 0.18701643291899264,
+        "peak_measured_tilt_including_recovery_deg": 2.4481931388404092
+      },
+      {
+        "window": 2,
+        "start_s": 28.92,
+        "end_s": 30.37,
+        "kind": "C2_quintic",
+        "peak_planned_translation_accel_m_s2": 0.224185314850009,
+        "peak_measured_tilt_including_recovery_deg": 2.0641201386872123
+      },
+      {
+        "window": 7,
+        "start_s": 36.18,
+        "end_s": 36.98,
+        "kind": "C2_quintic",
+        "peak_planned_translation_accel_m_s2": 0.29117361641906464,
+        "peak_measured_tilt_including_recovery_deg": 1.8436168996168463
+      },
+      {
+        "window": 8,
+        "start_s": 41.64,
+        "end_s": 42.74,
+        "kind": "C2_quintic",
+        "peak_planned_translation_accel_m_s2": 0.22060765338665522,
+        "peak_measured_tilt_including_recovery_deg": 4.289436992849446
+      }
+    ]
+  }
+}

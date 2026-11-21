@@ -104,6 +104,13 @@ class Kernel:
         K=self.settings.knots;delta=np.diff(route,axis=0);length=np.linalg.norm(delta[:,:3],axis=1)
         mag=np.minimum(1.,np.maximum(route[:-1,4],route[1:,4])/.12)
         demand=np.maximum.reduce([length/self.settings.speed,abs(delta[:,3])/.64,abs(delta[:,4])/.70,abs(delta[:,5])*mag/.86])
+        if final:
+            # The optical working pose has a short, constrained arrival. Budget
+            # separate time for the approach, using the task frame and remaining
+            # stopping distance in the plan itself (all switching methods).
+            remaining=np.linalg.norm(route[:-1,:3]-route[-1,:3],axis=1)
+            precision_speed=np.sqrt(.055**2+2.*.038*remaining)
+            demand=np.maximum(demand,length/precision_speed)
         tau=np.r_[0.,np.cumsum(np.maximum(.04,demand))]
         if spans is None:
             knots=np.interp(np.linspace(0.,1.,K-2),.34*np.linspace(0.,1.,len(tau))+.66*tau/tau[-1],tau)
@@ -172,7 +179,7 @@ class Kernel:
             if ranked:
                 qs=np.array([q for _,q in ranked])
                 gaps,_=self.geometry.path_batch.evaluate(qs,caps=(.120,.120,.045,.006))
-                ranked=[(cost+5.*max(0.,.108-min(row[:2])),q) for (cost,q),row in zip(ranked,gaps)
+                ranked=[(cost+32.*max(0.,.102-min(row[:2]))+9.*max(0.,.030-row[2]),q) for (cost,q),row in zip(ranked,gaps)
                         if row[0]>=self.settings.body_margin and row[1]>=self.settings.arm_margin and
                         row[2]>=self.settings.self_margin and row[3]>=0 and row[4]>=0]
             ranked.sort(key=lambda item:item[0])
@@ -183,10 +190,28 @@ class Kernel:
                 if self.method in ('straight','fixed') and end[0]-start[0]>.28:
                     final=False
                 else:raise RuntimeError('No observed terminal task-family pose passes the registered margins and method DOFs')
-        self.phase('seed');t=time.monotonic();route,layers,reached=self.seed(start,end,final);seedwall=time.monotonic()-t
+        self.phase('seed');t=time.monotonic()
+        approach=None
+        if final:
+            # Intercept the surveyed optical axis before advancing the TCP.
+            # Current-map clearance of the whole terminal ray is checked here
+            # and the fitted spline receives the usual independent swept proof.
+            axis=np.asarray(self.goal['camera_axis'],dtype=float)
+            length=min(.16,max(0.,(end[0]-start[0]-.25)/max(axis[0],.05)))
+            if length>.035:
+                candidate=end.copy();candidate[:3]-=length*axis
+                ray=np.linspace(candidate,end,17)
+                gaps,_=self.geometry.path_batch.evaluate(ray)
+                if np.all(gaps>=min_start):approach=candidate
+        route,layers,reached=self.seed(start,end if approach is None else approach,final)
+        if reached and approach is not None:
+            # Keep the unwrapped orientation chart chosen by the 6D search.
+            terminal=route[-1].copy();terminal[:3]=end[:3]
+            route=np.vstack((route,np.linspace(route[-1],terminal,5)[1:]))
+        seedwall=time.monotonic()-t
         final=final and reached;stationary=np.linalg.norm(rate[:3])<.03
         self.phase('optimization',layers=len(layers))
-        curve,base,opt=self.optimize(route,rate,final or self.method=='stop',stationary)
+        curve,base,opt=self.optimize(route,rate,final,stationary)
         self.phase('validation')
         t=time.monotonic()
         for candidate in (curve,base):
@@ -211,8 +236,12 @@ class Kernel:
             endpoint_velocity=curve.evaluate([curve.duration],1)[0].tolist(),endpoint_acceleration=curve.evaluate([curve.duration],2)[0].tolist(),
             normal_operation='accepted successor may replace the committed plan before its certified braking tail')
         self.last_curve=curve
+        terminal_slack=0.
+        if final:
+            last,_=self.geometry.path_batch.evaluate(curve.evaluate([curve.duration],0))
+            terminal_slack=max(0.,min(last[0,0]-self.settings.body_margin,last[0,1]-self.settings.arm_margin))
         return dict(id=request_id,curve=curve,proof=proof,snapshot=snapshot,route=route,layers=layers,final=final,timing=timing,
-                    wall_started=wall,wall_completed=time.monotonic(),method=self.method)
+                    terminal_slack_m=terminal_slack,wall_started=wall,wall_completed=time.monotonic(),method=self.method)
 
 class PlanRejected(RuntimeError):
     def __init__(self,proof,timing,layers):

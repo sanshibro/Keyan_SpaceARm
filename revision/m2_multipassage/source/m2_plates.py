@@ -48,7 +48,8 @@ def four_curves(record,out):
             if cert:a.scatter(cert['t_s'],100*cert['lower_m'],s=22,marker='v',c='#a24949',zorder=5)
     a.set(xlabel='Release time (s)',ylabel='External clearance (cm)',title='b  Independent native geometric clearance');a.legend(ncol=2);a.grid(alpha=.13)
     a=ax[1,0];a.plot(s['sample_t'],1000*s['gap_hazard'],color='#276981',label='Hazardous non-connection pairs')
-    a.plot(s['sample_t'],1000*s['gap_fit'],color='#aa713f',label='Registered fit pairs')
+    fit=np.minimum(s['gap_mount_fit'],s['gap_finger_fit']) if 'gap_mount_fit' in s and 'gap_finger_fit' in s else s['gap_fit']
+    a.plot(s['sample_t'],1000*fit,color='#aa713f',label='Registered fit pairs')
     for y,ls,label in [(15,'--','Planning 15 mm'),(8,':','Projection 8 mm'),(3,'-.','Audit 3 mm')]:a.axhline(y,c='#777777',lw=.7,ls=ls,label=label)
     a.axhline(0,color='#a24949',lw=.7);a.set(xlabel='Release time (s)',ylabel='Self clearance (mm)',title='c  Hazard clearance and physical-fit separation');a.legend(ncol=2);a.grid(alpha=.13)
     a=ax[1,1];a.plot(t,100*s['tracking'],color='#276981',label='Body reference error')
