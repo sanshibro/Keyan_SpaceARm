@@ -1,0 +1,232 @@
+{
+  "strategy": "coupled",
+  "seed": 26112207,
+  "identity": {
+    "source": {
+      "m2_body_batch.cc": "a8daa95ee79c3faad18756c0e43ab8acb6f1b0f4d1c399d54af41075e5e3267d",
+      "m2_body_batch.py": "06cd414c42d27071aeaedf15373d715ff27dce70e1aa347ecc9d367f2f8e26b3",
+      "m2_bridge_limits.py": "4c59e1e8f3c502b112cdd87f5ea9694d504e37fe9a8dc1975172ead031c4e18d",
+      "m2_field.cc": "30283727f610fa984718748e3ea907b242d10f42a9c08e6c8cb117fb1de3cbc9",
+      "m2_field.py": "bad5a0975d12f01c98f49ed93c852b663e7b1c14c2fc6e72401d6974a265d93f",
+      "m2_flight.py": "ef915d511db6cc21d8daaa2cfa589759e01ccfa767678dcbbf041ac81ee58478",
+      "m2_gate.py": "38d9b7ae937d14a028999c84ee7443240f129f3cb62ea7290ebdc018f15be856",
+      "m2_geometry.py": "d4cb8dbd4a550b5ef5b4d1900e81a4b6f7e8052d9344bad3dc81963897e5723f",
+      "m2_handoff.py": "09ce8768052372bb7f232f6e7c481694c9983127c4f2ab0ffff50dccde445a90",
+      "m2_inspection_ik.py": "9ab0955406e8de0927b6d1a4cb0e4d556dd65643b2d4a9fd9490f26d78244d74",
+      "m2_lattice.py": "f982b7a9a22dabf6f9d5f74c5fc58c61f45a6e2879468ce1a4b9c987a7a41c2a",
+      "m2_map.cc": "37cf17ab548ce52248f535de8ee5ae91ed1aef36689d3b83778f491075f2e108",
+      "m2_path_batch.cc": "93e2b515ed463f85b460e4cec62822477af3cf865fccf054491e3457b365b2f7",
+      "m2_path_batch.py": "6c86575f7c74edd5331d48428fb71cbb3d67d2a32372b633d2bf75ac53137876",
+      "m2_planner.py": "92a0a11ffb0c4674f6df5388e29e568f100a505667c5d987f6f0ee820497b7ca",
+      "m2_plant.py": "22eb347b2919a4c1baecd7a9b9e9b60181ed0f9262722e81f8dca3d0f4db7e91",
+      "m2_refine.py": "d0bfae95158f810952425148c71b1e0969caf32aa98c477f7e67f90054276606",
+      "m2_rolling.py": "09ce98a8368fc8c93b9b698ab5d3ba5f6aab00993c86ef8dea3cbfe58d391f7b",
+      "m2_rolling_inspection.json": "9af46636cdd82858713b4918740d53b80a86e7fabc5e336b05e8dc1ace832c9e",
+      "m2_scene.py": "e94f0cdfaf32321626fb3fb611be5cac72e06271e58ca425c87fff4c8ce03779",
+      "m2_scene_lock.py": "c4437417d6ae77bedf20d1e0ac022b8c44101eda70ed222da6dbf117dcc268b1",
+      "m2_self.cc": "ee1004ff3bb754ec021f3278a1e606b034cfbb0d6a4ebdb4b89b8ea68edd5c6f",
+      "m2_self_registry.py": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
+      "m2_servo.py": "3aa22350cad788d01f1f27d7dfb804d83fee4558c7ca0443bea0397044b982ba",
+      "m2_spline.py": "a92bd5c4b699da88e838e7eb1944f41d3ff7aab81c4e721ebd33724967f4f628",
+      "m2_stop_clock.py": "8d37aa69128069f2dc3457fa4669c8c1c96aef8c8c7395b3761b46df343636d9"
+    },
+    "hil_sender": "bc402751f204b18dd085010fff2bef3816a79177652d1038d4fad02541bb4d66",
+    "scene": "8fad94e2d32a0eeeeb2f64509950f157e44188020a927315f5752d28dc27d2d5",
+    "registry": "83cb370ebaac200e3c3d0e9fe2c1aa9f1236e12682cbdb500f6dc8ec99d9380d",
+    "perception": "2e8bb8e132355e2ac2e92be9a354a0617a773c819cb8282a2b0595a330656235"
+  },
+  "development": true,
+  "native_logs_verified": true,
+  "synchronized_rgbd": true,
+  "rgbd_count": 1476,
+  "external_lower_m": 0.06116741140216666,
+  "hazard_lower_m": 0.017841867691781664,
+  "fit_lower_m": 0.0009902319892752815,
+  "certificates": {
+    "body": {
+      "lower_m": 0.06977998751906493,
+      "upper_m": 0.06978465882240079,
+      "t_s": 41.160000000000004,
+      "names": [
+        "collision_landing_166",
+        "COL_branch_cross"
+      ],
+      "crosscheck": [
+        0.06977998751906565,
+        0.06978465882240065
+      ]
+    },
+    "arm": {
+      "lower_m": 0.06116741140216666,
+      "upper_m": 0.06116741140216666,
+      "t_s": 27.92,
+      "names": [
+        "d435",
+        "COL_gate1_sill"
+      ],
+      "crosscheck": [
+        0.061167411402166416,
+        0.061167411402166756
+      ]
+    },
+    "hazard": {
+      "lower_m": 0.017841867691781664,
+      "upper_m": 0.01784817280159835,
+      "t_s": 68.16,
+      "names": [
+        "collision_landing_163",
+        "collision_gripper_finger0"
+      ],
+      "crosscheck": [
+        0.017841867691782313,
+        0.017848172801598988
+      ]
+    },
+    "mount_fit": {
+      "lower_m": 0.0009902319892752815,
+      "upper_m": 0.0010001696318755336,
+      "t_s": 12.040000000000001,
+      "names": [
+        "geom503",
+        "arm1"
+      ],
+      "crosscheck": [
+        0.0009669790783716597,
+        0.0010034140043632923
+      ]
+    },
+    "finger_fit": {
+      "lower_m": 0.01107001371809461,
+      "upper_m": 0.01107001371809461,
+      "t_s": 28.02,
+      "names": [
+        "collision_gripper_finger1",
+        "collision_gripper_finger2"
+      ],
+      "crosscheck": [
+        0.011070013718094527,
+        0.011070013718094527
+      ]
+    }
+  },
+  "contact_steps": 0,
+  "gripper_open_command": true,
+  "grip_stroke_mm": {
+    "min": [
+      -0.12604898390188313,
+      -0.12638871291214437,
+      -0.06683852836612195
+    ],
+    "max": [
+      0.17779654239541842,
+      0.19095858275638727,
+      0.021774411175900763
+    ],
+    "below_limit": [
+      0.12604898390188313,
+      0.12638871291214437,
+      0.06683852836612195
+    ],
+    "above_limit": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "pose_dwell_s": 8.439999999999202,
+  "task_depth_dwell_s": 8.400000000000098,
+  "eligible_depth_count": 757,
+  "verified_depth_count": 378,
+  "control_inspect_request_s": 54.14,
+  "elapsed_motion_observation_s": 50.0,
+  "motion_to_inspect_s": 33.160000000000004,
+  "position_tracking_peak_m": 0.0753345757013466,
+  "thrust_diff_rms_N": 5.305298815434144,
+  "rotor_roll_pitch_rms_Nm": 0.5298122234441514,
+  "peak_roll_pitch_reaction_Nm": 0.8466672904337532,
+  "max_theta_deg": 101.05755347079248,
+  "end_body_m": [
+    4.676688657553456,
+    0.003301086368996638,
+    2.1179242952663984
+  ],
+  "terminal_error_m": 0.017914661796511584,
+  "terminal_axis_deg": 2.674465914047162,
+  "terminal_optical_m": 0.1618027438841733,
+  "terminal_camera_axis_deg": 2.6744659140470257,
+  "peak_tilt_integration_deg": 4.869008908142128,
+  "tilt_motion_p95_deg": 2.4376753740016857,
+  "raw_ulog_sha256": "6467b24645226f5736b723679a9d8ffcd0fbc92b03954ea63f80748851b14752",
+  "raw_rosbag_sha256": "61cf6a0b7732c36548c81df6d86d896b57e7e7459854fa3976edd970a5947835",
+  "success": true,
+  "solve_wall_s": [
+    0.2538640540005872,
+    0.2752585819980595,
+    0.7157790310011478,
+    0.9766509150067577,
+    0.7951028559909901,
+    0.5253010549931787
+  ],
+  "request_wall_latency_s": [
+    0.28718336499878205,
+    0.3020436169899767,
+    0.7509732720063766,
+    1.0527198950003367,
+    0.8298441450024256,
+    0.5786013449978782
+  ],
+  "submitted_windows": 6,
+  "activated_replans": 4,
+  "rolling_verified": true,
+  "causal_map_verified": true,
+  "async_coverage": true,
+  "switches": [
+    {
+      "window": 1,
+      "source": 0,
+      "release_s": 25.16,
+      "kind": "C2_quintic",
+      "bridge_s": 0.8,
+      "acceleration_jump_m_s2": 3.3544248175009175e-16,
+      "bend_rate_jump_rad_s": 1.1102230246251565e-16
+    },
+    {
+      "window": 2,
+      "source": 1,
+      "release_s": 29.02,
+      "kind": "C2_quintic",
+      "bridge_s": 2.15,
+      "acceleration_jump_m_s2": 3.1646700676954363e-16,
+      "bend_rate_jump_rad_s": 1.3552527156068805e-20
+    },
+    {
+      "window": 4,
+      "source": 2,
+      "release_s": 39.46,
+      "kind": "C2_quintic",
+      "bridge_s": 1.1,
+      "acceleration_jump_m_s2": 4.670885906470169e-17,
+      "bend_rate_jump_rad_s": 1.0164058535995677e-16
+    },
+    {
+      "window": 5,
+      "source": 4,
+      "release_s": 45.84,
+      "kind": "C2_quintic",
+      "bridge_s": 1.1,
+      "acceleration_jump_m_s2": 5.748822300757345e-16,
+      "bend_rate_jump_rad_s": 3.1714616716212006e-16
+    }
+  ],
+  "planning_diagnosis": [
+    "PlanRejected: body_environment"
+  ],
+  "planner_pause_s": 0.0,
+  "abnormal_stall_s": 0.0,
+  "handoff_accel_jump_m_s2": 5.748822300757345e-16,
+  "handoff_brate_jump_rad_s": 3.1714616716212006e-16,
+  "evaluation_sources": {
+    "m2_score.py": "4c2771dbb88f64e11ade2a5c0aec4c77f5c3747a66c28a5e7d0f784694e9c155",
+    "m2_rolling_audit.py": "66212c4c02d92b80f2949a95f424d4f7cf645e08b8a1d5ca86e9a6e769ea7a96"
+  }
+}

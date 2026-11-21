@@ -6,6 +6,36 @@ from scipy.interpolate import BSpline
 from scipy.optimize import minimize
 from m2_spline import VectorSpline,moving_boundary
 
+def tracking_envelope(k, states, rates, perturb, nominal_gradient):
+    """Soft clearance of time-offset flight and bending inside the tracking tube."""
+    # The lattice and all acceptance proofs keep the registered 85 mm margin.
+    # Within a 35 mm flight tube, gravity sag and along-route phase lag can
+    # coincide with deformation error on a trailing wrist crossing a sill.
+    error=-.16*rates[:,:3].copy()
+    error[:,2]-=.022
+    error*=np.minimum(1.,.035/np.maximum(np.linalg.norm(error,axis=1),1e-10))[:,None]
+    amplitude=np.minimum(np.deg2rad(6.8),np.deg2rad(3.)+.16*abs(rates[:,4]))
+    samples=[]
+    for sign in (-1.,1.):
+        current=states.copy();current[:,:3]+=error
+        current[:,4]=np.clip(current[:,4]+sign*amplitude,0.,k.geometry.theta_max)
+        samples.append(current)
+    tested=np.asarray(samples);cap=(.135,.135,.035,.004)
+    gaps,_=k.geometry.path_batch.evaluate(tested.reshape(-1,6),caps=cap)
+    gaps=gaps.reshape(2,len(states),5)
+    worst=gaps[:,:,:2].min(axis=2).argmin(axis=0)
+    row=np.arange(len(states));q=tested[worst,row];distance=gaps[worst,row,:2]
+    # Recompute the support gradient at the displaced CAD pose where the
+    # tube approaches either obstacle. Open space shares the nominal gradient.
+    nearby=np.min(distance,axis=1)<.105
+    derivative=nominal_gradient[:,:2].copy()
+    if np.any(nearby):
+        steps=q[None,nearby,:]+(np.eye(6)*perturb)[:,None,:]
+        varied,_=k.geometry.path_batch.evaluate(steps.reshape(-1,6),caps=cap)
+        grad=(varied.reshape(6,-1,5)[:,:,:2]-distance[nearby])/perturb[:,None,None]
+        derivative[nearby]=np.clip(grad.transpose(1,2,0),-1.5,1.5)
+    return distance,derivative
+
 def refine(k,route,rate,final,stationary):
     ts=time.monotonic()
     base=k.make_curve(route,rate,final,stationary_start=stationary)
@@ -25,6 +55,7 @@ def refine(k,route,rate,final,stationary):
     dist=dist.reshape(7,len(u),5)
     initial=dist[0,:,:3];G=((dist[1:,:,:3]-initial)/perturb[:,None,None]).transpose(1,2,0)
     G=np.clip(G,-1.5,1.5)
+    envelope,envelope_grad=tracking_envelope(k,q0,D@points,perturb,G)
     if k.coupled:
         def com(states):
             vals=[];g=k.geometry;d=g.fk
@@ -45,6 +76,7 @@ def refine(k,route,rate,final,stationary):
     if k.method=='sequential':spatial_lim[:,:4]=0.
     limits=[(-float(a),float(a)) for a in spatial_lim.ravel()]+[(-.10,.20)]*N
     reg=np.array([.099,.101,.0175]);weights=np.array([3.2e4,3.2e4,5.e4])
+    envelope_target=np.array([k.settings.body_margin,k.settings.arm_margin])
     bendfac=np.column_stack((np.ones(len(u)),np.minimum(1.,q0[:,4])))
     last={}
     def evaluate(x):
@@ -58,6 +90,9 @@ def refine(k,route,rate,final,stationary):
         # native certificate admits the refined candidate.
         M=len(u);loss=np.sum(short*short*weights)/M
         gdq=2*np.einsum('ng,ngd->nd',short*weights,G)/M
+        reserve=np.minimum(envelope+np.einsum('ngd,nd->ng',envelope_grad,dq)-envelope_target,0.)
+        loss+=3.2e4*np.sum(reserve*reserve)/M
+        gdq+=6.4e4*np.einsum('ng,ngd->nd',reserve,envelope_grad)/M
         excess=np.maximum(p[:,4]-k.geometry.theta_max,0)+np.minimum(p[:,4],0)
         gp=B.T@gdq;gp[:,4]+=600*excess
         loss+=300*np.dot(excess,excess)

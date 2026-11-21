@@ -1,0 +1,16 @@
+{
+  "stage": "M2 rolling handoff development review",
+  "archive_slug": "2026-11-21-m2-handoff-response",
+  "research_revision": "739ee814e34933f0bc032644a9b5fbaac3c8fd29",
+  "offline_pack_revision": "d904c693c93d53c5b254367ef55a24bd84b9d86e",
+  "site_source": "3073c47413d113e0a1e05d1c88d296357d2be8d7",
+  "site_version": 28,
+  "deployment_id": "appgdep_6b01618750188191b1a8650a78a5f34d",
+  "status": "succeeded",
+  "url": "https://aerial-continuum-research-monitor.consideratepastry4.chatgpt.site/archive/2026-11-21-m2-handoff-response/index.html",
+  "same_seed": 26112207,
+  "exposure_times_s": [
+    31.2,
+    38.92
+  ]
+}
