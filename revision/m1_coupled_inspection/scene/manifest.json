@@ -1,0 +1,393 @@
+{
+  "meshes": 93,
+  "parts": 370,
+  "scene_sha256": "bd39bb3f54e071a9ea608f1acd5e660448312c7aed70ef0996adf5d8584bbef8",
+  "files": {
+    "cell.xml": "d538c8ec59aebb4ea8fd163c0c0940ae4dbdce6fb24f4755cfb44898a38fc32b",
+    "concrete.png": "1da56b8b5d00346bfaf4d5cb8a930cbd4e029943b3b82fa49a6be2ded337be3d",
+    "deck.png": "d7d00624ff725e6d7a51a5c451d87c1da954cecfdcc17026eb7fe45b39689a9c",
+    "M1_approach_deck_001.obj": "302ec458e73ae3892124d10228e0eafc55af47c6e2a7d47e6c445cf5035ce41a",
+    "M1_approach_deck_002.obj": "969e0e9a4f0d6ac82abf20814a89784ad7b91ca22daa4d5a756e441ad54cdf96",
+    "M1_asymmetric_riser_083.obj": "1e6db5e9318d539af3d1b7a4c712bb46b6fc8769613261a7d9bc735a72c7a144",
+    "M1_asymmetric_riser_084.obj": "2be62c092102177f913eac0eaca6cafea7d3299a41a5907e438b21f5623602f2",
+    "M1_asymmetric_riser_085.obj": "b576705a7c2e9200abc7bbb5940f25fc7b31ca8eecc222a776c00902ad7a5e27",
+    "M1_exit_baffle_077.obj": "6e3d7bffafa92b501b7a1e150eaf913d61c05c6cb3b66975509411213fe09e3a",
+    "M1_exit_baffle_078.obj": "12d25c2df16e259bb16ab13b9fa48bfe01992ca8c18a445e0166379e2d4f0fd2",
+    "M1_flange_back_066.obj": "c216af9c5eb5c3379438b19c1e8818c140af3d6e3c898600d6b2bf1f460133f8",
+    "M1_flange_back_067.obj": "e4a073ec005ccc24e1f7e7f72f7fcbc3edf6c09746c1fa4a6ea25a7a365d8760",
+    "M1_flange_back_068.obj": "b4d1693ebf096bc57cb675ca4b3b7b85d4ff121e28e687deb7967d5079ebb37c",
+    "M1_flange_back_069.obj": "3bd236b54b9433338441953afd7ff3fc36877ca06f067cc5bc8b71dad11a5ed4",
+    "M1_flange_back_070.obj": "4bfc1fdcb8f1cc2066c99a62cb0664592089d7e1d353dfb58ca0bbf360207f09",
+    "M1_flange_front_089.obj": "f8a1766aadb64f813ad1bee6afc15e2ee9ed7cf2c31ef98766e83464bc011703",
+    "M1_flange_front_090.obj": "b963ccf7093c517a77f5f862b600d9c7e923d076fe89ebdd5007e054c65049ce",
+    "M1_flange_front_091.obj": "9ec669c6513472c9f3432fa1d87c331c0bf222e5d57347e449825b7fc853544b",
+    "M1_flange_front_092.obj": "9abce8d726a723a2c04d56c5741a24a90cf0306afa37154042d2f807d32d28f7",
+    "M1_flange_lip_059.obj": "eac55d7fb8d3997a861fea118bac0c2ccefa1f4630e4753bfff8214a01f4c089",
+    "M1_flange_lip_060.obj": "657efdd2f7a0b2e060cf43f53f17bed95375c6620a78bfa1c2e440b19ac10dda",
+    "M1_flange_lip_061.obj": "a079d4e5f8d53601bc798ff65fe1f99fead57f9ab29da6e7f8bd20091ecf5d9e",
+    "M1_flange_lip_062.obj": "21be8f2e055397377ac719468ce82c884bdc520a6d70993120f0922d2d60ef3b",
+    "M1_flange_lip_063.obj": "ecd4227703c5555231277bfe5afbbe4ad182524ee5187fe6c9f33c535f655aee",
+    "M1_flange_lip_064.obj": "ca7c3ca38c096a124d99a1f01e4e53a1d91c96db9e5695a9e118ce5e7fb23d53",
+    "M1_flange_tube_065.obj": "09af057d3b59fcbb8600789eaad0410a7810f36b5f9c3cc132c8b1f5254c0df7",
+    "M1_foundation_000.obj": "36f806c1f6f23bee19970fa51f313127c7751685557956204ebbd10d23b1a2d9",
+    "M1_jambminus_017.obj": "aee60b482f09e2c741be8ea9bab47c77310a69f448a5e305c1f61ff32bf957da",
+    "M1_jambminus_018.obj": "725949f054242ccdca280f4db13c0529a2c376146dac7aa9d93709f318e6e5cf",
+    "M1_jambminus_019.obj": "a12d798883a76a51d323f769832bb759501deeb4546a24ad3dde2c6db9e67431",
+    "M1_jambminus_020.obj": "efb00a398d940a7ef35c7ced211d7edcb03a9d51b159257d545361262866221e",
+    "M1_jambminus_033.obj": "223e01b94379fb2fcc715d61577e2f749bc6361dc32feaecd11deb1774c483f6",
+    "M1_jambminus_037.obj": "8fb2492806e235b2f7ac9cbf2157d5e04f03c8630565201865c305c6580ebb9e",
+    "M1_jambminus_041.obj": "66f444063ea3cfbf92f30538073ffabee230bdd1c56f64721055c04d694df0ce",
+    "M1_jambminus_045.obj": "2eea1d81fd9f10ef717ee16e884ddbe890142da26ee098e979769cff7a099d46",
+    "M1_jambminus_050.obj": "a508a5277beab3eb642a7e9b3898926b725ee6ea632329f5630b852a8b90c803",
+    "M1_jambminus_051.obj": "6f238e78fcb3dcc9fec2691ba002dc3e24b8f13067c6fd55019a05dd4182859c",
+    "M1_jambplus_021.obj": "8cec2cf768dcb0d2bf0f4b185e43d38b167823c205ea445fc6131dfa43443bee",
+    "M1_jambplus_022.obj": "d1ce069668eeb13439547d6ec12d875888458d0db979dea97adec27130cd2416",
+    "M1_jambplus_023.obj": "aec2ca92fec2f49bd214f8587aea4d6e0cc36f78b0f07ce698f259f157022b40",
+    "M1_jambplus_024.obj": "7a64f32fb6294daf1e2c35c981d6a9f57610fb0390639dae87621c40435e057b",
+    "M1_jambplus_031.obj": "34efcd778a0c75152fecbcae2c1f8924d93609c7b0da1bedb7a17987414e41a3",
+    "M1_jambplus_035.obj": "69bfb4ee07e00752a8be07bcef0db85e1f9035e7843a51402bf25012d5d3f14d",
+    "M1_jambplus_039.obj": "6f14cc07077d68fa6b33b4c6f80b2594a9a413e0dfb13c541881f5bb2fa46fd0",
+    "M1_jambplus_043.obj": "a25af1bf4a24301ae2936aabbbde10aa19113c820c78794883a831c70001f559",
+    "M1_jambplus_052.obj": "38a799b5abf018051c7acb8d3ab0040a3c3db3f6bd40ae2022ea5dc0368d0c9e",
+    "M1_jambplus_053.obj": "b5ecf151ae343e291e3a3fbb5e5f600435111176521061cb51aafb34a2b4b61b",
+    "M1_jambplus_054.obj": "95d0934c043ad55eb06b822741d32aa317dbacb6e51e6c2b9d1d740ae1ddd9b5",
+    "M1_jambplus_055.obj": "d8fa9952cbbf15b80b48470e13f9a53395eebc73f48db59d994b71b3e25541cf",
+    "M1_jambplus_056.obj": "a582fe389de0f793b0fa2efe4637af2a3dcc66d618befd1a232f0e2b1b69cee0",
+    "M1_jambplus_057.obj": "b81ccf7a0e446625fbdfd8f61120b050f03ae2dbe01a3d26e002e019785c3307",
+    "M1_lintel_016.obj": "6bc9e1f72c241f9b7512a311348cd6476d7ef59979a6939336dc7d279748802b",
+    "M1_lintel_026.obj": "5bf0d7cd2eb895495f31d7a424556dbbc575340d05d24561e25f115c752ddfcb",
+    "M1_lintel_028.obj": "fbc8b5ab91dad84a0ebe1b3ce55d4314e0a487ba2c25094b66987411067abd41",
+    "M1_lintel_032.obj": "e9dcf204effd113e7f7a94d63e67e22ee524c40c23b3263e52823829435e25ef",
+    "M1_lintel_036.obj": "a091c6d9e8ccdf9b948ce5c66dbbb5ff2bab7af53a4f3456890e336d07f3a59d",
+    "M1_lintel_040.obj": "5e288ee4c8e525fda83a8209353040c4549f213816a21dec4d6f690831a6cc24",
+    "M1_lintel_044.obj": "5f0286bf9201843ae07540349701611afe8941fef7850fa8cda22a1f07c2897a",
+    "M1_lintel_048.obj": "2a02b651e104fbcbb48562440bc80d13b5089238a4515c6f89f7328d45f2a60c",
+    "M1_lintel_049.obj": "d462340b985eabca133e290f65b1e78658a567c17d6c37ec54c06b386391c613",
+    "M1_near_guard_081.obj": "1d4c3ea2d6651c78acd87f422a7b78ead015df9bf62b44d99c43e8e4dd77ed78",
+    "M1_return_cabinet_079.obj": "7575702e330b2a6417eb380a15285b70ab93f582eb9ca43afd9bba9ab85a3651",
+    "M1_return_cabinet_080.obj": "c84dcbb448dd8957f24bf7313cd5070fa2abb4ac162c664292c618f226223b02",
+    "M1_riser_return_086.obj": "446987ab30e7f9c19aef89383cbf7f4adcdf8a7619b2dd2687b21a0037721493",
+    "M1_riser_return_087.obj": "058f29dfc893e732666e1577d650bd0711f9535a42e71f5aeb0f3bc34810ae7a",
+    "M1_riser_return_088.obj": "8ca6e555667aba9ea23d3eb677779192671692baf237733c064cdf3d43e2af3d",
+    "M1_roof_082.obj": "684c3e5ff61dfa84d2e32fbc40346e306ede55043884f1ce6ca2b5b781cc7d0b",
+    "M1_service_deck_003.obj": "319deff20d653b6b9d19ead203473784b2d24e0808b2d621f2a01f09cb473dcc",
+    "M1_service_deck_004.obj": "442a979c231433a49e5c33ef86d8c630bfbf391af941ca817b4387d6c6617c1f",
+    "M1_service_deck_005.obj": "e931655c3f0b7e91cbcc27388ed15ccddd2d8dee544191d0c15733b9b64048f5",
+    "M1_service_deck_006.obj": "3eb67c1f224ee248fa6f0a14177a5784761c5147b293ac6cacf9120b546a0c14",
+    "M1_service_deck_007.obj": "c3d349c8ca1eafdc9b45ebb374a5f563354056727316aa45dfe7abf1b3933214",
+    "M1_service_spine_075.obj": "d72dd9b4fae7c6567a91a3b40e1a09b56792a891ad3ed47ec3501eae14260d2b",
+    "M1_service_spine_076.obj": "2e40bd96d4e0ed49bca513b9d7bd5e6dbc2ce2f9164446c67764b9ff0b375991",
+    "M1_sidewall_008.obj": "15acb1f60e56347e74ce7a93f3f1ec1ec8893c3f1a1dbf8451422578b459c579",
+    "M1_sidewall_009.obj": "6baa0f86ecb7258e34d856305589b3180e562fd6225b4fe86ffbc551d004b326",
+    "M1_sidewall_010.obj": "2bbaa14fe0f421e677ae8ea739d32044624951d6e5b717f15fc80a4e3c4838a8",
+    "M1_sidewall_011.obj": "a0997941f55f44cf487d0458b27e0bec216bc65e132f79302fd5db8d729b71b6",
+    "M1_sidewall_012.obj": "4ef77ac51eef3e18f864c0ebe6dd7e4aa460510b5e3cdbd6b745c059c7c5f160",
+    "M1_sidewall_013.obj": "b1b780554f50f52743befe2dcd99f96c69fb0e1d20be30380e9d1aa399afbaa7",
+    "M1_sidewall_014.obj": "cf02023d45d0092606a16abeb7be2d66acd7f0dcbeb1c8dfd7cab094f5be58c5",
+    "M1_sill_015.obj": "6912d0f7cc0b1fd75d16c9b4935322f6ba7c705dacad29d9ce37c5f96eabe44a",
+    "M1_sill_025.obj": "d556ebb6b817b5c9ae5b433252a2111efc50eb2d91b20916f8fd13bd55a79990",
+    "M1_sill_027.obj": "e2bd481f92c8d9c06c79aa4ca503f04b4166a6f4089bad663d19c1d4bd382b23",
+    "M1_sill_029.obj": "11a6157e51708e714f344463ebfee974a393549dfb4c99f8454acf04af7fc7f3",
+    "M1_sill_030.obj": "fa25bc368ac22d5476b8c4b600ebbbd44653c2106928011f507ab6196f418d7d",
+    "M1_sill_034.obj": "8867d8bd10bbe8d0763e2529912c712d35fc2862be0b7e6ac1ad3a064ca950fb",
+    "M1_sill_038.obj": "4d17aabb31a9c776d9048c725d45ef6bc4f196e08f9dd8a1e9b0667972ff5c84",
+    "M1_sill_042.obj": "ca39b8025b473ae960de781c168bf0df7fa433634debe45846308107f78e13e9",
+    "M1_sill_046.obj": "3733e60caa5afb8e03274e217ed0ef418f633fc265aa0e3d3361dd2a86c03c2d",
+    "M1_sill_047.obj": "b46c17c75c0318b3e0bb2af481cdbac7fd463fcad049d161daefba50bb5a6398",
+    "M1_sill_058.obj": "32badf28bf81466fb1232ecd763c264c361666bb7dffdb794392a205c9c434ca",
+    "M1_support_071.obj": "023830d3ecaca29ef1a5651d71d4f36feb2c6f5adfc05d20d3cdbf9db9fe7161",
+    "M1_support_072.obj": "32337b5b550b8c939e4c63aef77e989a2e23813a1d2ebd092913bcd62103a125",
+    "M1_support_073.obj": "664ba6d7c0628ced581c08328105a73b2d08cd04e1d55f084c26066bb0560508",
+    "M1_support_074.obj": "8bb67237190bf2b01523d2a1c50316a80a8139a42c9328fb147f493acd901b57",
+    "pipe.png": "2a2f6050db787e16cc9592663c8d67285e0dcfdae4e464e93e0fc58502536d0a",
+    "steel.png": "e749a3737877a7f3c1017e01fa985f771708b8b05c770fd096dee9f19eff85ee"
+  },
+  "flange_center": [
+    3.54,
+    0.28,
+    1.775
+  ],
+  "axis": [
+    0.6109852853641633,
+    0.4616567134559925,
+    -0.6430941299603677
+  ],
+  "optical_working_distance_m": 0.168,
+  "visual_nodes": [
+    "M1_foundation_000",
+    "M1_approach_deck_001",
+    "M1_approach_deck_002",
+    "M1_service_deck_003",
+    "M1_service_deck_004",
+    "M1_service_deck_005",
+    "M1_service_deck_006",
+    "M1_service_deck_007",
+    "M1_sidewall_008",
+    "M1_sidewall_009",
+    "M1_sidewall_010",
+    "M1_sidewall_011",
+    "M1_sidewall_012",
+    "M1_sidewall_013",
+    "M1_sidewall_014",
+    "M1_sill_015",
+    "M1_lintel_016",
+    "M1_jambminus_017",
+    "M1_jambminus_018",
+    "M1_jambminus_019",
+    "M1_jambminus_020",
+    "M1_jambplus_021",
+    "M1_jambplus_022",
+    "M1_jambplus_023",
+    "M1_jambplus_024",
+    "M1_sill_025",
+    "M1_lintel_026",
+    "M1_sill_027",
+    "M1_lintel_028",
+    "M1_sill_029",
+    "M1_sill_030",
+    "M1_jambplus_031",
+    "M1_lintel_032",
+    "M1_jambminus_033",
+    "M1_sill_034",
+    "M1_jambplus_035",
+    "M1_lintel_036",
+    "M1_jambminus_037",
+    "M1_sill_038",
+    "M1_jambplus_039",
+    "M1_lintel_040",
+    "M1_jambminus_041",
+    "M1_sill_042",
+    "M1_jambplus_043",
+    "M1_lintel_044",
+    "M1_jambminus_045",
+    "M1_sill_046",
+    "M1_sill_047",
+    "M1_lintel_048",
+    "M1_lintel_049",
+    "M1_jambminus_050",
+    "M1_jambminus_051",
+    "M1_jambplus_052",
+    "M1_jambplus_053",
+    "M1_jambplus_054",
+    "M1_jambplus_055",
+    "M1_jambplus_056",
+    "M1_jambplus_057",
+    "M1_sill_058",
+    "M1_flange_lip_059",
+    "M1_flange_lip_060",
+    "M1_flange_lip_061",
+    "M1_flange_lip_062",
+    "M1_flange_lip_063",
+    "M1_flange_lip_064",
+    "M1_flange_tube_065",
+    "M1_flange_back_066",
+    "M1_flange_back_067",
+    "M1_flange_back_068",
+    "M1_flange_back_069",
+    "M1_flange_back_070",
+    "M1_support_071",
+    "M1_support_072",
+    "M1_support_073",
+    "M1_support_074",
+    "M1_service_spine_075",
+    "M1_service_spine_076",
+    "M1_exit_baffle_077",
+    "M1_exit_baffle_078",
+    "M1_return_cabinet_079",
+    "M1_return_cabinet_080",
+    "M1_near_guard_081",
+    "M1_roof_082",
+    "M1_asymmetric_riser_083",
+    "M1_asymmetric_riser_084",
+    "M1_asymmetric_riser_085",
+    "M1_riser_return_086",
+    "M1_riser_return_087",
+    "M1_riser_return_088",
+    "M1_flange_front_089",
+    "M1_flange_front_090",
+    "M1_flange_front_091",
+    "M1_flange_front_092"
+  ],
+  "cols": {
+    "boxes": {
+      "portal_sill": [
+        [
+          0.95,
+          -0.82,
+          0.0
+        ],
+        [
+          1.05,
+          0.82,
+          1.695
+        ]
+      ],
+      "portal_lintel": [
+        [
+          0.95,
+          -0.82,
+          2.365
+        ],
+        [
+          1.05,
+          0.82,
+          2.66
+        ]
+      ],
+      "portal_left": [
+        [
+          0.95,
+          -0.82,
+          1.695
+        ],
+        [
+          1.05,
+          -0.395,
+          2.365
+        ]
+      ],
+      "portal_right": [
+        [
+          0.95,
+          0.395,
+          1.695
+        ],
+        [
+          1.05,
+          0.82,
+          2.365
+        ]
+      ],
+      "approach_deck": [
+        [
+          -0.55,
+          -0.82,
+          0.0
+        ],
+        [
+          0.585,
+          0.82,
+          0.825
+        ]
+      ],
+      "gallery_deck": [
+        [
+          0.585,
+          -0.82,
+          0.0
+        ],
+        [
+          4.14,
+          0.82,
+          1.265
+        ]
+      ],
+      "backwall": [
+        [
+          -0.54,
+          0.745,
+          0.8
+        ],
+        [
+          4.14,
+          0.78,
+          2.58
+        ]
+      ],
+      "near_guard": [
+        [
+          -0.12,
+          -0.65,
+          1.28
+        ],
+        [
+          3.2,
+          -0.615,
+          2.49
+        ]
+      ],
+      "roof": [
+        [
+          -0.09,
+          -0.65,
+          2.52
+        ],
+        [
+          3.94,
+          0.77,
+          2.555
+        ]
+      ],
+      "service_spine": [
+        [
+          1.96,
+          -0.615,
+          1.31
+        ],
+        [
+          2.15,
+          -0.22,
+          1.745
+        ]
+      ],
+      "exit_baffle": [
+        [
+          2.44,
+          0.2,
+          1.32
+        ],
+        [
+          2.59,
+          0.745,
+          1.895
+        ]
+      ],
+      "return_cabinet": [
+        [
+          2.79,
+          -0.615,
+          1.27
+        ],
+        [
+          2.98,
+          -0.19,
+          2.08
+        ]
+      ]
+    },
+    "pipes": {
+      "asymmetric_riser": [
+        [
+          1.72,
+          0.09,
+          1.265
+        ],
+        [
+          1.72,
+          0.09,
+          2.515
+        ],
+        0.047
+      ],
+      "riser_return": [
+        [
+          1.72,
+          0.092,
+          2.463
+        ],
+        [
+          1.72,
+          0.735,
+          2.463
+        ],
+        0.044
+      ]
+    }
+  },
+  "shared_between": [
+    "wrist_rgbd",
+    "navigation",
+    "observer_oblique",
+    "observer_side"
+  ]
+}

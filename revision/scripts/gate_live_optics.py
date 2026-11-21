@@ -227,7 +227,7 @@ class LiveOptics:
         if (self.folder/'frames.txt').exists():raise FileExistsError('Use a new run folder; optical streams are not overwritten')
         self.condition={'clear':'natural','blackout':'occluded'}.get(condition,condition)
         if self.condition not in ('natural','occluded','graded'):raise ValueError('Unknown optical condition')
-        self.frozen=frozen_manifest();self.canvas=SensorCanvas(plant,self.folder,texture_seed)
+        self.frozen=frozen_manifest();self.canvas=getattr(self, 'canvas_class', SensorCanvas)(plant,self.folder,texture_seed)
         # Fixed archived calibration only: no previous-run image, pose, command, or observation.
         calibrated=ROOT/'revision/data/round_shape_clearance/pilot/241118-online_pause/packets.npz'
         with np.load(str(calibrated)) as c:calibration={k:c[k].tolist() for k in ('T_UB','T_TC')}
